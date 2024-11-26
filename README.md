@@ -9,8 +9,7 @@ We provide this for two reasons:
 - as part of our ongoing practice of transparency
 - to help lessen the learning curve for others who need help writing their own website and want a code base to start with. Examples of html, css and js pages and code are to be made available in the 'examplePages' directory.
 
-**Complaints, compliments, confusion and other communications?**
-git@cybermonkey.net.au
+**Complaints, compliments, confusion and other communications:** git@cybermonkey.net.au
 
 
 
