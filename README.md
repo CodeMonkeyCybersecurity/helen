@@ -1,10 +1,10 @@
-***Helen***
+# Helen
 Helen of Troy was a woman who was said to be the most beautiful woman in ancient Greece. She now has the honour of being the name of our website's git repo.
 
 
-**This is the git repo for our website.**
+### This is the git repo for our website.
 
-**Why have we published this?**
+## Why have we published this?
 We provide this for two reasons:
 - as part of our ongoing practice of transparency
 - to help lessen the learning curve for others who need help writing their own website and want a code base to start with. Examples of html, css and js pages and code are to be made available in the 'examplePages' directory.
