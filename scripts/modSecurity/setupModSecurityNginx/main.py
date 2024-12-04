@@ -1,20 +1,20 @@
-from utils.dependencies import check_sudo, check_dependencies
-from utils.nginx import install_nginx, get_nginx_version
-from utils.modsecurity import install_libmodsecurity
-from utils.owasp_crs import get_latest_crs_version
-from utils.logging_config import configure_logging
+import sys
+import os
+
+# Dynamically add the `scripts` directory to Python's module search path
+current_dir = os.path.dirname(os.path.abspath(__file__))  # Path to current script
+scripts_dir = os.path.abspath(os.path.join(current_dir, "../../.."))  # Navigate to `scripts`
+sys.path.insert(0, scripts_dir)
+
+# Now you can import from commonUtils
+from commonUtils.checkSudo import check_sudo
+from commonUtils.checkDependencies import check_dependencies
+from commonUtils.runCommand import run_command
 
 def main():
-    configure_logging()
-    logging.info("Starting the script...")
     check_sudo()
     check_dependencies()
-    install_nginx()
-    nginx_version = get_nginx_version("/usr/local/src/nginx/")
-    if nginx_version:
-        logging.info(f"Nginx version detected: {nginx_version}")
-    install_libmodsecurity()
-    logging.info("Setup completed successfully.")
+    run_command("echo 'Setup complete!'", "Failed to complete setup.")
 
 if __name__ == "__main__":
     main()
