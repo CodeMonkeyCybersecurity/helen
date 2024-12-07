@@ -34,7 +34,35 @@
             font-size: 1.2rem;
             margin: 0.5rem 0 0;
         }
+        
+        nav {
+            background-color: var(--oc-teal-8);
+            padding: 10px 0;
+        }
 
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        nav ul li a:hover {
+            color: #ffa500;
+        }
+        
         .container {
             width: 90%;
             max-width: 1200px;
@@ -81,6 +109,19 @@
     <header>
         <h1>Wazuh High Availability Roadmap</h1>
     </header>
+    
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why-us">Why Choose Us?</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="wazuh_roadmap.html">Wazuh Roadmap</a></li>
+        </ul>
+    </nav>
+
+            <!-- Sections -->
     <main class="container">
         <section class="section">
             <h2>Timeline and Milestones</h2>
