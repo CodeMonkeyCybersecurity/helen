@@ -1,0 +1,74 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Python dependencies
+__pycache__/
+*.py[cod]
+*.pyo
+env/
+venv/
+pip-log.txt
+
+# PHP dependencies
+vendor/
+composer.lock
+
+# Ruby dependencies
+*.gem
+vendor/bundle/
+.ruby-version
+
+# Java dependencies
+*.class
+*.jar
+*.war
+*.ear
+target/
+
+# Frontend build outputs
+dist/
+build/
+*.bundle.js
+*.min.js
+*.map
+
+# Logs and debugging files
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.pid
+*.seed
+*.pid.lock
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment files
+.env
+.env.local
+.env.*.local
+config.json
+
+# Miscellaneous
+.sass-cache/
+*.bak
+*.tmp
+*.temp
+*.old
+*.orig
+coverage/
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.lock
