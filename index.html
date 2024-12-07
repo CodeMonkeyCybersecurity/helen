@@ -103,14 +103,30 @@
             background: var(--oc-teal-9);
             color: var(--oc-gray-0);
         }
+        /* Logo link styling */
+        .logo-link {
+            text-decoration: none; /* Remove underline from the link */
+            display: inline-block; /* Ensures proper alignment */
+            margin-right: 10px;
+        }
+
+        /* Logo image styling */
+        .logo-image {
+            vertical-align: middle; /* Aligns the image with the text */
+            width: 128px; /* Adjust as needed */
+            height: 128px; /* Adjust as needed */
+            margin-right: 10px; /* Adds spacing between image and text */
+        }
+        
     </style>
 </head>
 <body>
     <header>
         <h1>
-            <img src="/images/fingerprint_flipped_whitebackground_circle_1000dp_oc-teal-9_FILL0_wght400_GRAD0_opsz48.png" 
-                 alt="Code Monkey Logo" 
-                 style="vertical-align: middle; width: 128px; height: 128px; margin-right: 10px;">
+            <a href="/" class="logo-link">
+                <img src="/images/fingerprint_flipped_whitebackground_circle_1000dp_oc-teal-9_FILL0_wght400_GRAD0_opsz48.png" 
+                     alt="Code Monkey Logo" class="logo-image">
+            </a>
             Code Monkey Cybersecurity
         </h1>
         <p>Cybersecurity for Humans</p>
