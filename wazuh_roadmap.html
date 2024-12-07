@@ -81,13 +81,14 @@
     <header>
         <h1>Wazuh High Availability Roadmap</h1>
     </header>
-    <section>
+    <section class="section">
         <h2>Overview</h2>
         <p>This roadmap outlines our roadmap to set up a high-availability, high-performance Wazuh instance using Kubernetes over the next 10 weeks. Our Wazuh instance will be released to the public by 8am Monday Feburary 17th, 2025 AWST.</p>
 
         <h2>Timeline and Milestones</h2>
-
-        <div class="week">
+    </section>
+        
+        <section class="section">
             <h3>Week 1 (Dec 9 2024): Research and Planning</h3>
             <ul>
                 <li>Review Wazuh documentation for cluster deployment.</li>
@@ -96,9 +97,9 @@
                 <li>Plan Wazuh components: Manager, Indexer, Dashboard.</li>
                 <li><strong>Deliverable:</strong> Documented deployment plan with architecture diagram.</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="week">
+        <section class="section">
             <h3>Week 2 (Dec 16 2024): Environment Preparation</h3>
             <ul>
                 <li>Choose a Kubernetes distribution (e.g., K3s, AKS, EKS).</li>
@@ -107,9 +108,9 @@
                 <li>Deploy basic monitoring tools (e.g., Metrics Server, Prometheus).</li>
                 <li><strong>Deliverable:</strong> Working Kubernetes cluster with monitoring.</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="week">
+        <section class="section">
             <h3>Week 3 (Dec 30 2024): Persistent Storage and Networking</h3>
             <ul>
                 <li>Set up storage class (e.g., Ceph, NFS, cloud-based).</li>
@@ -117,9 +118,9 @@
                 <li>Ensure inter-component networking.</li>
                 <li><strong>Deliverable:</strong> Persistent volumes and networking configurations tested.</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="week">
+        <section class="section">
             <h3>Week 4 (Jan 6 2025): Initial Wazuh Deployment</h3>
             <ul>
                 <li>Create Kubernetes manifests or Helm charts for Wazuh.</li>
@@ -127,9 +128,9 @@
                 <li>Validate communication between components.</li>
                 <li><strong>Deliverable:</strong> Single-node Wazuh instance running in Kubernetes.</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="week">
+        <section class="section">
             <h3>Week 5 (Jan 13 2025): Scaling and High Availability</h3>
             <ul>
                 <li>Set up replica sets for Wazuh components.</li>
@@ -137,9 +138,9 @@
                 <li>Use StatefulSets for stable identities and storage.</li>
                 <li><strong>Deliverable:</strong> High-availability Wazuh cluster deployed.</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="week">
+        <section class="section">
             <h3>Week 6 (Jan 20 2025): Performance Optimization</h3>
             <ul>
                 <li>Enable resource limits and requests for Wazuh pods.</li>
@@ -147,9 +148,9 @@
                 <li>Use monitoring tools to track performance.</li>
                 <li><strong>Deliverable:</strong> Optimized and monitored Wazuh deployment.</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="week">
+        <section class="section">
             <h3>Week 7 (Jan 27 2025): Security Hardening</h3>
             <ul>
                 <li>Set up RBAC policies in Kubernetes.</li>
@@ -157,9 +158,9 @@
                 <li>Secure ingress with HTTPS and enable authentication.</li>
                 <li><strong>Deliverable:</strong> Secure Wazuh cluster with RBAC and TLS.</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="week">
+        <section class="section">
             <h3>Week 8 (Feb 3 2025): Testing and Validation</h3>
             <ul>
                 <li>Perform stress tests to validate scaling and HA.</li>
@@ -167,9 +168,9 @@
                 <li>Test log ingestion and analysis.</li>
                 <li><strong>Deliverable:</strong> Validated Wazuh deployment.</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="week">
+        <section class="section">
             <h3>Week 9 (Feb 10 2025): Documentation and Final Tweaks</h3>
             <ul>
                 <li>Write detailed deployment and operational documentation.</li>
@@ -178,14 +179,14 @@
                 <li>Enable logging and alerts for operational visibility.</li>
                 <li><strong>Deliverable:</strong> Fully documented Wazuh cluster.</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="week">
+        <section class="section">
             <h3>Week 10 (Feb 17 2025): Production Deployment</h3>
             <ul>
                 <li><strong>Deliverable:</strong>Release!</li>
             </ul>
-        </div>
+        </section>
     </section>
     <footer>
         <p>&copy; 2024 CodeMonkey Cybersecurity</p>
