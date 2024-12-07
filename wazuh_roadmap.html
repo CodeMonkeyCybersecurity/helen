@@ -7,8 +7,8 @@
     <title>Code Monkey Cybersecurity</title>
     <link rel="stylesheet" href="openColour/open-color.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" sizes="64x64" href="favicon-64x64.png">
-    <link rel="icon" type="image/png" sizes="128x128" href="favicon-128x128.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon-circular-128x128.png">
+
     <style>
         body {
             font-family: 'Noto Sans', sans-serif;
@@ -103,11 +103,32 @@
             background: var(--oc-teal-9);
             color: var(--oc-gray-0);
         }
+        /* Logo link styling */
+        .logo-link {
+            text-decoration: none; /* Remove underline from the link */
+            display: inline-block; /* Ensures proper alignment */
+            margin-right: 10px;
+        }
+
+        /* Logo image styling */
+        .logo-image {
+            vertical-align: middle; /* Aligns the image with the text */
+            width: 128px; /* Adjust as needed */
+            height: 128px; /* Adjust as needed */
+            margin-right: 10px; /* Adds spacing between image and text */
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Wazuh High Availability Roadmap</h1>
+        <h1>
+            <a href="/" class="logo-link">
+                <img src="/images/fingerprint_flipped_whitebackground_circle_1000dp_oc-teal-9_FILL0_wght400_GRAD0_opsz48.png" 
+                     alt="Code Monkey Logo" class="logo-image">
+            </a>
+            Wazuh High Availability Roadmap
+        </h1>
+        <p>Cybersecurity for Humans</p>
     </header>
     
     <!-- Navigation Menu -->
