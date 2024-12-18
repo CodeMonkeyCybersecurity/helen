@@ -1,0 +1,106 @@
+body {
+  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+  font-family: sans-serif; /*without this, font-family of text, your website will make it look different from the default font of your browser. Each browser has some common fonts available to it.*/
+  padding: 20px; /*this adds 20px of space on the inside of the body element by using the padding property.*/
+}
+
+h1 {
+    font-size: 40px; /*without this, the browser sets the default values of the h1 and h2 heading elements*/
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+  
+h2 {
+    font-size: 30px;
+}
+
+.established { /*this makes Est. 2020 text italicized by creating an established class selector and giving it the font-style property with the value italic.*/
+    font-style: italic;
+  }
+
+h1, h2, p {
+  text-align: center;
+}
+
+.menu {
+  width: 80%;
+  background-color: burlywood;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px; /*add the same 20px padding to the L) R) top and bottom of the menu. */ 
+  /* or can do it like this
+  padding-left: 20px; 
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px
+  */
+  max-width: 500px; /* without this, the current width of the menu will always take up 80% of the body element's width. On a very wide screen, the coffee and dessert appear far apart from their prices. Add a max-width property to the menu class with a value of 500px to prevent it from growing too wide.*/
+}
+
+img { /* img elements are "like" inline elements.
+    To make the image behave like heading elements (which are block-level), create an img type selector and use the value block for the display property and use the applicable margin-left and margin-right values to center it horizontally.*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25px; /*simply add a negative top margin to the img elements to pull them up from their current positions. Negative values are created using a - in front of the value. */
+}
+
+hr {
+    height: 2px; /*The default properties of an hr element will make it appear as a thin light grey line. You can change the height of the line by specifying a value for the height property.
+    Change the height of the hr element to be 3px.*/
+    background-color: brown;
+    border-color: brown; /*without this, there is a grey color along the edges of the line. Those edges are known as borders. Each side of an element can have a different color or they can all be the same. Make all the edges of the hr element the same color as the background of it using the border-color property.*/
+    /* The default value of a property named border-width is 1px for all edges of hr elements. By changing the border to the same color as the background, the total height of the line is 5px (3px plus the top and bottom border width of 1px).*/
+}
+
+.bottom-line {
+    margin-top: 25px; /*this is because now the space between the Cinnamon Roll menu item and the second hr element does not match the space between the top hr element and the Coffee heading.*/
+}
+
+h1, h2 {
+    font-family: Impact, serif; /*without this, all the font will be sans-serif. this will Style both the h1 and the h2 elements using a single selector so that these elements' text use Impact font.*/
+    /*serif has been added as a fallback value for the font-family by adding another font name separated by a comma. Fallbacks are used in instances where the initial is not found/available.*/
+}
+
+.item p {
+    display: inline-block; /*The p elements are nested in an article element with the class attribute of item. You can style all the p elements nested anywhere in elements with a class named item like this:*/
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px; /*make the font size of the items and prices larger by using a value of 18px.*/
+}
+
+.flavor, .dessert { /*If you want two different classes to share the same attributes add them like this*/
+    text-align: left;  /* Using your new flavor class as a selector, set the text-align property's value to left. */ 
+    width: 75%; /*without a width property to the flavor and price class selectors that have a value of 50% each.*/
+}
+
+.price {
+    text-align: right;
+    width: 25%; /*at 50% the width value starts putting things on different lines*/
+    /*If the <p> elements referred tp here are on the same line, these values can be 50%*/
+}
+
+/*FOOTER*/
+footer {
+    font-size: 14px; /* make all the text have a value of 14px for the font size.*/
+  }
+
+.address {
+    `margin-bottom: 5px;
+}
+
+a {
+    color: black; /*To make the footer links the same color regardless if a link has been visited, use a type selector for the anchor element (a) and use the value black for the color property.*/
+}
+
+a:visited {
+    color: black;     /*You change properties of a link when the link has actually been visited by using a pseudo-selector that looks like a:visited { propertyName: propertyValue; }.*/
+}
+
+a:hover {
+    color: brown; /*You change properties of a link when the mouse hovers over them by using a pseudo-selector that looks like a:hover { propertyName: propertyValue; }.*/
+}
+
+a:active {
+    color: brown; /*You change properties of a link when the link is actually being clicked by using a pseudo-selector that looks like*/
+  }
