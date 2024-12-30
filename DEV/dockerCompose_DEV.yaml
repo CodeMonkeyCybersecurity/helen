@@ -2,6 +2,7 @@ services:
   web:
     image: nginx:alpine
     ports:
-      - "10080:80"
+      - "9080:80"
     volumes:
       - ./pages:/usr/share/nginx/html
+    container_name: helen_DEV

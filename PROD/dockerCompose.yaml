@@ -5,3 +5,4 @@ services:
       - "8080:80"
     volumes:
       - ./pages:/usr/share/nginx/html
+    container_name: helen
