@@ -108,8 +108,4 @@ data:
       protocol: layer2
       addresses:
       - 188.245.110.59-188.245.110.59
-    - name: external
-      protocol: layer2
-      addresses:
-      - 5.223.43.161-5.223.43.161
-      - 138.201.155.53-138.201.155.53
+      - 2a01:4f8:1c1e:be0b::1-2a01:4f8:1c1e:be0b::ffff
