@@ -88,10 +88,28 @@ metadata:
 spec:
   acme:
     server: https://acme-v02.api.letsencrypt.org/directory
-    email: mail@cybermonkey.dev
+    email: main@cybermonkey.dev
     privateKeySecretRef:
       name: letsencrypt-prod
     solvers:
     - http01:
         ingress:
           class: public
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: metallb-system
+  name: config
+data:
+  config: |
+    address-pools:
+    - name: default
+      protocol: layer2
+      addresses:
+      - 188.245.110.59-188.245.110.59
+    - name: external
+      protocol: layer2
+      addresses:
+      - 5.223.43.161-5.223.43.161
+      - 138.201.155.53-138.201.155.53
