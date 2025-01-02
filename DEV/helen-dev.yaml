@@ -37,7 +37,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: helen-dev-ingress
+  name: helen-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
     cert-manager.io/cluster-issuer: letsencrypt-prod
@@ -45,12 +45,13 @@ spec:
   tls:
   - hosts:
     - cybermonkey.dev
-    - host: cybermonkey.dev
     secretName: tls-cybermonkey
   rules:
+  - host: cybermonkey.dev
     http:
       paths:
-      - pathType: Prefix
+      - path: /
+        pathType: Prefix
         backend:
           service:
             name: helen-dev-service
