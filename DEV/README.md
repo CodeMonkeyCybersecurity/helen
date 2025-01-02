@@ -23,3 +23,32 @@ microk8s kubectl get svc
 
 	4.	Access Your Site:
 	•	Use http://<node-IP>:32564 to access your site.
+
+
+Create and push the docker container
+```
+docker build -t chickenj0/helen-dev:latest .
+docker push chickenj0/helen-dev:latest
+```
+
+Node Labeling: Verify that vhost5, vhost7, and vhost11 have the correct labels:
+```
+microk8s kubectl label node vhost5 role=backend
+microk8s kubectl label node vhost7 role=backend
+microk8s kubectl label node vhost11 role=backend
+```
+
+Cert-Manager Functionality: Ensure cert-manager is installed, and the letsencrypt-prod secret is successfully created:
+```
+microk8s kubectl get secrets -n development
+```
+
+Ingress Class: Verify that the Ingress controller is using the public class:
+```
+microk8s kubectl describe ingressclass public
+```
+
+Ingress Controller: Confirm the Ingress controller is running and functional:
+```
+microk8s kubectl get pods -n ingress
+```

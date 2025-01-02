@@ -1,10 +1,17 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: development
+---
 apiVersion: apps/v1
-kind: DaemonSet
+kind: Deployment
 metadata:
   name: helen-dev
+  namespace: development
   labels:
     app: helen-dev
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: helen-dev
@@ -13,17 +20,33 @@ spec:
       labels:
         app: helen-dev
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: role
+                operator: In
+                values:
+                  - backend
       containers:
       - name: helen-dev
         image: chickenj0/helen-dev:latest
         ports:
         - containerPort: 80
-          name: http
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: helen-dev-service
+  namespace: development
 spec:
   selector:
     app: helen-dev
@@ -31,13 +54,12 @@ spec:
   - protocol: TCP
     port: 80          # Port for the service
     targetPort: 80    # Port on the pod
-    nodePort: 32564   # Port on the node
-  type: NodePort      # Exposes the service on the node's IP
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: helen-ingress
+  name: helen-dev-ingress
+  namespace: development
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
     cert-manager.io/cluster-issuer: letsencrypt-prod
@@ -45,7 +67,7 @@ spec:
   tls:
   - hosts:
     - cybermonkey.dev
-    secretName: tls-cybermonkey
+    secretName: tls-cybermonkey-dev
   rules:
   - host: cybermonkey.dev
     http:
@@ -57,3 +79,18 @@ spec:
             name: helen-dev-service
             port:
               number: 80
+---
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: mail@cybermonkey.dev
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    solvers:
+    - http01:
+        ingress:
+          class: public
