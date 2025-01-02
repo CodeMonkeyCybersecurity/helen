@@ -1,8 +1,0 @@
-services:
-  web:
-    image: nginx:alpine
-    ports:
-      - "11080:80"
-    volumes:
-      - ./pages:/usr/share/nginx/html
-    container_name: helen_SH

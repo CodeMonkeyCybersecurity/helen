@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: helen-sh
+  labels:
+    app: helen-sh
+spec:
+  selector:
+    matchLabels:
+      app: helen-sh
+  template:
+    metadata:
+      labels:
+        app: helen-sh
+    spec:
+      containers:
+      - name: helen-sh
+        image: chickenj0/helen-sh:latest
+        ports:
+        - containerPort: 80
+          name: http
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: helen-sh-service
+spec:
+  selector:
+    app: helen-sh
+  ports:
+  - protocol: TCP
+    port: 80          # Port for the service
+    targetPort: 80    # Port on the pod
+    nodePort: 32566   # Port on the node
+  type: NodePort      # Exposes the service on the node's IP

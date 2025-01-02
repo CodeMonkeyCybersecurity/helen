@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: helen-prod
+  labels:
+    app: helen-prod
+spec:
+  selector:
+    matchLabels:
+      app: helen-prod
+  template:
+    metadata:
+      labels:
+        app: helen-prod
+    spec:
+      containers:
+      - name: helen-prod
+        image: chickenj0/helen-prod:latest
+        ports:
+        - containerPort: 80
+          name: http
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: helen-prod-service
+spec:
+  selector:
+    app: helen-prod
+  ports:
+  - protocol: TCP
+    port: 80          # Port for the service
+    targetPort: 80    # Port on the pod
+    nodePort: 32565   # Port on the node
+  type: NodePort      # Exposes the service on the node's IP
