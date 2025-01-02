@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: helen-dev
-        image: helen-dev:latest
+        image: chickenj0/helen-dev:latest
         ports:
         - containerPort: 80
           name: http
@@ -29,7 +29,7 @@ spec:
     app: helen-dev
   ports:
   - protocol: TCP
-    port: 12080
-    targetPort: 80
-    nodePort: 32564
-  type: NodePort
+    port: 80          # Port for the service
+    targetPort: 80    # Port on the pod
+    nodePort: 32564   # Port on the node
+  type: NodePort      # Exposes the service on the node's IP
