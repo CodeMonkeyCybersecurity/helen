@@ -10,19 +10,25 @@ docker save helen-dev:latest -o helen-dev.tar
 microk8s ctr image import helen-dev.tar # Import the image into your MicroK8s cluster:
 ```
 
-	2.	Apply the YAML:
+Apply the YAML:
 ```
 microk8s kubectl apply -f helen-dev.yaml
 ```
 
-	3.	Verify Deployment:
+Verify Deployment:
 ```
 microk8s kubectl get pods -o wide
 microk8s kubectl get svc
 ```
 
-	4.	Access Your Site:
+Access Your Site:
 	•	Use http://<node-IP>:32564 to access your site.
+
+
+Create namespace
+```
+microk8s kubectl create namespace development
+```
 
 
 Create and push the docker container
