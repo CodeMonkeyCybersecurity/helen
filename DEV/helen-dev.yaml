@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: helen_dev
+  name: helen-dev
   labels:
-    app: helen_dev
+    app: helen-dev
 spec:
   selector:
     matchLabels:
-      app: helen_dev
+      app: helen-dev
   template:
     metadata:
       labels:
-        app: helen_dev
+        app: helen-dev
     spec:
       containers:
-      - name: helen_dev
-        image: helen_dev:latest
+      - name: helen-dev
+        image: helen-dev:latest
         ports:
         - containerPort: 80
           name: http
@@ -23,10 +23,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: helen_dev-service
+  name: helen-dev-service
 spec:
   selector:
-    app: helen_dev
+    app: helen-dev
   ports:
   - protocol: TCP
     port: 12080

@@ -5,14 +5,14 @@ When you build the image, the build context should be set to the DEV/ directory 
 
 	1.	Build and Import Docker Image:
 ```
-docker build -t helen_dev:latest .
-docker save helen_dev:latest -o helen_dev.tar
-microk8s ctr image import helen_dev.tar # Import the image into your MicroK8s cluster:
+docker build -t helen-dev:latest .
+docker save helen-dev:latest -o helen-dev.tar
+microk8s ctr image import helen-dev.tar # Import the image into your MicroK8s cluster:
 ```
 
 	2.	Apply the YAML:
 ```
-microk8s kubectl apply -f helen_DEV.yaml
+microk8s kubectl apply -f helen-dev.yaml
 ```
 
 	3.	Verify Deployment:
