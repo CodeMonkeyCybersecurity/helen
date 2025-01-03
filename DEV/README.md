@@ -58,3 +58,4 @@ Ingress Controller: Confirm the Ingress controller is running and functional:
 ```
 microk8s kubectl get pods -n ingress
 ```
+
