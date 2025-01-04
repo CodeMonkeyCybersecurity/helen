@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: helen-dev-ingress
   namespace: development
+  annotations:
+    kubernetes.io/ingress.class: "nginx" # Specify the ingress class
 spec:
   rules:
   - host: vhost1
