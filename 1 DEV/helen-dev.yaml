@@ -26,17 +26,20 @@ spec:
         ports:
         - containerPort: 80
 ---
-apiVersion: v1
-kind: Service
+apiVersion: networking.k8s.io/v1
+kind: Ingress
 metadata:
-  name: helen-dev-service
+  name: helen-dev-ingress
   namespace: development
 spec:
-  selector:
-    app: helen-dev
-  ports:
-  - protocol: TCP
-    port: 80          # Port for the service
-    targetPort: 80    # Port on the pod
-    nodePort: 32080   # Optional: Specify a static port (must be in range 30000-32767)
-  type: NodePort
+  rules:
+  - host: vhost1
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: helen-dev-service
+            port:
+              number: 80
