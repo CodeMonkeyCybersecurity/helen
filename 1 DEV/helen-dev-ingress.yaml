@@ -11,7 +11,5 @@ spec:
       - path: /
         pathType: Prefix
         backend:
-          service:
-            name: helen-dev-service
-            port:
-              number: 80
+          serviceName: helen-dev-service
+          servicePort: 80
