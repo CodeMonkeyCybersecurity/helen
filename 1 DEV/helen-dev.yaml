@@ -26,20 +26,15 @@ spec:
         ports:
         - containerPort: 80
 ---
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+apiVersion: v1
+kind: Service
 metadata:
-  name: helen-dev-ingress
+  name: helen-dev-service
   namespace: development
 spec:
-  rules:
-  - host: vhost1
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: helen-dev-service
-            port:
-              number: 80
+  selector:
+    app: helen-dev
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
