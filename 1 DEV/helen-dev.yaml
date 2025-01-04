@@ -19,11 +19,12 @@ spec:
     metadata:
       labels:
         app: helen-dev
-    containers:
-    - name: helen-dev
-      image: chickenj0/helen-dev:latest
-      ports:
-      - containerPort: 80
+    spec:
+      containers:
+      - name: helen-dev
+        image: chickenj0/helen-dev:latest
+        ports:
+        - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
