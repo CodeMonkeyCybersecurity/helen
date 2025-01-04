@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: helen-dev-ingress
   namespace: development
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - host: vhost1
@@ -11,5 +13,7 @@ spec:
       - path: /
         pathType: Prefix
         backend:
-          serviceName: helen-dev-service
-          servicePort: 80
+          service:
+            name: helen-dev-service
+            port: 
+              number: 80
