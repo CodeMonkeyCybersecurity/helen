@@ -5,7 +5,7 @@ metadata:
   namespace: development
 spec:
   rules:
-  - host: helen-dev.local
+  - host: vhost1
     http:
       paths:
       - path: /
