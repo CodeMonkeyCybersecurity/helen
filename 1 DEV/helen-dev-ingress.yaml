@@ -3,8 +3,6 @@ kind: Ingress
 metadata:
   name: helen-dev-ingress
   namespace: development
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - host: vhost1
