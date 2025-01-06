@@ -1,3 +1,4 @@
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -5,12 +6,12 @@ metadata:
   namespace: development
 spec:
   rules:
-  - http:
-      paths:
-      - path:
-        pathType: Prefix
-        backend:
-          service:
-            name: helen-dev-service
-            port: 
-              number: 8080
+    - http:
+        paths:
+          - path: null
+            pathType: Prefix
+            backend:
+              service:
+                name: helen-dev-service
+                port:
+                  number: 8080
