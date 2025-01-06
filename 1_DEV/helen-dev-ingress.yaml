@@ -9,7 +9,7 @@ spec:
     - http:
         paths:
           - path: null
-            pathType: Prefix
+            pathType: Exact
             backend:
               service:
                 name: helen-dev-service
