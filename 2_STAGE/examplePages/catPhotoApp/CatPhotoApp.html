@@ -1,0 +1,71 @@
+<!DOCTYPE html> <!--All pages should begin with <!DOCTYPE html>. This special string is known as a declaration and ensures the browser tries to meet industry-wide specifications. <!DOCTYPE html> tells browsers that the document is an HTML5 document which is the latest version of HTML.-->
+<html lang="en"> <!--Notice that the entire contents of the page are nested within an html element. The html element is the root element of an HTML page and wraps all content on the page.-->
+  <!--You can also specify the language of your page by adding the lang attribute to the html element.-->
+  <head> 
+    <meta charset="utf-8"> <!--You can set browser behavior by adding meta elements in the head. Inside the head element, nest a meta element with an attribute named charset. Set to the value to utf-8 which tells the browser how to encode characters for the page. Note that the meta element is a void element. -->
+    <title> CatPhotoApp </title> <!--The title element determines what browsers show in the title bar or tab for the page.
+  </head> <!--The head element is used to contain metadata about the document, such as its title, links to stylesheets, and scripts. Metadata is information about the page that isn't displayed directly on the page.-->
+  <body> <!--Notice that everything you've added to the page so far is inside the body element. All page content elements that should be rendered to the page go inside the body element. However, other important information goes inside the head element.-->
+    <main>
+      <h1>CatPhotoApp</h1> <!--heading 1-->
+      <section> <!--section-->
+        <h2>Cat Photos</h2> <!--heading 1-->
+        <p>Everyone loves <a href="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg">cute cats</a> online!</p> <!--a=anchor , p=paragraph-->
+        <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
+        <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a> <!--alt=alternative text, src=source, target="_blank" opens link in new tab-->
+      </section>
+      <section>
+        <h2>Cat Lists</h2>
+        <h3>Things cats love:</h3>
+        <ul> <!--unordered list-->
+          <li>cat nip</li> <!--list items-->
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>  <!--figure caption-->
+        </figure>
+        <h3>Top 3 things cats hate:</h3>
+        <ol> <!--ordered list-->
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+        <figure>
+          <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+          <figcaption>Cats <strong>hate</strong> other cats</figcaption>
+        </figure>
+      </section>
+      <section>
+        <h2>Cat Form</h2>
+        <form action="https://freecatphotoapp.com/submit-cat-photo">
+          <input type="text" name="catphotourl" placeholder="cat photo URL" required> <!--Even though you added your button below the text input, they appear next to each other on the page. That's because both input and button elements are inline elements, which don't appear on new lines.-->
+          <button type="submit">Submit</button> 
+          <fieldset>
+            <legend>Is your cat an indoor or outdoor cat?</legend>
+            <label><input checked type="radio" id="indoor" name="indoor-outdoor" value="indoor"> Indoor </label> <!--Remember that an input element is a void element.-->
+          <!--label elements are used to help associate the text for an input element with the input element itself (especially for assistive technologies like screen readers).-->
+          <!--The id attribute is used to identify specific HTML elements. Each id attribute's value must be unique from all other id values for the entire page.-->
+            <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label> <!--Notice that both radio buttons can be selected at the same time. To make it so selecting one radio button automatically deselects the other, both buttons must have a name attribute with the same value.-->
+          <!--The fieldset element is used to group related inputs and labels together in a web form. fieldset elements are block-level elements, meaning that they appear on a new line.-->
+          </fieldset>
+          <fieldset>
+            <legend>What's your cat's personality?</legend>
+            <input checked id="loving" type="checkbox" name="personality" value="loving"> <label for="loving">Loving</label> <!--Add the name attribute with the value personality to the checkbox input element. While you won't notice this in the browser, doing this makes it easier for a server to process your web form, especially when there are multiple checkboxes.-->
+            <!--There's another way to associate an input element's text with the element itself. You can nest the text within a label element and add a for attribute with the same value as the input element's id attribute.-->
+            <!--<input id="breakfast" type="radio" name="meal" value="breakfast"> <label for="breakfast">Breakfast</label>-->
+            <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
+            <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label> <!--Like radio buttons, form data for selected checkboxes are name / value attribute pairs. While the value attribute is optional, it's best practice to include it with any checkboxes or radio buttons on the page.-->
+            <!--In order to make a checkbox checked or radio button selected by default, you need to add the checked attribute to it.-->
+          </fieldset> 
+        </form>        
+      </section>
+    </main>
+    <footer> 
+      <p>No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org </a> </p>
+    </footer> <!--The footer element is used to define a footer for a document or section. A footer typically contains information about the author of the document, copyright data, links to terms of use, contact information, and more.-->
+  </body>
+</html>
+
+<!--Massive thank you to freecodecamp.org for helping us train up our own devs for free <3 . We have taken this code and copied it nearly verbatim from them, and we are very thankful.-->
