@@ -5,10 +5,11 @@ metadata:
   namespace: development
 spec:
   rules:
-  - host: vhost1
-    http:
+  - http:
       paths:
-      - backend:
+      - path:
+        pathType: Prefix
+        backend:
           service:
             name: helen-dev-service
             port: 
