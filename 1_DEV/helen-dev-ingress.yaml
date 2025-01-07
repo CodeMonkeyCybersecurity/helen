@@ -8,7 +8,7 @@ spec:
   rules:
     - http:
         paths:
-          - path: /usr/share/nginx/html/
+          - path: /usr/share/nginx/
             pathType: Exact
             backend:
               service:
