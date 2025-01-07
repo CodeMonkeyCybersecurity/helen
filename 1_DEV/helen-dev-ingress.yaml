@@ -8,8 +8,8 @@ spec:
   rules:
     - http:
         paths:
-          - path: /usr/share/nginx/
-            pathType: Exact
+          - path: /usr/share/nginx/html/
+            pathType: Prefix
             backend:
               service:
                 name: helen-dev-service
