@@ -7,7 +7,11 @@ When you build the image, the build context should be set to the DEV/ directory 
 ```
 docker build -t helen-dev:latest .
 docker save helen-dev:latest -o helen-dev.tar
-microk8s ctr image import helen-dev.tar # Import the image into your MicroK8s cluster:
+microk8s ctr image import helen-dev.tar # Import the image into your MicroK8s cluster
+sudo docker login # login to docker 
+sudo docker tag helen-dev:latest chickenj0/helen-dev:latest # tag appropriately
+sudo docker images # verify tagged image 
+sudo docker push chickenj0/helen-dev:latest # push image to docker repo
 ```
 
 Apply the YAML:
