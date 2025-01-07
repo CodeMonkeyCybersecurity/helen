@@ -14,4 +14,4 @@ spec:
               service:
                 name: helen-dev-service
                 port:
-                  number: 8080
+                  number: 80
