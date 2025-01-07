@@ -6,7 +6,8 @@ metadata:
   namespace: development
 spec:
   rules:
-    - http:
+    - host: vhost2
+      http:
         paths:
           - path: /
             pathType: Prefix
