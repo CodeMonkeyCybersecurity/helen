@@ -33,27 +33,3 @@ spec:
     targetPort: 80    # Port on the pod
     nodePort: 32565   # Port on the node
   type: NodePort      # Exposes the service on the node's IP
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: helen--prod-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
-    cert-manager.io/cluster-issuer: letsencrypt-prod
-spec:
-  tls:
-  - hosts:
-    - cybermonkey.net.au
-    secretName: tls-cybermonkey
-  rules:
-  - host: cybermonkey.net.au
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: helen-prod-service
-            port:
-              number: 80

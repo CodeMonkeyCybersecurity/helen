@@ -2,17 +2,17 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: helen-dev-ingress
-  namespace: development
+  name: helen-sh-ingress
+  namespace: sh
 spec:
   rules:
-  - host: chickenj0.cloud
+  - host: cybermonkey.sh
     http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: helen-dev-service
+                name: helen-sh-service
                 port:
                   number: 80

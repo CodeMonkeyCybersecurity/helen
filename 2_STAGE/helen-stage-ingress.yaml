@@ -2,17 +2,17 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: helen-dev-ingress
-  namespace: development
+  name: helen-stage-ingress
+  namespace: staging
 spec:
   rules:
-  - host: chickenj0.cloud
+  - host: cybermonkey.dev
     http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: helen-dev-service
+                name: helen-stage-service
                 port:
                   number: 80
