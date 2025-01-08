@@ -6,8 +6,7 @@ metadata:
   namespace: development
 spec:
   rules:
-  - host: chickenj0.cloud
-    http:
+  - http:
         paths:
           - path: /
             pathType: Prefix
