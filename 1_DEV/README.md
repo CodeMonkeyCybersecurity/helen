@@ -5,13 +5,10 @@ When you build the image, the build context should be set to the DEV/ directory 
 
 	1.	Build and Import Docker Image:
 ```
-docker build -t helen-dev:latest .
+
 docker save helen-dev:latest -o helen-dev.tar
 microk8s ctr image import helen-dev.tar # Import the image into your MicroK8s cluster
-sudo docker login # login to docker 
-sudo docker tag helen-dev:latest chickenj0/helen-dev:latest # tag appropriately
-sudo docker images # verify tagged image 
-sudo docker push chickenj0/helen-dev:latest # push image to docker repo
+
 ```
 
 Apply the YAML:
@@ -37,16 +34,14 @@ microk8s kubectl create namespace development
 
 Create and push the docker container
 ```
-docker build -t chickenj0/helen-dev:latest .
-docker push chickenj0/helen-dev:latest
+docker build -t helen-dev:latest .
+sudo docker login # login to docker 
+sudo docker tag helen-dev:latest chickenj0/helen-dev:latest # tag appropriately
+sudo docker images # verify tagged image 
+sudo docker push chickenj0/helen-dev:latest # push image to docker repo
 ```
 
-Node Labeling: Verify that vhost5, vhost7, and vhost11 have the correct labels:
-```
-microk8s kubectl label node vhost5 role=backend
-microk8s kubectl label node vhost7 role=backend
-microk8s kubectl label node vhost11 role=backend
-```
+
 
 Cert-Manager Functionality: Ensure cert-manager is installed, and the letsencrypt-prod secret is successfully created:
 ```
