@@ -19,7 +19,7 @@ This project sets up an NGINX web server using Docker Compose to serve static fi
 
 • Docker and Docker Compose installed on your server.
  
-• A domain name (cybermonkey.dev) pointing to your server’s IP address.
+• A domain name (cybermonkey.net.au) pointing to your server’s IP address.
  
 • Certbot installed on your server for certificate generation.
 
@@ -28,11 +28,15 @@ This project sets up an NGINX web server using Docker Compose to serve static fi
 ## Project Structure
 
 ```
-├── docker-compose.yaml         # Docker Compose configuration file
-├── _/                      # Directory for your static website files
-├── index.html             # Example HTML file
+├── docker-compose.yaml        # Docker Compose configuration file
+├── index.html                 # Example HTML file
 ├── nginx.conf                 # Custom NGINX configuration file
-├── certs/                     # Directory for SSL certificates 
+├── _/                         # Directory for your static website files
+├── certs/                     # Directory for SSL certificates
+├── css/
+├── fonts/
+├── openColour/
+├── images/
 └── README.md                  # Documentation for the setup
 ```
 ## Setup Instructions
@@ -72,19 +76,26 @@ sudo apt install certbot
 Run Certbot to generate certificates using its built-in standalone server:
 ```
 sudo certbot certonly --standalone \
-    -d cybermonkey.dev \
-    --email main@cybermonkey.dev \
+    -d cybermonkey.net.au \
+    --email main@cybermonkey.net.au \
     --agree-tos
 ```
-This will spin up a temporary web server on port 80. Certbot will place certificates in /etc/letsencrypt/live/cybermonkey.dev/.
+This will spin up a temporary web server on port 80. Certbot will place certificates in:
+
+```
+/etc/letsencrypt/live/cybermonkey.net.au/
+```
+
 
 ### 4.	Verify Certificate Files
 After a successful run, check:
+
 ```
-ls -l /etc/letsencrypt/live/cybermonkey.dev/
+ls -l /etc/letsencrypt/live/cybermonkey.net.au/
 ```
 
 You should see:
+
 •	cert.pem
 
 •	chain.pem
@@ -94,14 +105,15 @@ You should see:
 •	privkey.pem
 
 ### 5.	Create a Local Directory for Docker
+
 Make a local directory in your project for the certs:
 ```
 mkdir certs
 ```
 Copy your certificates into it:
 ```
-sudo cp /etc/letsencrypt/live/cybermonkey.dev/fullchain.pem certs/
-sudo cp /etc/letsencrypt/live/cybermonkey.dev/privkey.pem certs/
+sudo cp /etc/letsencrypt/live/cybermonkey.net.au/fullchain.pem certs/
+sudo cp /etc/letsencrypt/live/cybermonkey.net.au/privkey.pem certs/
 ```
 Adjust permissions to be readable:
 ```
@@ -132,13 +144,13 @@ Point to the copied certs in /etc/nginx/certs:
 ```
 server {
     listen 80;
-    server_name cybermonkey.dev;
+    server_name cybermonkey.net.au;
     return 301 https://$host$request_uri;
 }
 
 server {
     listen 443 ssl;
-    server_name cybermonkey.dev;
+    server_name cybermonkey.net.au;
 
     ssl_certificate /etc/nginx/certs/fullchain.pem;
     ssl_certificate_key /etc/nginx/certs/privkey.pem;
@@ -155,7 +167,7 @@ With certificates in place and nginx.conf updated, start your container:
 ```
 docker-compose up -d
 ```
-You should now be able to browse to https://cybermonkey.dev.
+You should now be able to browse to https://cybermonkey.net.au.
 
 ### 9.	Automate Certificate Renewal (Optional)
 •	Since Certbot is on your host, just rely on its standard cron-based renewal:
