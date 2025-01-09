@@ -72,3 +72,4 @@ coverage/
 *.db
 *.db-journal
 *.lock
+*.pem
