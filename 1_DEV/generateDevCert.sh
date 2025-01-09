@@ -36,6 +36,6 @@ else
   exit 1
 fi
 
-echo "Now run `docker compose up -d`"
+echo "Now run 'docker compose up -d'"
 echo ""
 echo "finis"
