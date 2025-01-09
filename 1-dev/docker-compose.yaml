@@ -1,13 +1,30 @@
 services:
-    web:
-        image: nginx
-        container_name: helen-dev
-        volumes:
-        - ./html:/var/www/html/:ro
-        - ./nginx.conf:/etc/nginx/conf.d/default.conf # Custom NGINX configuration
-        - /etc/letsencrypt/live/chickenj0.cloud:/etc/nginx/certs # Mount SSL certificates
-        ports:
-        - "80:80"  # HTTP
-        - "443:443" # HTTPS
-        restart: always
-    
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    volumes:
+      - ./html:/var/www/html:ro # Shared webroot for validation
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro # Custom NGINX configuration
+      - /etc/letsencrypt:/etc/letsencrypt # SSL certificates
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - certbot # Ensure Certbot runs before NGINX starts
+    restart: always
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - ./html:/var/www/html:ro # Shared webroot for validation
+      - /etc/letsencrypt:/etc/letsencrypt # Persist certificates
+      - /var/lib/letsencrypt:/var/lib/letsencrypt # Certbot data
+    entrypoint: "/bin/sh -c"
+    command: >
+      "certbot certonly --webroot 
+      --webroot-path=/var/www/html 
+      --email main@cybermonkey.dev 
+      --agree-tos 
+      --no-eff-email 
+      -d chickenj0.cloud"
