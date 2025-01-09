@@ -35,45 +35,88 @@ Clone this repository to your server:
 
 git clone <repository-url>
 cd <repository-directory>
+Below is a simple, reliable approach to obtain SSL certificates with Certbot and use them in an NGINX Docker container—without battling volume-mount issues for Let’s Encrypt directories. This method involves two separate steps:
+	1.	Use Certbot on the host (outside of Docker) to obtain certificates.
+	2.	Mount the certificates into your Dockerized NGINX.
 
-2. Set up docker compose 
+By doing it this way, you avoid dealing with /var/lib/letsencrypt or /etc/letsencrypt inside Docker. Once you have your certificates on the host, you simply share them with the NGINX container.
 
-```
-docker compose up -d
-```
+Option A: Generate Certificates Directly on the Host
+	1.	Stop Any Services on Port 80
+Stop or remove any containers or services (like NGINX) that are currently listening on port 80:
 
-3. Configure SSL Certificates
+docker-compose down
+sudo systemctl stop nginx
 
-Run the generate-cert.sh script to generate SSL certificates for your domain:
+This is necessary because Certbot’s standalone mode needs to bind port 80.
 
-sudo ./generate-cert.sh
+	2.	Install Certbot on the Host
+On Ubuntu/Debian:
 
-This script:
-	•	Generates a Let’s Encrypt SSL certificate for your domain.
-	•	Automatically configures NGINX to use HTTPS.
-	•	Reloads the NGINX server to apply changes.
+sudo apt update
+sudo apt install certbot
 
-4. Start the NGINX Server
 
-Start the NGINX server using Docker Compose:
+	3.	Obtain the Certificates (Standalone Mode)
+Run Certbot to generate certificates using its built-in standalone server:
 
-docker-compose up -d
+sudo certbot certonly --standalone \
+    -d chickenj0.cloud \
+    --email main@cybermonkey.dev \
+    --agree-tos \
+    --no-eff-email
 
-5. Verify the Setup
-	•	Visit http://chickenj0.cloud to confirm HTTP traffic is redirected to HTTPS.
-	•	Visit https://chickenj0.cloud to confirm the HTTPS certificate is working.
+	•	This will spin up a temporary web server on port 80.
+	•	Certbot will place certificates in /etc/letsencrypt/live/chickenj0.cloud/.
 
-Configuration Details
+	4.	Verify Certificate Files
+After a successful run, check:
 
-docker-compose.yml
+ls -l /etc/letsencrypt/live/chickenj0.cloud/
 
-Defines the NGINX service, mapping ports, and mounting the html directory for static files. Includes the following key settings:
-	•	Ports: Maps 80 (HTTP) and 443 (HTTPS) to the host.
-	•	Volumes: Mounts the html directory for static content and certs directory for SSL certificates.
+You should see:
+	•	cert.pem
+	•	chain.pem
+	•	fullchain.pem
+	•	privkey.pem
 
-nginx.conf
+	5.	Create a Local Directory for Docker
+Make a local directory in your project for the certs:
 
-Custom NGINX configuration for HTTPS with HTTP-to-HTTPS redirection:
+mkdir certs
+
+Copy your certificates into it:
+
+sudo cp /etc/letsencrypt/live/chickenj0.cloud/fullchain.pem certs/
+sudo cp /etc/letsencrypt/live/chickenj0.cloud/privkey.pem certs/
+
+Adjust permissions to be readable:
+
+sudo chmod 644 certs/fullchain.pem
+sudo chmod 600 certs/privkey.pem
+
+
+	6.	Use the Certificates in Docker
+In your docker-compose.yml, mount the local certs folder into the container:
+
+version: "3.9"
+
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: helen-dev
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./certs:/etc/nginx/certs:ro
+    ports:
+      - "80:80"
+      - "443:443"
+    restart: always
+
+
+	7.	Configure nginx.conf
+Point to the copied certs in /etc/nginx/certs:
 
 server {
     listen 80;
@@ -85,38 +128,91 @@ server {
     listen 443 ssl;
     server_name chickenj0.cloud;
 
-    ssl_certificate /etc/nginx/certs/nginx.crt;
-    ssl_certificate_key /etc/nginx/certs/nginx.key;
+    ssl_certificate /etc/nginx/certs/fullchain.pem;
+    ssl_certificate_key /etc/nginx/certs/privkey.pem;
 
     location / {
-        root /var/www/html;
+        root /usr/share/nginx/html;
         index index.html;
     }
 }
 
-generate-cert.sh
 
-Automates SSL certificate generation using Certbot and configures NGINX for HTTPS.
+	8.	Start NGINX
+With certificates in place and nginx.conf updated, start your container:
 
-Troubleshooting
-	1.	Certbot Not Installed:
-Install Certbot and the NGINX plugin:
+docker-compose up -d
 
-sudo apt update
-sudo apt install certbot python3-certbot-nginx
+You should now be able to browse to https://chickenj0.cloud.
 
+	9.	Automate Certificate Renewal (Optional)
+	•	Since Certbot is on your host, just rely on its standard cron-based renewal:
 
-	2.	Port Conflicts:
-Ensure no other services are using ports 80 or 443:
-
-sudo netstat -tuln | grep -E '80|443'
+sudo certbot renew
 
 
-	3.	DNS Issues:
-Verify that your domain (chickenj0.cloud) points to your server’s IP address using a DNS lookup tool.
+	•	If renewal updates your cert files, copy them again into ./certs/ or symlink them.
+	•	Then restart the container for changes to take effect:
 
-License
+docker-compose restart
 
-This project is open-source and available under the MIT License.
+Option B: Use a Temporary Certbot Container (Standalone)
 
-Let me know if you’d like to refine or add more details!
+If you prefer Docker for everything, here’s a minimal approach:
+	1.	Stop Anything on Port 80
+
+docker-compose down
+
+
+	2.	Run a Standalone Certbot Container
+This container listens on port 80, obtains the cert, and saves it to a local folder:
+
+docker run -it --rm --name certbot \
+  -p 80:80 \
+  -v $PWD/letsencrypt/etc:/etc/letsencrypt \
+  -v $PWD/letsencrypt/lib:/var/lib/letsencrypt \
+  certbot/certbot certonly --standalone \
+    -d chickenj0.cloud \
+    --email main@cybermonkey.dev \
+    --agree-tos \
+    --no-eff-email
+
+	•	This writes certificates to ./letsencrypt/etc/live/chickenj0.cloud/.
+
+	3.	Mount Certificates into NGINX
+Then, in docker-compose.yml, mount these files into your NGINX container:
+
+volumes:
+  - $PWD/letsencrypt/etc/live/chickenj0.cloud:/etc/nginx/certs:ro
+
+Make sure your nginx.conf references fullchain.pem and privkey.pem inside /etc/nginx/certs.
+
+	4.	Start NGINX
+
+docker-compose up -d
+
+Your container now uses the certificates you obtained via the temporary Certbot container.
+
+	5.	Renewal
+Rerun the Certbot container every 60 days or so (or via a cron job on your host):
+
+docker run --rm -it \
+  -v $PWD/letsencrypt/etc:/etc/letsencrypt \
+  -v $PWD/letsencrypt/lib:/var/lib/letsencrypt \
+  certbot/certbot renew
+
+Then docker-compose restart to load the new certs.
+
+Why This Is Easier
+	1.	Avoids Mounting System Folders
+Mounting /var/lib/letsencrypt or /etc/letsencrypt from the host can cause permission headaches if your filesystem is read-only or if the Docker daemon lacks write permission.
+	2.	Keeps Certbot Steps Clear
+You generate and manage certificates in a simple, known directory (like ./letsencrypt or ./certs).
+	3.	Less Volume Complexity
+Storing certs locally is straightforward; you only bind-mount them where needed for NGINX.
+
+Recap
+	•	Option A (Host Certbot): Install Certbot on your host, generate certs in /etc/letsencrypt/, copy them into your project folder, and mount them in Docker.
+	•	Option B (Docker Certbot): Use a standalone Certbot container, store certs in your project directory, then mount them into NGINX.
+
+Both methods bypass the common pitfalls of trying to mount read-only system directories into Docker. Choose whichever best fits your preference and environment.
