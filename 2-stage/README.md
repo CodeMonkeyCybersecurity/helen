@@ -74,7 +74,7 @@ Run Certbot to generate certificates using its built-in standalone server:
 sudo certbot certonly --standalone \
     -d cybermonkey.dev \
     --email main@cybermonkey.dev \
-    --agree-tos \
+    --agree-tos
 ```
 This will spin up a temporary web server on port 80. Certbot will place certificates in /etc/letsencrypt/live/cybermonkey.dev/.
 
