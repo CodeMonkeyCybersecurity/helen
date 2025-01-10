@@ -211,12 +211,12 @@ server {
     ssl_certificate_key /etc/nginx/certs/wazuh.privkey.pem;
 
     location / {
-        # Forward to your Wazuh Dashboard (on vhost1 port 5601)
+        # Forward to your Wazuh Dashboard (on IP ww.xx.yy.zz port 5601)
         # If it's HTTP on the backend:
-        proxy_pass https://vhost1:5601/;
+        proxy_pass https://ww.xx.yy.zz:5601/;
 
         # If the backend is HTTPS with self-signed cert:
-        # proxy_pass https://vhost1:5601/;
+        # proxy_pass https://ww.xx.yy.zz:5601/;
         # proxy_ssl_verify off;
 
         proxy_set_header Host $host;
