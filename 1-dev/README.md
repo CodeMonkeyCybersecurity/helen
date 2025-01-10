@@ -74,10 +74,18 @@ Run Certbot to generate certificates using its built-in standalone server:
 sudo certbot certonly --standalone \
     -d chickenj0.cloud \
     --email main@cybermonkey.dev \
-    --agree-tos \
-    --no-eff-email
+    --agree-tos
 ```
 This will spin up a temporary web server on port 80. Certbot will place certificates in /etc/letsencrypt/live/chickenj0.cloud/.
+
+#### If you're adding Wazuh 
+Run Certbot to generate certificates using its built-in standalone server:
+```
+sudo certbot certonly --standalone \
+    -d wazuh.chickenj0.cloud \
+    --email main@cybermonkey.dev \
+    --agree-tos
+```
 
 ### 4.	Verify Certificate Files
 After a successful run, check:
@@ -104,11 +112,26 @@ Copy your certificates into it:
 sudo cp /etc/letsencrypt/live/chickenj0.cloud/fullchain.pem certs/
 sudo cp /etc/letsencrypt/live/chickenj0.cloud/privkey.pem certs/
 ```
+
 Adjust permissions to be readable:
 ```
 sudo chmod 644 certs/fullchain.pem
 sudo chmod 600 certs/privkey.pem
 ```
+
+#### If you're adding Wazuh 
+Copy your certificates into it:
+```
+sudo cp /etc/letsencrypt/live/wazuh.chickenj0.cloud/fullchain.pem certs/wazuh.fullchain.pem
+sudo cp /etc/letsencrypt/live/wazuh.chickenj0.cloud/privkey.pem certs/wazuh.privkey.pem
+```
+
+Adjust permissions to be readable:
+```
+sudo chmod 644 certs/wazuh.fullchain.pem
+sudo chmod 600 certs/wazuh.privkey.pem
+```
+
 
 ### 6.	Use the Certificates in Docker
 In your docker-compose.yml, mount the local certs folder into the container:
@@ -116,7 +139,7 @@ In your docker-compose.yml, mount the local certs folder into the container:
 ```
 services:
   nginx:
-    image: nginx:alpine
+    image: nginx
     container_name: helen-dev
     volumes:
       - ./html:/usr/share/nginx/html:ro
@@ -151,12 +174,64 @@ server {
 }
 ```
 
+#### If you're adding Wazuh 
+Your nginx.conf file needs to be:
+```
+server {
+    listen 80;
+    server_name chickenj0.cloud;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name chickenj0.cloud;
+
+    ssl_certificate /etc/nginx/certs/fullchain.pem;
+    ssl_certificate_key /etc/nginx/certs/privkey.pem;
+
+    location / {
+        root /usr/share/nginx/html;
+        index index.html;
+    }
+}
+
+server {
+    listen 80;
+    server_name wazuh.chickenj0.cloud;
+    return 301 https://$host$request_uri;  # Redirect HTTP to HTTPS
+}
+
+server {
+    listen 443 ssl;
+    server_name wazuh.chickenj0.cloud;
+
+    # SSL Certificate settings
+    ssl_certificate /etc/nginx/certs/wazuh.fullchain.pem;
+    ssl_certificate_key /etc/nginx/certs/wazuh.privkey.pem;
+
+    location / {
+        # Forward to your Wazuh Dashboard (on vhost1 port 5601)
+        # If it's HTTP on the backend:
+        proxy_pass https://vhost1:5601/;
+
+        # If the backend is HTTPS with self-signed cert:
+        # proxy_pass https://vhost1:5601/;
+        # proxy_ssl_verify off;
+
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+```
+
 ### 8.	Start NGINX
 With certificates in place and nginx.conf updated, start your container:
 ```
 docker-compose up -d
 ```
-You should now be able to browse to https://chickenj0.cloud.
+You should now be able to browse to https://wazuh.chickenj0.cloud.
 
 ### 9.	Automate Certificate Renewal (Optional)
 •	Since Certbot is on your host, just rely on its standard cron-based renewal:
