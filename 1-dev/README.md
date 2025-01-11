@@ -240,65 +240,8 @@ sudo certbot renew
 ```
 docker-compose restart
 ```
-## Option B: Use a Temporary Certbot Container (Standalone)
 
-If you prefer Docker for everything, here’s a minimal approach:
-
-### 1.	Stop Anything on Port 80
-```
-docker-compose down
-```
-
-### 2.	Run a Standalone Certbot Container
-This container listens on port 80, obtains the cert, and saves it to a local folder:
-```
-docker run -it --rm --name certbot \
-  -p 80:80 \
-  -v $PWD/letsencrypt/etc:/etc/letsencrypt \
-  -v $PWD/letsencrypt/lib:/var/lib/letsencrypt \
-  certbot/certbot certonly --standalone \
-    -d chickenj0.cloud \
-    --email main@cybermonkey.dev \
-    --agree-tos \
-    --no-eff-email
-```
-* This writes certificates to ./letsencrypt/etc/live/chickenj0.cloud/.
-
-### 3.	Mount Certificates into NGINX
-Then, in docker-compose.yml, mount these files into your NGINX container:
-```
-volumes:
-  - $PWD/letsencrypt/etc/live/chickenj0.cloud:/etc/nginx/certs:ro
-```
-Make sure your nginx.conf references fullchain.pem and privkey.pem inside /etc/nginx/certs.
-
-### 4.	Start NGINX
-```
-docker-compose up -d
-```
-Your container now uses the certificates you obtained via the temporary Certbot container.
-
-### 5.	Renewal
-Rerun the Certbot container every 60 days or so (or via a cron job on your host):
-```
-docker run --rm -it \
-  -v $PWD/letsencrypt/etc:/etc/letsencrypt \
-  -v $PWD/letsencrypt/lib:/var/lib/letsencrypt \
-  certbot/certbot renew
-```
-Then docker-compose restart to load the new certs.
-
-Why This Is Easier
-1.	Avoids Mounting System Folders
-Mounting /var/lib/letsencrypt or /etc/letsencrypt from the host can cause permission headaches if your filesystem is read-only or if the Docker daemon lacks write permission.
-
-3.	Keeps Certbot Steps Clear
-You generate and manage certificates in a simple, known directory (like ./letsencrypt or ./certs).
-
-4.	Less Volume Complexity
-Storing certs locally is straightforward; you only bind-mount them where needed for NGINX.
-
-Recap
+## Recap
 * Option A (Host Certbot): Install Certbot on your host, generate certs in /etc/letsencrypt/, copy them into your project folder, and mount them in Docker.
 * Option B (Docker Certbot): Use a standalone Certbot container, store certs in your project directory, then mount them into NGINX.
 Both methods bypass the common pitfalls of trying to mount read-only system directories into Docker. Choose whichever best fits your preference and environment.
