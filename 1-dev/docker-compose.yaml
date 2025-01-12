@@ -9,5 +9,4 @@ services:
       #- ./certs:/etc/nginx/certs:ro  # SSL certificates
     ports:
       - "8080:80"
-      - "8443:443"
     restart: always
