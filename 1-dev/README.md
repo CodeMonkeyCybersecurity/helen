@@ -110,7 +110,7 @@ Below is a simple, reliable approach to obtain SSL certificates with Certbot and
 
 By doing it this way, you avoid dealing with /var/lib/letsencrypt or /etc/letsencrypt inside Docker. Once you have your certificates on the host, you simply share them with the NGINX container.
 
-## Option A: Generate Certificates Directly on the Host
+## Generate Services on the Hosts
 ### 1.	Stop Any Services on Port 80
 **On your remote server (reverse proxy/proxy/cloud instance)**
 Stop or remove any containers or services (like NGINX) that are currently listening on port 80:
