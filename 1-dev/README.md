@@ -18,7 +18,7 @@ This project sets up an NGINX web server using Docker Compose to serve static fi
 ## Requirements
 
 * Docker and Docker Compose installed on your server.
-* A domain name (chickenj0.cloud) pointing to your server’s IP address.
+* A domain name (domain.com) pointing to your server’s IP address.
 * Certbot installed on your server for certificate generation.
 
 
@@ -36,7 +36,7 @@ This project sets up an NGINX web server using Docker Compose to serve static fi
 ## Setup Instructions
 For these instructions, we will be setting up a local virtualhost backend, and a remote cloud-based front end proxy/reverse proxy server.
 
-You will need a DNS domain, the ability to configure sub-domains of this (eg. mail.chickenj0.cloud, wazuh.chickenj0.cloud), a cheap cloud instance with a public IP address, and the appropriate A, AAAA, CNAME and TXT and MX records pointing your domain and subdomains to your public IP address/your cheap cloud instance.
+You will need a DNS domain, the ability to configure sub-domains of this (eg. mail.domain.com, wazuh.domain.com), a cheap cloud instance with a public IP address, and the appropriate A, AAAA, CNAME and TXT and MX records pointing your domain and subdomains to your public IP address/your cheap cloud instance.
 
 You will also need a VPN connecting your remote cloud instance to the computer you want running your virtualhost backend. You can set this up faily painlessly using something like wireguard (https://www.wireguard.com/) or tailscale (https://tailscale.com/).
 
@@ -64,7 +64,7 @@ See the diagram below for clarification on how this separation of infrastructure
                                       ▼
                          ┌───────────────────────────┐
                          │       DNS Resolution      │
-                         │ (chickenj0.cloud,           |
+                         │ (domain.com,           |
                          | cybermonkey.net.au, etc.) │
                          └────────────┬──────────────┘
                                       │
@@ -132,17 +132,17 @@ sudo apt install certbot
 Run Certbot to generate certificates using its built-in standalone server:
 ```
 sudo certbot certonly --standalone \
-    -d chickenj0.cloud \
+    -d domain.com \
     --email <you>@<your.email> \
     --agree-tos
 ```
-This will spin up a temporary web server on port 80. Certbot will place certificates in /etc/letsencrypt/live/chickenj0.cloud/.
+This will spin up a temporary web server on port 80. Certbot will place certificates in /etc/letsencrypt/live/domain.com/.
 
 ### If you're adding Wazuh 
 Run Certbot to generate certificates using its built-in standalone server:
 ```
 sudo certbot certonly --standalone \
-    -d wazuh.chickenj0.cloud \
+    -d wazuh.domain.com \
     --email <you>@<your.email> \
     --agree-tos
 ```
@@ -151,7 +151,7 @@ sudo certbot certonly --standalone \
 Run Certbot to generate certificates using its built-in standalone server:
 ```
 sudo certbot certonly --standalone \
-    -d mail.chickenj0.cloud \
+    -d mail.domain.com \
     --email <you>@<your.email> \
     --agree-tos
 ```
@@ -159,7 +159,7 @@ sudo certbot certonly --standalone \
 ## 4.	Verify Certificate Files
 After a successful run, check:
 ```
-sudo ls -l /etc/letsencrypt/live/chickenj0.cloud/
+sudo ls -l /etc/letsencrypt/live/domain.com/
 ```
 
 You should see:
@@ -175,8 +175,8 @@ mkdir -p certs
 ```
 Copy your certificates into it:
 ```
-sudo cp /etc/letsencrypt/live/chickenj0.cloud/fullchain.pem certs/
-sudo cp /etc/letsencrypt/live/chickenj0.cloud/privkey.pem certs/
+sudo cp /etc/letsencrypt/live/domain.com/fullchain.pem certs/
+sudo cp /etc/letsencrypt/live/domain.com/privkey.pem certs/
 ```
 
 Adjust permissions to be readable:
@@ -188,8 +188,8 @@ sudo chmod 600 certs/privkey.pem
 ### If you're adding Wazuh 
 Copy your certificates into it:
 ```
-sudo cp /etc/letsencrypt/live/wazuh.chickenj0.cloud/fullchain.pem certs/wazuh.fullchain.pem
-sudo cp /etc/letsencrypt/live/wazuh.chickenj0.cloud/privkey.pem certs/wazuh.privkey.pem
+sudo cp /etc/letsencrypt/live/wazuh.domain.com/fullchain.pem certs/wazuh.fullchain.pem
+sudo cp /etc/letsencrypt/live/wazuh.domain.com/privkey.pem certs/wazuh.privkey.pem
 ```
 
 Adjust permissions to be readable:
@@ -202,8 +202,8 @@ sudo chmod 600 certs/wazuh.privkey.pem
 **On your remote server (reverse proxy/proxy/cloud instance)**
 Copy your certificates into it:
 ```
-sudo cp /etc/letsencrypt/live/mail.chickenj0.cloud/fullchain.pem certs/mail.fullchain.pem
-sudo cp /etc/letsencrypt/live/mail.chickenj0.cloud/privkey.pem certs/mail.privkey.pem
+sudo cp /etc/letsencrypt/live/mail.domain.com/fullchain.pem certs/mail.fullchain.pem
+sudo cp /etc/letsencrypt/live/mail.domain.com/privkey.pem certs/mail.privkey.pem
 ```
 
 Adjust permissions to be readable:
@@ -263,13 +263,13 @@ Point to the copied certs in /etc/nginx/certs:
 ```
 server {
     listen 80;
-    server_name chickenj0.cloud;
+    server_name domain.com;
     return 301 https://$host$request_uri;
 }
 
 server {
     listen 443 ssl;
-    server_name chickenj0.cloud;
+    server_name domain.com;
 
     ssl_certificate /etc/nginx/certs/fullchain.pem;
     ssl_certificate_key /etc/nginx/certs/privkey.pem;
@@ -286,13 +286,13 @@ Your nginx.conf file needs to be:
 ```
 server {
     listen 80;
-    server_name chickenj0.cloud;
+    server_name domain.com;
     return 301 https://$host$request_uri;
 }
 
 server {
     listen 443 ssl;
-    server_name chickenj0.cloud;
+    server_name domain.com;
 
     ssl_certificate /etc/nginx/certs/fullchain.pem;
     ssl_certificate_key /etc/nginx/certs/privkey.pem;
@@ -305,13 +305,13 @@ server {
 
 server {
     listen 80;
-    server_name wazuh.chickenj0.cloud;
+    server_name wazuh.domain.com;
     return 301 https://$host$request_uri;  # Redirect HTTP to HTTPS
 }
 
 server {
     listen 443 ssl;
-    server_name wazuh.chickenj0.cloud;
+    server_name wazuh.domain.com;
 
     # SSL Certificate settings
     ssl_certificate /etc/nginx/certs/wazuh.fullchain.pem;
@@ -369,9 +369,9 @@ stream {
         listen 993 ssl;
         proxy_pass mailcow_imap_ssl;
 
-        # SSL cert for mail.chickenj0.cloud
-        ssl_certificate /etc/nginx/certs/mail.chickenj0.cloud.fullchain.pem;
-        ssl_certificate_key /etc/nginx/certs/mail.chickenj0.cloud.privkey.pem;
+        # SSL cert for mail.domain.com
+        ssl_certificate /etc/nginx/certs/mail.domain.com.fullchain.pem;
+        ssl_certificate_key /etc/nginx/certs/mail.domain.com.privkey.pem;
 
         # (Optional) SSL Settings
         ssl_protocols       TLSv1.2 TLSv1.3;
@@ -383,8 +383,8 @@ stream {
         listen 587 ssl;  # Or if you prefer to do pure TLS on 465, use 465
         proxy_pass mailcow_smtp_tls;
 
-        ssl_certificate /etc/nginx/certs/mail.chickenj0.cloud.fullchain.pem;
-        ssl_certificate_key /etc/nginx/certs/mail.chickenj0.cloud.privkey.pem;
+        ssl_certificate /etc/nginx/certs/mail.domain.com.fullchain.pem;
+        ssl_certificate_key /etc/nginx/certs/mail.domain.com.privkey.pem;
 
         ssl_protocols       TLSv1.2 TLSv1.3;
         ssl_ciphers         HIGH:!aNULL:!MD5;
@@ -422,19 +422,19 @@ http {
     default_type  application/octet-stream;
 
     #--------------------------------------------------
-    # 1) MAIN WEBSITE: chickenj0.cloud
+    # 1) MAIN WEBSITE: domain.com
     #--------------------------------------------------
     # Redirect HTTP → HTTPS
     server {
         listen 80;
-        server_name chickenj0.cloud;
+        server_name domain.com;
         return 301 https://$host$request_uri;
     }
 
-    # The HTTPS server for chickenj0.cloud
+    # The HTTPS server for domain.com
     server {
         listen 443 ssl;
-        server_name chickenj0.cloud;
+        server_name domain.com;
 
         ssl_certificate /etc/nginx/certs/fullchain.pem;
         ssl_certificate_key /etc/nginx/certs/privkey.pem;
@@ -446,17 +446,17 @@ http {
     }
 
     #--------------------------------------------------
-    # 2) WAZUH: wazuh.chickenj0.cloud
+    # 2) WAZUH: wazuh.domain.com
     #--------------------------------------------------
     server {
         listen 80;
-        server_name wazuh.chickenj0.cloud;
+        server_name wazuh.domain.com;
         return 301 https://$host$request_uri;
     }
 
     server {
         listen 443 ssl;
-        server_name wazuh.chickenj0.cloud;
+        server_name wazuh.domain.com;
 
         ssl_certificate /etc/nginx/certs/wazuh.fullchain.pem;
         ssl_certificate_key /etc/nginx/certs/wazuh.privkey.pem;
@@ -471,22 +471,22 @@ http {
     }
 
     #--------------------------------------------------
-    # 3) MAILCOW WEB UI: mail.chickenj0.cloud
+    # 3) MAILCOW WEB UI: mail.domain.com
     #--------------------------------------------------
     # - We do HTTP → HTTPS
     server {
         listen 80;
-        server_name mail.chickenj0.cloud;
+        server_name mail.domain.com;
         return 301 https://$host$request_uri;
     }
 
     # - We do HTTPS termination and pass traffic to the Mailcow web container
     server {
         listen 443 ssl;
-        server_name mail.chickenj0.cloud;
+        server_name mail.domain.com;
 
-        ssl_certificate /etc/nginx/certs/mail.chickenj0.cloud.fullchain.pem;
-        ssl_certificate_key /etc/nginx/certs/mail.chickenj0.cloud.privkey.pem;
+        ssl_certificate /etc/nginx/certs/mail.domain.com.fullchain.pem;
+        ssl_certificate_key /etc/nginx/certs/mail.domain.com.privkey.pem;
 
         location / {
             proxy_pass http://ww.xx.yy.zz:8080; 
@@ -513,15 +513,15 @@ You should now test your endpoints. Using a **private browsing window**, navigat
 
 
 ### For your website
-* http://chickenj0.cloud/ → should redirect to HTTPS.
-* https://chickenj0.cloud/ → should load your static page.
+* http://domain.com/ → should redirect to HTTPS.
+* https://domain.com/ → should load your static page.
 
 
 ### If you're adding Wazuh 
-* https://wazuh.chickenj0.cloud/ → should proxy to Wazuh.
+* https://wazuh.domain.com/ → should proxy to Wazuh.
 
 ### If you're adding mailcow
-* https://mail.chickenj0.cloud/ → should load the Mailcow interface.
+* https://mail.domain.com/ → should load the Mailcow interface.
 
 
 ## Securing the setup 
