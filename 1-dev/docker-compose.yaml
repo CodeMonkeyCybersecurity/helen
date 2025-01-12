@@ -7,8 +7,6 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro # Custom NGINX configuration
       - ./certs:/etc/nginx/certs:ro  # SSL certificates
     ports:
-      - "80:80"
-      - "443:443"
-      - "1514:1514" 
-      - "1515:1515"
+      - "8080:80"
+      - "8443:443"
     restart: always
