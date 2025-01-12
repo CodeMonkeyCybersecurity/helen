@@ -354,14 +354,14 @@ events {
 stream {
     # Upstream definitions: mail services on the local backend
     upstream mailcow_imap_ssl {
-        server 100.105.31.114:993;  # IMAP-SSL on the local mailcow
+        server ww.xx.yy.zz:993;  # IMAP-SSL on the local mailcow
     }
     upstream mailcow_smtp_tls {
-        server 100.105.31.114:587;  # SMTP submission on the local mailcow
+        server ww.xx.yy.zz:587;  # SMTP submission on the local mailcow
     }
     # If you want to handle port 25 or 465, you can define them similarly, e.g.:
     # upstream mailcow_smtp25 {
-    #     server 100.105.31.114:25;
+    #     server ww.xx.yy.zz:25;
     # }
 
     # Listen IMAP over SSL externally
@@ -398,7 +398,7 @@ stream {
 
     # Wazuh streams
     upstream wazuh_manager_1515 {
-        server 100.105.31.114:1515;
+        server ww.xx.yy.zz:1515;
     }
     server {
         listen 1515;
@@ -406,7 +406,7 @@ stream {
     }
 
     upstream wazuh_manager_1514 {
-        server 100.105.31.114:1514;
+        server ww.xx.yy.zz:1514;
     }
     server {
         listen 1514;
@@ -463,7 +463,7 @@ http {
 
         # Proxy pass to Kibana interface on local Wazuh
         location / {
-            proxy_pass https://100.105.31.114:5601/;
+            proxy_pass https://ww.xx.yy.zz:5601/;
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header X-Forwarded-Proto $scheme;
@@ -489,9 +489,9 @@ http {
         ssl_certificate_key /etc/nginx/certs/mail.chickenj0.cloud.privkey.pem;
 
         location / {
-            proxy_pass http://100.105.31.114:8080; 
+            proxy_pass http://ww.xx.yy.zz:8080; 
             # ^ Adjust if your Mailcow web UI is mapped differently,
-            #   for example: "http://100.105.31.114:80" if you published it on 80 inside Docker.
+            #   for example: "http://ww.xx.yy.zz:80" if you published it on 80 inside Docker.
 
             proxy_set_header Host $host;
             proxy_set_header X-Real-IP $remote_addr;
