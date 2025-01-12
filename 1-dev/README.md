@@ -226,24 +226,32 @@ Full and up to date instructions on https://docs.mailcow.email/getstarted/instal
 
 
 ## 6.	Use the Certificates in Docker
+**On your remote server (reverse proxy/proxy/cloud instance)**
+
 In your docker-compose.yml, mount the local certs folder into the container:
 
 ```
 services:
   nginx:
-    image: nginx
+    image: nginx:alpine
     container_name: helen-dev
     volumes:
-      - ./html:/usr/share/nginx/html:ro
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
-      - ./certs:/etc/nginx/certs:ro
+      - ./:/usr/share/nginx/html:ro # Shared webroot for validation
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro # Custom NGINX configuration
+      - ./certs:/etc/nginx/certs:ro  # SSL certificates
     ports:
       - "80:80"
       - "443:443"
+      - "1514:1514"
+      - "1515:1515"
     restart: always
 ```
 
+
+
 ## 7.	Configure nginx.conf
+**On your remote server (reverse proxy/proxy/cloud instance)**
+
 Point to the copied certs in /etc/nginx/certs:
 
 ### For having the webpage set up only
@@ -328,26 +336,255 @@ The `proxy_pass https://ww.xx.yy.zz:5601/;` IP address values given above are th
 
 
 ### If you're adding mailcow
+```
+worker_processes  auto;
 
+events {
+    worker_connections  1024;
+}
+
+###
+# STREAM BLOCK for mail protocols
+###
+stream {
+    # Upstream definitions: mail services on the local backend
+    upstream mailcow_imap_ssl {
+        server 100.105.31.114:993;  # IMAP-SSL on the local mailcow
+    }
+    upstream mailcow_smtp_tls {
+        server 100.105.31.114:587;  # SMTP submission on the local mailcow
+    }
+    # If you want to handle port 25 or 465, you can define them similarly, e.g.:
+    # upstream mailcow_smtp25 {
+    #     server 100.105.31.114:25;
+    # }
+
+    # Listen IMAP over SSL externally
+    server {
+        listen 993 ssl;
+        proxy_pass mailcow_imap_ssl;
+
+        # SSL cert for mail.<your.domain>
+        ssl_certificate /etc/nginx/certs/mail.<your.domain>.fullchain.pem;
+        ssl_certificate_key /etc/nginx/certs/mail.<your.domain>.privkey.pem;
+
+        # (Optional) SSL Settings
+        ssl_protocols       TLSv1.2 TLSv1.3;
+        ssl_ciphers         HIGH:!aNULL:!MD5;
+    }
+
+    # Listen SMTP submission with STARTTLS externally
+    server {
+        listen 587 ssl;  # Or if you prefer to do pure TLS on 465, use 465
+        proxy_pass mailcow_smtp_tls;
+
+        ssl_certificate /etc/nginx/certs/mail.<your.domain>.fullchain.pem;
+        ssl_certificate_key /etc/nginx/certs/mail.<your.domain>.privkey.pem;
+
+        ssl_protocols       TLSv1.2 TLSv1.3;
+        ssl_ciphers         HIGH:!aNULL:!MD5;
+    }
+
+    # (Optional) If you want to forward plain 25 to Mailcow, or do SSL on 465:
+    # server {
+    #     listen 25;
+    #     proxy_pass mailcow_smtp25;
+    # }
+
+    # Wazuh streams
+    upstream wazuh_manager_1515 {
+        server 100.105.31.114:1515;
+    }
+    server {
+        listen 1515;
+        proxy_pass wazuh_manager_1515;
+    }
+
+    upstream wazuh_manager_1514 {
+        server 100.105.31.114:1514;
+    }
+    server {
+        listen 1514;
+        proxy_pass wazuh_manager_1514;
+    }
+}
+
+###
+# HTTP BLOCK for Web UI (Mailcow Admin, Wazuh Kibana, Static Site)
+###
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    #--------------------------------------------------
+    # 1) MAIN WEBSITE: <your.domain>
+    #--------------------------------------------------
+    # Redirect HTTP → HTTPS
+    server {
+        listen 80;
+        server_name <your.domain>;
+        return 301 https://$host$request_uri;
+    }
+
+    # The HTTPS server for <your.domain>
+    server {
+        listen 443 ssl;
+        server_name <your.domain>;
+
+        ssl_certificate /etc/nginx/certs/fullchain.pem;
+        ssl_certificate_key /etc/nginx/certs/privkey.pem;
+
+        location / {
+            root /usr/share/nginx/html;
+            index index.html;
+        }
+    }
+
+    #--------------------------------------------------
+    # 2) WAZUH: wazuh.<your.domain>
+    #--------------------------------------------------
+    server {
+        listen 80;
+        server_name wazuh.<your.domain>;
+        return 301 https://$host$request_uri;
+    }
+
+    server {
+        listen 443 ssl;
+        server_name wazuh.<your.domain>;
+
+        ssl_certificate /etc/nginx/certs/wazuh.fullchain.pem;
+        ssl_certificate_key /etc/nginx/certs/wazuh.privkey.pem;
+
+        # Proxy pass to Kibana interface on local Wazuh
+        location / {
+            proxy_pass https://100.105.31.114:5601/;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+    }
+
+    #--------------------------------------------------
+    # 3) MAILCOW WEB UI: mail.<your.domain>
+    #--------------------------------------------------
+    # - We do HTTP → HTTPS
+    server {
+        listen 80;
+        server_name mail.<your.domain>;
+        return 301 https://$host$request_uri;
+    }
+
+    # - We do HTTPS termination and pass traffic to the Mailcow web container
+    server {
+        listen 443 ssl;
+        server_name mail.<your.domain>;
+
+        ssl_certificate /etc/nginx/certs/mail.<your.domain>.fullchain.pem;
+        ssl_certificate_key /etc/nginx/certs/mail.<your.domain>.privkey.pem;
+
+        location / {
+            proxy_pass http://100.105.31.114:8080; 
+            # ^ Adjust if your Mailcow web UI is mapped differently,
+            #   for example: "http://100.105.31.114:80" if you published it on 80 inside Docker.
+
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+    }
+}
+```
 
 ## 8.	Start NGINX
 **On your remote server (reverse proxy/proxy/cloud instance)**
 With certificates in place and nginx.conf updated, start your container:
 ```
+docker-compose down
 docker-compose up -d
 ```
 
+You should now test your endpoints. Using a **private browsing window**, navigate to:
+
+
 ### For your website
-You should now be able to browse to `https://<your.domain>`
+* http://<your.domain>/ → should redirect to HTTPS.
+* https://<your.domain>/ → should load your static page.
+
 
 ### If you're adding Wazuh 
-You should now be able to browse to `https://wazuh.<your.domain>`
+* https://wazuh.<your.domain>/ → should proxy to Wazuh.
 
 ### If you're adding mailcow
-You should now be able to browse to `https://mail.<your.domain>`
+* https://mail.<your.domain>/ → should load the Mailcow interface.
 
 
-## 9.	Automate Certificate Renewal (Optional)
+## Securing the setup 
+Below are a few important security considerations:
+
+### Firewall
+**On your remote server (reverse proxy/proxy/cloud instance)**
+* On the remote proxy server, allow inbound on 80/443 (for web) + the mail ports (993, 587, 25 if needed), 1514, 1515 for Wazuh.
+
+```
+sudo ufw status
+
+# for web server 
+sudo ufw allow http 
+sudo ufw allow https 
+
+# for wazuh
+sudo ufw allow 1514
+sudo ufw allow 1515
+sudo ufw allow 5601
+sudo ufw allow 55000
+sudo ufw allow 9200
+
+# for mailcow
+sudo ufw allow 25
+sudo ufw allow 587
+sudo ufw allow 993
+```
+**On your local server (backend/virtual host)**
+* On the Mailcow server, consider restricting inbound connections for mail ports (25, 587, 993, etc.) only from your remote proxy server’s IP if you want to force all mail traffic to go through the proxy.
+```
+# for mailcow
+sudo ufw allow 25
+sudo ufw allow 587
+sudo ufw allow 993
+```
+
+* On the wazuh server; allow these ports 
+```
+# for wazuh
+sudo ufw allow 1514
+sudo ufw allow 1515
+sudo ufw allow 5601
+sudo ufw allow 55000
+sudo ufw allow 9200
+```
+
+### Fail2Ban
+* Set up Fail2Ban on the Mailcow server to monitor Dovecot (IMAP) and Postfix (SMTP) logs. This prevents brute-force login attempts.
+* You can also run Fail2Ban on the remote proxy, but typically for mail specifically, Fail2Ban is most effective on the actual mail server that has the logs.
+
+### TLS Ciphers
+* In your NGINX config, specify strong ciphers:
+```
+ssl_protocols       TLSv1.2 TLSv1.3;
+ssl_ciphers         EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH;
+ssl_prefer_server_ciphers on;
+```
+* Disable weak protocols, etc.
+
+### DNS & SPF/DKIM/DMARC
+* Make sure you publish correct SPF records pointing to your server that will send mail.
+* Enable DKIM in Mailcow’s admin interface.
+* Publish a DMARC record (optional but recommended).
+
+
+
+## .	Automate Certificate Renewal (Optional)
 * Since Certbot is on your host, just rely on its standard cron-based renewal:
 ```
 sudo certbot renew
