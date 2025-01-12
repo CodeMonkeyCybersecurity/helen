@@ -133,7 +133,7 @@ Run Certbot to generate certificates using its built-in standalone server:
 ```
 sudo certbot certonly --standalone \
     -d <your.domain> \
-    --email main@<your.domain> \
+    --email <you>@<your.email> \
     --agree-tos
 ```
 This will spin up a temporary web server on port 80. Certbot will place certificates in /etc/letsencrypt/live/<your.domain>/.
@@ -143,7 +143,7 @@ Run Certbot to generate certificates using its built-in standalone server:
 ```
 sudo certbot certonly --standalone \
     -d wazuh.<your.domain> \
-    --email main@<your.domain> \
+    --email <you>@<your.email> \
     --agree-tos
 ```
 
@@ -152,14 +152,14 @@ Run Certbot to generate certificates using its built-in standalone server:
 ```
 sudo certbot certonly --standalone \
     -d mail.<your.domain> \
-    --email main@<your.domain> \
+    --email <you>@<your.email> \
     --agree-tos
 ```
 
 ## 4.	Verify Certificate Files
 After a successful run, check:
 ```
-ls -l /etc/letsencrypt/live/<your.domain>/
+sudo ls -l /etc/letsencrypt/live/<your.domain>/
 ```
 
 You should see:
@@ -171,7 +171,7 @@ You should see:
 ## 5.	Create a Local Directory for Docker
 Make a local directory in your project for the certs:
 ```
-mkdir certs
+mkdir -p certs
 ```
 Copy your certificates into it:
 ```
