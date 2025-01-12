@@ -18,10 +18,9 @@ This project sets up an NGINX web server using Docker Compose to serve static fi
 ### Requirements
 
 * Docker and Docker Compose installed on your server.
-* A domain name (chickenj0.cloud) pointing to your server’s IP address.
+* A domain name (<your.domain>) pointing to your server’s IP address.
 * Certbot installed on your server for certificate generation.
 
- 
 
 ## Project Structure
 
@@ -33,14 +32,75 @@ This project sets up an NGINX web server using Docker Compose to serve static fi
 ├── certs/                     # Directory for SSL certificates (auto-generated)
 └── README.md                  # Documentation for the setup
 ```
+
 ## Setup Instructions
+For these instructions, we will be setting up a local virtualhost backend, and a remote cloud-based front end proxy/reverse proxy server.
+
+You will need a DNS domain, the ability to configure sub-domains of this (eg. mail.<your.domain>, wazuh.<your.domain>), a cheap cloud instance with a public IP address, and the appropriate A, AAAA, CNAME and TXT and MX records pointing your domain and subdomains to your public IP address/your cheap cloud instance.
+
+You will also need a VPN connecting your remote cloud instance to the computer you want running your virtualhost backend. You can set this up faily painlessly using something like wireguard (https://www.wireguard.com/) or tailscale (https://tailscale.com/).
+
+These two computers need to both be set up. Instructions relating to the reverse proxy server will be under the subheading:
+
+**On your remote server (reverse proxy/proxy/cloud instance)**
+
+Instructions relating to the local backend server will have the subheading:
+
+**On your local server (backend/virtual host)**
+
+There are several reasons why we have split the two roles here:
+* to keep cloud costs to a minimum by running all the heavy workloads on your own computers/servers
+* to not connect your home network to the internet by making sure all traffic designed for your website/web app is proxied through your cloud instance reverse proxy. If this is done correctly, this will mean that the only part of your setup directly exposed to the internet is the part controlled by the cloud provider.
+* if you end up having to scale your infrastructure, having a reverse proxy already set up means transitioning it to being a load balancer etc. will be much easier.
+
+See the diagram below for clarification on how this separation of infrastructure works 
+
+```
+                         ┌───────────────────────────┐
+                         │         Clients           │
+                         │ (User Browsers, Apps, etc)│
+                         └────────────┬──────────────┘
+                                      │
+                                      ▼
+                         ┌───────────────────────────┐
+                         │       DNS Resolution      │
+                         │ (<your.domain>,           |
+                         | cybermonkey.net.au, etc.) │
+                         └────────────┬──────────────┘
+                                      │
+                                      ▼
+            **This your remote server (reverse proxy/proxy/cloud instance)**
+                           ┌─────────────────┐
+                           │   Reverse Proxy │
+                           │ (NGINX, Caddy,  │
+                           │   Ingress, etc) │
+                           └───┬─────────────┘
+                               │
+      ┌────────────────────────┼─────────────────────────┐
+      │                        │                         │
+      ▼                        ▼                         ▼
+      **These are your local servers (backend/virtual hosts)**
+┌──────────────┐       ┌──────────────┐          ┌──────────────┐
+│  Backend 1   │       │  Backend 2   │          │  Backend 3   │
+│   (vhost5)   │       │   (vhost7)   │          │   (vhost11)  │
+│  ┌────────┐  │       │  ┌────────┐  │          │  ┌────────┐  │
+│  │ Service│  │       │  │ Service│  │          │  │ Service│  │
+│  │ Pod/   │  │       │  │ Pod/   │  │          │  │ Pod/   │  │
+│  │ Docker │  │       │  │ Docker │  │          │  │ Docker │  │
+│  └────────┘  │       │  └────────┘  │          │  └────────┘  │
+└──────────────┘       └──────────────┘          └──────────────┘
+```
 
 ### 1. Clone the Repository
 
 Clone this repository to your server:
 ```
-git clone <repository-url>
-cd <repository-directory>
+su
+umask
+# 0022 <- Verify it is 0022
+cd /opt
+git clone codeMonkeyCybersecurity/helen
+cd helen
 ```
 
 Below is a simple, reliable approach to obtain SSL certificates with Certbot and use them in an NGINX Docker container—without battling volume-mount issues for Let’s Encrypt directories. This method involves two separate steps:
@@ -52,6 +112,7 @@ By doing it this way, you avoid dealing with /var/lib/letsencrypt or /etc/letsen
 
 ## Option A: Generate Certificates Directly on the Host
 ### 1.	Stop Any Services on Port 80
+**On your remote server (reverse proxy/proxy/cloud instance)**
 Stop or remove any containers or services (like NGINX) that are currently listening on port 80:
 ```
 docker-compose down
@@ -59,7 +120,8 @@ sudo systemctl stop nginx
 ```
 This is necessary because Certbot’s standalone mode needs to bind port 80.
 
-### 2.	Install Certbot on the Host
+### 2.	Install Certbot on the Remote Host
+**On your remote server (reverse proxy/proxy/cloud instance)**
 On Ubuntu/Debian:
 ```
 sudo apt update
@@ -67,28 +129,38 @@ sudo apt install certbot
 ```
 
 ### 3.	Obtain the Certificates (Standalone Mode)
+**On your remote server (reverse proxy/proxy/cloud instance)**
 Run Certbot to generate certificates using its built-in standalone server:
 ```
 sudo certbot certonly --standalone \
-    -d chickenj0.cloud \
-    --email main@cybermonkey.dev \
+    -d <your.domain> \
+    --email main@<your.domain> \
     --agree-tos
 ```
-This will spin up a temporary web server on port 80. Certbot will place certificates in /etc/letsencrypt/live/chickenj0.cloud/.
+This will spin up a temporary web server on port 80. Certbot will place certificates in /etc/letsencrypt/live/<your.domain>/.
 
 #### If you're adding Wazuh 
 Run Certbot to generate certificates using its built-in standalone server:
 ```
 sudo certbot certonly --standalone \
-    -d wazuh.chickenj0.cloud \
-    --email main@cybermonkey.dev \
+    -d wazuh.<your.domain> \
+    --email main@<your.domain> \
+    --agree-tos
+```
+
+#### If you're adding Mailcow 
+Run Certbot to generate certificates using its built-in standalone server:
+```
+sudo certbot certonly --standalone \
+    -d mail.<your.domain> \
+    --email main@<your.domain> \
     --agree-tos
 ```
 
 ### 4.	Verify Certificate Files
 After a successful run, check:
 ```
-ls -l /etc/letsencrypt/live/chickenj0.cloud/
+ls -l /etc/letsencrypt/live/<your.domain>/
 ```
 
 You should see:
@@ -104,8 +176,8 @@ mkdir certs
 ```
 Copy your certificates into it:
 ```
-sudo cp /etc/letsencrypt/live/chickenj0.cloud/fullchain.pem certs/
-sudo cp /etc/letsencrypt/live/chickenj0.cloud/privkey.pem certs/
+sudo cp /etc/letsencrypt/live/<your.domain>/fullchain.pem certs/
+sudo cp /etc/letsencrypt/live/<your.domain>/privkey.pem certs/
 ```
 
 Adjust permissions to be readable:
@@ -117,8 +189,8 @@ sudo chmod 600 certs/privkey.pem
 #### If you're adding Wazuh 
 Copy your certificates into it:
 ```
-sudo cp /etc/letsencrypt/live/wazuh.chickenj0.cloud/fullchain.pem certs/wazuh.fullchain.pem
-sudo cp /etc/letsencrypt/live/wazuh.chickenj0.cloud/privkey.pem certs/wazuh.privkey.pem
+sudo cp /etc/letsencrypt/live/wazuh.<your.domain>/fullchain.pem certs/wazuh.fullchain.pem
+sudo cp /etc/letsencrypt/live/wazuh.<your.domain>/privkey.pem certs/wazuh.privkey.pem
 ```
 
 Adjust permissions to be readable:
@@ -126,6 +198,32 @@ Adjust permissions to be readable:
 sudo chmod 644 certs/wazuh.fullchain.pem
 sudo chmod 600 certs/wazuh.privkey.pem
 ```
+
+#### If you're adding Mailcow 
+**On your remote server (reverse proxy/proxy/cloud instance)**
+Copy your certificates into it:
+```
+sudo cp /etc/letsencrypt/live/mail.<your.domain>/fullchain.pem certs/wazuh.fullchain.pem
+sudo cp /etc/letsencrypt/live/mail.<your.domain>/privkey.pem certs/wazuh.privkey.pem
+```
+
+Adjust permissions to be readable:
+```
+sudo chmod 644 certs/mail.fullchain.pem
+sudo chmod 600 certs/mail.privkey.pem
+```
+
+**On your local server (backend/virtual host)**
+Install mailcow with:
+```
+su
+umask
+# 0022 # <- Verify it is 0022
+cd /opt
+git clone https://github.com/mailcow/mailcow-dockerized
+cd mailcow-dockerized
+```
+Full and up to date instructions on https://docs.mailcow.email/getstarted/install/#install-mailcow 
 
 
 ### 6.	Use the Certificates in Docker
@@ -151,13 +249,13 @@ Point to the copied certs in /etc/nginx/certs:
 ```
 server {
     listen 80;
-    server_name chickenj0.cloud;
+    server_name <your.domain>;
     return 301 https://$host$request_uri;
 }
 
 server {
     listen 443 ssl;
-    server_name chickenj0.cloud;
+    server_name <your.domain>;
 
     ssl_certificate /etc/nginx/certs/fullchain.pem;
     ssl_certificate_key /etc/nginx/certs/privkey.pem;
@@ -174,13 +272,13 @@ Your nginx.conf file needs to be:
 ```
 server {
     listen 80;
-    server_name chickenj0.cloud;
+    server_name <your.domain>;
     return 301 https://$host$request_uri;
 }
 
 server {
     listen 443 ssl;
-    server_name chickenj0.cloud;
+    server_name <your.domain>;
 
     ssl_certificate /etc/nginx/certs/fullchain.pem;
     ssl_certificate_key /etc/nginx/certs/privkey.pem;
@@ -193,13 +291,13 @@ server {
 
 server {
     listen 80;
-    server_name wazuh.chickenj0.cloud;
+    server_name wazuh.<your.domain>;
     return 301 https://$host$request_uri;  # Redirect HTTP to HTTPS
 }
 
 server {
     listen 443 ssl;
-    server_name wazuh.chickenj0.cloud;
+    server_name wazuh.<your.domain>;
 
     # SSL Certificate settings
     ssl_certificate /etc/nginx/certs/wazuh.fullchain.pem;
@@ -221,12 +319,28 @@ server {
 }
 ```
 
+I recommend using tailscale as a VPN mesh service, installed on each node. See https://tailscale.com/ for more information.
+
+It's very helpful for configuring several VPNs. 
+
+The `proxy_pass https://ww.xx.yy.zz:5601/;` IP address values given above are the local backend server's tailscale IP address.
+
+
 ### 8.	Start NGINX
 With certificates in place and nginx.conf updated, start your container:
 ```
 docker-compose up -d
 ```
-You should now be able to browse to https://wazuh.chickenj0.cloud.
+
+**For your website:**
+You should now be able to browse to `https://<your.domain>`
+
+**If you're chosing to add wazuh**
+You should now be able to browse to `https://wazuh.<your.domain>`
+
+**If you're chosing to add mailcow**
+You should now be able to browse to `https://mail.<your.domain>`
+
 
 ### 9.	Automate Certificate Renewal (Optional)
 * Since Certbot is on your host, just rely on its standard cron-based renewal:
@@ -242,6 +356,7 @@ docker-compose restart
 ```
 
 ## Recap
-* Option A (Host Certbot): Install Certbot on your host, generate certs in /etc/letsencrypt/, copy them into your project folder, and mount them in Docker.
-* Option B (Docker Certbot): Use a standalone Certbot container, store certs in your project directory, then mount them into NGINX.
-Both methods bypass the common pitfalls of trying to mount read-only system directories into Docker. Choose whichever best fits your preference and environment.
+* Install Certbot on your host, 
+* generate certs in /etc/letsencrypt/, 
+* copy them into your project folder, 
+* and mount them in Docker.
