@@ -1,7 +1,7 @@
 # docker-compose.yaml
 services:
   nginx:
-    image: nginx:alpine
+    image: nginx
     container_name: helen-dev
     volumes:
       - ./:/usr/share/nginx/html:ro # Shared webroot for validation
