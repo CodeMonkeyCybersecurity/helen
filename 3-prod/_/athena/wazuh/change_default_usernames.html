@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cybersecurity with Humans">
+    <title>Change Default Usernames - Code Monkey Cybersecurity</title>
+    <link rel="stylesheet" href="../openColour/open-color.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon-circular-128x128.png">
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="/" class="logo-link">
+                <img src="/images/fingerprint_flipped_whitebackground_circle_1000dp_oc-teal-9_FILL0_wght400_GRAD0_opsz48.png" 
+                     alt="Code Monkey Logo" class="logo-image">
+            </a>
+            Change Default Usernames
+        </h1>
+        <p>Cybersecurity with Humans</p>
+    </header>
+    
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/index.html#services">Services</a></li>
+            <li><a href="/index.html#why-us">Why Choose Us?</a></li>
+            <li><a href="/index.html#contact">Contact Us</a></li>
+            <li><a href="/_/delphi_roadmap.html">Wazuh Roadmap (Project Delphi)</a></li>
+            <li><a href="/_/athena.html">Knowledge base</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sections -->
+    <main class="container">
+        <section class="section">
+            <h2>Change Default Usernames</h2>
+            <p>Now we have installed Wazuh, we need to change the default passwords and verify it's working correctly before <a href="https://github.com/CodeMonkeyCybersecurity/hetcate.git">exposing it to the internet</a>.</p>
+            <p>Thank you to Wazuh for these <a href="https://documentation.wazuh.com/current/deployment-options/docker/wazuh-container.html#change-pwd-existing-usr">instructions</a>.</p>
+            <p>There are three default users whose passwords we need to change:</p>
+            <ul>
+                <li>Wazuh indexer users <code>admin</code> and <code>kibanaserver</code></li>
+                <li>Wazuh API user <code>wazuh-wui</code></li>
+            </ul>
+            <p>Again, thank you to Wazuh for the effort they put into their <a href="https://documentation.wazuh.com/current/deployment-options/docker/wazuh-container.html">documentation</a>.</p>
+        </section>
+        
+        <section class="section">
+            <h2>Changing Default User Passwords</h2>
+            <p>We are going to be doing this in our <code>multi-node</code> cluster:</p>
+            <pre><code>cd $HOME/wazuh-docker/multi-node
+            </code></pre>
+        </section>
+
+        <section class="section">
+            <h3>Set a New Hash</h3>
+            <p>Stop the deployment stack if it’s running:</p>
+            <pre><code>docker compose down
+            </code></pre>
+            <p><strong>Wazuh advises not to use the $ or & characters in your new password.</strong> These characters can cause errors during deployment. (see below)</p>
+            <p>Generate the new hash for your password:</p>
+            <p>To do this, you will need the current version number in this format <code>&lt;x.y.z&gt;</code>. At the time of writing it is <code>4.10.1</code>. You can retrieve the version number by checking <code>docker ps</code>. In the example below:</p>
+            <pre><code>docker ps
+            </code></pre>
+            <p>Produces something like:</p>
+            <pre><code>...
+user@hostname:~$ docker ps
+CONTAINER ID   IMAGE                          COMMAND                  CREATED        STATUS        PORTS                                                                            
+75323ae7a33c   nginx:stable                   "/docker-entrypoint.…"   25 hours ago   Up 25 hours   80/tcp, 0.0.0.0:1514-&gt;1514/tcp, :::1514-&gt;1514/tcp                                                                                                     multi-node-nginx-1
+7e80b8ed82c0   wazuh/wazuh-manager:4.10.1     "/init"                  25 hours ago   Up 25 hours   1514-1516/tcp, 514/udp, 55000/tcp                                                                                                                     multi-node-wazuh.worker-1
+7ff51469f058   wazuh/wazuh-dashboard:4.10.1   "/entrypoint.sh"         25 hours ago   Up 25 hours   443/tcp, 0.0.0.0:5601-&gt;5601/tcp, :::5601-&gt;5601/tcp                                                                                                    multi-node-wazuh.dashboard-1
+ca2349335431   wazuh/wazuh-manager:4.10.1     "/init"                  25 hours ago   Up 25 hours   1514/tcp, 0.0.0.0:1515-&gt;1515/tcp, :::1515-&gt;1515/tcp, 0.0.0.0:514-&gt;514/udp, :::514-&gt;514/udp, 1516/tcp, 0.0.0.0:55000-&gt;55000/tcp, :::55000-&gt;55000/tcp   multi-node-wazuh.master-1
+b71c4d0ffe99   wazuh/wazuh-indexer:4.10.1     "/entrypoint.sh open…"   3 days ago     Up 3 days     9200/tcp                                                                                                                                              multi-node-wazuh3.indexer-1
+af55260b6805   wazuh/wazuh-indexer:4.10.1     "/entrypoint.sh open…"   3 days ago     Up 3 days     0.0.0.0:9200-&gt;9200/tcp, :::9200-&gt;9200/tcp                                                                                                             multi-node-wazuh1.indexer-1
+6767f086de3b   wazuh/wazuh-indexer:4.10.1     "/entrypoint.sh open…"   3 days ago     Up 3 days     9200/tcp                                                                                                                                              multi-node-wazuh2.indexer-1
+...
+            </code></pre>
+            <p>Note the version is on the end over every Wazuh image name, e.g., <code>wazuh/wazuh-indexer:4.10.1</code></p>
+            <p>So input <code>4.10.1</code> when you are asked after running the code below:</p>
+            <pre><code>read -p "What is the current version number (in format x.y.z)?: " WAZUH_VERS
+docker run --rm -ti wazuh/wazuh-indexer:${WAZUH_VERS} bash /usr/share/wazuh-indexer/plugins/opensearch-security/tools/hash.sh
+            </code></pre>
+        </section>
+
+        <section class="section">
+            <h3>Copy the Generated Hash</h3>
+            <p>You will need to paste it into the next step.</p>
+        </section>
+
+        <section class="section">
+            <h3>Password Complexity Issues</h3>
+            <p><strong>A side note:</strong> Wazuh’s recommendation to avoid the “$” and “&” characters in new passwords stems from the way these symbols can be interpreted by shell scripts or deployment processes. Some examples with a bit more detail:</p>
+            <ul>
+                <li><strong>Special Characters in Shell Scripts</strong></li>
+                <li>In most Unix-like shells, “$” is used to reference environment variables. For example, <code>echo $HOME</code> will display the current user’s home directory.</li>
+                <li>“&” is often used to run processes in the background or to chain commands (e.g., <code>command1 &amp; command2</code>).</li>
+            </ul>
+            <p>When a password includes these symbols and is passed into scripts, they can be misread or cause parsing errors. For example, if the password is <code>P@ss$word</code>, the shell might interpret “$word” as a variable called <code>word</code>, leading to unexpected behavior.</p>
+            <p>This is also likely part of the reason that this warning comes up while setting the new password hash. You can safely ignore this.</p>
+            <pre><code>**************************************************************************
+** This tool will be deprecated in the next major release of OpenSearch **
+** https://github.com/opensearch-project/security/issues/1755           **
+**************************************************************************
+            </code></pre>
+        </section>
+
+        <section class="section">
+            <h2>For <code>admin</code></h2>
+            
+            <h3>Replace the Hash</h3>
+            <p>Open the <code>config/wazuh_indexer/internal_users.yml</code> file. Locate the block for the user you are changing the password for:</p>
+            <pre><code>cd $HOME/wazuh-docker/multi-node
+nano config/wazuh_indexer/internal_users.yml
+            </code></pre>
+            <p><strong>admin user:</strong></p>
+            <pre><code>...
+admin:
+  hash: "$2y$12$K/SpwjtB.wOHJ/Nc6GVRDuc1h0rM1DfvziFRNPtk27P.c4yDr9njO"  # Replace this with the hash you copied
+  reserved: true
+  backend_roles:
+  - "admin"
+  description: "Demo admin user"
+...
+            </code></pre>
+            
+            <h3>Set the New Password</h3>
+            <p>Now, open the <code>docker-compose.yml</code> file. Change all occurrences of the old <strong>password</strong> with the new <strong>password</strong>. Put it in plain text; don't put the hashed value in here. For example, for a multi-node deployment:</p>
+            <pre><code>cd $HOME/wazuh-docker/multi-node
+nano docker-compose.yml
+            </code></pre>
+            <pre><code>...
+services:
+  wazuh.manager:
+    ...
+    environment:
+      - INDEXER_URL=https://wazuh.indexer:9200
+      - INDEXER_USERNAME=admin
+      - INDEXER_PASSWORD=SecretPassword  # Replace this with your new password
+      - FILEBEAT_SSL_VERIFICATION_MODE=full
+      - SSL_CERTIFICATE_AUTHORITIES=/etc/ssl/root-ca.pem
+      - SSL_CERTIFICATE=/etc/ssl/filebeat.pem
+      - SSL_KEY=/etc/ssl/filebeat.key
+      - API_USERNAME=wazuh-wui 
+      - API_PASSWORD=MyS3cr37P450r.*-
+  ...
+  wazuh.indexer:
+    ...
+    environment:
+      - "OPENSEARCH_JAVA_OPTS=-Xms1024m -Xmx1024m"
+  ...
+  wazuh.dashboard:
+    ...
+    environment:
+      - INDEXER_USERNAME=admin
+      - INDEXER_PASSWORD=SecretPassword  # Replace this
+      - WAZUH_API_URL=https://wazuh.manager
+      - DASHBOARD_USERNAME=kibanaserver
+      - DASHBOARD_PASSWORD=kibanaserver
+      - API_USERNAME=wazuh-wui
+      - API_PASSWORD=MyS3cr37P450r.*-
+  ...
+            </code></pre>
+            
+            <h3>Applying the Changes</h3>
+            <p>Start the deployment stack:</p>
+            <pre><code>docker compose up -d
+            </code></pre>
+            <p>Run <code>docker ps</code> and note the name of the first Wazuh indexer container. For example, <code>multi-node-wazuh1.indexer-1</code>.</p>
+            <p>Run <code>docker exec -it &lt;WAZUH_INDEXER_CONTAINER_NAME&gt; bash</code> to enter the container. For example:</p>
+            <pre><code>docker exec -it multi-node-wazuh1.indexer-1 bash
+            </code></pre>
+            <p>Set the following variables:</p>
+            <pre><code>export INSTALLATION_DIR=/usr/share/wazuh-indexer
+CACERT=$INSTALLATION_DIR/certs/root-ca.pem
+KEY=$INSTALLATION_DIR/certs/admin-key.pem
+CERT=$INSTALLATION_DIR/certs/admin.pem
+export JAVA_HOME=/usr/share/wazuh-indexer/jdk
+            </code></pre>
+            <p>Wait for the Wazuh indexer to initialize properly. The waiting time can vary from two to five minutes. It depends on the size of the cluster, the assigned resources, and the speed of the network. Then, run the <code>securityadmin.sh</code> script to apply all changes.</p>
+            <p><strong>Multi-node cluster:</strong></p>
+            <pre><code>HOST=$(grep node.name $INSTALLATION_DIR/opensearch.yml | awk '{printf $2}')
+bash /usr/share/wazuh-indexer/plugins/opensearch-security/tools/securityadmin.sh -cd /usr/share/wazuh-indexer/opensearch-security/ -nhnv -cacert  $CACERT -cert $CERT -key $KEY -p 9200 -icl -h $HOST
+            </code></pre>
+            <p>Exit the Wazuh indexer container:</p>
+            <pre><code>exit
+            </code></pre>
+            <p>You should now see your normal shell, something like:</p>
+            <pre><code>...
+user@hostname:~$
+...
+            </code></pre>
+            <p>Now, log in with the new credentials on the Wazuh dashboard. Verify they work before moving on.</p>
+        </section>
+
+        <section class="section">
+            <h2>Repeat for <code>kibanaserver</code></h2>
+            <p>You can only do one password change at a time, so make sure to restart the whole stack each time before changing the password for the next default user.</p>
+            <p>Follow the steps outlined above under each of these headings:</p>
+            
+            <h3>Set a New Hash</h3>
+            <p>The version will remain unchanged from above:</p>
+            <pre><code>read -p "What is the current version number (in format x.y.z)?: " WAZUH_VERS
+docker run --rm -ti wazuh/wazuh-indexer:${WAZUH_VERS} bash /usr/share/wazuh-indexer/plugins/opensearch-security/tools/hash.sh
+            </code></pre>
+            <p>Copy the generated hash.</p>
+            
+            <h3>Replace the Hash</h3>
+            <p><strong>kibanaserver user:</strong></p>
+            <pre><code>cd $HOME/wazuh-docker/multi-node
+nano config/wazuh_indexer/internal_users.yml
+            </code></pre>
+            <pre><code>...
+kibanaserver:
+  hash: "$2a$12$4AcgAt3xwOWadA5s5blL6ev39OXDNhmOesEoo33eZtrq2N0YrU3H."  # Replace this
+  reserved: true
+  description: "Demo kibanaserver user"
+...
+            </code></pre>
+            
+            <h3>Set the New Password</h3>
+            <pre><code>cd $HOME/wazuh-docker/multi-node
+nano docker-compose.yml
+            </code></pre>
+            <pre><code>...
+services:
+  wazuh.dashboard:
+    ...
+    environment:
+      - INDEXER_USERNAME=admin
+      - INDEXER_PASSWORD=ThisWillBeThePlainTextPasswordYouSetEarlier
+      - WAZUH_API_URL=https://wazuh.manager
+      - DASHBOARD_USERNAME=kibanaserver
+      - DASHBOARD_PASSWORD=kibanaserver # Replace this
+      - API_USERNAME=wazuh-wui
+      - API_PASSWORD=MyS3cr37P450r.*-
+  ...
+            </code></pre>
+            
+            <h3>Applying the Changes</h3>
+            <p>Start the deployment stack:</p>
+            <pre><code>docker compose up -d
+            </code></pre>
+            <p>Because we're repeating the exact same steps as before, we:</p>
+            <pre><code>docker exec -it multi-node-wazuh1.indexer-1 bash
+            </code></pre>
+            <p>We set these again:</p>
+            <pre><code>export INSTALLATION_DIR=/usr/share/wazuh-indexer
+CACERT=$INSTALLATION_DIR/certs/root-ca.pem
+KEY=$INSTALLATION_DIR/certs/admin-key.pem
+CERT=$INSTALLATION_DIR/certs/admin.pem
+export JAVA_HOME=/usr/share/wazuh-indexer/jdk
+            </code></pre>
+            <p>Wait for the Wazuh indexer to initialize properly again for its two-five mins. Then again in the docker container:</p>
+            <pre><code>HOST=$(grep node.name $INSTALLATION_DIR/opensearch.yml | awk '{printf $2}')
+bash /usr/share/wazuh-indexer/plugins/opensearch-security/tools/securityadmin.sh -cd /usr/share/wazuh-indexer/opensearch-security/ -nhnv -cacert  $CACERT -cert $CERT -key $KEY -p 9200 -icl -h $HOST
+            </code></pre>
+            <p>Before exiting the Wazuh indexer container:</p>
+            <pre><code>exit
+            </code></pre>
+        </section>
+
+        <section class="section">
+            <h2>Wazuh API Users</h2>
+            <p>The last default credentials we need to change are the default API credentials.</p>
+            <p>The <code>wazuh-wui</code> user is the user to connect with the Wazuh API by default. Follow these steps to change the password.</p>
+            <p><strong>Note:</strong> The password for Wazuh API users must be between 8 and 64 characters long. It must contain at least one uppercase and one lowercase letter, a number, and a symbol.</p>
+            
+            <h3>Modify the Password in Configuration</h3>
+            <p>Open the file <code>config/wazuh_dashboard/wazuh.yml</code> and modify the value of the password parameter:</p>
+            <pre><code>cd $HOME/wazuh-docker/multi-node
+nano config/wazuh_dashboard/wazuh.yml
+            </code></pre>
+            <pre><code>...
+hosts:
+  - 1513629884013:
+      url: "https://wazuh.manager"
+      port: 55000
+      username: wazuh-wui
+      password: "MyS3cr37P450r.*-" # Replace this
+      run_as: false
+...
+            </code></pre>
+            
+            <h3>Update Docker Compose</h3>
+            <p>Open the <code>docker-compose.yml</code> file. Change all occurrences of the old password with the new one:</p>
+            <pre><code>nano docker-compose.yml
+            </code></pre>
+            <pre><code>...
+services:
+  wazuh.manager:
+    ...
+    environment:
+      - INDEXER_URL=https://wazuh.indexer:9200
+      - INDEXER_USERNAME=admin
+      - INDEXER_PASSWORD=ThisWillBeThePlainTextPasswordYouSetEarlier
+      - FILEBEAT_SSL_VERIFICATION_MODE=full
+      - SSL_CERTIFICATE_AUTHORITIES=/etc/ssl/root-ca.pem
+      - SSL_CERTIFICATE=/etc/ssl/filebeat.pem
+      - SSL_KEY=/etc/ssl/filebeat.key
+      - API_USERNAME=wazuh-wui 
+      - API_PASSWORD=MyS3cr37P450r.*- # Replace this
+  ...
+  wazuh.dashboard:
+    ...
+    environment:
+      - INDEXER_USERNAME=admin
+      - INDEXER_PASSWORD=ThisWillBeThePlainTextPasswordYouSetEarlier
+      - WAZUH_API_URL=https://wazuh.manager
+      - DASHBOARD_USERNAME=kibanaserver
+      - DASHBOARD_PASSWORD=ThisIsTheOtherPasswordYouSetEarlier
+      - API_USERNAME=wazuh-wui 
+      - API_PASSWORD=MyS3cr37P450r.*- # Replace this
+  ...
+            </code></pre>
+            
+            <h3>Recreate the Wazuh Containers</h3>
+            <p>Bring down and bring up the Docker containers to apply the changes:</p>
+            <pre><code>docker compose down
+docker compose up -d
+            </code></pre>
+            
+            <h3>Verify the Changes</h3>
+            <p>Check everything still works:</p>
+            <pre><code>docker ps
+            </code></pre>
+            <p>And log in via the browser and check everything is still working.</p>
+        </section>
+
+        <section class="section">
+            <h2>Note</h2>
+            <p>Docker doesn’t reload the configuration dynamically. You need to restart the stack after changing the configuration of a component.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Code Monkey Cybersecurity. All rights reserved.</p>
+    </footer>
+</body>
+</html>
