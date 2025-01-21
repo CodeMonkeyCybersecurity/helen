@@ -6,7 +6,6 @@ services:
     volumes:
       - ./:/usr/share/nginx/html:ro # Shared webroot for validation
       - ./nginx.conf:/etc/nginx/nginx.conf:ro # Custom NGINX configuration
-      #- ./certs:/etc/nginx/certs:ro  # SSL certificates
     ports:
       - "8080:80"
     restart: always
