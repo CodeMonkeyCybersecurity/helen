@@ -73,3 +73,5 @@ coverage/
 *.db-journal
 *.lock
 *.pem
+
+analytics-snippet.html
