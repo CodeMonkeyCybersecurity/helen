@@ -60,6 +60,7 @@ nav ul li a {
     color: var(--oc-gray-0);
     font-weight: bold;
     font-size: 1.1rem;
+    text-align: center;
 }
 
 nav ul li a:hover {
@@ -71,6 +72,7 @@ nav ul li a:hover {
     max-width: 1200px;
     margin: 2rem auto;
     justify-content: center;
+    text-align: center;
 }
 
 .section {
@@ -80,6 +82,7 @@ nav ul li a:hover {
     border-radius: 8px;
     box-shadow: 0 2px 4px var(--oc-gray-3);
     justify-content: center;
+    text-align: center;
 }
 
 .section h2 {
@@ -87,6 +90,7 @@ nav ul li a:hover {
     margin-bottom: 1rem;
     color: var(--oc-teal-9);
     justify-content: center;
+    text-align: center;
 }
 
 /* Button styling */
@@ -99,6 +103,7 @@ nav ul li a:hover {
     border-radius: 5px;
     transition: background 0.3s;
     justify-content: center;
+    text-align: center;
 }
 
 .btn:hover {
@@ -126,6 +131,7 @@ nav ul li a:hover {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  text-align: center;
 }
 
 .kb-item {
