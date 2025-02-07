@@ -38,775 +38,53 @@
         <section class="section">
             <h2>Hecate</h2>
             <p><strong>A Gateway for the Modern Cyber Underworld</strong></p>
-            <p>Welcome to Hecate, the ultimate reverse proxy setup, powered by Docker and Nginx. Named after the ancient Greek goddess of crossroads, boundaries, and the arcane arts, Hecate stands as the gatekeeper between your infrastructure and the outside world.</p>
+            <p>Welcome to Hecate, the ultimate reverse proxy setup, powered by Docker and Nginx. Named after the ancient Greek goddess of crossroads, boundaries, and the arcane arts, Hecate stands as the gatekeeper between your infrastructure and the outside world.</p>        
         </section>
 
+        <!-- Main Content -->
+    <main class="container">
         <section class="section">
-            <h2>Reverse Proxy Framework for Locally Hosted, Cloud-Native Backend Web Apps</h2>
-        </section>
+            <h2>Hecate</h2>
+            <p><strong>A Gateway for the Modern Cyber Underworld</strong></p>
+            <p>Learn how to set this up for yourself by visiting our knowledge base!</p>
+            <a href="https://wiki.cybermonkey.net.au/Hecate/Hecate" class="btn">Hecate | See how</a>
+            </section>
 
+        <!-- Contact us  -->
         <section class="section">
-            <h3>How Do I Use This Repository?</h3>
-            <p>This repository is best used alongside our <a href="https://github.com/CodeMonkeyCybersecurity/eos.git">eos</a> repository.</p>
-            <p>This project sets up an <a href="https://nginx.org/en/">NGINX</a> web server as a reverse proxy using Docker Compose. The aim is to make deploying cloud-native web apps on your own infrastructure as 'point and click' as possible. The reverse proxies set up here can be used in front of the corresponding backend web applications deployed in the <a href="https://github.com/CodeMonkeyCybersecurity/eos.git">eos</a> repository.</p>
+            <h2>Stay in touch</h2>
+            <div class="knowledge-base-links">
+                
+                <!-- Facebook -->
+                <div class="kb-item">
+                    <h4>Facebook</h4>
+                    <a href="https://www.facebook.com/codemonkeycyber/" class="button">Follow us</a>
+                </div>
 
-            <pre><code>
-                             ┌───────────────────────────┐
-                             │         Clients           │    # This is how your cloud instance will be
-                             │ (User Browsers, Apps, etc)│    # accessed. Usually a browser on a client
-                             └────────────┬──────────────┘    # machine.
-                                          │
-                                          ▼
-                             ┌───────────────────────────┐
-                             │       DNS Resolution      │    # This needs to be set up
-                             │ (domain.com,              |    # with your cloud provider or DNS broker, e.g.,
-                             | cybermonkey.net.au, etc.) │    # GoDaddy, Cloudflare, Hetzner, etc.
-                             └────────────┬──────────────┘
-                                          │
-                                          ▼
-                <strong>This is your remote server (reverse proxy/proxy/cloud instance)</strong>
-                              #########################
-                              #  Hecate sets this up  #
-                              #########################
-                               ┌─────────────────┐    
-                               │   Reverse Proxy │    # This is what we are setting up `hecate`.
-                               │ (NGINX, Caddy,  │    # All your traffic between the internet and
-                               │   Ingress, etc) │    # the backend servers gets routed through
-                               └───┬─────────────┘    # here.
-                                   │
-          ┌────────────────────────┼─────────────────────────┐
-          │                        │                         │
-          ▼                        ▼                         ▼
-          <strong>These are your local servers (backend/virtual hosts)</strong>
-                        #######################
-                        #  Eos sets these up  #
-                        #######################
-    ┌──────────────┐       ┌──────────────┐          ┌──────────────┐
-    │  Backend 1   │       │  Backend 2   │          │  Backend 3   │
-    │  (backend1)  │       │  (backend2)  │          │  (backend3)  │    # If using Tailscale,
-    │  ┌────────┐  │       │  ┌────────┐  │          │  ┌────────┐  │    # these are the magicDNS hostnames.
-    │  │ Service│  │       │  │ Service│  │          │  │ Service│  │    # For setting up a demo website instance, 
-    │  │ Pod/   │  │       │  │ Pod/   │  │          │  │ Pod/   │  │    # see our `helen` repository
-    │  │ Docker │  │       │  │ Docker │  │          │  │ Docker │  │    # To set up Wazuh, check out
-    │  │  (eg.  │  │       │  │  (eg.  │  │          │  │  (eg.  │  │    # eos/legacy/wazuh/README.md.
-    │  │Website)│  │       │  │ Wazuh) │  │          │  │Mailcow)│  │    #
-    │  └────────┘  │       │  └────────┘  │          │  └────────┘  │    #
-    └──────────────┘       └──────────────┘          └──────────────┘    #
-            </code></pre>
+                <!-- X -->
+                <div class="kb-item">
+                    <h4>X</h4>
+                    <a href="https://x.com/codemonkeycyber" class="button">Follow us</a>
+                </div>
+                
+                <!-- GitHub Repository -->
+                <div class="kb-item">
+                    <h4>GitHub Repository</h4>
+                    <p>Access our GitHub repository to view source code, contribute, and report issues.</p>
+                    <a href="https://github.com/CodeMonkeyCybersecurity" class="button" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
+                </div>
+            </div>
         </section>
 
+        <!-- Public key Section -->            
         <section class="section">
-            <h3>Features</h3>
-            <ul>
-                <li>Lightweight NGINX container based on the <code>nginx:alpine</code> image.</li>
-                <li>Automatic HTTPS certificate generation using Certbot.</li>
-                <li>Support for serving custom static files from the <code>html</code> directory.</li>
-                <li>Automatic redirection from HTTP to HTTPS.</li>
-                <li>Docker Compose for easy deployment and management.</li>
-            </ul>
-            <ul>
-                <li>A domain name (domain.com) pointing to your server’s IP address.</li>
-                <li>Certbot installed on your server for certificate generation.</li>
-            </ul>
+            <h2>Public Key</h2>
+            <p>Get our public key to verify it's us</p>
+            <a href="publickey.cybermonkey.net.au-e3f0434f633b9745e69858add19e08d1ec7a6f2f.asc" class="btn">Download Public Key</a>
+            <a href="publickey.cybermonkey.net.au-e3f0434f633b9745e69858add19e08d1ec7a6f2f.txt" class="btn">View Public Key</a>
         </section>
 
-        <section class="section">
-            <h3>Supported Web Applications</h3>
-            <p>This section outlines what cloud-native web applications are currently supported. Those currently marked :x: means they aren't supported yet and we are getting to them one at a time.</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Web Application</th>
-                        <th>Hecate</th>
-                        <th>Eos</th>
-                        <th>What It Does</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Wazuh</td>
-                        <td>✅</td>
-                        <td>✅</td>
-                        <td><a href="https://wazuh.com/">XDR / SIEM</a></td>
-                    </tr>
-                    <tr>
-                        <td>HTML Websites</td>
-                        <td>✅</td>
-                        <td>✅</td>
-                        <td>Basic website</td>
-                    </tr>
-                    <tr>
-                        <td>Mattermost</td>
-                        <td>❌</td>
-                        <td>❌</td>
-                        <td><a href="https://mattermost.com/">Slack alternative</a></td>
-                    </tr>
-                    <tr>
-                        <td>Nextcloud</td>
-                        <td>❌</td>
-                        <td>❌</td>
-                        <td><a href="https://nextcloud.com/">iCloud / OneDrive alternative</a></td>
-                    </tr>
-                    <tr>
-                        <td>Mailcow</td>
-                        <td>❌</td>
-                        <td>❌</td>
-                        <td><a href="https://mailcow.email/">Email/groupware</a></td>
-                    </tr>
-                    <tr>
-                        <td>Jenkins</td>
-                        <td>❌</td>
-                        <td>❌</td>
-                        <td><a href="https://jenkins.io/">CI/CD</a></td>
-                    </tr>
-                    <tr>
-                        <td>Grafana</td>
-                        <td>❌</td>
-                        <td>❌</td>
-                        <td><a href="https://grafana.com/">Observability/monitoring</a></td>
-                    </tr>
-                    <tr>
-                        <td>ELK Stack</td>
-                        <td>❌</td>
-                        <td>❌</td>
-                        <td><a href="https://www.elastic.co/">Search logs/metrics</a></td>
-                    </tr>
-                    <tr>
-                        <td>OpenStack</td>
-                        <td>❌</td>
-                        <td>❌</td>
-                        <td><a href="https://www.openstack.org/">Cloud infrastructure</a></td>
-                    </tr>
-                    <tr>
-                        <td>Nebula</td>
-                        <td>❌</td>
-                        <td>❌</td>
-                        <td><a href="https://github.com/slackhq/nebula">Distributed mesh network</a></td>
-                    </tr>
-                    <tr>
-                        <td>Security Onion</td>
-                        <td>❌</td>
-                        <td>❌</td>
-                        <td><a href="https://securityonionsolutions.com/">Security monitoring</a></td>
-                    </tr>
-                    <tr>
-                        <td>Restic API</td>
-                        <td>❌</td>
-                        <td>❌</td>
-                        <td><a href="https://restic.net/">Backups</a></td>
-                    </tr>
-                    <tr>
-                        <td>Keycloak</td>
-                        <td>❌</td>
-                        <td>❌</td>
-                        <td><a href="https://www.keycloak.org/">Identity and access management</a></td>
-                    </tr>
-                    <tr>
-                        <td>Theia</td>
-                        <td>❌</td>
-                        <td>❌</td>
-                        <td><a href="https://theia-ide.org/">IDE</a></td>
-                    </tr>
-                    <tr>
-                        <td>Matomo</td>
-                        <td>❌</td>
-                        <td>❌</td>
-                        <td><a href="https://matomo.org/">Privacy-focused web analytics</a></td>
-                    </tr>
-                    <tr>
-                        <td>MinIO</td>
-                        <td>❌</td>
-                        <td>❌</td>
-                        <td><a href="https://min.io/">S3 compatible object storage</a></td>
-                    </tr>
-                    <tr>
-                        <td>Penpot</td>
-                        <td>❌</td>
-                        <td>❌</td>
-                        <td><a href="https://github.com/penpot/penpot">UX design</a></td>
-                    </tr>
-                </tbody>
-            </table>
-            <p>More to come regarding distributed, highly available, and Kubernetes-based deployments.</p>
-        </section>
-
-        <section class="section">
-            <h3>Project Structure</h3>
-            <p>The directory structure is important to note.</p>
-            <p>This is what the highest level in the repository looks like:</p>
-            <pre><code>
-    ├── 1-dev
-    │   ├── ...
-    ├── 2-stage
-    │   ├── ...
-    ├── 3-prod
-    │   ├── ...
-    ├── 4-sh
-    │   ├── ...
-            </code></pre>
-
-            <h4>Production Cycle</h4>
-            <p>Each of these directories stands for the different stages of the production cycle:</p>
-            <ol>
-                <li>Development</li>
-                <li>Staging</li>
-                <li>Production</li>
-                <li>(Optional, but common) Admin/Internal/Command and Control</li>
-            </ol>
-            <p>We highly recommend not deploying a web app straight to your production environment. We also appreciate that each environment likely has different configurations such as domain/hostnames, IP addresses, servers, etc. Each stage has a different directory so, after cloning the repository, you can configure the appropriate environment variables in a more modular way.</p>
-            <p>We recommend first deploying your chosen web application in your development environment first, then staging, then production, and finally for admin/command and control use. This allows you to gradually debug and harden your application as appropriate. While we do our best to ensure each application deployment configuration comes with sensible defaults, the internet is a wild place and each environment is different, so it's best to test not in a production environment.</p>
-            <p>We encourage you to deploy each application in each environment for at least one to two months before graduating it to the next environment. For example, make sure your development Nextcloud instance is up and running and properly debugged for at least one to two months before deploying your Nextcloud to your staging instance.</p>
-        </section>
-
-        <section class="section">
-            <h4>Admin/Internal Instances</h4>
-            <p>The reason we recommend deploying the admin/internal instances last is because we believe your internal environment should be the most secure and least likely to have implementation bugs. You can't run a production environment without your own admin panels, CI/CD, monitoring, or backup servers.</p>
-            <p>The <code>4-sh</code> instance is optional because sometimes admin panels etc., don't need to be exposed to the internet. The internet is a hostile environment, so don't expose anything there you don't absolutely need to.</p>
-            <p>A good example of when to use this fourth environment could be if you offer an application as a service to clients but also want to operate that service internally. For example, if you offer Grafana access as a service for clients via the cloud (in a <code>3-prod</code> production/external deployment) but also want to monitor your own infrastructure using Grafana, the <code>4-sh</code> admin/internal deployment can be used.</p>
-        </section>
-
-        <section class="section">
-            <h4>Each Environment</h4>
-            <pre><code>
-    ├── docker-compose.yml         # Docker Compose configuration file
-    ├── html/                      # Directory for your static website files (if applicable)
-    │   └── index.html             # Example HTML file  (if applicable)
-    ├── nginx.conf                 # Custom NGINX configuration file
-    ├── .env.template              # .env template, to be filled out with your variables
-    ├── certs/                     #  Directory for SSL certificates (auto-generated)
-    └── README.md                  # Documentation for the setup
-            </code></pre>
-        </section>
-
-        <section class="section">
-            <h3>Setup Instructions</h3>
-            <p>For these instructions, a remote cloud-based front-end proxy/reverse proxy server. To set up the corresponding backend 'worker' server, see <a href="https://github.com/CodeMonkeyCybersecurity/eos">eos</a>.</p>
-            
-            <h4>What Do I Need Before I Get Started?</h4>
-            <ul>
-                <li>A DNS domain name.</li>
-                <li>The ability to configure <strong>sub-domains</strong> of this (e.g., mail.domain.com, wazuh.domain.com). One for <strong>each</strong> application deployed. Each application will be accessed by the sub-domain you assign it.</li>
-                <li>Admin access on two Ubuntu instances:
-                    <ul>
-                        <li>One, a cheap Ubuntu cloud instance with a public IP address, and the appropriate A, AAAA, CNAME, TXT, and MX (if installing Mailcow) records pointing your domain and subdomains.</li>
-                        <li>A local Ubuntu server to act as a backend 'worker' node.</li>
-                    </ul>
-                </li>
-                <li>A VPN or other network connecting your remote cloud instance to the computer you want running your local virtual host backend. You can set this up fairly painlessly using something like <a href="https://www.wireguard.com/">WireGuard</a> or <a href="https://tailscale.com/">Tailscale</a>.</li>
-                <li>Docker and Docker Compose installed on your server.</li>
-                <li>Certbot installed on your reverse proxy server.</li>
-            </ul>
-            
-            <h4>Isn't It Easier to Just Deploy the Whole App on One Node?</h4>
-            <p>There are several reasons why we have split the deployment of the web app into two roles:</p>
-            <ul>
-                <li>To keep cloud costs to a minimum by running all the heavy workloads on your own computers/servers.</li>
-                <li>To not connect your home network to the internet by ensuring all traffic designed for your website/web app is proxied through your cloud instance reverse proxy. If this is done correctly, the only part of your setup directly exposed to the internet is the part controlled by the cloud provider.</li>
-                <li>If you end up having to scale or change your infrastructure, having a reverse proxy already set up means transitioning it to being a load balancer, high availability, etc., will be much easier.</li>
-            </ul>
-            <p>See the diagram above for clarification on how this separation of infrastructure works.</p>
-        </section>
-
-        <section class="section">
-            <h3>1. Clone the Repository</h3>
-            <p>Clone this repository to your server:</p>
-            <pre><code>
-    git clone https://github.com/CodeMonkeyCybersecurity/hecate.git
-    cd $HOME/hecate/1-dev
-            </code></pre>
-            <p>Below is a simple, reliable approach to obtain SSL certificates with Certbot and use them in an NGINX Docker container—without battling volume-mount issues for Let’s Encrypt directories. This method involves two separate steps:</p>
-            <ol>
-                <li>Use Certbot on the host (outside of Docker) to obtain certificates.</li>
-                <li>Mount the certificates into your Dockerized NGINX.</li>
-            </ol>
-            <p>By doing it this way, you avoid dealing with <code>/var/lib/letsencrypt</code> or <code>/etc/letsencrypt</code> inside Docker. Once you have your certificates on the host, you simply share them with the NGINX container.</p>
-        </section>
-
-        <section class="section">
-            <h4>2. Stop Any Services on Port 80</h4>
-            <p>Stop or remove any containers or services (like NGINX) that are currently listening on port 80:</p>
-            <pre><code>
-    docker-compose down
-    sudo systemctl stop nginx
-            </code></pre>
-            <p>This is necessary because Certbot’s standalone mode needs to bind port 80.</p>
-        </section>
-
-        <section class="section">
-            <h4>3. Install Certbot on the Remote Host</h4>
-            <p>On Ubuntu/Debian:</p>
-            <pre><code>
-    sudo apt update
-    sudo apt install certbot
-            </code></pre>
-        </section>
-
-        <section class="section">
-            <h4>4. Obtain the Certificates (Standalone Mode)</h4>
-            <p>Run Certbot to generate certificates using its built-in standalone server:</p>
-            <pre><code>
-    sudo certbot certonly --standalone \
-        -d domain.com \
-        --email your@your.email \
-        --agree-tos
-            </code></pre>
-            <p>This will spin up a temporary web server on port 80. Certbot will place certificates in <code>/etc/letsencrypt/live/domain.com/</code>.</p>
-        </section>
-
-        <section class="section">
-            <h5>Certificates for Sub-Domains</h5>
-            <p>Each application you intend to install will be served on its own subdomain. Each subdomain will need its own TLS certificate. Below are examples for requesting certificates for Wazuh and Mailcow, but these can be generalized to include <code>any.domain.com</code> for any web app you choose.</p>
-            
-            <h6>Example 1: If You're Adding Wazuh</h6>
-            <pre><code>
-    sudo certbot certonly --standalone \
-        -d wazuh.domain.com \
-        --email your@your.email \
-        --agree-tos
-            </code></pre>
-            
-            <h6>Example 2: If You're Adding Mailcow</h6>
-            <pre><code>
-    sudo certbot certonly --standalone \
-        -d mail.domain.com \
-        --email your@your.email \
-        --agree-tos
-            </code></pre>
-        </section>
-
-        <section class="section">
-            <h4>5. Verify Certificate Files</h4>
-            <p>After a successful run, check:</p>
-            <pre><code>
-    sudo ls -l /etc/letsencrypt/live/domain.com/
-            </code></pre>
-            <p>If you are deploying sub-domains, do this for each of them too. For example:</p>
-            <pre><code>
-    sudo ls -l /etc/letsencrypt/live/wazuh.domain.com/
-    sudo ls -l /etc/letsencrypt/live/mail.domain.com/
-    sudo ls -l /etc/letsencrypt/live/any.domain.com/
-            </code></pre>
-            <p>In each directory, you should see:</p>
-            <ul>
-                <li><code>cert.pem</code></li>
-                <li><code>chain.pem</code></li>
-                <li><code>fullchain.pem</code></li>
-                <li><code>privkey.pem</code></li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h4>6. Create a Local Directory for Docker</h4>
-            <p>Make a local directory in your project for the certs:</p>
-            <pre><code>
-    mkdir -p $HOME/hecate/1-dev/certs
-            </code></pre>
-            <p>Copy your certificates into it:</p>
-            <pre><code>
-    cd $HOME/hecate/1-dev
-    sudo cp /etc/letsencrypt/live/domain.com/fullchain.pem certs/
-    sudo cp /etc/letsencrypt/live/domain.com/privkey.pem certs/
-            </code></pre>
-            <p>Adjust permissions to be readable:</p>
-            <pre><code>
-    sudo chmod 644 certs/fullchain.pem
-    sudo chmod 600 certs/privkey.pem
-            </code></pre>
-            
-            <h6>Example 1: If You're Adding Wazuh</h6>
-            <pre><code>
-    sudo cp /etc/letsencrypt/live/wazuh.domain.com/fullchain.pem certs/wazuh.fullchain.pem
-    sudo cp /etc/letsencrypt/live/wazuh.domain.com/privkey.pem certs/wazuh.privkey.pem
-    sudo chmod 644 certs/wazuh.fullchain.pem
-    sudo chmod 600 certs/wazuh.privkey.pem
-            </code></pre>
-            
-            <h6>Example 2: If You're Adding Mailcow</h6>
-            <pre><code>
-    sudo cp /etc/letsencrypt/live/mail.domain.com/fullchain.pem certs/mail.fullchain.pem
-    sudo cp /etc/letsencrypt/live/mail.domain.com/privkey.pem certs/mail.privkey.pem
-    sudo chmod 644 certs/mail.fullchain.pem
-    sudo chmod 600 certs/mail.privkey.pem
-            </code></pre>
-        </section>
-
-        <section class="section">
-            <h4>7. Use the Certificates in Docker</h4>
-            <h5>For a Webpage</h5>
-            <p>In your <code>docker-compose.yml</code>, mount the local <code>certs</code> folder into the container and point to the copied certs in <code>/etc/nginx/certs</code>:</p>
-            <pre><code>
-    # docker-compose.yml
-    services:
-      nginx:
-        image: nginx
-        container_name: hecate-dev
-        volumes:
-          - ./nginx.conf:/etc/nginx/nginx.conf:ro # Custom NGINX configuration
-          - ./certs:/etc/nginx/certs:ro  # SSL certificates
-        ports:
-          - "80:80"
-          - "443:443"
-        restart: always
-            </code></pre>
-        </section>
-
-        <section class="section">
-            <h4>8. Configure nginx.conf</h4>
-            <p>This is where the actual custom configuration NGINX will adopt is set.</p>
-            
-            <h5>For a Webpage</h5>
-            <pre><code>
-    worker_processes auto;
-    
-    events {
-        worker_connections 1024;
-    }
-    
-    http {
-        include mime.types;
-        default_type application/octet-stream;
-    
-        error_log /var/log/nginx/error.log debug;
-        access_log /var/log/nginx/access.log;
-    
-        server {
-            listen 80 default_server;
-            server_name ${SERVER_NAMES};
-    
-            # Redirect all HTTP traffic to HTTPS
-            return 301 https://$host$request_uri;
-        }
-    
-        server {
-            listen 443 ssl default_server;
-            server_name ${SERVER_NAMES};
-    
-            ssl_certificate /etc/nginx/certs/fullchain.pem;
-            ssl_certificate_key /etc/nginx/certs/privkey.pem;
-    
-            location / {
-                proxy_pass http://${BACKEND_IP}:${BACKEND_PORT};
-                proxy_set_header Host $host;
-                proxy_set_header X-Real-IP $remote_addr;
-                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-                proxy_set_header X-Forwarded-Proto $scheme;
-            }
-        }
-    }
-            </code></pre>
-            
-            <h5>Use Environment Variables</h5>
-            <p>To keep sensitive values like the backend IP, port number, and hostnames confidential while using Docker Compose, you can use environment variables and a template engine to dynamically inject these values into your <code>nginx.conf</code>. Here’s how you can achieve that securely:</p>
-            <p>Store sensitive values in an <code>.env</code> file and reference them in your <code>docker-compose.yml</code>. By default, these will not be committed to git as <code>*.env</code> has been added to the <code>.gitignore</code>.</p>
-            <p>We have created an example <code>env.template</code> for you to use. For each application that you deploy, you need to uncomment the relevant section. The web page configuration comes uncommented by default, but the variables for your specific environment (i.e., frontend IP, backend IP, domain and hostnames, ports) will still need to be manually set by you.</p>
-            <p>To set your specific environment variables:</p>
-            <pre><code>
-    cd $HOME/hecate/1-dev
-    nano .env
-            </code></pre>
-            <p>A sample from the <code>.env</code> file looks like:</p>
-            <pre><code>
-    # .env
-    BACKEND_IP=<backend IP> # must be reachable from INSIDE the hecate docker container. If using Tailscale, it will look something like: 100.xxx.yyy.zzz
-    BACKEND_PORT=<backend port> # must be reachable from INSIDE the hecate docker container, e.g., 8080
-    SERVER_NAMES=localhost <proxy-hostname> <DNS name> # e.g., if using Tailscale, this will look something like 'localhost domain-com domain.com'
-            </code></pre>
-            <p>Once you have set the variables you want, rename the <code>env.template</code> file:</p>
-            <pre><code>
-    mv env.template .env
-            </code></pre>
-            <p>Examples of templates for each application could include and their corresponding <code>nginx.conf</code> could include:</p>
-
-            <h6>Example 1: If You're Adding Wazuh</h6>
-            <pre><code>
-    ...
-        #--------------------------------------------------
-        # 2) WAZUH: wazuh.domain.com
-        #--------------------------------------------------
-        server {
-            listen 80;
-            server_name wazuh.domain.com;
-            return 301 https://$host$request_uri;
-        }
-    
-        server {
-            listen 443 ssl;
-            server_name wazuh.domain.com;
-    
-            ssl_certificate /etc/nginx/certs/wazuh.fullchain.pem;
-            ssl_certificate_key /etc/nginx/certs/wazuh.privkey.pem;
-    
-            # Proxy pass to Kibana interface on local Wazuh
-            location / {
-                proxy_pass https://ww.xx.yy.zz:5601/;
-                proxy_set_header Host $host;
-                proxy_set_header X-Real-IP $remote_addr;
-                proxy_set_header X-Forwarded-Proto $scheme;
-            }
-        }
-    ...
-            </code></pre>
-            <p>A completed <code>.env</code> example might look something like:</p>
-            <pre><code>
-    # .env
-    BACKEND_IP=100.xxx.yyy.zzz
-    BACKEND_PORT=8080
-    SERVER_NAMES=localhost wazuh-domain-com wazuh.domain.com
-            </code></pre>
-            <p>Make sure the <code>proxy_pass https://ww.xx.yy.zz:5601/;</code> IP address values given above are the local backend server's Tailscale IP address.</p>
-
-            <h6>Example 2: If You're Adding Mailcow</h6>
-            <pre><code>
-    ...
-    worker_processes  auto;
-    
-    events {
-        worker_connections  1024;
-    }
-    
-    ...
-    
-    ###
-    # STREAM BLOCK for mail protocols
-    ###
-    stream {
-        # Upstream definitions: mail services on the local backend
-        upstream mailcow_imap_ssl {
-            server ww.xx.yy.zz:993;  # IMAP-SSL on the local Mailcow
-        }
-        upstream mailcow_smtp_tls {
-            server ww.xx.yy.zz:587;  # SMTP submission on the local Mailcow
-        }
-        # If you want to handle port 25 or 465, you can define them similarly, e.g.:
-        # upstream mailcow_smtp25 {
-        #     server ww.xx.yy.zz:25;
-        # }
-    
-        # Listen IMAP over SSL externally
-        server {
-            listen 993 ssl;
-            proxy_pass mailcow_imap_ssl;
-    
-            # SSL cert for mail.domain.com
-            ssl_certificate /etc/nginx/certs/mail.domain.com.fullchain.pem;
-            ssl_certificate_key /etc/nginx/certs/mail.domain.com.privkey.pem;
-    
-            # (Optional) SSL Settings
-            ssl_protocols       TLSv1.2 TLSv1.3;
-            ssl_ciphers         HIGH:!aNULL:!MD5;
-        }
-    
-        # Listen SMTP submission with STARTTLS externally
-        server {
-            listen 587 ssl;  # Or if you prefer to do pure TLS on 465, use 465
-            proxy_pass mailcow_smtp_tls;
-    
-            ssl_certificate /etc/nginx/certs/mail.domain.com.fullchain.pem;
-            ssl_certificate_key /etc/nginx/certs/mail.domain.com.privkey.pem;
-    
-            ssl_protocols       TLSv1.2 TLSv1.3;
-            ssl_ciphers         HIGH:!aNULL:!MD5;
-        }
-    
-        # (Optional) If you want to forward plain 25 to Mailcow, or do SSL on 465:
-        # server {
-        #     listen 25;
-        #     proxy_pass mailcow_smtp25;
-        # }
-    
-        # Wazuh streams
-        upstream wazuh_manager_1515 {
-            server ww.xx.yy.zz:1515;
-        }
-        server {
-            listen 1515;
-            proxy_pass wazuh_manager_1515;
-        }
-    
-        upstream wazuh_manager_1514 {
-            server ww.xx.yy.zz:1514;
-        }
-        server {
-            listen 1514;
-            proxy_pass wazuh_manager_1514;
-        }
-    }
-    
-    ###
-    # HTTP BLOCK for Web UI (Mailcow Admin, Wazuh Kibana, Static Site)
-    ###
-    http {
-        include       mime.types;
-        default_type  application/octet-stream;
-    
-        #--------------------------------------------------
-        # 1) MAIN WEBSITE: domain.com
-        #--------------------------------------------------
-        # Redirect HTTP → HTTPS
-        server {
-            listen 80;
-            server_name domain.com;
-            return 301 https://$host$request_uri;
-        }
-    
-        # The HTTPS server for domain.com
-        server {
-            listen 443 ssl;
-            server_name domain.com;
-    
-            ssl_certificate /etc/nginx/certs/fullchain.pem;
-            ssl_certificate_key /etc/nginx/certs/privkey.pem;
-    
-            location / {
-                root /usr/share/nginx/html;
-                index index.html;
-            }
-        }
-    
-    ...
-    
-        #--------------------------------------------------
-        # 3) MAILCOW WEB UI: mail.domain.com
-        #--------------------------------------------------
-        # - We do HTTP → HTTPS
-        server {
-            listen 80;
-            server_name mail.domain.com;
-            return 301 https://$host$request_uri;
-        }
-    
-        # - We do HTTPS termination and pass traffic to the Mailcow web container
-        server {
-            listen 443 ssl;
-            server_name mail.domain.com;
-    
-            ssl_certificate /etc/nginx/certs/mail.domain.com.fullchain.pem;
-            ssl_certificate_key /etc/nginx/certs/mail.domain.com.privkey.pem;
-    
-            location / {
-                proxy_pass http://ww.xx.yy.zz:8080; 
-                # ^ Adjust if your Mailcow web UI is mapped differently,
-                #   for example: "http://ww.xx.yy.zz:80" if you published it on 80 inside Docker.
-    
-                proxy_set_header Host $host;
-                proxy_set_header X-Real-IP $remote_addr;
-                proxy_set_header X-Forwarded-Proto $scheme;
-            }
-        }
-    }
-    ...
-            </code></pre>
-        </section>
-
-        <section class="section">
-            <h3>9. Start NGINX</h3>
-            <p>With certificates in place and <code>nginx.conf</code> updated, start your container:</p>
-            <pre><code>
-    docker-compose down
-    docker-compose up -d
-            </code></pre>
-            <p>You should now test your endpoints. Using a <strong>private browsing window</strong>, navigate to:</p>
-            <ul>
-                <li><strong>For Your Website:</strong>
-                    <ul>
-                        <li><a href="http://domain.com/" target="_blank" rel="noopener noreferrer">http://domain.com/</a> → should redirect to HTTPS.</li>
-                        <li><a href="https://domain.com/" target="_blank" rel="noopener noreferrer">https://domain.com/</a> → should load your static page.</li>
-                    </ul>
-                </li>
-                <li><strong>Example 1: If You're Adding Wazuh</strong>
-                    <ul>
-                        <li><a href="https://wazuh.domain.com/" target="_blank" rel="noopener noreferrer">https://wazuh.domain.com/</a> → should proxy to Wazuh.</li>
-                    </ul>
-                </li>
-                <li><strong>Example 2: If You're Adding Mailcow</strong>
-                    <ul>
-                        <li><a href="https://mail.domain.com/" target="_blank" rel="noopener noreferrer">https://mail.domain.com/</a> → should load the Mailcow interface.</li>
-                    </ul>
-                </li>
-            </ul>
-            <p>Each of the web applications listed will be accessible via the relevant subdomain, so <strong>make sure this is set up in your DNS provider</strong>.</p>
-        </section>
-
-        <section class="section">
-            <h3>Securing the Setup</h3>
-            <p>Below are a few important security considerations:</p>
-            <ul>
-                <li>Always use long, unique, complex passphrases for all user accounts.</li>
-                <li>Keep your system up to date.</li>
-                <li>Run regular backups and test restores.</li>
-            </ul>
-
-            <h4>Firewall</h4>
-            <p>Allow inbound on 80/443 (for web) + the mail ports (993 and 587, 25 if needed), 1514 and 1515 for Wazuh.</p>
-            <p>It is highly recommended to make sure you have a WAF up, such as ModSecurity, on top of UFW.</p>
-            <pre><code>
-    sudo ufw status
-            </code></pre>
-            <p>For all deployments:</p>
-            <pre><code>
-    sudo ufw allow http 
-    sudo ufw allow https 
-            </code></pre>
-            <h6>Example 1: For Wazuh</h6>
-            <pre><code>
-    sudo ufw allow 1514
-    sudo ufw allow 1515
-    sudo ufw allow 5601
-    sudo ufw allow 55000
-    sudo ufw allow 9200
-            </code></pre>
-            <h6>Example 2: For Mailcow</h6>
-            <pre><code>
-    sudo ufw allow 25
-    sudo ufw allow 587
-    sudo ufw allow 993
-            </code></pre>
-
-            <h4>Fail2Ban</h4>
-            <ul>
-                <li>Set up Fail2Ban on each of your proxy servers. They are internet-facing and thus will almost certainly be constantly scraped, probed, pinged, or credential stuffed. Doing what you can to limit brute-force attacks is a good idea.</li>
-                <li>Set up Fail2Ban on the Mailcow server to monitor Dovecot (IMAP) and Postfix (SMTP) logs. This prevents brute-force login attempts.</li>
-                <li>You can also run Fail2Ban on the remote proxy, but typically for mail specifically, Fail2Ban is most effective on the actual mail server that has the logs.</li>
-            </ul>
-
-            <h4>TLS Ciphers</h4>
-            <ul>
-                <li>In your NGINX config, specify strong ciphers:</li>
-            </ul>
-            <pre><code>
-    ssl_protocols       TLSv1.2 TLSv1.3;
-    ssl_ciphers         EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH;
-    ssl_prefer_server_ciphers on;
-            </code></pre>
-            <ul>
-                <li>Disable weak protocols, etc.</li>
-            </ul>
-
-            <h4>DNS &amp; SPF/DKIM/DMARC</h4>
-            <p>Specifically for Mailcow:</p>
-            <ul>
-                <li>Make sure you publish correct SPF records pointing to your server that will send mail.</li>
-                <li>Enable DKIM in Mailcow’s admin interface.</li>
-                <li>Publish a DMARC record (optional but recommended).</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h2>Complaints, Compliments, Confusion:</h2>
-            <p><strong>Secure Email:</strong> <a href="mailto:git@cybermonkey.net.au">git@cybermonkey.net.au</a></p>
-            <p><strong>Website:</strong> <a href="https://cybermonkey.net.au">cybermonkey.net.au</a></p>
-            <pre><code>
-     ___         _       __  __          _
-    / __|___  __| |___  |  \/  |___ _ _ | |_____ _  _
-   | (__/ _ \/ _` / -_) | |\/| / _ \ ' \| / / -_) || |
-    \___\___/\__,_\___| |_|  |_\___/_||_|_\_\___|\_, |
-                  / __|  _| |__  ___ _ _         |__/
-                 | (_| || | '_ \/ -_) '_|
-                  \___\_, |_.__/\___|_|
-                      |__/
-            </code></pre>
-        </section>
-
+        
         <section class="section">
             <h2>Return home</h2>
             <a href="../index.html" class="btn">Return to main page</a>
@@ -816,46 +94,49 @@
     <footer>
         <p>&copy; 2025 Code Monkey Cybersecurity. ABN: 77 177 673 061. All rights reserved.</p>
     </footer>
-
-    <!-- Optional: Add some basic styling for tables -->
+        
     <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
+        .knowledge-base-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
         }
 
-        th, td {
-            border: 1px solid #e0e0e0;
-            padding: 8px 12px;
-            text-align: left;
+        .kb-item {
+            background-color: #f1f3f5;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
-        th {
-            background-color: #f0f0f0;
+        .kb-item h4 {
+            margin-bottom: 10px;
+            color: #343a40;
         }
 
-        /* Responsive table */
-        @media (max-width: 600px) {
-            table, thead, tbody, th, td, tr { 
-                display: block; 
-            }
+        .kb-item p {
+            margin-bottom: 15px;
+            color: #adb5bd;
+        }
 
-            th, td {
-                box-sizing: border-box;
-                width: 100%;
-            }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #339af0;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
 
-            th {
-                background-color: transparent;
-                border-bottom: none;
-                padding-top: 15px;
-            }
-
-            tr {
-                margin-bottom: 15px;
-            }
+        .button:hover {
+            background-color: #099268;
         }
     </style>
-</body>
+        
+    </body>
 </html>
