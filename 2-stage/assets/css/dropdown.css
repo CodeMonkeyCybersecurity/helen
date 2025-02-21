@@ -1,15 +1,10 @@
-/* assets/css/dropdown.css */
-/* Basic styling for the drop-down menu */
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
+/* Remove float; use flex defaults and ensure dropdown items are positioned relatively */
 nav li {
-  float: left;
+  /* float: left;  Remove this */
   position: relative;
 }
+
+/* The rest of your dropdown styles remain the same */
 nav li a, .dropbtn {
   display: inline-block;
   color: #fff;
