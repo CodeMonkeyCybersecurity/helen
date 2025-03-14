@@ -9,3 +9,8 @@ services:
     ports:
       - "8009:80"
     restart: always
+    networks:
+      - eos-network
+  
+networks:
+  eos-network:
