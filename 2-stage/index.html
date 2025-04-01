@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="assets/openColour/open-color.css"/>
     <link rel="stylesheet" href="assets/css/styles.css"/>
     <link rel="stylesheet" href="assets/css/dropdown.css"/>
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon-circular-128x128.png"/>
+    <link rel="icon" href="/favicon.ico" sizes="any">
    <script defer src="https://u.cybermonkey.dev/script.js" data-website-id="1dbe3fee-508e-41be-82d9-576c46db5274"></script>
 </head>
+
+
+    
 <body>
     <header>
         <h1>
@@ -25,14 +28,23 @@
     </header>
 
     <!-- Navigation Menu -->
-    <nav>
-        <ul>
+    <nav role="navigation" aria-label="Main navigation">
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <ul id="nav-links">
+            <li><a href="https://hera.cybermonkey.dev">Login</a></li>
+                
             <!-- Environments Drop-down Menu -->
             <li class="dropdown">
               <a href="#" class="dropbtn">Environments</a>
               <div class="dropdown-content">
-                <a href="https://chickenj0.cloud">Development</a>
-                <a href="https://cybermonkey.dev">Staging</a>
+                <a href="https://cybermonkey.dev">Development</a>
+                <a href="https://codemonkey.net.au">Staging</a>
                 <a href="https://cybermonkey.net.au">Main</a>
                 <a href="https://cybermonkey.sh">Operations</a>
             </div>
@@ -57,7 +69,9 @@
                 <a href="https://collaborate.cybermonkey.dev">Collaborate</a>
                 <a href="https://cloud.cybermonkey.dev">Cloud</a>
                 <a href="https://wiki.cybermonkey.net.au">Athena</a>
-                <a href="https://mail.cybermonkey.sh">Mail</a>
+                <a href="https://u.cybermonkey.sh">Analytics</a>
+                <a href="https://hera.cybermonkey.sh">Hera</a>
+                <a href="https://j.cybermonkey.sh">Jenkins</a>
                 </div>
               </li>
         </ul>
@@ -80,15 +94,15 @@
             <p>See our roadmap for deployment of our highly available Wazuh cluster for XDR and SEIM monitoring.</p>
             <p>Release date: Monday 8am 17 Feb 2025 (AWST)</p>
             <a href="https://cybermonkey.net.au/_/wazuh_roadmap.html" class="btn">See Roadmap</a>
-            <a href="https://delphi.cybermonkey.dev" class="btn">Go to Delphi staging instance</a>
+            <a href="https://delphi.cybermonkey.net.au" class="btn">Go to Delphi instance</a>
         </section>
 
         <!-- Environment Links -->
         <section class="section">
             <h2>Environment Links</h2>
             <ul class="env-links">
-                <li><a href="https://chickenj0.cloud" target="_blank" class="env-link env-dev">Development Server</a></li>
-                <li><a href="https://cybermonkey.dev" target="_blank" class="env-link env-dev">Staging Server</a></li>
+                <li><a href="https://cybermonkey.dev" target="_blank" class="env-link env-dev">Development Server</a></li>
+                <li><a href="https://codemonkey.net.au" target="_blank" class="env-link env-dev">Staging Server</a></li>
                 <li><a href="https://cybermonkey.net.au" target="_blank" class="env-link env-prod">Production Server</a></li>
                 <li><a href="https://cybermonkey.sh" target="_blank" class="env-link env-admin">Operations Server</a></li>     
             </ul>
@@ -105,5 +119,18 @@
     <footer>
         <p>&copy; 2025 Code Monkey Cybersecurity - Staging. All rights reserved.</p>
     </footer>
+
+        <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+    
+        hamburger.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+          hamburger.classList.toggle('active');
+        });
+      });
+    </script>
+    
 </body>
 </html>
