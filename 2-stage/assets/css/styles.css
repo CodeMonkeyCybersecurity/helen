@@ -6,10 +6,65 @@
   font-weight: normal;
 }
 
+
 @font-face {
   font-family: 'Noto Sans';
   src: url('../fonts/static/NotoSans-Bold.ttf') format('truetype');
   font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav li, nav a {
+    width: 100%;
+  }
+
+  .dropdown-content a {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .btn {
+    width: 100%;
+  }
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  display: inline-block;
+  text-align: center;
 }
 
 body {
@@ -118,4 +173,57 @@ footer {
     width: 128px; 
     height: 128px; 
     margin-right: 10px; 
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem; /* Optional: space between items */
+}
+
+/* Hamburger icon (only visible on mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: var(--oc-gray-0);
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+/* Mobile nav behavior */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.hamburger span {
+  transition: all 0.3s ease;
 }
