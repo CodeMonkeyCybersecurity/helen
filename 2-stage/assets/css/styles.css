@@ -175,49 +175,58 @@ footer {
     margin-right: 10px; 
 }
 
-nav ul {
-  display: flex;
-  gap: 1rem; /* Optional: space between items */
-}
 
-/* Hamburger icon (only visible on mobile) */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  padding: 10px;
-  margin-left: 20px;
-}
-
-.hamburger span {
-  height: 3px;
-  width: 25px;
-  background: var(--oc-gray-0);
-  margin: 4px 0;
-  border-radius: 2px;
+/* Desktop nav */
+@media (min-width: 769px) {
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
 }
 
 /* Mobile nav behavior */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 20px;
+    gap: 0.5rem;
+  }
+
+  .hamburger span {
+    height: 3px;
+    width: 25px;
+    background: var(--oc-gray-0);
+    border-radius: 2px;
+    transition: all 0.3s ease;
   }
 
   nav ul {
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    transition: max-height 0.3s ease-out;
     overflow: hidden;
     max-height: 0;
-}
+    transition: max-height 0.3s ease-out;
+  }
 
   nav ul.active {
-    display: flex;
     max-height: 500px;
+  }
+
+  nav li, nav a {
+    width: 100%;
+  }
+
+  .dropdown-content a {
+    padding: 1rem;
+    font-size: 1.1rem;
   }
 }
 
+/* Hamburger animation */
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -226,8 +235,4 @@ nav ul {
 }
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
-}
-
-.hamburger span {
-  transition: all 0.3s ease;
 }
