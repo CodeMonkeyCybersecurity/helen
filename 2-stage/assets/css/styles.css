@@ -219,10 +219,18 @@ footer {
   nav li, nav a {
     width: 100%;
   }
-
-  .dropdown-content a {
-    padding: 1rem;
-    font-size: 1.1rem;
+}
+  
+@media (max-width: 768px) {
+  .dropdown-content {
+    position: static;
+  }
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+  .dropdown .dropbtn:focus + .dropdown-content,
+  .dropdown .dropbtn.active + .dropdown-content {
+    display: block;
   }
 }
 
