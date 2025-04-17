@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Cybersecurity with Humans - Staging"/>
+    <meta name="keywords" content="Cybersecurity, Staging, XDR, SEIM, Penetration Testing, Backup Solutions">
+    <title>Code Monkey Cybersecurity (Staging)</title>
+    <link rel="stylesheet" href="assets/openColour/open-color.css"/>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <link rel="stylesheet" href="assets/css/dropdown.css"/>
+    <link rel="icon" href="/favicon.ico" sizes="any">
+   <script defer src="https://u.cybermonkey.dev/script.js" data-website-id="1dbe3fee-508e-41be-82d9-576c46db5274"></script>
+</head>
+    
+<body>
+    <header>
+        <h1>
+            <a href="/" class="logo-link">
+                <img src="assets/images/fingerprint_flipped_whitebackground_circle_1000dp_oc-teal-9_FILL0_wght400_GRAD0_opsz48.png" 
+                     alt="Code Monkey Logo (Staging)" class="logo-image">
+            </a>
+            Code Monkey Cybersecurity (Staging)
+        </h1>
+        <p>Cybersecurity, with Humans - Staging Environment</p>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav role="navigation" aria-label="Main navigation">
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <ul id="nav-links">
+            <li><a href="https://hera.cybermonkey.dev">Login</a></li>
+                
+            <!-- Environments Drop-down Menu -->
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Environments</a>
+              <div class="dropdown-content">
+                <a href="https://cybermonkey.dev">Development</a>
+                <a href="https://codemonkey.net.au">Staging</a>
+                <a href="https://cybermonkey.net.au">Main</a>
+                <a href="https://cybermonkey.sh">Operations</a>
+            </div>
+            </li>
+            <!-- External services Drop-down Menu -->
+            <li class="dropdown">
+              <a href="#" class="dropbtn">External</a>
+              <div class="dropdown-content">            
+                  <a href="https://github.com/CodeMonkeyCybersecurity">GitHub</a>
+                  <a href="https://accounts.hetzner.com/login">Hetzner</a>
+                  <a href="https://documentation.wazuh.com/current/user-manual/index.html">Wazuh docs</a>
+            </div>
+            </li>
+            <!-- Web Apps Drop-down Menu -->
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Web Apps</a>
+              <div class="dropdown-content">  
+                <a href="https://delphi.cybermonkey.dev">Delphi</a>
+                <a href="https://s3.cybermonkey.dev">s3</a>
+                <a href="https://observe.cybermonkey.dev">Observability</a>
+                <a href="https://persephone.cybermonkey.dev">Persephone</a>
+                <a href="https://collaborate.cybermonkey.dev">Collaborate</a>
+                <a href="https://cloud.cybermonkey.dev">Cloud</a>
+                <a href="https://wiki.cybermonkey.net.au">Athena</a>
+                <a href="https://u.cybermonkey.dev">Analytics</a>
+                <a href="https://hera.cybermonkey.dev">Hera</a>
+                <a href="https://jenkins.cybermonkey.dev">Jenkins</a>
+                </div>
+              </li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <!-- Staging Banner -->
+        <section class="section">
+            <div class="banner">
+                <h2>Staging Mode</h2> 
+                <p>This site is a staging server.</p>
+                <p>Content here is for testing and may not reflect production.</p>
+                <p><strong>You should probably...</strong></p>
+                <a href="https://cybermonkey.net.au" class="btn">Return to main site</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Roadmap</h2>
+            <p>See our roadmap for deployment of our highly available Wazuh cluster for XDR and SEIM monitoring.</p>
+            <p>Release date: Monday 8am 17 Feb 2025 (AWST)</p>
+            <a href="https://cybermonkey.net.au/_/wazuh_roadmap.html" class="btn">See Roadmap</a>
+            <a href="https://delphi.cybermonkey.net.au" class="btn">Go to Delphi instance</a>
+        </section>
+
+        <!-- Environment Links -->
+        <section class="section">
+            <h2>Environment Links</h2>
+            <ul class="env-links">
+                <li><a href="https://cybermonkey.dev" target="_blank" class="env-link env-dev">Development Server</a></li>
+                <li><a href="https://codemonkey.net.au" target="_blank" class="env-link env-dev">Staging Server</a></li>
+                <li><a href="https://cybermonkey.net.au" target="_blank" class="env-link env-prod">Production Server</a></li>
+                <li><a href="https://cybermonkey.sh" target="_blank" class="env-link env-admin">Operations Server</a></li>     
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:main@cybermonkey.net.au">main@cybermonkey.net.au</a></p>
+            <p>Location: Fremantle, Western Australia</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Code Monkey Cybersecurity - Staging. All rights reserved.</p>
+    </footer>
+
+        <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+    
+        hamburger.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+          hamburger.classList.toggle('active');
+        });
+      });
+    </script>
+    
+</body>
+</html>
