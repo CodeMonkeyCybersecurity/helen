@@ -1,0 +1,75 @@
+{{ define "main" }}
+
+<section class="hero">
+  <h1>Code Monkey Cybersecurity | Home</h1>
+  <p>Cybersecurity with Humans</p>
+</section>
+
+<!-- Services -->
+<section class="section">
+  <h2>Our Services</h2>
+  <p>Penetration Testing, Vulnerability Assessment & Custom Consulting</p>
+  <p>Managed XDR via <a href="/delphi/"><strong>Delphi</strong></a></p>
+  <p>Backup & Disaster Recovery with <a href="/persephone/"><strong>Persephone</strong></a></p>
+  <p>Secure DevSecOps with <a href="/hecate/"><strong>Hecate</strong></a> and <a href="/eos/"><strong>Eos</strong></a></p>
+  <p>Open source tools and guides via <a href="https://wiki.cybermonkey.net.au"><strong>Athena</strong></a></p>
+</section>
+
+<!-- Why Choose Us -->
+<section class="section">
+  <h2>Why Choose Us?</h2>
+  <p>We combine cutting-edge tech with a human-first approach.</p>
+  <p>From ethical hacking to robust recovery, we're here to help.</p>
+  <a href="#contact" class="btn">Contact us</a>
+</section>
+
+<!-- Roadmap -->
+<section class="section">
+  <h2>Roadmap</h2>
+  <p>We're deploying our HA XDR/SIEM cluster soon.</p>
+  <p>Release: Mon 8am, 17 Feb 2025 (AWST)</p>
+  <a href="/roadmap/" class="btn">See roadmap</a>
+  <a href="https://wiki.cybermonkey.net.au" class="btn">Set it up yourself</a>
+</section>
+
+<!-- Delphi Preview -->
+<section class="section">
+  <h2>Delphi</h2>
+  <h1>Powered by Wazuh</h1>
+  <p>The oracle of cybersecurity — our XDR and SIEM platform.</p>
+  <p>Launch: Mon 8am, 17 Feb 2025 (AWST)</p>
+  <a href="https://delphi.cybermonkey.net.au" class="btn">Coming Soon</a>
+</section>
+
+<!-- Knowledge Base -->
+<section class="section">
+  <h2>Knowledge Base</h2>
+  <div class="knowledge-base-links">
+    {{ partial "kb-item.html" (dict "Title" "Athena" "URL" "https://wiki.cybermonkey.net.au" "Desc" "Our open knowledge base, named for the goddess of wisdom.") }}
+    {{ partial "kb-item.html" (dict "Title" "Delphi" "URL" "https://wiki.cybermonkey.net.au/delphi" "Desc" "Our Wazuh-powered XDR/SIEM solution.") }}
+    {{ partial "kb-item.html" (dict "Title" "Eos" "URL" "https://wiki.cybermonkey.net.au/Eos" "Desc" "Simplifying Ubuntu server admin.") }}
+    {{ partial "kb-item.html" (dict "Title" "Hecate" "URL" "https://wiki.cybermonkey.net.au/Hecate" "Desc" "Reverse proxy management with Nginx and Docker.") }}
+    {{ partial "kb-item.html" (dict "Title" "Metis" "URL" "https://wiki.cybermonkey.net.au/Metis" "Desc" "Troubleshooting and systems wisdom.") }}
+    {{ partial "kb-item.html" (dict "Title" "Persephone" "URL" "https://wiki.cybermonkey.net.au/Persephone" "Desc" "Restic-based backup and recovery system.") }}
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: <a href="mailto:main@cybermonkey.net.au">main@cybermonkey.net.au</a></p>
+  <p>Phone: <a href="tel:+61432038310">(+61) 0432 038 310</a></p>
+  <p>Location: Fremantle, WA</p>
+  <p>ABN: 77 177 673 061</p>
+  <p>Part of Code Monkey Technologies</p>
+</section>
+
+<!-- Public Key -->
+<section class="section">
+  <h2>Public Key</h2>
+  <p>Verify our identity:</p>
+  <a href="/pages/publickey.cybermonkey.net.au-e3f0434f633b9745e69858add19e08d1ec7a6f2f.asc" class="btn">Download</a>
+  <a href="/pages/publickey.cybermonkey.net.au-e3f0434f633b9745e69858add19e08d1ec7a6f2f.txt" class="btn">View</a>
+</section>
+
+{{ end }}

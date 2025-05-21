@@ -1,0 +1,41 @@
+baseURL = 'https://cybermonkey.net.au'
+languageCode = 'en-us'
+title = 'Code Monkey Cybersecurity'
+theme = "" # (Optional — only if you're using a theme)
+
+# Optional: better URLs
+canonifyURLs = true
+enableRobotsTXT = true
+
+# Optional: use clean URLs (no .html)
+uglyURLs = false
+
+# Optional: build config
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+# Site-wide metadata
+[params]
+  author = "Henry Oliver"
+  description = "Cybersecurity with Humans. Managed XDR, backup, DevSecOps, and open source tools from Fremantle."
+  keywords = ["Cybersecurity", "XDR", "SIEM", "Penetration Testing", "Backup", "Open Source", "Australia"]
+  contact_email = "main@cybermonkey.net.au"
+  umami_script = "https://u.cybermonkey.dev/script.js"
+  umami_site_id = "970ff30a-ab5d-4c66-8f77-55cafc76083c"
+  assetDir = "assets"
+
+# Optional: social links
+[social]
+  github = "https://github.com/CodeMonkeyCybersecurity"
+  facebook = "https://facebook.com/codemonkeycyber"
+  twitter = "https://x.com/codemonkeycyber"
+
+# Optional: default settings for content
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true  # Allow inline HTML in markdown
+
+# Optional: default frontmatter for new pages
+[frontmatter]
+  date = ["lastmod", ":git", "date"]
