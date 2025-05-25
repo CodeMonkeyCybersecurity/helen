@@ -65,4 +65,8 @@ Delphi integrates and hardens:
 
 Want to test it yourself?  
 - Visit the live beta: [delphi.cybermonkey.net.au](https://delphi.cybermonkey.net.au)  
+<<<<<<< HEAD
 - Or head to the [Athena Knowledge Base](https://wiki.cybermonkey.net.au/Delphi) for setup guides.
+=======
+- Or head to the [Athena Knowledge Base](https://wiki.cybermonkey.net.au/Delphi) for setup guides.
+>>>>>>> e6ce84f (Refactor code structure for improved readability and maintainability)
