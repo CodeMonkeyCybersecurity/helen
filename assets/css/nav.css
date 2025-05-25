@@ -2,7 +2,7 @@
 
 /* Base nav styles */
 nav {
-    background-color: var(--oc-teal-8);
+    background-color: var(--primary-hover);
     padding: 10px 0;
   }
   
@@ -19,14 +19,20 @@ nav {
   }
   
   nav ul li a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary);
+    color: var(--bg);
     text-decoration: none;
-    color: var(--oc-gray-0);
-    font-weight: bold;
-    font-size: 1.1rem;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background 0.3s ease;
   }
   
   nav ul li a:hover {
-    color: var(--oc-orange-5);
+    background-color: var(--accent);
+    color: var(--bg);
   }
   
   /* Desktop nav */
@@ -51,7 +57,7 @@ nav {
     .hamburger span {
       height: 3px;
       width: 25px;
-      background: var(--oc-gray-0);
+      background: var(--bg);
       border-radius: 2px;
       transition: all 0.3s ease;
     }
@@ -105,3 +111,18 @@ nav {
       display: block;
     }
   }
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.search-container input {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--oc-gray-3);
+  border-radius: 4px;
+  width: 300px;
+  max-width: 80%;
+}

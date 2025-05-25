@@ -1,0 +1,29 @@
+/* assets/css/components/callout.css */
+
+.callout {
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+  background: var(--color-surface, var(--oc-gray-0));
+  color: var(--color-text, #212529);
+  border-left: 4px solid currentColor;
+}
+
+.callout.tip {
+  border-color: var(--oc-green-6);
+}
+
+.callout.note {
+  border-color: var(--oc-blue-6);
+}
+
+.callout.warning {
+  border-color: var(--oc-orange-6);
+}
+
+@media (prefers-color-scheme: dark) {
+  .callout {
+    background: var(--color-surface, var(--oc-gray-8));
+    color: var(--oc-gray-0);
+  }
+}

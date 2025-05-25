@@ -1,0 +1,157 @@
+/* assets/css/sidebar.css */
+
+
+:root {
+  --sidebar-width: 250px;
+}
+
+/* Search input */
+.book-search input {
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  font-family: 'Noto Sans', Arial, sans-serif;
+  border: 1px solid var(--oc-gray-4);
+  border-radius: 6px;
+  width: 100%;
+  transition: box-shadow 0.2s ease;
+}
+
+.book-search input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--primary);
+}
+
+/* Sidebar */
+.book-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  padding: 2rem 1rem;
+  background: var(--bg);
+  border-right: 1px solid var(--oc-gray-3);
+  overflow-y: auto;
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+/* Sidebar slide-in */
+#menu-control:checked ~ .book-menu {
+  transform: translateX(0);
+}
+
+/* Toggle button */
+.menu-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  background: var(--primary);
+  color: var(--bg);
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  z-index: 1100;
+  transition: transform 0.3s ease;
+}
+
+/* Move toggle button with sidebar */
+#menu-control:checked ~ .menu-toggle {
+  transform: translateX(var(--sidebar-width));
+}
+
+/* Flex container */
+.layout-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* Main content wrapper */
+.main-frame {
+  transition: margin-left 0.3s ease;
+  margin-left: 0;
+  width: 100%;
+  flex-grow: 1;
+}
+
+/* Slide the entire frame (header, main, footer) */
+#menu-control:checked ~ .main-frame {
+  margin-left: var(--sidebar-width);
+}
+
+/* Inner main area */
+.main-content {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Hide checkbox but keep it functional */
+.hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Ensure sidebar always visible on desktop */
+@media (min-width: 1024px) {
+  .book-menu {
+    transform: translateX(0) !important;
+  }
+
+  .menu-toggle {
+    display: none !important;
+  }
+
+  .main-frame {
+    margin-left: var(--sidebar-width) !important;
+  }
+}
+
+
+/* Sidebar inner layout */
+.book-menu-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.book-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.book-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.book-nav li a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-left: 3px solid transparent;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.book-nav li a:hover {
+  border-left: 3px solid var(--accent);
+  background-color: var(--oc-gray-1);
+  color: var(--primary);
+}
+.book-nav a.active {
+  border-left: 3px solid var(--primary);
+  background-color: var(--oc-gray-1);
+  padding-left: 0.5rem;
+}

@@ -1,0 +1,23 @@
+<!-- layouts/partials/breadcrumbs-schema.html -->
+
+{{/* JSON-LD breadcrumb schema – inject in <head> */}}
+{{ if not .IsHome }}
+  {{ $crumbs := .Breadcrumb.Current }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {{ range $i, $p := $crumbs -}}
+        {{- if $i }},{{ end }}
+        {
+          "@type": "ListItem",
+          "position": {{ add $i 1 }},
+          "name": "{{ $p.Title }}",
+          "item": "{{ $p.Permalink }}"
+        }
+      {{- end }}
+    ]
+  }
+  </script>
+{{ end }}

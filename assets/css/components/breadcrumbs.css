@@ -1,0 +1,20 @@
+.breadcrumbs {
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  color: var(--oc-gray-6);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  align-items: center;
+}
+.breadcrumbs::before {
+  content: "📍";
+  margin-right: 0.5rem;
+}
+.breadcrumbs a {
+  color: var(--primary);
+  text-decoration: none;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}

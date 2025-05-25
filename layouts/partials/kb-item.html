@@ -1,5 +1,10 @@
+<!-- layouts/partials/kb-item.html -->
 <div class="kb-item">
   <h4>{{ .Title }}</h4>
-  <p>{{ .Desc }}</p>
-  <a href="{{ .URL }}" class="button">{{ .Title }}</a>
+  {{ with .Desc }}
+    <p>{{ . }}</p>
+  {{ end }}
+  <a href="{{ .URL }}" class="button" target="_blank" rel="noopener noreferrer">
+    {{ .Title }}
+  </a>
 </div>

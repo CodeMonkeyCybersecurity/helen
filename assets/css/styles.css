@@ -1,41 +1,26 @@
-/* assets/css/styles.css  */
+/* assets/css/styles.css — layout, structure, theme */
 
-@font-face {
-  font-family: 'Noto Sans';
-  src: url('../fonts/static/NotoSans-Regular.ttf') format('truetype');
-  font-weight: normal;
+/* Global reset & font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-
-@font-face {
-  font-family: 'Noto Sans';
-  src: url('../fonts/static/NotoSans-Bold.ttf') format('truetype');
-  font-weight: bold;
+body {
+  font-family: 'Noto Sans', Arial, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-text);;
 }
 
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.8rem;
-  }
-
-  header p {
-    font-size: 1rem;
-  }
-}
-
-
-
-@media (max-width: 600px) {
-  .btn {
-    width: 100%;
-  }
-}
-
+/* Layout containers */
 .container {
-  width: 90%;
-  max-width: 1200px;
+  max-width: 960px;
   margin: 2rem auto;
-  padding: 1rem;
+  padding: 0 2rem;
 }
 
 img {
@@ -43,103 +28,84 @@ img {
   height: auto;
 }
 
-
-
-body {
-    font-family: 'Noto Sans', arial;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    margin-top: 50px;
-    background: var(--oc-gray-0);
-    color: var(--gray-9);
-}
-
+/* Header */
 header {
-    background: var(--oc-teal-9);
-    color: var(--oc-gray-0);
-    text-align: center;
-    padding: 2rem 1rem;
+  background: var(--color-brand);;
+  color: var(--color-bg);
+  padding: 3rem 1rem 2rem;
+  text-align: center;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin: 0;
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 700;
 }
 
 header p {
-    font-size: 1.2rem;
-    margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0;
 }
 
-
-
-
+/* Sections */
 .section {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background: var(--oc-gray-0);
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--color-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: var(--oc-teal-9);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--color-brand);;
+  font-weight: 600;
 }
 
+/* Buttons */
 .btn {
   display: inline-block;
   padding: 0.8rem 1.5rem;
-  background: var(--oc-teal-9);
-  color: var(--oc-gray-0);
+  background: var(--color-brand);;
+  color: var(--color-bg);
   text-decoration: none;
   border-radius: 5px;
+  font-weight: 500;
   transition: background 0.3s;
-  padding: 0.75rem 1.5rem;
-  display: inline-block;
   text-align: center;
 }
 
 .btn:hover {
-    background: var(--oc-orange-5);
+  background: var(--color-accent);
+  color: var(--color-bg);
 }
 
-@media (max-width: 600px) {
-  .btn {
-    width: 100%;
-  }
-}
-
+/* Footer */
 footer {
-    text-align: center;
-    padding: 1rem 0;
-    background: var(--oc-teal-9);
-    color: var(--oc-gray-0);
+  text-align: center;
+  padding: 1rem 0;
+  background: var(--color-brand);;
+  color: var(--color-bg);
 }
 
-
-/* Logo link styling */
+/* Logo */
 .logo-link {
-    text-decoration: none; 
-    display: inline-block; 
-    margin-right: 10px;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 10px;
 }
 
-/* Logo image styling */
 .logo-image {
-    vertical-align: middle; 
-    width: 128px; 
-    height: 128px; 
-    margin-right: 10px; 
+  vertical-align: middle;
+  width: 128px;
+  height: 128px;
 }
 
-
-/* Spinning logo */
+/* Animation */
 .logo-spin {
   width: 96px;
-  height: auto;
   margin-top: 2rem;
   animation: spin 10s linear infinite;
   transform-origin: center;
@@ -150,6 +116,7 @@ footer {
   to   { transform: rotate(-360deg); }
 }
 
+/* ASCII Art Block */
 .ascii-art {
   font-family: "Courier New", Courier, monospace;
   background-color: #f0f0f0;
@@ -160,4 +127,39 @@ footer {
   font-size: 14px;
   line-height: 1.4;
   white-space: pre;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+#search-results {
+  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+#search-results li a {
+  display: block;
+  padding: 0.5rem;
+  background: var(--oc-gray-0);
+  border-bottom: 1px solid var(--oc-gray-3);
+  color: var(--color-brand);;
+  text-decoration: none;
+}
+
+#search-results li a:hover {
+  background: var(--oc-gray-1);
 }

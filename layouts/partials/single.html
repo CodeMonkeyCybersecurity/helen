@@ -1,5 +1,22 @@
+<!-- layouts/partials/single.html -->
+
 {{ define "main" }}
-<article class="page">
-  {{ .Content }}
-</article>
+  <nav class="breadcrumbs">
+    <a href="/">Home</a>
+    {{ with .CurrentSection }}
+      {{ template "breadcrumb" . }}
+    {{ end }}
+    / {{ .Title }}
+  </nav>
+
+  <article class="page">
+    {{ .Content }}
+  </article>
+{{ end }}
+
+{{ define "breadcrumb" }}
+  {{ if .Parent }}
+    {{ template "breadcrumb" .Parent }} /
+  {{ end }}
+  {{ .Title }}
 {{ end }}
