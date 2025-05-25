@@ -1,0 +1,56 @@
+/* static/assets/css/themes.css */
+
+/* =======================  Variables  ======================= */
+:root{
+  /* raw fallbacks */
+  --c-primary-9: var(--oc-teal-9,#0f766e);
+  --c-primary-7: var(--oc-teal-7,#14b8a6);
+  --c-text-9:    var(--oc-gray-9,#212529);
+  --c-bg-0:      var(--oc-gray-0,#fff);
+
+  /* semantic */
+  --brand:        var(--c-primary-9);
+  --brand-hover:  var(--c-primary-7);
+  --txt:          var(--c-text-9);
+  --surface:      var(--c-bg-0);
+}
+
+@media(prefers-color-scheme:dark){
+  :root{
+    --c-bg-0: #101113;
+    --c-text-9:#f8f9fa;
+    --surface: var(--c-bg-0);
+    --txt:     var(--c-text-9);
+  }
+}
+
+/* =======================  Globals  ========================= */
+body{
+  background:var(--surface);
+  color:var(--txt);
+  font-family:"Noto Sans",system-ui,sans-serif;
+  line-height:1.6;
+}
+a{color:var(--brand);text-decoration:none}
+a:hover{color:var(--brand-hover);text-decoration:underline}
+a:visited{color:var(--brand-hover)}
+a:focus,:where(.page-toc) a:focus{outline:2px solid var(--brand-hover);outline-offset:2px}
+
+/* =======================  TOC block  ======================= */
+.content-wrapper{display:flex;gap:2rem;align-items:flex-start}
+.prose{flex:1 1 0;min-width:0}
+
+.page-toc{
+  flex:0 0 clamp(14rem,20vw,18rem);
+  position:sticky;top:6rem;z-index:20;
+  max-height:80vh;overflow-y:auto;
+  font-size:.9rem;background:var(--surface);
+  padding:1rem;border:1px solid var(--oc-gray-3,#dee2e6);border-radius:8px
+}
+.page-toc ul{list-style:none;margin:0;padding:0}
+.page-toc a{color:var(--brand)}
+
+@media(max-width:1024px){
+  .content-wrapper{flex-direction:column}
+  .page-toc{order:2;position:static;width:auto;max-height:none;margin-top:2rem}
+}

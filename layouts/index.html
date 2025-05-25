@@ -1,47 +1,72 @@
+<!-- layouts/index.html -->
+
 {{ define "main" }}
 
-<section class="hero">
-  <h1>Code Monkey Cybersecurity | Home</h1>
-  <p>Cybersecurity with Humans</p>
+<section class="section">
+  <h1>Welcome to Code Monkey Cybersecurity</h1>
+  <p>We're building Delphi to bring trusted, real-time security alerts to small teams, NGOs, and high-impact organizations.</p>
 </section>
 
-<!-- Services -->
 <section class="section">
   <h2>Our Services</h2>
-  <p>Penetration Testing, Vulnerability Assessment & Custom Consulting</p>
-  <p>Managed XDR via <a href="/delphi/"><strong>Delphi</strong></a></p>
-  <p>Backup & Disaster Recovery with <a href="/persephone/"><strong>Persephone</strong></a></p>
-  <p>Secure DevSecOps with <a href="/hecate/"><strong>Hecate</strong></a> and <a href="/eos/"><strong>Eos</strong></a></p>
-  <p>Open source tools and guides via <a href="https://wiki.cybermonkey.net.au"><strong>Athena</strong></a></p>
+  <p>Penetration Testing and Vulnerability Assessment & Custom Cybersecurity Consulting on request</p>
+  <p>Managed XDR Solutions with <a href="/_/delphi.html"><strong>Delphi</strong></a></p>
+  <p>Backup and Disaster Recovery with <a href="/_/persephone.html"><strong>Persephone</strong></a></p>
+  <p>Secure Cloud Infrastructure with <a href="/_/hecate.html"><strong>Hecate</strong></a> and <a href="/_/coming_soon.html"><strong>Eos</strong></a> (coming soon)</p>
+  <p>Open source tools and docs via <a href="https://wiki.cybermonkey.net.au"><strong>Athena</strong></a></p>
 </section>
 
-<!-- Why Choose Us -->
 <section class="section">
-  <h2>Why Choose Us?</h2>
-  <p>We combine cutting-edge tech with a human-first approach.</p>
-  <p>From ethical hacking to robust recovery, we're here to help.</p>
-  <a href="#contact" class="btn">Contact us</a>
+  <h2>Delphi Notify</h2>
+  <p>Delphi Notify delivers security alerts from tools like Wazuh and Suricata to channels you trust — email, Mattermost, Telegram, and more.</p>
+  <ul>
+    <li>✅ Human verification before alerting</li>
+    <li>🚨 Supports Wazuh, Suricata, Snort</li>
+    <li>🔐 Secure and auditable by design</li>
+  </ul>
 </section>
 
-<!-- Roadmap -->
+<section class="section">
+  <h2>Use Cases</h2>
+  <ul>
+    <li><strong>Small IT Team:</strong> Alerts in Mattermost only after human verification.</li>
+    <li><strong>NGO Field Ops:</strong> Verified alerts routed to satellite/email/mobile for reliability.</li>
+    <li><strong>MSSP:</strong> Tier 1 analysts forward only relevant security events.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Documentation</h2>
+  <p>Get started with CLI, webhooks, and integrations:</p>
+  <ul>
+    <li><a href="/docs/cli/">CLI Setup</a></li>
+    <li><a href="/docs/api/">Webhook API</a></li>
+    <li><a href="/docs/integrations/wazuh/">Wazuh Integration</a></li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Pricing</h2>
+  <p><strong>Free tier:</strong></p>
+  <ul>
+    <li>100 alerts/month</li>
+    <li>1 channel (e.g. email)</li>
+    <li>CLI & API access</li>
+  </ul>
+  <p><em>Coming soon: paid tiers for teams and organizations.</em></p>
+</section>
+
 <section class="section">
   <h2>Roadmap</h2>
-  <p>We're deploying our HA XDR/SIEM cluster soon.</p>
-  <p>Release: Mon 8am, 17 Feb 2025 (AWST)</p>
-  <a href="/roadmap/" class="btn">See roadmap</a>
-  <a href="https://wiki.cybermonkey.net.au" class="btn">Set it up yourself</a>
+  <ul>
+    <li><strong>✅ Now:</strong> Delphi Notify (MVP) with alert channels, input sources, and verification</li>
+    <li><strong>🔜 Next:</strong> Delphi Teams with audit log and team routing</li>
+    <li><strong>🚀 Future:</strong> Full Delphi with dashboard, XDR, tenant isolation</li>
+  </ul>
+  <p><strong>Launch date:</strong> Mon 8am, 17 Feb 2025 (AWST)</p>
+  <a href="/_/delphi_roadmap.html" class="btn">See full roadmap</a>
 </section>
 
-<!-- Delphi Preview -->
-<section class="section">
-  <h2>Delphi</h2>
-  <h1>Powered by Wazuh</h1>
-  <p>The oracle of cybersecurity — our XDR and SIEM platform.</p>
-  <p>Launch: Mon 8am, 17 Feb 2025 (AWST)</p>
-  <a href="https://delphi.cybermonkey.net.au" class="btn">Coming Soon</a>
-</section>
-
-<!-- Knowledge Base -->
 <section class="section">
   <h2>Knowledge Base</h2>
   <div class="knowledge-base-links">
@@ -54,22 +79,31 @@
   </div>
 </section>
 
-<!-- Contact -->
-<section class="section" id="contact">
-  <h2>Contact Us</h2>
-  <p>Email: <a href="mailto:main@cybermonkey.net.au">main@cybermonkey.net.au</a></p>
-  <p>Phone: <a href="tel:+61432038310">(+61) 0432 038 310</a></p>
-  <p>Location: Fremantle, WA</p>
-  <p>ABN: 77 177 673 061</p>
-  <p>Part of Code Monkey Technologies</p>
+<section class="section">
+  <h2>Stay in Touch</h2>
+  <div class="knowledge-base-links">
+    {{ partial "kb-item.html" (dict "Title" "Facebook" "URL" "https://www.facebook.com/codemonkeycyber/" "Desc" "") }}
+    {{ partial "kb-item.html" (dict "Title" "X" "URL" "https://x.com/codemonkeycyber" "Desc" "") }}
+    {{ partial "kb-item.html" (dict "Title" "GitHub" "URL" "https://github.com/CodeMonkeyCybersecurity" "Desc" "Access our code, report issues, and contribute.") }}
+  </div>
 </section>
 
-<!-- Public Key -->
 <section class="section">
   <h2>Public Key</h2>
-  <p>Verify our identity:</p>
-  <a href="/pages/publickey.cybermonkey.net.au-e3f0434f633b9745e69858add19e08d1ec7a6f2f.asc" class="btn">Download</a>
-  <a href="/pages/publickey.cybermonkey.net.au-e3f0434f633b9745e69858add19e08d1ec7a6f2f.txt" class="btn">View</a>
+  <p>Verify our identity with our GPG public key:</p>
+  <a href="/_/publickey.cybermonkey.net.au-e3f0434f633b9745e69858add19e08d1ec7a6f2f.asc" class="btn">Download</a>
+  <a href="/_/publickey.cybermonkey.net.au-e3f0434f633b9745e69858add19e08d1ec7a6f2f.txt" class="btn">View</a>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact Us</h2>
+  <ul>
+    <li>Email: <a href="mailto:main@cybermonkey.net.au">main@cybermonkey.net.au</a></li>
+    <li>Phone: <a href="tel:+61432038310">(+61) 0432 038 310</a></li>
+    <li>Location: Fremantle, WA</li>
+    <li>ABN: 77 177 673 061</li>
+    <li>Code Monkey Cybersecurity is a part of Code Monkey Technologies</li>
+  </ul>
 </section>
 
 {{ end }}

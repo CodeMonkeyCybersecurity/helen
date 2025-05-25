@@ -1,0 +1,44 @@
+.knowledge-base-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.kb-item {
+  background-color: var(--oc-gray-1);
+  border: 1px solid var(--oc-gray-2);
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 2px 4px var(--oc-gray-3);
+  text-align: center;
+}
+
+.kb-item h4 {
+  margin-bottom: 10px;
+  color: var(--oc-gray-8);
+}
+
+.kb-item p {
+  margin-bottom: 15px;
+  color: var(--oc-gray-5);
+}
+
+/* For internal Hugo buttons */
+.button,
+.kb-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--oc-blue-5);
+  color: var(--oc-gray-0);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover,
+.kb-btn:hover {
+  background-color: var(--oc-orange-5);
+}

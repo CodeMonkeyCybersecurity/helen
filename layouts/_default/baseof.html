@@ -1,16 +1,22 @@
+<!-- layouts/_default/baseof.html -->
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  {{ partial "head.html" . }}
-</head>
-<body>
-  {{ partial "header.html" . }}
-  {{ partial "nav.html" . }}
+<head>{{ partial "head.html" . }}</head>
 
-  <main class="container">
-    {{ block "main" . }}{{ end }}
-  </main>
+  <body>
+    <header class="site-header">
+      <input type="checkbox" id="menu-control" class="nav-toggle">
+      <label for="menu-control" class="menu-toggle" aria-label="Toggle main menu">☰</label>
+      {{ partial "nav.html" . }}
+    </header>
 
-  {{ partial "footer.html" . }}
-</body>
+    <main id="content" class="main-content" tabindex="-1">
+      {{ partial "breadcrumbs.html" . }}
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+  </body>
 </html>

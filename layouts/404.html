@@ -1,0 +1,51 @@
+<!-- layouts/404.html -->
+
+{{/* layouts/404.html */}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="canonical" href="{{ "/404.html" | absURL }}">
+  <title>Page Not Found | {{ .Site.Title }}</title>
+  <meta name="description" content="Sorry, we couldn’t find that page.">
+
+  <link rel="stylesheet" href="{{ "/assets/openColour/open-color.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "/assets/css/dropdown.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "/assets/css/theme.css" | relURL }}">
+
+  <link rel="icon" type="image/png"
+        href="{{ "/assets/images/favicon-circular-128x128.png" | relURL }}">
+</head>
+
+<body class="centered">
+  <main>
+    <h1>404 — Page Not Found</h1>
+    <p>Oops! The page you’re after doesn’t exist or has moved.</p>
+
+    <p>
+      <a href="{{ "/" | relURL }}" class="btn" aria-label="Back to the homepage">Back&nbsp;to&nbsp;Home</a>
+      &nbsp;|&nbsp;
+      <a href="{{ .Site.BaseURL }}" aria-label="Visit Code Monkey Cybersecurity">cybermonkey.net.au</a>
+    </p>
+
+    <p>
+      Still stuck? Let us know:<br>
+      <strong>Email:&nbsp;</strong>
+      <a href="mailto:main@cybermonkey.net.au">main@cybermonkey.net.au</a>
+    </p>
+
+    <img class="logo-spin"
+         src="{{ "/assets/images/fingerprint_flipped_whitebackground_circle_1000dp_oc-teal-9_FILL0_wght400_GRAD0_opsz48.png" | relURL }}"
+         alt="Code Monkey Cybersecurity logo spinning">
+  </main>
+
+  <style>
+    body.centered{display:flex;justify-content:center;align-items:center;min-height:100vh;text-align:center;}
+    .logo-spin{margin-top:2rem;width:100px;height:100px;animation:spin 8s linear infinite;}
+    @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+  </style>
+</body>
+</html>

@@ -1,0 +1,12 @@
+/* static/assets/css/components/callout.css */
+.callout {
+  border-left: 4px solid var(--primary);
+  background: var(--oc-gray-0);
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+.callout.tip { border-color: var(--oc-green-6); }
+.callout.note { border-color: var(--oc-blue-6); }
+.callout.warning { border-color: var(--oc-orange-6); }

@@ -1,0 +1,17 @@
+<!-- layouts/partials/breadcrumbs.html -->
+
+
+{{/* Visible breadcrumb trail */}}
+{{ if not .IsHome }}
+  {{ $crumbs := .Breadcrumb.Current }}
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    {{ range $i, $p := $crumbs }}
+      {{ if $i }} <span class="sep">/</span> {{ end }}
+      {{ if eq $p.Kind "home" }}
+        <a href="{{ "/" | relURL }}">Home</a>
+      {{ else }}
+        <a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
+      {{ end }}
+    {{ end }}
+  </nav>
+{{ end }}

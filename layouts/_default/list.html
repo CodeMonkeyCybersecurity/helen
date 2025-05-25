@@ -1,0 +1,22 @@
+<!-- layouts/_default/list.html -->
+
+{{ define "main" }}
+<section class="section list">
+  <h1>{{ .Title }}</h1>
+  {{ with .Content }}<div class="section-intro">{{ . }}</div>{{ end }}
+
+  {{ $pages := .Pages.ByDate.Reverse }}
+  <div class="card-grid">
+    {{ range .Paginate $pages 12 }.Pages }}
+      <article class="card">
+        <a href="{{ .RelPermalink }}" class="card-link">
+          <h2>{{ .Title }}</h2>
+          <p>{{ .Summary }}</p>
+        </a>
+      </article>
+    {{ end }}
+  </div>
+
+  {{ partial "pagination.html" . }}
+</section>
+{{ end }}
