@@ -1,0 +1,30 @@
+/*  assets/css/tokens.css  – semantic layer on top of Open-Color  */
+:root{
+    color-scheme: light dark;
+  --color-bg:          var(--oc-gray-0);
+  --color-surface:     var(--oc-gray-1);
+  --color-text:        var(--oc-gray-9);
+  --color-brand:       var(--oc-teal-6);
+  --color-brand-hover: var(--oc-teal-7);
+  --color-accent:      var(--oc-orange-5);
+}
+
+/* Light (default) */
+:root {
+  --color-bg:          var(--oc-gray-0);
+  --color-surface:     var(--oc-gray-1);
+  --color-text:        var(--oc-gray-9);
+  --color-brand:       var(--oc-teal-6);
+  --color-brand-hover: var(--oc-teal-7);
+  --color-accent:      var(--oc-orange-5);
+}
+
+/* Dark mode (manual via .dark class) */
+.dark {
+  --color-bg:          var(--oc-gray-9);
+  --color-surface:     var(--oc-gray-8);
+  --color-text:        var(--oc-gray-0);
+  --color-brand:       var(--oc-teal-3);
+  --color-brand-hover: var(--oc-teal-2);
+  --color-accent:      var(--oc-orange-4);
+}

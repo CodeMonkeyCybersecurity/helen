@@ -1,5 +1,11 @@
+<!-- layouts/partials/head.html -->
+{{- /* --------- METADATA ---------- */ -}}
+{{- $title := printf "%s | Code Monkey Cybersecurity" .Title -}}
+{{- $desc  := .Params.description | default "Cybersecurity with Humans" -}}
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
 
 <title>{{ .Title }} | Code Monkey Cybersecurity</title>
 <meta name="description" content="{{ .Params.description | default "Cybersecurity with Humans" }}">
@@ -36,6 +42,49 @@
 <script src="{{ "/assets/js/sidebar.js"  | relURL }}" defer></script>
 
 {{/* Umami analytics – use $ to access the root context */}}
+=======
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0ca678"> {{/* teal-7, adjust if needed */}}
+
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+
+<!-- OpenGraph -->
+<meta property="og:title"       content="{{ $title }}">
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="{{ .Permalink }}">
+<meta property="og:image"       content="https://cybermonkey.net.au/assets/images/social-banner.png">
+<meta property="og:description" content="{{ $desc }}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image"       content="https://cybermonkey.net.au/assets/images/social-banner.png">
+
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="icon" type="image/png" href="{{ "/assets/images/favicon-circular-128x128.png" | relURL }}">
+
+{{/* ---- CSS bundle ---- */}}
+{{- $openColor := resources.Get "openColour/open-color.css" }}
+{{- $tokens    := resources.Get "css/tokens.css" }}
+{{- $styles    := resources.Get "css/styles.css" }}
+{{- $sidebar   := resources.Get "css/sidebar.css" }}
+{{- $nav       := resources.Get "css/nav.css" }}
+{{- $dropdown  := resources.Get "css/dropdown.css" }}
+{{- $kb        := resources.Get "css/components/kb.css" }}
+
+{{- $css := slice $openColor $tokens $styles $sidebar $nav $dropdown $kb | resources.Concat "css/site.css" | resources.Minify | resources.Fingerprint -}}
+<link rel="preload" as="style" href="{{ $css.RelPermalink }}">
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+{{/* ---- JS ---- */}}
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2" defer></script>
+<script src="{{ "/assets/js/search.js"  | relURL }}" defer></script>
+<script src="{{ "/assets/js/sidebar.js" | relURL }}" defer></script>
+
+{{/* Umami Analytics */}}
+>>>>>>> 902e2c2 (Refactor website structure and styles)
 {{ with .Site.Params.umami_script }}
   {{ $umamiID := $.Site.Params.umami_site_id }}
   {{ if $umamiID }}
@@ -51,10 +100,17 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+<<<<<<< HEAD
   "@type":    "Organization",
   "name":     "Code Monkey Cybersecurity",
   "url":      "https://cybermonkey.net.au",
   "logo":     "https://cybermonkey.net.au/assets/images/favicon-circular-128x128.png",
+=======
+  "@type": "Organization",
+  "name": "Code Monkey Cybersecurity",
+  "url": "https://cybermonkey.net.au",
+  "logo": "https://cybermonkey.net.au/assets/images/favicon-circular-128x128.png",
+>>>>>>> 902e2c2 (Refactor website structure and styles)
   "sameAs": [
     "https://github.com/CodeMonkeyCybersecurity",
     "https://x.com/codemonkeycyber",

@@ -1,8 +1,17 @@
+<<<<<<< HEAD:static/assets/css/fonts.css
 /* fonts.css — Noto Sans Regular + Bold */
+=======
+/* assets/css/fonts.css — Noto Sans with weights + performance tweaks */
+>>>>>>> 902e2c2 (Refactor website structure and styles):assets/css/fonts.css
 @font-face {
   font-family: 'Noto Sans';
   src: url('/assets/fonts/NotoSans-Light.ttf') format('truetype');
   font-weight: 300;
+<<<<<<< HEAD:static/assets/css/fonts.css
+=======
+  font-style: normal;
+  font-display: swap;
+>>>>>>> 902e2c2 (Refactor website structure and styles):assets/css/fonts.css
 }
 
 @font-face {
@@ -10,25 +19,57 @@
   src: url('/assets/fonts/NotoSans-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
+<<<<<<< HEAD:static/assets/css/fonts.css
 }
+=======
+  font-display: swap;
+}
+
+>>>>>>> 902e2c2 (Refactor website structure and styles):assets/css/fonts.css
 @font-face {
   font-family: 'Noto Sans';
   src: url('/assets/fonts/NotoSans-Medium.ttf') format('truetype');
   font-weight: 500;
+<<<<<<< HEAD:static/assets/css/fonts.css
 }
+=======
+  font-style: normal;
+  font-display: swap;
+}
+
+>>>>>>> 902e2c2 (Refactor website structure and styles):assets/css/fonts.css
 @font-face {
   font-family: 'Noto Sans';
   src: url('/assets/fonts/NotoSans-SemiBold.ttf') format('truetype');
   font-weight: 600;
+<<<<<<< HEAD:static/assets/css/fonts.css
 }
+=======
+  font-style: normal;
+  font-display: swap;
+}
+
+>>>>>>> 902e2c2 (Refactor website structure and styles):assets/css/fonts.css
 @font-face {
   font-family: 'Noto Sans';
   src: url('/assets/fonts/NotoSans-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
+<<<<<<< HEAD:static/assets/css/fonts.css
 }
+=======
+  font-display: swap;
+}
+
+>>>>>>> 902e2c2 (Refactor website structure and styles):assets/css/fonts.css
 @font-face {
   font-family: 'Noto Sans';
   src: url('/assets/fonts/NotoSans-Black.ttf') format('truetype');
   font-weight: 900;
+<<<<<<< HEAD:static/assets/css/fonts.css
 }
+=======
+  font-style: normal;
+  font-display: swap;
+}
+>>>>>>> 902e2c2 (Refactor website structure and styles):assets/css/fonts.css

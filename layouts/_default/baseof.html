@@ -1,4 +1,5 @@
 <!-- layouts/_default/baseof.html -->
+<<<<<<< HEAD
 
 
 <!DOCTYPE html>
@@ -11,6 +12,25 @@
       <label for="menu-control" class="menu-toggle" aria-label="Toggle main menu">☰</label>
       {{ partial "nav.html" . }}
     </header>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{ partial "head.html" . }}
+</head>
+
+<body>
+  <header class="site-header">
+    <input type="checkbox" id="menu-control" class="nav-toggle">
+    <label for="menu-control" class="menu-toggle" aria-label="Toggle main menu">☰</label>
+    {{ partial "nav.html" . }}
+  </header>
+
+  <main id="content" class="main-content" tabindex="-1">
+    {{ partial "breadcrumbs.html" . }}
+    {{ block "main" . }}{{ end }}
+  </main>
+>>>>>>> 902e2c2 (Refactor website structure and styles)
 
     <main id="content" class="main-content" tabindex="-1">
       {{ partial "breadcrumbs.html" . }}

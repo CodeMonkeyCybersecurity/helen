@@ -32,4 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
   checkbox.addEventListener('change', () => {
     toggleBtn.setAttribute('aria-expanded', checkbox.checked.toString());
   });
+<<<<<<< HEAD:static/assets/css/sidebar.js
 });
+=======
+});
+>>>>>>> 902e2c2 (Refactor website structure and styles):assets/css/sidebar.js
