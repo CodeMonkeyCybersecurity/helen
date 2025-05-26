@@ -2,12 +2,12 @@
 
 {{- /* --------- METADATA ---------- */ -}}
 {{- $title := printf "%s | Code Monkey Cybersecurity" .Title -}}
-{{- $desc  := .Params.description | default "Cybersecurity. With Humans." -}}
+{{- $desc  := .Params.description | default "Cybersecurity with Humans" -}}
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#0ca678"> {{/* teal-7, adjust if needed */}}
+<meta name="theme-color" content="#0ca678">
 
 <title>{{ $title }}</title>
 <meta name="description" content="{{ $desc }}">
@@ -28,37 +28,28 @@
 <link rel="canonical" href="{{ .Permalink }}">
 <link rel="icon" type="image/png" href="{{ "/assets/images/favicon-circular-128x128.png" | relURL }}">
 
-{{- $openColor   := resources.Get "openColour/open-color.css" }}
-{{- $tokens      := resources.Get "css/tokens.css" }}
-{{- $fonts       := resources.Get "css/fonts.css" }}
-{{- $styles      := resources.Get "css/styles.css" }}
-{{- $sidebar     := resources.Get "css/sidebar.css" }}
-{{- $nav         := resources.Get "css/nav.css" }}
-{{- $dropdown    := resources.Get "css/dropdown.css" }}
-{{- $search      := resources.Get "css/search.css" }}
-{{- $breadcrumbs := resources.Get "css/components/breadcrumbs.css" }}
-{{- $kb          := resources.Get "css/components/kb.css" }}
-{{- $callout     := resources.Get "css/components/callout.css" }}
-{{- $code        := resources.Get "css/components/code.css" }}
+{{- /* --------- CSS BUNDLE ---------- */ -}}
+{{- /* 
+     1) Match all base/*.css
+     2) Append layout/*.css
+     3) Append components/*.css
+     4) Concat, minify & fingerprint
+*/ -}}
+{{- $styles := resources.Match "css/base/*.css" 
+    | resources.Append (resources.Match "css/layout/*.css")
+    | resources.Append (resources.Match "css/components/*.css")
+    | resources.Concat "css/site.css"
+    | resources.Minify
+    | resources.Fingerprint -}}
+<link rel="preload" as="style" href="{{ $styles.RelPermalink }}">
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
 
-{{- $css := slice
-     $openColor $tokens $fonts $styles
-     $sidebar   $nav    $dropdown
-     $search    $kb     $callout $code
-   | resources.Concat "css/site.css"
-   | resources.Minify
-   | resources.Fingerprint -}}
-  
-{{- $css := slice $openColor $tokens $styles $sidebar $nav $dropdown $kb | resources.Concat "css/site.css" | resources.Minify | resources.Fingerprint -}}
-<link rel="preload" as="style" href="{{ $css.RelPermalink }}">
-<link rel="stylesheet" href="{{ $css.RelPermalink }}">
-
-{{/* ---- JS ---- */}}
+{{- /* --------- JAVASCRIPT ---------- */ -}}
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2" defer></script>
 <script src="{{ "/js/search.js"  | relURL }}" defer></script>
 <script src="{{ "/js/sidebar.js" | relURL }}" defer></script>
 
-{{/* Umami Analytics */}}
+{{- /* --------- UMAMI ANALYTICS ---------- */ -}}
 {{ with .Site.Params.umami_script }}
   {{ $umamiID := $.Site.Params.umami_site_id }}
   {{ if $umamiID }}
@@ -66,11 +57,12 @@
   {{ end }}
 {{ end }}
 
+{{- /* --------- BREADCRUMB SCHEMA ---------- */ -}}
 {{ if not .IsHome }}
   {{ partial "breadcrumbs-schema.html" . }}
 {{ end }}
 
-{{/* Organization Schema */}}
+{{- /* --------- ORGANIZATION SCHEMA ---------- */ -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

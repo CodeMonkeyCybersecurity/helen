@@ -21,15 +21,36 @@
   animation: slideDown 0.2s ease forwards;
 }
 
-/* nested items */
-.book-nav--nested li a {
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
-}
-.book-nav--nested li a:hover {
-  background: var(--oc-gray-1);
+.book-nav--nested {
+  list-style: none;
+  margin: 0.25rem 0 0 0;
+  padding: 0;
 }
 
+.book-nav--nested li {
+  margin: 0;
+  padding: 0;
+}
+
+.book-nav--nested li a {
+  display: block;              /* full-width clickable */
+  padding: 0.5rem 1;          /* small vertical padding */
+  background: transparent;     /* remove button BG */
+  border-radius: 0;            /* remove corners */
+  font-size: 1rem;           /* slightly smaller */
+  font-weight: 600;            /* semi-bold */
+  color: var(--color-text);    /* same as your body text */
+  text-decoration: underline dotted var(--color-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+.book-nav--nested li a:hover {
+  color: var(--color-accent);  /* your orange accent */
+  text-decoration-color: var(--color-accent);
+  background: transparent;
+}
 /* slide-down keyframes */
 @keyframes slideDown {
   from { max-height: 0; opacity: 0; }

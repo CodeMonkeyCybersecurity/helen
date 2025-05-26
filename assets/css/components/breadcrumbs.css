@@ -28,11 +28,11 @@
   transition: color 0.2s ease;
 }
 .breadcrumbs a:hover {
-  color: var(--color-accent);
-  text-decoration: underline;
+  text-decoration: underline var(--color-accent);
 }
 
 /* Separator */
 .breadcrumbs .sep {
+  margin: 0 0.5rem;
   color: var(--oc-gray-5);
 }
