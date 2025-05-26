@@ -1,22 +1,38 @@
 /* assets/css/components/breadcrumbs.css */
 
+/* Container */
 .breadcrumbs {
-  font-size: 0.85rem;
-  margin-bottom: 1rem;
-  color: var(--oc-gray-6);
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
-  gap: 0.25rem;
   align-items: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0;               /* more breathing room */
+  padding: 0.5rem 1rem;           /* subtle padding */
+  background: var(--oc-gray-1);   /* light neutral background */
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  color: var(--oc-gray-7);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
+
+/* “Home” icon or bullet (you could swap this for an SVG or emoji) */
 .breadcrumbs::before {
-  content: "📍";
+  content: "🏠";
   margin-right: 0.5rem;
 }
+
+/* Links */
 .breadcrumbs a {
-  color: var(--primary);
+  color: var(--color-brand);
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 .breadcrumbs a:hover {
+  color: var(--color-accent);
   text-decoration: underline;
+}
+
+/* Separator */
+.breadcrumbs .sep {
+  color: var(--oc-gray-5);
 }
