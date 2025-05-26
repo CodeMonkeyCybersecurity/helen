@@ -40,6 +40,11 @@ header h1 {
   font-size: 2.5rem;
   margin: 0;
   font-weight: 700;
+  color: var(--color-bg); /* ✅ this ensures it's white on green */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 header p {
