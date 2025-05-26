@@ -1,23 +1,34 @@
-<!-- layouts/partials/breadcrumbs-schema.html -->
-
-{{/* JSON-LD breadcrumb schema – inject in <head> */}}
-{{ if not .IsHome }}
-  {{ $crumbs := .Breadcrumb.Current }}
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {{ range $i, $p := $crumbs -}}
-        {{- if $i }},{{ end }}
-        {
-          "@type": "ListItem",
-          "position": {{ add $i 1 }},
-          "name": "{{ $p.Title }}",
-          "item": "{{ $p.Permalink }}"
-        }
+{{/* layouts/partials/breadcrumbs-schema.html */}}
+{{- if not .IsHome -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ "/" | absURL }}"
+    }{{- $pos := 2 -}}
+      {{- $parent := .Parent -}}
+      {{- range seq 1 5 }}
+        {{- if not $parent }}{{- break }}{{- end }}
+    , {
+      "@type": "ListItem",
+      "position": {{ $pos }},
+      "name": "{{ $parent.Title }}",
+      "item": "{{ $parent.Permalink }}"
+    }{{- $pos = add $pos 1 -}}
+        {{- $parent = $parent.Parent -}}
       {{- end }}
-    ]
-  }
-  </script>
-{{ end }}
+    , {
+      "@type": "ListItem",
+      "position": {{ $pos }},
+      "name": "{{ .Title }}",
+      "item": "{{ .Permalink }}"
+    }
+  ]
+}
+</script>
+{{- end }}
