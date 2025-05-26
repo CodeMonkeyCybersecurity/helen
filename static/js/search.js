@@ -6,7 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Load the JSON index
   fetch("/index.json")
-    .then(res => res.json())
+    .then(res => {
+      if (!res.ok) throw new Error("Network response was not OK");
+      return res.json();
+    })
     .then(pages => {
       // Initialize Fuse
       const fuse = new Fuse(pages, {
@@ -19,13 +22,18 @@ document.addEventListener("DOMContentLoaded", () => {
         threshold: 0.4
       });
 
+      // Listen for user input
       input.addEventListener("input", e => {
         const q = e.target.value.trim();
         if (!q) {
           resultList.innerHTML = "";
           return;
         }
-        const hits = fuse.search(q).slice(0, 10);
+        const hits = fuse.search(q, { limit: 10 });
+        if (hits.length === 0) {
+          resultList.innerHTML = "<li>No results found</li>";
+          return;
+        }
         resultList.innerHTML = hits.map(h => {
           const item = h.item;
           return `<li><a href="${item.url}">${item.title}</a></li>`;
@@ -34,5 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(err => {
       console.error("Search index load failed:", err);
+      resultList.innerHTML = "<li>Search unavailable</li>";
     });
 });
