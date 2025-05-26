@@ -1,39 +1,37 @@
 /* assets/css/dropdown.css  */
 
-/* Remove float; use flex defaults and ensure dropdown items are positioned relatively */
-nav li {
+/*───────────────────────────────────────────
+  4. DROPDOWN (NESTED MENUS)
+───────────────────────────────────────────*/
+.book-nav li.has-children {
   position: relative;
 }
-
-/* The rest of your dropdown styles remain the same */
-nav li a, .dropbtn {
-  display: inline-block;
-  background-color: var(--oc-gray-0);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-nav li a:hover, .dropdown:hover .dropbtn {
-  background-color: var(--oc-teal-7);
-}
-.dropdown-content {
+.book-nav li.has-children > .book-nav--nested {
   display: none;
-  position: absolute;
-  background-color: var(--oc-gray-0);
-  min-width: 160px;
-  z-index: 1;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: var(--color-surface);
+  border-top: 1px solid var(--oc-gray-3);
+  position: static; /* flows down in the list */
+  overflow: hidden;
 }
-.dropdown-content a {
-  color: var(--oc-gray-8);
-  padding: 12px 16px;
-  text-decoration: none;
+.book-nav li.has-children:hover > .book-nav--nested {
   display: block;
-  text-align: left;
+  animation: slideDown 0.2s ease forwards;
 }
-.dropdown-content a:hover {
-  background-color: var(--oc-gray-2);
+
+/* nested items */
+.book-nav--nested li a {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
 }
-.dropdown:hover .dropdown-content {
-  display: block;
+.book-nav--nested li a:hover {
+  background: var(--oc-gray-1);
+}
+
+/* slide-down keyframes */
+@keyframes slideDown {
+  from { max-height: 0; opacity: 0; }
+  to   { max-height: 500px; opacity: 1; }
 }
