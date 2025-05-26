@@ -1,39 +1,21 @@
-/* assets/css/tokens.css — semantic layer on top of Open-Color */
+/* assets/css/tokens.css — semantic layer on top of Open Color */
 
 :root {
-  /* Explicitly opt into auto color schemes */
-  color-scheme: light dark;
+  /* Enforce light mode appearance */
+  color-scheme: light;
 
-  /* Default: Light mode */
+  /* Semantic color tokens (light only) */
   --color-bg:          var(--oc-gray-0);
   --color-surface:     var(--oc-gray-1);
   --color-text:        var(--oc-gray-9);
-
-  /* Brand colors — unified across light/dark */
-  --color-brand:       var(--oc-teal-8);
-  --color-brand-hover: var(--oc-teal-6);
-
+  --color-brand:       var(--oc-teal-8); /* consistent brand */
+  --color-brand-hover: var(--oc-teal-7);
   --color-accent:      var(--oc-orange-5);
+
+  /* Shorthand aliases (for legacy support) */
+  --primary:        var(--color-brand);
+  --primary-hover:  var(--color-brand-hover);
+  --accent:         var(--color-accent);
+  --bg:             var(--color-bg);
+  --text:           var(--color-text);
 }
-
-/* Auto dark mode via system preference */
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-bg:          var(--oc-gray-9);
-    --color-surface:     var(--oc-gray-8);
-    --color-text:        var(--oc-gray-0);
-
-    /* Brand colors stay the same */
-    --color-brand:       var(--oc-teal-8);
-    --color-brand-hover: var(--oc-teal-6);
-
-    --color-accent:      var(--oc-orange-4);
-  }
-}
-
-/* Use consistently themed variables */
---primary: var(--color-brand);
---primary-hover: var(--color-brand-hover);
---accent: var(--color-accent);
---bg: var(--color-bg);
---text: var(--color-text);
