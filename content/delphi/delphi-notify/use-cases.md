@@ -1,8 +1,12 @@
 ---
 title: "Use Cases"
-description: "How Delphi Notify helps teams respond smarter."
+menu:
+  main:
+    parent:     "product"
+    identifier: "use-cases"
+    name:       "Use Cases"
+    weight:     20
 ---
-
 ### Small IT Team
 Receive critical alerts in Mattermost only after a human has confirmed they're not false positives.
 

@@ -1,5 +1,3 @@
-<!-- content/_index.html -->
-
 ---
 title: "Code Monkey Cybersecurity"
 description: "Open-source tools for human-first cybersecurity."

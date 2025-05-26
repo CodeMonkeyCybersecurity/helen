@@ -3,15 +3,20 @@
   <div class="book-menu-content">
     <a class="book-brand" href="/">Code Monkey Cybersecurity</a>
 
-    <ul class="book-nav">
-      <li><a href="/">Home</a></li>
-      <li><a href="/delphi-notify/">Product</a></li>
-      <li><a href="/delphi-notify/use-cases/">Use Cases</a></li>
-      <li><a href="/docs/">Docs</a></li>
-      <li><a href="/pricing/">Pricing</a></li>
-      <li><a href="/delphi-notify/roadmap/">Roadmap</a></li>
-      <li><a href="/contact/">Contact</a></li>
-    </ul>
+      <ul class="book-nav">
+      {{- range .Site.Menus.main }}
+        <li>
+          <a href="{{ .URL }}">{{ .Name }}</a>
+          {{- if .HasChildren }}
+            <ul>
+              {{- range .Children }}
+                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+              {{- end }}
+            </ul>
+          {{- end }}
+        </li>
+      {{- end }}
+      </ul>
 
     <div class="book-search">
       <input type="text" id="site-search" placeholder="Search..." aria-label="Search site" />

@@ -24,6 +24,14 @@ buildExpired = false
   umami_site_id = "970ff30a-ab5d-4c66-8f77-55cafc76083c"
   assetDir = "assets"
 
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name       = "Home"
+    url        = "/"
+    weight     = 1
+
 [sitemap]
   changefreq = "monthly"
   priority = 0.5
