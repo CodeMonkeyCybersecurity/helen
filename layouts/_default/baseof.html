@@ -7,24 +7,24 @@
 </head>
 
 <body>
-  <div class="layout-wrapper"> <!-- ✅ Required for sidebar layout logic -->
+  <div class="layout-wrapper"> {{/* ✅ Required for sidebar layout logic */}}
 
-    <!-- Sidebar Toggle Checkbox (invisible but functional) -->
+    {{/* Sidebar Toggle Checkbox (invisible but functional) */}}
     <input type="checkbox" id="menu-control" class="hidden" />
 
-    <!-- Toggle Button -->
+    {{/* Toggle Button */}}
     <label for="menu-control" class="menu-toggle" aria-label="Toggle main menu">☰</label>
 
-    <!-- Sidebar Menu -->
+    {{/* Sidebar Menu */}}
     {{ partial "nav.html" . }}
 
-    <!-- Content wrapper that slides -->
+    {{/* Content wrapper that slides */}}
     <div class="main-frame">
 
-      <!-- Site header with title and logo -->
+      {{/* Site header with title and logo */}}
       {{ partial "header.html" . }}
 
-      <!-- Page content -->
+      {{/* Page content */}}
       <main id="content" class="main-content" tabindex="-1">
         {{ partial "breadcrumbs.html" . }}
         {{ block "main" . }}{{ end }}
