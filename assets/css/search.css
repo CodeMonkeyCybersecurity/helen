@@ -1,0 +1,71 @@
+/* assets/css/search.css */
+
+/*───────────────────────────────────────────
+  SEARCH BOX & RESULTS PANEL
+───────────────────────────────────────────*/
+
+/* Wrapper & stacking context */
+.book-search {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+/* Input styling */
+.book-search input {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  border: 1px solid var(--oc-gray-4);
+  border-radius: 5px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  text-align: center;
+  transition: box-shadow var(--transition-fast);
+}
+.book-search input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--primary);
+}
+
+/* Push menu down while `.active` */
+.book-search.active ~ .book-nav {
+  margin-top: calc((5 * 2.5rem) + 2.5rem);
+  transition: margin-top 0.3s ease;
+}
+
+/* Results dropdown (absolute, centered) */
+#search-results {
+  position: absolute;
+  top: 100%;            /* just below the input */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-height: calc(5 * 2.5rem);
+  margin-top: 0.5rem;
+  padding: 0;
+  list-style: none;
+  background: var(--color-bg);
+  overflow-y: auto;
+  text-align: center;
+  z-index: 100;
+}
+
+/* Individual result links */
+#search-results li {
+  margin: 0;
+}
+#search-results li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  background: var(--oc-gray-0);
+  border-bottom: 1px solid var(--oc-gray-3);
+  color: var(--color-brand);
+  text-decoration: none;
+  transition: background var(--transition-fast);
+}
+#search-results li a:hover {
+  background: var(--oc-gray-1);
+}
