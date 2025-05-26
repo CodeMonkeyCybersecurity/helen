@@ -6,20 +6,26 @@
 .book-search {
   display: flex;
   justify-content: center;
-  margin: 2rem 0;           /* a bit more breathing room */
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
 }
 
 .book-search input {
   width: 100%;
   max-width: 600px;         /* don’t stretch past 600px */
-  padding: 1rem 1.5rem;     /* larger click/tap area */
+  padding: 0.5rem 1rem;    /* larger click/tap area */
   font-size: 1.25rem;       /* bigger text */
   border: 1px solid var(--oc-gray-4);
-  border-radius: 6px;
+  border-radius: 5px;
   background: var(--color-bg);
   color: var(--color-text);
   text-align: center;
   transition: box-shadow var(--transition-fast);
+}
+
+.book-search:focus-within + .book-nav {
+  margin-top: calc(5 * 2.5rem);
 }
 
 .book-search input:focus {
@@ -37,17 +43,52 @@
   list-style: none;
   padding: 0;
   text-align: left;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0.5rem;
+  max-height: calc(5 * 2.5rem); /* room for 5 items @ 2.5rem each */
+  overflow-y: auto;
 }
 
+/* Style each result like your dropdown items */
 #search-results li a {
   display: block;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   background: var(--oc-gray-0);
   border-bottom: 1px solid var(--oc-gray-3);
-  color: var(--color-brand);;
+  color: var(--color-brand);
   text-decoration: none;
+  transition: background var(--transition-fast);
 }
 
+#search-results li a:hover {
+  background: var(--oc-gray-1);
+}
+
+
+/*───────────────────────────────────────────
+  CENTERED SEARCH RESULTS
+───────────────────────────────────────────*/
+#search-results {
+  width: 100%;
+  text-align: center;
+  max-height: calc(5 * 2.5rem);
+  overflow-y: auto;
+  margin-top: 0.5rem;
+}
+#search-results li {
+  list-style: none;
+}
+#search-results li a {
+  display: block;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  background: var(--oc-gray-0);
+  border-bottom: 1px solid var(--oc-gray-3);
+  color: var(--color-brand);
+  text-decoration: none;
+  transition: background var(--transition-fast);
+}
 #search-results li a:hover {
   background: var(--oc-gray-1);
 }
