@@ -81,11 +81,6 @@
   transition: transform 0.3s ease;
 }
 
-
-
-
-
-
 /* Search input */
 .book-search input {
   padding: 0.75rem 1rem;
@@ -154,4 +149,16 @@
   background-color: var(--oc-gray-1);
   color: var(--color-brand);
   padding-left: 0.5rem;
+}
+
+#menu-control:checked ~ .book-menu {
+  transform: translateX(0);
+}
+
+#menu-control:checked ~ .menu-toggle {
+  transform: translateX(var(--sidebar-width));
+}
+
+#menu-control:checked ~ .main-frame {
+  margin-left: var(--sidebar-width);
 }

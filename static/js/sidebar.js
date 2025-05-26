@@ -1,4 +1,4 @@
-// assets/js/sidebar.js
+// static/js/sidebar.js
 document.addEventListener('DOMContentLoaded', () => {
   const checkbox = document.getElementById('menu-control');
   const sidebar = document.querySelector('.book-menu');
