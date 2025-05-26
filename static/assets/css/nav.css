@@ -2,6 +2,7 @@
 
 /* Base link styles (you already had these) */
 .book-nav li a {
+  text-align: center;
   display: block;
   padding: 0.5rem 1rem;
   background-color: var(--color-brand);
@@ -49,15 +50,11 @@
 /* Hide nested by default */
 .book-nav--nested {
   display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   background: var(--color-surface);
-  border: 1px solid var(--oc-gray-3);
-  padding: 0.25rem 0;
-  min-width: 10rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  z-index: 10;
+  border-top: 1px solid var(--oc-gray-3);
 }
 
 /* Anchor dropdown to parent */
@@ -68,6 +65,7 @@
 /* Reveal on hover */
 .book-nav > li.has-children:hover > .book-nav--nested {
   display: block;
+  animation: slideDown 0.2s ease forwards;
 }
 
 /* Style nested items */
@@ -88,4 +86,13 @@
   color: var(--color-text);
   border: 1px solid var(--oc-gray-4);
 }
+<<<<<<< HEAD:static/assets/css/nav.css
 >>>>>>> e6ce84f (Refactor code structure for improved readability and maintainability):assets/css/nav.css
+=======
+
+/* slide-down keyframes */
+@keyframes slideDown {
+  0%   { max-height: 0; opacity: 0; }
+  100% { max-height: 500px; opacity: 1; }
+}
+>>>>>>> 3dc7834 (Refactor sidebar dropdown styles for improved visibility and animation):assets/css/nav.css
