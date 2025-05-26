@@ -1,18 +1,20 @@
 {{/* layouts/partials/breadcrumbs.html */}}
+
+{{- /* Grab the section name (e.g. “pricing”, “docs”, etc.) */ -}}
+{{- $sectionName := .Section -}}
+
 <nav class="breadcrumbs" aria-label="Breadcrumb">
-  {{- /* Always start with Home */ -}}
   <a href="{{ "/" | relURL }}">Home</a>
 
-  {{- /* Now walk up through parents (max 5 levels) */ -}}
-  {{- $parent := .Parent -}}
-  {{- range seq 1 5 }}
-    {{- if not $parent }}{{- break }}{{- end }}
-    <span class="sep"> / </span>
-    <a href="{{ $parent.RelPermalink }}">{{ $parent.Title }}</a>
-    {{- $parent = $parent.Parent -}}
+  {{- /* If this page lives in a section, look it up */ -}}
+  {{- if $sectionName }}
+    {{- $secPage := .Site.GetPage "section" $sectionName -}}
+    {{- if $secPage }}
+      <span class="sep"> / </span>
+      <a href="{{ $secPage.RelPermalink }}">{{ $secPage.Title }}</a>
+    {{- end }}
   {{- end }}
 
-  {{- /* Finally, the current page title */ -}}
   <span class="sep"> / </span>
-  <span>{{ .Title }}</span>
+  <span aria-current="page">{{ .Title }}</span>
 </nav>

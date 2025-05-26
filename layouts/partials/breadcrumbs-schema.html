@@ -1,5 +1,5 @@
 {{/* layouts/partials/breadcrumbs-schema.html */}}
-{{- if not .IsHome -}}
+{{- if not .IsHome }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -11,16 +11,17 @@
       "name": "Home",
       "item": "{{ "/" | absURL }}"
     }{{- $pos := 2 -}}
-      {{- $parent := .Parent -}}
-      {{- range seq 1 5 }}
-        {{- if not $parent }}{{- break }}{{- end }}
+      {{- $sectionName := .Section -}}
+      {{- if $sectionName }}
+        {{- $secPage := .Site.GetPage "section" $sectionName -}}
+        {{- if $secPage }}
     , {
       "@type": "ListItem",
       "position": {{ $pos }},
-      "name": "{{ $parent.Title }}",
-      "item": "{{ $parent.Permalink }}"
+      "name": "{{ $secPage.Title }}",
+      "item": "{{ $secPage.Permalink }}"
     }{{- $pos = add $pos 1 -}}
-        {{- $parent = $parent.Parent -}}
+        {{- end }}
       {{- end }}
     , {
       "@type": "ListItem",
