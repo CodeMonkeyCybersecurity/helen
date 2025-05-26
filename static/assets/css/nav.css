@@ -1,16 +1,44 @@
 /* assets/css/nav.css */
 
-/* Base link styles (you already had these) */
+/*───────────────────────────────────────────
+  3. BRAND + NAV LINKS
+───────────────────────────────────────────*/
+/* Brand/title */
+.book-brand {
+  display: block;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  transition: color var(--transition-fast);
+}
+.book-brand:hover {
+  color: var(--color-accent);
+}
+
+/* Nav container */
+.book-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Links */
 .book-nav li a {
   text-align: center;
   display: block;
   padding: 0.5rem 1rem;
-  background-color: var(--color-brand);
+  background: var(--color-brand);
   color: var(--color-bg);
   text-decoration: none;
-  font-weight: 500;
   border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 500;
+  transition: background var(--transition-fast),
+              color      var(--transition-fast);
 }
 <<<<<<< HEAD:static/assets/css/nav.css
 
@@ -31,14 +59,15 @@
 =======
 >>>>>>> 81529cc (Refactor navigation structure for improved readability; enhance sidebar dropdown styles):assets/css/nav.css
 .book-nav li a:hover {
-  background-color: var(--color-accent);
+  background: var(--color-accent);
   color: var(--color-bg);
 }
 .book-nav li a.active {
   border-left: 3px solid var(--color-brand);
-  background-color: var(--oc-gray-1);
+  background: var(--oc-gray-1);
   padding-left: 0.5rem;
 }
+<<<<<<< HEAD:static/assets/css/nav.css
 
 /* Sidebar container */
 .book-menu {
@@ -96,3 +125,5 @@
   100% { max-height: 500px; opacity: 1; }
 }
 >>>>>>> 3dc7834 (Refactor sidebar dropdown styles for improved visibility and animation):assets/css/nav.css
+=======
+>>>>>>> 819705d (Refactor dropdown and navigation styles for improved layout; add search box styles and integrate new CSS files):assets/css/nav.css

@@ -73,7 +73,13 @@
 {{- $sidebar   := resources.Get "css/sidebar.css" }}
 {{- $nav       := resources.Get "css/nav.css" }}
 {{- $dropdown  := resources.Get "css/dropdown.css" }}
+{{- $fonts  := resources.Get "css/fonts.css" }}
+{{- $search  := resources.Get "css/search.css" }}
+{{- $breadcrumbs        := resources.Get "css/components/breadcrumbs.css" }}
 {{- $kb        := resources.Get "css/components/kb.css" }}
+{{- $callout        := resources.Get "css/components/callout.css" }}
+{{- $code        := resources.Get "css/components/code.css" }}
+
 
 {{- $css := slice $openColor $tokens $styles $sidebar $nav $dropdown $kb | resources.Concat "css/site.css" | resources.Minify | resources.Fingerprint -}}
 <link rel="preload" as="style" href="{{ $css.RelPermalink }}">

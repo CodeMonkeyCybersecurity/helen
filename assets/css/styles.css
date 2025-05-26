@@ -168,3 +168,12 @@ footer {
 #search-results li a:hover {
   background: var(--oc-gray-1);
 }
+
+/*───────────────────────────────────────────
+  1. VARIABLES
+───────────────────────────────────────────*/
+:root {
+  --sidebar-width: 250px;
+  --transition-fast: 0.2s ease;
+  --transition-slow: 0.3s ease;
+}
