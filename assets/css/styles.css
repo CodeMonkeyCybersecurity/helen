@@ -141,7 +141,7 @@ footer {
   }
 
   header p {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .btn {
@@ -157,4 +157,20 @@ footer {
   --sidebar-width: 250px;
   --transition-fast: 0.2s ease;
   --transition-slow: 0.3s ease;
+}
+
+/*───────────────────────────────────────────
+  GLOBAL FONT & BODY TEXT SPACING
+───────────────────────────────────────────*/
+html, body, .book-nav li a, #search-results li a, p, h1, h2, h3, h4 {
+  font-family: 'Noto Sans', Arial, sans-serif !important;
+}
+
+body {
+  font-size: 1.125rem;    /* ~18px */
+  line-height: 1.6;       /* more vertical breathing room */
+}
+
+p {
+  margin-bottom: 1rem;
 }

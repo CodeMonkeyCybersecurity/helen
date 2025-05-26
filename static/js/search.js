@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
           resultList.innerHTML = "";
           return;
         }
-        const hits = fuse.search(q, { limit: 10 });
+        const hits = fuse.search(q, { limit: 5 });
         if (hits.length === 0) {
           resultList.innerHTML = "<li>No results found</li>";
           return;
