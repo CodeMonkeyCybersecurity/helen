@@ -1,9 +1,5 @@
 ---
 title: "Delphi Notify"
-menu:
-  main:
-    identifier: "product"
-    name:       "Product"
-    weight:     10
+description: "The core of our security detection suite."
 ---
 Welcome to Delphi Notify, our Wazuh-powered XDR/SIEM platform.
