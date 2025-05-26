@@ -1,21 +1,23 @@
 /* assets/css/search.css */
 
 /*───────────────────────────────────────────
-  5. SEARCH BOX
+  SEARCH BOX & RESULTS PANEL
 ───────────────────────────────────────────*/
+
+/* Wrapper & stacking context */
 .book-search {
+  position: relative;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
   margin: 1rem 0;
 }
 
+/* Input styling */
 .book-search input {
   width: 100%;
-  max-width: 600px;         /* don’t stretch past 600px */
-  padding: 0.5rem 1rem;    /* larger click/tap area */
-  font-size: 1.25rem;       /* bigger text */
+  max-width: 600px;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
   border: 1px solid var(--oc-gray-4);
   border-radius: 5px;
   background: var(--color-bg);
@@ -23,65 +25,40 @@
   text-align: center;
   transition: box-shadow var(--transition-fast);
 }
-
-.book-search:focus-within + .book-nav {
-  margin-top: calc(5 * 2.5rem);
-}
-
 .book-search input:focus {
   outline: none;
   box-shadow: 0 0 0 3px var(--primary);
 }
 
-.book-search input::placeholder {
-  color: var(--oc-gray-6);
-  opacity: 1;
+/* Push menu down while `.active` */
+.book-search.active ~ .book-nav {
+  margin-top: calc((5 * 2.5rem) + 2.5rem);
+  transition: margin-top 0.3s ease;
 }
 
+/* Results dropdown (absolute, centered) */
 #search-results {
-  margin-top: 1rem;
-  list-style: none;
-  padding: 0;
-  text-align: left;
-  width: 100%;
-  max-width: 100%;
-  margin-top: 0.5rem;
-  max-height: calc(5 * 2.5rem); /* room for 5 items @ 2.5rem each */
-  overflow-y: auto;
-}
-
-/* Style each result like your dropdown items */
-#search-results li a {
-  display: block;
-  padding: 0.5rem 1rem;
-  background: var(--oc-gray-0);
-  border-bottom: 1px solid var(--oc-gray-3);
-  color: var(--color-brand);
-  text-decoration: none;
-  transition: background var(--transition-fast);
-}
-
-#search-results li a:hover {
-  background: var(--oc-gray-1);
-}
-
-
-/*───────────────────────────────────────────
-  CENTERED SEARCH RESULTS
-───────────────────────────────────────────*/
-#search-results {
-  width: 100%;
-  text-align: center;
+  position: absolute;
+  top: 100%;            /* just below the input */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
   max-height: calc(5 * 2.5rem);
-  overflow-y: auto;
   margin-top: 0.5rem;
-}
-#search-results li {
+  padding: 0;
   list-style: none;
+  background: var(--color-bg);
+  overflow-y: auto;
+  text-align: center;
+  z-index: 100;
+}
+
+/* Individual result links */
+#search-results li {
+  margin: 0;
 }
 #search-results li a {
   display: block;
-  text-align: center;
   padding: 0.5rem 1rem;
   background: var(--oc-gray-0);
   border-bottom: 1px solid var(--oc-gray-3);
