@@ -1,5 +1,15 @@
 /* assets/css/styles.css — layout, structure, theme */
 
+
+/*───────────────────────────────────────────
+  VARIABLES
+───────────────────────────────────────────*/
+:root {
+  --sidebar-width: 250px;
+  --transition-fast: 0.2s ease;
+  --transition-slow: 0.3s ease;
+}
+
 /* Global reset & font */
 * {
   box-sizing: border-box;
@@ -9,19 +19,76 @@
 
 body {
   font-family: 'Noto Sans', Arial, sans-serif;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-  background: var(--color-bg);
-  color: var(--color-text);;
+  font-size: 1.125rem;       /* ~18px */
+  line-height: 1.6;
+  background: var(--gray-1);
+  color: var(--text);
 }
 
-/* Layout containers */
+
+/*───────────────────────────────────────────
+  LAYOUT CONTAINERS
+───────────────────────────────────────────*/
 .container {
   max-width: 960px;
   margin: 2rem auto;
   padding: 0 2rem;
 }
+
+/*───────────────────────────────────────────
+  HEADERS
+───────────────────────────────────────────*/
+header {
+  background: var(--brand);
+  color: var(--gray-0);
+  padding: 3rem 1rem 2rem;
+  text-align: center;
+}
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+}
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+
+/*───────────────────────────────────────────
+  GLOBAL FONT & BODY TEXT SPACING
+───────────────────────────────────────────*/
+html, body, .book-nav li a, #search-results li a, p, h1, h2, h3, h4 {
+  font-family: 'Noto Sans', Arial, sans-serif !important;
+}
+
+
+
+p {
+  margin-bottom: 1rem;
+}
+
+
+
+
+body {
+  font-family: 'Noto Sans', Arial, sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  background: var(--oc-gray-1);
+  color: var(--color-text);;
+}
+
+/* 4) Ensure container sections (if you wrap each in .container) stay centered */
+.container > .section {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+}
+
 
 img {
   max-width: 100%;
@@ -52,24 +119,57 @@ header p {
   margin: 0.5rem 0 0;
 }
 
-/* Sections */
+/*───────────────────────────────────────────
+  CARDS (.section)
+───────────────────────────────────────────*/
 .section {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background: var(--color-bg);
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 960px;
+  margin: 2rem;
+  padding: 2rem 1.5rem;
+  background: var(--oc-gray-0); 
+  border-radius: 1rem;
+  box-shadow: 
+    /* subtle ambient shadow */
+    0 1px 3px rgba(0,0,0,0.08),
+    /* slightly stronger underlay */
+    0 4px 6px rgba(0,0,0,0.04);
+  transition: box-shadow var(--transition-fast);
   text-align: center;
+}
+
+.section:hover {
+  box-shadow: 
+    0 4px 8px rgba(0,0,0,0.12),
+    0 8px 16px rgba(0,0,0,0.08);
 }
 
 .section h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: var(--color-brand);;
+  padding-bottom: 0.5rem;
+  color: var(--color-brand);
+  font-size: 1.8rem;
   font-weight: 600;
+  position: relative;
+  display: inline-block;
+  padding-right: 1rem;
 }
 
-/* Buttons */
+.section h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0rem;
+  left: 0;
+  width: 3rem;
+  height: 0.25rem;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+
+/*───────────────────────────────────────────
+  BUTTONS & LINKS
+───────────────────────────────────────────*/
 .btn {
   display: inline-block;
   padding: 0.8rem 1.5rem;
@@ -78,22 +178,34 @@ header p {
   text-decoration: none;
   border-radius: 5px;
   font-weight: 500;
-  transition: background 0.3s;
+  transition: background var(--transition-fast);
   text-align: center;
 }
 
 .btn:hover {
   background: var(--color-accent);
-  color: var(--color-bg);
 }
 
-/* Footer */
+/*───────────────────────────────────────────
+  FOOTER
+───────────────────────────────────────────*/
 footer {
   text-align: center;
   padding: 1rem 0;
   background: var(--color-brand);;
   color: var(--color-bg);
 }
+
+
+/*───────────────────────────────────────────
+  MEDIA QUERIES
+───────────────────────────────────────────*/
+@media (max-width: 600px) {
+  header h1 { font-size: 1.8rem; }
+  header p  { font-size: 1rem; }
+  .btn      { width: 100%; text-align: center; }
+}
+
 
 /* Logo */
 .logo-link {
@@ -134,43 +246,3 @@ footer {
   white-space: pre;
 }
 
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.8rem;
-  }
-
-  header p {
-    font-size: 1.5rem;
-  }
-
-  .btn {
-    width: 100%;
-  }
-}
-
-
-/*───────────────────────────────────────────
-  1. VARIABLES
-───────────────────────────────────────────*/
-:root {
-  --sidebar-width: 250px;
-  --transition-fast: 0.2s ease;
-  --transition-slow: 0.3s ease;
-}
-
-/*───────────────────────────────────────────
-  GLOBAL FONT & BODY TEXT SPACING
-───────────────────────────────────────────*/
-html, body, .book-nav li a, #search-results li a, p, h1, h2, h3, h4 {
-  font-family: 'Noto Sans', Arial, sans-serif !important;
-}
-
-body {
-  font-size: 1.125rem;    /* ~18px */
-  line-height: 1.6;       /* more vertical breathing room */
-}
-
-p {
-  margin-bottom: 1rem;
-}
