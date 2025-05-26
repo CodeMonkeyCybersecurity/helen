@@ -149,25 +149,6 @@ footer {
   }
 }
 
-#search-results {
-  margin-top: 1rem;
-  list-style: none;
-  padding: 0;
-  text-align: left;
-}
-
-#search-results li a {
-  display: block;
-  padding: 0.5rem;
-  background: var(--oc-gray-0);
-  border-bottom: 1px solid var(--oc-gray-3);
-  color: var(--color-brand);;
-  text-decoration: none;
-}
-
-#search-results li a:hover {
-  background: var(--oc-gray-1);
-}
 
 /*───────────────────────────────────────────
   1. VARIABLES

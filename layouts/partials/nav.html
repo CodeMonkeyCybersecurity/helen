@@ -3,6 +3,15 @@
   <div class="book-menu-content">
     <a class="book-brand" href="/">Code Monkey Cybersecurity</a>
 
+    <div class="book-search">
+      <input
+        type="text"
+        id="site-search"
+        placeholder="Search..."
+        aria-label="Search site" />
+      <ul id="search-results"></ul>
+    </div>
+
     <ul class="book-nav">
       {{- /* top-level sections, sorted by Weight */ -}}
       {{- range sort .Site.Sections "Weight" -}}
@@ -20,14 +29,7 @@
       {{- end }}
     </ul>
 
-    <div class="book-search">
-      <input
-        type="text"
-        id="site-search"
-        placeholder="Search..."
-        aria-label="Search site" />
-      <ul id="search-results"></ul>
-    </div>
+
   </div>
 <<<<<<< HEAD
 </aside>

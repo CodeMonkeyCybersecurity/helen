@@ -6,12 +6,14 @@
 .book-search {
   display: flex;
   justify-content: center;
-  margin: 1rem 0;
+  margin: 2rem 0;           /* a bit more breathing room */
 }
+
 .book-search input {
-  width: 90%;
-  padding: 0.75rem 1rem;
-  font-size: 1.1rem;
+  width: 100%;
+  max-width: 600px;         /* don’t stretch past 600px */
+  padding: 1rem 1.5rem;     /* larger click/tap area */
+  font-size: 1.25rem;       /* bigger text */
   border: 1px solid var(--oc-gray-4);
   border-radius: 6px;
   background: var(--color-bg);
@@ -19,10 +21,33 @@
   text-align: center;
   transition: box-shadow var(--transition-fast);
 }
+
 .book-search input:focus {
   outline: none;
   box-shadow: 0 0 0 3px var(--primary);
 }
+
 .book-search input::placeholder {
   color: var(--oc-gray-6);
+  opacity: 1;
+}
+
+#search-results {
+  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+#search-results li a {
+  display: block;
+  padding: 0.5rem;
+  background: var(--oc-gray-0);
+  border-bottom: 1px solid var(--oc-gray-3);
+  color: var(--color-brand);;
+  text-decoration: none;
+}
+
+#search-results li a:hover {
+  background: var(--oc-gray-1);
 }
