@@ -1,5 +1,6 @@
 /* assets/css/nav.css */
 
+/* Base link styles (you already had these) */
 .book-nav li a {
   display: block;
   padding: 0.5rem 1rem;
@@ -10,26 +11,60 @@
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-
 .book-nav li a:hover {
   background-color: var(--color-accent);
   color: var(--color-bg);
 }
-
 .book-nav li a.active {
   border-left: 3px solid var(--color-brand);
   background-color: var(--oc-gray-1);
   padding-left: 0.5rem;
 }
 
-/* Sidebar-specific tweaks */
+/* Sidebar container */
 .book-menu {
   background: var(--color-surface);
   color: var(--color-text);
   border-right: 1px solid var(--oc-gray-3);
 }
 
-/* Input styling should inherit color tokens */
+/* Hide nested by default */
+.book-nav--nested {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--color-surface);
+  border: 1px solid var(--oc-gray-3);
+  padding: 0.25rem 0;
+  min-width: 10rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+/* Anchor dropdown to parent */
+.book-nav > li.has-children {
+  position: relative;
+}
+
+/* Reveal on hover */
+.book-nav > li.has-children:hover > .book-nav--nested {
+  display: block;
+}
+
+/* Style nested items */
+.book-nav--nested li {
+  white-space: nowrap;
+}
+.book-nav--nested li a {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+.book-nav--nested li a:hover {
+  background: var(--oc-gray-1);
+}
+
+/* Search input */
 .book-search input {
   background-color: var(--color-bg);
   color: var(--color-text);
