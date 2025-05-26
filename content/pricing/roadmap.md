@@ -1,6 +1,12 @@
 ---
 title: "Roadmap"
 description: "The path from Notify to full Delphi."
+menu:
+  main:
+    parent:     "pricing"
+    identifier: "roadmap"
+    name:       "Roadmap"
+    weight:     10
 ---
 
 ### ✅ Now: Delphi Notify (MVP)
