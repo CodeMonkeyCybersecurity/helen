@@ -20,13 +20,18 @@
 </head>
 
 <body>
-  {{ partial "header.html" . }} <!-- ADD THIS LINE -->
-  <header class="site-header">
-    <input type="checkbox" id="menu-control" class="nav-toggle">
-    <label for="menu-control" class="menu-toggle" aria-label="Toggle main menu">☰</label>
-    {{ partial "nav.html" . }}
-  </header>
+  <div class="layout-wrapper"> <!-- ✅ Required for sidebar layout logic -->
 
+    <!-- Sidebar Toggle Checkbox (invisible but functional) -->
+    <input type="checkbox" id="menu-control" class="hidden" />
+
+    <!-- Toggle Button -->
+    <label for="menu-control" class="menu-toggle" aria-label="Toggle main menu">☰</label>
+
+    <!-- Sidebar Menu -->
+    {{ partial "nav.html" . }}
+
+<<<<<<< HEAD
   <main id="content" class="main-content" tabindex="-1">
     {{ partial "breadcrumbs.html" . }}
     {{ block "main" . }}{{ end }}
@@ -40,4 +45,22 @@
 
     {{ partial "footer.html" . }}
   </body>
+=======
+    <!-- Content wrapper that slides -->
+    <div class="main-frame">
+
+      <!-- Site header with title and logo -->
+      {{ partial "header.html" . }}
+
+      <!-- Page content -->
+      <main id="content" class="main-content" tabindex="-1">
+        {{ partial "breadcrumbs.html" . }}
+        {{ block "main" . }}{{ end }}
+      </main>
+
+      {{ partial "footer.html" . }}
+    </div>
+  </div>
+</body>
+>>>>>>> f3803e5 (Refactor sidebar layout and functionality for improved user experience)
 </html>
