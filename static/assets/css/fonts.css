@@ -2,7 +2,11 @@
 /* fonts.css — Noto Sans Regular + Bold */
 =======
 /* assets/css/fonts.css — Noto Sans with weights + performance tweaks */
+<<<<<<< HEAD:static/assets/css/fonts.css
 >>>>>>> 902e2c2 (Refactor website structure and styles):assets/css/fonts.css
+=======
+
+>>>>>>> 4aec49c (Refactor layout and CSS files to improve structure and readability; update comments for clarity):assets/css/fonts.css
 @font-face {
   font-family: 'Noto Sans';
   src: url('/assets/fonts/NotoSans-Light.ttf') format('truetype');
