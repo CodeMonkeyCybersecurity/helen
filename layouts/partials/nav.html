@@ -1,26 +1,29 @@
 {{/* layouts/partials/nav.html */}}
-
 <aside class="book-menu" role="navigation" aria-label="Main menu">
   <div class="book-menu-content">
     <a class="book-brand" href="/">Code Monkey Cybersecurity</a>
 
-      <ul class="book-nav">
-      {{- range .Site.Menus.main }}
+    <ul class="book-nav">
+      {{- $top := sort (where .Site.Menus.main "HasParent" false) "Weight" -}}
+      {{- range $top }}
         <li>
           <a href="{{ .URL }}">{{ .Name }}</a>
           {{- if .HasChildren }}
-            <ul>
-              {{- range .Children }}
+            <ul class="book-nav book-nav--nested">
+              {{- range sort .Children "Weight" }}
                 <li><a href="{{ .URL }}">{{ .Name }}</a></li>
               {{- end }}
             </ul>
           {{- end }}
         </li>
       {{- end }}
-      </ul>
+    </ul>
 
     <div class="book-search">
-      <input type="text" id="site-search" placeholder="Search..." aria-label="Search site" />
+      <input type="text"
+             id="site-search"
+             placeholder="Search..."
+             aria-label="Search site" />
       <ul id="search-results"></ul>
     </div>
   </div>

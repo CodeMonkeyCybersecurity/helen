@@ -1,6 +1,6 @@
 ---
-title:       "Contact"
-description: "Reach out to us directly."
+title:       "Security"
+description: "Learn about our security measures."
 ---
 We’d love to hear from you.
 

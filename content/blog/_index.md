@@ -1,6 +1,6 @@
 ---
-title:       "Contact"
-description: "Reach out to us directly."
+title:       "Blog"
+description: "Check out what we've been up to."
 ---
 We’d love to hear from you.
 

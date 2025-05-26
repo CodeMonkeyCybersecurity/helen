@@ -1,9 +1,5 @@
 ---
-title: "Pricing"
-menu:
-  main:
-    identifier: "pricing"
-    name:       "Pricing"
-    weight:     30
+title:       "Pricing"
+description: "Learn about our security measures."
 ---
 Our pricing guide…

@@ -24,13 +24,48 @@ buildExpired = false
   umami_site_id = "970ff30a-ab5d-4c66-8f77-55cafc76083c"
   assetDir = "assets"
 
-
 [menu]
   [[menu.main]]
     identifier = "home"
     name       = "Home"
     url        = "/"
     weight     = 1
+
+  [[menu.main]]
+    identifier = "delphi"
+    name       = "Delphi"
+    url        = "/delphi/"
+    weight     = 10
+
+  [[menu.main]]
+    identifier = "docs"
+    name       = "Docs"
+    url        = "/docs/"
+    weight     = 20
+
+  [[menu.main]]
+    identifier = "pricing"
+    name       = "Pricing"
+    url        = "/pricing/"
+    weight     = 30
+
+  [[menu.main]]
+    identifier = "security"
+    name       = "Security"
+    url        = "/security/"
+    weight     = 40
+
+  [[menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/blog/"
+    weight     = 50
+
+  [[menu.main]]
+    identifier = "contact"
+    name       = "Contact"
+    url        = "/contact/"
+    weight     = 60
 
 [sitemap]
   changefreq = "monthly"
@@ -41,7 +76,8 @@ buildExpired = false
 [social]
   github = "https://github.com/CodeMonkeyCybersecurity"
   facebook = "https://facebook.com/codemonkeycyber"
-  twitter = "https://x.com/codemonkeycyber"
+  instagram = "..."
+  linkedin = "..."
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
