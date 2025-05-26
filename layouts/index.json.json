@@ -1,0 +1,14 @@
+{{/* layouts/index.json.json */}}
+[
+  {{- $first := true -}}
+  {{- range .Site.RegularPages -}}
+    {{- if not $first }},{{ end }}
+    {{- $first = false -}}
+    {
+      "title":   {{ printf "%q" .Title }},
+      "url":     {{ printf "%q" .Permalink }},
+      "summary": {{ printf "%q" (plainify .Summary) }},
+      "body":    {{ printf "%q" (plainify .Content) }}
+    }
+  {{- end -}}
+]

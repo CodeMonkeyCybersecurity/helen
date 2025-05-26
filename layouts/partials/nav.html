@@ -3,21 +3,20 @@
   <div class="book-menu-content">
     <a class="book-brand" href="/">Code Monkey Cybersecurity</a>
 
-    <ul class="book-nav">
-      {{- $top := sort (where .Site.Menus.main "HasParent" false) "Weight" -}}
-      {{- range $top }}
-        <li>
-          <a href="{{ .URL }}">{{ .Name }}</a>
-          {{- if .HasChildren }}
-            <ul class="book-nav book-nav--nested">
-              {{- range sort .Children "Weight" }}
-                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-              {{- end }}
-            </ul>
+  <ul class="book-nav">
+    {{- range sort .Site.Sections "Weight" -}}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        {{- with .Sections }}
+        <ul class="book-nav--nested">
+          {{- range sort . "Weight" -}}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
           {{- end }}
-        </li>
-      {{- end }}
-    </ul>
+        </ul>
+        {{- end }}
+      </li>
+    {{- end }}
+  </ul>
 
     <div class="book-search">
       <input type="text"
