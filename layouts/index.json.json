@@ -1,14 +1,16 @@
 {{/* layouts/index.json.json */}}
 [
   {{- $first := true -}}
-  {{- range .Site.RegularPages -}}
-    {{- if not $first }},{{ end }}
+  {{- /* include page, section, and home kinds; drop taxonomy/terms */ -}}
+  {{- $all := where .Site.Pages "Kind" "not in" (slice "taxonomy" "taxonomyTerm") -}}
+  {{- range $all -}}
+    {{- if not $first }},{{ end -}}
     {{- $first = false -}}
     {
       "title":   {{ printf "%q" .Title }},
       "url":     {{ printf "%q" .Permalink }},
-      "summary": {{ printf "%q" (plainify .Summary) }},
-      "body":    {{ printf "%q" (plainify .Content) }}
+      "summary": {{ printf "%q" (plainify .Summary | chomp) }},
+      "body":    {{ printf "%q" (plainify .Content | chomp) }}
     }
   {{- end -}}
 ]
