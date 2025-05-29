@@ -38,9 +38,9 @@ buildExpired = false
     weight     = 10
 
   [[menu.main]]
-    identifier = "docs"
-    name       = "Docs"
-    url        = "/docs/"
+    identifier = "athena"
+    name = "Athena"
+    url = "https://wiki.cybermonkey.net.au"
     weight     = 20
 
   [[menu.main]]
@@ -66,6 +66,12 @@ buildExpired = false
     name       = "Contact"
     url        = "/contact/"
     weight     = 60
+
+  [[menu.main]]
+    identifier = "login"
+    name = "Login"
+    url = "https://delphi.cybermonkey.net.au"
+    weight     = 70
 
 [sitemap]
   changefreq = "monthly"

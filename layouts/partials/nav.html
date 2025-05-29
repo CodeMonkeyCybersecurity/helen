@@ -13,22 +13,16 @@
     </div>
 
     <ul class="book-nav">
-      {{- /* top-level sections, sorted by Weight */ -}}
-      {{- range sort .Site.Sections "Weight" -}}
-        {{- $hasKids := gt (len .Sections) 0 -}}
-        <li class="{{ if $hasKids }}has-children{{ end }}">
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-          {{- if $hasKids }}
-            <ul class="book-nav--nested">
-              {{- range sort .Sections "Weight" -}}
-                <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-              {{- end }}
-            </ul>
-          {{- end }}
+      {{- range .Site.Menus.main -}}
+        <li>
+          <a href="{{ .URL }}"
+            {{ if strings.HasPrefix .URL "http" }}target="_blank" rel="noopener"{{ end }}>
+            {{ .Name }}
+            {{- if strings.HasPrefix .URL "http" }}<span aria-label="External link" title="External link">🔗</span>{{ end }}
+          </a>
         </li>
       {{- end }}
     </ul>
-
   </div>
 <<<<<<< HEAD
 </aside>

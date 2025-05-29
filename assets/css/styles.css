@@ -1,6 +1,5 @@
 /* assets/css/styles.css — layout, structure, theme */
 
-
 /*───────────────────────────────────────────
   VARIABLES
 ───────────────────────────────────────────*/
@@ -70,9 +69,6 @@ p {
   margin-bottom: 1rem;
 }
 
-
-
-
 body {
   font-family: 'Noto Sans', Arial, sans-serif;
   font-weight: 400;
@@ -88,7 +84,6 @@ body {
   margin-right: auto;
   max-width: 960px;
 }
-
 
 img {
   max-width: 100%;
@@ -123,8 +118,9 @@ header p {
   CARDS (.section)
 ───────────────────────────────────────────*/
 .section {
+  width: 100%;
   max-width: 960px;
-  margin: 2rem;
+  margin: 2rem auto;
   padding: 2rem 1.5rem;
   background: var(--oc-gray-0); 
   border-radius: 1rem;

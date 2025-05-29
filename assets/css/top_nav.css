@@ -1,0 +1,24 @@
+/* assets/css/sticky_bar.css */
+
+.top-nav {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid #dee2e6;
+  z-index: 1000;
+  padding: 0.5rem 1rem;
+}
+
+.top-nav ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.top-nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
