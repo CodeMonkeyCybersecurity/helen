@@ -56,12 +56,6 @@ buildExpired = false
     weight     = 40
 
   [[menu.main]]
-    identifier = "blog"
-    name       = "Blog"
-    url        = "/blog/"
-    weight     = 50
-
-  [[menu.main]]
     identifier = "contact"
     name       = "Contact"
     url        = "/contact/"

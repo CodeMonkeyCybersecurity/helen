@@ -18,7 +18,7 @@
           <a href="{{ .URL }}"
             {{ if strings.HasPrefix .URL "http" }}target="_blank" rel="noopener"{{ end }}>
             {{ .Name }}
-            {{- if strings.HasPrefix .URL "http" }}<span aria-label="External link" title="External link">🔗</span>{{ end }}
+            {{- if strings.HasPrefix .URL "http" }}<span aria-label="External link" title="External link"></span>{{ end }}
           </a>
         </li>
       {{- end }}
