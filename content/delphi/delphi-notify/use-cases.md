@@ -2,7 +2,7 @@
 title: "Example use cases"
 ---
 
-## Example use cases
+### Example use cases
 
 ### Small IT Team
 
