@@ -1,5 +1,7 @@
 ---
-title:       "Pricing"
-description: "Learn about our security measures."
+title: "Pricing"
 ---
+
+## Pricing
+
 Our pricing guide…
