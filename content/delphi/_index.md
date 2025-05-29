@@ -2,15 +2,13 @@
 title: "Delphi"
 ---
 
-## Delphi
-
-### What Is Delphi?
+## What Is Delphi?
 
 **Delphi** is Code Monkey Cybersecurity’s managed **XDR** (Extended Detection and Response) and **SIEM** (Security Information and Event Management) platform — built for real-world security, not checkbox compliance.
 
 At its core, Delphi helps you detect threats, understand what they mean, and act fast. It's built on **Wazuh**, a trusted open-source platform used by security teams worldwide — but we’ve hardened it, simplified it, and layered on human-first support.
 
-### Key Features
+## Key Features
 
 **Real-Time Threat Detection**  
   Continuous monitoring of endpoints, servers, cloud resources, and more — with detection rules tailored for small business and nonprofit environments.
@@ -27,7 +25,7 @@ At its core, Delphi helps you detect threats, understand what they mean, and act
 **Multi-Tenant Support (Beta)**  
   Isolate customer environments while maintaining central visibility — ideal for MSPs or multi-org setups.
 
-### Built on Proven Tools
+## Built on Proven Tools
 
 Delphi integrates and hardens:
 **Wazuh** for SIEM/XDR core  
@@ -36,21 +34,21 @@ Delphi integrates and hardens:
 **Vault** for secret and token management  
 **EOS** and **Hecate** for automated deployment, backup, and reverse proxy setup
 
-### Who's It For?
+## Who's It For?
 
 Small businesses who can’t afford a SOC but still need security.  
 Nonprofits and community orgs who value privacy and transparency.  
 Managed service providers (MSPs) who want a white-labeled, tenant-aware solution.  
 Cybersecurity teams who want full control without full overhead.
 
-### Coming Soon
+## Coming Soon
 
 Self-service agent enrollment  
 Automatic remediation for common threats  
 Secure file collection (e.g. forensic triage)  
 Chatbot-integrated alert explanations (LLM-powered)
 
-### Try Delphi
+## Try Delphi
 
 Want to test it yourself?  
 <<<<<<< HEAD

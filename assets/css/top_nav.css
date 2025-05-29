@@ -1,4 +1,4 @@
-/* assets/css/sticky_bar.css */
+/* assets/css/top_nav.css */
 
 .top-nav {
   position: sticky;
@@ -19,6 +19,13 @@
 }
 .top-nav a {
   text-decoration: none;
-  color: var(--text);
+  color: var(--text, #222); /* fallback color for safety */
   font-weight: 500;
+}
+@media (max-width: 600px) {
+  .top-nav ul {
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    flex-wrap: wrap;
+  }
 }
