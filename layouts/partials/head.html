@@ -40,11 +40,13 @@
 {{- $kb          := resources.Get "css/components/kb.css" }}
 {{- $callout     := resources.Get "css/components/callout.css" }}
 {{- $code        := resources.Get "css/components/code.css" }}
+{{- $tab := resources.Get "css/components/tab.css" }}
 
 {{- $css := slice
      $openColor $tokens $fonts $styles
      $sidebar   $nav    $dropdown
      $search    $kb     $callout $code
+     $tab
    | resources.Concat "css/site.css"
    | resources.Minify
    | resources.Fingerprint -}}
