@@ -27,7 +27,8 @@ buildExpired = false
   umami_script = "https://u.cybermonkey.dev/script.js"
   umami_site_id = "970ff30a-ab5d-4c66-8f77-55cafc76083c"
   assetDir = "assets"
-  BookToC = true
+  enableGitInfo = true
+  BookLogo = 'favicon.png'
 
 [languages]
 [languages.en]
