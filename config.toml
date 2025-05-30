@@ -96,7 +96,9 @@ isPlainText = true
 # Optional: default settings for content
 [markup]
   [markup.goldmark.renderer]
-    unsafe = true  # Allow inline HTML in markdown
+    unsafe = true
+  [markup.goldmark.extensions]
+    attribute = true
 
 # Optional: default frontmatter for new pages
 [frontmatter]

@@ -1,5 +1,6 @@
 /* assets/css/components/tab.css */
 
+/* --- Your Original Tab Button Styles --- */
 .tab-buttons {
   display: flex;
   gap: 10px;
@@ -20,4 +21,38 @@
 }
 .tab-content.active {
   display: block;
+}
+
+/* --- Hugo Book Theme Tab Styles --- */
+.book-tabs {
+  display: flex;
+  flex-direction: column;
+}
+.book-tabs-label {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  margin-right: 0.1em;
+  border-bottom: none;
+  /* Add slight border radius for consistency if desired: */
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.book-tabs-toggle {
+  display: none;
+}
+.book-tabs-panel {
+  display: none;
+  padding: 1em;
+  border: 1px solid #dee2e6;
+  border-top: none;
+}
+.book-tabs-toggle:checked + .book-tabs-label + .book-tabs-panel {
+  display: block;
+}
+.book-tabs-label.active {
+  background: #e9ecef;
+  border-bottom: 1px solid #e9ecef;
 }
