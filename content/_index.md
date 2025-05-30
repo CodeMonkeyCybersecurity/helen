@@ -3,9 +3,9 @@ title: "Code Monkey Cybersecurity"
 description: "Cybersecurity. With Humans."
 ---
 
-## Code Monkey Cybersecurity
+# Code Monkey Cybersecurity
 
-**Human-first security for those who need it most.**
+![Cover_CodeMonkeyCybersecurity_flat](/images/Cover_CodeMonkeyCybersecurity_flat.jpg)
 
 ---
 
