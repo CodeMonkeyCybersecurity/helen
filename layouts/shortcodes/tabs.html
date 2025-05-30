@@ -1,6 +1,3 @@
-{{/* layouts/shortcodes/tabs.html */}}
-
-{{- $tabId := .Get 0 | default (now.UnixNano) -}}
-<div class="book-tabs" data-tab-group="{{ $tabId }}">
-  {{ .Inner }}
+<div class="book-tabs">
+{{ .Inner }}
 </div>
