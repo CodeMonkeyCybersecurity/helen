@@ -2,11 +2,13 @@
 title: "Delphi"
 ---
 
-## What Is Delphi?
+# What Is Delphi?
 
 **Delphi** is Code Monkey Cybersecurity’s managed **XDR** (Extended Detection and Response) and **SIEM** (Security Information and Event Management) platform — built for real-world security, not checkbox compliance.
 
 At its core, Delphi helps you detect threats, understand what they mean, and act fast. It's built on **Wazuh**, a trusted open-source platform used by security teams worldwide — but we’ve hardened it, simplified it, and layered on human-first support.
+
+![antivirus_siem_xdr](/images/antivirus_siem_xdr.png)
 
 ## Key Features
 
@@ -51,17 +53,10 @@ Chatbot-integrated alert explanations (LLM-powered)
 ## Try Delphi
 
 Want to test it yourself?  
-<<<<<<< HEAD
+
 - Visit the live beta: [delphi.cybermonkey.net.au](https://delphi.cybermonkey.net.au)  
-<<<<<<< HEAD
+
 - Or head to the [Athena Knowledge Base](https://wiki.cybermonkey.net.au/Delphi) for setup guides.
-=======
-- Or head to the [Athena Knowledge Base](https://wiki.cybermonkey.net.au/Delphi) for setup guides.
->>>>>>> e6ce84f (Refactor code structure for improved readability and maintainability)
-=======
-Visit the live beta: [delphi.cybermonkey.net.au](https://delphi.cybermonkey.net.au)  
+
+Visit the live beta: [delphi.cybermonkey.net.au](https://delphi.cybermonkey.net.au)
 Or head to the [Athena Knowledge Base](https://wiki.cybermonkey.net.au/Delphi) for setup guides.
-<<<<<<< HEAD
->>>>>>> 4f98e42 (Update site metadata and improve content formatting for clarity)
-=======
->>>>>>> a1ce58d (Refactor navigation and content structure: remove blog section, update contact and pricing pages, and enhance Delphi documentation for clarity and consistency.)

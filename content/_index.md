@@ -107,13 +107,13 @@ Just smile and say, “Ha! I’ve got XDR!”
 
 ---
 
-## 🛠️ Why Code Monkey?
+## Why Code Monkey?
 
 - **Transparent, ethical, open source** — every major component is audit-friendly and community-driven.
 - **No black boxes, no lock-in** — your data, your security, your rules.
 - **Real support by real people** — security with empathy, not bots.
 
-## 🔒 Our Promise
+## Our Promise
 
 We protect people, not just machines. Our mission is to bring **affordable, trustworthy cybersecurity** to those who need it most—no matter your size or resources.
 
