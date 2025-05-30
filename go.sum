@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 github.com/alex-shpak/hugo-book v0.0.0-20250428224046-9405c4c3d7c7 h1:jD6Fris8nDfS/RQcC3J0IfMxeU9YALMU24T+3YSVfXg=
 github.com/alex-shpak/hugo-book v0.0.0-20250428224046-9405c4c3d7c7/go.mod h1:L4NMyzbn15fpLIpmmtDg9ZFFyTZzw87/lk7M2bMQ7ds=
+=======
+github.com/alex-shpak/hugo-book v0.0.0-20250527212653-0c86b5d29dcd h1:H0AFKepaiMlFj9l/utWLK9pii3LGAdHOZHclHJs49wM=
+github.com/alex-shpak/hugo-book v0.0.0-20250527212653-0c86b5d29dcd/go.mod h1:L4NMyzbn15fpLIpmmtDg9ZFFyTZzw87/lk7M2bMQ7ds=
+>>>>>>> 28eeff6 (Add Hugo theme configuration and module files: set theme in config.toml and initialize go.mod and go.sum for dependency management.)

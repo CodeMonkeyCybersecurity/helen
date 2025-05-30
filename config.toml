@@ -1,6 +1,7 @@
 baseURL = 'https://cybermonkey.net.au'
 languageCode = 'en-us'
 title = 'Code Monkey Cybersecurity'
+theme = "github.com/alex-shpak/hugo-book"
 
 # Optional: better URLs
 canonifyURLs = true
