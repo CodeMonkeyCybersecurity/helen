@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!-- layouts/_default/baseof.html -->
 <<<<<<< HEAD
 
@@ -18,24 +19,41 @@
 {{/* layouts/_default/baseof.html */}}
 
 >>>>>>> 4aec49c (Refactor layout and CSS files to improve structure and readability; update comments for clarity)
+=======
+>>>>>>> 32e0752 (Add PGP public key and theme configuration)
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ default .Site.Language.Lang .Site.LanguageCode  }}" dir="{{ default "ltr" .Site.Language.LanguageDirection }}">
 <head>
-  {{ partial "head.html" . }}
+  {{ partial "docs/html-head" . }}
+  {{ partial "docs/inject/head" . }}
 </head>
+<body dir="{{ default "ltr" .Site.Language.LanguageDirection }}">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        {{ template "menu" . }} <!-- Left menu Content -->
+      </div>
+    </aside>
 
-<body>
-  <div class="layout-wrapper"> {{/* ✅ Required for sidebar layout logic */}}
+    <div class="book-page">
+      <header class="book-header">
+        {{ template "header" . }} <!-- Mobile layout header -->
+      </header>
 
-    {{/* Sidebar Toggle Checkbox (invisible but functional) */}}
-    <input type="checkbox" id="menu-control" class="hidden" />
+      {{ partial "docs/inject/content-before" . }}
+      {{ template "main" . }} <!-- Page Content -->
+      {{ partial "docs/inject/content-after" . }}
 
-    {{/* Toggle Button */}}
-    <label for="menu-control" class="menu-toggle" aria-label="Toggle main menu">☰</label>
+      <footer class="book-footer">
+        {{ template "footer" . }} <!-- Footer under page content -->
+        {{ partial "docs/inject/footer" . }}
+      </footer>
 
-    {{/* Sidebar Menu */}}
-    {{ partial "nav.html" . }}
+      {{ template "comments" . }} <!-- Comments block -->
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   <main id="content" class="main-content" tabindex="-1">
@@ -68,8 +86,61 @@
       </main>
 
       {{ partial "footer.html" . }}
+=======
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+>>>>>>> 32e0752 (Add PGP public key and theme configuration)
     </div>
-  </div>
+
+    {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        {{ template "toc" . }} <!-- Table of Contents -->
+      </div>
+    </aside>
+    {{ end }}
+  </main>
+
+  {{ partial "docs/inject/body" . }}
 </body>
+<<<<<<< HEAD
 >>>>>>> f3803e5 (Refactor sidebar layout and functionality for improved user experience)
 </html>
+=======
+</html>
+
+{{ define "menu" }}
+  {{ partial "docs/menu" . }}
+{{ end }}
+
+{{ define "header" }}
+  {{ partial "docs/header" . }}
+
+  {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
+  <aside class="hidden clearfix">
+    {{ template "toc" . }}
+  </aside>
+  {{ end }}
+{{ end }}
+
+{{ define "footer" }}
+  {{ partial "docs/footer" . }}
+{{ end }}
+
+{{ define "comments" }}
+  {{ if and .Content (default true (default .Site.Params.BookComments .Params.BookComments)) }}
+  <div class="book-comments">
+    {{- partial "docs/comments" . -}}
+  </div>
+  {{ end }}
+{{ end }}
+
+{{ define "main" }}
+  <article class="markdown book-article">
+    {{- .Content -}}
+  </article>
+{{ end }}
+
+{{ define "toc" }}
+  {{ partial "docs/toc" . }}
+{{ end }}
+>>>>>>> 32e0752 (Add PGP public key and theme configuration)

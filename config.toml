@@ -1,7 +1,6 @@
 baseURL = 'https://cybermonkey.net.au'
 languageCode = 'en-us'
 title = 'Code Monkey Cybersecurity'
-theme = "github.com/alex-shpak/hugo-book"
 
 # Optional: better URLs
 canonifyURLs = true
@@ -15,6 +14,10 @@ buildDrafts = false
 buildFuture = false
 buildExpired = false
 
+[module]
+[[module.imports]]
+  path = "github.com/alex-shpak/hugo-book"
+
 # Site-wide metadata
 [params]
   author = "Henry Oliver"
@@ -24,49 +27,24 @@ buildExpired = false
   umami_script = "https://u.cybermonkey.dev/script.js"
   umami_site_id = "970ff30a-ab5d-4c66-8f77-55cafc76083c"
   assetDir = "assets"
+  BookToC = true
+
+[languages]
+[languages.en]
+  languageName = 'English'
+  contentDir = 'content'
+  weight = 1
 
 [menu]
-  [[menu.main]]
-    identifier = "home"
-    name       = "Home"
-    url        = "/"
-    weight     = 1
+[[menu.after]]
+name = "Github"
+url = "https://github.com/alex-shpak/hugo-book"
+weight = 10
 
-  [[menu.main]]
-    identifier = "delphi"
-    name       = "Delphi"
-    url        = "/delphi/"
-    weight     = 10
-
-  [[menu.main]]
-    identifier = "athena"
-    name = "Athena"
-    url = "https://wiki.cybermonkey.net.au"
-    weight     = 20
-
-  [[menu.main]]
-    identifier = "pricing"
-    name       = "Pricing"
-    url        = "/pricing/"
-    weight     = 30
-
-  [[menu.main]]
-    identifier = "security"
-    name       = "Security"
-    url        = "/security/"
-    weight     = 40
-
-  [[menu.main]]
-    identifier = "contact"
-    name       = "Contact"
-    url        = "/contact/"
-    weight     = 60
-
-  [[menu.main]]
-    identifier = "login"
-    name = "Login"
-    url = "https://delphi.cybermonkey.net.au"
-    weight     = 70
+[[menu.after]]
+name = "Hugo Themes"
+url = "https://themes.gohugo.io/themes/hugo-book/"
+weight = 20
 
 [sitemap]
   changefreq = "monthly"
@@ -100,6 +78,8 @@ isPlainText = true
     unsafe = true
   [markup.goldmark.extensions]
     attribute = true
+  [markup.tableOfContents]
+    startLevel = 1
 
 # Optional: default frontmatter for new pages
 [frontmatter]
