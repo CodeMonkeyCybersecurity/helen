@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!-- layouts/404.html -->
 
 {{/* layouts/404.html */}}
@@ -50,39 +49,3 @@
   </style>
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}">
-
-  <head>
-    {{ partial "docs/html-head" . }}
-    {{ partial "docs/inject/head" . }}
-
-    <style>
-      .not-found {
-        text-align: center;
-      }
-      .not-found h1 {
-        margin: .25em 0 0 0;
-        opacity: .25;
-        font-size: 40vmin;
-      }
-    </style>
-  </head>
-
-  <body>
-    <main class="flex justify-center not-found">
-      <div>
-        <h1>404</h1>
-        <h2>Page Not Found</h2>
-        <h3>
-          <a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a>
-        </h3>
-      </div>
-    </main>
-
-    {{ partial "docs/inject/body" . }}
-  </body>
-
-  </html>
->>>>>>> 32e0752 (Add PGP public key and theme configuration)
