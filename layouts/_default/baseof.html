@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<!-- layouts/_default/baseof.html -->
-<<<<<<< HEAD
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>{{ partial "head.html" . }}</head>
-
-  <body>
-    <header class="site-header">
-      <input type="checkbox" id="menu-control" class="nav-toggle">
-      <label for="menu-control" class="menu-toggle" aria-label="Toggle main menu">☰</label>
-      {{ partial "nav.html" . }}
-    </header>
-=======
-=======
-{{/* layouts/_default/baseof.html */}}
-
->>>>>>> 4aec49c (Refactor layout and CSS files to improve structure and readability; update comments for clarity)
-=======
->>>>>>> 32e0752 (Add PGP public key and theme configuration)
 <!DOCTYPE html>
 <html lang="{{ default .Site.Language.Lang .Site.LanguageCode  }}" dir="{{ default "ltr" .Site.Language.LanguageDirection }}">
 <head>
@@ -53,42 +30,7 @@
 
       {{ template "comments" . }} <!-- Comments block -->
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <main id="content" class="main-content" tabindex="-1">
-    {{ partial "breadcrumbs.html" . }}
-    {{ block "main" . }}{{ end }}
-  </main>
->>>>>>> 902e2c2 (Refactor website structure and styles)
-
-    <main id="content" class="main-content" tabindex="-1">
-      {{ partial "breadcrumbs.html" . }}
-      {{ block "main" . }}{{ end }}
-    </main>
-
-    {{ partial "footer.html" . }}
-  </body>
-=======
-    <!-- Content wrapper that slides -->
-=======
-    {{/* Content wrapper that slides */}}
->>>>>>> e66f416 (Refactor HTML comments to use Hugo-style syntax for improved consistency and readability)
-    <div class="main-frame">
-
-      {{/* Site header with title and logo */}}
-      {{ partial "header.html" . }}
-
-      {{/* Page content */}}
-      <main id="content" class="main-content" tabindex="-1">
-        {{ partial "breadcrumbs.html" . }}
-        {{ block "main" . }}{{ end }}
-      </main>
-
-      {{ partial "footer.html" . }}
-=======
       <label for="menu-control" class="hidden book-menu-overlay"></label>
->>>>>>> 32e0752 (Add PGP public key and theme configuration)
     </div>
 
     {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
@@ -102,10 +44,6 @@
 
   {{ partial "docs/inject/body" . }}
 </body>
-<<<<<<< HEAD
->>>>>>> f3803e5 (Refactor sidebar layout and functionality for improved user experience)
-</html>
-=======
 </html>
 
 {{ define "menu" }}
@@ -143,4 +81,3 @@
 {{ define "toc" }}
   {{ partial "docs/toc" . }}
 {{ end }}
->>>>>>> 32e0752 (Add PGP public key and theme configuration)

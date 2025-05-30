@@ -1,9 +1,0 @@
-{{/* layouts/shortcodes/tab.html */}}
-
-{{- $group := .Parent.Get 0 | default (now.UnixNano) -}}
-{{- $title := .Get 0 -}}
-<input type="radio" class="book-tabs-toggle" name="tabs-{{ $group }}" id="tab-{{ $group }}-{{ .Ordinal }}" {{ if eq .Ordinal 0 }}checked{{ end }}>
-<label for="tab-{{ $group }}-{{ .Ordinal }}" class="book-tabs-label">{{ $title }}</label>
-<div class="book-tabs-panel">
-  {{ .Inner | markdownify }}
-</div>
