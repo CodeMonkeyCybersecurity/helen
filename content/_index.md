@@ -13,7 +13,7 @@ We’re building a new kind of cybersecurity platform: one that empowers small t
 
 ---
 
-## What is XDR?
+# What is XDR?
 
 Please explain to me what XDR is...
 
@@ -98,7 +98,7 @@ Just smile and say, “Ha! I’ve got XDR!”
 - **Backup & Recovery**  
   Enterprise-grade data protection—without enterprise headaches.
 
-## 🚀 Who We Help
+## Who We Help
 
 - **Small businesses** who want real-world security, not checkbox compliance.
 - **NGOs & community orgs** who value privacy and transparency.
@@ -118,6 +118,8 @@ Just smile and say, “Ha! I’ve got XDR!”
 We protect people, not just machines. Our mission is to bring **affordable, trustworthy cybersecurity** to those who need it most—no matter your size or resources.
 
 ---
+
+![message](/images/message.jpg)
 
 ## Get Started
 
