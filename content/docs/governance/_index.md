@@ -1,7 +1,33 @@
 ---
 title: "Governance"
-weight: 2
+weight: 5
 bookFlatSection: true
 ---
 
 # Governance
+
+At Code Monkey Cybersecurity, we believe **good security starts with clear policy and transparent governance**.
+
+This section outlines the policies, controls, and principles that guide how we operate — from data protection and ethical disclosure to software licensing and community standards.
+
+## Included Policies
+
+- [Privacy Policy]({{< ref "docs/governance/privacy-policy" >}})
+- [Responsible Disclosure Policy]({{< ref "docs/governance/responsible-disclosure" >}})
+- [Code of Conduct]({{< ref "docs/governance/code-of-conduct" >}})
+- [Internal Device & Endpoint Policy]({{< ref "docs/governance/device-policy" >}})
+- [Data Handling & Retention Policy]({{< ref "docs/governance/data-handling-policy" >}})
+- [Open Source Licensing Policy]({{< ref "docs/governance/open-source-licensing" >}})
+- [Terms of Service]({{< ref "docs/governance/terms-of-service" >}})
+
+All policies apply to our staff, services, and hosted infrastructure — including Delphi, Vault, Wazuh, EOS, and related systems.
+
+## Why It Matters
+
+As a Cybersecurity Provider, we handle sensitive information on behalf of our clients. These policies exist to ensure:
+
+- Compliance with best-practice industry understanding
+- Transparency and trust with clients, auditors, and contributors
+- Enforceable guidelines for secure, ethical, and inclusive operations
+
+For questions about any of our governance documents, email [security@cybermonkey.net.au](mailto:security@cybermonkey.net.au).

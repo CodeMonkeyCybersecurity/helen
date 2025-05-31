@@ -53,7 +53,7 @@ All enforcement decisions are at the discretion of Code Monkey Cybersecurity’s
 
 If you witness or experience a violation of this Code, please report it to:
 
-📧 **conduct@cybermonkey.net.au**
+  **conduct@cybermonkey.net.au**
 
 Reports will be treated seriously and confidentially. We do not tolerate retaliation against reporters.
 
