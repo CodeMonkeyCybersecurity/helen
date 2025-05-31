@@ -1,0 +1,21 @@
++++
+title = "We love Proton and their password manager, Proton Pass."
+tags = [
+    "Proton",
+    "Proton Pass",
+    "Password Manager",
+]
+date = "2024-12-11"
+categories = [
+    "Password Manager",
+    "Proton",
+]
+menu = "main"
++++
+
+We love Proton and their password manager, Proton Pass. We use it everyday.
+Password managers need to be the bread and butter of everyone's online presence.
+Use the link below to sign up now using our referral code:
+https://pr.tn/ref/KF4YS3NCHZ4G
+
+![proton_pass](/images/proton_pass.jpg)

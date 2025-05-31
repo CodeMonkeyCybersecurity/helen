@@ -1,5 +1,6 @@
 ---
 title: "Delphi"
+description: "Delphi - powered by Wazuh"
 bookFlatSection: true
 weight: 1
 ---
