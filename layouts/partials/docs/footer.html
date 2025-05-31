@@ -21,6 +21,15 @@
 
 </div>
 
+<div style="margin-top:2em; text-align:center; color:#888; font-size: 0.95em;">
+  &copy; {{ now.Format "2006" }} Code Monkey Cybersecurity
+  &bull; <a href="{{ "/docs/governance/policies/privacy-policy/" | relURL }}">Privacy Policy</a>
+  &bull; <a href="{{ "/docs/governance/policies/terms-of-service/" | relURL }}">Terms</a>
+  &bull; <a href="mailto:security@cybermonkey.net.au">Contact</a>
+  <br>
+   </span>
+</div>
+
 {{ $script := resources.Get "clipboard.js" | resources.Minify }}
 {{ with $script.Content }}
   <script>{{ . | safeJS }}</script>
