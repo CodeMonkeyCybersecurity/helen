@@ -39,11 +39,11 @@ buildExpired = false
 [menu]
 [[menu.after]]
 name = "Github"
-url = "https://github.com/alex-shpak/hugo-book"
+url = "https://github.com/CodeMonkeyCybersecurity"
 weight = 10
 
 [[menu.after]]
-name = "Hugo Themes"
+name = "Theme"
 url = "https://themes.gohugo.io/themes/hugo-book/"
 weight = 20
 
