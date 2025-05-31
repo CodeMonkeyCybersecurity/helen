@@ -1,7 +1,6 @@
 ---
 title: "Responsible Disclosure Policy"
 description: "How to report vulnerabilities to Code Monkey Cybersecurity"
-date: 2025-06-01
 ---
 
 # Responsible Disclosure Policy

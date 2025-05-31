@@ -1,10 +1,9 @@
 ---
-title: "Open Source Licensing Policy"
+title: "Open Source Licensing"
 description: "Our licensing strategy for ethical, open-source software at Code Monkey Cybersecurity"
-date: 2025-06-01
 ---
 
-# Open Source Licensing Policy
+# Open Source Licensing
 
 At **Code Monkey Cybersecurity**, we believe open-source software should advance human dignity, digital autonomy, and social good. Our licensing choices reflect this philosophy.
 
@@ -48,7 +47,7 @@ We use GPLv3 for projects where we want to:
 - No field-of-use restrictions
 - Encourages a collaborative and open developer ecosystem
 
-### Included In:
+### Included In
 
 - Command-line tools (e.g. CLI for Delphi)
 - SDKs or libraries that others might extend

@@ -1,7 +1,6 @@
 ---
 title: "Privacy Policy"
 description: "How Code Monkey Cybersecurity protects your data."
-date: 2025-06-01
 ---
 
 # Privacy Policy

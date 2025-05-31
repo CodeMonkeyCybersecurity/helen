@@ -1,7 +1,6 @@
 ---
 title: "Terms of Service"
 description: "User agreement for Code Monkey Cybersecurity services"
-date: 2025-06-01
 ---
 
 # Terms of Service

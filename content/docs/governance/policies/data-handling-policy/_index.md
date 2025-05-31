@@ -1,7 +1,6 @@
 ---
 title: "Data Handling Policy"
 description: "How Code Monkey Cybersecurity manages and protects sensitive data."
-date: 2025-06-01
 ---
 
 # Data Handling & Retention Policy

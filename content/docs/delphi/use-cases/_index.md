@@ -1,8 +1,8 @@
 ---
-title: "Example use cases"
+title: "Use Cases"
 ---
 
-### Example use cases
+# Use Cases
 
 ### Small IT Team
 

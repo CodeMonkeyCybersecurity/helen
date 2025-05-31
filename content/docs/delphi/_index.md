@@ -7,11 +7,11 @@ weight: 1
 
 # What Is Delphi?
 
+![antivirus_siem_xdr](/images/antivirus_siem_xdr.png)
+
 **Delphi** is Code Monkey Cybersecurity’s managed **XDR** (Extended Detection and Response) and **SIEM** (Security Information and Event Management) platform — built for real-world security, not checkbox compliance.
 
 At its core, Delphi helps you detect threats, understand what they mean, and act fast. It's built on **Wazuh**, a trusted open-source platform used by security teams worldwide — but we’ve hardened it, simplified it, and layered on human-first support.
-
-![antivirus_siem_xdr](/images/antivirus_siem_xdr.png)
 
 ## Key Features
 

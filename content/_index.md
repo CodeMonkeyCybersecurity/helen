@@ -4,7 +4,7 @@ description: "Cybersecurity. With Humans."
 bookFlatSection: true
 ---
 
-# Code Monkey Cybersecurity
+## Code Monkey Cybersecurity
 
 ![cover_puppy_moni_monkey](/images/cover_puppy_moni_monkey.png)
 

@@ -1,7 +1,6 @@
 ---
 title: "Code of Conduct"
 description: "Community guidelines for Code Monkey Cybersecurity contributors and users"
-date: 2025-06-01
 ---
 
 # Code of Conduct

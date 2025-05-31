@@ -1,7 +1,6 @@
 ---
 title: "Internal Device and Endpoint Policy"
 description: "Security and usage requirements for Code Monkey Cybersecurity devices and systems"
-date: 2025-06-01
 ---
 
 # Internal Device and Endpoint Policy

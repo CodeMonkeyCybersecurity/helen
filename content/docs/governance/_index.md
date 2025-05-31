@@ -12,13 +12,13 @@ This section outlines the policies, controls, and principles that guide how we o
 
 ## Included Policies
 
-- [Privacy Policy]({{< ref "docs/governance/privacy-policy" >}})
-- [Responsible Disclosure Policy]({{< ref "docs/governance/responsible-disclosure" >}})
-- [Code of Conduct]({{< ref "docs/governance/code-of-conduct" >}})
-- [Internal Device & Endpoint Policy]({{< ref "docs/governance/device-policy" >}})
-- [Data Handling & Retention Policy]({{< ref "docs/governance/data-handling-policy" >}})
-- [Open Source Licensing Policy]({{< ref "docs/governance/open-source-licensing" >}})
-- [Terms of Service]({{< ref "docs/governance/terms-of-service" >}})
+- [Privacy Policy](/docs/governance/privacy-policy)
+- [Responsible Disclosure Policy](/docs/governance/responsible-disclosure)
+- [Code of Conduct](/docs/governance/code-of-conduct/)
+- [Internal Device & Endpoint Policy](/docs/governance/device-policy)
+- [Data Handling & Retention Policy](/docs/governance/data-handling-policy)
+- [Open Source Licensing Policy](/docs/governance/open-source-licensing)
+- [Terms of Service](/docs/governance/terms-of-service)
 
 All policies apply to our staff, services, and hosted infrastructure — including Delphi, Vault, Wazuh, EOS, and related systems.
 

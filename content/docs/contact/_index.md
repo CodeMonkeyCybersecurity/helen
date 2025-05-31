@@ -1,10 +1,10 @@
 ---
 title: "Contact Us"
 bookFlatSection: true
-weight: 5
+weight: 6
 ---
 
-## Contact Us
+# Contact Us
 
 Email: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
