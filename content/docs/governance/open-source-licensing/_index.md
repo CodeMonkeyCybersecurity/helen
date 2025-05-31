@@ -19,13 +19,13 @@ We use the [Do No Harm License](https://github.com/raisely/NoHarm) for projects 
 - Prevent misuse by oppressive governments, fossil fuel giants, exploitative tech, or violent regimes
 - Align with the [Universal Declaration of Human Rights](https://www.un.org/en/about-us/universal-declaration-of-human-rights)
 
-### Key Features
+### Do No Harm Features
 
 - Based on permissive open-source licenses (MIT-style)
 - Adds ethical usage restrictions to protect human rights, the environment, and democratic values
 - Allows commercial use, modification, and redistribution — unless it supports harm
 
-### Included In:
+### Includes Do No Harm
 
 - All infrastructure automation (e.g. EOS, deployment tooling)
 - Code intended to interface with surveillance-sensitive environments (e.g. Vault, Wazuh agents)
@@ -41,13 +41,13 @@ We use GPLv3 for projects where we want to:
 - Require derivative works to also be open-source
 - Prevent tivoization or closed hardware abuses
 
-### Key Features
+### GNU Features
 
 - Strong copyleft: all modified versions must also be GPLv3
 - No field-of-use restrictions
 - Encourages a collaborative and open developer ecosystem
 
-### Included In
+### Includes GNU
 
 - Command-line tools (e.g. CLI for Delphi)
 - SDKs or libraries that others might extend
