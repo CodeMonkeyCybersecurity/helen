@@ -1,7 +1,8 @@
 ---
-weight: 1
+title: "Governance"
+weight: 2
 bookFlatSection: true
-title: "Example Site"
+
 ---
 
 # Introduction

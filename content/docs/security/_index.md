@@ -1,6 +1,8 @@
 ---
 title:       "Security"
 description: "Learn about our security measures."
+bookFlatSection: true
+weight: 4
 ---
 We’d love to hear from you.
 

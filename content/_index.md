@@ -1,11 +1,12 @@
 ---
 title: "Code Monkey Cybersecurity"
 description: "Cybersecurity. With Humans."
+bookFlatSection: true
 ---
 
 # Code Monkey Cybersecurity
 
-![Cover_CodeMonkeyCybersecurity_flat](/images/Cover_CodeMonkeyCybersecurity_flat.jpg)
+![cover_puppy_moni_monkey](/images/cover_puppy_moni_monkey.png)
 
 ---
 
@@ -13,7 +14,7 @@ We’re building a new kind of cybersecurity platform: one that empowers small t
 
 ---
 
-# What is XDR?
+## What is XDR?
 
 Please explain to me what XDR is...
 

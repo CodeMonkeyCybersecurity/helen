@@ -1,5 +1,7 @@
 ---
 title: "Delphi"
+bookFlatSection: true
+weight: 1
 ---
 
 # What Is Delphi?
