@@ -4,4 +4,4 @@ bookFlatSection: true
 weight: 2
 ---
 
-# About us
+# About Us
