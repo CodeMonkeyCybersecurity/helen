@@ -6,5 +6,5 @@ HUGO_VER=0.128.2
 cd /tmp
 wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VER}/hugo_extended_${HUGO_VER}_linux-amd64.tar.gz
 tar -xvf hugo_extended_${HUGO_VER}_linux-amd64.tar.gz
-sudo mv hugo /usr/local/bin/
+sudo mv hugo /usr/bin/
 hugo version
