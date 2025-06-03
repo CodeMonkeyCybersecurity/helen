@@ -71,7 +71,7 @@ We strive to respond to support requests promptly, but make no binding SLA commi
 
 ## 7. Subprocessors & Hosting
 
-We use third-party infrastructure (e.g. Hetzner, Proton) and subprocessors listed [here](../subprocessors). All subprocessors are vetted for security and privacy compliance.
+We use third-party infrastructure (e.g. Hetzner, Proton).
 
 ---
 
@@ -99,5 +99,6 @@ We may revise these Terms periodically. Significant changes will be communicated
 
 ## 11. Contact
 
-**Code Monkey Cybersecurity Pty Ltd**  
-📧 legal@cybermonkey.net.au
+**Code Monkey Cybersecurity* Pty Ltd**
+
+[main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)

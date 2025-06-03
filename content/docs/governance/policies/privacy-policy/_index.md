@@ -85,7 +85,7 @@ You have the right to:
 - Request data portability
 - File a complaint with a supervisory authority (e.g. OAIC, GDPR)
 
-To make a request, email **privacy@cybermonkey.net.au**
+To make a request, email [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
 ---
 

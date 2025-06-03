@@ -110,5 +110,6 @@ We share data **only if**:
 
 ## Contact
 
-For custom SLAs, data inquiries, or opt-out requests:  
-📧 **security@cybermonkey.net.au**
+For custom SLAs, data inquiries, or opt-out requests:
+
+[main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)

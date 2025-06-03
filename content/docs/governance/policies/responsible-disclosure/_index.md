@@ -22,7 +22,7 @@ At **Code Monkey Cybersecurity**, we welcome reports from security researchers a
 
 Please email your findings to:
 
-  **security@cybermonkey.net.au**
+[main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
 Include the following (where possible):
 

@@ -8,6 +8,8 @@ weight: 2
 
 ## Code Monkey Cybersecurity
 
+> **Cybersecurity. With humans.**
+
 **Code Monkey Cybersecurity** is an independent, open-source-focused security company based in Western Australia. We build tools and infrastructure to bring enterprise-grade cybersecurity to the people who need it most — small businesses, nonprofits, and communities often left behind by traditional vendors.
 
 ## Delphi
@@ -22,6 +24,23 @@ Our infrastructure choices (like Vault, Keycloak, Wazuh, KVM, and Docker) are au
 
 We're guided by hands-on experience with industry frameworks and practical certifications, including CompTIA A+, Network+, Security+, and PenTest+, which inform our focus on real-world resilience over theoretical compliance.
 
-We’re currently self-funded and in public beta — but we’re here for the long run.
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin: 1em 0;">
+  <img src="/images/comptia-a-ce-certification.png" alt="CompTIA A+" width="100" />
+  <img src="/images/comptia-network-ce-certification.png" alt="Network+" width="100" />
+  <img src="/images/comptia-security-ce-certification.png" alt="Security+" width="100" />
+  <img src="/images/comptia-pentest-ce-certification.png" alt="PenTest+" width="100" />
+</div>
 
-> **Cybersecurity. With humans.**
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin: 1em 0;">
+  <img src="/images/comptia-it-operations-specialist-cios-stackable-certification.png" alt="CIOS" width="100" />
+  <img src="/images/comptia-network-vulnerability-assessment-professional-cnvp-stackable-certification.png" alt="CNVP" width="100" />
+  <img src="/images/comptia-secure-infrastructure-specialist-csis-stackable-certification.png" alt="CSIS" width="100" />
+</div>
+
+These certifications signal a baseline level of competence and understanding in our approach to DevSecOps, threat modeling, and practical infrastructure hardening — especially for small teams, nonprofits, and vulnerable users navigating complex risk landscapes.
+
+We believe in building cybersecurity tools grounded in practical, real-world expertise — not just theory.
+
+This knowledge supports our platform development (Delphi, EOS) and informs how we design with usability, privacy, and auditability from the ground up.
+
+We’re currently self-funded and in public beta and we’re here for the long run.

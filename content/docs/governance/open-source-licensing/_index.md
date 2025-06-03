@@ -83,7 +83,7 @@ Every Code Monkey Cybersecurity GitHub repository includes:
 
 If you’re unsure whether a project is usable for your case (e.g. nonprofit, activist org, public school), reach out:
 
-  **legal@cybermonkey.net.au**
+[main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
 We're happy to clarify or provide a dual-license option where possible.
 

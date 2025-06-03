@@ -68,7 +68,7 @@ Unapproved or high-risk tools (e.g. cracked software, Tor, insecure proxies) are
 
 Security events (e.g. malware detection, suspected intrusion) must be reported immediately to:
 
-  **security@cybermonkey.net.au**
+[main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
 ---
 
