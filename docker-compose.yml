@@ -1,11 +1,10 @@
 # docker-compose.yaml
 services:
   helen:
-    image: nginx
+    image: nginx:alpine
     container_name: helen
     volumes:
       - ./public:/usr/share/nginx/html:ro # Shared webroot for validation
     ports:
       - "8009:80"
     restart: always
-
