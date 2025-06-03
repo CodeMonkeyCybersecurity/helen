@@ -1,17 +1,11 @@
 # docker-compose.yaml
 services:
-  nginx:
+  helen:
     image: nginx
-    container_name: helen-stage
+    container_name: helen
     volumes:
-      - ./:/usr/share/nginx/html:ro # Shared webroot for validation
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro # Custom NGINX configuration
-      #- ./certs:/etc/nginx/certs:ro  # SSL certificates
+      - ./public:/usr/share/nginx/html:ro # Shared webroot for validation
     ports:
       - "8009:80"
     restart: always
-    networks:
-      - eos-network
-  
-networks:
-  eos-network:
+
