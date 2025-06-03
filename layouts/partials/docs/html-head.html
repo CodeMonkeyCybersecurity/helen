@@ -37,7 +37,9 @@
   <script defer src="{{ $swJS.RelPermalink }}" {{ template "integrity" $swJS }}></script>
 {{ end -}}
 
-{{- template "_internal/google_analytics.html" . -}}
+{{ with .Site.Params.umami_script }}
+<script async defer data-website-id="{{ .Site.Params.umami_site_id }}" src="{{ . }}"></script>
+{{ end }}
 
 <!-- RSS -->
 {{- with .OutputFormats.Get "rss" -}}
