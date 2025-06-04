@@ -22,4 +22,4 @@ weight: 7
 
 ## Hera
 
-{{< button href="https://hera.cybermonkey.net.au" >}}StackStorm{{< /button >}}
+{{< button href="https://hera.cybermonkey.net.au" >}}Hera{{< /button >}}
