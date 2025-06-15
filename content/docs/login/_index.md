@@ -23,3 +23,7 @@ weight: 7
 ## Hera
 
 {{< button href="https://hera.cybermonkey.net.au" >}}Hera{{< /button >}}
+
+## Webmail
+
+{{< button href="https://mail.cybermonkey.sh" >}}Webmail{{< /button >}}

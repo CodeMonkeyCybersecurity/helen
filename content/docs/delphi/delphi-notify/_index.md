@@ -1,6 +1,6 @@
 ---
 title: "Delphi Notify"
-weight: 10
+weight: 20
 ---
 
 # Delphi Notify
@@ -10,6 +10,11 @@ weight: 10
 Delphi Notify empowers non-technical users to understand, respond to, and take control of their digital security—without fear or confusion.
 
 Delphi Notify is your cybersecurity “first responder”. It's built to help everyday people take action when something suspicious is happening on their devices or networks. Designed for home users, small businesses, and community groups (not just IT pros!), Delphi Notify turns complex security alerts into clear, friendly guidance you can use right away.
+
+## Ready to Try Delphi Notify?
+{{% hint info %}}
+{{< button href="https://hera.cybermonkey.dev" >}}Sign up{{< /button >}}
+{{% /hint %}}
 
 ![oh_the_hacks](/images/oh_the_hacks.jpg)
 
