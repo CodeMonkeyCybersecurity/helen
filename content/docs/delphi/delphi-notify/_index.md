@@ -64,71 +64,96 @@ Need help? If you’re unsure or want more help, reply to this email or contact 
 
 {{% /tab %}}
 
-{{% tab "Example 2: Netstat" %}}
+{{% tab "Example 2: Wrong time" %}}
+Code Monkey Cybersecurity
+=========================
 
-## Code Monkey Cybersecurity
+Delphi Notify Alert • Sunday, 15 June 2025 10:04 AM AWST • Alert ID: 27e31ac3
 
-#### Delphi Notify Alert • Tuesday, 03 June 2025 04:34 AM AWST
+What happened:
+--------------
 
-#### Cybersecurity Alert: What Happened, What To Do, and How To Check
+Your Windows computer ("Bobs-PC") reported a system error about the date and time. The alert says the computer tried to update its clock by a large amount (about 40 hours) using an outside time server (time.windows.com), but it could not do this automatically. This event was seen more than once over the past few days. There are also related errors saying the computer could not get the correct time from its own hardware clock, and that it lost connection to the network or domain. This matters because if your computer’s clock is very wrong, you may have trouble logging in, using secure websites, or syncing files. It can also be a sign of a hardware problem, a network issue, or, in rare cases, tampering. This alert should be checked the same day, especially if you notice problems with logging in, email, or websites. Based on the information, this is likely a technical issue with your device rather than an outside attack, since the time source is a public service and the errors are seen repeatedly on your system. To give you the best advice, I’d want to know: Have you noticed your computer’s time or date being incorrect recently? Are you unable to access the internet or your network? Has your device recently lost power or rebooted unexpectedly?
 
-#### Wazuh Alert (level 7)
+Further investigation:
+----------------------
 
-Bobs-PC at 2025-06-03T00:05:44.988+0800:
+First, look at the clock on your computer’s desktop. Is the time and date correct? If not, make a note of how wrong it is. Second, check if you have internet access: try opening a website you normally use. Third, see if you can log in with your usual password and access your files and email. If you notice the wrong time, no internet, or login problems, that could mean the issue is serious and needs help right away.
 
-Listened ports status (netstat) changed (new port opened or closed)..
+What to do:
+-----------
 
-**What happened**
+First, make sure your computer’s time is set correctly. On Windows, right-click the time in the bottom right corner of your screen, then choose “Adjust date and time.” Make sure “Set time automatically” and “Set time zone automatically” are both turned ON. Click “Sync now” if there is a button. This will tell your computer to get the correct time from the internet. Second, restart your computer after syncing the time. This can help reset any temporary issues. Third, check your internet connection: unplug your modem/router for 30 seconds, then plug it back in. Wait a minute and then try browsing the web. If you use this computer to connect to a workplace or server, you may need to contact your IT support to check if the device can reach the domain or network as expected. If you are running a website, shared files, or other services, be aware that incorrect system time can cause problems for users trying to connect—this may need more technical review to fully resolve.
 
-Your security system noticed that a new network port was opened or closed on your device Bobs-PC just after midnight on June 3. Ports are like doorways for computer traffic, and changes like this can happen when you install new software, update programs, or adjust settings. This alert does not mean there is a confirmed threat—just that something changed.
+How to check:
+-------------
 
-**What to do**
+You’ll know it worked if, after following these steps, your computer’s clock shows the correct time and date, you can browse the internet, and you can log in and use your files and email normally. Check over the next 2–3 days that the time stays correct and you don’t see similar error messages or login problems. If the time keeps changing, if you can’t get online, or if you see new security warnings, those are signs something is still wrong and you should contact Code Monkey Cybersecurity or another trusted IT helper for further help. Remember, by checking and correcting your system time you are taking the right steps. These kinds of alerts are designed to help you spot and fix small problems before they cause bigger issues.
 
-If you recently installed or updated a program, this change is likely normal and nothing more is required. If you did not expect any changes, restart your device and make sure your security software is running and up-to-date. This helps block any unwanted connections. Only open files and run software from sources you trust.
+Agent Details:
+--------------
 
-**How to check**
+-   Agent Name: Bobs-PC
+-   Agent ID: 017
+-   IP Address: 192.168.6.173
+-   Wazuh Version: Wazuh v4.12.0
+-   Status: disconnected
+-   Operating System: Microsoft Windows 11 Pro 10.0.26100.4202 ()
+-   Registered: 2025-03-07 23:15:20 AWST+0800
+-   Last Seen: 2025-06-15 06:33:34 AWST+0800
+-   Disconnected: 2025-06-15 06:48:24 AWST+0800
+-   Manager: vhost11-centos9-2
+-   Groups: default
 
-After restarting, your security program should show a green checkmark or no new warnings. You should not receive more alerts of this type in the next few days. If you are unsure or notice anything unusual, it’s okay to ask Code Monkey Cybersecurity or another trusted helper for extra support. 
+You’re taking the right steps — Delphi Notify helps you stay ahead of problems. This was sent automatically by Delphi Notify.
 
-You’re staying proactive—these alerts help keep you ahead of any real problems.
-
-This message was sent automatically by Delphi Notify. If you have questions, reach out to your security team or Code Monkey Cybersecurity.
-
-Need help? If you’re unsure or want more help, reply to this email or contact [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
+Need help? Reply or contact main@cybermonkey.net.au.
 
 {{% /tab %}}
 
-{{% tab "Example 3: MacOS" %}}
+{{% tab "Example 3: Weird Application Crash" %}}
 
-## Code Monkey Cybersecurity
+Code Monkey Cybersecurity
+=========================
 
-#### Delphi Notify Alert • Tuesday, 03 June 2025 04:34 AM AWST
+Delphi Notify Alert • Tuesday, 17 June 2025 02:54 PM AWST • Alert ID: ff9920ba
 
-#### Cybersecurity Alert: What Happened, What To Do, and How To Check
+What happened:
+--------------
 
-#### Wazuh Alert (level 7)
+This alert means that the ChatGPT desktop application (ChatGPT.exe) on your Windows 10 computer stopped responding and was automatically closed by Windows around 4:03 PM on June 16, 2025. This kind of error is called an "application hang" and usually means the program froze and couldn’t continue working. This does not automatically mean your computer is under attack or infected—it’s often just a software glitch or conflict. The alert was seen only once, and there are no signs this was caused by an outside system. It looks like a local issue, not a targeted attack. This should be looked at today, but it’s not an emergency unless you see other unusual problems.
 
-Henrys-MacBook-Pro.local at 2025-06-03T01:31:55.358+0800:
+Further investigation:
+----------------------
 
-Integrity checksum changed..
+First, check if ChatGPT or any other programs are crashing or freezing repeatedly. Open ChatGPT again and see if it works normally. Second, look for other warning messages or errors in the bottom right of your screen (the notification area) or in the Security and Maintenance settings (search for “Security and Maintenance” in the Windows search bar). Third, check if your computer is running unusually slow, if there are new icons or programs you didn’t install, or if strange pop-ups appear—these would suggest a more serious problem. If you only see this one crash and everything else is normal, it’s likely just a single software hiccup.
 
-**What happened**
+What to do:
+-----------
 
-Your security system noticed that a file or program on your Mac changed in a way that wasn't expected. This usually means something has been updated, modified, or replaced, but it doesn't always mean something bad happened.
+Restart your computer. This simple step often clears up temporary issues and helps applications work properly again. How: Click the Windows Start button, select the power icon, and choose “Restart.” After your computer restarts, open ChatGPT again to see if it works. If it freezes again, uninstall and reinstall the ChatGPT application: Go to Settings > Apps > Installed apps or Apps & Features, find “ChatGPT” in the list, click it, and choose “Uninstall.” Then, visit the official ChatGPT website and download the latest version to reinstall. This can fix problems caused by a corrupted program file. If you use ChatGPT for important work and it keeps crashing, consider using the web version in your browser as a temporary solution while you troubleshoot.
 
-**What to do**
+How to check:
+-------------
 
-Think back—did you just install updates, new software, or make changes to your system? If yes, this alert is likely okay and you don’t need to worry. If you didn’t make any changes or aren’t sure, run a quick scan with your Mac’s security or antivirus program to be on the safe side. You can do this by opening your security software and clicking "Scan" or "Check for threats." 
+If this works, ChatGPT should open and run smoothly without freezing. You should not see more pop-up errors about ChatGPT hanging in the next day or two. If ChatGPT (or other programs) keeps crashing, your computer runs very slowly, or you see strange programs or pop-ups you don’t recognize, this could mean a bigger problem—please reach out to Code Monkey Cybersecurity or another trusted IT helper for further support. You are taking the right steps to keep your computer running well, and these alerts are here to help you catch small problems before they become big ones.
 
-**How to check**
+Agent Details:
+--------------
 
-If the scan finds no problems and you don’t notice anything strange (like pop-ups, slowness, or new programs you didn’t install), everything should be fine. If you keep seeing this alert and did not make any changes, or you are worried, it’s a good idea to contact Code Monkey Cybersecurity or another trusted IT helper for peace of mind.
+-   Agent Name: Alices-PC
+-   Agent ID: 022
+-   IP Address: 192.168.11.20
+-   Wazuh Version: Wazuh v4.12.0
+-   Status: disconnected
+-   Operating System: Microsoft Windows 10 Home 10.0.19045.5965 ()
+-   Registered: 2025-03-27 00:22:32 AWST+0800
+-   Last Seen: 2025-06-17 11:56:51 AWST+0800
+-   Disconnected: 2025-06-17 12:10:14 AWST+0800
+-   Manager: vhost11-centos9-2
+-   Groups: default
 
-These alerts help you catch any issues early, so you’re doing the right thing by paying attention.
-
-This message was sent automatically by Delphi Notify. If you have questions, reach out to your security team or Code Monkey Cybersecurity.
-
-Need help? If you’re unsure or want more help, reply to this email or contact [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au).
+You’re taking the right steps — Delphi Notify helps you stay ahead of problems. This was sent automatically by Delphi Notify.
 
 {{% /tab %}}
 
