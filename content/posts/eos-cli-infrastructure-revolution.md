@@ -47,10 +47,15 @@ eos enable vault     # 2. Interactive MFA setup
 eos secure vault     # 3. Military-grade hardening
 ```
 
-**The magic happens:**
+**Comprehensive HashiCorp Vault Integration:**
+- **Enterprise-grade secrets management** with full lifecycle support
+- **Multi-factor authentication** - TOTP, Duo, PingID, Okta support
+- **Vault Agent integration** with systemd and automatic token renewal
+- **AppRole authentication** with secure credential handling
+- **Comprehensive security hardening** including TLS, audit logging, policy enforcement
+- **Fallback mechanisms** to `/var/lib/eos/secrets/` for high availability
 - **Zero-configuration Vault Agent** with persistent authentication
 - **Automatic secret injection** throughout your entire stack
-- **Multi-factor everything** - TOTP, Duo, PingID, Okta integration
 - **Safe root token revocation** with verified alternative auth
 - **Seamless integration** - every Eos command can pull secrets automatically
 
@@ -63,13 +68,20 @@ eos secure vault     # 3. Military-grade hardening
 ### **Not Just Another Chatbot - AI That Lives in Your Workflow**
 
 ```bash
-eos ai analyze logs           # AI-powered log analysis
-eos ai security-review        # Intelligent security assessment  
-eos ai optimize-config        # Configuration optimization
-eos delphi ai llm-worker     # Deploy your own AI workers
+eos ai ask "analyze system logs"      # Natural language infrastructure queries
+eos ai analyze                        # Infrastructure analysis with AI
+eos ai fix                           # AI-powered troubleshooting with automated fixes
+eos ai chat                          # Interactive AI assistance
+eos ai implement                     # AI-guided implementation assistance
+eos ai configure                     # AI-powered configuration optimization
 ```
 
-**Why this matters:**
+**Sophisticated AI Integration:**
+- **Multi-provider AI support** - Anthropic Claude, Azure OpenAI
+- **Complete eos ai command suite** - ask, analyze, fix, chat, implement, configure
+- **Infrastructure analysis** with Docker, Terraform, Vault, Consul scanning
+- **AI-powered troubleshooting** with automated fixes and action execution
+- **Secure API key management** via Vault integration
 - **Tight workflow integration** - AI that understands your infrastructure
 - **Privacy-first AI** - runs on your hardware, your data stays yours
 - **Context-aware analysis** - AI knows your services, configs, and history
@@ -105,7 +117,13 @@ eos backup test restore latest          # Verify backups work
 eos backup disaster-recovery simulate    # Test your procedures
 ```
 
-**Enterprise-grade features:**
+**Enterprise-Grade Backup & Resilience:**
+- **Comprehensive Restic integration** with Eos wrapper functionality
+- **Multi-backend support** - local, SFTP, S3, B2, Azure, GCS
+- **Automated scheduling** via systemd timers
+- **Retention policies** with flexible cleanup strategies
+- **Backup verification and integrity testing**
+- **Docker infrastructure backup suite**
 - **Extensible backup strategies** - file, database, container, full system
 - **Automated backup testing** - because untested backups aren't backups
 - **Point-in-time recovery** with validation
@@ -137,12 +155,17 @@ eos hecate deploy hetzner    # Multi-cloud reverse proxy
 ### **Future-Proof Your Security Now**
 
 ```bash
-eos crypto generate quantum-safe     # Post-quantum cryptography
-eos secure quantum-audit    # Quantum vulnerability assessment
+eos crypto mlkem generate     # ML-KEM-768 post-quantum cryptography
+eos crypto mlkem benchmark   # Performance comparison vs ECDSA
+eos secure quantum-audit      # Quantum vulnerability assessment
 ```
 
-**Bleeding-edge security:**
-- **Post-quantum cryptographic standards** implementation
+**NIST-Compliant Post-Quantum Security:**
+- **ML-KEM-768 implementation** - NIST FIPS 203 compliant post-quantum cryptography
+- **3-phase quantum migration strategy** - smooth transition from classical to quantum-safe
+- **Hybrid classical + post-quantum support** - backwards compatibility during transition
+- **Performance benchmarks** - ML-KEM faster than ECDSA in real-world tests
+- **Complete CLI interface** - `eos crypto mlkem` command suite for all operations
 - **OPA policy enforcement** - Open Policy Agent integration
 - **CUE validation** - schema validation that doesn't break
 - **Multi-layered validation** - struct, schema, and policy validation
@@ -160,11 +183,18 @@ eos delphi services ab-test --model gpt-4
 eos delphi watch alerts --ai-analysis
 ```
 
-**Enterprise data operations:**
+**Sophisticated Data Pipeline & Notification Systems:**
+- **Production-ready Wazuh SIEM integration** with Go API wrappers
+- **Real-time security alert processing** and correlation
+- **Automated agent management** and threat response
+- **PostgreSQL integration** with GORM ORM and migrations
+- **Multi-channel notifications** - SMTP, webhooks, Mattermost
+- **Redis Streams** for high-performance message queuing
+- **Circuit breaker patterns** for resilient external API communication
+- **Comprehensive alert processing** with state machine implementation
 - **Microservice orchestration** with intelligent port allocation
 - **A/B testing for AI models** - data-driven model improvement
 - **Real-time stream processing** - email parsing, log analysis, threat detection
-- **Wazuh API integration** - simplified security information management
 - **Cross-platform pipelines** - emerging cross-platform Fx support
 
 ---
@@ -274,11 +304,13 @@ Eos doesn't reinvent the wheel—it perfects the integration of tools you alread
 
 ### **🎯 Current Power (Available Now):**
 
-- Complete HashiCorp ecosystem integration
-- AI-powered security monitoring
-- Multi-cloud deployment automation
-- Quantum-safe cryptography implementation
-- Enterprise backup and disaster recovery
+- **Comprehensive HashiCorp Vault integration** - enterprise-grade secrets management
+- **NIST-compliant post-quantum cryptography** - ML-KEM-768 implementation
+- **Multi-provider AI integration** - Claude, OpenAI with complete command suite
+- **Production-ready Wazuh SIEM integration** - Go API wrappers and alert processing
+- **Enterprise backup and disaster recovery** - comprehensive Restic integration
+- **Sophisticated data pipelines** - PostgreSQL, Redis Streams, multi-channel notifications
+- **Multi-cloud deployment automation** - Hetzner, Azure, AWS, GCP support
 
 ### **🚀 Coming Soon:**
 
