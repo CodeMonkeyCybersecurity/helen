@@ -103,7 +103,7 @@ Legal work operates on strict deadlines - our support matches that urgency:
 - Alerts for unusual trust account activity or access attempts
 - Helps maintain IOLTA compliance requirements
 
-### **📧 Legal Communication Protection**
+### ** Legal Communication Protection**
 - Monitors email for business email compromise targeting legal practices
 - Detects phishing attempts using legal terminology or court document themes
 - Alerts for suspicious email forwarding or auto-reply rules

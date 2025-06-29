@@ -96,7 +96,7 @@ Starting **Monday, July 7th**, we're offering three levels of scam education and
 - Local compliance requirements (Privacy Act, industry standards)
 - Understanding of WA business culture and communication styles
 
-### **👥 Human-Centered Approach**
+### ** Human-Centered Approach**
 - No shame or blame - mistakes are learning opportunities
 - Plain English explanations, no technical jargon
 - Immediate support when employees receive suspicious emails
@@ -108,7 +108,7 @@ Starting **Monday, July 7th**, we're offering three levels of scam education and
 - Business impact reporting (time saved, incidents prevented)
 - ROI calculations showing training value
 
-### **⚡ Immediate Action**
+### ** Immediate Action**
 - Setup within 48 hours of signup
 - First training session within one week
 - Emergency support for active scam attempts
@@ -168,7 +168,7 @@ Unlike expensive security software, **training delivers immediate, measurable re
 **Free 15-minute phone call** to discuss your current security training and identify immediate risks.
 
 📞 **Call us:** (08) 6102 2421  
-📧 **Email:** [training@cybermonkey.net.au](mailto:training@cybermonkey.net.au)
+ **Email:** [training@cybermonkey.net.au](mailto:training@cybermonkey.net.au)
 
 ### **Option 2: Vulnerability Test**
 **Free phishing simulation** - we'll send 3 test emails to your staff and show you the results (anonymized to protect employee privacy).
@@ -211,7 +211,7 @@ Don't wait until you're part of the statistics.
 ---
 
 **Contact Information:**
-📧 **Email:** [training@cybermonkey.net.au](mailto:training@cybermonkey.net.au)  
+ **Email:** [training@cybermonkey.net.au](mailto:training@cybermonkey.net.au)  
 📞 **Phone:** (08) 6102 2421  
 🌐 **Website:** [cybermonkey.net.au/training](https://cybermonkey.net.au/docs/training/)  
 📍 **Location:** Fremantle, Western Australia

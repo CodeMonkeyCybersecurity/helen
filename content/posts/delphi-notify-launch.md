@@ -9,7 +9,7 @@ description: "Free until August 1st - Meet Delphi Notify, the security monitorin
 
 ![Delphi Notify Launch](/images/oh_the_hacks_web.jpg)
 
-# **Cybersecurity. Now with Humans.** 🤖➡️👥
+# **Cybersecurity. Now with Humans.** 🤖➡️
 
 ## **The Problem with Security Alerts**
 
@@ -30,7 +30,7 @@ Delphi Notify is different. It's a small program that runs quietly in the backgr
 ✅ **Tells you exactly what to do next** (actionable steps)  
 ✅ **Only alerts when it actually matters** (no spam notifications)
 
-## **Real Example - Here's What You Get:** 📧
+## **Real Example - Here's What You Get:** 
 
 Instead of cryptic technical alerts, Delphi Notify sends emails like:
 
@@ -55,7 +55,7 @@ Instead of cryptic technical alerts, Delphi Notify sends emails like:
 
 ## **Why Delphi Notify is Different** 
 
-### **🔍 Behavior-Based Detection**
+### ** Behavior-Based Detection**
 Unlike antivirus software that only catches suspicious files, Delphi Notify watches for the **behaviors** that humans use when they're up to cyber mischief.
 
 ### ** Built for Real People**
@@ -77,7 +77,7 @@ We're giving Delphi Notify away **completely free** until August 1st as part of 
 
  **Based in Fremantle, WA** - Supporting local businesses with human-shaped cybersecurity
 
-📧 **Get Started**: Email [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au?subject=Delphi%20Notify%20Free%20Trial)  
+ **Get Started**: Email [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au?subject=Delphi%20Notify%20Free%20Trial)  
 💬 **Questions?** Message us here or call (+61) 0432 038 310  
 🌐 **Learn More**: [cybermonkey.net.au/docs/delphi/](https://cybermonkey.net.au/docs/delphi/)
 

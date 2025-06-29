@@ -43,7 +43,7 @@ When we detect a potential threat, you get:
 - **HIPAA breach assessment** guidance to help you determine next steps
 - **Documentation support** for compliance reporting if needed
 
-### **⚡ Rapid Response Support**
+### ** Rapid Response Support**
 Healthcare can't wait for "business hours" security support:
 - **Priority alerting** for high-risk threats to patient data
 - **After-hours emergency support** for critical security incidents
