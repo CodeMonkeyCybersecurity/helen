@@ -131,3 +131,9 @@ Hugo handles asset compilation automatically:
 - ✅ "Practical tools" instead of "security arsenal"
 - ✅ "Peace of mind" instead of "threat mitigation"
 - ✅ Focus on positive outcomes and user empowerment
+
+### Reference Guidelines
+- **Blog posts require citations**: Include approximately one reference/link per 100 words
+- **Use reputable sources**: Link to research studies, industry reports, government data, established news outlets
+- **Reference integration**: Work citations naturally into the narrative flow
+- **Social media ready**: Blog content serves as basis for Facebook, LinkedIn, and Instagram posts
