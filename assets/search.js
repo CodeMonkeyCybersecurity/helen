@@ -90,7 +90,7 @@
 
     const searchHits = window.bookSearchIndex.search(input.value).slice(0,10);
     searchHits.forEach(function (page) {
-      const li = element('<li><a href></a><small></small></li>');
+      const li = createSearchResultElement();
       const a = li.querySelector('a'), small = li.querySelector('small');
 
       a.href = page.item.href;
@@ -102,12 +102,18 @@
   }
 
   /**
-   * @param {String} content
-   * @returns {Node}
+   * Creates a safe DOM element for search results
+   * @returns {HTMLElement}
    */
-  function element(content) {
-    const div = document.createElement('div');
-    div.innerHTML = content;
-    return div.firstChild;
+  function createSearchResultElement() {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    const small = document.createElement('small');
+    
+    a.setAttribute('href', '');
+    li.appendChild(a);
+    li.appendChild(small);
+    
+    return li;
   }
 })();

@@ -85,3 +85,36 @@ isPlainText = true
 # Optional: default frontmatter for new pages
 [frontmatter]
   date = ["lastmod", ":git", "date"]
+
+# Performance optimizations
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+  [minify.tdewolff.html]
+    keepDefaultAttrVals = false
+    keepDocumentTags = true
+    keepEndTags = true
+    keepQuotes = false
+    keepWhitespace = false
+
+# Image processing optimization
+[imaging]
+  quality = 85
+  resampleFilter = "Lanczos"
+  anchor = "Smart"
+
+# Caching configuration
+[caches]
+  [caches.images]
+    dir = ":resourceDir/_gen"
+    maxAge = "24h"
+  [caches.assets]
+    dir = ":resourceDir/_gen"
+    maxAge = "24h"
+  [caches.modules]
+    dir = ":cacheDir/modules"
+    maxAge = "24h"

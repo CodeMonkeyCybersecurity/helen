@@ -7,7 +7,7 @@ weight: 1
 
 # What Is Delphi?
 
-![antivirus_siem_xdr](/images/antivirus_siem_xdr.png)
+![antivirus_siem_xdr](/images/antivirus_siem_xdr_optimized.jpg)
 
 **Delphi** is Code Monkey Cybersecurity’s managed **XDR** (Extended Detection and Response) and **SIEM** (Security Information and Event Management) platform — built for real-world security, not checkbox compliance.
 

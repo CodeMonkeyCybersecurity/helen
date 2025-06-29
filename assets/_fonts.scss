@@ -14,20 +14,12 @@
   src: url('/fonts/NotoSans-Bold.ttf') format('truetype');
 }
 
-@font-face {
-  font-family: 'Noto Sans Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: fallback;
-  src: url('/fonts/NotoSansMono-Regular.ttf') format('truetype');
-}
-
 body {
   font-family: 'Noto Sans', sans-serif;
   font-size: 1.2rem;
 }
 
 code {
-  font-family: 'Noto Sans Mono', monospace;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
   font-size: 1.2rem;
 }

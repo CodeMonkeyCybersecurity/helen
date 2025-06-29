@@ -13,7 +13,7 @@ Delphi Notify is your cybersecurity “first responder”. It's built to help ev
 
 ## Ready to Try Delphi Notify?
 {{% hint info %}}
-{{< button href="https://hera.cybermonkey.dev" >}}Sign up{{< /button >}}
+{{< button href="/docs/delphi/sign-up/" >}}Get Started with Delphi Notify{{< /button >}}
 {{% /hint %}}
 
 ![oh_the_hacks](/images/oh_the_hacks.jpg)

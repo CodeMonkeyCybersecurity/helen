@@ -6,7 +6,7 @@ bookFlatSection: true
 
 # Code Monkey Cybersecurity
 
-![cover_puppy_moni_monkey](/images/cover_puppy_moni_monkey.png)
+![cover_puppy_moni_monkey](/images/cover_puppy_moni_monkey_optimized.jpg)
 
 ---
 ## Cybersecurity That Speaks Human
