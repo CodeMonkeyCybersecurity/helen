@@ -48,8 +48,25 @@ docker-compose down
 
 ### Directory Structure
 - `content/` - Markdown content files
-  - `content/docs/` - Documentation pages (Delphi product info, governance)
-  - `content/posts/` - Blog posts
+  - `content/posts/` - Blog posts (used to track Facebook/LinkedIn posts and company news)
+  - `content/docs/` - Main documentation and service pages
+  - `content/docs/industries/` - Industry-specific landing pages (Healthcare, Legal, Retail)
+  - `content/docs/training/` - Scam education and phishing training content
+  - `content/docs/delphi/` - Delphi Notify product information and sign-up flows
+  - `content/docs/governance/` - Company policies and compliance documentation
+
+### Blog Strategy
+The `/posts/` section serves dual purposes:
+1. **Public blog** for company news, achievements, and industry insights
+2. **Social media tracking** - content often repurposed for Facebook/LinkedIn posts
+3. **SEO content marketing** - industry-specific articles and case studies
+
+**Blog content types:**
+- Company milestones (Microsoft partnership, Chamber membership, directory listings)
+- Security awareness articles and tips
+- Case studies and customer success stories
+- Industry news and commentary
+- Product updates and feature announcements
 - `layouts/` - Hugo HTML templates and partials
 - `assets/` - Source assets (SCSS, JavaScript)
 - `static/` - Static files (images, fonts)

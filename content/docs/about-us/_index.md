@@ -18,9 +18,36 @@ We’re launching **Delphi**, a multi-tenant XDR and SIEM platform designed for 
 
 Founded by someone who rebuilt their life from the ground up, our mission is rooted in lived experience. We believe cybersecurity should serve people, not exploit fear. That means clearer tools, transparent policies, and support for those working in under-resourced or high-risk environments — including domestic violence organizations, community groups, and public-good teams doing critical work.
 
-## DevSecOps tooling
+## Open Source Innovation
 
-Our infrastructure choices (like Vault, Keycloak, Wazuh, KVM, and Docker) are automated through our internal platform, **Eos**, which makes it easier to build, maintain, and audit secure environments at scale.
+### EOS - Enterprise Orchestration System
+
+We're actively developing **EOS**, an open source equivalent to Google's Borg system for enterprise workload orchestration. This large-scale container orchestration platform demonstrates our deep technical expertise and commitment to open source innovation.
+
+**Core Capabilities:**
+- **Large-scale distributed container management** - Deploy and manage thousands of containers across cluster nodes
+- **Intelligent resource allocation** - CPU, memory, and storage optimization with real-time rebalancing
+- **Advanced scheduling algorithms** - Constraint-based placement with affinity/anti-affinity rules
+- **High availability and fault tolerance** - Automatic failover, health monitoring, and self-healing infrastructure
+- **Multi-tenant isolation** - Secure workload separation with namespace-based resource quotas
+- **Real-time metrics and observability** - Comprehensive monitoring, logging, and alerting
+- **API-driven automation** - Full REST API for CI/CD integration and infrastructure as code
+- **Complete open source implementation** - No vendor lock-in, full transparency, community-driven development
+
+**Real-World Applications:**
+- **Microservices orchestration** for scalable web applications
+- **Batch processing** for data analytics and ML workloads  
+- **DevSecOps pipelines** with integrated security scanning and compliance
+- **Multi-cloud deployments** with consistent management across providers
+- **Edge computing** support for distributed IoT and CDN workloads
+
+EOS powers our own production infrastructure, running Delphi, Vault, Keycloak, and Wazuh services with enterprise-grade reliability and security.
+
+🔗 **[View EOS on GitHub](https://github.com/CodeMonkeyCybersecurity/eos)** - Follow our development progress and contribute to the project.
+
+### DevSecOps Infrastructure
+
+Our production infrastructure choices (Vault, Keycloak, Wazuh, KVM, and Docker) are automated through EOS, demonstrating real-world application of our orchestration platform for secure, scalable deployments.
 
 We're guided by hands-on experience with industry frameworks and practical certifications, including CompTIA A+, Network+, Security+, and PenTest+, which inform our focus on real-world resilience over theoretical compliance.
 
