@@ -45,7 +45,7 @@ When we detect payment-related threats, our alerts help you:
 - **Protect customer trust** through rapid threat response
 - **Minimize business disruption** during security incidents
 
-### **⏰ Business-Hours Priority**
+### ** Business-Hours Priority**
 Retail can't afford downtime during peak business hours:
 - **Priority alerting** for threats to payment processing systems
 - **Rapid response** during busy periods and seasonal rushes
@@ -90,7 +90,7 @@ Retail can't afford downtime during peak business hours:
 
 ## **Retail Industry-Specific Features**
 
-### **💰 Payment Processing Protection**
+### ** Payment Processing Protection**
 - Monitors point-of-sale systems and payment terminals
 - Detects payment card skimming attempts and unusual transaction patterns
 - Alerts for suspicious payment processing activity or malware

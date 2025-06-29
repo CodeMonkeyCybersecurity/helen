@@ -9,7 +9,7 @@ description: "Launching August 2025: True enterprise backup powered by Restic an
 
 ![Enterprise Backup Service Launch](/images/oh_the_hacks_web.jpg)
 
-# **Coming August: Real Backup for Real Businesses** 💾
+# **Coming August: Real Backup for Real Businesses** 
 
 ## **Because "it's in the cloud" doesn't mean it's safe**
 
@@ -19,7 +19,7 @@ After watching too many WA businesses discover the hard way that **OneDrive and 
 
 ---
 
-## **The Problem: Sync ≠ Backup** ⚠️
+## **The Problem: Sync ≠ Backup** 
 
 ### **What Happens When You Delete Something by Mistake**
 
@@ -103,7 +103,7 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 
 ## **What We're Launching in August** 
 
-### **💼 Professional Backup**
+### ** Professional Backup**
 **$5 per person per month**
 
 **Perfect for:** Small offices, retail stores, professional practices
@@ -130,7 +130,7 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 - **Multi-site replication** across geographic locations
 - **Advanced encryption** with customer-managed keys
 
-### **🔧 Custom Solutions**
+### ** Custom Solutions**
 **Quote on request**
 
 **For businesses with specific needs:**
@@ -143,7 +143,7 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 
 ---
 
-## **Why This Pricing Makes Sense** 💰
+## **Why This Pricing Makes Sense** 
 
 ### **Compare the Real Costs:**
 
@@ -159,7 +159,7 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 
 ---
 
-## **Technical Implementation: Enterprise Standards** 🔧
+## **Technical Implementation: Enterprise Standards** 
 
 ### **Memory-Safe Architecture**
 - **Restic core** written in Go (White House-recommended memory-safe language)
@@ -212,7 +212,7 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 
 ---
 
-## **Launch Timeline and Early Access** 📅
+## **Launch Timeline and Early Access** 
 
 ### **July 2025: Development Completion**
 - Final testing of Restic integration
@@ -278,14 +278,14 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 
 ---
 
-## **Getting Ready for Launch** 📞
+## **Getting Ready for Launch** 
 
 ### **Early Access Application**
 **Available now through July 31st**
 
  **Email:** [backup@cybermonkey.net.au](mailto:backup@cybermonkey.net.au?subject=Early%20Access%20Application)
-📞 **Phone:** (08) 6102 2421
-🌐 **Web:** [cybermonkey.net.au/backup](https://cybermonkey.net.au/docs/delphi/)
+ **Phone:** (08) 6102 2421
+ **Web:** [cybermonkey.net.au/backup](https://cybermonkey.net.au/docs/delphi/)
 
 **Include in your application:**
 - Business size and industry
@@ -315,7 +315,7 @@ We'll evaluate your current data protection and show you:
 
 ---
 
-## **Why August Is the Right Time** ⏰
+## **Why August Is the Right Time** 
 
 ### **Financial Year Timing**
 - **New budget cycles** starting for many Australian businesses
@@ -383,8 +383,8 @@ A: No. Client-side encryption means we only see encrypted data. You control the 
 
 **Contact Information:**
  **Email:** [backup@cybermonkey.net.au](mailto:backup@cybermonkey.net.au)  
-📞 **Phone:** (08) 6102 2421  
-🌐 **Website:** [cybermonkey.net.au](https://cybermonkey.net.au)  
+ **Phone:** (08) 6102 2421  
+ **Website:** [cybermonkey.net.au](https://cybermonkey.net.au)  
 📍 **Location:** Fremantle, Western Australia
 
 ---

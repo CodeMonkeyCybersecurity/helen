@@ -131,7 +131,7 @@ Unlike expensive security software, **training delivers immediate, measurable re
 
 ---
 
-## **Real Scenarios We're Seeing** ⚠️
+## **Real Scenarios We're Seeing** 
 
 ### **The Fake Invoice Scam**
 *A Perth accounting firm received an "updated invoice" from their regular office supplier. The email looked identical to previous invoices, but the payment details had changed. They transferred $8,500 before realizing the scam.*
@@ -162,12 +162,12 @@ Unlike expensive security software, **training delivers immediate, measurable re
 
 ---
 
-## **Getting Started Is Simple** 📞
+## **Getting Started Is Simple** 
 
 ### **Option 1: Quick Assessment**
 **Free 15-minute phone call** to discuss your current security training and identify immediate risks.
 
-📞 **Call us:** (08) 6102 2421  
+ **Call us:** (08) 6102 2421  
  **Email:** [training@cybermonkey.net.au](mailto:training@cybermonkey.net.au)
 
 ### **Option 2: Vulnerability Test**
@@ -176,7 +176,7 @@ Unlike expensive security software, **training delivers immediate, measurable re
 ### **Option 3: Live Demo**
 **30-minute demonstration** showing exactly how our training works and what results you can expect.
 
-🌐 **Book online:** [cybermonkey.net.au/training-demo](https://cybermonkey.net.au/docs/training/)
+ **Book online:** [cybermonkey.net.au/training-demo](https://cybermonkey.net.au/docs/training/)
 
 ---
 
@@ -212,8 +212,8 @@ Don't wait until you're part of the statistics.
 
 **Contact Information:**
  **Email:** [training@cybermonkey.net.au](mailto:training@cybermonkey.net.au)  
-📞 **Phone:** (08) 6102 2421  
-🌐 **Website:** [cybermonkey.net.au/training](https://cybermonkey.net.au/docs/training/)  
+ **Phone:** (08) 6102 2421  
+ **Website:** [cybermonkey.net.au/training](https://cybermonkey.net.au/docs/training/)  
 📍 **Location:** Fremantle, Western Australia
 
 ---

@@ -113,9 +113,9 @@ With **47 million accounts compromised in 2024** and scams targeting **every ind
 
 ## **Ready to Protect Your Team?**
 
-📞 **Call**: (+61) 0432 038 310  
+ **Call**: (+61) 0432 038 310  
  **Email**: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)  
-🌐 **Book Now**: [cybermonkey.net.au/docs/training/](https://cybermonkey.net.au/docs/training/)
+ **Book Now**: [cybermonkey.net.au/docs/training/](https://cybermonkey.net.au/docs/training/)
 
 ### ** Free Phishing Assessment**
 [Click here to request your free vulnerability test](mailto:main@cybermonkey.net.au?subject=Free%20Phishing%20Assessment)

@@ -97,7 +97,7 @@ Legal work operates on strict deadlines - our support matches that urgency:
 - Alerts for access to highly sensitive cases (high-value, high-profile, etc.)
 - Tracks privilege-protected document handling
 
-### **💰 Trust Account Security**
+### ** Trust Account Security**
 - Monitors trust account access and transaction patterns
 - Detects suspicious payment requests or bank account changes
 - Alerts for unusual trust account activity or access attempts
@@ -109,7 +109,7 @@ Legal work operates on strict deadlines - our support matches that urgency:
 - Alerts for suspicious email forwarding or auto-reply rules
 - Protects attorney-client privileged communications
 
-### **⏰ Court Deadline Protection**
+### ** Court Deadline Protection**
 - Prioritizes security responses during critical case deadlines
 - Provides rapid response when case-critical systems are compromised
 - Helps maintain access to court filing systems and calendaring

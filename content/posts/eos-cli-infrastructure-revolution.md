@@ -138,7 +138,7 @@ eos alerts setup email           # Get notified about real problems
 
 ---
 
-## **💰 Professional Quality Without Professional Prices**
+## ** Professional Quality Without Professional Prices**
 
 ### **What Professional IT Services Cost:**
 
@@ -191,7 +191,7 @@ eos alerts setup email           # Get notified about real problems
 - **Professional backing** - Code Monkey Cybersecurity provides commercial support when you need it
 - **Transparency** - see exactly how everything works, no hidden surprises
 
-### **🔧 Built on Trusted, Proven Tools:**
+### ** Built on Trusted, Proven Tools:**
 
 Eos doesn't reinvent everything - it makes existing professional tools easy to use:
 - **Restic** - professional backup software used by major companies

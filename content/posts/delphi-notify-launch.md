@@ -79,7 +79,7 @@ We're giving Delphi Notify away **completely free** until August 1st as part of 
 
  **Get Started**: Email [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au?subject=Delphi%20Notify%20Free%20Trial)  
 💬 **Questions?** Message us here or call (+61) 0432 038 310  
-🌐 **Learn More**: [cybermonkey.net.au/docs/delphi/](https://cybermonkey.net.au/docs/delphi/)
+ **Learn More**: [cybermonkey.net.au/docs/delphi/](https://cybermonkey.net.au/docs/delphi/)
 
 ---
 
