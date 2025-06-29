@@ -1,0 +1,93 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project Overview
+
+This is a Hugo-based static website for Code Monkey Cybersecurity, a cybersecurity company based in Fremantle, Western Australia. The site promotes their "Delphi Notify" XDR/SIEM security service and follows a transparency-focused approach with dual licensing (AGPL v3 and Do No Harm License).
+
+## Development Commands
+
+### Local Development
+```bash
+# Start development server with drafts enabled
+hugo server --buildDrafts
+
+# Start development server on specific port
+hugo server --port 1313
+
+# Build for production
+hugo --minify
+```
+
+### Docker Deployment
+```bash
+# Build and serve via Docker (accessible on port 8009)
+docker-compose up -d
+
+# Stop Docker deployment
+docker-compose down
+```
+
+### Hugo Installation
+```bash
+# Install Hugo Extended (Linux)
+./install-hugo.sh
+
+# Manual installation (requires Hugo Extended 0.128.0+)
+# Download from https://github.com/gohugoio/hugo/releases/latest
+```
+
+## Architecture Overview
+
+### Core Technology Stack
+- **Hugo Extended 0.128.0+** - Static site generator
+- **Hugo Book Theme** - Managed as git submodule in `themes/hugo-book/`
+- **SCSS** - Styling with Hugo's asset pipeline
+- **Docker + Nginx** - Production deployment
+
+### Directory Structure
+- `content/` - Markdown content files
+  - `content/docs/` - Documentation pages (Delphi product info, governance)
+  - `content/posts/` - Blog posts
+- `layouts/` - Hugo HTML templates and partials
+- `assets/` - Source assets (SCSS, JavaScript)
+- `static/` - Static files (images, fonts)
+- `public/` - Generated site output (excluded from git)
+
+### Key Configuration
+- `config.toml` - Main Hugo configuration
+- `go.mod` - Go module dependencies
+- `docker-compose.yml` - Container orchestration
+- Base URL: `https://cybermonkey.net.au`
+
+### Theme Management
+The Hugo Book theme is included as a git submodule. When working with the theme:
+```bash
+# Initialize submodules after cloning
+git submodule update --init --recursive
+
+# Update theme
+git submodule update --remote themes/hugo-book
+```
+
+### Content Features
+- Mathematical notation support (KaTeX)
+- Diagram rendering (Mermaid)
+- Search functionality with JSON index
+- Custom Hugo shortcodes for interactive elements
+- Multi-theme support (light/dark/auto)
+
+### Build Process
+Hugo handles asset compilation automatically:
+- SCSS compilation via Hugo Pipes
+- JavaScript minification and bundling
+- Search index generation (JSON output format)
+- Sitemap and RSS feed generation
+
+### Development Notes
+- Always use `hugo server --buildDrafts` for local development to see draft content
+- The site generates JSON search index accessible at `/index.json`
+- Custom shortcodes are available in `layouts/shortcodes/`
+- Static assets should be placed in `static/` directory
+- All content uses Markdown with Hugo frontmatter
