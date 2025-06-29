@@ -6,7 +6,7 @@ bookFlatSection: true
 
 # Code Monkey Cybersecurity
 
-![Code Monkey Cybersecurity - Human-centered cybersecurity protection](/images/cover_puppy_moni_monkey_optimized.jpg)
+![Code Monkey Cybersecurity - Human-centered cybersecurity protection](/images/cover_puppy_moni_monkey_web.jpg)
 
 ---
 ## Cybersecurity That Speaks Human

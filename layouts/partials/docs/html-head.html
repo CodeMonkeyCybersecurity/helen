@@ -19,7 +19,7 @@
     <meta property="og:image" content="{{ . | absURL }}">
   {{ end }}
 {{ else }}
-  <meta property="og:image" content="{{ "/images/cover_puppy_moni_monkey_optimized.jpg" | absURL }}">
+  <meta property="og:image" content="{{ "/images/cover_puppy_moni_monkey_web.jpg" | absURL }}">
 {{ end }}
 
 <!-- Twitter Card tags -->
@@ -31,7 +31,7 @@
     <meta name="twitter:image" content="{{ . | absURL }}">
   {{ end }}
 {{ else }}
-  <meta name="twitter:image" content="{{ "/images/cover_puppy_moni_monkey_optimized.jpg" | absURL }}">
+  <meta name="twitter:image" content="{{ "/images/cover_puppy_moni_monkey_web.jpg" | absURL }}">
 {{ end }}
 
 {{- with .Page.Params.BookHref -}}
@@ -82,7 +82,7 @@
   "name": "Code Monkey Cybersecurity",
   "alternateName": "Code Monkey Cyber",
   "url": "{{ .Site.BaseURL }}",
-  "logo": "{{ "/images/cover_puppy_moni_monkey_optimized.jpg" | absURL }}",
+  "logo": "{{ "/images/cover_puppy_moni_monkey_web.jpg" | absURL }}",
   "description": "{{ .Site.Params.description }}",
   "contactPoint": {
     "@type": "ContactPoint",
