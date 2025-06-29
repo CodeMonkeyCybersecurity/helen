@@ -108,3 +108,26 @@ Hugo handles asset compilation automatically:
 - Custom shortcodes are available in `layouts/shortcodes/`
 - Static assets should be placed in `static/` directory
 - All content uses Markdown with Hugo frontmatter
+
+## Writing Style Guidelines
+
+### Tone and Language
+- **Target audience**: Home users, small businesses, and community groups (not enterprise IT professionals)
+- **Tone**: Approachable, helpful, and confidence-building rather than intimidating
+- **Avoid**: Military terminology, threat-focused language, imposing costs, "cyber warfare" rhetoric
+- **No padlock emojis or symbols** - use friendly alternatives like ✅, 🏠, 🛠️, 📱
+- **Focus on empowerment** rather than fear-based messaging
+
+### Prohibited Terms/Phrases
+- ❌ "Military-grade" or "Enterprise-grade" (use "reliable" or "professional-quality")
+- ❌ "Threat intelligence" or "killchain" 
+- ❌ "Cyber warfare" or aggressive security terminology
+- ❌ Padlock symbols 🔒 🔐 (use alternatives)
+- ❌ Fear-inducing language about costs or consequences
+
+### Preferred Language
+- ✅ "Easy to use" instead of "enterprise-ready"
+- ✅ "Helps you stay safe" instead of "defends against threats"
+- ✅ "Practical tools" instead of "security arsenal"
+- ✅ "Peace of mind" instead of "threat mitigation"
+- ✅ Focus on positive outcomes and user empowerment
