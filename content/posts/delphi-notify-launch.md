@@ -1,5 +1,5 @@
 ---
-title: "🚀 Introducing Delphi Notify - Cybersecurity That Actually Makes Sense"
+title: " Introducing Delphi Notify - Cybersecurity That Actually Makes Sense"
 date: "2025-06-17"
 author: "Henry Oliver"
 tags: ["Delphi Notify", "Product Launch", "Fremantle Business", "Cybersecurity Software"]
@@ -19,7 +19,7 @@ Most security software treats you like an IT professional. You get alerts like:
 
 **What does that even mean?** 🤷‍♀️
 
-## **Meet Delphi Notify** 🛡️
+## **Meet Delphi Notify** 
 
 Delphi Notify is different. It's a small program that runs quietly in the background, watching for security issues. When something **actually matters**, it sends you an email that explains what happened in **plain English**.
 
@@ -53,12 +53,12 @@ Instead of cryptic technical alerts, Delphi Notify sends emails like:
 > 
 > If you're unsure about any of this, reply to this email and we'll help you sort it out.
 
-## **Why Delphi Notify is Different** 🎯
+## **Why Delphi Notify is Different** 
 
 ### **🔍 Behavior-Based Detection**
 Unlike antivirus software that only catches suspicious files, Delphi Notify watches for the **behaviors** that humans use when they're up to cyber mischief.
 
-### **📱 Built for Real People**
+### ** Built for Real People**
 Designed for everyday people and small businesses - not just IT professionals. It's like having a knowledgeable security friend who only speaks up when something genuinely needs your attention.
 
 ### **🗣️ Plain English Explanations**
@@ -75,10 +75,10 @@ We're giving Delphi Notify away **completely free** until August 1st as part of 
 
 ## **Ready to Try It?** 
 
-🏢 **Based in Fremantle, WA** - Supporting local businesses with human-shaped cybersecurity
+ **Based in Fremantle, WA** - Supporting local businesses with human-shaped cybersecurity
 
 📧 **Get Started**: Email [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au?subject=Delphi%20Notify%20Free%20Trial)  
-💬 **Questions?** Message us here or call (+61) 432 038 310  
+💬 **Questions?** Message us here or call (+61) 0432 038 310  
 🌐 **Learn More**: [cybermonkey.net.au/docs/delphi/](https://cybermonkey.net.au/docs/delphi/)
 
 ---
@@ -101,7 +101,7 @@ We're giving Delphi Notify away **completely free** until August 1st as part of 
 
 ---
 
-**🔄 Share this post** to help other WA businesses discover security that actually makes sense!
+** Share this post** to help other WA businesses discover security that actually makes sense!
 
 *#CyberSecurity #DelphiNotify #Fremantle #WABusiness #SecuritySoftware #PlainEnglish*
 

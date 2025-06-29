@@ -13,9 +13,9 @@ bookFlatSection: true
 **Delphi Notify** delivers advanced threat detection with **human-reviewed alerts in plain English**. No technical degree required - just clear guidance when something actually needs your attention.
 
 {{% hint info %}}
-**🚀 Start Your Free 30-Day Trial**
+** Start Your Free 30-Day Trial**
 
-✓ No credit card required  ✓ Setup assistance included  ✓ Cancel anytime
+✅ No credit card required  ✅ Setup assistance included  ✅ Cancel anytime
 
 {{< button href="/docs/delphi/sign-up/" >}}Get Started Now - Free for 30 Days{{< /button >}}
 
@@ -31,10 +31,10 @@ bookFlatSection: true
 ### 🧠 **Human-Reviewed Alerts**
 Real security experts review every alert before you see it. No spam, no false alarms - just meaningful notifications when action is needed.
 
-### 📱 **Plain English Guidance**  
+###  **Plain English Guidance**  
 "Your computer tried to update its clock by 40 hours - this could indicate a network issue. Here's what to check..."
 
-### 🛡️ **Enterprise-Level Protection**
+###  **Enterprise-Level Protection**
 Advanced threat detection that catches sophisticated attacks your antivirus might miss.
 
 ---
@@ -88,7 +88,7 @@ No risk, no commitments. Our team will help you set everything up and you'll sta
 
 {{< button href="/docs/delphi/sign-up/" >}}Start Free 30-Day Trial{{< /button >}}
 
-*Questions? Call (+61) 432 038 310 or email [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)*
+*Questions? Call (+61) 0432 038 310 or email [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)*
 {{% /hint %}}
 
 ---

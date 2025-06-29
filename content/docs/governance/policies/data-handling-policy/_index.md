@@ -47,7 +47,7 @@ We retain logs long enough to support full incident investigation, forensic trac
 | Endpoint & agent telemetry      | 12–24 months           | Includes Sysmon, Delphi                |
 | Network flow logs               | 12 months              | NetFlow, Zeek for lateral tracing      |
 | SIEM events / enrichments       | 24–36 months           | High-value alerting data               |
-| Audit trails (Vault, EOS)       | 36 months              | Mandatory for compliance               |
+| Audit trails (Vault, Eos)       | 36 months              | Mandatory for compliance               |
 | System/app logs (e.g. Docker)   | 90–180 days            | Rotated frequently                     |
 | Incident artifacts              | With ticket lifecycle  | SLA- or client-driven duration         |
 | Config backups                  | 180 days + annual snap | GPG-encrypted, offsite                 |

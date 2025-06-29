@@ -41,7 +41,7 @@ eos status                       # See everything in plain English
 
 ---
 
-## **📊 The Small Business IT Reality Check**
+## ** The Small Business IT Reality Check**
 
 Research from 2024-2025 shows just how underserved small businesses are:
 
@@ -202,7 +202,7 @@ Eos doesn't reinvent everything - it makes existing professional tools easy to u
 
 ---
 
-## **🚀 Getting Started Is Actually Easy**
+## ** Getting Started Is Actually Easy**
 
 ### **Three Simple Steps:**
 
@@ -233,7 +233,7 @@ eos monitor setup
 
 ---
 
-## **📱 The Support You Actually Need**
+## ** The Support You Actually Need**
 
 ### **Community Support (Free)**
 - **User forums** with people facing similar challenges
@@ -253,7 +253,7 @@ eos monitor setup
 
 ---
 
-## **🎯 Start Small, Grow Confident**
+## ** Start Small, Grow Confident**
 
 You don't need to set up everything at once. Start with what matters most:
 
@@ -281,14 +281,14 @@ You don't need to set up everything at once. Start with what matters most:
 
 ## **🔮 Built for the Future, Designed for Today**
 
-### **🎯 What Works Right Now:**
+### ** What Works Right Now:**
 - **Professional backup and recovery** - protect your business data
 - **Secure password and secret management** - stop password chaos
 - **System monitoring and alerts** - catch problems early
 - **AI-powered troubleshooting** - get help when things go wrong
 - **Simple automation** - let computers do the boring work
 
-### **🚀 What's Coming:**
+### ** What's Coming:**
 - **Windows and Mac support** - currently Linux-focused
 - **Mobile apps** - manage everything from your phone
 - **Team collaboration features** - better tools for small teams

@@ -1,5 +1,5 @@
 ---
-title: "🚨 New Service Launch: Scam Education & Phishing Training for WA Businesses"
+title: " New Service Launch: Scam Education & Phishing Training for WA Businesses"
 date: "2025-07-04"
 author: "Henry Oliver"
 tags: ["Scam Education", "Phishing Training", "Service Launch", "Small Business Security", "WA Business"]
@@ -9,7 +9,7 @@ description: "Starting Monday July 7th: We're launching dedicated scam education
 
 ![Scam Education Training Launch](/images/oh_the_hacks_web.jpg)
 
-# **Monday July 7th: We're Launching Scam Education & Phishing Training** 🎯
+# **Monday July 7th: We're Launching Scam Education & Phishing Training** 
 
 ## **Because Australian businesses lost $7.9 million to scams in 2024 - and most could have been prevented**
 
@@ -45,7 +45,7 @@ Training works. Businesses with proper phishing awareness training see:
 
 ---
 
-## **What We're Launching: Real-World Scam Protection** 🛡️
+## **What We're Launching: Real-World Scam Protection** 
 
 Starting **Monday, July 7th**, we're offering three levels of scam education and phishing training designed specifically for WA businesses:
 
@@ -88,7 +88,7 @@ Starting **Monday, July 7th**, we're offering three levels of scam education and
 
 ---
 
-## **How Our Training Is Different** 🎯
+## **How Our Training Is Different** 
 
 ### **🏠 WA-Focused Content**
 - Real examples from Perth and regional WA businesses
@@ -102,7 +102,7 @@ Starting **Monday, July 7th**, we're offering three levels of scam education and
 - Immediate support when employees receive suspicious emails
 - Celebration of employees who report potential threats
 
-### **📊 Measurable Results**
+### ** Measurable Results**
 - Monthly click-rate tracking with improvement goals
 - Individual coaching for high-risk employees
 - Business impact reporting (time saved, incidents prevented)
@@ -196,7 +196,7 @@ A: We provide immediate incident response support to minimize damage and use it 
 
 ---
 
-## **Ready to Protect Your Business?** 🔒
+## **Ready to Protect Your Business?** 
 
 **The statistics don't lie: 90% of breaches start with human error.** But humans can also be your strongest defense - when they're properly trained.
 

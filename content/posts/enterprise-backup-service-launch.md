@@ -1,5 +1,5 @@
 ---
-title: "🔄 Coming Next Month: Enterprise-Grade Backup for SMEs - Because OneDrive and iCloud Aren't Actually Backups"
+title: " Coming Next Month: Enterprise-Grade Backup for SMEs - Because OneDrive and iCloud Aren't Actually Backups"
 date: "2025-07-05"
 author: "Henry Oliver"
 tags: ["Backup Services", "Data Protection", "Restic", "Memory Safety", "SME Security"]
@@ -72,7 +72,7 @@ Doesn't meet **3-2-1 backup standards** recommended by US Cybersecurity and Infr
 
 ---
 
-## **Our Solution: Restic-Powered Enterprise Backup** 🛡️
+## **Our Solution: Restic-Powered Enterprise Backup** 
 
 ### **Built on Memory-Safe Foundations**
 
@@ -101,7 +101,7 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 
 ---
 
-## **What We're Launching in August** 🚀
+## **What We're Launching in August** 
 
 ### **💼 Professional Backup**
 **$5 per person per month**
@@ -116,7 +116,7 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 - **Self-service restore** via web interface
 - **Business hours support** for setup and questions
 
-### **🏢 Enterprise Backup**
+### ** Enterprise Backup**
 **$8 per person per month**
 
 **Perfect for:** Growing businesses, compliance-heavy industries, multi-location companies
@@ -187,7 +187,7 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 
 ---
 
-## **Migration from Existing "Backup" Solutions** 🔄
+## **Migration from Existing "Backup" Solutions** 
 
 ### **From OneDrive/iCloud Sync:**
 1. **Assessment** - identify what's actually protected vs. just synced
@@ -238,7 +238,7 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 
 ---
 
-## **Real-World Scenarios We Prevent** 🛡️
+## **Real-World Scenarios We Prevent** 
 
 ### **The Accounting Firm Disaster**
 *A Perth accounting firm had their bookkeeper accidentally delete an entire client folder. With OneDrive, the 93-day window had passed. They had to recreate 18 months of financial records manually - 300+ hours of work.*
@@ -257,7 +257,7 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 
 ---
 
-## **Integration with Our Security Ecosystem** 🔗
+## **Integration with Our Security Ecosystem** 
 
 ### **Works with Delphi Notify**
 - **Security monitoring** alerts if backup systems are compromised
@@ -359,7 +359,7 @@ A: No. Client-side encryption means we only see encrypted data. You control the 
 
 ---
 
-## **The Bottom Line** 📊
+## **The Bottom Line** 
 
 **Current situation:** 40% of Australian SMEs have no real backup, and another 40-50% have backups that won't work when needed.
 

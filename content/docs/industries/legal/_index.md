@@ -31,7 +31,7 @@ Legal professionals handle highly sensitive client information and face unique c
 
 ## **How Delphi Notify Protects Legal Practices**
 
-### **⚖️ Legal-Specific Monitoring**
+### ** Legal-Specific Monitoring**
 We understand legal workflows and monitor for threats common to legal environments:
 - Unusual access to case management systems and client files
 - Suspicious email activity targeting trust accounts or client payments
@@ -45,7 +45,7 @@ When we detect threats, our alerts consider legal professional responsibilities:
 - **Privilege preservation** steps to maintain attorney-client confidentiality
 - **Professional liability considerations** for data breach response
 
-### **🚨 Rapid Response for Legal Emergencies**
+### ** Rapid Response for Legal Emergencies**
 Legal work operates on strict deadlines - our support matches that urgency:
 - **Priority alerting** for threats to case-critical systems
 - **Emergency after-hours support** when court deadlines are at risk
@@ -148,7 +148,7 @@ Try Delphi Notify risk-free with full access to legal industry-specific monitori
 
 {{< button href="/docs/delphi/sign-up/" >}}Start Your Free Trial{{< /button >}}
 
-*Questions? Call us at (+61) 432 038 310 or [email for legal consultation](mailto:main@cybermonkey.net.au?subject=Legal%20Cybersecurity%20Consultation&body=Hi!%20I'm%20interested%20in%20Delphi%20Notify%20for%20our%20legal%20practice.%0A%0APractice%20details:%0A-%20Type%20of%20practice:%0A-%20Number%20of%20attorneys:%0A-%20Case%20management%20system:%0A-%20Trust%20account%20management:%0A-%20Specific%20security%20concerns:%0A%0APlease%20contact%20me%20to%20discuss%20our%20needs.)*
+*Questions? Call us at (+61) 0432 038 310 or [email for legal consultation](mailto:main@cybermonkey.net.au?subject=Legal%20Cybersecurity%20Consultation&body=Hi!%20I'm%20interested%20in%20Delphi%20Notify%20for%20our%20legal%20practice.%0A%0APractice%20details:%0A-%20Type%20of%20practice:%0A-%20Number%20of%20attorneys:%0A-%20Case%20management%20system:%0A-%20Trust%20account%20management:%0A-%20Specific%20security%20concerns:%0A%0APlease%20contact%20me%20to%20discuss%20our%20needs.)*
 {{% /hint %}}
 
 ---

@@ -27,7 +27,7 @@ We use the [Do No Harm License](https://github.com/raisely/NoHarm) for projects 
 
 ### Includes Do No Harm
 
-- All infrastructure automation (e.g. EOS, deployment tooling)
+- All infrastructure automation (e.g. Eos, deployment tooling)
 - Code intended to interface with surveillance-sensitive environments (e.g. Vault, Wazuh agents)
 - Projects primarily developed by Code Monkey Cybersecurity
 

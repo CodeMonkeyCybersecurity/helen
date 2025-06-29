@@ -24,7 +24,7 @@ Use the "Forgot Password" link on the login page, or [contact our support team](
 Having trouble accessing your account? Our team is here to help:
 
 - **Email**: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
-- **Phone**: (+61) 432 038 310
+- **Phone**: (+61) 0432 038 310
 
 ### **Not a Customer Yet?**
 [Sign up for Delphi Notify](/docs/delphi/sign-up/) and start your free 30-day trial today.
@@ -35,12 +35,12 @@ Having trouble accessing your account? Our team is here to help:
 
 Once logged in, you can:
 
-✓ **View Security Alerts** - See all your security notifications in one place  
-✓ **Manage Devices** - Add, remove, or update monitored devices  
-✓ **Configure Notifications** - Choose how and when you receive alerts  
-✓ **Access Reports** - Review your security status and activity  
-✓ **Update Account Details** - Change your contact information and preferences  
+✅ **View Security Alerts** - See all your security notifications in one place  
+✅ **Manage Devices** - Add, remove, or update monitored devices  
+✅ **Configure Notifications** - Choose how and when you receive alerts  
+✅ **Access Reports** - Review your security status and activity  
+✅ **Update Account Details** - Change your contact information and preferences  
 
 ---
 
-*Need immediate security assistance? Call us at (+61) 432 038 310*
+*Need immediate security assistance? Call us at (+61) 0432 038 310*

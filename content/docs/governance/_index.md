@@ -32,7 +32,7 @@ Our founder, **Henry Oliver**, is certified in:
 
 These certifications underpin our approach to DevSecOps, threat modeling, and practical infrastructure hardening — especially for small teams, nonprofits, and vulnerable users navigating complex risk landscapes.
 
-This knowledge supports our platform development (Delphi, EOS) and informs how we design with usability, privacy, and auditability from the ground up.
+This knowledge supports our platform development (Delphi, Eos) and informs how we design with usability, privacy, and auditability from the ground up.
 
 ## Included Policies
 
@@ -44,7 +44,7 @@ This knowledge supports our platform development (Delphi, EOS) and informs how w
 - [Open Source Licensing Policy](/docs/governance/open-source-licensing)
 - [Terms of Service](/docs/governance/terms-of-service)
 
-All policies apply to our staff, services, and hosted infrastructure — including Delphi, Vault, Wazuh, EOS, and related systems.
+All policies apply to our staff, services, and hosted infrastructure — including Delphi, Vault, Wazuh, Eos, and related systems.
 
 ## Why It Matters
 

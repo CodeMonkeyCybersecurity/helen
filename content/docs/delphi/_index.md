@@ -38,7 +38,7 @@ Delphi integrates and hardens:
 **OpenSearch** for log analytics and dashboards  
 **Keycloak** for secure identity and access  
 **Vault** for secret and token management  
-**EOS** and **Hecate** for automated deployment, backup, and reverse proxy setup
+**Eos** and **Hecate** for automated deployment, backup, and reverse proxy setup
 
 ## Who's It For?
 

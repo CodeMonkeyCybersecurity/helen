@@ -96,13 +96,13 @@ Retail can't afford downtime during peak business hours:
 - Alerts for suspicious payment processing activity or malware
 - Helps maintain PCI DSS compliance requirements
 
-### **🏪 Multi-Location Support**
+### ** Multi-Location Support**
 - Monitors security across multiple store locations or franchises
 - Detects threats targeting specific locations or centralized systems
 - Provides location-specific incident response guidance
 - Coordinates response across multiple sites when needed
 
-### **📊 Customer Data Security**
+### ** Customer Data Security**
 - Monitors access to customer databases and loyalty programs
 - Detects unusual customer information access or export attempts
 - Alerts for potential customer data breaches
@@ -147,7 +147,7 @@ Try Delphi Notify risk-free with full access to retail industry-specific monitor
 
 {{< button href="/docs/delphi/sign-up/" >}}Start Your Free Trial{{< /button >}}
 
-*Questions? Call us at (+61) 432 038 310 or [email for retail consultation](mailto:main@cybermonkey.net.au?subject=Retail%20Cybersecurity%20Consultation&body=Hi!%20I'm%20interested%20in%20Delphi%20Notify%20for%20our%20retail%20business.%0A%0ABusiness%20details:%0A-%20Type%20of%20retail%20business:%0A-%20Number%20of%20locations:%0A-%20POS%20system%20used:%0A-%20Number%20of%20employees:%0A-%20Specific%20security%20concerns:%0A%0APlease%20contact%20me%20to%20discuss%20our%20needs.)*
+*Questions? Call us at (+61) 0432 038 310 or [email for retail consultation](mailto:main@cybermonkey.net.au?subject=Retail%20Cybersecurity%20Consultation&body=Hi!%20I'm%20interested%20in%20Delphi%20Notify%20for%20our%20retail%20business.%0A%0ABusiness%20details:%0A-%20Type%20of%20retail%20business:%0A-%20Number%20of%20locations:%0A-%20POS%20system%20used:%0A-%20Number%20of%20employees:%0A-%20Specific%20security%20concerns:%0A%0APlease%20contact%20me%20to%20discuss%20our%20needs.)*
 {{% /hint %}}
 
 ---

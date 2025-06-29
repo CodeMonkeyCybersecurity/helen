@@ -9,7 +9,7 @@ description: "DNS4EU launches as Europe's GDPR-compliant alternative to Big Tech
 
 ![European DNS Alternative](/images/oh_the_hacks_web.jpg)
 
-# **This is Cool and Good** 👍
+# **This is Cool and Good** 
 
 DNS4EU has officially launched, and it's exactly what the internet needed - a **European alternative to Google and Cloudflare DNS** that actually respects your privacy.
 
@@ -21,7 +21,7 @@ DNS4EU has officially launched, and it's exactly what the internet needed - a **
 - Operates entirely within **EU digital infrastructure**
 - **Strictly adheres to GDPR** (unlike certain US providers)
 
-### **🛡️ Five Resolver Configurations**
+### ** Five Resolver Configurations**
 DNS4EU isn't one-size-fits-all. Choose your protection level:
 
 1. **Protective Resolution** - Basic malware blocking
@@ -32,13 +32,13 @@ DNS4EU isn't one-size-fits-all. Choose your protection level:
 
 ## **Why This Matters for Privacy**
 
-### **🔒 Real Privacy Protection**
+### ** Real Privacy Protection**
 - **No data harvesting** for advertising
 - **GDPR compliance** built in from day one
 - **EU-based infrastructure** means EU privacy laws apply
 - **Transparent governance** with public oversight
 
-### **📊 Compare to Big Tech DNS:**
+### ** Compare to Big Tech DNS:**
 
 | Feature | DNS4EU | Google DNS | Cloudflare DNS |
 |---------|---------|------------|----------------|
@@ -50,18 +50,18 @@ DNS4EU isn't one-size-fits-all. Choose your protection level:
 
 ## **Technical Excellence**
 
-### **🚀 Modern DNS Standards**
+### ** Modern DNS Standards**
 - **DNS over HTTPS (DoH)** support
 - **DNS over TLS (DoT)** for encrypted queries
 - **Real-time threat intelligence** across EU countries
 - **Malware Information Sharing Platform (MISP)** integration
 
-### **🎯 Targeting 100 Million Users**
+### ** Targeting 100 Million Users**
 This isn't a small project - DNS4EU aims to protect **100 million users** across Europe, making it a genuine alternative to the US-dominated DNS landscape.
 
 ## **The Bigger Picture: Digital Sovereignty**
 
-### **🏛️ Part of EU's Digital Strategy**
+### ** Part of EU's Digital Strategy**
 DNS4EU includes:
 - **DNS4GOV** - Specialized service for government institutions
 - **Aura Infrastructure** - Tools for telecom operators
@@ -95,8 +95,8 @@ DNS4EU proves that **alternatives to Big Tech are possible** when governments, c
 
 *Want to discuss DNS privacy and security for your business? We help WA companies implement privacy-first infrastructure. [Contact us](mailto:main@cybermonkey.net.au) for a consultation.*
 
-**🔗 Learn More**: [joindns4.eu](https://joindns4.eu)  
-**🛡️ Our Services**: [cybermonkey.net.au](https://cybermonkey.net.au)
+** Learn More**: [joindns4.eu](https://joindns4.eu)  
+** Our Services**: [cybermonkey.net.au](https://cybermonkey.net.au)
 
 *#DNS4EU #DigitalSovereignty #Privacy #EuropeanTech #CyberSecurity*
 

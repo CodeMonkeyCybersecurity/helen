@@ -15,7 +15,7 @@ weight: 2
 Don't let your business become another statistic. Our practical training workshops teach your team to spot and stop threats before they become expensive breaches.
 
 {{% hint info %}}
-**🎯 Free Security Assessment**
+** Free Security Assessment**
 
 Want to see how vulnerable your team really is? We'll send harmless test phishing emails and show you the results.
 
@@ -53,7 +53,7 @@ No death-by-PowerPoint. Our workshops include:
 - **Hands-on practice** identifying threats
 - **Role-playing scenarios** relevant to your industry
 
-### **📱 Real-World Focus**
+### ** Real-World Focus**
 We cover the scams actually hitting Australian businesses:
 - Fake ATO and government emails
 - Toll/Australia Post delivery scams
@@ -61,7 +61,7 @@ We cover the scams actually hitting Australian businesses:
 - COVID-related health department scams
 - Energy bill and utility scams
 
-### **🎯 Measurable Results**
+### ** Measurable Results**
 We track improvement with:
 - Before/after phishing simulation tests
 - Click rate monitoring over 6 months
@@ -72,28 +72,28 @@ We track improvement with:
 
 ## **Training Options**
 
-### **🏢 On-Site Workshops**
+### ** On-Site Workshops**
 **$150 per person** (minimum 10 people)
 - 90-minute interactive session at your location
 - Customized to your industry and current threats
 - Take-home reference materials
 - 30-day follow-up phishing test included
 
-### **💻 Virtual Training Sessions**
+### ** Virtual Training Sessions**
 **$100 per person** (minimum 5 people)
 - 60-minute online workshop via Zoom/Teams
 - Interactive breakout sessions
 - Digital resources and checklists
 - Recording provided for future reference
 
-### **📚 Train-the-Trainer Program**
+### ** Train-the-Trainer Program**
 **$2,500 for up to 3 trainers**
 - Full-day certification workshop
 - Complete training materials and slide decks
 - Ongoing support and material updates
 - Perfect for larger organizations or HR teams
 
-### **🔄 Ongoing Phishing Simulation**
+### ** Ongoing Phishing Simulation**
 **$50 per employee per year**
 - Monthly simulated phishing tests
 - Automatic remedial training for clickers
@@ -198,7 +198,7 @@ Don't wait until after a breach. Book your scam education workshop today and sle
 
 {{< button href="mailto:main@cybermonkey.net.au?subject=Phishing%20Training%20Booking&body=Hi!%20I'd%20like%20to%20book%20phishing%20training%20for%20our%20team.%0A%0ACompany:%0ANumber%20of%20employees:%0APreferred%20format%20(on-site/virtual):%0AIndustry:%0APreferred%20dates:%0ASpecific%20concerns%20or%20requirements:" >}}Book Training Now{{< /button >}}
 
-**Call**: (+61) 432 038 310  
+**Call**: (+61) 0432 038 310  
 **Email**: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
 *Emergency training available within 48 hours for active threats*

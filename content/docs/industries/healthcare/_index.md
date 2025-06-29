@@ -29,7 +29,7 @@ As a healthcare provider, you handle some of the most sensitive information imag
 
 ## **How Delphi Notify Helps Healthcare Practices**
 
-### **🏥 Practice-Specific Monitoring**
+### ** Practice-Specific Monitoring**
 We understand healthcare workflows and monitor for threats specific to medical environments:
 - Unusual access to patient management systems
 - Suspicious file transfers or data exports
@@ -86,13 +86,13 @@ Healthcare can't wait for "business hours" security support:
 
 ## **Healthcare-Specific Features**
 
-### **🔒 HIPAA-Aware Monitoring**
+### ** HIPAA-Aware Monitoring**
 - Monitors access patterns to electronic health records (EHR) systems
 - Detects unusual patient data access or export attempts
 - Alerts for potential "minimum necessary" rule violations
 - Tracks access to highly sensitive records (VIP patients, employees, etc.)
 
-### **📱 Medical Device Security**
+### ** Medical Device Security**
 - Monitors network traffic from connected medical devices
 - Detects vulnerabilities in older medical equipment
 - Alerts for suspicious communication from medical IoT devices
@@ -137,7 +137,7 @@ Try Delphi Notify risk-free with full access to healthcare-specific monitoring a
 
 {{< button href="/docs/delphi/sign-up/" >}}Start Your Free Trial{{< /button >}}
 
-*Questions? Call us at (+61) 432 038 310 or [email for healthcare consultation](mailto:main@cybermonkey.net.au?subject=Healthcare%20Cybersecurity%20Consultation&body=Hi!%20I'm%20interested%20in%20Delphi%20Notify%20for%20our%20healthcare%20practice.%0A%0APractice%20details:%0A-%20Type%20of%20practice:%0A-%20Number%20of%20providers:%0A-%20Number%20of%20devices/computers:%0A-%20Current%20EHR%20system:%0A-%20Specific%20security%20concerns:%0A%0APlease%20contact%20me%20to%20discuss%20our%20needs.)*
+*Questions? Call us at (+61) 0432 038 310 or [email for healthcare consultation](mailto:main@cybermonkey.net.au?subject=Healthcare%20Cybersecurity%20Consultation&body=Hi!%20I'm%20interested%20in%20Delphi%20Notify%20for%20our%20healthcare%20practice.%0A%0APractice%20details:%0A-%20Type%20of%20practice:%0A-%20Number%20of%20providers:%0A-%20Number%20of%20devices/computers:%0A-%20Current%20EHR%20system:%0A-%20Specific%20security%20concerns:%0A%0APlease%20contact%20me%20to%20discuss%20our%20needs.)*
 {{% /hint %}}
 
 ---

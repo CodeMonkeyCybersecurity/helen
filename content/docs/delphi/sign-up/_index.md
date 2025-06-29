@@ -19,7 +19,7 @@ Delphi Notify is your knowledgeable digital security friend who only speaks up w
 
 {{< button href="https://hera.cybermonkey.dev" >}}Get Started Now - Free for 30 Days{{< /button >}}
 
-*✓ No credit card required  ✓ Setup assistance included  ✓ Cancel anytime*
+*✅ No credit card required  ✅ Setup assistance included  ✅ Cancel anytime*
 {{% /hint %}}
 
 ### Or Get More Information First

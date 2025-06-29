@@ -20,9 +20,9 @@ Founded by someone who rebuilt their life from the ground up, our mission is roo
 
 ## Open Source Innovation
 
-### EOS - Enterprise Orchestration System
+### Eos - Enterprise Orchestration System
 
-We're actively developing **EOS**, an open source equivalent to Google's Borg system for enterprise workload orchestration. This large-scale container orchestration platform demonstrates our deep technical expertise and commitment to open source innovation.
+We're actively developing **Eos**, an open source equivalent to Google's Borg system for enterprise workload orchestration. This large-scale container orchestration platform demonstrates our deep technical expertise and commitment to open source innovation.
 
 **Core Capabilities:**
 - **Large-scale distributed container management** - Deploy and manage thousands of containers across cluster nodes
@@ -41,13 +41,13 @@ We're actively developing **EOS**, an open source equivalent to Google's Borg sy
 - **Multi-cloud deployments** with consistent management across providers
 - **Edge computing** support for distributed IoT and CDN workloads
 
-EOS powers our own production infrastructure, running Delphi, Vault, Keycloak, and Wazuh services with enterprise-grade reliability and security.
+Eos powers our own production infrastructure, running Delphi, Vault, Keycloak, and Wazuh services with enterprise-grade reliability and security.
 
-🔗 **[View EOS on GitHub](https://github.com/CodeMonkeyCybersecurity/eos)** - Follow our development progress and contribute to the project.
+ **[View Eos on GitHub](https://github.com/CodeMonkeyCybersecurity/eos)** - Follow our development progress and contribute to the project.
 
 ### DevSecOps Infrastructure
 
-Our production infrastructure choices (Vault, Keycloak, Wazuh, KVM, and Docker) are automated through EOS, demonstrating real-world application of our orchestration platform for secure, scalable deployments.
+Our production infrastructure choices (Vault, Keycloak, Wazuh, KVM, and Docker) are automated through Eos, demonstrating real-world application of our orchestration platform for secure, scalable deployments.
 
 We're guided by hands-on experience with industry frameworks and practical certifications, including CompTIA A+, Network+, Security+, and PenTest+, which inform our focus on real-world resilience over theoretical compliance.
 
@@ -68,6 +68,6 @@ These certifications signal a baseline level of competence and understanding in 
 
 We believe in building cybersecurity tools grounded in practical, real-world expertise — not just theory.
 
-This knowledge supports our platform development (Delphi, EOS) and informs how we design with usability, privacy, and auditability from the ground up.
+This knowledge supports our platform development (Delphi, Eos) and informs how we design with usability, privacy, and auditability from the ground up.
 
 We’re currently self-funded and in public beta and we’re here for the long run.

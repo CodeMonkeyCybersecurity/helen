@@ -115,14 +115,14 @@ Hugo handles asset compilation automatically:
 - **Target audience**: Home users, small businesses, and community groups (not enterprise IT professionals)
 - **Tone**: Approachable, helpful, and confidence-building rather than intimidating
 - **Avoid**: Military terminology, threat-focused language, imposing costs, "cyber warfare" rhetoric
-- **No padlock emojis or symbols** - use friendly alternatives like ✅, 🏠, 🛠️, 📱
+- **No padlock emojis or symbols** - use friendly alternatives like ✅, 🏠, 🛠️, 
 - **Focus on empowerment** rather than fear-based messaging
 
 ### Prohibited Terms/Phrases
 - ❌ "Military-grade" or "Enterprise-grade" (use "reliable" or "professional-quality")
 - ❌ "Threat intelligence" or "killchain" 
 - ❌ "Cyber warfare" or aggressive security terminology
-- ❌ Padlock symbols 🔒 🔐 (use alternatives)
+- ❌ Padlock symbols  🔐 (use alternatives)
 - ❌ Fear-inducing language about costs or consequences
 
 ### Preferred Language
