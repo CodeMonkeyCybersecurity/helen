@@ -311,6 +311,8 @@ This isn't just another CLI tool. This is **infrastructure management evolved**â
 
 **Get started:** `git clone && ./install.sh`
 
+**Keep Eos updated:** `eos self update`
+
 **Enterprise support:** [cybermonkey.net.au](https://cybermonkey.net.au)
 
 **Join the revolution:** Open source that scales, AI that helps, security that works.
