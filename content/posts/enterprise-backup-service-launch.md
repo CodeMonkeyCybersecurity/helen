@@ -337,7 +337,7 @@ We'll evaluate your current data protection and show you:
 
 ---
 
-## **Frequently Asked Questions** ❓
+## **Frequently Asked Questions** 
 
 **Q: How is this different from cloud storage sync?**
 A: Sync services like OneDrive replicate deletions and corruption everywhere. True backup preserves multiple versions and protects against all forms of data loss.
@@ -383,11 +383,11 @@ A: No. Client-side encryption means we only see encrypted data. You control the 
 
 **Contact Information:**
  **Email:** [backup@cybermonkey.net.au](mailto:backup@cybermonkey.net.au)  
- **Phone:** (08) 6102 2421  
+ **Phone:**  
  **Website:** [cybermonkey.net.au](https://cybermonkey.net.au)  
 📍 **Location:** Fremantle, Western Australia
 
----
+---(08) 6102 2421 
 
 *Real backup. Memory-safe architecture. Enterprise standards. SME pricing.*
 
