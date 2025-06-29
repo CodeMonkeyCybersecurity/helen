@@ -38,7 +38,7 @@ We understand legal workflows and monitor for threats common to legal environmen
 - After-hours access to sensitive case documents
 - Attempts to export large volumes of client files or privileged documents
 
-### **📋 Professional Ethics-Aware Guidance**
+### ** Professional Ethics-Aware Guidance**
 When we detect threats, our alerts consider legal professional responsibilities:
 - **Client notification requirements** under professional ethics rules
 - **Court deadline protection** guidance during security incidents

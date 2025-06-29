@@ -116,7 +116,7 @@ Starting **Monday, July 7th**, we're offering three levels of scam education and
 
 ---
 
-## **Why We're Launching This Now** 🕐
+## **Why We're Launching This Now** 
 
 Three things convinced us this was urgent:
 

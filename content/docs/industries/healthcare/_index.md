@@ -36,7 +36,7 @@ We understand healthcare workflows and monitor for threats specific to medical e
 - Attempts to access records outside normal business hours
 - Medical device network anomalies
 
-### **📋 Clear, Immediate Guidance**
+### ** Clear, Immediate Guidance**
 When we detect a potential threat, you get:
 - **Plain-English explanations** of what happened and why it matters
 - **Step-by-step response instructions** tailored for busy healthcare professionals
@@ -98,7 +98,7 @@ Healthcare can't wait for "business hours" security support:
 - Alerts for suspicious communication from medical IoT devices
 - Guidance on isolating compromised medical equipment
 
-### **💳 Payment Processing Protection**
+### ** Payment Processing Protection**
 - Monitors point-of-sale systems and payment processing
 - Detects payment card skimming attempts
 - Alerts for unusual patient billing system activity

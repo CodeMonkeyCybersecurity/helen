@@ -21,7 +21,6 @@ Want to see how vulnerable your team really is? We'll send harmless test phishin
 
 {{< button href="mailto:main@cybermonkey.net.au?subject=Free%20Phishing%20Assessment&body=Hi!%20I'd%20like%20a%20free%20phishing%20assessment%20for%20our%20team.%0A%0ACompany:%0ANumber%20of%20employees:%0AIndustry:%0ABest%20contact%20method:" >}}Get Your Free Assessment{{< /button >}}
 
-*Most businesses are shocked by the results*
 {{% /hint %}}
 
 ---
@@ -46,7 +45,7 @@ Want to see how vulnerable your team really is? We'll send harmless test phishin
 
 ## **Our Training Approach**
 
-### **🎭 Interactive, Not Boring**
+### ** Interactive, Not Boring**
 No death-by-PowerPoint. Our workshops include:
 - **Live phishing demonstrations** - we'll show you how easy it is
 - **Real scam examples** from Australian businesses

@@ -28,7 +28,7 @@ bookFlatSection: true
 
 ## **Why Choose Delphi Notify?**
 
-### 🧠 **Human-Reviewed Alerts**
+###  **Human-Reviewed Alerts**
 Real security experts review every alert before you see it. No spam, no false alarms - just meaningful notifications when action is needed.
 
 ###  **Plain English Guidance**  
