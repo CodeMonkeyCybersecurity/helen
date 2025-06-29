@@ -91,6 +91,16 @@ We're giving Delphi Notify away **completely free** until August 1st as part of 
 
 ---
 
+## **See Our Original Social Media Posts**
+
+### Facebook Post
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcodemonkeycyber%2Fposts%2Fpfbid0jMWEmzxuSMkepkRvUMZm91qDSXrgEZFKaPX6Jhs8RUkq1SRqtVh3dooxuQVnPJdel&show_text=true&width=500" width="500" height="790" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+### LinkedIn Post
+**View on LinkedIn**: [Introducing Delphi Notify](https://www.linkedin.com/posts/codemonkeycyber_introducing-delphi-notify-were-code-monkey-activity-7340576400090812416-73c5)
+
+---
+
 **🔄 Share this post** to help other WA businesses discover security that actually makes sense!
 
 *#CyberSecurity #DelphiNotify #Fremantle #WABusiness #SecuritySoftware #PlainEnglish*
