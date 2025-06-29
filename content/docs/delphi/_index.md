@@ -12,7 +12,7 @@ weight: 1
 
 **Delphi** is Code Monkey Cybersecurity’s managed security platform that makes enterprise-level threat detection accessible to everyone. No technical expertise required — built for real-world security, not checkbox compliance.
 
-At its core, Delphi helps you detect threats, understand what they mean, and act fast. Built on proven open-source technology — but we’ve hardened it, simplified it, and layered on human-first support.
+At its core, Delphi Notify helps you detect threats, understand what they mean, and act fast. Built on proven open-source technology — but we’ve hardened it, simplified it, and layered on human-first support.
 
 ## Key Features
 

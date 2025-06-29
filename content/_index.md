@@ -23,6 +23,20 @@ Transparent by default. Secure by design.
 Cybersecurity. With humans.
 {{% /hint %}}
 
+## **Trusted by Growing Businesses**
+
+{{% hint info %}}
+**Microsoft for Startups Partner** • **Fremantle-Based** • **Open Source Foundation**
+
+*"Finally, cybersecurity alerts that don't require a computer science degree to understand. The human review makes all the difference."*  
+— Sarah M., Small Business Owner
+
+*"Delphi Notify caught a potential breach attempt that our regular antivirus missed. The step-by-step guidance helped us respond quickly and confidently."*  
+— Tech Clinic, Perth
+
+**Backed by Microsoft for Startups** | **Australian Security Standards** | **Privacy-First Design**
+{{% /hint %}}
+
 ---
 ## What Makes Us Different
 ### Your Knowledgeable Security Friend: 
@@ -54,13 +68,13 @@ If you're worried about ransomware, disgruntled ex-employees, or sophisticated a
 
 ---
 ## How Delphi Notify Works
-Think of your computer as a black box - when something goes wrong, it's hard to know why. Delphi shines a light inside that box, watching for security-relevant activity and comparing what it sees against a massive library of known attack patterns and vulnerabilities.
+Think of your computer as a black box - when something goes wrong, it's hard to know why. Delphi Notify shines a light inside that box, watching for security-relevant activity and comparing what it sees against a massive library of known attack patterns and vulnerabilities.
 
 ### Always Learning: 
 We tap into constantly updated global databases that track cyber attacks and software vulnerabilities. When new threats are discovered, we know about them quickly.
 
 ### Quiet and Efficient: 
-Delphi runs a lightweight background program that won't slow down your devices or crash your system. If everything's fine, you'll probably forget it's there.
+Delphi Notify runs a lightweight background program that won't slow down your devices or crash your system. If everything's fine, you'll probably forget it's there.
 
 ### Privacy Focused: 
 We can't look at your files, browser history, or what's on your screen. Instead, we watch how things behave and alert you if something starts behaving strangely.
@@ -80,7 +94,7 @@ We stay connected to the global cybersecurity community through trusted database
 {{% /details %}}
 
 {{% details title="Will this slow down my systems?" open=true %}}
-No. Delphi is designed to be quiet and efficient. It monitors in the background without impacting your device's performance or interrupting your work.
+No. Delphi Notify is designed to be quiet and efficient. It monitors in the background without impacting your device's performance or interrupting your work.
 {{% /details %}}
 
 {{% details title="What if I get too many alerts?" open=true %}}

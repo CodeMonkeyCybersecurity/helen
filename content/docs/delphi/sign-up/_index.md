@@ -13,9 +13,17 @@ Finally, security notifications that make sense.
 Delphi Notify is your knowledgeable digital security friend who only speaks up when something actually matters. When they do, you'll get the full story: what happened, why it's important, how to handle it, and what to keep an eye on next time.
 
 ## Ready to Try Delphi Notify?
+
 {{% hint info %}}
-{{< button href="https://hera.cybermonkey.dev" >}}Create Your Account - It's Easy{{< /button >}}
+**Start Your Free Trial Today**
+
+{{< button href="https://hera.cybermonkey.dev" >}}Get Started Now - Free for 30 Days{{< /button >}}
+
+*✓ No credit card required  ✓ Setup assistance included  ✓ Cancel anytime*
 {{% /hint %}}
+
+### Or Get More Information First
+**Not quite ready?** [Contact us](mailto:main@cybermonkey.net.au?subject=Delphi%20Notify%20Information%20Request&body=Hi!%20I'd%20like%20to%20learn%20more%20about%20Delphi%20Notify.%20Please%20tell%20me%20about:%0A%0A-%20Pricing%20and%20plans%0A-%20How%20it%20works%20for%20my%20situation%0A-%20Implementation%20process%0A%0AMyself/My%20Business:%0A[Tell%20us%20a%20bit%20about%20what%20you're%20protecting]) for a quick consultation call where we can answer your questions and see if Delphi Notify is right for you.
 
 ## How Delphi Notify Helps You
 

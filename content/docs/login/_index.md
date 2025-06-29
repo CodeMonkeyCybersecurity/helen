@@ -1,29 +1,46 @@
 ---
-title: "Login"
+title: "Customer Login"
+description: "Access your Delphi Notify account and security dashboard"
 bookFlatSection: true
 weight: 7
 ---
 
-# Login
+# Customer Login
 
-## Internal use only
+## Access Your Delphi Notify Account
 
-## Dashboard
+Already a Delphi Notify customer? Log in to view your security dashboard, manage your account, and review your security alerts.
 
-{{< button href="https://delphi.cybermonkey.net.au" >}}Dashboard{{< /button >}}
+{{% hint info %}}
+{{< button href="https://hera.cybermonkey.dev" >}}Login to Your Account{{< /button >}}
+{{% /hint %}}
 
-## Mattermost
+## Need Help?
 
-{{< button href="https://m.cybermonkey.net.au" >}}Mattermost{{< /button >}}
+### **Forgot Your Password?**
+Use the "Forgot Password" link on the login page, or [contact our support team](mailto:main@cybermonkey.net.au?subject=Password%20Reset%20Request&body=Hi!%20I%20need%20help%20resetting%20my%20password%20for%20my%20Delphi%20Notify%20account.%0A%0AEmail%20address%20associated%20with%20my%20account:%20[your-email]%0A%0AThanks!) for assistance.
 
-## StackStorm
+### **Account Issues?**
+Having trouble accessing your account? Our team is here to help:
 
-{{< button href="https://s.cybermonkey.net.au" >}}StackStorm{{< /button >}}
+- **Email**: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
+- **Phone**: (+61) 432 038 310
 
-## Hera
+### **Not a Customer Yet?**
+[Sign up for Delphi Notify](/docs/delphi/sign-up/) and start your free 30-day trial today.
 
-{{< button href="https://hera.cybermonkey.net.au" >}}Hera{{< /button >}}
+---
 
-## Webmail
+## **What You Can Do in Your Account**
 
-{{< button href="https://mail.cybermonkey.sh" >}}Webmail{{< /button >}}
+Once logged in, you can:
+
+✓ **View Security Alerts** - See all your security notifications in one place  
+✓ **Manage Devices** - Add, remove, or update monitored devices  
+✓ **Configure Notifications** - Choose how and when you receive alerts  
+✓ **Access Reports** - Review your security status and activity  
+✓ **Update Account Details** - Change your contact information and preferences  
+
+---
+
+*Need immediate security assistance? Call us at (+61) 432 038 310*
