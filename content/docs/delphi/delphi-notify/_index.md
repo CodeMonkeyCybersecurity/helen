@@ -16,7 +16,7 @@ Delphi Notify is your cybersecurity “first responder”. It's built to help ev
 {{< button href="/docs/delphi/sign-up/" >}}Get Started with Delphi Notify{{< /button >}}
 {{% /hint %}}
 
-![oh_the_hacks](/images/oh_the_hacks.jpg)
+![Illustration showing various cybersecurity threats and protective measures, demonstrating the scope of digital security challenges](/images/oh_the_hacks.jpg)
 
 ## How Delphi Notify works
 

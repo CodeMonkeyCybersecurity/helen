@@ -1,8 +1,10 @@
+// @ts-nocheck
+// This is a Hugo template file, not pure JavaScript
 'use strict';
 
-{{ $searchDataFile := printf "%s.search-data.json" .Language.Lang }}
-{{ $searchData := resources.Get "search-data.json" | resources.ExecuteAsTemplate $searchDataFile . | resources.Minify | resources.Fingerprint }}
-{{ $searchConfig := i18n "bookSearchConfig" | default "{}" }}
+{{- $searchDataFile := printf "%s.search-data.json" .Language.Lang -}}
+{{- $searchData := resources.Get "search-data.json" | resources.ExecuteAsTemplate $searchDataFile . | resources.Minify | resources.Fingerprint -}}
+{{- $searchConfig := i18n "bookSearchConfig" | default "{}" -}}
 
 (function () {
   const searchDataURL = '{{ $searchData.RelPermalink }}';

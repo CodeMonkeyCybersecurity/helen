@@ -7,7 +7,7 @@ weight: 30
 
 ## We're not very good at our paperwork
 
-![this_is_fine](/images/this_is_fine.jpg)
+![Cartoon dog sitting in burning room with coffee cup, saying "this is fine" - a humorous illustration about maintaining composure during chaotic situations](/images/this_is_fine.jpg)
 
 
 # Contact Us

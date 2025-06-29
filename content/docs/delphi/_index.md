@@ -1,17 +1,18 @@
 ---
 title: "Delphi"
-description: "Delphi - powered by Wazuh"
+description: "Enterprise-level cybersecurity made accessible. Delphi provides threat detection and response for small businesses and individuals with human-reviewed alerts in plain English."
+keywords: ["cybersecurity", "threat detection", "XDR", "SIEM", "small business security", "Fremantle", "Australia"]
 bookFlatSection: true
 weight: 1
 ---
 
 # What Is Delphi?
 
-![antivirus_siem_xdr](/images/antivirus_siem_xdr_optimized.jpg)
+![Diagram showing the relationship between antivirus, security information and event management (SIEM), and extended detection and response (XDR) technologies](/images/antivirus_siem_xdr_optimized.jpg)
 
-**Delphi** is Code Monkey Cybersecurity’s managed **XDR** (Extended Detection and Response) and **SIEM** (Security Information and Event Management) platform — built for real-world security, not checkbox compliance.
+**Delphi** is Code Monkey Cybersecurity’s managed security platform that makes enterprise-level threat detection accessible to everyone. No technical expertise required — built for real-world security, not checkbox compliance.
 
-At its core, Delphi helps you detect threats, understand what they mean, and act fast. It's built on **Wazuh**, a trusted open-source platform used by security teams worldwide — but we’ve hardened it, simplified it, and layered on human-first support.
+At its core, Delphi helps you detect threats, understand what they mean, and act fast. Built on proven open-source technology — but we’ve hardened it, simplified it, and layered on human-first support.
 
 ## Key Features
 
@@ -58,9 +59,5 @@ Chatbot-integrated alert explanations (LLM-powered)
 Want to test it yourself?  
 
 - Visit the live beta: [delphi.cybermonkey.net.au](https://delphi.cybermonkey.net.au)  
-
-- Or head to the [Athena Knowledge Base](https://wiki.cybermonkey.net.au/Delphi) for setup guides.
-
-Visit the live beta: [delphi.cybermonkey.net.au](https://delphi.cybermonkey.net.au)
-
-Or head to the [Athena Knowledge Base](https://wiki.cybermonkey.net.au/Delphi) for setup guides.
+- Or head to the [Athena Knowledge Base](https://wiki.cybermonkey.net.au/Delphi) for setup guides
+- Curious about the technology? [Learn about XDR](/docs/delphi/technology/)

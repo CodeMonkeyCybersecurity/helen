@@ -1,5 +1,7 @@
 ---
-title: "Sign up!"
+title: "Sign up for Delphi Notify"
+description: "Get started with Delphi Notify - human-centered cybersecurity alerts that make sense. Clear, helpful security notifications reviewed by real experts."
+keywords: ["cybersecurity signup", "Delphi Notify", "security alerts", "cybersecurity monitoring"]
 weight: 10
 ---
 

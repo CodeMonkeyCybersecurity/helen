@@ -5,7 +5,7 @@ linktitle: "Code Monkey Cybersecurity is now part of Microsoft for Startups"
 title: "Code Monkey Cybersecurity is now part of Microsoft for Startups"
 ---
 
-![microsoft_for_startups](/images/microsoft_for_startups.jpg)
+![Microsoft for Startups logo and branding showing the startup support program that provides resources and credits to qualifying startups](/images/microsoft_for_startups.jpg)
 
 Microsoft has sponsored Code Monkey Cybersecurity $5,000 in Azure credits.
 We’ve officially joined the Microsoft for Startups Founders Hub — meaning we’ve got the backing to scale our tools, secure more systems, and support small businesses & vulnerable communities with ethical, open-source cybersecurity.

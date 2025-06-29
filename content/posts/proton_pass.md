@@ -13,7 +13,7 @@ categories = [
 menu = "main"
 +++
 
-![proton_pass](/images/proton_pass.jpg)
+![Proton Pass logo and interface showing a secure password manager application with password vaults and security features](/images/proton_pass.jpg)
 
 We love Proton and their password manager, Proton Pass. We use it everyday.
 Password managers need to be the bread and butter of everyone's online presence.

@@ -1,9 +1,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="{{ default .Summary .Description }}">
+<meta name="keywords" content="{{ default .Site.Params.keywords .Params.keywords }}">
+<meta name="author" content="{{ default .Site.Params.author .Params.author }}">
+<meta name="robots" content="index, follow">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark">
+
+<!-- Enhanced Open Graph tags -->
+<meta property="og:title" content="{{ default .Title .Site.Title }}">
+<meta property="og:description" content="{{ default .Summary .Description }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+{{ if .Params.images }}
+  {{ range first 1 .Params.images }}
+    <meta property="og:image" content="{{ . | absURL }}">
+  {{ end }}
+{{ else }}
+  <meta property="og:image" content="{{ "/images/cover_puppy_moni_monkey_optimized.jpg" | absURL }}">
+{{ end }}
+
+<!-- Twitter Card tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ default .Title .Site.Title }}">
+<meta name="twitter:description" content="{{ default .Summary .Description }}">
+{{ if .Params.images }}
+  {{ range first 1 .Params.images }}
+    <meta name="twitter:image" content="{{ . | absURL }}">
+  {{ end }}
+{{ else }}
+  <meta name="twitter:image" content="{{ "/images/cover_puppy_moni_monkey_optimized.jpg" | absURL }}">
+{{ end }}
 
 {{- with .Page.Params.BookHref -}}
   <meta http-equiv="Refresh" content="0; url='{{ . }}'" />
@@ -43,6 +72,43 @@
 {{- with .OutputFormats.Get "rss" -}}
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
 {{ end -}}
+
+<!-- JSON-LD Structured Data -->
+{{ if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Code Monkey Cybersecurity",
+  "alternateName": "Code Monkey Cyber",
+  "url": "{{ .Site.BaseURL }}",
+  "logo": "{{ "/images/cover_puppy_moni_monkey_optimized.jpg" | absURL }}",
+  "description": "{{ .Site.Params.description }}",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "",
+    "contactType": "customer service",
+    "email": "{{ .Site.Params.contact_email }}"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fremantle",
+    "addressRegion": "Western Australia",
+    "addressCountry": "AU"
+  },
+  "sameAs": [
+    "https://github.com/CodeMonkeyCybersecurity",
+    "https://facebook.com/codemonkeycyber"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "name": "Delphi Notify",
+    "description": "Human-centered cybersecurity monitoring and alerts for small businesses and individuals",
+    "category": "Cybersecurity Service"
+  }
+}
+</script>
+{{ end }}
 
 {{ "<!--" | safeHTML }}
 Made with Book Theme

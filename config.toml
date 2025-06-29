@@ -48,8 +48,8 @@ url = "https://themes.gohugo.io/themes/hugo-book/"
 weight = 20
 
 [sitemap]
-  changefreq = "monthly"
-  priority = 0.5
+  changefreq = "weekly"
+  priority = 0.7
   filename = "sitemap.xml"
 
 # Optional: social links
