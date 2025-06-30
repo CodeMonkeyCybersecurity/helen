@@ -1,7 +1,7 @@
 ---
 title: "Backup Services"
 description: "Data Protection and Backup Solutions"
-weight: 20
+weight: 2
 ---
 
 # Backup Services

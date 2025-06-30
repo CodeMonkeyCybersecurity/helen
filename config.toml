@@ -91,7 +91,7 @@ weight = 10
 
 [[menu.main]]
 name = "Education"
-url = "/docs/training/"
+url = "/docs/education/"
 weight = 12
 
 [[menu.main]]
