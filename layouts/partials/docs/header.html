@@ -18,7 +18,7 @@
       <!-- Platform Dropdown -->
       {{ if .Site.Menus.platform }}
       <div class="relative" x-data="{ dropdownOpen: false }" @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false">
-        <button class="text-slate-700 hover:text-brand-teal font-medium focus:outline-none transition-colors duration-200">
+        <button class="text-slate-700 hover:underline font-medium focus:outline-none">
           Platform
           <svg class="w-4 h-4 ml-1 inline-block" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -47,7 +47,7 @@
       <!-- Training Dropdown -->
       {{ if .Site.Menus.training }}
       <div class="relative" x-data="{ dropdownOpen: false }" @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false">
-        <button class="text-slate-700 hover:text-brand-teal font-medium focus:outline-none transition-colors duration-200">
+        <button class="text-slate-700 hover:underline font-medium focus:outline-none">
           Training
           <svg class="w-4 h-4 ml-1 inline-block" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -75,7 +75,7 @@
 
       <!-- Main Navigation Links -->
       {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}" class="text-slate-700 hover:text-brand-teal font-medium transition-colors duration-200">{{ .Name }}</a>
+      <a href="{{ .URL }}" class="text-slate-700 hover:underline font-medium">{{ .Name }}</a>
       {{ end }}
       
       <!-- CTA Button -->
