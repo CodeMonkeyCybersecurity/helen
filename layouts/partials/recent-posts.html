@@ -6,19 +6,19 @@ Usage: {{ partial "recent-posts.html" . }}
 
 <section class="py-12">
   <div class="container mx-auto max-w-7xl px-6">
-    <div class="grid md:grid-cols-12 gap-x-8 gap-y-6">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-8">
       <!-- Heading always full-width above content -->
       <header class="col-span-full text-center md:text-left">
         <h2 class="text-2xl font-semibold">Recent posts</h2>
       </header>
 
       <!-- Post list centered beneath heading -->
-      <ul class="md:col-start-3 md:col-span-8 divide-y divide-slate-200">
+      <ul class="md:col-start-3 md:col-span-8 divide-y divide-slate-200 list-none">
         {{ $posts := where .Site.RegularPages "Section" "blog" }}
         {{ $recentPosts := first 5 ($posts.ByDate.Reverse) }}
         {{ range $recentPosts }}
-          <li class="relative py-4 hover:bg-slate-50 transition-colors">
-            <h3 class="font-medium text-slate-900 hover:text-[#4078f2] transition-colors">
+          <li class="relative py-4 hover:bg-slate-50 transition-colors group">
+            <h3 class="font-medium text-slate-900 group-hover:text-brand-teal transition-colors">
               {{ .Title | replaceRE "^👁️ " "" | replaceRE "^💡 " "" | replaceRE "^🔐 " "" | replaceRE "^🎯 " "" | replaceRE "^🚀 " "" | replaceRE "^✨ " "" | replaceRE "^🛡️ " "" }}
             </h3>
             <div class="flex justify-between text-sm text-slate-500 mt-1">
@@ -31,7 +31,7 @@ Usage: {{ partial "recent-posts.html" . }}
             </div>
             <!-- Full-row clickable overlay for better UX -->
             <a href="{{ .RelPermalink }}"
-               class="absolute inset-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4078f2]"
+               class="absolute inset-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal"
                aria-label="Read {{ .Title }}"></a>
           </li>
         {{ end }}
