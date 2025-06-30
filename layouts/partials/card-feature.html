@@ -1,0 +1,53 @@
+{{/*
+Feature Card - Anthropic-inspired design
+Displays a card with eyebrow, title, summary, and CTA
+*/}}
+
+{{ $cta := .Params.cta }}
+<div class="flex flex-col bg-white/90 dark:bg-neutral-950 border border-neutral-200 dark:border-neutral-800
+            shadow-sm hover:shadow-md transition-shadow rounded-xl p-6 h-full">
+  <!-- eyebrow -->
+  {{ with .Params.eyebrow }}
+  <p class="text-xs tracking-widest font-semibold text-neutral-500 uppercase mb-2">
+    {{ . }}
+  </p>
+  {{ end }}
+
+  <!-- title -->
+  <h2 class="text-xl font-semibold leading-snug text-neutral-900 dark:text-neutral-100 mb-3">
+    {{ .Title }}
+  </h2>
+
+  <!-- summary -->
+  {{ with .Params.summary }}
+    <p class="text-sm text-neutral-700 dark:text-neutral-300 mb-6 flex-grow">
+      {{ . }}
+    </p>
+  {{ end }}
+
+  <!-- content if any -->
+  {{ with .Content }}
+  <div class="prose prose-sm max-w-none text-neutral-700 dark:text-neutral-300 mb-6">
+    {{ . }}
+  </div>
+  {{ end }}
+
+  <!-- CTA -->
+  {{ if $cta }}
+    <a href="{{ $cta.url }}" class="mt-auto inline-flex items-center gap-2
+       px-4 py-2 rounded-lg font-medium text-sm
+       transition-colors self-start
+       {{ if eq $cta.style "primary" }}
+         bg-black text-white hover:bg-neutral-800
+       {{ else if eq $cta.style "teal" }}
+         bg-brand-teal text-white hover:bg-opacity-90
+       {{ else }}
+         border border-neutral-400 text-neutral-800 hover:bg-neutral-100
+       {{ end }}">
+      {{ $cta.label }}
+      <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+      </svg>
+    </a>
+  {{ end }}
+</div>

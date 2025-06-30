@@ -44,6 +44,17 @@ html {
   --body-background: #{$nav-background} !important;
 }
 
+// Add more spacing to header and footer
+.book-header {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.book-footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 // Brand-specific overrides for Hugo Book theme
 .book-menu {
   @include nav-base-styling;

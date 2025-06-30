@@ -14,14 +14,6 @@ bookFlatSection: true
 
 {{< /content-section >}}
 
-{{< cta-anthropic 
-  title="Start Your Free 30-Day Trial" 
-  text="✓ No credit card required<br>✓ Setup assistance included<br>✓ Cancel anytime<br><br>Join 200+ small businesses already protected by Delphi Notify. Ask about our Scam Education & Phishing Training workshops for your team."
-  link="/docs/delphi/sign-up/" 
-  linkText="Get Started Now - Free for 30 Days"
-  style="dark"
-  buttonStyle="primary" >}}
-
 {{< feature-cards title="Why Choose Delphi Notify?" subtitle="Professional security made simple for real people" >}}
   {{< feature-card 
     title="Human-Reviewed Alerts" 
@@ -34,14 +26,18 @@ bookFlatSection: true
     description="Advanced threat detection that catches sophisticated attacks your antivirus might miss." >}}
 {{< /feature-cards >}}
 
-{{< content-section title="How It Works (Simple)" style="transparent" >}}
+{{< feature-card-wrapper eyebrow="HOW IT WORKS" title="Simple Security in 4 Steps" cta-label="Start Free Trial" cta-url="/offerings/delphi/sign-up/" cta-style="teal" >}}
 
 1. **We Monitor** - Advanced detection watches your devices 24/7
 2. **Experts Review** - Human security specialists filter out the noise  
 3. **You Get Clear Alerts** - Plain English guidance when action is needed
 4. **You Stay Protected** - Catch threats before they become expensive problems
 
-**Perfect for**: Small businesses, medical practices, law firms, retail stores, and families who want professional security without the complexity.
+{{< /feature-card-wrapper >}}
+
+{{< content-section title="Perfect For" style="transparent" >}}
+
+Small businesses, medical practices, law firms, retail stores, and families who want professional security without the complexity.
 
 {{< /content-section >}}
 
@@ -62,6 +58,8 @@ bookFlatSection: true
   linkText="Start Free 30-Day Trial"
   style="dark"
   buttonStyle="teal" >}}
+
+{{< recent-posts >}}
 
 {{< feature-cards title="Our Commitments" subtitle="How we approach security, ethics, and transparency" >}}
   {{< feature-card 

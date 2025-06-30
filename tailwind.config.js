@@ -25,6 +25,10 @@ module.exports = {
         'body': '1.6',
         'heading': '1.25',
       },
+      maxWidth: {
+        '20ch': '20ch',
+        '30ch': '30ch',
+      },
       colors: {
         // Brand Colors
         'brand-teal': '#0ca678',

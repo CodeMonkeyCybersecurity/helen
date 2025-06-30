@@ -1,0 +1,46 @@
+{{/*
+Recent Posts Section - Anthropic-inspired design
+Shows 5-8 most recent blog posts with title and date
+Usage: {{ partial "recent-posts.html" . }}
+*/}}
+
+<section class="bg-slate-50 py-12">
+  <div class="container mx-auto max-w-7xl px-6">
+    <!-- Desktop grid: 4 / 8 cols (matches Anthropic's grid) -->
+    <div class="grid md:grid-cols-12 gap-x-8">
+      <!-- Heading column -->
+      <header class="md:col-span-4 mb-8 md:mb-0">
+        <h2 class="text-2xl font-semibold max-w-[20ch]">
+          Recent Posts
+        </h2>
+      </header>
+
+      <!-- List column -->
+      <ul role="list" aria-label="Recent blog posts"
+          class="md:col-span-8 space-y-6">
+        {{ $posts := where .Site.RegularPages "Section" "blog" }}
+        {{ $recentPosts := first 8 ($posts.ByDate.Reverse) }}
+        {{ range $recentPosts }}
+          <li class="relative group">
+            <h3 class="font-medium text-lg text-slate-900 group-hover:text-brand-teal transition-colors">
+              {{ .Title }}
+            </h3>
+
+            <div class="flex justify-between max-w-[30ch] text-sm text-slate-500 mt-1">
+              {{ with .Params.category }}
+                <span>{{ . }}</span>
+              {{ else }}
+                <span>Blog Post</span>
+              {{ end }}
+              <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+            </div>
+
+            <!-- Full-row clickable link -->
+            <a href="{{ .RelPermalink }}" class="absolute inset-0"
+               aria-label="Read {{ .Title }}"></a>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</section>
