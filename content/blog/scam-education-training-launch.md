@@ -9,9 +9,9 @@ description: "Starting Monday July 7th: We're launching dedicated scam education
 
 ![Scam Education Training Launch](/images/oh_the_hacks_web.jpg)
 
-# **Monday July 7th: We're Launching Scam Education & Phishing Training** 
+# Monday July 7th: We're Launching Scam Education & Phishing Training 
 
-## **Because Australian businesses lost $7.9 million to scams in 2024 - and most could have been prevented**
+## Because Australian businesses lost $7.9 million to scams in 2024 - and most could have been prevented
 
 After months of seeing the same pattern - **smart business owners falling for increasingly sophisticated scams** - we're expanding beyond our Delphi Notify monitoring service to offer something WA businesses desperately need:
 
@@ -19,24 +19,24 @@ After months of seeing the same pattern - **smart business owners falling for in
 
 ---
 
-## **The Problem Is Getting Worse, Fast** 📈
+## The Problem Is Getting Worse, Fast
 
 Here's what's happening to Australian businesses right now:
 
-### **The Scary Statistics**
+### The Scary Statistics
 - **85% of Australian businesses** experienced phishing attacks in the past 12 months
 - **One account is compromised every second** across Australia  
 - **$4.26 million** - average cost of a data breach in Australia (up 27% since 2020)
 - **47 million data breaches** hit Australia in 2024 alone
 - **90% of cyber incidents** start with human error - usually clicking a phishing link
 
-### **Small Businesses Are Prime Targets**
+### Small Businesses Are Prime Targets
 - **43% of cyberattacks** specifically target small businesses
 - **Nearly half of WA SMEs** spend less than $500 annually on cybersecurity
 - **48% of Australian SMEs** have inadequate cybersecurity measures
 - **$55,000** average loss per successful business email compromise
 
-### **But Here's the Good News**
+### But Here's the Good News
 Training works. Businesses with proper phishing awareness training see:
 - **30% reduction** in employees clicking malicious links
 - **70% reduction** in security-related risks overall
@@ -45,11 +45,11 @@ Training works. Businesses with proper phishing awareness training see:
 
 ---
 
-## **What We're Launching: Real-World Scam Protection** 
+## What We're Launching: Real-World Scam Protection 
 
 Starting **Monday, July 7th**, we're offering three levels of scam education and phishing training designed specifically for WA businesses:
 
-### **🥉 Security Awareness Essentials**
+### Security Awareness Essentials
 **$149/month for up to 25 employees**
 
 **What you get:**
@@ -61,7 +61,7 @@ Starting **Monday, July 7th**, we're offering three levels of scam education and
 
 **Perfect for:** Small offices, retail stores, cafes, professional practices
 
-### **🥈 Comprehensive Protection Program**  
+### Comprehensive Protection Program  
 **$349/month for up to 50 employees**
 
 **Everything in Essentials, plus:**
@@ -73,7 +73,7 @@ Starting **Monday, July 7th**, we're offering three levels of scam education and
 
 **Perfect for:** Medical practices, law firms, accounting offices, manufacturing
 
-### **🥇 Enterprise Security Training**
+### Enterprise Security Training
 **$599/month for up to 100 employees**
 
 **Everything in Comprehensive, plus:**
@@ -88,27 +88,27 @@ Starting **Monday, July 7th**, we're offering three levels of scam education and
 
 ---
 
-## **How Our Training Is Different** 
+## How Our Training Is Different 
 
-### **🏠 WA-Focused Content**
+### 🏠 WA-Focused Content
 - Real examples from Perth and regional WA businesses
 - Scams specifically targeting Australian companies
 - Local compliance requirements (Privacy Act, industry standards)
 - Understanding of WA business culture and communication styles
 
-### ** Human-Centered Approach**
+###  Human-Centered Approach
 - No shame or blame - mistakes are learning opportunities
 - Plain English explanations, no technical jargon
 - Immediate support when employees receive suspicious emails
 - Celebration of employees who report potential threats
 
-### ** Measurable Results**
+###  Measurable Results
 - Monthly click-rate tracking with improvement goals
 - Individual coaching for high-risk employees
 - Business impact reporting (time saved, incidents prevented)
 - ROI calculations showing training value
 
-### ** Immediate Action**
+###  Immediate Action
 - Setup within 48 hours of signup
 - First training session within one week
 - Emergency support for active scam attempts
@@ -116,41 +116,41 @@ Starting **Monday, July 7th**, we're offering three levels of scam education and
 
 ---
 
-## **Why We're Launching This Now** 
+## Why We're Launching This Now 
 
 Three things convinced us this was urgent:
 
-### **1. The "Hi Mum" Scam Explosion**
+### 1. The "Hi Mum" Scam Explosion
 Phishing losses **skyrocketed 469%** in 2022, with "Hi Mum" and fake delivery text scams devastating Australian families and businesses.
 
-### **2. WA SMEs Are Particularly Vulnerable**
+### 2. WA SMEs Are Particularly Vulnerable
 Our research shows **60% of WA small businesses** can't afford traditional cybersecurity services, leaving them exposed to increasingly sophisticated attacks.
 
-### **3. Training Actually Works**
+### 3. Training Actually Works
 Unlike expensive security software, **training delivers immediate, measurable results** - and costs a fraction of what one successful scam attempt could cost your business.
 
 ---
 
-## **Real Scenarios We're Seeing** 
+## Real Scenarios We're Seeing 
 
-### **The Fake Invoice Scam**
+### The Fake Invoice Scam
 *A Perth accounting firm received an "updated invoice" from their regular office supplier. The email looked identical to previous invoices, but the payment details had changed. They transferred $8,500 before realizing the scam.*
 
 **Our training covers:** How to verify payment changes, spotting email spoofing, verification procedures
 
-### **The CEO Impersonation**
+### The CEO Impersonation
 *A Fremantle manufacturing company received an "urgent" email from their CEO requesting an immediate bank transfer for a confidential acquisition. The receptionist transferred $15,000 before discovering the CEO was on holiday.*
 
 **Our training covers:** Authority verification procedures, urgent request protocols, communication chains
 
-### **The IT Support Fake-Out**
+### The IT Support Fake-Out
 *A Joondalup medical practice received a call from "Microsoft support" about suspicious activity. They provided remote access, allowing scammers to steal patient data and demand ransom.*
 
 **Our training covers:** Legitimate support procedures, remote access risks, verification methods
 
 ---
 
-## **Launch Week Special Offer** 🎉
+## Launch Week Special Offer
 
 **Book your consultation before Friday July 11th and receive:**
 
@@ -162,25 +162,25 @@ Unlike expensive security software, **training delivers immediate, measurable re
 
 ---
 
-## **Getting Started Is Simple** 
+## Getting Started Is Simple 
 
-### **Option 1: Quick Assessment**
+### Option 1: Quick Assessment
 **Free 15-minute phone call** to discuss your current security training and identify immediate risks.
 
  **Call us:** (+61) 0432 038 310  
  **Email:** [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
-### **Option 2: Vulnerability Test**
+### Option 2: Vulnerability Test
 **Free phishing simulation** - we'll send 3 test emails to your staff and show you the results (anonymized to protect employee privacy).
 
-### **Option 3: Live Demo**
+### Option 3: Live Demo
 **30-minute demonstration** showing exactly how our training works and what results you can expect.
 
  **Book online:** [cybermonkey.net.au/training-demo](https://cybermonkey.net.au/docs/training/)
 
 ---
 
-## **Frequently Asked Questions**
+## Frequently Asked Questions
 
 **Q: How is this different from online training videos?**
 A: Our training is live, interactive, and specific to threats targeting Australian businesses. Employees can ask questions in real-time and practice with scenarios relevant to their actual work.
@@ -196,7 +196,7 @@ A: We provide immediate incident response support to minimize damage and use it 
 
 ---
 
-## **Ready to Protect Your Business?** 
+## Ready to Protect Your Business? 
 
 **The statistics don't lie: 90% of breaches start with human error.** But humans can also be your strongest defense - when they're properly trained.
 
@@ -220,7 +220,7 @@ Don't wait until you're part of the statistics.
 
 *Questions about our training programs? Reply to this post or contact us directly. We're here to help WA businesses stay safe in an increasingly dangerous digital world.*
 
-**Cybersecurity training. Finally designed for real people.** 
+**Cybersecurity. Now with people.** 
 
 *#ScamEducation #PhishingTraining #WABusiness #CyberSecurity #SmallBusinessSecurity #FrementleBusiness*
 

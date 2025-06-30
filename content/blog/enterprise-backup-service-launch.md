@@ -50,7 +50,7 @@ After watching too many WA businesses discover the hard way that **OneDrive and 
 
 ---
 
-## **Why OneDrive and iCloud Fail Small Businesses** ❌
+## **Why OneDrive and iCloud Fail Small Businesses** 
 
 ### **1. Sync Services, Not Backup Services**
 When you delete a file locally, **it deletes everywhere**. That's sync working as designed - but it's the opposite of what backup should do.
@@ -150,10 +150,10 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 | Scenario | OneDrive/iCloud | Our Backup Service | Actual Data Loss |
 |----------|-----------------|-------------------|------------------|
 | **Monthly cost** | $6-12/user | $5-8/user | $0 |
-| **Accidental deletion after 94 days** | ❌ Gone forever |  Fully recoverable | $2,000+/hour downtime |
-| **Ransomware attack** | ❌ All synced copies encrypted |  Clean restore available | $55,000 average loss |
-| **Hard drive failure** | ❌ Only recent files safe |  Complete system restore | Weeks of recreation time |
-| **Compliance audit** | ❌ Fails 3-2-1 standard |  Full audit trail | Potential fines/penalties |
+| **Accidental deletion after 94 days** |  Gone forever |  Fully recoverable | $2,000+/hour downtime |
+| **Ransomware attack** |  All synced copies encrypted |  Clean restore available | $55,000 average loss |
+| **Hard drive failure** |  Only recent files safe |  Complete system restore | Weeks of recreation time |
+| **Compliance audit** |  Fails 3-2-1 standard |  Full audit trail | Potential fines/penalties |
 
 **The math is simple:** One data loss event costs more than **years** of proper backup service.
 

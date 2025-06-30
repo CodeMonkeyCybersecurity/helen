@@ -107,25 +107,25 @@ The configurations to deploy these can be found in the [`eos/apps/`](https://git
 | Wazuh | ![✅](/_assets/svg/twemoji/2705.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [XDR / SIEM](https://wazuh.com/) | [delphi.domain.com](http://delphi.domain.com) | :8011 |
 | Mattermost | ![✅](/_assets/svg/twemoji/2705.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [Slack alternative](https://mattermost.com/) | [collaborate.domain.com](http://collaborate.domain.com) | :8017 :9017 |
 | Nextcloud | ![✅](/_assets/svg/twemoji/2705.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [iCloud /OneDrive alternative](https://nextcloud.com/) | [cloud.domain.com](http://cloud.domain.com) | :8039 |
-| Mailcow | ![❌](/_assets/svg/twemoji/274c.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [Email/groupware](https://mailcow.email/) | [mail.domain.com](http://mail.domain.com) | :8053 |
+| Mailcow | ![](/_assets/svg/twemoji/274c.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [Email/groupware](https://mailcow.email/) | [mail.domain.com](http://mail.domain.com) | :8053 |
 | Jenkins | ![✅](/_assets/svg/twemoji/2705.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [CI/CD](https://jenkins.io/) | [jenkins.domain.com](http://jenkins.domain.com) | :8059 |
 | Grafana | ![✅](/_assets/svg/twemoji/2705.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [Observability/monitoring](https://grafana.com/) | [observe.domain.com](http://observe.domain.com) | :8069 |
-| ELK Stack | ![❌](/_assets/svg/twemoji/274c.svg) | ![❌](/_assets/svg/twemoji/274c.svg) | [Search logs/metrics](https://www.elastic.co/) | [elk.domain.com](http://elk.domain.com) | :8081 |
-| OpenStack | ![❌](/_assets/svg/twemoji/274c.svg) | ![❌](/_assets/svg/twemoji/274c.svg) | [Azure, AWS, GCP alternative](https://www.openstack.org/) | [stack.domain.com](http://stack.domain.com) | :8087 |
-| Nebula | ![❌](/_assets/svg/twemoji/274c.svg) | ![❌](/_assets/svg/twemoji/274c.svg) | [Distributed mesh network](https://github.com/slackhq/nebula) | [mesh.domain.com](http://mesh.domain.com) | :8089 |
-| Security Onion | ![❌](/_assets/svg/twemoji/274c.svg) | ![❌](/_assets/svg/twemoji/274c.svg) | [Security monitoring](https://securityonionsolutions.com/) | [soc.domain.com](http://soc.domain.com) | :8093 |
+| ELK Stack | ![](/_assets/svg/twemoji/274c.svg) | ![](/_assets/svg/twemoji/274c.svg) | [Search logs/metrics](https://www.elastic.co/) | [elk.domain.com](http://elk.domain.com) | :8081 |
+| OpenStack | ![](/_assets/svg/twemoji/274c.svg) | ![](/_assets/svg/twemoji/274c.svg) | [Azure, AWS, GCP alternative](https://www.openstack.org/) | [stack.domain.com](http://stack.domain.com) | :8087 |
+| Nebula | ![](/_assets/svg/twemoji/274c.svg) | ![](/_assets/svg/twemoji/274c.svg) | [Distributed mesh network](https://github.com/slackhq/nebula) | [mesh.domain.com](http://mesh.domain.com) | :8089 |
+| Security Onion | ![](/_assets/svg/twemoji/274c.svg) | ![](/_assets/svg/twemoji/274c.svg) | [Security monitoring](https://securityonionsolutions.com/) | [soc.domain.com](http://soc.domain.com) | :8093 |
 | Restic | ![✅](/_assets/svg/twemoji/2705.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [Backups](https://restic.net/) | [persephone.domain.com](http://persephone.domain.com)<br><br>[persephoneapi.domain.com](persephoneapi.domain.com) | :8101 |
-| Keycloak | ![❌](/_assets/svg/twemoji/274c.svg) | ![❌](/_assets/svg/twemoji/274c.svg) | [Identity and access management](https://www.keycloak.org/) | [hera.domain.com](http://hera.domain.com) | :8111 |
-| Theia | ![❌](/_assets/svg/twemoji/274c.svg) | ![❌](/_assets/svg/twemoji/274c.svg) | [IDE](https://theia-ide.org/) | [code.domain.com](http://code.domain.com) | :8219 |
+| Keycloak | ![](/_assets/svg/twemoji/274c.svg) | ![](/_assets/svg/twemoji/274c.svg) | [Identity and access management](https://www.keycloak.org/) | [hera.domain.com](http://hera.domain.com) | :8111 |
+| Theia | ![](/_assets/svg/twemoji/274c.svg) | ![](/_assets/svg/twemoji/274c.svg) | [IDE](https://theia-ide.org/) | [code.domain.com](http://code.domain.com) | :8219 |
 | Umami | ![✅](/_assets/svg/twemoji/2705.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [Privacy focussed web analytics](https://umami.is/) | [analytics.domain.com](http://analytics.domain.com) | :8117 |
 | MinIO | ![✅](/_assets/svg/twemoji/2705.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [S3 compatible object storage](https://min.io/) | [s3.domain.com](http://s3.domain.com)<br><br>[s3api.domain.com](s3api.domain.com) | :8123<br><br>:9123 |
-| Penpot | ![❌](/_assets/svg/twemoji/274c.svg) | ![❌](/_assets/svg/twemoji/274c.svg) | [UX design](https://github.com/penpot/penpot) | [penpot.domain.com](http://penpot.domain.com) | :8147 |
+| Penpot | ![](/_assets/svg/twemoji/274c.svg) | ![](/_assets/svg/twemoji/274c.svg) | [UX design](https://github.com/penpot/penpot) | [penpot.domain.com](http://penpot.domain.com) | :8147 |
 | Wiki.js | ![✅](/_assets/svg/twemoji/2705.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [Knowledge base/wiki](https://js.wiki/) | [wiki.domain.com](http://wiki.domain.com) | :8161 |
 | ERPNext | ![✅](/_assets/svg/twemoji/2705.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [Enterprise Resource Planning (ERP)](https://erpnext.com/) | [erp.domain.com](http://erp.domain.com) | :8167 |
 | Jellyfin | ![✅](/_assets/svg/twemoji/2705.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [Media server](https://jellyfin.org/) | [media.domain.com](http://media.domain.com) | :8171<br><br>:9171 |
-| Vault | ![❌](/_assets/svg/twemoji/274c.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [Secrets Management](https://github.com/hashicorp/vault) | [pandora.domain.com](http://pandora.domain.com) | :8179 |
-| Consul | ![❌](/_assets/svg/twemoji/274c.svg) | ![❌](/_assets/svg/twemoji/274c.svg) | [Service Networking](https://github.com/hashicorp/consul) | N/A | :8191 :8209 |
-| Open WebUI | ![❌](/_assets/svg/twemoji/274c.svg) | ![❌](/_assets/svg/twemoji/274c.svg) | Chatbot with WebUI | N/A | :8231 |
+| Vault | ![](/_assets/svg/twemoji/274c.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [Secrets Management](https://github.com/hashicorp/vault) | [pandora.domain.com](http://pandora.domain.com) | :8179 |
+| Consul | ![](/_assets/svg/twemoji/274c.svg) | ![](/_assets/svg/twemoji/274c.svg) | [Service Networking](https://github.com/hashicorp/consul) | N/A | :8191 :8209 |
+| Open WebUI | ![](/_assets/svg/twemoji/274c.svg) | ![](/_assets/svg/twemoji/274c.svg) | Chatbot with WebUI | N/A | :8231 |
 | Zabbix |     |     | [Monitoring](https://www.zabbix.com) | z.domain.com | • 8233<br><br>• 8237 |
 | Shuffle |     |     | SOAR | s.domain.com | :80 → **8243**<br><br>:443 → <br><br>**8263** |
 

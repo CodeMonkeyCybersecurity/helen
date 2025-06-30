@@ -122,11 +122,11 @@ Hugo handles asset compilation automatically:
 - **Focus on empowerment** rather than fear-based messaging
 
 ### Prohibited Terms/Phrases
-- ❌ "Military-grade" or "Enterprise-grade" (use "reliable" or "professional-quality")
-- ❌ "Threat intelligence" or "killchain" 
-- ❌ "Cyber warfare" or aggressive security terminology
-- ❌ Padlock symbols  🔐 (use alternatives)
-- ❌ Fear-inducing language about costs or consequences
+-  "Military-grade" or "Enterprise-grade" (use "reliable" or "professional-quality")
+-  "Threat intelligence" or "killchain" 
+-  "Cyber warfare" or aggressive security terminology
+-  Padlock symbols  🔐 (use alternatives)
+-  Fear-inducing language about costs or consequences
 
 ### Preferred Language
 -  "Easy to use" instead of "enterprise-ready"

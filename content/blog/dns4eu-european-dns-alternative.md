@@ -45,7 +45,7 @@ DNS4EU isn't one-size-fits-all. Choose your protection level:
 | **Data Collection** | GDPR Compliant | Extensive | Limited |
 | **Ad Blocking** | Available | No | No |
 | **Child Protection** | Built-in | Third-party | Third-party |
-| **EU Privacy Laws** |  Yes | ❌ No | ❌ No |
+| **EU Privacy Laws** |  Yes |  No |  No |
 | **Jurisdiction** | EU | US | US |
 
 ## **Technical Excellence**
