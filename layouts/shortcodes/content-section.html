@@ -17,7 +17,7 @@ Parameters:
     {{ with $title }}
     <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl font-heading text-center mb-8">{{ . }}</h2>
     {{ end }}
-    <div class="markdown book-article prose prose-lg max-w-none">
+    <div class="markdown book-article prose prose-lg max-w-none text-center">
       {{ .Inner | .Page.RenderString | safeHTML }}
     </div>
   </div>
@@ -39,7 +39,7 @@ Parameters:
       {{ with $title }}
       <h2 class="text-brand-heading mb-8">{{ . }}</h2>
       {{ end }}
-      <div class="markdown book-article prose prose-lg max-w-none">
+      <div class="markdown book-article prose prose-lg max-w-none text-center">
       {{ .Inner | .Page.RenderString | safeHTML }}
     </div>
     </div>

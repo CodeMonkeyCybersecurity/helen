@@ -1,32 +1,27 @@
 {{/*
-Recent Posts Section - Anthropic-inspired design
-Shows 5-8 most recent blog posts with title and date
+Recent Posts Section - Anthropic-inspired design with heading above
+Shows 5 most recent blog posts with proper semantic markup and accessibility
 Usage: {{ partial "recent-posts.html" . }}
 */}}
 
-<section class="bg-slate-50 py-12">
+<section class="py-12">
   <div class="container mx-auto max-w-7xl px-6">
-    <!-- Desktop grid: 4 / 8 cols (matches Anthropic's grid) -->
-    <div class="grid md:grid-cols-12 gap-x-8">
-      <!-- Heading column -->
-      <header class="md:col-span-4 mb-8 md:mb-0">
-        <h2 class="text-2xl font-semibold max-w-[20ch]">
-          Recent Posts
-        </h2>
+    <div class="grid md:grid-cols-12 gap-x-8 gap-y-6">
+      <!-- Heading always full-width above content -->
+      <header class="col-span-full text-center md:text-left">
+        <h2 class="text-2xl font-semibold">Recent posts</h2>
       </header>
 
-      <!-- List column -->
-      <ul role="list" aria-label="Recent blog posts"
-          class="md:col-span-8 space-y-6">
+      <!-- Post list centered beneath heading -->
+      <ul class="md:col-start-3 md:col-span-8 divide-y divide-slate-200">
         {{ $posts := where .Site.RegularPages "Section" "blog" }}
-        {{ $recentPosts := first 8 ($posts.ByDate.Reverse) }}
+        {{ $recentPosts := first 5 ($posts.ByDate.Reverse) }}
         {{ range $recentPosts }}
-          <li class="relative group">
-            <h3 class="font-medium text-lg text-slate-900 group-hover:text-brand-teal transition-colors">
-              {{ .Title }}
+          <li class="relative py-4 hover:bg-slate-50 transition-colors">
+            <h3 class="font-medium text-slate-900 hover:text-[#4078f2] transition-colors">
+              {{ .Title | replaceRE "^👁️ " "" | replaceRE "^💡 " "" | replaceRE "^🔐 " "" | replaceRE "^🎯 " "" | replaceRE "^🚀 " "" | replaceRE "^✨ " "" | replaceRE "^🛡️ " "" }}
             </h3>
-
-            <div class="flex justify-between max-w-[30ch] text-sm text-slate-500 mt-1">
+            <div class="flex justify-between text-sm text-slate-500 mt-1">
               {{ with .Params.category }}
                 <span>{{ . }}</span>
               {{ else }}
@@ -34,9 +29,9 @@ Usage: {{ partial "recent-posts.html" . }}
               {{ end }}
               <span>{{ .Date.Format "Jan 2, 2006" }}</span>
             </div>
-
-            <!-- Full-row clickable link -->
-            <a href="{{ .RelPermalink }}" class="absolute inset-0"
+            <!-- Full-row clickable overlay for better UX -->
+            <a href="{{ .RelPermalink }}"
+               class="absolute inset-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4078f2]"
                aria-label="Read {{ .Title }}"></a>
           </li>
         {{ end }}

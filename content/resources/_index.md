@@ -19,7 +19,7 @@ Advanced threat detection and response platform designed for small businesses. R
 Automated data protection and backup solutions. Protect your business data with secure, Australian-hosted backup services.
 {{< /promo-tile >}}
 
-{{< promo-tile title="Phishing Simulation" url="/offerings/phishing-simulation/" icon="🎯" color="orange" badge="Training" >}}
+{{< promo-tile title="Phishing Simulation" url="/offerings/phishing-simulation/" icon="" color="orange" badge="Training" >}}
 Test your team's security awareness with realistic phishing simulations and comprehensive training programs.
 {{< /promo-tile >}}
 {{< /promo-tiles >}}

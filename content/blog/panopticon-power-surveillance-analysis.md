@@ -1,5 +1,5 @@
 ---
-title: "👁️ The Functioning of Power in the Panopticon: Understanding Modern Surveillance"
+title: " The Functioning of Power in the Panopticon: Understanding Modern Surveillance"
 date: "2025-06-29"
 author: "Henry Oliver"
 tags: ["Surveillance", "Philosophy", "Power Analysis", "Foucault", "Privacy"]
@@ -9,7 +9,7 @@ description: "How Jeremy Bentham's prison design became Michel Foucault's framew
 
 ![Surveillance and Power](/images/oh_the_hacks_web.jpg)
 
-# **The Functioning of Power in the Panopticon: Understanding Modern Surveillance** 👁️
+# **The Functioning of Power in the Panopticon: Understanding Modern Surveillance** 
 
 The concept of the Panopticon, introduced by Jeremy Bentham in the late 18th century, has evolved into a powerful metaphor for modern systems of control and surveillance, particularly through Michel Foucault's seminal analysis in *Discipline and Punish: The Birth of the Prison* (1975) [^1]. At its core, the Panopticon describes an architectural structure where a central watchtower allows an observer to monitor all inmates in surrounding cells without being seen [^2]. This configuration creates a condition where the observed internalize surveillance, disciplining themselves in anticipation of being watched.
 
