@@ -1,7 +1,7 @@
 /* === Code Monkey Cybersecurity Style Guide: Typography === */
 
 /* 1. Font Imports */
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700&family=Noto+Sans+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Inter:wght@400;600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Mono:wght@400;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,8 +10,9 @@
 @layer base {
   /* 2. Base Font Setup */
   :root {
-    --font-heading: 'Atkinson Hyperlegible', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-brand: 'Noto Sans', sans-serif;
+    --font-heading: 'Noto Sans', sans-serif;
+    --font-body: 'Inter', 'Atkinson Hyperlegible', sans-serif;
     --font-mono: 'Noto Sans Mono', monospace;
 
     --font-size-base: 1rem;       /* 16px */

@@ -1,21 +1,6 @@
-<nav class="px-6 py-8 space-y-8">
-  <div class="space-y-6">
-    {{ partial "docs/brand" . }}
-    {{ partial "docs/search" . }}
-    {{ if hugo.IsMultilingual }}
-      {{ partial "docs/languages" . }}
-    {{ end }}
-  </div>
-
-  <div class="space-y-4">
-    {{ partial "docs/inject/menu-before" . }}
-    {{ partial "docs/menu-hugo" .Site.Menus.before }}
-
-    {{ partial "docs/menu-filetree" . }}
-
-    {{ partial "docs/menu-hugo" .Site.Menus.after }}
-    {{ partial "docs/inject/menu-after" . }}
-  </div>
+<nav class="px-6 py-8">
+  <!-- Use enhanced menu with grouped sections -->
+  {{ partial "docs/menu-enhanced" . }}
 </nav>
 
 <!-- Restore menu position as soon as possible to avoid flickering -->

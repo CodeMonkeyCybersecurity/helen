@@ -8,9 +8,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'heading': ['Atkinson Hyperlegible', 'sans-serif'],
-        'body': ['Inter', 'sans-serif'],
-        'mono': ['Noto Sans Mono', 'monospace'],
+        'sans': ['Inter', 'Atkinson Hyperlegible', 'ui-sans-serif', 'system-ui'],
+        'mono': ['Noto Sans Mono', 'ui-monospace', 'SFMono-Regular'],
+        'brand': ['Noto Sans', 'sans-serif'],
+        'heading': ['Noto Sans', 'sans-serif'],
+        'body': ['Inter', 'Atkinson Hyperlegible', 'ui-sans-serif', 'system-ui'],
       },
       fontSize: {
         'base': '1rem',

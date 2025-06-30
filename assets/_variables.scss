@@ -31,4 +31,10 @@ $body-font-color: $text-base-dark;
 $color-link: $brand-teal;
 $color-visited-link: $brand-purple;
 
+// Font families
+$font-brand: 'Noto Sans', sans-serif;
+$font-heading: 'Noto Sans', sans-serif;
+$font-body: 'Inter', 'Atkinson Hyperlegible', ui-sans-serif, system-ui;
+$font-mono: 'Noto Sans Mono', ui-monospace, 'SFMono-Regular';
+
 // @import "plugins/dark";
