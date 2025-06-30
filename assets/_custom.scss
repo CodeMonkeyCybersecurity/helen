@@ -24,6 +24,17 @@
 .book-header {
   background-color: $bg-section-mint;
   border-bottom: 1px solid $bg-section-neutral;
+  
+  // Override theme's default display: none and ensure sticky positioning works
+  display: block !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 50 !important;
+  
+  // Only show on mobile/tablet, hide on desktop where sidebar navigation is used
+  @media (min-width: 1024px) {
+    display: none !important;
+  }
 }
 
 .book-toc {

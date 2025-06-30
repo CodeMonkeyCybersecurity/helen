@@ -6,6 +6,12 @@
 </head>
 <body dir="{{ default "ltr" .Site.Language.LanguageDirection }}" class="brand-website">
   <input type="checkbox" class="hidden toggle" id="menu-control" />
+  
+  <!-- Mobile header moved outside flex container for sticky positioning -->
+  <header class="book-header">
+    {{ template "header" . }} <!-- Mobile layout header -->
+  </header>
+  
   <main class="container flex">
     <aside class="book-menu">
       <div class="book-menu-content">
@@ -14,9 +20,6 @@
     </aside>
 
     <div class="book-page">
-      <header class="book-header">
-        {{ template "header" . }} <!-- Mobile layout header -->
-      </header>
 
       {{ partial "docs/inject/content-before" . }}
       {{ template "main" . }} <!-- Page Content -->
