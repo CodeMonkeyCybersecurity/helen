@@ -1,5 +1,38 @@
 /* You can add custom styles here. */
 
+// Unified navigation styling mixins
+@mixin nav-base-styling {
+  background-color: $nav-background;
+  color: $nav-text-color;
+  border-color: rgba($bg-section-neutral, 0.8);
+  box-shadow: $nav-shadow;
+}
+
+@mixin nav-link-styling {
+  color: $nav-text-color;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+  font-family: $font-body;
+  
+  &:hover {
+    background-color: rgba($bg-section-neutral, 0.7);
+    text-decoration: underline;
+    color: $nav-text-color;
+  }
+  
+  &.active {
+    background-color: $brand-logo-orange;
+    color: white;
+    
+    &:hover {
+      background-color: $hover-orange;
+      text-decoration: none;
+    }
+  }
+}
+
 // Ensure full-width background with no margins
 html {
   background-color: $bg-website !important; // Set background on html for overscroll
@@ -17,8 +50,8 @@ body {
 
 // Brand-specific overrides for Hugo Book theme
 .book-menu {
-  background-color: $bg-section-neutral;
-  border-right: 1px solid $bg-section-mint;
+  @include nav-base-styling;
+  border-right: $nav-border;
   flex: 0 0 $menu-width; // Maintain consistent width
   
   .book-menu-content {
@@ -40,8 +73,8 @@ body {
 }
 
 .book-header {
-  background-color: $bg-section-mint;
-  border-bottom: 1px solid $bg-section-neutral;
+  @include nav-base-styling;
+  border-bottom: $nav-border;
   
   // Override theme's default display: none and ensure sticky positioning works
   display: block !important;
@@ -89,12 +122,20 @@ body {
     display: none !important;
   }
   
-  // Ensure menu stays fixed to left edge
+  // Ensure menu stays pinned to left edge
   .book-menu {
     position: sticky !important;
     top: 0 !important;
     height: 100vh !important;
-    overflow-y: auto !important;
+    overflow: visible !important; // Allow menu content to handle its own scroll
+    
+    .book-menu-content {
+      position: sticky !important;
+      top: 0 !important;
+      height: 100vh !important;
+      overflow-y: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+    }
   }
 }
 
@@ -134,10 +175,13 @@ body {
 }
 
 
-// Override theme hover opacity
-.book-menu a:hover {
+// Apply unified navigation styling to all nav links
+.book-menu a,
+.mobile-menu-dropdown a {
+  @include nav-link-styling;
+  
+  // Override theme's opacity changes
   opacity: 1 !important;
-  text-decoration: underline !important;
 }
 
 // Unified search component styling
@@ -358,26 +402,8 @@ body {
     }
     
     .menu-item {
+      @include nav-link-styling;
       display: block;
-      padding: 0.5rem 0.75rem;
-      color: $text-base-dark;
-      text-decoration: none;
-      border-radius: 0.375rem;
-      transition: all 0.2s ease;
-      
-      &:hover {
-        background-color: $bg-section-neutral;
-        text-decoration: underline;
-      }
-      
-      &.active {
-        background-color: $brand-logo-orange;
-        color: white;
-        
-        &:hover {
-          background-color: $hover-orange;
-        }
-      }
       
       &.menu-item-cta {
         background-color: $brand-teal;
@@ -426,22 +452,20 @@ body {
     }
     
     .menu-sub-item {
+      @include nav-link-styling;
       display: block;
-      padding: 0.375rem 0.75rem 0.375rem 2rem;
-      color: $text-muted;
-      text-decoration: none;
+      padding-left: 2rem;
       font-size: 0.9rem;
-      transition: all 0.2s ease;
+      color: $text-muted;
       
       &:hover {
-        color: $text-base-dark;
-        background-color: $bg-section-neutral;
-        text-decoration: underline;
+        color: $nav-text-color;
       }
       
       &.active {
         color: $brand-teal;
         font-weight: 600;
+        background-color: transparent;
       }
     }
   }

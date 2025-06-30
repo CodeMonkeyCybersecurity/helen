@@ -37,4 +37,11 @@ $font-heading: 'Noto Sans', sans-serif;
 $font-body: 'Inter', 'Atkinson Hyperlegible', ui-sans-serif, system-ui;
 $font-mono: 'Noto Sans Mono', ui-monospace, 'SFMono-Regular';
 
+// Unified navigation styling variables
+$nav-background: $bg-section-mint;
+$nav-border: 1px solid $bg-section-neutral;
+$nav-text-color: $text-base-dark;
+$nav-padding: 1rem;
+$nav-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
 // @import "plugins/dark";
