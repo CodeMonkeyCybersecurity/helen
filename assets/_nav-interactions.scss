@@ -1,0 +1,127 @@
+/*
+ * Navigation Interaction Patterns
+ * Centralized hover, focus, and active state logic for all navigation elements
+ */
+
+// Unified interactive states for all navigation
+.nav-interactive {
+  transition: all 0.2s ease;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  
+  &:hover {
+    // Remove background shade on hover - keep only text effects
+    text-decoration: underline;
+    color: $nav-text-color;
+  }
+  
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba($brand-primary, 0.3);
+    background-color: rgba($brand-primary, 0.1);
+  }
+  
+  &.active {
+    background-color: $brand-logo-orange !important;
+    color: white !important;
+    text-decoration: none;
+    
+    &:hover {
+      background-color: $hover-orange !important;
+      color: white !important;
+      text-decoration: none;
+    }
+  }
+}
+
+// Brand link specific interactions (logo + text combinations)
+.brand-link {
+  transition: all 0.2s ease;
+  
+  &:hover {
+    text-decoration: underline;
+    color: $brand-primary;
+  }
+}
+
+// Dropdown menu item interactions
+.nav-dropdown-item {
+  @extend .nav-interactive;
+  
+  &:hover {
+    // Override base nav-interactive to prevent background on dropdown items
+    background-color: transparent;
+    text-decoration: underline;
+    color: $brand-primary;
+  }
+  
+  &.active {
+    background-color: $brand-logo-orange !important;
+    color: white !important;
+    
+    &:hover {
+      background-color: $hover-orange !important;
+      color: white !important;
+      text-decoration: none;
+    }
+  }
+}
+
+// Expandable menu parent interactions
+.nav-expandable-parent {
+  @extend .nav-interactive;
+  
+  // Only show active state when expanded (checked)
+  &.expanded {
+    background-color: $brand-logo-orange !important;
+    color: white !important;
+    
+    &:hover {
+      background-color: $hover-orange !important;
+      color: white !important;
+      text-decoration: none;
+    }
+  }
+  
+  // Remove background when not expanded but has active children
+  &.has-active-child:not(.expanded) {
+    background-color: transparent !important;
+    color: $nav-text-color !important;
+    
+    &:hover {
+      background-color: transparent !important;
+      color: $nav-text-color !important;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Button-style navigation items (CTAs, etc.)
+.nav-button {
+  background-color: $brand-primary;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: darken($brand-primary, 10%);
+    text-decoration: none;
+    color: white;
+  }
+}
+
+// Search result interactions
+.nav-search-result {
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: $bg-light;
+    text-decoration: none;
+    
+    .search-result-title {
+      color: $brand-primary;
+    }
+  }
+}

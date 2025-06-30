@@ -1,5 +1,8 @@
 /* You can add custom styles here. */
 
+// Import navigation interaction patterns
+@import "nav-interactions";
+
 // Unified navigation styling mixins
 @mixin nav-base-styling {
   background-color: $nav-background;
@@ -185,47 +188,35 @@ html {
   // Override theme's interfering opacity changes
   opacity: 1 !important;
   
-  // Remove theme's hover opacity interference
+  // Remove theme's hover opacity interference - unified hover logic now in _nav-interactions.scss
   &:hover {
     opacity: 1 !important;
   }
 }
 
-// Unified active state styling for all navigation
+// Unified active state styling for all navigation - hover logic now centralized in _nav-interactions.scss
 .book-menu-enhanced .menu-item.active,
 .book-menu .menu-item.active,
 .brand-nav-active,
 .brand-nav-active-mobile,
 .brand-nav-dropdown-active {
-  background-color: $brand-logo-orange !important;
-  color: white !important;
-  
-  &:hover {
-    background-color: $hover-orange !important;
-    color: white !important;
-    text-decoration: none !important;
-  }
+  @extend .nav-interactive;
 }
 
-// Special styling for dropdown items
+// Special styling for dropdown items - using unified hover logic
 .brand-nav-dropdown-active {
+  @extend .nav-dropdown-item;
+  
   .font-semibold,
   .text-xs {
     color: white !important;
   }
-  
-  &:hover {
-    background-color: $hover-orange !important;
-    
-    .font-semibold,
-    .text-xs {
-      color: white !important;
-    }
-  }
 }
 
-// Special styling for mobile active cards
+// Special styling for mobile active cards - using unified hover logic
 .brand-nav-active-mobile {
+  @extend .nav-interactive;
+  
   .flex {
     background-color: rgba($brand-logo-orange, 0.1) !important;
   }
@@ -236,27 +227,16 @@ html {
   }
 }
 
-// Expandable menu parent active state - ONLY when checkbox is checked (expanded)
+// Expandable menu parent active state - using unified hover logic
 .menu-item-expandable input:checked + label.menu-item {
-  background-color: $brand-logo-orange !important;
-  color: white !important;
-  
-  &:hover {
-    background-color: $hover-orange !important;
-    color: white !important;
-    text-decoration: none !important;
-  }
+  @extend .nav-expandable-parent;
+  @extend .expanded;
 }
 
 // Remove active highlighting from expandable parent when not expanded
 .menu-item-expandable input:not(:checked) + label.menu-item.active {
-  background-color: transparent !important;
-  color: $nav-text-color !important;
-  
-  &:hover {
-    background-color: rgba($bg-section-neutral, 0.7) !important;
-    color: $nav-text-color !important;
-  }
+  @extend .nav-expandable-parent;
+  @extend .has-active-child;
 }
 
 // Final catch-all: Force unified background on ALL navigation elements
@@ -295,35 +275,7 @@ html {
   color: $text-muted;
 }
 
-// Unified interactive states for all navigation
-.nav-interactive {
-  transition: all 0.2s ease;
-  border-radius: 0.375rem;
-  
-  &:hover {
-    background-color: rgba($bg-section-neutral, 0.7);
-    text-decoration: underline;
-    color: $nav-text-color;
-  }
-  
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba($brand-primary, 0.3);
-    background-color: rgba($brand-primary, 0.1);
-  }
-  
-  &.active {
-    background-color: $brand-logo-orange !important;
-    color: white !important;
-    text-decoration: none;
-    
-    &:hover {
-      background-color: $hover-orange !important;
-      color: white !important;
-      text-decoration: none;
-    }
-  }
-}
+// Navigation interactive styles are now imported from _nav-interactions.scss
 
 // Unified spacing system
 .nav-spacing-item {
@@ -525,17 +477,11 @@ html {
 // Unified brand component styling
 .brand-unified {
   .brand-link {
+    @extend .brand-link; // Use unified brand link interactions
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    text-decoration: none;
     color: $text-base-dark;
-    transition: all 0.2s ease;
-    
-    &:hover {
-      text-decoration: underline;
-      color: $brand-primary;
-    }
   }
   
   .brand-logo {
@@ -613,15 +559,7 @@ html {
       display: block;
       
       &.menu-item-cta {
-        background-color: $brand-primary;
-        color: white;
-        text-align: center;
-        font-weight: 600;
-        
-        &:hover {
-          background-color: darken($brand-primary, 10%);
-          text-decoration: none;
-        }
+        @extend .nav-button;
       }
     }
     
@@ -665,9 +603,7 @@ html {
       font-size: 0.9rem;
       color: $text-muted;
       
-      &:hover {
-        color: $nav-text-color;
-      }
+      // Hover logic now centralized in _nav-interactions.scss
       
       &.active {
         color: $brand-primary;
