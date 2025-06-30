@@ -113,17 +113,13 @@ During your trial, our team helps you install and configure Delphi Notify on you
 
 ---
 
-## **Ready to Get Started?**
-
-{{% hint info %}}
-**Questions About Pricing?**
-
-We're happy to discuss your specific needs and find the right plan for you.
-
-[Email us](mailto:main@cybermonkey.net.au?subject=Delphi%20Notify%20Pricing%20Question&body=Hi!%20I'd%20like%20to%20discuss%20pricing%20for%20Delphi%20Notify.%0A%0AMy%20situation:%0A-%20Number%20of%20devices:%0A-%20Business%20or%20personal%20use:%0A-%20Specific%20concerns%20or%20questions:%0A%0APlease%20let%20me%20know%20what%20would%20work%20best%20for%20my%20needs.) or call **(+61) 0432 038 310**
-
-{{< button href="/docs/delphi/sign-up/" >}}Start Free Trial Instead{{< /button >}}
-{{% /hint %}}
+{{< cta-anthropic 
+  title="Ready to Get Started?" 
+  text="Questions about pricing? We're happy to discuss your specific needs and find the right plan for you. Email us at main@cybermonkey.net.au or call (+61) 0432 038 310."
+  link="/docs/delphi/sign-up/" 
+  linkText="Start Your Free Trial"
+  style="dark"
+  buttonStyle="teal" >}}
 
 ---
 

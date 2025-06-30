@@ -1,0 +1,21 @@
+{{/*
+Enhanced CTA Section Shortcode - Anthropic-inspired design
+Usage: {{< cta-anthropic title="Your Title" text="Your message" link="/your-link/" linkText="Button Text" style="dark" buttonStyle="primary" >}}
+
+Parameters:
+- title: Main heading text
+- text: Supporting text/description  
+- link: URL for the button
+- linkText: Button text
+- style: "dark" (default) or "light"
+- buttonStyle: "primary" (white on dark), "teal" (brand teal), or "orange" (brand orange)
+*/}}
+
+{{ $title := .Get "title" | default "Ready to protect what matters?" }}
+{{ $text := .Get "text" | default "Join us in building open, human-first cybersecurity. No jargon. No gatekeeping. Just dignity." }}
+{{ $link := .Get "link" | default "/docs/delphi/sign-up/" }}
+{{ $linkText := .Get "linkText" | default "Get Started" }}
+{{ $style := .Get "style" | default "dark" }}
+{{ $buttonStyle := .Get "buttonStyle" | default "primary" }}
+
+{{ partial "cta-anthropic.html" (dict "title" $title "text" $text "link" $link "linkText" $linkText "style" $style "buttonStyle" $buttonStyle) }}

@@ -38,6 +38,10 @@ docker-compose down
 # Download from https://github.com/gohugoio/hugo/releases/latest
 ```
 
+## Development Notes
+- Always use `hugo server --buildDrafts` for local development to see draft content
+- We need to start up the server with `npm run dev` in dev mode because we've added npm bits to the hugo base
+
 ## Architecture Overview
 
 ### Core Technology Stack
