@@ -56,7 +56,7 @@
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" {{ template "integrity" $styles }}>
 
 <!-- Tailwind CSS -->
-{{- $tailwind := resources.Get "style.css" | resources.Minify | resources.Fingerprint }}
+{{- $tailwind := resources.Get "css/tailwind.css" | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $tailwind.RelPermalink }}" {{ template "integrity" $tailwind }}>
 {{- if default true .Site.Params.BookSearch -}}
   {{- $searchJSFile := printf "%s.search.js" .Language.Lang }}
