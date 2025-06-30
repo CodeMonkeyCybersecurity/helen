@@ -51,11 +51,12 @@ body {
 // Brand-specific overrides for Hugo Book theme
 .book-menu {
   @include nav-base-styling;
+  background-color: $nav-background !important; // Force unified background
   border-right: $nav-border;
   flex: 0 0 $menu-width; // Maintain consistent width
   
   .book-menu-content {
-    background-color: transparent;
+    background-color: transparent !important; // Ensure no background override
     width: $menu-width; // Consistent width
     // Remove position overrides - let theme handle it
   }
@@ -74,6 +75,7 @@ body {
 
 .book-header {
   @include nav-base-styling;
+  background-color: $nav-background !important; // Force unified background
   border-bottom: $nav-border;
   
   // Override theme's default display: none and ensure sticky positioning works
