@@ -61,6 +61,11 @@ name = "About"
 url = "/docs/governance/"
 weight = 20
 
+[[menu.main]]
+name = "Customer Login"
+url = "/docs/login/"
+weight = 25
+
 # Platform dropdown menu
 [[menu.platform]]
 name = "Delphi Notify"

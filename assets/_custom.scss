@@ -195,7 +195,32 @@ body {
 // Unified active state styling for all navigation
 .book-menu-enhanced .menu-item.active,
 .book-menu .menu-item.active,
-.brand-nav-active {
+.brand-nav-active,
+.brand-nav-active-mobile {
+  background-color: $brand-logo-orange !important;
+  color: white !important;
+  
+  &:hover {
+    background-color: $hover-orange !important;
+    color: white !important;
+    text-decoration: none !important;
+  }
+}
+
+// Special styling for mobile active cards
+.brand-nav-active-mobile {
+  .flex {
+    background-color: rgba($brand-logo-orange, 0.1) !important;
+  }
+  
+  .font-medium {
+    color: $brand-logo-orange !important;
+    font-weight: 600 !important;
+  }
+}
+
+// Expandable menu parent active state
+.menu-item-expandable input:checked + label.menu-item {
   background-color: $brand-logo-orange !important;
   color: white !important;
   

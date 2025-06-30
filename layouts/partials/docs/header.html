@@ -144,83 +144,32 @@
        class="mobile-menu-dropdown absolute top-full left-0 right-0 bg-white border-t border-slate-200 shadow-lg z-50 max-h-screen overflow-y-auto">
     
     <div class="px-4 py-6 space-y-6">
-      {{ if .Site.Menus.platform }}
       <!-- Platform Section -->
-      <div class="space-y-4">
-        <div class="flex items-center space-x-2">
-          <div class="w-2 h-2 bg-brand-teal rounded-full"></div>
-          <h3 class="text-slate-800 font-heading font-semibold text-lg">Platform</h3>
-        </div>
-        <div class="space-y-3 pl-4">
-          {{ range .Site.Menus.platform }}
-          <a href="{{ .URL }}" 
-             class="block group"
-             @click="open = false">
-            <div class="flex items-start space-x-3 p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200">
-              <div class="w-8 h-8 bg-brand-teal bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                <div class="w-2 h-2 bg-brand-teal rounded-full"></div>
-              </div>
-              <div class="flex-1 min-w-0">
-                <div class="font-medium text-slate-900 group-hover:underline">{{ .Name }}</div>
-                {{ with .Params.description }}
-                <div class="text-sm text-slate-500 mt-1">{{ . }}</div>
-                {{ end }}
-              </div>
-            </div>
-          </a>
-          {{ end }}
-        </div>
-      </div>
-      {{ end }}
+      {{ partial "docs/nav-section" (dict 
+        "currentPage" . 
+        "title" "Platform" 
+        "items" .Site.Menus.platform 
+        "context" "mobile" 
+        "icon" "bg-brand-teal"
+        "expandable" true
+        "first" true) }}
       
-      {{ if .Site.Menus.training }}
       <!-- Training Section -->
-      <div class="space-y-4 pt-2 border-t border-slate-100">
-        <div class="flex items-center space-x-2">
-          <div class="w-2 h-2 bg-brand-logo-orange rounded-full"></div>
-          <h3 class="text-slate-800 font-heading font-semibold text-lg">Training</h3>
-        </div>
-        <div class="space-y-3 pl-4">
-          {{ range .Site.Menus.training }}
-          <a href="{{ .URL }}" 
-             class="block group"
-             @click="open = false">
-            <div class="flex items-start space-x-3 p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200">
-              <div class="w-8 h-8 bg-brand-logo-orange bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                <div class="w-2 h-2 bg-brand-logo-orange rounded-full"></div>
-              </div>
-              <div class="flex-1 min-w-0">
-                <div class="font-medium text-slate-900 group-hover:underline">{{ .Name }}</div>
-                {{ with .Params.description }}
-                <div class="text-sm text-slate-500 mt-1">{{ . }}</div>
-                {{ end }}
-              </div>
-            </div>
-          </a>
-          {{ end }}
-        </div>
-      </div>
-      {{ end }}
+      {{ partial "docs/nav-section" (dict 
+        "currentPage" . 
+        "title" "Training" 
+        "items" .Site.Menus.training 
+        "context" "mobile" 
+        "icon" "bg-brand-logo-orange"
+        "expandable" true) }}
       
-      {{ if .Site.Menus.main }}
-      <!-- Main Navigation -->
-      <div class="space-y-4 pt-2 border-t border-slate-100">
-        <div class="flex items-center space-x-2">
-          <div class="w-2 h-2 bg-slate-400 rounded-full"></div>
-          <h3 class="text-slate-800 font-heading font-semibold text-lg">Resources</h3>
-        </div>
-        <div class="space-y-2 pl-4">
-          {{ range .Site.Menus.main }}
-          {{ $isActive := eq $.RelPermalink .URL }}
-          <a href="{{ .URL }}" 
-             class="block py-3 px-3 rounded-lg font-medium text-slate-700 hover:underline hover:bg-slate-50 transition-colors duration-200{{ if $isActive }} brand-nav-active{{ end }}"
-             @click="open = false">
-            {{ .Name }}
-          </a>
-          {{ end }}
-        </div>
-      </div>
-      {{ end }}
+      <!-- Resources Section -->
+      {{ partial "docs/nav-section" (dict 
+        "currentPage" . 
+        "title" "Resources" 
+        "items" .Site.Menus.main 
+        "context" "mobile" 
+        "icon" "bg-slate-400") }}
       
       <!-- CTA Section -->
       <div class="pt-4 border-t border-slate-100">

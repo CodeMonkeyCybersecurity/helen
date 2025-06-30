@@ -25,92 +25,31 @@
           Get Started
         </a>
       </li>
-      <li>
-        <a href="/docs/login/" class="menu-item {{ if eq $currentPage.RelPermalink "/docs/login/" }}active{{ end }}">
-          Customer Login
-        </a>
-      </li>
     </ul>
   </div>
 
   <!-- Platform Section -->
-  <div class="menu-section">
-    <div class="menu-section-header">Platform</div>
-    <ul class="menu-section-items">
-      <li class="menu-item-expandable">
-        <input type="checkbox" id="menu-delphi" class="toggle" />
-        <label for="menu-delphi" class="menu-item">
-          <span>Delphi</span>
-        </label>
-        <ul class="menu-sub-items">
-          <li><a href="/docs/delphi/" class="menu-sub-item {{ if eq $currentPage.RelPermalink "/docs/delphi/" }}active{{ end }}">Overview</a></li>
-          <li><a href="/docs/delphi/technology/" class="menu-sub-item {{ if eq $currentPage.RelPermalink "/docs/delphi/technology/" }}active{{ end }}">Technology</a></li>
-          <li><a href="/docs/delphi/sign-up/" class="menu-sub-item {{ if eq $currentPage.RelPermalink "/docs/delphi/sign-up/" }}active{{ end }}">Sign Up</a></li>
-          <li><a href="/docs/delphi/roadmap/" class="menu-sub-item {{ if eq $currentPage.RelPermalink "/docs/delphi/roadmap/" }}active{{ end }}">Roadmap</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="/docs/backup/" class="menu-item {{ if eq $currentPage.RelPermalink "/docs/backup/" }}active{{ end }}">
-          Backup Services
-        </a>
-      </li>
-    </ul>
-  </div>
+  {{ partial "docs/nav-section" (dict 
+    "currentPage" $currentPage 
+    "title" "Platform" 
+    "items" .Site.Menus.platform 
+    "context" "sidebar" 
+    "expandable" true) }}
 
   <!-- Training Section -->
-  <div class="menu-section">
-    <div class="menu-section-header">Training</div>
-    <ul class="menu-section-items">
-      <li>
-        <a href="/docs/training/scam-education/" class="menu-item {{ if eq $currentPage.RelPermalink "/docs/training/scam-education/" }}active{{ end }}">
-          Scam Education
-        </a>
-      </li>
-      <li>
-        <a href="/docs/training/phishing/" class="menu-item {{ if eq $currentPage.RelPermalink "/docs/training/phishing/" }}active{{ end }}">
-          Phishing Training
-        </a>
-      </li>
-    </ul>
-  </div>
+  {{ partial "docs/nav-section" (dict 
+    "currentPage" $currentPage 
+    "title" "Training" 
+    "items" .Site.Menus.training 
+    "context" "sidebar" 
+    "expandable" true) }}
 
   <!-- Resources Section -->
-  <div class="menu-section">
-    <div class="menu-section-header">Resources</div>
-    <ul class="menu-section-items">
-      <li>
-        <a href="/docs/" class="menu-item {{ if eq $currentPage.RelPermalink "/docs/" }}active{{ end }}">
-          Documentation
-        </a>
-      </li>
-      <li>
-        <a href="/posts/" class="menu-item {{ if hasPrefix $currentPage.RelPermalink "/posts/" }}active{{ end }}">
-          Blog
-        </a>
-      </li>
-      <li>
-        <a href="/docs/pricing/" class="menu-item {{ if eq $currentPage.RelPermalink "/docs/pricing/" }}active{{ end }}">
-          Pricing
-        </a>
-      </li>
-      <li class="menu-item-expandable">
-        <input type="checkbox" id="menu-about" class="toggle" />
-        <label for="menu-about" class="menu-item">
-          <span>About Us</span>
-        </label>
-        <ul class="menu-sub-items">
-          <li><a href="/docs/about-us/" class="menu-sub-item {{ if eq $currentPage.RelPermalink "/docs/about-us/" }}active{{ end }}">Overview</a></li>
-          <li><a href="/docs/governance/" class="menu-sub-item {{ if eq $currentPage.RelPermalink "/docs/governance/" }}active{{ end }}">Governance</a></li>
-          <li><a href="/docs/governance/policies/" class="menu-sub-item {{ if hasPrefix $currentPage.RelPermalink "/docs/governance/policies/" }}active{{ end }}">Policies</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="/docs/contact/" class="menu-item {{ if eq $currentPage.RelPermalink "/docs/contact/" }}active{{ end }}">
-          Contact
-        </a>
-      </li>
-    </ul>
-  </div>
+  {{ partial "docs/nav-section" (dict 
+    "currentPage" $currentPage 
+    "title" "Resources" 
+    "items" .Site.Menus.main 
+    "context" "sidebar") }}
 
   <!-- External Links -->
   {{ with .Site.Menus.after }}

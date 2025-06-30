@@ -1,35 +1,50 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang }}">
+{{ define "main" }}
+<style>
+  .not-found {
+    text-align: center;
+    padding: 2rem;
+  }
 
-<head>
-  {{ partial "docs/html-head" . }}
-  {{ partial "docs/inject/head" . }}
+  .not-found h1 {
+    margin: .25em 0 0 0;
+    opacity: .25;
+    font-size: 40vmin;
+  }
 
-  <style>
-    .not-found {
-      text-align: center;
-    }
+  .not-found h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #d77350;
+  }
 
-    .not-found h1 {
-      margin: .25em 0 0 0;
-      opacity: .25;
-      font-size: 40vmin;
-    }
-  </style>
-</head>
+  .not-found h3 {
+    margin-bottom: 2rem;
+  }
 
-<body>
-  <main class="flex justify-center not-found">
-    <div>
-      <h2>Page Not Found</h2>
-      <h3>
-        <a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a>
-      </h3>
-      <img src="/images/404.jpg" alt="404"  width="800" />
+  .not-found img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+</style>
+
+<div class="not-found">
+  <h2>Page Not Found</h2>
+  <h3>
+    <a href="{{ .Site.Home.RelPermalink }}" class="text-brand-teal hover:text-brand-logo-orange transition-colors">
+      Return to {{ .Site.Title }}
+    </a>
+  </h3>
+  <img src="/images/404.jpg" alt="404 - Page Not Found" width="800" />
+  
+  <div class="mt-8">
+    <p class="text-slate-600 mb-4">The page you're looking for doesn't exist.</p>
+    <div class="space-x-4">
+      <a href="{{ .Site.Home.RelPermalink }}" class="btn-brand-teal inline-block px-6 py-2">Go Home</a>
+      <a href="/docs/" class="text-brand-teal hover:underline">Browse Documentation</a>
     </div>
-  </main>
+  </div>
+</div>
+{{ end }}
 
-  {{ partial "docs/inject/body" . }}
-</body>
-
-</html>
+{{ define "title" }}404 - Page Not Found{{ end }}
