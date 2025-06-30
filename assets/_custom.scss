@@ -196,7 +196,8 @@ body {
 .book-menu-enhanced .menu-item.active,
 .book-menu .menu-item.active,
 .brand-nav-active,
-.brand-nav-active-mobile {
+.brand-nav-active-mobile,
+.brand-nav-dropdown-active {
   background-color: $brand-logo-orange !important;
   color: white !important;
   
@@ -204,6 +205,23 @@ body {
     background-color: $hover-orange !important;
     color: white !important;
     text-decoration: none !important;
+  }
+}
+
+// Special styling for dropdown items
+.brand-nav-dropdown-active {
+  .font-semibold,
+  .text-xs {
+    color: white !important;
+  }
+  
+  &:hover {
+    background-color: $hover-orange !important;
+    
+    .font-semibold,
+    .text-xs {
+      color: white !important;
+    }
   }
 }
 
@@ -219,7 +237,7 @@ body {
   }
 }
 
-// Expandable menu parent active state
+// Expandable menu parent active state - ONLY when checkbox is checked (expanded)
 .menu-item-expandable input:checked + label.menu-item {
   background-color: $brand-logo-orange !important;
   color: white !important;
@@ -228,6 +246,17 @@ body {
     background-color: $hover-orange !important;
     color: white !important;
     text-decoration: none !important;
+  }
+}
+
+// Remove active highlighting from expandable parent when not expanded
+.menu-item-expandable input:not(:checked) + label.menu-item.active {
+  background-color: transparent !important;
+  color: $nav-text-color !important;
+  
+  &:hover {
+    background-color: rgba($bg-section-neutral, 0.7) !important;
+    color: $nav-text-color !important;
   }
 }
 

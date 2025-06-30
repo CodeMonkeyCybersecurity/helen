@@ -49,7 +49,12 @@
       <!-- Mobile Simple Items -->
       <div class="space-y-2 pl-4">
         {{ range $items }}
-        {{ $isActive := partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $currentPage "url" .URL) }}
+        {{ $isActive := false }}
+        {{ if eq .URL "/docs/" }}
+          {{ $isActive = partial "docs/nav-helpers" (dict "type" "isActiveExact" "currentPage" $currentPage "url" .URL) }}
+        {{ else }}
+          {{ $isActive = partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $currentPage "url" .URL) }}
+        {{ end }}
         <a href="{{ .URL }}" 
            class="block py-3 px-3 rounded-lg font-medium text-slate-700 hover:underline hover:bg-slate-50 transition-colors duration-200{{ if $isActive }} brand-nav-active{{ end }}"
            @click="open = false">
@@ -70,7 +75,7 @@
         {{ $hasActiveChild := partial "docs/nav-helpers" (dict "type" "isExpanded" "currentPage" $currentPage "menuKey" (lower $title)) }}
         <li class="menu-item-expandable">
           <input type="checkbox" id="menu-{{ lower $title }}" class="toggle"{{ if $hasActiveChild }} checked{{ end }}/>
-          <label for="menu-{{ lower $title }}" class="menu-item{{ if $hasActiveChild }} active{{ end }}">
+          <label for="menu-{{ lower $title }}" class="menu-item">
             <span>{{ $title }}</span>
           </label>
           <ul class="menu-sub-items">
@@ -83,7 +88,12 @@
       {{ else }}
         <!-- Sidebar Simple Items -->
         {{ range $items }}
-        {{ $isActive := partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $currentPage "url" .URL) }}
+        {{ $isActive := false }}
+        {{ if eq .URL "/docs/" }}
+          {{ $isActive = partial "docs/nav-helpers" (dict "type" "isActiveExact" "currentPage" $currentPage "url" .URL) }}
+        {{ else }}
+          {{ $isActive = partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $currentPage "url" .URL) }}
+        {{ end }}
         <li>
           <a href="{{ .URL }}" class="menu-item{{ if $isActive }} active{{ end }}">
             {{ .Name }}

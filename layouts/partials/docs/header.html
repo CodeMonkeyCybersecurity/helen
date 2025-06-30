@@ -33,7 +33,8 @@
              x-transition:leave-end="opacity-0 scale-95"
              class="absolute left-0 mt-2 w-56 bg-white border border-slate-200 shadow-lg rounded-xl z-20 py-2">
           {{ range .Site.Menus.platform }}
-          <a href="{{ .URL }}" class="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:underline transition-colors duration-200">
+          {{ $isActive := partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $ "url" .URL) }}
+          <a href="{{ .URL }}" class="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:underline transition-colors duration-200{{ if $isActive }} brand-nav-dropdown-active{{ end }}">
             <div class="font-semibold">{{ .Name }}</div>
             {{ with .Params.description }}
             <div class="text-xs text-slate-500 mt-1">{{ . }}</div>
@@ -62,7 +63,8 @@
              x-transition:leave-end="opacity-0 scale-95"
              class="absolute left-0 mt-2 w-56 bg-white border border-slate-200 shadow-lg rounded-xl z-20 py-2">
           {{ range .Site.Menus.training }}
-          <a href="{{ .URL }}" class="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:underline transition-colors duration-200">
+          {{ $isActive := partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $ "url" .URL) }}
+          <a href="{{ .URL }}" class="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:underline transition-colors duration-200{{ if $isActive }} brand-nav-dropdown-active{{ end }}">
             <div class="font-semibold">{{ .Name }}</div>
             {{ with .Params.description }}
             <div class="text-xs text-slate-500 mt-1">{{ . }}</div>
@@ -75,7 +77,12 @@
 
       <!-- Main Navigation Links -->
       {{ range .Site.Menus.main }}
-      {{ $isActive := eq $.RelPermalink .URL }}
+      {{ $isActive := false }}
+      {{ if eq .URL "/docs/" }}
+        {{ $isActive = partial "docs/nav-helpers" (dict "type" "isActiveExact" "currentPage" $ "url" .URL) }}
+      {{ else }}
+        {{ $isActive = partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $ "url" .URL) }}
+      {{ end }}
       <a href="{{ .URL }}" class="text-slate-700 hover:underline font-medium{{ if $isActive }} brand-nav-active{{ end }}">{{ .Name }}</a>
       {{ end }}
       

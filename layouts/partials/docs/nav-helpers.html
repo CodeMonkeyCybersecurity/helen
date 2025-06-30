@@ -14,7 +14,17 @@
   
   {{ if eq $currentURL $targetURL }}
     {{ $result = true }}
-  {{ else if and (hasPrefix $currentURL $targetURL) (ne $targetURL "/") }}
+  {{ else if and (hasPrefix $currentURL $targetURL) (ne $targetURL "/") (ne $targetURL "/docs/") }}
+    {{/* Only allow prefix matching for non-root /docs/ URL */}}
+    {{ $result = true }}
+  {{ end }}
+  
+{{ else if eq .type "isActiveExact" }}
+  {{/* Check if a URL is exactly the current page (no prefix matching) */}}
+  {{ $currentURL := .currentPage.RelPermalink }}
+  {{ $targetURL := .url }}
+  
+  {{ if eq $currentURL $targetURL }}
     {{ $result = true }}
   {{ end }}
   
