@@ -42,27 +42,27 @@ Don't wait to find out how vulnerable your team is. Our simulation service provi
 
 ## **Simulation Features**
 
-### ** Realistic Scenarios**
+### Realistic Scenarios
 - Industry-specific attack templates
 - Current threat landscape integration
 - Seasonal campaigns (tax time, holidays)
 - Executive impersonation attempts
 - Vendor and supplier spoofing
 
-### **📊 Detailed Analytics**
+### Detailed Analytics
 - Click-through rates by department
 - Time-to-report metrics
 - Improvement trends over time
 - Benchmark comparisons
 - Custom reporting for management
 
-### **🎓 Built-In Training**
+### Built-In Training
 - Instant feedback for simulation participants
 - Micro-learning modules for those who fail tests
 - Progressive difficulty based on performance
 - Certification tracking for compliance
 
-### ** Safe Environment**
+### Safe Environment
 - No actual malware or harmful content
 - Controlled testing environment
 - Privacy-focused reporting
