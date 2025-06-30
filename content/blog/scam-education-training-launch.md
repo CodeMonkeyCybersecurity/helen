@@ -90,7 +90,7 @@ Starting **Monday, July 7th**, we're offering three levels of scam education and
 
 ## How Our Training Is Different 
 
-### 🏠 WA-Focused Content
+###  WA-Focused Content
 - Real examples from Perth and regional WA businesses
 - Scams specifically targeting Australian companies
 - Local compliance requirements (Privacy Act, industry standards)
