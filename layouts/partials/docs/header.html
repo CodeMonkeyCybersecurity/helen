@@ -75,7 +75,8 @@
 
       <!-- Main Navigation Links -->
       {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}" class="text-slate-700 hover:underline font-medium">{{ .Name }}</a>
+      {{ $isActive := eq $.RelPermalink .URL }}
+      <a href="{{ .URL }}" class="text-slate-700 hover:underline font-medium{{ if $isActive }} brand-nav-active{{ end }}">{{ .Name }}</a>
       {{ end }}
       
       <!-- CTA Button -->
@@ -210,8 +211,9 @@
         </div>
         <div class="space-y-2 pl-4">
           {{ range .Site.Menus.main }}
+          {{ $isActive := eq $.RelPermalink .URL }}
           <a href="{{ .URL }}" 
-             class="block py-3 px-3 rounded-lg font-medium text-slate-700 hover:underline hover:bg-slate-50 transition-colors duration-200"
+             class="block py-3 px-3 rounded-lg font-medium text-slate-700 hover:underline hover:bg-slate-50 transition-colors duration-200{{ if $isActive }} brand-nav-active{{ end }}"
              @click="open = false">
             {{ .Name }}
           </a>

@@ -179,18 +179,23 @@ body {
 }
 
 
-// Apply unified navigation styling to all nav links
-.book-menu a,
-.mobile-menu-dropdown a {
+// Apply unified navigation styling to nav links
+.book-menu a {
   @include nav-link-styling;
   
-  // Override theme's opacity changes
+  // Override theme's interfering opacity changes
   opacity: 1 !important;
+  
+  // Remove theme's hover opacity interference
+  &:hover {
+    opacity: 1 !important;
+  }
 }
 
-// Ensure active state styling has proper specificity
+// Unified active state styling for all navigation
 .book-menu-enhanced .menu-item.active,
-.book-menu .menu-item.active {
+.book-menu .menu-item.active,
+.brand-nav-active {
   background-color: $brand-logo-orange !important;
   color: white !important;
   
