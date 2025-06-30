@@ -81,13 +81,7 @@ buildExpired = false
 
 [menu]
 
-# Before menu (appears at top of left sidebar)
-[[menu.before]]
-name = "Blog"
-url = "/posts/"
-weight = 10
-[menu.before.params]
-class = "font-bold text-brand-logo-orange"
+# Before menu (appears at top of left sidebar) - removed to avoid duplication
 
 # Main navigation menu (Resources section)
 [[menu.main]]

@@ -44,19 +44,4 @@
     "items" .Site.Menus.main 
     "context" "sidebar") }}
 
-  <!-- External Links -->
-  {{ with .Site.Menus.after }}
-  <div class="menu-section">
-    <div class="menu-section-header">External</div>
-    <ul class="menu-section-items">
-      {{ range . }}
-      <li>
-        <a href="{{ .URL }}" class="menu-item" target="_blank" rel="noopener">
-          {{ .Name }}
-        </a>
-      </li>
-      {{ end }}
-    </ul>
-  </div>
-  {{ end }}
 </div>
