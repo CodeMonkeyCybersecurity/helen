@@ -16,7 +16,7 @@ bookFlatSection: true
 
 {{< cta-anthropic 
   title="Start Your Free 30-Day Trial" 
-  text=" No credit card required   Setup assistance included   Cancel anytime. Join 200+ small businesses already protected by Delphi Notify. Ask about our Scam Education & Phishing Training workshops for your team."
+  text="✓ No credit card required<br>✓ Setup assistance included<br>✓ Cancel anytime<br><br>Join 200+ small businesses already protected by Delphi Notify. Ask about our Scam Education & Phishing Training workshops for your team."
   link="/docs/delphi/sign-up/" 
   linkText="Get Started Now - Free for 30 Days"
   style="dark"
@@ -57,7 +57,7 @@ bookFlatSection: true
 
 {{< cta-anthropic 
   title="Ready to Stop Worrying About Cyber Threats?" 
-  text="No risk, no commitments. Our team will help you set everything up and you'll start receiving clear, helpful security alerts within 24 hours. Questions? Call (+61) 0432 038 310 or email main@cybermonkey.net.au"
+  text="No risk, no commitments. Our team will help you set everything up and you'll start receiving clear, helpful security alerts within 24 hours.<br><br>Questions? Call (+61) 0432 038 310 or email main@cybermonkey.net.au"
   link="/docs/delphi/sign-up/" 
   linkText="Start Free 30-Day Trial"
   style="dark"

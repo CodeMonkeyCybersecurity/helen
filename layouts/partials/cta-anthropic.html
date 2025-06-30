@@ -26,7 +26,7 @@ Parameters:
   <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl text-center">
       <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl font-heading">{{ $title }}</h2>
-      <p class="mt-6 text-lg leading-8 text-gray-300 font-body">{{ $text }}</p>
+      <p class="mt-6 text-lg leading-8 text-gray-300 font-body">{{ $text | safeHTML }}</p>
       
       <div class="mt-10">
         {{ if eq $buttonStyle "primary" }}
@@ -55,7 +55,7 @@ Parameters:
   <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl text-center">
       <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl font-heading">{{ $title }}</h2>
-      <p class="mt-6 text-lg leading-8 text-slate-700 font-body">{{ $text }}</p>
+      <p class="mt-6 text-lg leading-8 text-slate-700 font-body">{{ $text | safeHTML }}</p>
       
       <div class="mt-10">
         {{ if eq $buttonStyle "primary" }}
