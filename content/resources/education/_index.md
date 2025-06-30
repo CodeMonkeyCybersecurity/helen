@@ -11,23 +11,31 @@ Free resources to help you understand and improve your cybersecurity - no techni
 
 ## Quick Security Guides
 
-### Essential Security Basics
-- **Strong Passwords**: Use unique passwords for every account, enable two-factor authentication
-- **Software Updates**: Keep your devices and apps updated - updates include security fixes
-- **Safe Browsing**: Think before you click - if something seems too good to be true, it probably is
-- **Backup Strategy**: Regular backups protect you from ransomware and device failures
+{{< resource-highlights >}}
+{{< resource-highlight title="Essential Security Basics" type="guide" time="5 min read" difficulty="beginner" featured="true" >}}
+Master the fundamentals: strong passwords, software updates, safe browsing, and backup strategies. Everything you need to start protecting yourself online.
+{{< /resource-highlight >}}
 
-### Email Security
-- **Verify the Sender**: Check email addresses carefully - scammers often use similar-looking addresses
-- **Don't Click Suspicious Links**: Hover over links to see where they really go before clicking
-- **Be Wary of Urgency**: "Act now" pressure tactics are a common scam technique
-- **When in Doubt, Call**: If you receive an unexpected email asking for information, call the sender directly
+{{< resource-highlight title="Email Security Checklist" type="checklist" time="3 min read" difficulty="beginner" >}}
+Learn to identify suspicious emails, verify senders, and avoid phishing attempts. Essential skills for staying safe in your inbox.
+{{< /resource-highlight >}}
 
-### Mobile Device Safety
-- **Lock Your Screen**: Use PIN, password, or biometric locks
-- **App Permissions**: Review what access you're giving to apps - do they really need your location?
-- **Public Wi-Fi Caution**: Avoid accessing sensitive accounts on public networks
-- **Unknown Links**: Be especially careful with links in text messages
+{{< resource-highlight title="Mobile Device Safety" type="guide" time="4 min read" difficulty="beginner" >}}
+Protect your smartphone and tablet with screen locks, app permission reviews, and safe browsing practices for mobile devices.
+{{< /resource-highlight >}}
+
+{{< resource-highlight title="Password Manager Setup" type="tool" time="10 min setup" difficulty="intermediate" >}}
+Step-by-step guide to choosing and setting up a password manager. Stop reusing passwords and protect all your accounts.
+{{< /resource-highlight >}}
+
+{{< resource-highlight title="Two-Factor Authentication" type="guide" time="7 min read" difficulty="beginner" >}}
+Add an extra layer of security to your most important accounts. Learn what 2FA is and how to enable it everywhere.
+{{< /resource-highlight >}}
+
+{{< resource-highlight title="Backup Strategy Guide" type="guide" time="8 min read" difficulty="intermediate" >}}
+Protect your data from ransomware and device failures with a proper backup strategy. Learn the 3-2-1 rule and practical implementation.
+{{< /resource-highlight >}}
+{{< /resource-highlights >}}
 
 ## **Common Threats to Watch For**
 

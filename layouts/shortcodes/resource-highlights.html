@@ -1,0 +1,18 @@
+{{/*
+  Resource Highlights Container
+  
+  Creates a grid of resource highlight cards for educational content
+  
+  Usage:
+  {{< resource-highlights >}}
+    {{< resource-highlight title="Guide Title" type="guide" time="5 min read" >}}
+      Brief description of the resource
+    {{< /resource-highlight >}}
+  {{< /resource-highlights >}}
+*/}}
+
+<div class="resource-highlights-container space-y-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {{ .Inner | markdownify }}
+  </div>
+</div>

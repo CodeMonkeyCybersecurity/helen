@@ -97,29 +97,31 @@ Don't wait to find out how vulnerable your team is. Our simulation service provi
 
 ## **Service Packages**
 
-### **Essentials**
-**$25 per employee per year**
+{{< service-comparison >}}
+{{< service-tier name="Essentials" price="$25" period="per employee/year" cta_text="Start Essential" badge="Most Popular" >}}
 - Monthly email phishing simulations
 - Basic performance dashboard
 - Automated micro-learning
 - Quarterly progress reports
 - Email support
+{{< /service-tier >}}
 
-### **Professional**  
-**$45 per employee per year**
+{{< service-tier name="Professional" price="$45" period="per employee/year" featured="true" cta_text="Upgrade to Pro" badge="Recommended" >}}
 - Multi-channel simulations (email, SMS, voice)
 - Advanced analytics and reporting
 - Custom scenario development
 - Manager training and coaching
 - Priority support + phone
+{{< /service-tier >}}
 
-### **Enterprise**
-**$75 per employee per year**
+{{< service-tier name="Enterprise" price="$75" period="per employee/year" cta_text="Contact Sales" >}}
 - Comprehensive simulation program
 - C-suite and executive targeting
 - Custom threat intelligence integration
 - Dedicated account management
 - On-site consultation and training
+{{< /service-tier >}}
+{{< /service-comparison >}}
 
 ## **Integration Capabilities**
 
