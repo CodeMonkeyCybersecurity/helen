@@ -37,6 +37,14 @@ buildExpired = false
   weight = 1
 
 [menu]
+# Before menu (appears at top of left sidebar)
+[[menu.before]]
+name = "Blog"
+url = "/posts/"
+weight = 10
+[menu.before.params]
+class = "font-bold text-brand-logo-orange"
+
 # Main navigation menu
 [[menu.main]]
 name = "Documentation"

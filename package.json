@@ -4,8 +4,8 @@
   "description": "Helen of Troy was a woman who was said to be the most beautiful woman in ancient Greece. She now has the honour of being the name of our website's git repo.",
   "main": "index.js",
   "scripts": {
-    "build-css": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/style.css",
-    "watch-css": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/style.css --watch",
+    "build-css": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/css/tailwind.css",
+    "watch-css": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/css/tailwind.css --watch",
     "build": "npm run build-css && hugo --minify",
     "dev": "npm run watch-css & hugo server --buildDrafts"
   },
