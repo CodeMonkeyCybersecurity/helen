@@ -8,8 +8,8 @@
     <!-- Desktop Navigation -->
     <div class="desktop-nav hidden items-center space-x-8">
       <!-- Offerings - Direct Links -->
-      {{ $docsSection := .Site.GetPage "/docs" }}
-      {{ $offeringsPages := where $docsSection.Pages "Params.offering" true }}
+      {{ $offeringsSection := .Site.GetPage "/offerings" }}
+      {{ $offeringsPages := where $offeringsSection.Pages "Params.offering" true }}
       {{ if $offeringsPages }}
         {{ range $offeringsPages.ByWeight }}
           {{ if not .Params.bookHidden }}
@@ -59,7 +59,7 @@
       {{ end }}
       
       <!-- CTA Button -->
-      <a href="/docs/delphi/sign-up/" class="btn-brand-teal text-sm px-6 py-2">Get Started</a>
+      <a href="/offerings/delphi/sign-up/" class="btn-brand-teal text-sm px-6 py-2">Get Started</a>
     </div>
 
     <!-- Mobile Search and Menu Button -->
@@ -124,8 +124,8 @@
     
     <div class="px-4 py-6 space-y-6">
       <!-- Offerings Section - Direct links -->
-      {{ $docsSection := .Site.GetPage "/docs" }}
-      {{ $offeringsPages := where $docsSection.Pages "Params.offering" true }}
+      {{ $offeringsSection := .Site.GetPage "/offerings" }}
+      {{ $offeringsPages := where $offeringsSection.Pages "Params.offering" true }}
       {{ if $offeringsPages }}
       <div class="space-y-4">
         <div class="flex items-center space-x-2">
@@ -195,7 +195,7 @@
       
       <!-- CTA Section -->
       <div class="pt-4 border-t border-slate-100">
-        <a href="/docs/delphi/sign-up/" 
+        <a href="/offerings/delphi/sign-up/" 
            class="btn-brand-teal w-full text-center block text-base py-4"
            @click="open = false">
           Get Started

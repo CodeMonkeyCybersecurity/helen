@@ -45,39 +45,39 @@ buildExpired = false
 # Resources section
 [[menu.resources]]
 name = "Documentation"
-url = "/docs/"
+url = "/resources/"
 weight = 10
 
 [[menu.resources]]
 name = "Education"
-url = "/docs/education/"
+url = "/resources/education/"
 weight = 12
 
 # About Us section
 [[menu.about]]
 name = "About Us"
-url = "/docs/about-us/"
+url = "/about-us/"
 weight = 10
 
 [[menu.about]]
 name = "Contact"
-url = "/docs/contact/"
+url = "/about-us/contact/"
 weight = 15
 
 [[menu.about]]
 name = "Governance"
-url = "/docs/governance/"
+url = "/about-us/governance/"
 weight = 20
 
 [[menu.about]]
 name = "Customer Login"
-url = "/docs/login/"
+url = "/about-us/customer-login/"
 weight = 25
 
 # Blog section
 [[menu.blog]]
 name = "Blog"
-url = "/posts/"
+url = "/blog/"
 weight = 10
 
 # Platform/Training menus removed - now using auto-discovery
