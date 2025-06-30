@@ -54,4 +54,4 @@ As a Cybersecurity Provider, we handle sensitive information on behalf of our cl
 - Transparency and trust with clients, auditors, and contributors
 - Enforceable guidelines for secure, ethical, and inclusive operations
 
-For questions about any of our governance documents, email [security@cybermonkey.net.au](mailto:security@cybermonkey.net.au).
+For questions about any of our governance documents, email [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au).
