@@ -31,36 +31,9 @@
       "section" "/docs"
       "sortBy" "Weight")
     "renderConfig" (dict 
-      "expandable" true)) }}
+      "expandable" false)) }}
 
-  <!-- Training Section - Auto-discovered from /docs/training/ -->
-  {{ $trainingSection := .Site.GetPage "/docs/training" }}
-  {{ if $trainingSection }}
-  <div class="menu-section">
-    <div class="menu-section-header">Training</div>
-    <ul class="menu-section-items">
-      <li class="menu-item-expandable">
-        <input type="checkbox" id="menu-training" class="toggle" />
-        <label for="menu-training" class="menu-item">
-          <span>Training</span>
-        </label>
-        <ul class="menu-sub-items">
-          <!-- Main Training page -->
-          {{ $isActive := partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $currentPage "url" $trainingSection.RelPermalink) }}
-          <li><a href="{{ $trainingSection.RelPermalink }}" class="menu-sub-item{{ if $isActive }} active{{ end }}">{{ $trainingSection.Title }}</a></li>
-          
-          <!-- Auto-discovered sub-pages -->
-          {{ range $trainingSection.Pages.ByWeight }}
-            {{ if not .Params.bookHidden }}
-              {{ $isActive := partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $currentPage "url" .RelPermalink) }}
-              <li><a href="{{ .RelPermalink }}" class="menu-sub-item{{ if $isActive }} active{{ end }}">{{ .Title }}</a></li>
-            {{ end }}
-          {{ end }}
-        </ul>
-      </li>
-    </ul>
-  </div>
-  {{ end }}
+  <!-- Training section removed - now under Resources -->
 
   <!-- Resources Section - Auto-discovered from top-level /docs/ pages -->
   {{ $docsSection := .Site.GetPage "/docs" }}
@@ -76,9 +49,26 @@
         </a>
       </li>
       
-      <!-- Auto-discovered top-level pages (excluding major sections) -->
+      <!-- Training now in main menu below -->
+      
+      <!-- Main menu items (includes Training, Education, About, etc.) -->
+      {{ range .Site.Menus.main }}
+      {{ $isActive := false }}
+      {{ if eq .URL "/docs/" }}
+        {{ $isActive = partial "docs/nav-helpers" (dict "type" "isActiveExact" "currentPage" $currentPage "url" .URL) }}
+      {{ else }}
+        {{ $isActive = partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $currentPage "url" .URL) }}
+      {{ end }}
+      <li>
+        <a href="{{ .URL }}" class="menu-item{{ if $isActive }} active{{ end }}">
+          {{ .Name }}
+        </a>
+      </li>
+      {{ end }}
+      
+      <!-- Auto-discovered top-level pages (excluding major sections and main menu items) -->
       {{ range $docsSection.Pages.ByWeight }}
-        {{ if and (not .Params.bookHidden) (not (in (slice "delphi" "training") .File.Dir)) }}
+        {{ if and (not .Params.bookHidden) (not (in (slice "delphi" "training" "persephone" "phishing-simulation" "education" "governance" "login") .File.Dir)) }}
           {{ $isActive := false }}
           {{ if eq .RelPermalink "/docs/" }}
             {{ $isActive = partial "docs/nav-helpers" (dict "type" "isActiveExact" "currentPage" $currentPage "url" .RelPermalink) }}
@@ -92,14 +82,6 @@
           </li>
         {{ end }}
       {{ end }}
-      
-      <!-- Blog link -->
-      <li>
-        {{ $isActive := partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $currentPage "url" "/posts/") }}
-        <a href="/posts/" class="menu-item{{ if $isActive }} active{{ end }}">
-          Blog
-        </a>
-      </li>
     </ul>
   </div>
   {{ end }}

@@ -36,48 +36,7 @@ buildExpired = false
   contentDir = 'content'
   weight = 1
 
-# Navigation sections configuration with unified metadata
-[params.nav]
-  [params.nav.sections]
-    [params.nav.sections.platform]
-      title = "Platform"
-      description = "Security products and services"
-      icon = "bg-brand-teal"
-      expandable = true
-      weight = 10
-      contexts = ["mobile", "sidebar", "desktop"]
-
-    [params.nav.sections.training]
-      title = "Training"
-      description = "Education and awareness programs"
-      icon = "bg-brand-logo-orange"
-      expandable = true
-      weight = 20
-      contexts = ["mobile", "sidebar", "desktop"]
-
-    [params.nav.sections.resources]
-      title = "Resources"
-      description = "Documentation and support"
-      icon = "bg-slate-400"
-      expandable = false
-      weight = 30
-      contexts = ["mobile", "sidebar"]
-
-    [params.nav.sections.external]
-      title = "External"
-      description = "Links and references"
-      icon = "bg-slate-600"
-      expandable = false
-      weight = 40
-      contexts = ["sidebar"]
-
-  # CTA configuration
-  [params.nav.cta]
-    text = "Get Started"
-    url = "/docs/delphi/sign-up/"
-    class = "btn-brand-teal"
-    contexts = ["mobile", "sidebar", "desktop"]
-    weight = 100
+# Navigation now uses auto-discovery - configuration removed
 
 [menu]
 
@@ -88,6 +47,11 @@ buildExpired = false
 name = "Documentation"
 url = "/docs/"
 weight = 10
+
+[[menu.main]]
+name = "Training"
+url = "/docs/training/"
+weight = 11
 
 [[menu.main]]
 name = "Education"
@@ -109,28 +73,7 @@ name = "Customer Login"
 url = "/docs/login/"
 weight = 25
 
-# Platform dropdown menu
-[[menu.platform]]
-name = "Delphi Notify"
-url = "/docs/delphi/"
-weight = 10
-[menu.platform.params]
-description = "XDR Security Platform"
-
-[[menu.platform]]
-name = "Backup Services"
-url = "/docs/delphi/backup/"
-weight = 20
-[menu.platform.params]
-description = "Data Protection"
-
-# Training dropdown menu
-[[menu.training]]
-name = "Training"
-url = "/docs/training/"
-weight = 10
-[menu.training.params]
-description = "Security awareness and education"
+# Platform/Training menus removed - now using auto-discovery
 
 # External links (External section)
 [[menu.after]]
