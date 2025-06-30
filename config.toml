@@ -36,48 +36,50 @@ buildExpired = false
   contentDir = 'content'
   weight = 1
 
-[menu]
 # Navigation sections configuration with unified metadata
-[menu.sections]
-  [menu.sections.platform]
-    title = "Platform"
-    description = "Security products and services"
-    icon = "bg-brand-teal"
-    expandable = true
-    weight = 10
+[params.nav]
+  [params.nav.sections]
+    [params.nav.sections.platform]
+      title = "Platform"
+      description = "Security products and services"
+      icon = "bg-brand-teal"
+      expandable = true
+      weight = 10
+      contexts = ["mobile", "sidebar", "desktop"]
+
+    [params.nav.sections.training]
+      title = "Training"
+      description = "Education and awareness programs"
+      icon = "bg-brand-logo-orange"
+      expandable = true
+      weight = 20
+      contexts = ["mobile", "sidebar", "desktop"]
+
+    [params.nav.sections.resources]
+      title = "Resources"
+      description = "Documentation and support"
+      icon = "bg-slate-400"
+      expandable = false
+      weight = 30
+      contexts = ["mobile", "sidebar"]
+
+    [params.nav.sections.external]
+      title = "External"
+      description = "Links and references"
+      icon = "bg-slate-600"
+      expandable = false
+      weight = 40
+      contexts = ["sidebar"]
+
+  # CTA configuration
+  [params.nav.cta]
+    text = "Get Started"
+    url = "/docs/delphi/sign-up/"
+    class = "btn-brand-teal"
     contexts = ["mobile", "sidebar", "desktop"]
+    weight = 100
 
-  [menu.sections.training]
-    title = "Training"
-    description = "Education and awareness programs"
-    icon = "bg-brand-logo-orange"
-    expandable = true
-    weight = 20
-    contexts = ["mobile", "sidebar", "desktop"]
-
-  [menu.sections.resources]
-    title = "Resources"
-    description = "Documentation and support"
-    icon = "bg-slate-400"
-    expandable = false
-    weight = 30
-    contexts = ["mobile", "sidebar"]
-
-  [menu.sections.external]
-    title = "External"
-    description = "Links and references"
-    icon = "bg-slate-600"
-    expandable = false
-    weight = 40
-    contexts = ["sidebar"]
-
-# CTA configuration
-[menu.cta]
-  text = "Get Started"
-  url = "/docs/delphi/sign-up/"
-  class = "btn-brand-teal"
-  contexts = ["mobile", "sidebar", "desktop"]
-  weight = 100
+[menu]
 
 # Before menu (appears at top of left sidebar)
 [[menu.before]]

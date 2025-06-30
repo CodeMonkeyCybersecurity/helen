@@ -16,7 +16,7 @@
 
 {{/* CTA Data */}}
 {{ if eq $type "cta" }}
-  {{ $cta := .Site.Params.menu.cta | default .Site.Menu.cta }}
+  {{ $cta := .Site.Params.nav.cta }}
   {{ if $cta }}
     {{ $contexts := $cta.contexts | default (slice "mobile" "sidebar" "desktop") }}
     {{ if in $contexts $context }}
@@ -34,7 +34,7 @@
 
 {{/* Navigation Sections Data */}}
 {{ else }}
-  {{ $sections := .Site.Params.menu.sections | default dict }}
+  {{ $sections := .Site.Params.nav.sections | default dict }}
   {{ $result := slice }}
   
   {{/* Process each section in weight order */}}
@@ -73,9 +73,6 @@
     {{ end }}
   {{ end }}
   
-  {{/* Sort sections by weight */}}
-  {{ $result = sort $result "weight" }}
-  
-  {{/* Return the sorted sections */}}
-  {{- $result -}}
+  {{/* Sort sections by weight and output */}}
+  {{- sort $result "weight" -}}
 {{ end }}
