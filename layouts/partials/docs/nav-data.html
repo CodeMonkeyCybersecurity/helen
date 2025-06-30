@@ -1,0 +1,81 @@
+{{/*
+  Unified Navigation Data Provider
+  
+  This partial processes the menu configuration and provides a unified data structure
+  for all navigation contexts. It maps section configurations to actual menu content.
+  
+  Parameters:
+    - context: "mobile", "sidebar", or "desktop" (default: "sidebar")
+    - type: "sections" (default) or "cta" or "brand"
+  
+  Returns: A data structure containing all navigation information for the specified context
+*/}}
+
+{{ $context := .context | default "sidebar" }}
+{{ $type := .type | default "sections" }}
+
+{{/* CTA Data */}}
+{{ if eq $type "cta" }}
+  {{ $cta := .Site.Params.menu.cta | default .Site.Menu.cta }}
+  {{ if $cta }}
+    {{ $contexts := $cta.contexts | default (slice "mobile" "sidebar" "desktop") }}
+    {{ if in $contexts $context }}
+      {{- dict "text" $cta.text "url" $cta.url "class" $cta.class "weight" $cta.weight -}}
+    {{ end }}
+  {{ end }}
+
+{{/* Brand Data */}}
+{{ else if eq $type "brand" }}
+  {{- dict 
+    "title" .Site.Title 
+    "logo" "/images/code-monkey-cyber-logo-favicon-only.svg"
+    "url" .Site.BaseURL
+  -}}
+
+{{/* Navigation Sections Data */}}
+{{ else }}
+  {{ $sections := .Site.Params.menu.sections | default dict }}
+  {{ $result := slice }}
+  
+  {{/* Process each section in weight order */}}
+  {{ range $sectionKey, $sectionConfig := $sections }}
+    {{ $contexts := $sectionConfig.contexts | default (slice "mobile" "sidebar" "desktop") }}
+    
+    {{/* Only include if this section applies to the current context */}}
+    {{ if in $contexts $context }}
+      {{ $menuKey := $sectionKey }}
+      {{ $menuItems := slice }}
+      
+      {{/* Map section keys to actual menu data */}}
+      {{ if eq $sectionKey "platform" }}
+        {{ $menuItems = .Site.Menus.platform }}
+      {{ else if eq $sectionKey "training" }}
+        {{ $menuItems = .Site.Menus.training }}
+      {{ else if eq $sectionKey "resources" }}
+        {{ $menuItems = .Site.Menus.main }}
+      {{ else if eq $sectionKey "external" }}
+        {{ $menuItems = .Site.Menus.after }}
+      {{ end }}
+      
+      {{/* Create unified section data structure */}}
+      {{ $sectionData := dict
+        "key" $sectionKey
+        "title" $sectionConfig.title
+        "description" $sectionConfig.description
+        "icon" $sectionConfig.icon
+        "expandable" $sectionConfig.expandable
+        "weight" $sectionConfig.weight
+        "items" $menuItems
+        "context" $context
+      }}
+      
+      {{ $result = $result | append $sectionData }}
+    {{ end }}
+  {{ end }}
+  
+  {{/* Sort sections by weight */}}
+  {{ $result = sort $result "weight" }}
+  
+  {{/* Return the sorted sections */}}
+  {{- $result -}}
+{{ end }}

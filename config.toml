@@ -37,6 +37,48 @@ buildExpired = false
   weight = 1
 
 [menu]
+# Navigation sections configuration with unified metadata
+[menu.sections]
+  [menu.sections.platform]
+    title = "Platform"
+    description = "Security products and services"
+    icon = "bg-brand-teal"
+    expandable = true
+    weight = 10
+    contexts = ["mobile", "sidebar", "desktop"]
+
+  [menu.sections.training]
+    title = "Training"
+    description = "Education and awareness programs"
+    icon = "bg-brand-logo-orange"
+    expandable = true
+    weight = 20
+    contexts = ["mobile", "sidebar", "desktop"]
+
+  [menu.sections.resources]
+    title = "Resources"
+    description = "Documentation and support"
+    icon = "bg-slate-400"
+    expandable = false
+    weight = 30
+    contexts = ["mobile", "sidebar"]
+
+  [menu.sections.external]
+    title = "External"
+    description = "Links and references"
+    icon = "bg-slate-600"
+    expandable = false
+    weight = 40
+    contexts = ["sidebar"]
+
+# CTA configuration
+[menu.cta]
+  text = "Get Started"
+  url = "/docs/delphi/sign-up/"
+  class = "btn-brand-teal"
+  contexts = ["mobile", "sidebar", "desktop"]
+  weight = 100
+
 # Before menu (appears at top of left sidebar)
 [[menu.before]]
 name = "Blog"
@@ -45,7 +87,7 @@ weight = 10
 [menu.before.params]
 class = "font-bold text-brand-logo-orange"
 
-# Main navigation menu
+# Main navigation menu (Resources section)
 [[menu.main]]
 name = "Documentation"
 url = "/docs/"
@@ -103,7 +145,7 @@ weight = 20
 [menu.training.params]
 description = "Email security awareness"
 
-# Footer menu (legacy)
+# External links (External section)
 [[menu.after]]
 name = "Github"
 url = "https://github.com/CodeMonkeyCybersecurity"

@@ -1,0 +1,106 @@
+{{/*
+  Unified Navigation Renderer
+  
+  This partial renders complete navigation for any context using unified data.
+  Handles brand, search, sections, and CTA in the appropriate order and style.
+  
+  Parameters:
+    - context: "mobile", "sidebar", or "desktop" (default: "sidebar")
+    - currentPage: The current page context
+*/}}
+
+{{ $context := .context | default "sidebar" }}
+{{ $currentPage := .currentPage }}
+
+{{/* Get unified navigation data */}}
+{{ $sections := partial "docs/nav-data" (dict "Site" .Site "context" $context "type" "sections") }}
+{{ $cta := partial "docs/nav-data" (dict "Site" .Site "context" $context "type" "cta") }}
+{{ $brand := partial "docs/nav-data" (dict "Site" .Site "context" $context "type" "brand") }}
+
+{{ if eq $context "mobile" }}
+  {{/* Mobile Navigation Layout */}}
+  <div class="px-4 py-6 space-y-6">
+    {{/* Render each section */}}
+    {{ range $index, $sectionData := $sections }}
+      {{ partial "docs/nav-section-unified" (dict 
+        "currentPage" $currentPage 
+        "sectionData" $sectionData 
+        "renderMode" "mobile"
+        "first" (eq $index 0)) }}
+    {{ end }}
+    
+    {{/* CTA Section */}}
+    {{ if $cta }}
+    <div class="pt-4 border-t border-slate-100">
+      <a href="{{ $cta.url }}" 
+         class="{{ $cta.class }} w-full text-center block text-base py-4"
+         @click="open = false">
+        {{ $cta.text }}
+      </a>
+    </div>
+    {{ end }}
+  </div>
+
+{{ else if eq $context "desktop" }}
+  {{/* Desktop Navigation Layout */}}
+  <div class="desktop-nav hidden items-center space-x-8">
+    {{/* Render dropdown sections */}}
+    {{ range $sections }}
+      {{ if .expandable }}
+        {{ partial "docs/nav-section-unified" (dict 
+          "currentPage" $currentPage 
+          "sectionData" . 
+          "renderMode" "desktop-dropdown") }}
+      {{ end }}
+    {{ end }}
+    
+    {{/* Render direct link sections */}}
+    {{ range $sections }}
+      {{ if not .expandable }}
+        {{ partial "docs/nav-section-unified" (dict 
+          "currentPage" $currentPage 
+          "sectionData" . 
+          "renderMode" "desktop-links") }}
+      {{ end }}
+    {{ end }}
+    
+    {{/* CTA Button */}}
+    {{ if $cta }}
+    <a href="{{ $cta.url }}" class="{{ $cta.class }} text-sm px-6 py-2">{{ $cta.text }}</a>
+    {{ end }}
+  </div>
+
+{{ else }}
+  {{/* Sidebar Navigation Layout */}}
+  <div class="book-menu-enhanced">
+    {{/* Brand Header */}}
+    {{ partial "docs/brand-unified" (dict "Site" .Site "context" "sidebar") }}
+
+    {{/* Search Box */}}
+    <div class="menu-search">
+      {{ partial "docs/search-unified" (dict "Site" .Site "context" "sidebar") }}
+    </div>
+
+    {{/* Quick Actions Section */}}
+    {{ if $cta }}
+    <div class="menu-section">
+      <div class="menu-section-header">Quick Actions</div>
+      <ul class="menu-section-items">
+        <li>
+          <a href="{{ $cta.url }}" class="menu-item menu-item-cta">
+            {{ $cta.text }}
+          </a>
+        </li>
+      </ul>
+    </div>
+    {{ end }}
+
+    {{/* Render each section */}}
+    {{ range $sections }}
+      {{ partial "docs/nav-section-unified" (dict 
+        "currentPage" $currentPage 
+        "sectionData" . 
+        "renderMode" "sidebar") }}
+    {{ end }}
+  </div>
+{{ end }}
