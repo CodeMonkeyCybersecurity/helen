@@ -54,7 +54,20 @@
             <ul class="menu-sub-items">
               {{ range $discoveredPages }}
                 {{ $isActive := partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $currentPage "url" .RelPermalink) }}
-                <li><a href="{{ .RelPermalink }}" class="menu-sub-item{{ if $isActive }} active{{ end }}">{{ .Title }}</a></li>
+                <li>
+                  <a href="{{ .RelPermalink }}" class="menu-sub-item{{ if $isActive }} active{{ end }}">{{ .Title }}</a>
+                  {{/* Check for children of this offering */}}
+                  {{ if .Pages }}
+                    <ul class="menu-sub-sub-items">
+                      {{ range .Pages.ByWeight }}
+                        {{ if not .Params.bookHidden }}
+                        {{ $childIsActive := partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $currentPage "url" .RelPermalink) }}
+                        <li><a href="{{ .RelPermalink }}" class="menu-sub-sub-item{{ if $childIsActive }} active{{ end }}">{{ .Title }}</a></li>
+                        {{ end }}
+                      {{ end }}
+                    </ul>
+                  {{ end }}
+                </li>
               {{ end }}
             </ul>
           </li>

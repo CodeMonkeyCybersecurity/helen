@@ -35,24 +35,12 @@
 
   <!-- Training section removed - now under Resources -->
 
-  <!-- Resources Section - Auto-discovered from top-level /docs/ pages -->
-  {{ $docsSection := .Site.GetPage "/docs" }}
-  {{ if $docsSection }}
+  <!-- Resources Section -->
+  {{ if .Site.Menus.resources }}
   <div class="menu-section">
     <div class="menu-section-header">Resources</div>
     <ul class="menu-section-items">
-      <!-- Documentation overview -->
-      {{ $isActive := partial "docs/nav-helpers" (dict "type" "isActiveExact" "currentPage" $currentPage "url" "/docs/") }}
-      <li>
-        <a href="/docs/" class="menu-item{{ if $isActive }} active{{ end }}">
-          Documentation
-        </a>
-      </li>
-      
-      <!-- Training now in main menu below -->
-      
-      <!-- Main menu items (includes Training, Education, About, etc.) -->
-      {{ range .Site.Menus.main }}
+      {{ range .Site.Menus.resources }}
       {{ $isActive := false }}
       {{ if eq .URL "/docs/" }}
         {{ $isActive = partial "docs/nav-helpers" (dict "type" "isActiveExact" "currentPage" $currentPage "url" .URL) }}
@@ -65,22 +53,39 @@
         </a>
       </li>
       {{ end }}
-      
-      <!-- Auto-discovered top-level pages (excluding major sections and main menu items) -->
-      {{ range $docsSection.Pages.ByWeight }}
-        {{ if and (not .Params.bookHidden) (not (in (slice "delphi" "training" "persephone" "phishing-simulation" "education" "governance" "login") .File.Dir)) }}
-          {{ $isActive := false }}
-          {{ if eq .RelPermalink "/docs/" }}
-            {{ $isActive = partial "docs/nav-helpers" (dict "type" "isActiveExact" "currentPage" $currentPage "url" .RelPermalink) }}
-          {{ else }}
-            {{ $isActive = partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $currentPage "url" .RelPermalink) }}
-          {{ end }}
-          <li>
-            <a href="{{ .RelPermalink }}" class="menu-item{{ if $isActive }} active{{ end }}">
-              {{ .Title }}
-            </a>
-          </li>
-        {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+
+  <!-- About Us Section -->
+  {{ if .Site.Menus.about }}
+  <div class="menu-section">
+    <div class="menu-section-header">About Us</div>
+    <ul class="menu-section-items">
+      {{ range .Site.Menus.about }}
+      {{ $isActive := partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $currentPage "url" .URL) }}
+      <li>
+        <a href="{{ .URL }}" class="menu-item{{ if $isActive }} active{{ end }}">
+          {{ .Name }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+
+  <!-- Blog Section -->
+  {{ if .Site.Menus.blog }}
+  <div class="menu-section">
+    <div class="menu-section-header">Blog</div>
+    <ul class="menu-section-items">
+      {{ range .Site.Menus.blog }}
+      {{ $isActive := partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $currentPage "url" .URL) }}
+      <li>
+        <a href="{{ .URL }}" class="menu-item{{ if $isActive }} active{{ end }}">
+          {{ .Name }}
+        </a>
+      </li>
       {{ end }}
     </ul>
   </div>

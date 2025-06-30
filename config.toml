@@ -42,36 +42,43 @@ buildExpired = false
 
 # Before menu (appears at top of left sidebar) - removed to avoid duplication
 
-# Main navigation menu (Resources section)
-[[menu.main]]
+# Resources section
+[[menu.resources]]
 name = "Documentation"
 url = "/docs/"
 weight = 10
 
-[[menu.main]]
-name = "Training"
-url = "/docs/training/"
-weight = 11
-
-[[menu.main]]
+[[menu.resources]]
 name = "Education"
 url = "/docs/education/"
 weight = 12
 
-[[menu.main]]
-name = "Blog"
-url = "/posts/"
+# About Us section
+[[menu.about]]
+name = "About Us"
+url = "/docs/about-us/"
+weight = 10
+
+[[menu.about]]
+name = "Contact"
+url = "/docs/contact/"
 weight = 15
 
-[[menu.main]]
-name = "About"
+[[menu.about]]
+name = "Governance"
 url = "/docs/governance/"
 weight = 20
 
-[[menu.main]]
+[[menu.about]]
 name = "Customer Login"
 url = "/docs/login/"
 weight = 25
+
+# Blog section
+[[menu.blog]]
+name = "Blog"
+url = "/posts/"
+weight = 10
 
 # Platform/Training menus removed - now using auto-discovery
 

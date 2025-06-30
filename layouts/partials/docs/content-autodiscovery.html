@@ -33,6 +33,9 @@
   {{/* Filter by content type */}}
   {{ if eq $contentType "offerings" }}
     {{ $pages = where $pages "Params.offering" true }}
+  {{ else if eq $contentType "offering-children" }}
+    {{/* Get children of a specific offering section */}}
+    {{ $pages = $sectionPage.Pages }}
   {{ else if eq $contentType "training" }}
     {{ $pages = where $pages "Params.training" true }}
   {{ else if eq $contentType "sections" }}
