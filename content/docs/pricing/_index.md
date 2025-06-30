@@ -19,11 +19,11 @@ No confusing tiers, no hidden fees, no surprise bills. Just straightforward cybe
 {{% hint info %}}
 **Try Delphi Notify Free for 30 Days**
 
-✅ Full access to all features  
-✅ Human-reviewed security alerts  
-✅ Personal setup assistance  
-✅ No credit card required  
-✅ Cancel anytime  
+ Full access to all features  
+ Human-reviewed security alerts  
+ Personal setup assistance  
+ No credit card required  
+ Cancel anytime  
 
 {{< button href="/docs/delphi/sign-up/" >}}Start Your Free Trial{{< /button >}}
 {{% /hint %}}
@@ -36,31 +36,31 @@ No confusing tiers, no hidden fees, no surprise bills. Just straightforward cybe
 **$29/month** per household  
 *Perfect for families and personal use*
 
-✅ Monitor up to 5 personal devices  
-✅ Human-reviewed alerts in plain English  
-✅ Email notifications when issues arise  
-✅ Step-by-step guidance for any problems  
-✅ Privacy-focused monitoring (we can't see your files)  
+ Monitor up to 5 personal devices  
+ Human-reviewed alerts in plain English  
+ Email notifications when issues arise  
+ Step-by-step guidance for any problems  
+ Privacy-focused monitoring (we can't see your files)  
 
 ### **Small Businesses**
 **$79/month** for up to 10 devices  
 *Ideal for small teams and professional practices*
 
-✅ Everything in Individual plan  
-✅ Monitor business computers, servers, and networks  
-✅ Priority alert response (within 2 hours)  
-✅ Business-hours phone support  
-✅ Custom security recommendations  
+ Everything in Individual plan  
+ Monitor business computers, servers, and networks  
+ Priority alert response (within 2 hours)  
+ Business-hours phone support  
+ Custom security recommendations  
 
 ### **Growing Businesses**
 **Contact us for custom pricing**  
 *For larger teams or specialized needs*
 
-✅ Everything in Small Business plan  
-✅ Unlimited device monitoring  
-✅ Dedicated security consultant  
-✅ Custom integration and setup  
-✅ Advanced reporting and compliance support  
+ Everything in Small Business plan  
+ Unlimited device monitoring  
+ Dedicated security consultant  
+ Custom integration and setup  
+ Advanced reporting and compliance support  
 
 ---
 

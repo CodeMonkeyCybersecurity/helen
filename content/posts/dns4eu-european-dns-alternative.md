@@ -15,7 +15,7 @@ DNS4EU has officially launched, and it's exactly what the internet needed - a **
 
 ## **What Makes DNS4EU Different**
 
-### **🇪🇺 Built for Europeans, By Europeans**
+### ** Built for Europeans, By Europeans**
 - Developed by a consortium of **13 members from 10 EU countries**
 - Powered by **Whalebone**, a Czech cybersecurity company
 - Operates entirely within **EU digital infrastructure**
@@ -45,7 +45,7 @@ DNS4EU isn't one-size-fits-all. Choose your protection level:
 | **Data Collection** | GDPR Compliant | Extensive | Limited |
 | **Ad Blocking** | Available | No | No |
 | **Child Protection** | Built-in | Third-party | Third-party |
-| **EU Privacy Laws** | ✅ Yes | ❌ No | ❌ No |
+| **EU Privacy Laws** |  Yes | ❌ No | ❌ No |
 | **Jurisdiction** | EU | US | US |
 
 ## **Technical Excellence**

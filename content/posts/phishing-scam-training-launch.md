@@ -43,10 +43,10 @@ But **Training can work.**
 ![Professional Certifications and Memberships](/images/badges/comptia-security-ce-certification.png)
 
 **Recently Recognized:**
-- ✅ **WA Cyber Capability Directory** (CyberWest Hub)
-- ✅ **Microsoft for Startups Partner**
-- ✅ **Fremantle Chamber of Commerce Member**
-- ✅ **CompTIA Certified** (Security+, Network+, PenTest+)
+-  **WA Cyber Capability Directory** (CyberWest Hub)
+-  **Microsoft for Startups Partner**
+-  **Fremantle Chamber of Commerce Member**
+-  **CompTIA Certified** (Security+, Network+, PenTest+)
 
 **Official Directory Description:**
 *"Human-focused, open-source cybersecurity for small businesses, community organisations, and DV survivors. Education, cloud security, threat intelligence/detection, and R&D."*

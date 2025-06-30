@@ -12,9 +12,7 @@ bookFlatSection: true
 
 **Delphi Notify** delivers advanced threat detection with **human-reviewed alerts in plain English**. No technical degree required - just clear guidance when something actually needs your attention.
 
-{{% hint info %}}
-** Start Your Free 30-Day Trial**
-
+{{< cta-section title="Start Your Free 30-Day Trial" >}}
 ✅ No credit card required  ✅ Setup assistance included  ✅ Cancel anytime
 
 {{< button href="/docs/delphi/sign-up/" >}}Get Started Now - Free for 30 Days{{< /button >}}
@@ -22,7 +20,7 @@ bookFlatSection: true
 *Join 200+ small businesses already protected by Delphi Notify*
 
 **New**: Ask about our **Scam Education & Phishing Training** workshops for your team
-{{% /hint %}}
+{{< /cta-section >}}
 
 ---
 
@@ -61,17 +59,13 @@ Advanced threat detection that catches sophisticated attacks your antivirus migh
 
 ---
 
-## **Ready to Stop Worrying About Cyber Threats?**
-
-{{% hint info %}}
-**Start Your Free Trial Today**
-
+{{< cta-section title="Ready to Stop Worrying About Cyber Threats?" subtitle="Start Your Free Trial Today" >}}
 No risk, no commitments. Our team will help you set everything up and you'll start receiving clear, helpful security alerts within 24 hours.
 
 {{< button href="/docs/delphi/sign-up/" >}}Start Free 30-Day Trial{{< /button >}}
 
 *Questions? Call (+61) 0432 038 310 or email [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)*
-{{% /hint %}}
+{{< /cta-section >}}
 
 ---
 

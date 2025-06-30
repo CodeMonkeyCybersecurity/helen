@@ -35,11 +35,11 @@ Having trouble accessing your account? Our team is here to help:
 
 Once logged in, you can:
 
-✅ **View Security Alerts** - See all your security notifications in one place  
-✅ **Manage Devices** - Add, remove, or update monitored devices  
-✅ **Configure Notifications** - Choose how and when you receive alerts  
-✅ **Access Reports** - Review your security status and activity  
-✅ **Update Account Details** - Change your contact information and preferences  
+ **View Security Alerts** - See all your security notifications in one place  
+ **Manage Devices** - Add, remove, or update monitored devices  
+ **Configure Notifications** - Choose how and when you receive alerts  
+ **Access Reports** - Review your security status and activity  
+ **Update Account Details** - Change your contact information and preferences  
 
 ---
 

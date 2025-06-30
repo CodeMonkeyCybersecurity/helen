@@ -159,7 +159,7 @@ eos alerts setup email           # Get notified about real problems
 
 ## **🤝 Built for Small Business Reality**
 
-### **✅ Perfect For:**
+### ** Perfect For:**
 
 - **Home offices** needing reliable backups and simple security
 - **Small businesses (1-50 people)** wanting professional tools at reasonable costs [^22]
@@ -183,7 +183,7 @@ eos alerts setup email           # Get notified about real problems
 
 ## **🌟 Open Source Means You're In Control**
 
-### **✅ What This Means for You:**
+### ** What This Means for You:**
 
 - **No vendor lock-in** - you own your setup and your data [^23]
 - **No monthly fees** - install once, use forever

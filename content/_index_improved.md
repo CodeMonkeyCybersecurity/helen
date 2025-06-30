@@ -122,10 +122,10 @@ We handle the technical setup. You focus on running your business.
 {{% /columns %}}
 
 **All plans include:**
-- ✅ 30-day free trial
-- ✅ Setup assistance included
-- ✅ No contracts or hidden fees
-- ✅ Cancel anytime
+-  30-day free trial
+-  Setup assistance included
+-  No contracts or hidden fees
+-  Cancel anytime
 
 ---
 

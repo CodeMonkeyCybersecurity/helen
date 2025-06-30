@@ -131,19 +131,19 @@ We track improvement with:
 
 ## **What Makes Our Training Different**
 
-### **✅ Local Focus**
+### ** Local Focus**
 - Australian threat landscape and scam types
 - Local regulations and compliance requirements
 - Real examples from WA and Australian businesses
 - Understanding of local business culture
 
-### **✅ Practical, Not Academic**
+### ** Practical, Not Academic**
 - Focus on immediate actionable skills
 - No technical jargon or complex theories
 - Clear decision trees for suspicious emails
 - Simple reporting procedures
 
-### **✅ Ongoing Support**
+### ** Ongoing Support**
 - 6-month follow-up assessments included
 - Updated threat briefings quarterly
 - Email support for suspicious items

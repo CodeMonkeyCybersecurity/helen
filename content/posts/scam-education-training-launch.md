@@ -154,11 +154,11 @@ Unlike expensive security software, **training delivers immediate, measurable re
 
 **Book your consultation before Friday July 11th and receive:**
 
-✅ **First month free** (for any plan)  
-✅ **Free security assessment** of your current vulnerability  
-✅ **Custom phishing test** showing your current risk level  
-✅ **Rapid setup** - training starts within 48 hours  
-✅ **No lock-in contracts** - cancel anytime with 30 days notice
+ **First month free** (for any plan)  
+ **Free security assessment** of your current vulnerability  
+ **Custom phishing test** showing your current risk level  
+ **Rapid setup** - training starts within 48 hours  
+ **No lock-in contracts** - cancel anytime with 30 days notice
 
 ---
 

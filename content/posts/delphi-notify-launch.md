@@ -9,7 +9,7 @@ description: "Free until August 1st - Meet Delphi Notify, the security monitorin
 
 ![Delphi Notify Launch](/images/oh_the_hacks_web.jpg)
 
-# **Cybersecurity. Now with Humans.** 🤖➡️
+# **Cybersecurity. Now with Humans.** 
 
 ## **The Problem with Security Alerts**
 
@@ -17,7 +17,7 @@ Most security software treats you like an IT professional. You get alerts like:
 
 *"Process svchost.exe attempting network connection to 192.168.1.1 on port 445 - Risk Level: MEDIUM"*
 
-**What does that even mean?** 🤷‍♀️
+**What does that even mean?** 
 
 ## **Meet Delphi Notify** 
 
@@ -25,10 +25,10 @@ Delphi Notify is different. It's a small program that runs quietly in the backgr
 
 ### **How It Actually Works:**
 
-✅ **Watches for suspicious behavior** (not just suspicious files)  
-✅ **Explains threats in human language** (no technical jargon)  
-✅ **Tells you exactly what to do next** (actionable steps)  
-✅ **Only alerts when it actually matters** (no spam notifications)
+ **Watches for suspicious behavior** (not just suspicious files)  
+ **Explains threats in human language** (no technical jargon)  
+ **Tells you exactly what to do next** (actionable steps)  
+ **Only alerts when it actually matters** (no spam notifications)
 
 ## **Real Example - Here's What You Get:** 
 
