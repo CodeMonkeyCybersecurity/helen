@@ -6,7 +6,6 @@
 </head>
 <body dir="{{ default "ltr" .Site.Language.LanguageDirection }}" class="brand-website">
   <input type="checkbox" class="hidden toggle" id="menu-control" />
-  <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
     <aside class="book-menu">
       <div class="book-menu-content">
@@ -33,13 +32,7 @@
       <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
 
-    {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
-    <aside class="book-toc">
-      <div class="book-toc-content">
-        {{ template "toc" . }} <!-- Table of Contents -->
-      </div>
-    </aside>
-    {{ end }}
+    {{/* Right-hand TOC menu removed for cleaner layout */}}
   </main>
 
   {{ partial "docs/inject/body" . }}
@@ -52,12 +45,6 @@
 
 {{ define "header" }}
   {{ partial "docs/header" . }}
-
-  {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
-  <aside class="hidden clearfix">
-    {{ template "toc" . }}
-  </aside>
-  {{ end }}
 {{ end }}
 
 {{ define "footer" }}
@@ -80,6 +67,4 @@
   </article>
 {{ end }}
 
-{{ define "toc" }}
-  {{ partial "docs/toc" . }}
-{{ end }}
+{{/* TOC removed for cleaner layout */}}

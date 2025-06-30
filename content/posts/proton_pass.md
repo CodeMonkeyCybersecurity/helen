@@ -10,7 +10,6 @@ categories = [
     "Password Manager",
     "Proton",
 ]
-menu = "main"
 +++
 
 ![Proton Pass logo and interface showing a secure password manager application with password vaults and security features](/images/proton_pass.jpg)

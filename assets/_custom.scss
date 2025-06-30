@@ -74,4 +74,23 @@
   }
 }
 
+// Two-column layout optimization (removed right TOC menu)
+.container {
+  display: flex;
+  max-width: none;
+}
+
+.book-page {
+  flex: 1;
+  max-width: none;
+  min-width: 0; // Allows proper text wrapping
+}
+
+// Make content area wider without right TOC
+@media (min-width: 768px) {
+  .book-page {
+    margin-right: 0; // Remove right margin since no TOC
+  }
+}
+
 // @import "plugins/numbered";

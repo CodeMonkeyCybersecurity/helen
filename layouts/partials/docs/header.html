@@ -1,5 +1,5 @@
 <nav class="bg-white shadow-sm z-50 sticky top-0 border-b border-slate-200" x-data="{ open: false }">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+  <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex justify-between items-center h-14 sm:h-16">
     <!-- Logo and Brand -->
     <div class="flex items-center min-w-0 flex-1 md:flex-initial">
       <a href="{{ .Site.BaseURL }}" class="flex items-center space-x-2 md:space-x-3 max-w-full">
@@ -83,14 +83,7 @@
     </div>
 
     <!-- Mobile Menu Button -->
-    <div class="md:hidden flex items-center space-x-1">
-      <!-- Mobile TOC Button -->
-      {{ if default true (default .Site.Params.BookToC .Params.BookToC) }}
-      <label for="toc-control" class="p-2 rounded-lg hover:bg-slate-100 transition-colors duration-200 touch-manipulation">
-        <img src="{{ "svg/toc.svg" | relURL }}" class="w-5 h-5" alt="Table of Contents" />
-      </label>
-      {{ end }}
-      
+    <div class="md:hidden flex items-center">
       <!-- Mobile Menu Toggle -->
       <button @click="open = !open" 
               class="p-2 rounded-lg hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-teal focus:ring-opacity-50 transition-all duration-200 touch-manipulation"
@@ -130,7 +123,7 @@
        x-transition:leave="transition ease-in duration-150"
        x-transition:leave-start="opacity-100"
        x-transition:leave-end="opacity-0"
-       class="md:hidden fixed inset-0 top-16 bg-black bg-opacity-20 z-40"
+       class="md:hidden fixed inset-0 top-14 sm:top-16 bg-black bg-opacity-20 z-40"
        @click="open = false">
   </div>
 
