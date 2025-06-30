@@ -53,6 +53,11 @@ body {
   --body-background: #{$nav-background};
 }
 
+// Force override any CSS variable issues
+html {
+  --body-background: #{$nav-background} !important;
+}
+
 // Brand-specific overrides for Hugo Book theme
 .book-menu {
   @include nav-base-styling;
@@ -61,7 +66,8 @@ body {
   
   .book-menu-content {
     width: $menu-width; // Consistent width
-    // Background now uses CSS variable set above
+    background: $nav-background !important; // Force unified background
+    background-color: $nav-background !important; // Double override
   }
 }
 
@@ -78,7 +84,9 @@ body {
 
 .book-header {
   @include nav-base-styling;
+  background-color: $nav-background !important; // Force unified background
   border-bottom: $nav-border;
+  box-shadow: $nav-shadow;
   
   // Override theme's default display: none and ensure sticky positioning works
   display: block !important;
@@ -86,6 +94,14 @@ body {
   top: 0 !important;
   z-index: 50 !important;
   margin-bottom: 0 !important; // Remove theme's margin-bottom
+  
+  // Unified styling for all dropdown menus and navigation container
+  nav,
+  .brand-dropdown,
+  .mobile-menu-dropdown {
+    background-color: $nav-background !important;
+    border-color: rgba($bg-section-neutral, 0.8) !important;
+  }
 }
 
 // Clean responsive behavior - let theme handle most of it
@@ -258,6 +274,17 @@ body {
     background-color: rgba($bg-section-neutral, 0.7) !important;
     color: $nav-text-color !important;
   }
+}
+
+// Final catch-all: Force unified background on ALL navigation elements
+.book-header,
+.book-header nav,
+.book-menu,
+.book-menu-content,
+.mobile-menu-dropdown,
+.brand-dropdown {
+  background: $nav-background !important;
+  background-color: $nav-background !important;
 }
 
 // Unified search component styling
