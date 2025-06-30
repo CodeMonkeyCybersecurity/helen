@@ -46,23 +46,22 @@ body {
   min-width: 100vw;
   overflow-x: hidden; // Prevent horizontal scroll from 100vw
   background-color: $bg-website !important; // Ensure consistent background
-  
-  // Override CSS variables that might affect navigation
-  --body-background: #{$nav-background} !important;
+}
+
+// Set CSS variable that theme uses for menu background
+:root {
+  --body-background: #{$nav-background};
 }
 
 // Brand-specific overrides for Hugo Book theme
 .book-menu {
   @include nav-base-styling;
-  background-color: $nav-background !important; // Force unified background
   border-right: $nav-border;
   flex: 0 0 $menu-width; // Maintain consistent width
   
   .book-menu-content {
-    background: $nav-background !important; // Override theme's var(--body-background)
-    background-color: $nav-background !important; // Double override for specificity
     width: $menu-width; // Consistent width
-    // Remove position overrides - let theme handle it
+    // Background now uses CSS variable set above
   }
 }
 
@@ -79,7 +78,6 @@ body {
 
 .book-header {
   @include nav-base-styling;
-  background-color: $nav-background !important; // Force unified background
   border-bottom: $nav-border;
   
   // Override theme's default display: none and ensure sticky positioning works
