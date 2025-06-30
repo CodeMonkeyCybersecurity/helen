@@ -39,7 +39,6 @@ Being recognized in the official state directory demonstrates:
 This recognition comes at an exciting time as we continue expanding our services:
 - **Delphi Notify** monitoring platform gaining traction with 200+ small businesses
 - **Scam Education & Phishing Training** workshops helping teams reduce click rates by 70%+
-- **Industry-specific solutions** for healthcare, legal, and retail sectors
 
 ## Thank You CyberWest
 

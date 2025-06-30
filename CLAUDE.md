@@ -54,7 +54,6 @@ docker-compose down
 - `content/` - Markdown content files
   - `content/posts/` - Blog posts (used to track Facebook/LinkedIn posts and company news)
   - `content/docs/` - Main documentation and service pages
-  - `content/docs/industries/` - Industry-specific landing pages (Healthcare, Legal, Retail)
   - `content/docs/training/` - Scam education and phishing training content
   - `content/docs/delphi/` - Delphi Notify product information and sign-up flows
   - `content/docs/governance/` - Company policies and compliance documentation

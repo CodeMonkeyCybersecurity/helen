@@ -162,25 +162,7 @@ Don't wait to find out how vulnerable your team is. Our simulation service provi
 - 75% consistent threat reporting
 - Near-zero successful real-world attacks
 
-## **Industry-Specific Programs**
 
-### **Healthcare**
-- HIPAA compliance-focused scenarios
-- Medical-themed phishing attempts
-- Patient data protection awareness
-- Integration with existing compliance training
-
-### **Legal & Professional Services**
-- Client confidentiality protection scenarios
-- Trust account security awareness
-- Professional liability considerations
-- Court document and legal notice scams
-
-### **Financial Services**
-- Payment processing security tests
-- Customer data protection scenarios
-- Regulatory compliance integration
-- Fraud prevention awareness
 
 ## **Getting Started**
 

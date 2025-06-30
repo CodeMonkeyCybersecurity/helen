@@ -99,33 +99,6 @@ We track improvement with:
 - Quarterly progress reports
 - Includes access to our training portal
 
----
-
-## **Industry-Specific Training**
-
-### **Healthcare & Medical Practices**
-- HIPAA compliance and patient data protection
-- Medical-themed phishing attempts
-- Prescription and appointment scams
-- Integration with existing compliance training
-
-### **Legal & Professional Services**
-- Client confidentiality protection
-- Trust account security awareness
-- Court document and legal notice scams
-- Professional liability considerations
-
-### **Retail & Hospitality**
-- Payment processing security
-- Customer data protection
-- Supplier and vendor scams
-- Peak season threat awareness
-
-### **Manufacturing & Construction**
-- Supply chain security threats
-- Industrial espionage awareness
-- Safety system manipulation risks
-- Contractor and vendor verification
 
 ---
 
@@ -149,29 +122,6 @@ We track improvement with:
 - Email support for suspicious items
 - Refresher sessions available
 
----
-
-## **Client Success Stories**
-
-{{% details title="Perth Medical Practice - 80% Improvement" %}}
-**Challenge**: 45% of staff clicked on test phishing emails before training
-
-**Solution**: Custom healthcare-focused training workshop + monthly simulations
-
-**Result**: Click rate dropped to 9% within 3 months, zero successful attacks in 12 months
-
-*"The training was eye-opening. We had no idea how sophisticated these scams had become. The practical approach meant our staff actually remembered what to do."* - Practice Manager
-{{% /details %}}
-
-{{% details title="Fremantle Law Firm - Prevented $85,000 Loss" %}}
-**Challenge**: Nearly fell victim to business email compromise targeting trust account
-
-**Solution**: Emergency training session + enhanced email security awareness
-
-**Result**: Employee recognized similar attempt 2 months later and reported it immediately
-
-*"The training literally saved us from financial disaster. The specific legal industry examples made all the difference."* - Managing Partner
-{{% /details %}}
 
 ---
 

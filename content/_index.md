@@ -47,7 +47,7 @@ Small businesses, medical practices, law firms, retail stores, and families who 
 - **Small Business**: $79/month (up to 10 devices)  
 - **Growing Business**: Custom pricing for larger needs
 
-[View All Pricing Details](/docs/pricing/) | [Training Workshops](/docs/training/) | [Healthcare](/docs/industries/healthcare/) | [Legal](/docs/industries/legal/) | [Retail](/docs/industries/retail/)
+[View All Pricing Details](/docs/pricing/) | [Training Workshops](/docs/training/)
 
 {{< /content-section >}}
 
