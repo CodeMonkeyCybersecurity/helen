@@ -188,6 +188,19 @@ body {
   opacity: 1 !important;
 }
 
+// Ensure active state styling has proper specificity
+.book-menu-enhanced .menu-item.active,
+.book-menu .menu-item.active {
+  background-color: $brand-logo-orange !important;
+  color: white !important;
+  
+  &:hover {
+    background-color: $hover-orange !important;
+    color: white !important;
+    text-decoration: none !important;
+  }
+}
+
 // Unified search component styling
 .unified-search {
   position: relative;
