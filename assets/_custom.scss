@@ -74,6 +74,12 @@
   }
 }
 
+// Override theme hover opacity
+.book-menu a:hover {
+  opacity: 1 !important;
+  text-decoration: underline !important;
+}
+
 // Two-column layout optimization (removed right TOC menu)
 .container {
   display: flex;
