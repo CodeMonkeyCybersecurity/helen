@@ -6,7 +6,7 @@ bookFlatSection: true
 
 {{< content-section title="Super simple Cybersecurity" style="transparent" >}}
 
-![Code Monkey Cybersecurity - Human-centered cybersecurity protection](/images/cover_puppy_moni_monkey_web.jpg)
+![Code Monkey Cybersecurity - Human-centered cybersecurity protection](/images/cover_puppy_moni_monkey_optimized.jpg)
 
 ## Get Enterprise-Level Security Without the Complexity
 
