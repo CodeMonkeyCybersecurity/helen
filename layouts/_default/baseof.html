@@ -62,9 +62,7 @@
 {{ end }}
 
 {{ define "main" }}
-  <article class="max-w-none mx-auto">
-    {{- .Content -}}
-  </article>
+  {{ partial "docs/heading-renderer" (dict "content" .Content "context" .) }}
 {{ end }}
 
 {{/* TOC removed for cleaner layout */}}
