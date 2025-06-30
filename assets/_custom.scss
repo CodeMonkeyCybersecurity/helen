@@ -1,20 +1,24 @@
 /* You can add custom styles here. */
 
+// Ensure full-width background with no margins
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width: 100vw;
+  overflow-x: hidden; // Prevent horizontal scroll from 100vw
+}
+
 // Brand-specific overrides for Hugo Book theme
 .book-menu {
   background-color: $bg-section-neutral;
   border-right: 1px solid $bg-section-mint;
+  flex: 0 0 $menu-width; // Maintain consistent width
   
   .book-menu-content {
-    position: sticky !important;
-    top: 0 !important;
-    height: 100vh !important;
-    overflow-y: auto !important;
+    background-color: transparent;
+    width: $menu-width; // Consistent width
+    // Remove position overrides - let theme handle it
   }
-}
-
-.book-menu-content {
-  background-color: transparent;
 }
 
 // .book-brand a {
@@ -39,56 +43,29 @@
   z-index: 50 !important;
 }
 
-// Responsive behavior: mobile header vs desktop sidebar (never both)
+// Clean responsive behavior - let theme handle most of it
 @media screen and (max-width: $mobile-breakpoint) {
-  // Mobile: show header, hide sidebar, hide desktop nav items
+  // Mobile: sticky header, sidebar handled by theme
   .book-header {
     display: block !important;
-  }
-  
-  .book-menu {
-    visibility: hidden;
-    margin-inline-start: -$menu-width;
-  }
-  
-  // Hide desktop navigation items in header on mobile
-  .desktop-nav {
-    display: none !important;
-  }
-  
-  // Show mobile menu button and dropdown
-  .mobile-menu-button {
-    display: flex !important;
-  }
-  
-  .mobile-menu-dropdown {
-    display: block;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 50 !important;
   }
 }
 
 @media screen and (min-width: #{$mobile-breakpoint + 0.0625rem}) {
-  // Desktop: hide header, show sidebar, show desktop nav items
+  // Desktop: hide header completely
   .book-header {
     display: none !important;
   }
   
+  // Ensure menu stays fixed to left edge
   .book-menu {
-    visibility: visible;
-    margin-inline-start: 0;
-  }
-  
-  // Show desktop navigation items when header is visible
-  .desktop-nav {
-    display: flex !important;
-  }
-  
-  // Hide mobile menu button and dropdown
-  .mobile-menu-button {
-    display: none !important;
-  }
-  
-  .mobile-menu-dropdown {
-    display: none !important;
+    position: sticky !important;
+    top: 0 !important;
+    height: 100vh !important;
+    overflow-y: auto !important;
   }
 }
 
@@ -146,22 +123,29 @@
   text-decoration: underline !important;
 }
 
-// Two-column layout optimization (removed right TOC menu)
+// Remove container constraints to use full width
 .container {
+  max-width: 100% !important; // Override theme's $container-max-width
+  margin: 0 !important; // Remove auto centering
+  padding: 0 !important; // Remove any padding
   display: flex;
-  max-width: none;
+  width: 100%;
 }
 
 .book-page {
   flex: 1;
   max-width: none;
   min-width: 0; // Allows proper text wrapping
-}
-
-// Make content area wider without right TOC
-@media (min-width: 768px) {
-  .book-page {
-    margin-right: 0; // Remove right margin since no TOC
+  padding: 0 1rem; // Consistent padding on all screen sizes
+  
+  @media (min-width: $mobile-breakpoint) {
+    padding: 0 2rem; // More padding on larger screens
+  }
+  
+  @media (min-width: 1200px) {
+    padding: 0 3rem; // Even more padding on very large screens
+    max-width: 1200px; // Prevent text lines from getting too long
+    margin: 0 auto; // Center content on very wide screens
   }
 }
 
