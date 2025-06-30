@@ -114,13 +114,7 @@ Don't wait to find out how vulnerable your team is. Our simulation service provi
 - Priority support + phone
 {{< /service-tier >}}
 
-{{< service-tier name="Enterprise" price="$75" period="per employee/year" cta_text="Contact Sales" >}}
-- Comprehensive simulation program
-- C-suite and executive targeting
-- Custom threat intelligence integration
-- Dedicated account management
-- On-site consultation and training
-{{< /service-tier >}}
+
 {{< /service-comparison >}}
 
 ## Integration Capabilities

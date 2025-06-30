@@ -17,7 +17,7 @@ The WA Cyber Capability Directory is the definitive guide to cybersecurity exper
 
 ## About CyberWest Hub
 
-CyberWest Hub serves as Western Australia's premier cybersecurity innovation hub, connecting businesses, researchers, and security professionals across the state. Their mission of "Securing Digital Futures" aligns perfectly with our goal of making enterprise-level cybersecurity accessible to small businesses and families.
+CyberWest Hub serves as Western Australia's premier cybersecurity innovation hub, connecting businesses, researchers, and security professionals across the state. Their mission of "Securing Digital Futures" aligns perfectly with our goal of making  cybersecurity accessible to small businesses and families.
 
 ## Our Growing Recognition
 

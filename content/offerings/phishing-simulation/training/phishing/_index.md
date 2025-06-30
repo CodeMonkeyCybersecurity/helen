@@ -60,7 +60,7 @@ While our [general security training](/docs/training/) covers the basics, this s
 
 ## **Specialized Training Programs**
 
-### **Executive Protection Training**
+### **Executive Safety Training**
 **$500 per executive** - For C-suite and senior management
 - High-value target awareness
 - Advanced social engineering recognition

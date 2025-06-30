@@ -95,11 +95,11 @@ For those interested in the technical implementation:
 ### Why These Tools?
 
 - **Open Source** - Transparent, audit-friendly, community-driven
-- **Enterprise-Grade** - Battle-tested by organizations worldwide
+- **** - Battle-tested by organizations worldwide
 - **Privacy-Focused** - Your data stays under your control
 - **Cost-Effective** - No vendor lock-in or licensing fees
 
-## Ready to Experience XDR Protection?
+## Ready to Experience XDR Safety?
 
 {{% hint info %}}
 {{< button href="/docs/delphi/sign-up/" >}}Try Delphi Notify{{< /button >}}

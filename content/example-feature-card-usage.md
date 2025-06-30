@@ -18,7 +18,7 @@ You can wrap any content in a feature card like this:
 - Plain English explanations
 - 24/7 monitoring
 
-Perfect for small businesses who want enterprise-level security without the complexity.
+Perfect for small businesses who want  security without the complexity.
 
 {{< /feature-card-wrapper >}}
 

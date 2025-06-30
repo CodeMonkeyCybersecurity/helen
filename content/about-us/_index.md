@@ -10,7 +10,7 @@ weight: 2
 
 > **Cybersecurity. With humans.**
 
-**Code Monkey Cybersecurity** is an independent, open-source-focused security company based in Western Australia. We build tools and infrastructure to bring enterprise-grade cybersecurity to the people who need it most — small businesses, nonprofits, and communities often left behind by traditional vendors.
+**Code Monkey Cybersecurity** is an independent, open-source-focused security company based in Western Australia. We build tools and infrastructure to bring  cybersecurity to the people who need it most — small businesses, nonprofits, and communities often left behind by traditional vendors.
 
 ## Delphi
 
@@ -43,7 +43,7 @@ We're actively developing **Eos**, an open source equivalent to Google's Borg sy
 - **Multi-cloud deployments** with consistent management across providers
 - **Edge computing** support for distributed IoT and CDN workloads
 
-Eos powers our own production infrastructure, running Delphi, Vault, Keycloak, and Wazuh services with enterprise-grade reliability and security.
+Eos powers our own production infrastructure, running Delphi, Vault, Keycloak, and Wazuh services with  reliability and security.
 
  **[View Eos on GitHub](https://github.com/CodeMonkeyCybersecurity/eos)** - Follow our development progress and contribute to the project.
 

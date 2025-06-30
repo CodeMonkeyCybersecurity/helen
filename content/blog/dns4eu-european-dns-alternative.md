@@ -25,14 +25,14 @@ DNS4EU has officially launched, and it's exactly what the internet needed - a **
 DNS4EU isn't one-size-fits-all. Choose your protection level:
 
 1. **Protective Resolution** - Basic malware blocking
-2. **Protective + Child Protection** - Family-safe browsing
+2. **Protective + Child Safety** - Family-safe browsing
 3. **Protective + Ad Blocking** - Clean, ad-free experience
-4. **Protective + Child Protection + Ad Blocking** - Maximum family protection
+4. **Protective + Child Safety + Ad Blocking** - Maximum family protection
 5. **Unfiltered Resolution** - Full access with privacy
 
 ## **Why This Matters for Privacy**
 
-### ** Real Privacy Protection**
+### ** Real Privacy Safety**
 - **No data harvesting** for advertising
 - **GDPR compliance** built in from day one
 - **EU-based infrastructure** means EU privacy laws apply
@@ -44,7 +44,7 @@ DNS4EU isn't one-size-fits-all. Choose your protection level:
 |---------|---------|------------|----------------|
 | **Data Collection** | GDPR Compliant | Extensive | Limited |
 | **Ad Blocking** | Available | No | No |
-| **Child Protection** | Built-in | Third-party | Third-party |
+| **Child Safety** | Built-in | Third-party | Third-party |
 | **EU Privacy Laws** |  Yes |  No |  No |
 | **Jurisdiction** | EU | US | US |
 

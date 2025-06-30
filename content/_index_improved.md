@@ -56,7 +56,7 @@ Most security tools dump technical alerts on you and expect you to figure it out
 ## How Delphi Notify Keeps Your Business Safe
 
 ###  **Watches Your Systems 24/7**
-Enterprise-grade monitoring that never sleeps - just like the big companies use, but designed for small businesses.
+ monitoring that never sleeps - just like the big companies use, but designed for small businesses.
 
 ###  **Explains Threats in Plain English** 
 When something matters, you get an email that explains what happened, why it matters, and exactly what to do next.
@@ -66,27 +66,6 @@ Every alert includes a way to reach real security experts who understand your bu
 
 ###  **Quick Setup, No Ongoing Hassle**
 We handle the technical setup. You focus on running your business.
-
----
-
-## What Our Customers Say
-
-{{% columns %}}
-
-### Sarah Mitchell, Cafe Owner
-*"Finally, security alerts I can actually understand! Delphi Notify caught a staff computer with malware and told me exactly what to do. Saved my customer payment data."*
-
-<--->
-
-### Dr. James Chen, Medical Practice
-*"We needed HIPAA-compliant security but couldn't afford a full IT team. Delphi Notify gives us enterprise-level protection with explanations we can understand."*
-
-<--->
-
-### Michelle Torres, Law Firm
-*"Client confidentiality is everything. When Delphi Notify alerts us to potential data access issues, we know exactly how to protect attorney-client privilege."*
-
-{{% /columns %}}
 
 ---
 

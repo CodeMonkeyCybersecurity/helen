@@ -11,7 +11,7 @@ This policy outlines how **Code Monkey Cybersecurity**, as a Managed Security Se
 
 ## Data Classification
 
-| Level         | Examples                                      | Protection                            |
+| Level         | Examples                                      | Safety                            |
 |---------------|-----------------------------------------------|----------------------------------------|
 | **Confidential** | Vault keys, client secrets, PII              | AES-256 encryption, RBAC, full audit   |
 | **Internal**     | Metrics, configs, agent telemetry            | Scoped access, encrypted at rest       |

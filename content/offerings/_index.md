@@ -72,7 +72,7 @@ Unlike traditional cybersecurity services, we charge per household or business l
 ### **Includes Human Expertise**
 Your monthly fee includes real security experts reviewing alerts before they reach you. No automated spam - just meaningful notifications when you actually need to take action.
 
-### **All-Inclusive Protection**
+### **All-Inclusive Safety**
 No surprise bills for "premium features." Everything you need for comprehensive cybersecurity monitoring is included in your monthly plan.
 
 ---

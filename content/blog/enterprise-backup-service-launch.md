@@ -1,13 +1,13 @@
 ---
-title: " Coming Next Month: Enterprise-Grade Backup for SMEs - Because OneDrive and iCloud Aren't Actually Backups"
+title: " Coming Next Month:  Backup for SMEs - Because OneDrive and iCloud Aren't Actually Backups"
 date: "2025-07-05"
 author: "Henry Oliver"
-tags: ["Backup Services", "Data Protection", "Restic", "Memory Safety", "SME Security"]
-categories: ["Service Announcement", "Data Protection"]
+tags: ["Backup Services", "Data Safety", "Restic", "Memory Safety", "SME Security"]
+categories: ["Service Announcement", "Data Safety"]
 description: "Launching August 2025: True enterprise backup powered by Restic and built with memory-safe Go. Starting at $5-8 per person per month - because sync isn't backup."
 ---
 
-![Enterprise Backup Service Launch](/images/oh_the_hacks_web.jpg)
+![Backup Service Launch](/images/oh_the_hacks_web.jpg)
 
 # **Coming August: Real Backup for Real Businesses** 
 
@@ -15,7 +15,7 @@ description: "Launching August 2025: True enterprise backup powered by Restic an
 
 After watching too many WA businesses discover the hard way that **OneDrive and iCloud are sync services, not backup solutions**, we're launching something that actually protects your data.
 
-**Starting August 2025: Enterprise-grade backup powered by Restic - from $5-8 per person per month.**
+**Starting August 2025:  backup powered by Restic - from $5-8 per person per month.**
 
 ---
 
@@ -72,7 +72,7 @@ Doesn't meet **3-2-1 backup standards** recommended by US Cybersecurity and Infr
 
 ---
 
-## **Our Solution: Restic-Powered Enterprise Backup** 
+## **Our Solution: Restic-Powered Backup** 
 
 ### **Built on Memory-Safe Foundations**
 
@@ -83,7 +83,7 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 - **Memory-safe languages** prevent many cybersecurity vulnerabilities at the code level
 - **"Since many cybersecurity issues start with a line of code"** - using memory-safe languages means inheriting security automatically
 
-### **Restic: The Backup Tool Enterprises Actually Use**
+### **Restic: The Backup Tool Actually Use**
 
 **Technical Excellence:**
 - **Fast, secure, efficient** - designed for production environments
@@ -92,7 +92,7 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 - **Deduplication and compression** - only store what's actually changed
 - **Multiple backend support** - local storage, cloud providers, SFTP
 
-**Enterprise Features:**
+**Features:**
 - **Incremental backups** - only backup changes, not everything
 - **Point-in-time recovery** - restore to any moment in history
 - **Verification and integrity testing** - prove your backups actually work
@@ -115,20 +115,6 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 - **Email alerts** when backups succeed or fail
 - **Self-service restore** via web interface
 - **Business hours support** for setup and questions
-
-### ** Enterprise Backup**
-**$8 per person per month**
-
-**Perfect for:** Growing businesses, compliance-heavy industries, multi-location companies
-
-**Everything in Professional, plus:**
-- **90-day retention** with extended recovery options
-- **Database backup support** (PostgreSQL, MySQL, SQL Server)
-- **Server and application backup** beyond just files
-- **Priority support** with 4-hour response time
-- **Compliance reporting** for audits and insurance
-- **Multi-site replication** across geographic locations
-- **Advanced encryption** with customer-managed keys
 
 ### ** Custom Solutions**
 **Quote on request**
@@ -159,7 +145,7 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 
 ---
 
-## **Technical Implementation: Enterprise Standards** 
+## **Technical Implementation: Standards** 
 
 ### **Memory-Safe Architecture**
 - **Restic core** written in Go (White House-recommended memory-safe language)
@@ -349,7 +335,7 @@ A: Your data is stored in multiple locations with multiple access methods. Even 
 A: Individual file restoration down to specific versions and timestamps. You choose exactly what to restore and when.
 
 **Q: How long do you keep our data?**
-A: Professional plan: 30 days. Enterprise plan: 90 days. Custom plans: as long as you need. You control retention policies.
+A: Professional plan: 30 days. Custom plans: as long as you need. You control retention policies.
 
 **Q: What about bandwidth usage?**
 A: Initial backup uses more bandwidth, but daily incrementals are typically very small. We offer bandwidth throttling to prevent business impact.
@@ -365,7 +351,7 @@ A: No. Client-side encryption means we only see encrypted data. You control the 
 
 **Business impact:** 93% of businesses that lose data for more than 10 days file for bankruptcy within a year.
 
-**Our solution:** Enterprise-grade backup starting at $5/month per person - less than a coffee per week to protect your entire business.
+**Our solution:**  backup starting at $5/month per person - less than a coffee per week to protect your entire business.
 
 **August launch:** Join the early access program or wait for general availability.
 
@@ -389,12 +375,12 @@ A: No. Client-side encryption means we only see encrypted data. You control the 
 
 ---(+61) 0432 038 310 
 
-*Real backup. Memory-safe architecture. Enterprise standards. SME pricing.*
+*Real backup. Memory-safe architecture. SME pricing.*
 
 **Finally, backup that actually backs up.** 
 
-*#EnterpriseBackup #DataProtection #Restic #MemorySafe #SMEBackup #WAbusiness*
+#DataSafety #Restic #MemorySafe #SMEBackup #WAbusiness
 
 ---
 
-*Code Monkey Cybersecurity - Making enterprise-level data protection accessible to every WA business. Based in Fremantle, protecting data across Australia.*
+*Code Monkey Cybersecurity - Making  data protection accessible to every WA business. Based in Fremantle, protecting data across Australia.*

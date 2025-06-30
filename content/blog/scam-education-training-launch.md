@@ -45,7 +45,7 @@ Training works. Businesses with proper phishing awareness training see:
 
 ---
 
-## What We're Launching: Real-World Scam Protection 
+## What We're Launching: Real-World Scam Safety 
 
 Starting **Monday, July 7th**, we're offering three levels of scam education and phishing training designed specifically for WA businesses:
 
@@ -61,7 +61,7 @@ Starting **Monday, July 7th**, we're offering three levels of scam education and
 
 **Perfect for:** Small offices, retail stores, cafes, professional practices
 
-### Comprehensive Protection Program  
+### Comprehensive Safety Program  
 **$349/month for up to 50 employees**
 
 **Everything in Essentials, plus:**
@@ -72,19 +72,6 @@ Starting **Monday, July 7th**, we're offering three levels of scam education and
 - Priority phone support and emergency consultation
 
 **Perfect for:** Medical practices, law firms, accounting offices, manufacturing
-
-### Enterprise Security Training
-**$599/month for up to 100 employees**
-
-**Everything in Comprehensive, plus:**
-- Weekly customized training sessions
-- Executive briefings and board-ready reports
-- Custom phishing scenarios based on your business
-- 24/7 incident response support
-- Compliance reporting for insurance and audits
-- On-site training sessions (Perth metro area)
-
-**Perfect for:** Multi-location businesses, franchises, companies with compliance requirements
 
 ---
 
@@ -226,4 +213,4 @@ Don't wait until you're part of the statistics.
 
 ---
 
-*Code Monkey Cybersecurity - Making enterprise-level security accessible to every WA business. Based in Fremantle, protecting businesses across Western Australia.*
+*Code Monkey Cybersecurity - Making  security accessible to every WA business. Based in Fremantle, protecting businesses across Western Australia.*

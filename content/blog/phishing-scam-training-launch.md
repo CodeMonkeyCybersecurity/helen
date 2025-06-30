@@ -65,7 +65,7 @@ But **Training can work.**
 - Digital resources
 - Perfect for remote teams
 
-### ** Ongoing Protection** - $50/person/year
+### ** Ongoing Safety** - $50/person/year
 - Monthly phishing simulations
 - Automatic remedial training
 - Quarterly progress reports

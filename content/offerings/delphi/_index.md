@@ -1,6 +1,6 @@
 ---
 title: "Delphi"
-description: "Enterprise-level cybersecurity made accessible. Delphi provides threat detection and response for small businesses and individuals with human-reviewed alerts in plain English."
+description: " cybersecurity made accessible. Delphi provides threat detection and response for small businesses and individuals with human-reviewed alerts in plain English."
 keywords: ["cybersecurity", "threat detection", "XDR", "SIEM", "small business security", "Fremantle", "Australia"]
 bookFlatSection: true
 weight: 1
@@ -12,7 +12,7 @@ offeringDescription: "XDR Security Platform"
 
 ![Diagram showing the relationship between antivirus, security information and event management (SIEM), and extended detection and response (XDR) technologies](/images/antivirus_siem_xdr_web.jpg)
 
-**Delphi** is Code Monkey Cybersecurity’s managed security platform that makes enterprise-level threat detection accessible to everyone. No technical expertise required — built for real-world security, not checkbox compliance.
+**Delphi** is Code Monkey Cybersecurity’s managed security platform that makes  threat detection accessible to everyone. No technical expertise required — built for real-world security, not checkbox compliance.
 
 At its core, Delphi Notify helps you detect threats, understand what they mean, and act fast. Built on proven open-source technology — but we’ve hardened it, simplified it, and layered on human-first support.
 

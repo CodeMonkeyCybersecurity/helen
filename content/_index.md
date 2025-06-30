@@ -8,7 +8,7 @@ bookFlatSection: true
 
 ![Code Monkey Cybersecurity - Human-centered cybersecurity protection](/images/cover_puppy_moni_monkey_optimized.jpg)
 
-## Get Enterprise-Level Security Without the Complexity
+## Get  Security Without the Complexity
 
 **Delphi Notify** delivers advanced threat detection with **human-reviewed alerts in plain English**. No technical degree required - just clear guidance when something actually needs your attention.
 
@@ -22,7 +22,7 @@ bookFlatSection: true
     title="Plain English Guidance" 
     description="Your computer tried to update its clock by 40 hours - this could indicate a network issue. Here's what to check..." >}}
   {{< feature-card 
-    title="Enterprise-Level Protection" 
+    title=" Safety" 
     description="Advanced threat detection that catches sophisticated attacks your antivirus might miss." >}}
 {{< /feature-cards >}}
 

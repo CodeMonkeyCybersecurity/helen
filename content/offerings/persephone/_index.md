@@ -3,7 +3,7 @@ title: "Persephone"
 description: "Automated data protection and backup solutions for Australian businesses"
 weight: 2
 offering: true
-offeringDescription: "Data Protection Platform"
+offeringDescription: "Data Safety Platform"
 ---
 
 # Persephone Backup Platform
@@ -28,7 +28,7 @@ Don't become a statistic. Our backup services ensure your data is always protect
 - **Version history** - recover files from any point in time
 - **Instant alerts** if backups fail or data changes unexpectedly
 
-### **Endpoint Protection**
+### **Endpoint Safety**
 - **Automatic laptop/desktop backup** for remote workers
 - **Real-time file sync** across devices
 - **Ransomware protection** - detect and block malicious encryption
@@ -77,14 +77,6 @@ Don't become a statistic. Our backup services ensure your data is always protect
 - Real-time file sync
 - 90-day version history
 - Priority support + phone
-
-### **Enterprise**
-**Custom pricing** - Larger organizations
-- Unlimited storage
-- Unlimited endpoints
-- Custom retention policies
-- Dedicated support manager
-- SLA guarantees
 
 ## **What's Included**
 
