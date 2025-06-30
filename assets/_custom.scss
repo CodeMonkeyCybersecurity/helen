@@ -48,6 +48,7 @@ body {
   position: sticky !important;
   top: 0 !important;
   z-index: 50 !important;
+  margin-bottom: 0 !important; // Remove theme's margin-bottom
 }
 
 // Clean responsive behavior - let theme handle most of it
@@ -73,6 +74,23 @@ body {
     // Ensure last item (Get Started button) has bottom padding
     > div {
       padding-bottom: 2rem !important; // Extra padding at bottom
+    }
+  }
+  
+  // Mobile search styling
+  .mobile-search-wrapper {
+    display: block;
+    
+    input {
+      width: 120px !important;
+      
+      @media (min-width: 400px) {
+        width: 150px !important;
+      }
+      
+      @media (min-width: 500px) {
+        width: 180px !important;
+      }
     }
   }
 }

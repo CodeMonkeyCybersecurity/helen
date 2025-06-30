@@ -82,8 +82,20 @@
       <a href="/docs/delphi/sign-up/" class="btn-brand-teal text-sm px-6 py-2">Get Started</a>
     </div>
 
-    <!-- Mobile Menu Button -->
-    <div class="mobile-menu-button flex items-center">
+    <!-- Mobile Search and Menu Button -->
+    <div class="mobile-menu-button flex items-center space-x-3">
+      <!-- Mobile Search -->
+      {{ if default true .Site.Params.BookSearch }}
+      <div class="mobile-search-wrapper">
+        <input type="text" 
+               id="mobile-search-input" 
+               placeholder="Search..." 
+               aria-label="Search" 
+               class="px-3 py-1.5 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-teal focus:border-transparent"
+               style="width: 150px;">
+      </div>
+      {{ end }}
+      
       <!-- Mobile Menu Toggle -->
       <button @click="open = !open" 
               class="p-2 rounded-lg hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-teal focus:ring-opacity-50 transition-all duration-200 touch-manipulation"
