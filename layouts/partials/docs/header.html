@@ -84,17 +84,10 @@
 
     <!-- Mobile Search and Menu Button -->
     <div class="mobile-menu-button flex items-center space-x-3">
-      <!-- Mobile Search -->
-      {{ if default true .Site.Params.BookSearch }}
+      <!-- Mobile Search - Using same partial as sidebar -->
       <div class="mobile-search-wrapper">
-        <input type="text" 
-               id="mobile-search-input" 
-               placeholder="Search..." 
-               aria-label="Search" 
-               class="px-3 py-1.5 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-teal focus:border-transparent"
-               style="width: 150px;">
+        {{ partial "docs/search" . }}
       </div>
-      {{ end }}
       
       <!-- Mobile Menu Toggle -->
       <button @click="open = !open" 

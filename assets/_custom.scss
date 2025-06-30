@@ -77,19 +77,35 @@ body {
     }
   }
   
-  // Mobile search styling
+  // Mobile search styling - adapt book-search for mobile header
   .mobile-search-wrapper {
     display: block;
     
-    input {
-      width: 120px !important;
+    .book-search {
+      display: block !important; // Override hidden class
+      margin: 0;
       
-      @media (min-width: 400px) {
-        width: 150px !important;
+      input#book-search-input {
+        width: 120px !important;
+        padding: 0.375rem 0.75rem !important;
+        font-size: 0.875rem !important;
+        height: auto !important;
+        margin: 0 !important;
+        
+        @media (min-width: 400px) {
+          width: 150px !important;
+        }
+        
+        @media (min-width: 500px) {
+          width: 180px !important;
+        }
       }
       
-      @media (min-width: 500px) {
-        width: 180px !important;
+      // Hide search results and spinner in mobile header
+      // (Results will show in the main menu when opened)
+      .book-search-spinner,
+      #book-search-results {
+        display: none !important;
       }
     }
   }
@@ -162,6 +178,25 @@ body {
 .book-menu a:hover {
   opacity: 1 !important;
   text-decoration: underline !important;
+}
+
+// Ensure sidebar search displays properly
+.book-menu .book-search {
+  margin-bottom: 1rem;
+  
+  input#book-search-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid $bg-section-neutral;
+    border-radius: 0.375rem;
+    background-color: $bg-light;
+    
+    &:focus {
+      outline: none;
+      border-color: $brand-teal;
+      box-shadow: 0 0 0 2px rgba($brand-teal, 0.2);
+    }
+  }
 }
 
 // Remove container constraints to use full width
