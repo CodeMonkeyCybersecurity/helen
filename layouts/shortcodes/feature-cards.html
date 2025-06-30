@@ -1,0 +1,29 @@
+{{/*
+Feature Cards - Anthropic-style content promo blocks
+Usage: {{< feature-cards title="Section Title" subtitle="Optional description" >}}
+  {{< feature-card title="Card Title" description="Card description" link="/link/" >}}
+  {{< feature-card title="Card Title 2" description="Card description 2" link="/link2/" >}}
+{{< /feature-cards >}}
+*/}}
+
+{{ $title := .Get "title" }}
+{{ $subtitle := .Get "subtitle" }}
+
+<section class="py-16 sm:py-24">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    {{ if or $title $subtitle }}
+    <div class="mx-auto max-w-2xl mb-12 text-center">
+      {{ with $title }}
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl font-heading">{{ . }}</h2>
+      {{ end }}
+      {{ with $subtitle }}
+      <p class="mt-4 text-lg text-slate-600 font-body">{{ . }}</p>
+      {{ end }}
+    </div>
+    {{ end }}
+    
+    <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
+      {{ .Inner }}
+    </div>
+  </div>
+</section>

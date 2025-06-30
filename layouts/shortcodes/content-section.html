@@ -1,0 +1,48 @@
+{{/*
+Content Section - Creates a styled content bubble/card or renders directly on background
+Usage: {{< content-section title="Title" style="default|light|mint|blue|transparent" >}}Content here{{< /content-section >}}
+
+Parameters:
+- title: Optional section title
+- style: "default" (white), "light" (light gray), "mint" (light mint), "blue" (light blue), "transparent" (no background)
+*/}}
+
+{{ $title := .Get "title" }}
+{{ $style := .Get "style" | default "default" }}
+
+{{ if eq $style "transparent" }}
+<!-- Transparent style - content renders directly on page background -->
+<section class="py-12 sm:py-16">
+  <div class="mx-auto max-w-4xl px-6 lg:px-8">
+    {{ with $title }}
+    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl font-heading text-center mb-8">{{ . }}</h2>
+    {{ end }}
+    <div class="prose prose-lg max-w-none text-slate-700 [&>h3]:text-slate-900 [&>h3]:font-semibold [&>h3]:mb-4 [&>h3]:mt-8 [&>p]:mb-4 [&>ul]:mb-4 [&>ol]:mb-4 [&>h2]:text-slate-900 [&>h2]:font-semibold">
+      {{ .Inner | markdownify }}
+    </div>
+  </div>
+</section>
+{{ else }}
+<!-- Card/bubble style -->
+{{ $bgClass := "bg-white" }}
+{{ if eq $style "light" }}
+  {{ $bgClass = "bg-slate-50" }}
+{{ else if eq $style "mint" }}
+  {{ $bgClass = "bg-green-50" }}
+{{ else if eq $style "blue" }}
+  {{ $bgClass = "bg-blue-50" }}
+{{ end }}
+
+<section class="py-12 sm:py-16">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="{{ $bgClass }} rounded-2xl p-8 sm:p-12 shadow-sm border border-slate-200">
+      {{ with $title }}
+      <h2 class="text-brand-heading mb-8">{{ . }}</h2>
+      {{ end }}
+      <div class="prose prose-lg max-w-none text-brand-body [&>h3]:text-brand-subheading [&>h3]:mb-4 [&>h3]:mt-8 [&>p]:mb-4 [&>ul]:mb-4 [&>ol]:mb-4">
+        {{ .Inner | markdownify }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
