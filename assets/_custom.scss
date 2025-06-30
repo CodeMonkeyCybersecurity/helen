@@ -1,3 +1,77 @@
 /* You can add custom styles here. */
 
+// Brand-specific overrides for Hugo Book theme
+.book-menu {
+  background-color: $bg-section-neutral;
+  border-right: 1px solid $bg-section-mint;
+}
+
+.book-menu-content {
+  background-color: transparent;
+}
+
+.book-brand a {
+  color: $brand-teal !important;
+  &:hover {
+    color: $brand-logo-orange !important;
+  }
+}
+
+.book-page {
+  background-color: $bg-light;
+}
+
+.book-header {
+  background-color: $bg-section-mint;
+  border-bottom: 1px solid $bg-section-neutral;
+}
+
+.book-toc {
+  background-color: $bg-section-blue;
+  border-left: 1px solid $bg-section-mint;
+}
+
+// Button styles
+.book-btn {
+  background-color: $btn-primary-bg;
+  color: $text-base-dark;
+  border: none;
+  
+  &:hover {
+    background-color: $hover-orange;
+    color: white;
+  }
+}
+
+// Highlight and accent colors
+.book-hint {
+  &.info {
+    border-left-color: $brand-blue;
+    background-color: rgba($brand-blue, 0.1);
+  }
+  
+  &.warning {
+    border-left-color: $brand-gold;
+    background-color: rgba($brand-gold, 0.1);
+  }
+  
+  &.danger {
+    border-left-color: $brand-alert-red;
+    background-color: rgba($brand-alert-red, 0.1);
+  }
+}
+
+// Search styles
+.book-search input {
+  background-color: $bg-light;
+  border: 1px solid $bg-section-neutral;
+  color: $text-base-dark;
+  
+  &:focus {
+    border-color: $brand-teal;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba($brand-teal, 0.2);
+  }
+}
+
 // @import "plugins/numbered";

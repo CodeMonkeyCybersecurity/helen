@@ -54,6 +54,10 @@
 <!-- Theme stylesheet, you can customize scss by creating `assets/custom.scss` in your website -->
 {{- $styles := resources.Get "book.scss" | resources.ExecuteAsTemplate "book.scss" . | css.Sass | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" {{ template "integrity" $styles }}>
+
+<!-- Tailwind CSS -->
+{{- $tailwind := resources.Get "style.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $tailwind.RelPermalink }}" {{ template "integrity" $tailwind }}>
 {{- if default true .Site.Params.BookSearch -}}
   {{- $searchJSFile := printf "%s.search.js" .Language.Lang }}
   {{- $searchJS := resources.Get "search.js" | resources.ExecuteAsTemplate $searchJSFile . | resources.Minify | resources.Fingerprint }}

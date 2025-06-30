@@ -1,10 +1,10 @@
 {{ define "main" }}
-<article class="markdown book-post">
-  <h2>
+<article class="markdown book-post brand-card">
+  <h2 class="text-brand-heading">
     {{ partial "docs/title.html" . }}
   </h2>
   {{ partial "docs/post-meta" . }}
-  <div class="book-post-content">
+  <div class="book-post-content text-brand-body">
     {{- .Content -}}
   </div>
 </article>

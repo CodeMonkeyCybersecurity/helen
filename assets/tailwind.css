@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Brand Website Base Styles */
+  .brand-website {
+    @apply bg-bg-website text-text-base-dark;
+  }
+  
+  .brand-section-neutral {
+    @apply bg-bg-section-neutral;
+  }
+  
+  .brand-section-mint {
+    @apply bg-bg-section-mint;
+  }
+  
+  .brand-section-blue {
+    @apply bg-bg-section-blue;
+  }
+  
+  /* Brand Buttons */
+  .btn-brand-primary {
+    @apply bg-btn-primary-bg text-text-base-dark px-6 py-3 rounded-lg font-medium transition-colors duration-200 hover:bg-hover-orange hover:text-white;
+  }
+  
+  .btn-brand-secondary {
+    @apply bg-btn-secondary-bg text-text-base-dark px-6 py-3 rounded-lg font-medium transition-colors duration-200 hover:bg-brand-teal hover:text-white;
+  }
+  
+  .btn-brand-teal {
+    @apply bg-brand-teal text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 hover:bg-opacity-90;
+  }
+  
+  .btn-brand-orange {
+    @apply bg-brand-logo-orange text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 hover:bg-hover-orange;
+  }
+  
+  /* Brand Text Styles */
+  .text-brand-heading {
+    @apply text-text-base-dark text-2xl font-bold;
+  }
+  
+  .text-brand-subheading {
+    @apply text-text-muted text-lg font-semibold;
+  }
+  
+  .text-brand-body {
+    @apply text-text-base-dark;
+  }
+  
+  .text-brand-muted {
+    @apply text-text-muted;
+  }
+  
+  .text-brand-soft {
+    @apply text-text-soft;
+  }
+  
+  /* Brand Cards and Containers */
+  .brand-card {
+    @apply bg-bg-light border border-bg-section-neutral rounded-lg p-6 shadow-sm;
+  }
+  
+  .brand-card-alt {
+    @apply bg-bg-light-alt border border-bg-section-neutral rounded-lg p-6 shadow-sm;
+  }
+  
+  .brand-highlight {
+    @apply bg-highlight-bg border-l-4 border-brand-gold p-4 rounded-r-lg;
+  }
+  
+  .brand-alert {
+    @apply bg-brand-alert-red bg-opacity-10 border border-brand-alert-red border-opacity-30 text-brand-alert-red p-4 rounded-lg;
+  }
+  
+  /* Brand Navigation */
+  .brand-nav-link {
+    @apply text-text-muted hover:text-brand-teal transition-colors duration-200;
+  }
+  
+  .brand-nav-link-active {
+    @apply text-brand-teal font-medium;
+  }
+  
+  /* Terminal/Code Block Styles - Solarized Dark Theme */
+  .terminal, .code-block {
+    @apply bg-sd-base03 text-sd-base0 font-mono rounded-lg p-4 overflow-x-auto;
+  }
+  
+  .terminal-light, .code-block-light {
+    @apply bg-sl-base3 text-sl-base00 font-mono rounded-lg p-4 overflow-x-auto;
+  }
+  
+  /* Syntax highlighting classes for code */
+  .terminal .comment, .code-block .comment {
+    @apply text-sd-base01 italic;
+  }
+  
+  .terminal .keyword, .code-block .keyword {
+    @apply text-sl-green font-semibold;
+  }
+  
+  .terminal .string, .code-block .string {
+    @apply text-sl-cyan;
+  }
+  
+  .terminal .number, .code-block .number {
+    @apply text-sl-magenta;
+  }
+  
+  .terminal .function, .code-block .function {
+    @apply text-sl-blue;
+  }
+  
+  .terminal .variable, .code-block .variable {
+    @apply text-sl-yellow;
+  }
+  
+  .terminal .operator, .code-block .operator {
+    @apply text-sl-orange;
+  }
+  
+  .terminal .error, .code-block .error {
+    @apply text-sl-red;
+  }
+  
+  /* Terminal prompt */
+  .terminal-prompt {
+    @apply text-sl-green font-bold;
+  }
+  
+  .terminal-prompt::before {
+    content: '$ ';
+  }
+  
+  /* Inline code */
+  .inline-code {
+    @apply bg-sd-base02 text-sl-cyan px-1 py-0.5 rounded text-sm font-mono;
+  }
+  
+  .inline-code-light {
+    @apply bg-sl-base2 text-sl-cyan px-1 py-0.5 rounded text-sm font-mono;
+  }
+}

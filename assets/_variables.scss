@@ -1,3 +1,34 @@
 /* You can override SASS variables here. */
 
+// Brand Colors
+$brand-teal: #0ca678;
+$brand-logo-orange: #d77350;
+$brand-purple: #a625a4;
+$brand-blue: #4078f2;
+$brand-gold: #b66b02;
+$brand-alert-red: #e45549;
+
+$bg-website: #f0eee6;
+$bg-section-neutral: #e3dacc;
+$bg-section-mint: #bcd1ca;
+$bg-section-blue: #cbcadb;
+$bg-light: #fdfbf9;
+$bg-light-alt: #faf9f5;
+
+$text-base-dark: #141413;
+$text-muted: #393a42;
+$text-mono: #002a1e;
+$text-soft: #a0a1a6;
+
+$btn-primary-bg: #b9b2a7;
+$btn-secondary-bg: #cdc6b9;
+$hover-orange: #da7756;
+$highlight-bg: #fff8d0;
+
+// Override Hugo Book theme variables with brand colors
+$body-background: $bg-website;
+$body-font-color: $text-base-dark;
+$color-link: $brand-teal;
+$color-visited-link: $brand-purple;
+
 // @import "plugins/dark";

@@ -4,7 +4,7 @@
   {{ partial "docs/html-head" . }}
   {{ partial "docs/inject/head" . }}
 </head>
-<body dir="{{ default "ltr" .Site.Language.LanguageDirection }}">
+<body dir="{{ default "ltr" .Site.Language.LanguageDirection }}" class="brand-website">
   <input type="checkbox" class="hidden toggle" id="menu-control" />
   <input type="checkbox" class="hidden toggle" id="toc-control" />
   <main class="container flex">
@@ -73,8 +73,10 @@
 {{ end }}
 
 {{ define "main" }}
-  <article class="markdown book-article">
-    {{- .Content -}}
+  <article class="markdown book-article brand-card">
+    <div class="text-brand-body">
+      {{- .Content -}}
+    </div>
   </article>
 {{ end }}
 

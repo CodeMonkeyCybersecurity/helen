@@ -12,7 +12,6 @@ title: "Stop Getting Scary Security Alerts You Don't Understand"
 {{< button href="#demo" >}}See How It Works{{< /button >}}
 {{% /hint %}}
 
-*Trusted by 200+ Australian small businesses*
 
 ![Before and after comparison of security alerts - technical jargon vs plain English explanation](/images/alert-comparison.jpg)
 

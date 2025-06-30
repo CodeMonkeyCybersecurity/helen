@@ -37,24 +37,6 @@ Real security experts review every alert before you see it. No spam, no false al
 ###  **Enterprise-Level Protection**
 Advanced threat detection that catches sophisticated attacks your antivirus might miss.
 
----
-
-## **Trusted by Growing Businesses**
-
-{{% hint info %}}
-**Microsoft for Startups Partner** • **Fremantle-Based** • **Open Source Foundation**
-
-*"Delphi Notify caught a potential breach our regular antivirus missed. The step-by-step guidance helped us respond quickly and confidently. **Prevented an estimated $85,000 in potential losses.**"*  
-— Legal Practice, Fremantle
-
-*"After our training workshop, our phishing click rates dropped from 32% to under 8%. Finally, cybersecurity that makes sense to real people."*  
-— Sarah M., Medical Practice Owner
-
-*"**Zero successful attacks in 12 months** since implementing Delphi Notify. Best investment we've made."*  
-— Manufacturing Business, Perth
-
-**Microsoft for Startups Partner** | **WA Cyber Capability Directory Listed** | **Fremantle Chamber of Commerce Member** | **Privacy-First Design**
-{{% /hint %}}
 
 ---
 

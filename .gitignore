@@ -77,3 +77,4 @@ analytics-snippet.html
 /resources/
 /*.log
 .DS_Store
+/assets/style.css
