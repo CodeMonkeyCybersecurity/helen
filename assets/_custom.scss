@@ -1,11 +1,18 @@
 /* You can add custom styles here. */
 
 // Ensure full-width background with no margins
+html {
+  background-color: $bg-website !important; // Set background on html for overscroll
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 body {
   margin: 0 !important;
   padding: 0 !important;
   min-width: 100vw;
   overflow-x: hidden; // Prevent horizontal scroll from 100vw
+  background-color: $bg-website !important; // Ensure consistent background
 }
 
 // Brand-specific overrides for Hugo Book theme
@@ -51,6 +58,22 @@ body {
     position: sticky !important;
     top: 0 !important;
     z-index: 50 !important;
+  }
+  
+  // Fix mobile menu height to fit on screen
+  .mobile-menu-dropdown {
+    max-height: calc(100vh - 3.5rem) !important; // Viewport height minus header
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch; // Smooth scrolling on iOS
+    
+    @media (min-width: 640px) {
+      max-height: calc(100vh - 4rem) !important; // Larger header on sm screens
+    }
+    
+    // Ensure last item (Get Started button) has bottom padding
+    > div {
+      padding-bottom: 2rem !important; // Extra padding at bottom
+    }
   }
 }
 
