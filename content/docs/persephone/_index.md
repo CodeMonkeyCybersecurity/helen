@@ -42,25 +42,25 @@ Don't become a statistic. Our backup services ensure your data is always protect
 
 ## **Features That Matter**
 
-### **🔒 Security First**
+### Security First
 - End-to-end encryption in transit and at rest
 - Multi-factor authentication for access
 - Regular security audits and compliance checks
 - Australian-based infrastructure
 
-### **⚡ Fast Recovery**
+### Fast Recovery
 - Average file recovery: under 5 minutes
 - Full system recovery: 2-4 hours
 - Emergency access via web portal
 - 24/7 recovery support
 
-### **🎯 Business Focused**
+### Business Focused
 - No confusing technical jargon
 - Clear recovery procedures documented
 - Regular backup testing included
 - Staff training on recovery processes
 
-## **Backup Plans**
+## Backup Plans
 
 ### **Essential Business**
 **$99/month** - Perfect for small offices
@@ -88,12 +88,12 @@ Don't become a statistic. Our backup services ensure your data is always protect
 
 ## **What's Included**
 
-✅ **Setup and configuration** - we handle everything  
-✅ **Staff training** - your team knows how to recover files  
-✅ **Regular testing** - monthly backup verification  
-✅ **Compliance reports** - for insurance and audits  
-✅ **Emergency support** - 24/7 critical recovery assistance  
-✅ **Migration assistance** - moving from existing backup solutions  
+ **Setup and configuration** - we handle everything  
+ **Staff training** - your team knows how to recover files  
+ **Regular testing** - monthly backup verification  
+ **Compliance reports** - for insurance and audits  
+ **Emergency support** - 24/7 critical recovery assistance  
+ **Migration assistance** - moving from existing backup solutions  
 
 ## **Getting Started**
 

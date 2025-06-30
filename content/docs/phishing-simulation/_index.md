@@ -42,7 +42,7 @@ Don't wait to find out how vulnerable your team is. Our simulation service provi
 
 ## **Simulation Features**
 
-### **🎯 Realistic Scenarios**
+### ** Realistic Scenarios**
 - Industry-specific attack templates
 - Current threat landscape integration
 - Seasonal campaigns (tax time, holidays)
@@ -62,7 +62,7 @@ Don't wait to find out how vulnerable your team is. Our simulation service provi
 - Progressive difficulty based on performance
 - Certification tracking for compliance
 
-### **🔒 Safe Environment**
+### ** Safe Environment**
 - No actual malware or harmful content
 - Controlled testing environment
 - Privacy-focused reporting

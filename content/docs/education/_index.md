@@ -9,21 +9,21 @@ bookFlatSection: true
 
 Free resources to help you understand and improve your cybersecurity - no technical expertise required.
 
-## **Quick Security Guides**
+## Quick Security Guides
 
-### **🛡️ Essential Security Basics**
+### Essential Security Basics
 - **Strong Passwords**: Use unique passwords for every account, enable two-factor authentication
 - **Software Updates**: Keep your devices and apps updated - updates include security fixes
 - **Safe Browsing**: Think before you click - if something seems too good to be true, it probably is
 - **Backup Strategy**: Regular backups protect you from ransomware and device failures
 
-### **📧 Email Security**
+### Email Security
 - **Verify the Sender**: Check email addresses carefully - scammers often use similar-looking addresses
 - **Don't Click Suspicious Links**: Hover over links to see where they really go before clicking
 - **Be Wary of Urgency**: "Act now" pressure tactics are a common scam technique
 - **When in Doubt, Call**: If you receive an unexpected email asking for information, call the sender directly
 
-### **📱 Mobile Device Safety**
+### Mobile Device Safety
 - **Lock Your Screen**: Use PIN, password, or biometric locks
 - **App Permissions**: Review what access you're giving to apps - do they really need your location?
 - **Public Wi-Fi Caution**: Avoid accessing sensitive accounts on public networks
@@ -31,7 +31,7 @@ Free resources to help you understand and improve your cybersecurity - no techni
 
 ## **Common Threats to Watch For**
 
-### **Phishing Emails**
+### Phishing Emails
 **What it looks like**: Emails pretending to be from banks, government agencies, or familiar companies asking you to "verify" account information.
 
 **Red flags**: 
@@ -40,7 +40,7 @@ Free resources to help you understand and improve your cybersecurity - no techni
 - Requests for personal information via email
 - Links that don't match the supposed sender
 
-### **Phone Scams**
+### Phone Scams
 **What it looks like**: Callers claiming to be from banks, tech support, or government agencies requesting immediate action.
 
 **Red flags**:
