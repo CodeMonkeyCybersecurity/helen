@@ -7,6 +7,22 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'heading': ['Atkinson Hyperlegible', 'sans-serif'],
+        'body': ['Inter', 'sans-serif'],
+        'mono': ['Noto Sans Mono', 'monospace'],
+      },
+      fontSize: {
+        'base': '1rem',
+        'sm': '0.875rem',
+        'lg': '1.25rem',
+        'xl': '1.5rem',
+        '2xl': '2rem',
+      },
+      lineHeight: {
+        'body': '1.6',
+        'heading': '1.25',
+      },
       colors: {
         // Brand Colors
         'brand-teal': '#0ca678',

@@ -1,6 +1,90 @@
+/* === Code Monkey Cybersecurity Style Guide: Typography === */
+
+/* 1. Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700&family=Noto+Sans+Mono&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* 2. Base Font Setup */
+  :root {
+    --font-heading: 'Atkinson Hyperlegible', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'Noto Sans Mono', monospace;
+
+    --font-size-base: 1rem;       /* 16px */
+    --font-size-sm: 0.875rem;     /* 14px */
+    --font-size-lg: 1.25rem;      /* 20px */
+    --font-size-xl: 1.5rem;       /* 24px */
+    --font-size-2xl: 2rem;        /* 32px */
+    --font-line-height: 1.6;
+  }
+
+  /* 3. Typography Utility Classes */
+  body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    line-height: var(--font-line-height);
+    color: #1a1a1a;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.25;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #111;
+  }
+
+  h1 { font-size: var(--font-size-2xl); }
+  h2 { font-size: var(--font-size-xl); }
+  h3 { font-size: var(--font-size-lg); }
+  h4, h5, h6 { font-size: var(--font-size-base); }
+
+  p, li, blockquote {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    margin-bottom: 1em;
+  }
+
+  code, pre, .code-block {
+    font-family: var(--font-mono);
+    background-color: #f4f4f4;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: var(--font-size-sm);
+    color: #333;
+  }
+
+  pre {
+    padding: 1em;
+    overflow-x: auto;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+  
+  em {
+    font-style: italic;
+  }
+
+  a {
+    color: #005ecb;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  a:hover {
+    color: #003f8a;
+    text-decoration: none;
+  }
+}
 
 @layer components {
   /* Brand Website Base Styles */
@@ -39,23 +123,23 @@
   
   /* Brand Text Styles */
   .text-brand-heading {
-    @apply text-text-base-dark text-2xl font-bold;
+    @apply text-text-base-dark text-2xl font-heading font-bold leading-heading;
   }
   
   .text-brand-subheading {
-    @apply text-text-muted text-lg font-semibold;
+    @apply text-text-muted text-lg font-heading font-semibold leading-heading;
   }
   
   .text-brand-body {
-    @apply text-text-base-dark;
+    @apply text-text-base-dark font-body leading-body;
   }
   
   .text-brand-muted {
-    @apply text-text-muted;
+    @apply text-text-muted font-body;
   }
   
   .text-brand-soft {
-    @apply text-text-soft;
+    @apply text-text-soft font-body;
   }
   
   /* Brand Cards and Containers */
@@ -86,11 +170,13 @@
   
   /* Terminal/Code Block Styles - Solarized Dark Theme */
   .terminal, .code-block {
-    @apply bg-sd-base03 text-sd-base0 font-mono rounded-lg p-4 overflow-x-auto;
+    @apply bg-sd-base03 text-sd-base0 rounded-lg p-4 overflow-x-auto;
+    font-family: var(--font-mono);
   }
   
   .terminal-light, .code-block-light {
-    @apply bg-sl-base3 text-sl-base00 font-mono rounded-lg p-4 overflow-x-auto;
+    @apply bg-sl-base3 text-sl-base00 rounded-lg p-4 overflow-x-auto;
+    font-family: var(--font-mono);
   }
   
   /* Syntax highlighting classes for code */
@@ -137,10 +223,12 @@
   
   /* Inline code */
   .inline-code {
-    @apply bg-sd-base02 text-sl-cyan px-1 py-0.5 rounded text-sm font-mono;
+    @apply bg-sd-base02 text-sl-cyan px-1 py-0.5 rounded text-sm;
+    font-family: var(--font-mono);
   }
   
   .inline-code-light {
-    @apply bg-sl-base2 text-sl-cyan px-1 py-0.5 rounded text-sm font-mono;
+    @apply bg-sl-base2 text-sl-cyan px-1 py-0.5 rounded text-sm;
+    font-family: var(--font-mono);
   }
 }

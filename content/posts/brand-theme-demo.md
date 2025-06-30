@@ -1,12 +1,30 @@
 ---
-title: "Brand Theme Demo"
+title: "Brand Theme & Typography Demo"
 date: 2025-06-30
 draft: true
 ---
 
-# Brand Color Scheme Demo
+# Brand Theme & Typography Demo
 
-This page demonstrates the new brand color scheme applied to the Code Monkey Cybersecurity website.
+This page demonstrates the new brand color scheme and professional typography applied to the Code Monkey Cybersecurity website.
+
+## Typography System
+
+### Fonts Used
+- **Headings**: Atkinson Hyperlegible (accessibility-focused)
+- **Body Text**: Inter (professional, highly readable)
+- **Code/Terminal**: Noto Sans Mono (clear monospace)
+
+### Heading Examples
+
+# This is an H1 Heading
+## This is an H2 Heading  
+### This is an H3 Heading
+#### This is an H4 Heading
+
+**Regular paragraph text** using Inter font family. This font was specifically chosen for its excellent readability in professional cybersecurity communications. It works well for *emphasized text* and provides clear hierarchy.
+
+Here's some `inline code` using the Noto Sans Mono font, and here's a [professional link](#) that follows our brand guidelines.
 
 ## Brand Colors
 
