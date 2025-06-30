@@ -17,19 +17,10 @@ Parameters:
            placeholder="{{ $placeholder }}" 
            aria-label="{{ $placeholder }}" 
            maxlength="64" 
-           data-hotkeys="s/" />
+           data-hotkeys="s/" 
+           autocomplete="off" />
     <div class="unified-search-spinner hidden"></div>
   </div>
   <ul class="unified-search-results" id="unified-search-results-{{ $context }}"></ul>
 </div>
-
-<script>
-// Remove hidden class after page load
-document.addEventListener('DOMContentLoaded', function() {
-  const searchEl = document.querySelector('.unified-search-{{ $context }}');
-  if (searchEl) {
-    searchEl.classList.add('search-ready');
-  }
-});
-</script>
 {{ end }}

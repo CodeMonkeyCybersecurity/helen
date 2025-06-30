@@ -59,10 +59,10 @@
 {{- $tailwind := resources.Get "css/tailwind.css" | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $tailwind.RelPermalink }}" {{ template "integrity" $tailwind }}>
 {{- if default true .Site.Params.BookSearch -}}
-  {{- $searchJSFile := printf "%s.search.js" .Language.Lang }}
-  {{- $searchJS := resources.Get "search.js" | resources.ExecuteAsTemplate $searchJSFile . | resources.Minify | resources.Fingerprint }}
+  {{- $searchUnifiedJSFile := printf "%s.search-unified.js" .Language.Lang }}
+  {{- $searchUnifiedJS := resources.Get "search-unified.js" | resources.ExecuteAsTemplate $searchUnifiedJSFile . | resources.Minify | resources.Fingerprint }}
   <script defer src="{{ "fuse.min.js" | relURL }}"></script>
-  <script defer src="{{ $searchJS.RelPermalink }}" {{ template "integrity" $searchJS }}></script>
+  <script defer src="{{ $searchUnifiedJS.RelPermalink }}" {{ template "integrity" $searchUnifiedJS }}></script>
 {{ end -}}
 
 {{- if .Site.Params.BookServiceWorker -}}
