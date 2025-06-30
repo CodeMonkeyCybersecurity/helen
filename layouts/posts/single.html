@@ -1,15 +1,22 @@
 {{ define "main" }}
-<article class="prose prose-slate prose-lg max-w-none mx-auto px-6 sm:px-8 lg:px-12 py-12 sm:py-16 lg:py-20">
-  <div class="bg-white rounded-2xl shadow-sm p-8 sm:p-12 lg:p-16 space-y-8">
-    <header class="space-y-4">
-      <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
-        {{ partial "docs/title.html" . }}
-      </h1>
-      <div class="text-slate-600">
-        {{ partial "docs/post-meta" . }}
-      </div>
-    </header>
-    <div class="prose prose-slate prose-lg max-w-none">
+<article class="max-w-none mx-auto">
+  <!-- Blog post header in a styled card -->
+  <div class="mx-auto max-w-4xl px-6 lg:px-8 py-12">
+    <div class="bg-white rounded-2xl shadow-sm p-8 sm:p-12 border border-slate-200">
+      <header class="space-y-4">
+        <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
+          {{ partial "docs/title.html" . }}
+        </h1>
+        <div class="text-slate-600">
+          {{ partial "docs/post-meta" . }}
+        </div>
+      </header>
+    </div>
+  </div>
+  
+  <!-- Blog post content renders on background -->
+  <div class="mx-auto max-w-4xl px-6 lg:px-8 pb-12">
+    <div class="prose prose-slate prose-lg max-w-none text-slate-700 [&>h2]:text-slate-900 [&>h3]:text-slate-900 [&>h4]:text-slate-900">
       {{- .Content -}}
     </div>
   </div>

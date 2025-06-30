@@ -4,7 +4,7 @@ description: "Cybersecurity. With Humans."
 bookFlatSection: true
 ---
 
-{{< content-section title="Cybersecurity That Actually Makes Sense" style="transparent" >}}
+{{< content-section title="Super simple Cybersecurity" style="transparent" >}}
 
 ![Code Monkey Cybersecurity - Human-centered cybersecurity protection](/images/cover_puppy_moni_monkey_web.jpg)
 
@@ -16,7 +16,7 @@ bookFlatSection: true
 
 {{< cta-anthropic 
   title="Start Your Free 30-Day Trial" 
-  text="✅ No credit card required  ✅ Setup assistance included  ✅ Cancel anytime. Join 200+ small businesses already protected by Delphi Notify. Ask about our Scam Education & Phishing Training workshops for your team."
+  text=" No credit card required   Setup assistance included   Cancel anytime. Join 200+ small businesses already protected by Delphi Notify. Ask about our Scam Education & Phishing Training workshops for your team."
   link="/docs/delphi/sign-up/" 
   linkText="Get Started Now - Free for 30 Days"
   style="dark"

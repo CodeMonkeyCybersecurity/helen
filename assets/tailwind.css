@@ -89,7 +89,8 @@
 @layer components {
   /* Minimalist Website Base Styles */
   .brand-website {
-    @apply bg-slate-50 text-slate-900;
+    @apply text-slate-900;
+    background-color: #f0eee6; /* Custom beige from tailwind config */
   }
   
   .brand-section-neutral {

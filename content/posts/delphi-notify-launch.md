@@ -1,5 +1,5 @@
 ---
-title: " Introducing Delphi Notify - Cybersecurity That Actually Makes Sense"
+title: " Introducing Delphi Notify - Super simple Cybersecurity"
 date: "2025-06-17"
 author: "Henry Oliver"
 tags: ["Delphi Notify", "Product Launch", "Fremantle Business", "Cybersecurity Software"]

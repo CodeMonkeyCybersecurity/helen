@@ -60,10 +60,8 @@
 {{ end }}
 
 {{ define "main" }}
-  <article class="prose prose-slate prose-lg max-w-none mx-auto px-6 sm:px-8 lg:px-12 py-12 sm:py-16 lg:py-20">
-    <div class="bg-white rounded-2xl shadow-sm p-8 sm:p-12 lg:p-16">
-      {{- .Content -}}
-    </div>
+  <article class="max-w-none mx-auto">
+    {{- .Content -}}
   </article>
 {{ end }}
 
