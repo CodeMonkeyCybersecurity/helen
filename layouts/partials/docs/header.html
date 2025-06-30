@@ -33,7 +33,7 @@
              x-transition:leave-end="opacity-0 scale-95"
              class="absolute left-0 mt-2 w-56 bg-white border border-slate-200 shadow-lg rounded-xl z-20 py-2">
           {{ range .Site.Menus.platform }}
-          <a href="{{ .URL }}" class="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-teal transition-colors duration-200">
+          <a href="{{ .URL }}" class="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:underline transition-colors duration-200">
             <div class="font-semibold">{{ .Name }}</div>
             {{ with .Params.description }}
             <div class="text-xs text-slate-500 mt-1">{{ . }}</div>
@@ -62,7 +62,7 @@
              x-transition:leave-end="opacity-0 scale-95"
              class="absolute left-0 mt-2 w-56 bg-white border border-slate-200 shadow-lg rounded-xl z-20 py-2">
           {{ range .Site.Menus.training }}
-          <a href="{{ .URL }}" class="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:text-brand-teal transition-colors duration-200">
+          <a href="{{ .URL }}" class="block px-4 py-3 text-sm text-slate-700 hover:bg-slate-50 hover:underline transition-colors duration-200">
             <div class="font-semibold">{{ .Name }}</div>
             {{ with .Params.description }}
             <div class="text-xs text-slate-500 mt-1">{{ . }}</div>
@@ -155,7 +155,7 @@
                 <div class="w-2 h-2 bg-brand-teal rounded-full"></div>
               </div>
               <div class="flex-1 min-w-0">
-                <div class="font-medium text-slate-900 group-hover:text-brand-teal transition-colors duration-200">{{ .Name }}</div>
+                <div class="font-medium text-slate-900 group-hover:underline">{{ .Name }}</div>
                 {{ with .Params.description }}
                 <div class="text-sm text-slate-500 mt-1">{{ . }}</div>
                 {{ end }}
@@ -184,7 +184,7 @@
                 <div class="w-2 h-2 bg-brand-logo-orange rounded-full"></div>
               </div>
               <div class="flex-1 min-w-0">
-                <div class="font-medium text-slate-900 group-hover:text-brand-logo-orange transition-colors duration-200">{{ .Name }}</div>
+                <div class="font-medium text-slate-900 group-hover:underline">{{ .Name }}</div>
                 {{ with .Params.description }}
                 <div class="text-sm text-slate-500 mt-1">{{ . }}</div>
                 {{ end }}
@@ -206,7 +206,7 @@
         <div class="space-y-2 pl-4">
           {{ range .Site.Menus.main }}
           <a href="{{ .URL }}" 
-             class="block py-3 px-3 rounded-lg font-medium text-slate-700 hover:text-brand-teal hover:bg-slate-50 transition-colors duration-200"
+             class="block py-3 px-3 rounded-lg font-medium text-slate-700 hover:underline hover:bg-slate-50 transition-colors duration-200"
              @click="open = false">
             {{ .Name }}
           </a>
