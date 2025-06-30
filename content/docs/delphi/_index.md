@@ -4,6 +4,8 @@ description: "Enterprise-level cybersecurity made accessible. Delphi provides th
 keywords: ["cybersecurity", "threat detection", "XDR", "SIEM", "small business security", "Fremantle", "Australia"]
 bookFlatSection: true
 weight: 1
+offering: true
+offeringDescription: "XDR Security Platform"
 ---
 
 # What Is Delphi?

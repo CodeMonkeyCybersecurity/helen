@@ -21,34 +21,17 @@
     </ul>
   </div>
 
-  <!-- Platform Section - Auto-discovered from /docs/delphi/ -->
-  {{ $delphiSection := .Site.GetPage "/docs/delphi" }}
-  {{ if $delphiSection }}
-  <div class="menu-section">
-    <div class="menu-section-header">Platform</div>
-    <ul class="menu-section-items">
-      <li class="menu-item-expandable">
-        <input type="checkbox" id="menu-platform" class="toggle" />
-        <label for="menu-platform" class="menu-item">
-          <span>Platform</span>
-        </label>
-        <ul class="menu-sub-items">
-          <!-- Main Delphi page -->
-          {{ $isActive := partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $currentPage "url" $delphiSection.RelPermalink) }}
-          <li><a href="{{ $delphiSection.RelPermalink }}" class="menu-sub-item{{ if $isActive }} active{{ end }}">{{ $delphiSection.Title }}</a></li>
-          
-          <!-- Auto-discovered sub-pages -->
-          {{ range $delphiSection.Pages.ByWeight }}
-            {{ if not .Params.bookHidden }}
-              {{ $isActive := partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $currentPage "url" .RelPermalink) }}
-              <li><a href="{{ .RelPermalink }}" class="menu-sub-item{{ if $isActive }} active{{ end }}">{{ .Title }}</a></li>
-            {{ end }}
-          {{ end }}
-        </ul>
-      </li>
-    </ul>
-  </div>
-  {{ end }}
+  <!-- Offerings Section - Auto-discovered -->
+  {{ partial "docs/nav-renderer" (dict 
+    "currentPage" $currentPage
+    "navType" "sidebar"
+    "sectionTitle" "Offerings"
+    "contentConfig" (dict 
+      "contentType" "offerings"
+      "section" "/docs"
+      "sortBy" "Weight")
+    "renderConfig" (dict 
+      "expandable" true)) }}
 
   <!-- Training Section - Auto-discovered from /docs/training/ -->
   {{ $trainingSection := .Site.GetPage "/docs/training" }}

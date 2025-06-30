@@ -1,10 +1,12 @@
 ---
-title: "Backup Services"
+title: "Persephone"
 description: "Automated data protection and backup solutions for Australian businesses"
 weight: 2
+offering: true
+offeringDescription: "Data Protection Platform"
 ---
 
-# Backup Services
+# Persephone Backup Platform
 
 Protect your business data with automated, secure backup solutions designed for Australian small businesses.
 
