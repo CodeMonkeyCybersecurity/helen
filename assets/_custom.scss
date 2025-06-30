@@ -522,34 +522,68 @@ html {
   }
 }
 
-// Enhanced menu styles
-.book-menu-enhanced {
-  .menu-brand {
-    margin-bottom: 1.5rem;
+// Unified brand component styling
+.brand-unified {
+  .brand-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: $text-base-dark;
+    transition: all 0.2s ease;
     
-    .brand-link {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: $text-base-dark;
+    &:hover {
+      text-decoration: underline;
+      color: $brand-primary;
+    }
+  }
+  
+  .brand-logo {
+    height: 2rem;
+    width: auto;
+    flex-shrink: 0;
+  }
+  
+  .brand-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: $font-brand;
+    line-height: 1.2;
+  }
+  
+  // Context-specific styling
+  &.brand-unified-sidebar {
+    margin-bottom: 1.5rem;
+  }
+  
+  &.brand-unified-mobile {
+    // Mobile-specific adjustments
+    .brand-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    
+    @media (max-width: 640px) {
+      .brand-logo {
+        height: 1.5rem; // Smaller logo on very small screens
+      }
       
-      &:hover {
-        text-decoration: underline;
+      .brand-text {
+        font-size: 1rem; // Smaller text on very small screens
       }
     }
     
-    .brand-logo {
-      height: 2rem;
-      width: auto;
-    }
-    
-    .brand-text {
-      font-size: 1.25rem;
-      font-weight: 700;
-      font-family: $font-brand;
+    @media (min-width: 768px) {
+      .brand-logo {
+        height: 2rem; // Standard size on larger screens
+      }
     }
   }
+}
+
+// Enhanced menu styles
+.book-menu-enhanced {
   
   .menu-search {
     margin-bottom: 1.5rem;

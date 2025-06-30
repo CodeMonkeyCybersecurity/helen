@@ -2,15 +2,7 @@
   <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex justify-between items-center h-14 sm:h-16">
     <!-- Logo and Brand -->
     <div class="flex items-center min-w-0 flex-1 md:flex-initial">
-      <a href="{{ .Site.BaseURL }}" class="flex items-center space-x-2 md:space-x-3 max-w-full">
-        {{- with .Site.Params.BookLogo -}}
-        <img src="{{ . | relURL }}" alt="Logo" class="h-6 w-auto md:h-8 flex-shrink-0">
-        {{- end -}}
-        <span class="nav-text-heading truncate">
-          <span class="hidden sm:inline">{{ .Site.Title }}</span>
-          <span class="sm:hidden">Code Monkey</span>
-        </span>
-      </a>
+      {{ partial "docs/brand-unified" (dict "Site" .Site "context" "mobile" "showFullTitle" true) }}
     </div>
 
     <!-- Desktop Navigation -->

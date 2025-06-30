@@ -2,14 +2,7 @@
 
 <div class="book-menu-enhanced">
   <!-- Brand Header -->
-  <div class="menu-brand">
-    <a href="{{ .Site.BaseURL }}" class="brand-link">
-      {{- with .Site.Params.BookLogo -}}
-      <img src="{{ . | relURL }}" alt="Logo" class="brand-logo">
-      {{- end -}}
-      <span class="brand-text">{{ .Site.Title }}</span>
-    </a>
-  </div>
+  {{ partial "docs/brand-unified" (dict "Site" .Site "context" "sidebar") }}
 
   <!-- Search Box - Using unified search component -->
   <div class="menu-search">
