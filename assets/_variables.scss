@@ -1,7 +1,8 @@
 /* You can override SASS variables here. */
 
-// Brand Colors
-$brand-teal: #0ca678;
+// Brand Colors - Main brand color
+$brand-primary: #0ca678; // Teal 7 - Main brand color
+$brand-teal: #0ca678; // Alias for backward compatibility
 $brand-logo-orange: #d77350;
 $brand-purple: #a625a4;
 $brand-blue: #4078f2;
@@ -28,13 +29,13 @@ $highlight-bg: #fff8d0;
 // Override Hugo Book theme variables with brand colors
 $body-background: $bg-website;
 $body-font-color: $text-base-dark;
-$color-link: $brand-teal;
+$color-link: $brand-primary; // Use main brand color for links
 $color-visited-link: $brand-purple;
 
-// Font families
-$font-brand: 'Noto Sans', sans-serif;
-$font-heading: 'Noto Sans', sans-serif;
-$font-body: 'Inter', 'Atkinson Hyperlegible', ui-sans-serif, system-ui;
+// Font families - Noto Sans for all branding and titles
+$font-brand: 'Noto Sans', sans-serif;    // Brand/logo text
+$font-heading: 'Noto Sans', sans-serif;  // All headings and titles
+$font-body: 'Inter', 'Atkinson Hyperlegible', ui-sans-serif, system-ui; // Body text (unchanged)
 $font-mono: 'Noto Sans Mono', ui-monospace, 'SFMono-Regular';
 
 // Unified navigation styling variables

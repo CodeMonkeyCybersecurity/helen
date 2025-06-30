@@ -308,8 +308,8 @@ html {
   
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 2px rgba($brand-teal, 0.3);
-    background-color: rgba($brand-teal, 0.1);
+    box-shadow: 0 0 0 2px rgba($brand-primary, 0.3);
+    background-color: rgba($brand-primary, 0.1);
   }
   
   &.active {
@@ -374,8 +374,8 @@ html {
     
     &:focus {
       outline: none;
-      border-color: $brand-teal;
-      box-shadow: 0 0 0 2px rgba($brand-teal, 0.2);
+      border-color: $brand-primary;
+      box-shadow: 0 0 0 2px rgba($brand-primary, 0.2);
       background-color: white;
     }
     
@@ -393,7 +393,7 @@ html {
     width: 1rem;
     height: 1rem;
     border: 2px solid $bg-section-neutral;
-    border-top-color: $brand-teal;
+    border-top-color: $brand-primary;
     border-radius: 50%;
     animation: spin 0.6s linear infinite;
     
@@ -441,7 +441,7 @@ html {
         display: block;
         
         &:hover {
-          color: $brand-teal;
+          color: $brand-primary;
         }
       }
       
@@ -579,13 +579,13 @@ html {
       display: block;
       
       &.menu-item-cta {
-        background-color: $brand-teal;
+        background-color: $brand-primary;
         color: white;
         text-align: center;
         font-weight: 600;
         
         &:hover {
-          background-color: darken($brand-teal, 10%);
+          background-color: darken($brand-primary, 10%);
           text-decoration: none;
         }
       }
@@ -636,7 +636,7 @@ html {
       }
       
       &.active {
-        color: $brand-teal;
+        color: $brand-primary;
         font-weight: 600;
         background-color: transparent;
       }
