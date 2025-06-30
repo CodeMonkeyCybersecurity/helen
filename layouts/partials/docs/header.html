@@ -84,9 +84,9 @@
 
     <!-- Mobile Search and Menu Button -->
     <div class="mobile-menu-button flex items-center space-x-3">
-      <!-- Mobile Search - Using same partial as sidebar -->
+      <!-- Mobile Search - Using unified search component -->
       <div class="mobile-search-wrapper">
-        {{ partial "docs/search" . }}
+        {{ partial "docs/search-unified" (dict "Site" .Site "context" "mobile" "placeholder" "Search...") }}
       </div>
       
       <!-- Mobile Menu Toggle -->

@@ -77,37 +77,9 @@ body {
     }
   }
   
-  // Mobile search styling - adapt book-search for mobile header
+  // Mobile search wrapper - just contains the unified search
   .mobile-search-wrapper {
     display: block;
-    
-    .book-search {
-      display: block !important; // Override hidden class
-      margin: 0;
-      
-      input#book-search-input {
-        width: 120px !important;
-        padding: 0.375rem 0.75rem !important;
-        font-size: 0.875rem !important;
-        height: auto !important;
-        margin: 0 !important;
-        
-        @media (min-width: 400px) {
-          width: 150px !important;
-        }
-        
-        @media (min-width: 500px) {
-          width: 180px !important;
-        }
-      }
-      
-      // Hide search results and spinner in mobile header
-      // (Results will show in the main menu when opened)
-      .book-search-spinner,
-      #book-search-results {
-        display: none !important;
-      }
-    }
   }
 }
 
@@ -161,18 +133,6 @@ body {
   }
 }
 
-// Search styles
-.book-search input {
-  background-color: $bg-light;
-  border: 1px solid $bg-section-neutral;
-  color: $text-base-dark;
-  
-  &:focus {
-    border-color: $brand-teal;
-    outline: none;
-    box-shadow: 0 0 0 2px rgba($brand-teal, 0.2);
-  }
-}
 
 // Override theme hover opacity
 .book-menu a:hover {
@@ -180,23 +140,142 @@ body {
   text-decoration: underline !important;
 }
 
-// Ensure sidebar search displays properly
-.book-menu .book-search {
-  margin-bottom: 1rem;
+// Unified search component styling
+.unified-search {
+  position: relative;
   
-  input#book-search-input {
+  // Base input styling - shared across all contexts
+  .unified-search-input {
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.5rem 0.75rem;
     border: 1px solid $bg-section-neutral;
     border-radius: 0.375rem;
     background-color: $bg-light;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
     
     &:focus {
       outline: none;
       border-color: $brand-teal;
       box-shadow: 0 0 0 2px rgba($brand-teal, 0.2);
+      background-color: white;
+    }
+    
+    &::placeholder {
+      color: $text-soft;
     }
   }
+  
+  // Search spinner
+  .unified-search-spinner {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid $bg-section-neutral;
+    border-top-color: $brand-teal;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    
+    &.hidden {
+      display: none;
+    }
+  }
+  
+  // Search results dropdown
+  .unified-search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 0.25rem;
+    padding: 0;
+    list-style: none;
+    background-color: white;
+    border: 1px solid $bg-section-neutral;
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 100;
+    
+    &:empty {
+      display: none;
+    }
+    
+    li {
+      padding: 0.75rem;
+      border-bottom: 1px solid $bg-section-neutral;
+      
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      &:hover {
+        background-color: $bg-light;
+      }
+      
+      a {
+        text-decoration: none;
+        color: $text-base-dark;
+        display: block;
+        
+        &:hover {
+          color: $brand-teal;
+        }
+      }
+      
+      .search-result-title {
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+      
+      .search-result-excerpt {
+        font-size: 0.8rem;
+        color: $text-muted;
+      }
+    }
+  }
+  
+  // Context-specific styles
+  &.unified-search-sidebar {
+    margin-bottom: 1.5rem;
+    
+    .unified-search-wrapper {
+      position: relative;
+    }
+  }
+  
+  &.unified-search-mobile {
+    .unified-search-wrapper {
+      position: relative;
+    }
+    
+    .unified-search-input {
+      width: 120px;
+      padding: 0.375rem 0.75rem;
+      font-size: 0.875rem;
+      
+      @media (min-width: 400px) {
+        width: 150px;
+      }
+      
+      @media (min-width: 500px) {
+        width: 180px;
+      }
+    }
+    
+    // Hide results in mobile header - they'll show in menu
+    .unified-search-results {
+      display: none;
+    }
+  }
+}
+
+@keyframes spin {
+  to { transform: translateY(-50%) rotate(360deg); }
 }
 
 // Remove container constraints to use full width

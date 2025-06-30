@@ -1,0 +1,35 @@
+{{/* 
+Unified Search Component
+Parameters:
+  - context: "sidebar" or "mobile" (default: "sidebar")
+  - placeholder: Custom placeholder text (default: "Search")
+*/}}
+
+{{ $context := .context | default "sidebar" }}
+{{ $placeholder := .placeholder | default (i18n "Search") }}
+
+{{ if default true .Site.Params.BookSearch }}
+<div class="unified-search unified-search-{{ $context }}" data-search-context="{{ $context }}">
+  <div class="unified-search-wrapper">
+    <input type="text" 
+           class="unified-search-input" 
+           id="unified-search-{{ $context }}"
+           placeholder="{{ $placeholder }}" 
+           aria-label="{{ $placeholder }}" 
+           maxlength="64" 
+           data-hotkeys="s/" />
+    <div class="unified-search-spinner hidden"></div>
+  </div>
+  <ul class="unified-search-results" id="unified-search-results-{{ $context }}"></ul>
+</div>
+
+<script>
+// Remove hidden class after page load
+document.addEventListener('DOMContentLoaded', function() {
+  const searchEl = document.querySelector('.unified-search-{{ $context }}');
+  if (searchEl) {
+    searchEl.classList.add('search-ready');
+  }
+});
+</script>
+{{ end }}

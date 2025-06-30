@@ -11,12 +11,10 @@
     </a>
   </div>
 
-  <!-- Search Box -->
-  {{ if .Site.Params.BookSearch }}
+  <!-- Search Box - Using unified search component -->
   <div class="menu-search">
-    {{- partial "docs/search" . -}}
+    {{ partial "docs/search-unified" (dict "Site" .Site "context" "sidebar") }}
   </div>
-  {{ end }}
 
   <!-- Quick Actions Section -->
   <div class="menu-section">
