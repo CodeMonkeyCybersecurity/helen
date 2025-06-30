@@ -14,15 +14,17 @@ weight: 2
 
 ## Delphi
 
-We’re launching **Delphi**, a multi-tenant XDR and SIEM platform designed for usability, transparency, and hands-on resilience. It’s open by design, secure by default, and built to support real-world users — not just enterprise buyers.
+We’re launching **Delphi**, a multi-tenant XDR and SIEM platform designed for usability, transparency, and hands-on resilience. It’s open by design, secure by default, and built to support real-world users — not just technical teams.
 
 Founded by someone who rebuilt their life from the ground up, our mission is rooted in lived experience. We believe cybersecurity should serve people, not exploit fear. That means clearer tools, transparent policies, and support for those working in under-resourced or high-risk environments — including domestic violence organizations, community groups, and public-good teams doing critical work.
 
 ## Open Source Innovation
 
-### Eos - Enterprise Orchestration System
+### Eos
 
-We're actively developing **Eos**, an open source equivalent to Google's Borg system for enterprise workload orchestration. This large-scale container orchestration platform demonstrates our deep technical expertise and commitment to open source innovation.
+In ancient Greek mythology and religion, Eos is the goddess and personification of the dawn, helping everyone start the day. This repo contains lots of tools to help you get started on your ubuntu server journey.
+
+We're actively developing **Eos**, an open source equivalent to Google's Borg system for workload orchestration. This large-scale container orchestration platform demonstrates our deep technical expertise and commitment to open source innovation.
 
 **Core Capabilities:**
 - **Large-scale distributed container management** - Deploy and manage thousands of containers across cluster nodes
