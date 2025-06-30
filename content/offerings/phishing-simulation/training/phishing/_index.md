@@ -170,6 +170,6 @@ Experiencing active phishing attacks? We provide emergency training within 48 ho
 Don't wait until after a successful attack. Contact us for a free phishing risk assessment and see where your vulnerabilities are.
 
 **Call**: (+61) 0432 038 310  
-**Email**: [phishing@cybermonkey.net.au](mailto:phishing@cybermonkey.net.au)
+**Email**: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
 *Specialized phishing training includes ongoing support, regular updates, and emergency incident response consultation.*

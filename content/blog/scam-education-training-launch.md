@@ -167,8 +167,8 @@ Unlike expensive security software, **training delivers immediate, measurable re
 ### **Option 1: Quick Assessment**
 **Free 15-minute phone call** to discuss your current security training and identify immediate risks.
 
- **Call us:** (08) 6102 2421  
- **Email:** [training@cybermonkey.net.au](mailto:training@cybermonkey.net.au)
+ **Call us:** (+61) 0432 038 310  
+ **Email:** [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
 ### **Option 2: Vulnerability Test**
 **Free phishing simulation** - we'll send 3 test emails to your staff and show you the results (anonymized to protect employee privacy).
@@ -205,14 +205,14 @@ A: We provide immediate incident response support to minimize damage and use it 
 Don't wait until you're part of the statistics. 
 
 {{% hint info %}}
-{{< button href="mailto:training@cybermonkey.net.au?subject=Scam Training Consultation" >}}Book Your Free Consultation{{< /button >}}
+{{< button href="mailto:main@cybermonkey.net.au?subject=Scam Training Consultation" >}}Book Your Free Consultation{{< /button >}}
 {{% /hint %}}
 
 ---
 
 **Contact Information:**
- **Email:** [training@cybermonkey.net.au](mailto:training@cybermonkey.net.au)  
- **Phone:** (08) 6102 2421  
+ **Email:** [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)  
+ **Phone:** (+61) 0432 038 310  
  **Website:** [cybermonkey.net.au/training](https://cybermonkey.net.au/docs/training/)  
 📍 **Location:** Fremantle, Western Australia
 

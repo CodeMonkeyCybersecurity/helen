@@ -10,7 +10,7 @@ offeringDescription: "Security Awareness Testing"
 
 Test your team's security awareness with realistic phishing simulations that measure and improve your organization's human firewall.
 
-## **Why Phishing Simulation?**
+## Why Phishing Simulation?
 
 **The Reality:**
 - **95%** of successful cyber attacks start with phishing
@@ -20,27 +20,27 @@ Test your team's security awareness with realistic phishing simulations that mea
 
 Don't wait to find out how vulnerable your team is. Our simulation service provides safe, controlled testing that improves security awareness without real-world consequences.
 
-## **How It Works**
+## How It Works
 
-### **1. Assessment Phase**
+### Assessment Phase
 - **Baseline testing** with realistic phishing emails
 - **Risk analysis** by department and role
 - **Vulnerability mapping** across your organization
 - **Custom threat modeling** for your industry
 
-### **2. Simulation Campaign**
+### 2. Simulation Campaign
 - **Monthly phishing tests** with increasing sophistication
 - **Industry-relevant scenarios** tailored to your business
 - **Real-time tracking** of clicks, submissions, and reports
 - **Immediate micro-learning** for those who fall for tests
 
-### **3. Improvement Tracking**
+### 3. Improvement Tracking
 - **Performance dashboards** showing organization-wide progress
 - **Individual improvement tracking** without naming and shaming
 - **Department comparison** to identify areas needing focus
 - **ROI measurement** through reduced successful attacks
 
-## **Simulation Features**
+## Simulation Features
 
 ### Realistic Scenarios
 - Industry-specific attack templates
@@ -68,34 +68,34 @@ Don't wait to find out how vulnerable your team is. Our simulation service provi
 - Privacy-focused reporting
 - GDPR and privacy law compliant
 
-## **Simulation Types**
+## Simulation Types
 
-### **Email Phishing**
+### Email Phishing
 - Credential harvesting attempts
 - Malicious attachment simulations
 - Business email compromise scenarios
 - CEO fraud and executive impersonation
 - Vendor payment redirection scams
 
-### **SMS/Text Phishing**
+### SMS/Text Phishing
 - Delivery notification scams
 - Banking security alerts
 - Two-factor authentication bypasses
 - "Hi Mum" style family emergency scams
 
-### **Voice Phishing (Vishing)**
+### Voice Phishing (Vishing)
 - Fake IT support calls
 - Bank security verification calls
 - Government agency impersonation
 - Vendor verification requests
 
-### **Social Engineering**
+### Social Engineering
 - LinkedIn connection requests
 - Social media information gathering
 - Physical security testing (with permission)
 - USB drop tests
 
-## **Service Packages**
+## Service Packages
 
 {{< service-comparison >}}
 {{< service-tier name="Essentials" price="$25" period="per employee/year" cta_text="Start Essential" badge="Most Popular" >}}
@@ -123,29 +123,29 @@ Don't wait to find out how vulnerable your team is. Our simulation service provi
 {{< /service-tier >}}
 {{< /service-comparison >}}
 
-## **Integration Capabilities**
+## Integration Capabilities
 
-### **Security Platforms**
+### Security Platforms
 - Microsoft 365 Security integration
 - Google Workspace compatibility
 - Popular SIEM platform integration
 - Security awareness platform connectivity
 
-### **HR Systems**
+### HR Systems
 - Employee onboarding integration
 - Performance review integration
 - Training record management
 - Compliance documentation
 
-### **Reporting Systems**
+### Reporting Systems
 - Executive dashboard creation
 - Board-level security reporting
 - Compliance audit documentation
 - Insurance requirement verification
 
-## **Measurable Results**
+## Measurable Results
 
-### **Typical Improvement Timeline**
+### Typical Improvement Timeline
 
 **Month 1-3 (Baseline Establishment)**
 - 35% average click rate on initial tests
@@ -164,26 +164,26 @@ Don't wait to find out how vulnerable your team is. Our simulation service provi
 
 
 
-## **Getting Started**
+## Getting Started
 
-### **Free Pilot Program**
+### Free Pilot Program
 Test our simulation service with up to 50 employees for 30 days at no cost. Full analytics and reporting included.
 
-### **Security Assessment**
+### Security Assessment
 Not sure where your vulnerabilities are? We'll conduct a comprehensive phishing vulnerability assessment before starting simulations.
 
-### **Emergency Response**
+### Emergency Response
 Already dealing with a successful phishing attack? We provide emergency simulation and training services to prevent repeat incidents.
 
-## **Compliance & Reporting**
+## Compliance & Reporting
 
-### **Regulatory Compliance**
+### Regulatory Compliance
 - ACSC Essential Eight alignment
 - ISO 27001 evidence generation
 - Privacy Act compliance documentation
 - Industry-specific requirement coverage
 
-### **Insurance Requirements**
+### Insurance Requirements
 - Cyber insurance compliance demonstration
 - Risk reduction documentation
 - Incident prevention evidence
@@ -196,6 +196,6 @@ Already dealing with a successful phishing attack? We provide emergency simulati
 Don't find out about your vulnerabilities the hard way. Start with our free pilot program and see where your team stands.
 
 **Call**: (+61) 0432 038 310  
-**Email**: [simulation@cybermonkey.net.au](mailto:simulation@cybermonkey.net.au)
+**Email**: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
 *All simulation services include Australian-based support and comply with Australian privacy and employment laws.*

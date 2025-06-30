@@ -283,8 +283,8 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 ### **Early Access Application**
 **Available now through July 31st**
 
- **Email:** [backup@cybermonkey.net.au](mailto:backup@cybermonkey.net.au?subject=Early%20Access%20Application)
- **Phone:** (08) 6102 2421
+ **Email:** [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au?subject=Early%20Access%20Application)
+ **Phone:** (+61) 0432 038 310
  **Web:** [cybermonkey.net.au/backup](https://cybermonkey.net.au/docs/delphi/)
 
 **Include in your application:**
@@ -376,18 +376,18 @@ A: No. Client-side encryption means we only see encrypted data. You control the 
 **Ready to protect your business properly?**
 
 {{% hint info %}}
-{{< button href="mailto:backup@cybermonkey.net.au?subject=Early%20Access%20Interest" >}}Apply for Early Access{{< /button >}}
+{{< button href="mailto:main@cybermonkey.net.au?subject=Early%20Access%20Interest" >}}Apply for Early Access{{< /button >}}
 {{% /hint %}}
 
 ---
 
 **Contact Information:**
- **Email:** [backup@cybermonkey.net.au](mailto:backup@cybermonkey.net.au)  
+ **Email:** [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)  
  **Phone:**  
  **Website:** [cybermonkey.net.au](https://cybermonkey.net.au)  
 📍 **Location:** Fremantle, Western Australia
 
----(08) 6102 2421 
+---(+61) 0432 038 310 
 
 *Real backup. Memory-safe architecture. Enterprise standards. SME pricing.*
 

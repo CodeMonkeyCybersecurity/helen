@@ -121,7 +121,7 @@ We will publish updates here. Major changes will be communicated via email to af
 ## Contact Us
 
 **Code Monkey Cybersecurity Pty Ltd**  
-Email: [privacy@cybermonkey.net.au](mailto:privacy@cybermonkey.net.au)
+Email: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
 For more technical detail, please see our [Data Handling & Retention Policy](../governance/data-handling-policy/).
 

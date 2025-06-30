@@ -22,7 +22,7 @@ How to Get Involved
 Project Delphi thrives on collaboration and community engagement. Here's how you can contribute:
 To get started, visit our Our GitHub Repository and explore the available resources.
 Complaints, compliments, confusion:
-Secure email: git@cybermonkey.net.au
+Secure email: main@cybermonkey.net.au
 Website: cybermonkey.net.au
 #     ___         _       __  __          _
 #    / __|___  __| |___  |  \/  |___ _ _ | |_____ _  _

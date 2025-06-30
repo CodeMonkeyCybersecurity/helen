@@ -12,7 +12,7 @@ We provide this for two reasons:
 
 ## Complaints, compliments, confusion and other communications:
 
-Secure email: [git@cybermonkey.net.au](mailto:git@cybermonkey.net.au)  
+Secure email: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)  
 
 Website: [cybermonkey.net.au](https://cybermonkey.net.au)
 

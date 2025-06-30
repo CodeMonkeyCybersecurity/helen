@@ -46,7 +46,7 @@ Most security tools dump technical alerts on you and expect you to figure it out
 
 **How to check if it worked:** No similar alerts should appear in the next 2 hours if this was normal activity.
 
-**Need help?** Reply to this email or call us at (08) 6102 2421
+**Need help?** Reply to this email or call us at (+61) 0432 038 310
 {{% /hint %}}
 
 **See the difference?** No technical jargon. Clear explanation. Specific steps. Human support when you need it.
@@ -94,7 +94,7 @@ We handle the technical setup. You focus on running your business.
 
 {{% columns %}}
 
-### **Starter**
+### Starter
 **$79/month**
 - Up to 5 computers
 - Email alerts in plain English
@@ -103,21 +103,13 @@ We handle the technical setup. You focus on running your business.
 
 <--->
 
-### **Professional** 
+### Professional 
 **$149/month**
 - Up to 25 computers  
 - Priority phone support
 - Industry compliance reporting
 - **Perfect for:** Medical practices, law firms, accounting offices
 
-<--->
-
-### **Enterprise**
-**$199/month**
-- Up to 100 computers
-- 24/7 emergency support
-- Custom compliance requirements
-- **Perfect for:** Multi-location businesses, franchises
 
 {{% /columns %}}
 
@@ -127,21 +119,6 @@ We handle the technical setup. You focus on running your business.
 -  No contracts or hidden fees
 -  Cancel anytime
 
----
-
-## Try Risk-Free for 30 Days
-
-**No credit card required. Working in 24 hours or we'll fix it free.**
-
-{{% hint info %}}
-{{< button href="/docs/delphi/sign-up/" >}}Start Your Free Trial{{< /button >}}
-{{% /hint %}}
-
-### What happens next:
-1. **Sign up** - Takes 2 minutes, no payment required
-2. **We set it up** - Our team handles the technical installation
-3. **You're protected** - Start getting alerts in plain English within 24 hours
-4. **Decide at day 30** - Keep the service or cancel with one email
 
 ---
 
@@ -166,15 +143,14 @@ A: Yes! We complement your existing IT support and can coordinate with them when
 We're a **Fremantle-based cybersecurity company** that believes security should be accessible to every business, not just large enterprises.
 
 **Our credentials:**
-- Microsoft Partner for cybersecurity solutions
+- Microsoft Sponsored for cybersecurity solutions
 - Open-source approach for transparency and trust
 - Listed in the WA Cyber Capability Directory
-- Supporting 200+ Australian small businesses
 
 **Based in WA, protecting businesses across Australia.**
 
 ---
 
-*Questions? Email [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au) or call (08) 6102 2421*
+Questions? Email [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au) or call (+61) 0432 038 310
 
 **Cybersecurity. Finally with humans.**
