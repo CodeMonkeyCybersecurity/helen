@@ -165,7 +165,8 @@
   }
   
   .brand-nav-link-active {
-    @apply text-brand-teal font-medium bg-slate-100;
+    @apply text-white font-medium;
+    background-color: #d77350;
   }
   
   /* Terminal/Code Block Styles - Solarized Dark Theme */
