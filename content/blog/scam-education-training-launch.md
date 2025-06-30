@@ -214,13 +214,13 @@ Don't wait until you're part of the statistics.
  **Email:** [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)  
  **Phone:** (+61) 0432 038 310  
  **Website:** [cybermonkey.net.au/training](https://cybermonkey.net.au/docs/training/)  
-📍 **Location:** Fremantle, Western Australia
+ **Location:** Fremantle, Western Australia
 
 ---
 
 *Questions about our training programs? Reply to this post or contact us directly. We're here to help WA businesses stay safe in an increasingly dangerous digital world.*
 
-**Cybersecurity. Now with people.** 
+**Cybersecurity. With humans.** 
 
 *#ScamEducation #PhishingTraining #WABusiness #CyberSecurity #SmallBusinessSecurity #FrementleBusiness*
 

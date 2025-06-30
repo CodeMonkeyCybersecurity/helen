@@ -385,7 +385,7 @@ A: No. Client-side encryption means we only see encrypted data. You control the 
  **Email:** [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)  
  **Phone:**  
  **Website:** [cybermonkey.net.au](https://cybermonkey.net.au)  
-📍 **Location:** Fremantle, Western Australia
+ **Location:** Fremantle, Western Australia
 
 ---(+61) 0432 038 310 
 

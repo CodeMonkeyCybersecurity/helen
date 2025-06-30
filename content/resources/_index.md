@@ -47,7 +47,7 @@ Learn about Code Monkey Cybersecurity, our mission, and our commitment to transp
 Get in touch with our team for support, questions, or to discuss your cybersecurity needs.
 {{< /promo-tile >}}
 
-{{< promo-tile title="Customer Portal" url="/about-us/customer-login/" icon="🔐" color="orange" >}}
+{{< promo-tile title="Customer Portal" url="/about-us/customer-login/" icon="" color="orange" >}}
 Access your account, view service status, and manage your cybersecurity services.
 {{< /promo-tile >}}
 {{< /promo-tiles >}}

@@ -125,8 +125,9 @@ Hugo handles asset compilation automatically:
 -  "Military-grade" or "Enterprise-grade" (use "reliable" or "professional-quality")
 -  "Threat intelligence" or "killchain" 
 -  "Cyber warfare" or aggressive security terminology
--  Padlock symbols  🔐 (use alternatives)
+-  Padlock symbols   (use alternatives)
 -  Fear-inducing language about costs or consequences
+-  FUD
 
 ### Preferred Language
 -  "Easy to use" instead of "enterprise-ready"
