@@ -14,7 +14,7 @@
     </div>
 
     <!-- Desktop Navigation -->
-    <div class="hidden md:flex items-center space-x-8">
+    <div class="desktop-nav hidden items-center space-x-8">
       <!-- Platform Dropdown -->
       {{ if .Site.Menus.platform }}
       <div class="relative" x-data="{ dropdownOpen: false }" @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false">
@@ -83,7 +83,7 @@
     </div>
 
     <!-- Mobile Menu Button -->
-    <div class="md:hidden flex items-center">
+    <div class="mobile-menu-button flex items-center">
       <!-- Mobile Menu Toggle -->
       <button @click="open = !open" 
               class="p-2 rounded-lg hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-teal focus:ring-opacity-50 transition-all duration-200 touch-manipulation"
@@ -135,7 +135,7 @@
        x-transition:leave="transition ease-in duration-200 transform"
        x-transition:leave-start="opacity-100 scale-100 translate-y-0"
        x-transition:leave-end="opacity-0 scale-95 -translate-y-4"
-       class="md:hidden absolute top-full left-0 right-0 bg-white border-t border-slate-200 shadow-lg z-50 max-h-screen overflow-y-auto">
+       class="mobile-menu-dropdown absolute top-full left-0 right-0 bg-white border-t border-slate-200 shadow-lg z-50 max-h-screen overflow-y-auto">
     
     <div class="px-4 py-6 space-y-6">
       {{ if .Site.Menus.platform }}

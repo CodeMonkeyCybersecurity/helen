@@ -4,6 +4,13 @@
 .book-menu {
   background-color: $bg-section-neutral;
   border-right: 1px solid $bg-section-mint;
+  
+  .book-menu-content {
+    position: sticky !important;
+    top: 0 !important;
+    height: 100vh !important;
+    overflow-y: auto !important;
+  }
 }
 
 .book-menu-content {
@@ -30,9 +37,57 @@
   position: sticky !important;
   top: 0 !important;
   z-index: 50 !important;
+}
+
+// Responsive behavior: mobile header vs desktop sidebar (never both)
+@media screen and (max-width: $mobile-breakpoint) {
+  // Mobile: show header, hide sidebar, hide desktop nav items
+  .book-header {
+    display: block !important;
+  }
   
-  // Only show on mobile/tablet, hide on desktop where sidebar navigation is used
-  @media (min-width: 1024px) {
+  .book-menu {
+    visibility: hidden;
+    margin-inline-start: -$menu-width;
+  }
+  
+  // Hide desktop navigation items in header on mobile
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  // Show mobile menu button and dropdown
+  .mobile-menu-button {
+    display: flex !important;
+  }
+  
+  .mobile-menu-dropdown {
+    display: block;
+  }
+}
+
+@media screen and (min-width: #{$mobile-breakpoint + 0.0625rem}) {
+  // Desktop: hide header, show sidebar, show desktop nav items
+  .book-header {
+    display: none !important;
+  }
+  
+  .book-menu {
+    visibility: visible;
+    margin-inline-start: 0;
+  }
+  
+  // Show desktop navigation items when header is visible
+  .desktop-nav {
+    display: flex !important;
+  }
+  
+  // Hide mobile menu button and dropdown
+  .mobile-menu-button {
+    display: none !important;
+  }
+  
+  .mobile-menu-dropdown {
     display: none !important;
   }
 }
