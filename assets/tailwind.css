@@ -87,85 +87,85 @@
 }
 
 @layer components {
-  /* Brand Website Base Styles */
+  /* Minimalist Website Base Styles */
   .brand-website {
-    @apply bg-bg-website text-text-base-dark;
+    @apply bg-slate-50 text-slate-900;
   }
   
   .brand-section-neutral {
-    @apply bg-bg-section-neutral;
+    @apply bg-slate-100;
   }
   
   .brand-section-mint {
-    @apply bg-bg-section-mint;
+    @apply bg-slate-50;
   }
   
   .brand-section-blue {
-    @apply bg-bg-section-blue;
+    @apply bg-slate-100;
   }
   
-  /* Brand Buttons */
+  /* Minimalist Buttons with Enhanced Spacing */
   .btn-brand-primary {
-    @apply bg-btn-primary-bg text-text-base-dark px-6 py-3 rounded-lg font-medium transition-colors duration-200 hover:bg-hover-orange hover:text-white;
+    @apply bg-slate-700 text-white px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:bg-slate-800 hover:shadow-lg transform hover:scale-[1.02];
   }
   
   .btn-brand-secondary {
-    @apply bg-btn-secondary-bg text-text-base-dark px-6 py-3 rounded-lg font-medium transition-colors duration-200 hover:bg-brand-teal hover:text-white;
+    @apply bg-white text-slate-700 border border-slate-300 px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:bg-slate-50 hover:border-slate-400 hover:shadow-lg transform hover:scale-[1.02];
   }
   
   .btn-brand-teal {
-    @apply bg-brand-teal text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 hover:bg-opacity-90;
+    @apply bg-brand-teal text-white px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:bg-opacity-90 hover:shadow-lg transform hover:scale-[1.02];
   }
   
   .btn-brand-orange {
-    @apply bg-brand-logo-orange text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 hover:bg-hover-orange;
+    @apply bg-brand-logo-orange text-white px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:bg-hover-orange hover:shadow-lg transform hover:scale-[1.02];
   }
   
-  /* Brand Text Styles */
+  /* Clean Typography Styles */
   .text-brand-heading {
-    @apply text-text-base-dark text-2xl font-heading font-bold leading-heading;
+    @apply text-slate-900 text-3xl sm:text-4xl font-heading font-bold leading-tight;
   }
   
   .text-brand-subheading {
-    @apply text-text-muted text-lg font-heading font-semibold leading-heading;
+    @apply text-slate-700 text-xl sm:text-2xl font-heading font-semibold leading-tight;
   }
   
   .text-brand-body {
-    @apply text-text-base-dark font-body leading-body;
+    @apply text-slate-700 font-body leading-relaxed;
   }
   
   .text-brand-muted {
-    @apply text-text-muted font-body;
+    @apply text-slate-600 font-body leading-relaxed;
   }
   
   .text-brand-soft {
-    @apply text-text-soft font-body;
+    @apply text-slate-500 font-body leading-relaxed;
   }
   
-  /* Brand Cards and Containers */
+  /* Minimalist Cards and Containers with Enhanced Spacing */
   .brand-card {
-    @apply bg-bg-light border border-bg-section-neutral rounded-lg p-6 shadow-sm;
+    @apply bg-white border border-slate-200 rounded-2xl p-8 sm:p-12 shadow-sm hover:shadow-md transition-shadow duration-300;
   }
   
   .brand-card-alt {
-    @apply bg-bg-light-alt border border-bg-section-neutral rounded-lg p-6 shadow-sm;
+    @apply bg-slate-50 border border-slate-200 rounded-2xl p-8 sm:p-12 shadow-sm hover:shadow-md transition-shadow duration-300;
   }
   
   .brand-highlight {
-    @apply bg-highlight-bg border-l-4 border-brand-gold p-4 rounded-r-lg;
+    @apply bg-slate-50 border-l-4 border-brand-gold p-6 sm:p-8 rounded-r-2xl shadow-sm;
   }
   
   .brand-alert {
-    @apply bg-brand-alert-red bg-opacity-10 border border-brand-alert-red border-opacity-30 text-brand-alert-red p-4 rounded-lg;
+    @apply bg-red-50 border border-red-200 text-red-800 p-6 sm:p-8 rounded-2xl shadow-sm;
   }
   
-  /* Brand Navigation */
+  /* Clean Navigation */
   .brand-nav-link {
-    @apply text-text-muted hover:text-brand-teal transition-colors duration-200;
+    @apply text-slate-600 hover:text-brand-teal transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-slate-100;
   }
   
   .brand-nav-link-active {
-    @apply text-brand-teal font-medium;
+    @apply text-brand-teal font-medium bg-slate-100;
   }
   
   /* Terminal/Code Block Styles - Solarized Dark Theme */

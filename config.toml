@@ -37,6 +37,60 @@ buildExpired = false
   weight = 1
 
 [menu]
+# Main navigation menu
+[[menu.main]]
+name = "Documentation"
+url = "/docs/"
+weight = 10
+
+[[menu.main]]
+name = "Blog"
+url = "/posts/"
+weight = 15
+
+[[menu.main]]
+name = "About"
+url = "/docs/governance/"
+weight = 20
+
+# Platform dropdown menu
+[[menu.platform]]
+name = "Delphi Notify"
+url = "/docs/delphi/"
+weight = 10
+[menu.platform.params]
+description = "XDR Security Platform"
+
+[[menu.platform]]
+name = "Backup Services"
+url = "/docs/delphi/backup/"
+weight = 20
+[menu.platform.params]
+description = "Data Protection"
+
+[[menu.platform]]
+name = "Pen Testing"
+url = "/docs/delphi/penetration-testing/"
+weight = 30
+[menu.platform.params]
+description = "Security Assessment"
+
+# Training dropdown menu
+[[menu.training]]
+name = "Scam Education"
+url = "/docs/training/"
+weight = 10
+[menu.training.params]
+description = "Protect against fraud"
+
+[[menu.training]]
+name = "Phishing Training"
+url = "/docs/training/phishing/"
+weight = 20
+[menu.training.params]
+description = "Email security awareness"
+
+# Footer menu (legacy)
 [[menu.after]]
 name = "Github"
 url = "https://github.com/CodeMonkeyCybersecurity"

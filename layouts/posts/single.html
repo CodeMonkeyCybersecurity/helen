@@ -1,11 +1,17 @@
 {{ define "main" }}
-<article class="markdown book-post brand-card">
-  <h2 class="text-brand-heading">
-    {{ partial "docs/title.html" . }}
-  </h2>
-  {{ partial "docs/post-meta" . }}
-  <div class="book-post-content text-brand-body">
-    {{- .Content -}}
+<article class="prose prose-slate prose-lg max-w-none mx-auto px-6 sm:px-8 lg:px-12 py-12 sm:py-16 lg:py-20">
+  <div class="bg-white rounded-2xl shadow-sm p-8 sm:p-12 lg:p-16 space-y-8">
+    <header class="space-y-4">
+      <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
+        {{ partial "docs/title.html" . }}
+      </h1>
+      <div class="text-slate-600">
+        {{ partial "docs/post-meta" . }}
+      </div>
+    </header>
+    <div class="prose prose-slate prose-lg max-w-none">
+      {{- .Content -}}
+    </div>
   </div>
 </article>
 {{ end }}
