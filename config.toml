@@ -90,6 +90,11 @@ url = "/docs/"
 weight = 10
 
 [[menu.main]]
+name = "Education"
+url = "/docs/training/"
+weight = 12
+
+[[menu.main]]
 name = "Blog"
 url = "/posts/"
 weight = 15
@@ -119,27 +124,13 @@ weight = 20
 [menu.platform.params]
 description = "Data Protection"
 
-[[menu.platform]]
-name = "Pen Testing"
-url = "/docs/delphi/penetration-testing/"
-weight = 30
-[menu.platform.params]
-description = "Security Assessment"
-
 # Training dropdown menu
 [[menu.training]]
-name = "Scam Education"
+name = "Training"
 url = "/docs/training/"
 weight = 10
 [menu.training.params]
-description = "Protect against fraud"
-
-[[menu.training]]
-name = "Phishing Training"
-url = "/docs/training/phishing/"
-weight = 20
-[menu.training.params]
-description = "Email security awareness"
+description = "Security awareness and education"
 
 # External links (External section)
 [[menu.after]]
