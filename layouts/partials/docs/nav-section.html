@@ -21,8 +21,8 @@
   <!-- Mobile Section -->
   <div class="space-y-4{{ if ne .first true }} pt-2 border-t border-slate-100{{ end }}">
     <div class="flex items-center space-x-2">
-      <div class="w-2 h-2 {{ $icon }} rounded-full"></div>
-      <h3 class="text-slate-800 font-heading font-semibold text-lg">{{ $title }}</h3>
+      <div class="nav-visual-icon {{ $icon }}"></div>
+      <h3 class="nav-text-heading">{{ $title }}</h3>
     </div>
     
     {{ if $expandable }}
@@ -31,14 +31,14 @@
         {{ range $items }}
         {{ $isActive := partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $currentPage "url" .URL) }}
         <a href="{{ .URL }}" class="block group" @click="open = false">
-          <div class="flex items-start space-x-3 p-3 rounded-lg hover:bg-slate-50 transition-colors duration-200{{ if $isActive }} brand-nav-active-mobile{{ end }}">
+          <div class="flex items-start nav-spacing-gap nav-spacing-item nav-interactive{{ if $isActive }} active{{ end }}">
             <div class="w-8 h-8 {{ $icon }} bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-              <div class="w-2 h-2 {{ $icon | replace "bg-" "" | printf "bg-%s" }} rounded-full"></div>
+              <div class="nav-visual-icon {{ $icon | replace "bg-" "" | printf "bg-%s" }}"></div>
             </div>
             <div class="flex-1 min-w-0">
-              <div class="font-medium text-slate-900 group-hover:underline">{{ .Name }}</div>
+              <div class="nav-text-primary font-semibold">{{ .Name }}</div>
               {{ with .Params.description }}
-              <div class="text-sm text-slate-500 mt-1">{{ . }}</div>
+              <div class="nav-text-description mt-1">{{ . }}</div>
               {{ end }}
             </div>
           </div>
@@ -56,9 +56,9 @@
           {{ $isActive = partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $currentPage "url" .URL) }}
         {{ end }}
         <a href="{{ .URL }}" 
-           class="block py-3 px-3 rounded-lg font-medium text-slate-700 hover:underline hover:bg-slate-50 transition-colors duration-200{{ if $isActive }} brand-nav-active{{ end }}"
+           class="block nav-spacing-item nav-interactive{{ if $isActive }} active{{ end }}"
            @click="open = false">
-          {{ .Name }}
+          <span class="nav-text-primary">{{ .Name }}</span>
         </a>
         {{ end }}
       </div>
