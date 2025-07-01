@@ -119,7 +119,7 @@ A: Yes! We complement your existing IT support and can coordinate with them when
 
 ## About Code Monkey Cybersecurity
 
-We're a **Fremantle-based cybersecurity company** that believes security should be accessible to every business, not just large enterprises.
+We're a **Fremantle-based cybersecurity company** that believes security should be accessible to every business, not just large businesses.
 
 **Our credentials:**
 - Microsoft Sponsored for cybersecurity solutions

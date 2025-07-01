@@ -69,7 +69,7 @@ No confusing technical alerts. You get the **full story**: what happened, what e
 We're giving Delphi Notify away **completely free** until August 1st as part of our Fremantle rollout.
 
 ### Perfect For:
-- **Small businesses** who can't afford enterprise security teams
+- **Small businesses** who can't afford security teams
 - **Home users** who want protection without complexity  
 - **Anyone** tired of confusing security alerts that make no sense
 
