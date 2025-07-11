@@ -77,15 +77,21 @@ Deletion requests may be submitted at any time (see below).
 
 ## Your Rights
 
-You have the right to:
+Under GDPR, CCPA, and Australian Privacy Principles, you have the right to:
 
-- Access and export your personal data
-- Request corrections or deletions
-- Object to non-essential processing
-- Request data portability
-- File a complaint with a supervisory authority (e.g. OAIC, GDPR)
+- **Access** your personal data and receive a copy
+- **Rectify** inaccurate or incomplete data
+- **Erase** your data ("right to be forgotten")
+- **Restrict** processing of your data
+- **Object** to processing based on legitimate interests
+- **Data portability** in a machine-readable format
+- **Withdraw consent** for processing based on consent
+- **Lodge a complaint** with supervisory authorities (OAIC for Australia, relevant DPA for EU)
 
-To make a request, email [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
+**How to exercise your rights:**
+Email [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au) with your request. We will respond within 30 days (or as required by applicable law).
+
+**Identity verification:** We may require verification of your identity before processing requests.
 
 ---
 
@@ -118,12 +124,33 @@ We will publish updates here. Major changes will be communicated via email to af
 
 ---
 
+## Legal Basis for Processing
+
+We process your personal data based on:
+
+- **Contractual necessity** for service delivery
+- **Legitimate interests** for security monitoring and service improvement
+- **Legal compliance** for audit trails and regulatory requirements
+- **Consent** where explicitly provided
+
+## International Transfers
+
+When transferring data outside Australia/EU, we ensure adequate protection through:
+
+- **Adequacy decisions** where available
+- **Standard contractual clauses** (EU Commission approved)
+- **Binding corporate rules** with service providers
+- **Data processing agreements** with third parties
+
 ## Contact Us
 
 **Code Monkey Cybersecurity Pty Ltd**  
-Email: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
+**Data Protection Officer:** [privacy@cybermonkey.net.au](mailto:privacy@cybermonkey.net.au)  
+**General inquiries:** [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)  
+**Address:** Fremantle, WA 6160, Australia  
+**ABN:** 77 177 673 061
 
-For more technical detail, please see our [Data Handling & Retention Policy](../governance/data-handling-policy/).
+For more technical detail, please see our [Data Handling & Retention Policy](../data-handling-policy/).
 
 ---
 

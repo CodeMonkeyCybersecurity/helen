@@ -1,5 +1,5 @@
 ---
-title: " Introducing Delphi Notify - Super simple Cybersecurity"
+title: "Introducing Delphi Notify - Professional Security Made Simple"
 date: "2025-06-17"
 author: "Henry Oliver"
 tags: ["Delphi Notify", "Product Launch", "Fremantle Business", "Cybersecurity Software"]
@@ -9,7 +9,7 @@ description: "Free until August 1st - Meet Delphi Notify, the security monitorin
 
 ![Delphi Notify Launch](/images/oh_the_hacks_web.jpg)
 
-# **Cybersecurity. Now with Humans. 
+# **Cybersecurity. Now with Humans.**
 
 ## The Problem with Security Alerts
 
@@ -21,7 +21,7 @@ What does that even mean?
 
 ## Meet Delphi Notify 
 
-Delphi Notify is different. It's a small program that runs quietly in the background, watching for security issues. When something actually matters**, it sends you an email that explains what happened in **plain English**.
+Delphi Notify is different. It's a small program that runs quietly in the background, watching for security issues. When something actually matters, it sends you an email that explains what happened in **plain English**.
 
 ### **How It Actually Works:**
 
@@ -64,22 +64,22 @@ Designed for everyday people and small businesses - not just IT professionals. I
 ### Plain Language Explanations
 No confusing technical alerts. You get the **full story**: what happened, what else to check, why it matters, and what to do next.
 
-## ** Free Until August 1st
+## Free Until August 1st
 
-We're giving Delphi Notify away **completely free** until August 1st as part of our Fremantle rollout.
+We're offering Delphi Notify **completely free** until August 1st as part of our Fremantle rollout.
 
 ### Perfect For:
 - **Small businesses** who can't afford security teams
 - **Home users** who want protection without complexity  
 - **Anyone** tired of confusing security alerts that make no sense
 
-## Ready to Try It? 
+## Ready to Try It?
 
  **Based in Fremantle, WA** - Supporting local businesses with human-shaped cybersecurity
 
  **Get Started**: Email [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au?subject=Delphi%20Notify%20Free%20Trial)  
  **Questions?** Message us here or call (+61) 0432 038 310  
- **Learn More**: [cybermonkey.net.au/docs/delphi/](https://cybermonkey.net.au/docs/delphi/)
+ **Learn More**: [cybermonkey.net.au/offerings/delphi/](https://cybermonkey.net.au/offerings/delphi/)
 
 
 ---

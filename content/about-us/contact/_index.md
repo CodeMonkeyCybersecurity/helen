@@ -1,5 +1,7 @@
 ---
 title: "Contact Us"
+description: "Contact Code Monkey Cybersecurity for expert cybersecurity support. Based in Fremantle, WA. Email, phone, and public key verification available."
+keywords: ["contact", "cybersecurity support", "Fremantle", "Western Australia", "security consultation"]
 bookFlatSection: true
 weight: 6
 ---
@@ -8,7 +10,7 @@ weight: 6
 
 Email: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
-Phone: (+61) 00432 038 310
+Phone: (+61) 0432 038 310
 
 Location: Fremantle, WA
 
@@ -22,9 +24,9 @@ Part of Code Monkey Technologies
 
 [GitHub](https://github.com/CodeMonkeyCybersecurity)
 
-[LinkdIn](https://www.linkedin.com/company/codemonkeycyber)
+[LinkedIn](https://www.linkedin.com/company/codemonkeycyber)
 
-[Insta](https://www.instagram.com/code_monkey_cyber)
+[Instagram](https://www.instagram.com/code_monkey_cyber)
 
 ## Public Key
 

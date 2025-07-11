@@ -1,41 +1,64 @@
 ---
-title: "Roadmap"
+title: "Delphi Roadmap"
+description: "Development roadmap and future features for Delphi cybersecurity platform"
 weight: 30
 ---
 
-# Coming soon!
+# Delphi Platform Roadmap
 
-## We're not very good at our paperwork
+## Current Focus (Q1 2025)
 
-![Cartoon dog sitting in burning room with coffee cup, saying "this is fine" - a humorous illustration about maintaining composure during chaotic situations](/images/this_is_fine.jpg)
+### Enhanced User Experience
+- **Simplified Dashboard Interface** - Streamlined navigation and clearer visual hierarchy
+- **Mobile-Responsive Design** - Full functionality across all devices
+- **Self-Service Agent Enrollment** - Automated setup process for new endpoints
 
+### Advanced Threat Detection
+- **Machine Learning Integration** - Enhanced pattern recognition for emerging threats
+- **Behavioral Analytics** - User and entity behavior analysis for insider threat detection
+- **IoT Device Monitoring** - Extended coverage for smart home and office devices
 
-# Contact Us
+## Upcoming Features (Q2-Q3 2025)
 
-Email: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
+### Automation & Response
+- **Automated Remediation** - Immediate response to common threats without manual intervention
+- **Playbook Integration** - Customizable response workflows for different threat types
+- **Incident Correlation** - Advanced linking of related security events
 
-Phone: (+61) 00432 038 310
+### Analytics & Reporting
+- **Executive Dashboards** - High-level security posture summaries for leadership
+- **Compliance Reporting** - Automated reports for regulatory requirements
+- **Forensic Collection** - Secure evidence gathering for incident investigation
 
-Location: Fremantle, WA
+### AI-Powered Features
+- **Intelligent Alert Prioritization** - ML-driven threat severity assessment
+- **Natural Language Query** - Plain English searches across security data
+- **Chatbot Assistant** - Instant explanations and guidance for security alerts
 
-ABN: 77 177 673 061
+## Long-term Vision (Q4 2025 and beyond)
 
-Part of Code Monkey Technologies
+### Platform Integration
+- **Third-party Tool Connectors** - Seamless integration with existing security tools
+- **API Ecosystem** - Comprehensive APIs for custom integrations
+- **Multi-tenant Architecture** - Enhanced support for managed service providers
 
-## We're very social
+### Advanced Capabilities
+- **Threat Intelligence Feeds** - Real-time threat data from global security networks
+- **Predictive Analytics** - Proactive threat identification based on trends
+- **Zero Trust Architecture** - Comprehensive identity and access management
 
-[Facebook](https://www.facebook.com/codemonkeycyber/)
+## Community & Open Source
 
-[GitHub](https://github.com/CodeMonkeyCybersecurity)
+Our commitment to transparency means all core features will remain available under our dual licensing model (AGPL v3 and Do No Harm License). Community contributions and feedback continue to drive our development priorities.
 
-[LinkdIn](https://www.linkedin.com/company/codemonkeycyber)
+## Get Involved
 
-[Insta](https://www.instagram.com/code_monkey_cyber)
+- **Beta Testing** - Join our early access program for new features
+- **Feature Requests** - Submit ideas through our [GitHub repository](https://github.com/CodeMonkeyCybersecurity)
+- **Community Discussions** - Participate in our quarterly roadmap reviews
 
-## Public Key
+---
 
-Trust, but verify:
+*Last updated: January 2025*
 
-{{< button href="/pub_keys/publickey.cybermonkey.net.au-e3f0434f633b9745e69858add19e08d1ec7a6f2f.asc" >}}Download{{< /button >}}
-
-{{< button href="/pub_keys/publickey.cybermonkey.net.au-e3f0434f633b9745e69858add19e08d1ec7a6f2f.txt" >}}View{{< /button >}}
+Want to stay informed about our progress? [Subscribe to our newsletter](/contact/) or follow us on [LinkedIn](https://www.linkedin.com/company/codemonkeycyber).

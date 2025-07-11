@@ -4,40 +4,51 @@ description: "Cybersecurity. With Humans."
 bookFlatSection: true
 ---
 
-{{< content-section title="Super simple Cybersecurity" style="transparent" >}}
+{{< content-section title="Enterprise Security for Everyone" style="transparent" >}}
 
-![Code Monkey Cybersecurity - Human-centered cybersecurity protection](/images/cover_puppy_moni_monkey_optimized.jpg)
+![Code Monkey Cybersecurity team providing human-centered cybersecurity protection with friendly puppy mascot representing approachable security](/images/cover_puppy_moni_monkey_optimized.jpg)
 
-## Get  Security Without the Complexity
+## Cybersecurity. With Humans.
 
-**Delphi Notify** delivers advanced threat detection with **human-reviewed alerts in plain English**. No technical degree required - just clear guidance when something actually needs your attention.
+**[Delphi Notify](/offerings/delphi/delphi-notify/)** detects security threats and explains them in plain English. Get step-by-step guidance when suspicious activity occurs.
+
+**Key benefits:**
+- Security experts review every alert
+- Plain English explanations with clear next steps
+- 24/7 monitoring for small businesses
 
 {{< /content-section >}}
 
-{{< feature-cards title="Why Choose Delphi Notify?" subtitle="Professional security made simple for real people" >}}
+{{< feature-cards title="Why Choose Delphi Notify?" subtitle="Professional security without the complexity" >}}
   {{< feature-card 
-    title="Human-Reviewed Alerts" 
-    description="Real security experts review every alert before you see it. No spam, no false alarms - just meaningful notifications when action is needed." >}}
+    title="Expert-Reviewed Alerts" 
+    description="Security specialists review every alert. Receive only meaningful notifications that require action." >}}
   {{< feature-card 
     title="Plain English Guidance" 
-    description="Your computer tried to update its clock by 40 hours - this could indicate a network issue. Here's what to check..." >}}
+    description="Get clear explanations of what happened and what to do next. No technical jargon." >}}
   {{< feature-card 
-    title=" Safety" 
-    description="Advanced threat detection that catches sophisticated attacks your antivirus might miss." >}}
+    title="Advanced Threat Detection" 
+    description="Detect sophisticated attacks that bypass traditional antivirus software." >}}
 {{< /feature-cards >}}
 
-{{< feature-card-wrapper eyebrow="HOW IT WORKS" title="Simple Security in 4 Steps" cta-label="Start Free Trial" cta-url="/offerings/delphi/sign-up/" cta-style="teal" >}}
+{{< feature-card-wrapper eyebrow="HOW IT WORKS" title="Security in 4 Steps" cta-label="Start Free Trial" cta-url="/offerings/delphi/sign-up/" cta-style="teal" >}}
 
-1. **We Monitor** - Advanced detection watches your devices 24/7
-2. **Experts Review** - Human security specialists filter out the noise  
-3. **You Get Clear Alerts** - Plain English guidance when action is needed
-4. **You Stay Protected** - Catch threats before they become expensive problems
+1. **Monitor** - Advanced detection watches your devices 24/7
+2. **Review** - Security specialists filter out false alarms
+3. **Alert** - Receive clear guidance when action is needed
+4. **Protect** - Stop threats before they cause damage
 
 {{< /feature-card-wrapper >}}
 
-{{< content-section title="Perfect For" style="transparent" >}}
+{{< content-section title="Built For" style="transparent" >}}
 
-Small businesses, medical practices, law firms, retail stores, and families who want professional security without the complexity.
+### Who We Serve
+
+**Small businesses** that need [enterprise security](/offerings/delphi/) without IT complexity
+
+**Professional practices** in medical, legal, and financial services that require [cybersecurity compliance](/about-us/governance/)
+
+**Families** who want protection without technical expertise through our [training programs](/offerings/phishing-simulation/training/)
 
 {{< /content-section >}}
 
@@ -47,15 +58,15 @@ Small businesses, medical practices, law firms, retail stores, and families who 
 - **Small Business**: $79/month (up to 10 devices)  
 - **Growing Business**: Custom pricing for larger needs
 
-[View All Pricing Details](/docs/pricing/) | [Training Workshops](/docs/training/)
+[View All Pricing Details](/pricing/) | [Training Workshops](/offerings/phishing-simulation/training/)
 
 {{< /content-section >}}
 
 {{< cta-anthropic 
-  title="Ready to Stop Worrying About Cyber Threats?" 
-  text="No risk, no commitments. Our team will help you set everything up and you'll start receiving clear, helpful security alerts within 24 hours.<br><br>Questions? Call (+61) 0432 038 310 or email main@cybermonkey.net.au"
-  link="/docs/delphi/sign-up/" 
-  linkText="Start Free 30-Day Trial"
+  title="Start Free 30-Day Trial" 
+  text="Set up security monitoring in 10 minutes. Get expert-reviewed alerts within 24 hours.<br><br>Questions? Call (+61) 0432 038 310 or email main@cybermonkey.net.au"
+  link="/offerings/delphi/sign-up/" 
+  linkText="Get Started Now"
   style="dark"
   buttonStyle="teal" >}}
 
@@ -65,19 +76,19 @@ Small businesses, medical practices, law firms, retail stores, and families who 
   {{< feature-card 
     title="Privacy-First Security" 
     description="We monitor threats without accessing your files. Your data stays yours." 
-    link="/docs/governance/policies/privacy-policy/" >}}
+    link="/about-us/governance/policies/privacy-policy/" >}}
   {{< feature-card 
     title="Open Source Principles" 
     description="Transparent technology with dual AGPL v3 and Do No Harm licensing." 
-    link="/docs/governance/open-source-licensing/" >}}
+    link="/about-us/governance/open-source-licensing/" >}}
   {{< feature-card 
     title="Human-Centered Design" 
     description="Technology that empowers people without intimidation or complexity." 
-    link="/docs/about-us/" >}}
+    link="/about-us/" >}}
 {{< /feature-cards >}}
 
 {{< content-section style="transparent" >}}
 
-*Location: Fremantle, WA • ABN: 77 177 673 061 • [Contact Us](/docs/contact/) • [Customer Login](/docs/login/)*
+*Location: Fremantle, WA • ABN: 77 177 673 061 • [Contact Us](/about-us/contact/) • [Customer Login](/about-us/customer-login/)*
 
 {{< /content-section >}}

@@ -46,6 +46,6 @@ Special thanks to Emma O'Neil and the entire CyberWest Hub team for their work i
 
 ---
 
-*Want to see how we're helping WA businesses stay secure? [Start your free 30-day trial](/docs/delphi/sign-up/) or [book a training workshop](/docs/training/) for your team.*
+*Want to see how we're helping WA businesses stay secure? [Start your free 30-day trial](/offerings/delphi/sign-up/) or [book a training workshop](/offerings/phishing-simulation/training/) for your team.*
 
 **Contact CyberWest Hub**: emma@cyberwesthub.au | [cyberwesthub.au](https://cyberwesthub.au)

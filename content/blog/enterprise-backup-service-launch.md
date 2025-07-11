@@ -271,7 +271,7 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 
  **Email:** [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au?subject=Early%20Access%20Application)
  **Phone:** (+61) 0432 038 310
- **Web:** [cybermonkey.net.au/backup](https://cybermonkey.net.au/docs/delphi/)
+ **Web:** [cybermonkey.net.au/backup](https://cybermonkey.net.au/offerings/delphi/)
 
 **Include in your application:**
 - Business size and industry
@@ -369,11 +369,9 @@ A: No. Client-side encryption means we only see encrypted data. You control the 
 
 **Contact Information:**
  **Email:** [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)  
- **Phone:**  
+ **Phone:** (+61) 0432 038 310  
  **Website:** [cybermonkey.net.au](https://cybermonkey.net.au)  
- **Location:** Fremantle, Western Australia
-
----(+61) 0432 038 310 
+ **Location:** Fremantle, Western Australia 
 
 *Real backup. Memory-safe architecture. SME pricing.*
 

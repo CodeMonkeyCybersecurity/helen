@@ -8,21 +8,21 @@ offering: true
 offeringDescription: "XDR Security Platform"
 ---
 
-# What Is Delphi?
+# Delphi Security Platform
 
 ![Diagram showing the relationship between antivirus, security information and event management (SIEM), and extended detection and response (XDR) technologies](/images/antivirus_siem_xdr_web.jpg)
 
-**Delphi** is Code Monkey Cybersecurity’s managed security platform that makes  threat detection accessible to everyone. No technical expertise required — built for real-world security, not checkbox compliance.
+**Delphi** provides enterprise-grade threat detection for small businesses and nonprofits. Get real-world security without technical complexity.
 
-At its core, Delphi Notify helps you detect threats, understand what they mean, and act fast. Built on proven open-source technology — but we’ve hardened it, simplified it, and layered on human-first support.
+Delphi Notify detects threats, explains them clearly, and guides you through response actions. Built on proven open-source technology with expert human support.
 
 ## Key Features
 
 **Real-Time Threat Detection**  
   Continuous monitoring of endpoints, servers, cloud resources, and more — with detection rules tailored for small business and nonprofit environments.
 
-**Human-Curated Alerts**  
-  We don’t just spam you with logs. Each alert is reviewed, categorized, and explained in plain English — with recommended next steps.
+**Expert-Reviewed Alerts**  
+  Security specialists review and categorize each alert. Receive clear explanations in plain English with specific next steps.
 
 **Custom Dashboards & Reports**  
   Gain visibility into your security posture with dashboards tailored to your industry and assets.
@@ -49,17 +49,21 @@ Nonprofits and community orgs who value privacy and transparency.
 Managed service providers (MSPs) who want a white-labeled, tenant-aware solution.  
 Cybersecurity teams who want full control without full overhead.
 
-## Coming Soon
+## Roadmap & Future Features
 
-Self-service agent enrollment  
-Automatic remediation for common threats  
-Secure file collection (e.g. forensic triage)  
-Chatbot-integrated alert explanations (LLM-powered)
+**Enhanced Automation**  
+Self-service agent enrollment and automatic remediation for common threats to reduce response time and administrative overhead.
 
-## Try Delphi
+**Advanced Analytics**  
+Secure file collection for forensic triage and enhanced threat intelligence integration.
 
-Want to test it yourself?  
+**AI-Powered Support**  
+Chatbot-integrated alert explanations using LLM technology for instant, detailed threat analysis.
 
-- Visit the live beta: [delphi.cybermonkey.net.au](https://delphi.cybermonkey.net.au)  
-- Or head to the [Athena Knowledge Base](https://wiki.cybermonkey.net.au/Delphi) for setup guides
-- Curious about the technology? [Learn about XDR](/docs/delphi/technology/)
+## Get Started
+
+**Try the live beta:** [delphi.cybermonkey.net.au](https://delphi.cybermonkey.net.au)
+
+**Read setup guides:** [Athena Knowledge Base](https://wiki.cybermonkey.net.au/Delphi)
+
+**Learn the technology:** [XDR Platform Overview](/offerings/delphi/technology/)

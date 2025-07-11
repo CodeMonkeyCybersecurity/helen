@@ -37,20 +37,20 @@ The navbar is powered by Hugo menus defined in `config.toml`:
 # Main navigation
 [[menu.main]]
 name = "Documentation"
-url = "/docs/"
+url = "/resources/documentation/"
 weight = 10
 
 # Platform dropdown
 [[menu.platform]]
 name = "Delphi Notify"
-url = "/docs/delphi/"
+url = "/offerings/delphi/"
 description = "XDR Security Platform"
 weight = 10
 
 # Training dropdown
 [[menu.training]]
 name = "Scam Education"
-url = "/docs/training/"
+url = "/offerings/phishing-simulation/training/"
 description = "Protect against fraud"
 weight = 10
 ```

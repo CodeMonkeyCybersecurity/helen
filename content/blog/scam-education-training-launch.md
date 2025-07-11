@@ -163,7 +163,7 @@ Unlike expensive security software, **training delivers immediate, measurable re
 ### Option 3: Live Demo
 **30-minute demonstration** showing exactly how our training works and what results you can expect.
 
- **Book online:** [cybermonkey.net.au/training-demo](https://cybermonkey.net.au/docs/training/)
+ **Book online:** [cybermonkey.net.au/training-demo](https://cybermonkey.net.au/offerings/phishing-simulation/training/)
 
 ---
 
@@ -200,7 +200,7 @@ Don't wait until you're part of the statistics.
 **Contact Information:**
  **Email:** [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)  
  **Phone:** (+61) 0432 038 310  
- **Website:** [cybermonkey.net.au/training](https://cybermonkey.net.au/docs/training/)  
+ **Website:** [cybermonkey.net.au/training](https://cybermonkey.net.au/offerings/phishing-simulation/training/)  
  **Location:** Fremantle, Western Australia
 
 ---

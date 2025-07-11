@@ -55,9 +55,11 @@ Cards emphasize content with generous padding and subtle shadows:
 </div>
 {{< /spaced-section >}}
 
-{{< illustration src="/images/placeholder-illustration.svg" alt="Human-Centered Security" >}}
-Building security systems that align with human needs and dignity, making protection accessible to everyone.
-{{< /illustration >}}
+{{< spaced-section >}}
+## Human-Centered Security Principles
+
+Building security systems that align with human needs and dignity, making protection accessible to everyone through thoughtful design and clear communication.
+{{< /spaced-section >}}
 
 {{< spaced-section >}}
 ## Information Hierarchy

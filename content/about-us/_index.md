@@ -1,30 +1,44 @@
 ---
 title: "About Us"
+description: "Code Monkey Cybersecurity provides human-centered cybersecurity solutions from Fremantle, WA. Open source XDR platform Delphi and container orchestration system Eos."
+keywords: ["about us", "cybersecurity company", "Fremantle", "Western Australia", "open source security", "XDR platform", "Delphi", "Eos"]
 bookFlatSection: true
 weight: 2
 ---
 
 # About Us
 
-## Code Monkey Cybersecurity
+## Cybersecurity. With humans.
 
-> **Cybersecurity. With humans.**
+**Code Monkey Cybersecurity** delivers enterprise security solutions to small businesses, nonprofits, and communities across Australia.
 
-**Code Monkey Cybersecurity** is an independent, open-source-focused security company based in Western Australia. We build tools and infrastructure to bring  cybersecurity to the people who need it most — small businesses, nonprofits, and communities often left behind by traditional vendors.
+**Founded:** 2024 | **Location:** Fremantle, WA | **ABN:** 77 177 673 061
 
-## Delphi
+## Expertise and Certifications
 
-We’re launching **Delphi**, a multi-tenant XDR and SIEM platform designed for usability, transparency, and hands-on resilience. It’s open by design, secure by default, and built to support real-world users — not just technical teams.
+Industry-recognized certifications in cybersecurity, networking, and infrastructure management.
 
-Founded by someone who rebuilt their life from the ground up, our mission is rooted in lived experience. We believe cybersecurity should serve people, not exploit fear. That means clearer tools, transparent policies, and support for those working in under-resourced or high-risk environments — including domestic violence organizations, community groups, and public-good teams doing critical work.
+## Our Products
+
+### Delphi Security Platform
+
+**Delphi** is a multi-tenant XDR and SIEM platform that makes enterprise security accessible to small businesses.
+
+**Key features:**
+- Real-time threat detection and response
+- Human-reviewed security alerts in plain English  
+- Open source foundation with commercial support
+- Designed for non-technical users
+
+### Mission
+
+We build security tools that serve people, not exploit fear. We focus on clear communication, transparent policies, and support for organizations with limited resources.
 
 ## Open Source Innovation
 
 ### Eos
 
-In ancient Greek mythology and religion, Eos is the goddess and personification of the dawn, helping everyone start the day. This repo contains lots of tools to help you get started on your ubuntu server journey.
-
-We're actively developing **Eos**, an open source equivalent to Google's Borg system for workload orchestration. This large-scale container orchestration platform demonstrates our deep technical expertise and commitment to open source innovation.
+**Eos** is an open source container orchestration platform equivalent to Google's Borg system. This large-scale platform demonstrates our technical expertise and commitment to open source innovation.
 
 **Core Capabilities:**
 - **Large-scale distributed container management** - Deploy and manage thousands of containers across cluster nodes

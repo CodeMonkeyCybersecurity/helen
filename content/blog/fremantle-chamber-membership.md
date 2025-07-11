@@ -52,10 +52,10 @@ As Chamber members, we're excited to participate in:
 Follow our Chamber journey and connect with us:
 - Tag **#freochamber** or **#thisisfremantle** when sharing our content
 - Attend Chamber networking events to meet our team
-- [Contact us](/docs/contact/) for cybersecurity consultations for Chamber members
+- [Contact us](/about-us/contact/) for cybersecurity consultations for Chamber members
 
 ---
 
-*Are you a Fremantle business looking to improve your cybersecurity? Chamber members receive priority booking for our [phishing training workshops](/docs/training/) and [Delphi Notify](/docs/delphi/sign-up/) consultations.*
+*Are you a Fremantle business looking to improve your cybersecurity? Chamber members receive priority booking for our [phishing training workshops](/offerings/phishing-simulation/training/) and [Delphi Notify](/offerings/delphi/sign-up/) consultations.*
 
 **Connect with Fremantle Chamber**: [fremantlechamber.com.au](https://fremantlechamber.com.au)

@@ -21,7 +21,7 @@ buildExpired = false
 # Site-wide metadata
 [params]
   author = "Henry Oliver"
-  description = "Cybersecurity. With Humans.. Managed XDR, backup, DevSecOps, and open source tools from Fremantle."
+  description = "Cybersecurity. With Humans. Managed XDR, backup, DevSecOps, and open source tools from Fremantle."
   keywords = ["Cybersecurity", "XDR", "SIEM", "Penetration Testing", "Backup", "Open Source", "Australia"]
   contact_email = "main@cybermonkey.net.au"
   umami_script = "https://u.cybermonkey.dev/script.js"
@@ -29,6 +29,27 @@ buildExpired = false
   assetDir = "assets"
   enableGitInfo = true
   BookLogo = 'favicon.png'
+  
+  # SEO and Social Media
+  images = ["images/cover_puppy_moni_monkey_optimized.jpg"]
+  twitter_site = "@codemonkeycyber"
+  facebook_admins = "codemonkeycyber"
+  
+  # Business Information
+  business_name = "Code Monkey Cybersecurity"
+  business_type = "Technology Company"
+  address_locality = "Fremantle"
+  address_region = "WA"
+  address_country = "Australia"
+  postal_code = "6160"
+  phone = "+61432038310"
+  abn = "77 177 673 061"
+  
+  # Geographic targeting
+  geo_region = "AU-WA"
+  geo_placename = "Fremantle, Western Australia"
+  geo_position = "-32.0569;115.7439"
+  ICBM = "-32.0569;115.7439"
 
 [languages]
 [languages.en]
@@ -102,8 +123,8 @@ weight = 20
 [social]
   github = "https://github.com/CodeMonkeyCybersecurity"
   facebook = "https://facebook.com/codemonkeycyber"
-  instagram = "..."
-  linkedin = "..."
+  instagram = "https://instagram.com/code_monkey_cyber"
+  linkedin = "https://linkedin.com/company/codemonkeycyber"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]

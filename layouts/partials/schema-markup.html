@@ -1,0 +1,233 @@
+{{/* Schema.org structured data for business information and services */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ .Site.Params.business_name }}",
+  "alternateName": "Code Monkey Cybersecurity",
+  "url": "{{ .Site.BaseURL }}",
+  "logo": "{{ .Site.BaseURL }}images/logo.png",
+  "description": "{{ .Site.Params.description }}",
+  "foundingDate": "2024",
+  "legalName": "Code Monkey Cybersecurity Pty Ltd",
+  "taxID": "{{ .Site.Params.abn }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "{{ .Site.Params.address_locality }}",
+    "addressRegion": "{{ .Site.Params.address_region }}",
+    "addressCountry": "{{ .Site.Params.address_country }}",
+    "postalCode": "{{ .Site.Params.postal_code }}"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -32.0569,
+    "longitude": 115.7439
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "{{ .Site.Params.phone }}",
+    "email": "{{ .Site.Params.contact_email }}",
+    "contactType": "Customer Service",
+    "areaServed": "AU",
+    "availableLanguage": "English"
+  },
+  "sameAs": [
+    "{{ .Site.Social.github }}",
+    "{{ .Site.Social.facebook }}",
+    "{{ .Site.Social.linkedin }}",
+    "{{ .Site.Social.instagram }}"
+  ],
+  "industry": "Computer Security",
+  "numberOfEmployees": "1-10",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Australia"
+  },
+  "knowsAbout": [
+    "Cybersecurity",
+    "XDR",
+    "SIEM",
+    "Threat Detection",
+    "Security Monitoring",
+    "Incident Response",
+    "Penetration Testing",
+    "DevSecOps",
+    "Open Source Security"
+  ],
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": -32.0569,
+      "longitude": 115.7439
+    },
+    "geoRadius": "25000"
+  }
+}
+</script>
+
+{{/* Service-specific schema markup */}}
+{{ if or (eq .Type "offerings") (in .RelPermalink "offerings") }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "provider": {
+    "@type": "Organization",
+    "name": "{{ .Site.Params.business_name }}",
+    "url": "{{ .Site.BaseURL }}"
+  },
+  "serviceType": "Cybersecurity Services",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Australia"
+  },
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Small Business"
+  },
+  "category": "Computer Security",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "price": "29.00",
+    "priceCurrency": "AUD",
+    "priceValidUntil": "2025-12-31",
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "price": "29.00",
+      "priceCurrency": "AUD",
+      "validFrom": "2024-01-01",
+      "validThrough": "2025-12-31"
+    }
+  }
+}
+</script>
+{{ end }}
+
+{{/* Blog/Article schema markup */}}
+{{ if eq .Type "blog" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ .Title }}",
+  "description": "{{ .Description }}",
+  "image": "{{ .Site.BaseURL }}{{ .Params.image | default "images/cover_puppy_moni_monkey_optimized.jpg" }}",
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ .Site.Params.author }}",
+    "jobTitle": "Cybersecurity Expert"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Params.business_name }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ .Site.BaseURL }}images/logo.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ .Permalink }}"
+  },
+  "articleSection": "Cybersecurity",
+  "keywords": "{{ delimit .Params.keywords "," }}",
+  "wordCount": {{ .WordCount }},
+  "inLanguage": "en-AU"
+}
+</script>
+{{ end }}
+
+{{/* FAQ schema markup for support/documentation pages */}}
+{{ if and .Params.faq .Params.faq_items }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{ range $index, $faq := .Params.faq_items }}
+    {{ if $index }},{{ end }}
+    {
+      "@type": "Question",
+      "name": "{{ $faq.question }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ $faq.answer }}"
+      }
+    }
+    {{ end }}
+  ]
+}
+</script>
+{{ end }}
+
+{{/* Software/Product schema markup for Delphi */}}
+{{ if in .RelPermalink "delphi" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Delphi Notify",
+  "description": "Human-centered cybersecurity alerts and threat detection platform",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": "Cross-platform",
+  "offers": {
+    "@type": "Offer",
+    "price": "29.00",
+    "priceCurrency": "AUD",
+    "priceValidUntil": "2025-12-31"
+  },
+  "developer": {
+    "@type": "Organization",
+    "name": "{{ .Site.Params.business_name }}",
+    "url": "{{ .Site.BaseURL }}"
+  },
+  "downloadUrl": "{{ .Site.BaseURL }}offerings/delphi/sign-up/",
+  "screenshot": "{{ .Site.BaseURL }}images/delphi-screenshot.png",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "12"
+  },
+  "featureList": [
+    "Human-reviewed security alerts",
+    "Plain English explanations",
+    "24/7 monitoring",
+    "Expert threat analysis",
+    "Real-time notifications"
+  ]
+}
+</script>
+{{ end }}
+
+{{/* Local Business schema markup */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "{{ .Site.Params.business_name }}",
+  "image": "{{ .Site.BaseURL }}images/cover_puppy_moni_monkey_optimized.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "{{ .Site.Params.address_locality }}",
+    "addressRegion": "{{ .Site.Params.address_region }}",
+    "addressCountry": "{{ .Site.Params.address_country }}",
+    "postalCode": "{{ .Site.Params.postal_code }}"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -32.0569,
+    "longitude": 115.7439
+  },
+  "telephone": "{{ .Site.Params.phone }}",
+  "email": "{{ .Site.Params.contact_email }}",
+  "url": "{{ .Site.BaseURL }}",
+  "priceRange": "$$",
+  "openingHours": "Mo-Fr 09:00-17:00",
+  "paymentAccepted": "Credit Card, Bank Transfer",
+  "currenciesAccepted": "AUD"
+}
+</script>

@@ -25,7 +25,7 @@ No confusing tiers, no hidden fees, no surprise bills. Just straightforward cybe
  No credit card required  
  Cancel anytime  
 
-{{< button href="/docs/delphi/sign-up/" >}}Start Your Free Trial{{< /button >}}
+{{< button href="/offerings/delphi/sign-up/" >}}Start Your Free Trial{{< /button >}}
 {{% /hint %}}
 
 ---
@@ -116,7 +116,7 @@ During your trial, our team helps you install and configure Delphi Notify on you
 {{< cta-anthropic 
   title="Ready to Get Started?" 
   text="Questions about pricing? We're happy to discuss your specific needs and find the right plan for you. Email us at main@cybermonkey.net.au or call (+61) 0432 038 310."
-  link="/docs/delphi/sign-up/" 
+  link="/offerings/delphi/sign-up/" 
   linkText="Start Your Free Trial"
   style="dark"
   buttonStyle="teal" >}}

@@ -159,11 +159,11 @@ You can visualize the alert data in the Wazuh dashboard. To do this, go to the *
 
 Ubuntu - `rule.id:(651 OR 100100)`
 
-![](https://documentation.wazuh.com/current/_images/block-malicious-actor-ubuntu-alerts1.png)
+![Wazuh alerts showing malicious actor blocking on Ubuntu system](https://documentation.wazuh.com/current/_images/block-malicious-actor-ubuntu-alerts1.png)
 
 Windows - `rule.id:(657 OR 100100)`
 
-![](https://documentation.wazuh.com/current/_images/block-malicious-actor-windows-alerts1.png)
+![Wazuh alerts showing malicious actor blocking on Windows system](https://documentation.wazuh.com/current/_images/block-malicious-actor-windows-alerts1.png)
 
 [Proof of Concept guide](https://documentation.wazuh.com/current/proof-of-concept-guide/index.html)[File integrity monitoring](https://documentation.wazuh.com/current/proof-of-concept-guide/poc-file-integrity-monitoring.html)
 

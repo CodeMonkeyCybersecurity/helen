@@ -1,5 +1,7 @@
 ---
 title: "Governance"
+description: "Code Monkey Cybersecurity governance policies including privacy, security, data handling, and open source licensing. Transparent cybersecurity practices."
+keywords: ["governance", "privacy policy", "security policy", "data handling", "open source licensing", "cybersecurity compliance"]
 weight: 5
 bookFlatSection: true
 ---
@@ -36,13 +38,13 @@ This knowledge supports our platform development (Delphi, Eos) and informs how w
 
 ## Included Policies
 
-- [Privacy Policy](/docs/governance/privacy-policy)
-- [Responsible Disclosure Policy](/docs/governance/responsible-disclosure)
-- [Code of Conduct](/docs/governance/code-of-conduct/)
-- [Internal Device & Endpoint Policy](/docs/governance/device-policy)
-- [Data Handling & Retention Policy](/docs/governance/data-handling-policy)
-- [Open Source Licensing Policy](/docs/governance/open-source-licensing)
-- [Terms of Service](/docs/governance/terms-of-service)
+- [Privacy Policy](/about-us/governance/policies/privacy-policy/)
+- [Responsible Disclosure Policy](/about-us/governance/policies/responsible-disclosure/)
+- [Code of Conduct](/about-us/governance/policies/code-of-conduct/)
+- [Internal Device & Endpoint Policy](/about-us/governance/policies/device-policy/)
+- [Data Handling & Retention Policy](/about-us/governance/policies/data-handling-policy/)
+- [Open Source Licensing Policy](/about-us/governance/open-source-licensing/)
+- [Terms of Service](/about-us/governance/policies/terms-of-service/)
 
 All policies apply to our staff, services, and hosted infrastructure — including Delphi, Vault, Wazuh, Eos, and related systems.
 

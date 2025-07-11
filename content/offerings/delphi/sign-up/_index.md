@@ -5,21 +5,24 @@ keywords: ["cybersecurity signup", "Delphi Notify", "security alerts", "cybersec
 weight: 10
 ---
 
-# Delphi Notify | Sign up
+# Sign up for Delphi Notify
 
 ## Simple, Smart Security Alerts
 Finally, security notifications that make sense.
 
-Delphi Notify is your knowledgeable digital security friend who only speaks up when something actually matters. When they do, you'll get the full story: what happened, why it's important, how to handle it, and what to keep an eye on next time.
+Delphi Notify provides expert-reviewed security alerts in plain English. Get clear explanations of what happened, why it matters, and what to do next.
 
 ## Ready to Try Delphi Notify?
 
 {{% hint info %}}
 **Start Your Free Trial Today**
 
-{{< button href="https://hera.cybermonkey.dev" >}}Get Started Now - Free for 30 Days{{< /button >}}
+{{< button href="https://hera.cybermonkey.dev" aria-label="Start your free 30-day trial of Delphi Notify security monitoring" >}}Get Started Now - Free for 30 Days{{< /button >}}
 
-* No credit card required   Setup assistance included   Cancel anytime*
+**Benefits of your free trial:**
+- No credit card required
+- Setup assistance included
+- Cancel anytime
 {{% /hint %}}
 
 ### Or Get More Information First
@@ -42,14 +45,19 @@ Whether you're protecting a business, your family's devices, or just your own pe
 
 
 
-## Here's What Happens When You Sign Up
-**Create Your Account**: Just like signing up for any online service - we'll need your email, name, and a password. Takes about two minutes.
+## Sign-up Process
 
-**Verify Your Email**: We'll send you a quick email to make sure we have the right address. This helps keep your account secure.
+### Step 1: Create Your Account
+Provide your email, name, and password. Takes about 2 minutes.
 
-**We'll Reach Out to Help**: Within a day or two, someone from our team will contact you to help set everything up. We'll work with you to make sure Delphi Notify understands your environment.
+### Step 2: Verify Your Email
+We'll send a verification email to confirm your address and secure your account.
 
-**Start Getting Helpful Alerts**: Once everything's configured, you'll begin receiving clear, useful security notifications tailored to your needs.
+### Step 3: Personal Setup Assistance
+Our team will contact you within 1-2 business days to help configure your monitoring.
+
+### Step 4: Start Receiving Alerts
+Begin receiving clear, expert-reviewed security notifications tailored to your needs.
 
 ## A Quick Word About Passwords
 Since we're talking about keeping you secure, here's a friendly reminder about passwords. We recommend using a password manager - it's like having a secure digital wallet that creates and remembers complex passwords for all your accounts.

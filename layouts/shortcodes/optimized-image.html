@@ -1,0 +1,44 @@
+{{/* Optimized image shortcode with lazy loading and responsive sizes */}}
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" }}
+{{ $class := .Get "class" | default "" }}
+{{ $loading := .Get "loading" | default "lazy" }}
+{{ $sizes := .Get "sizes" | default "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" }}
+{{ $quality := .Get "quality" | default 85 }}
+{{ $format := .Get "format" | default "webp" }}
+
+{{ $image := resources.Get $src }}
+{{ if $image }}
+  {{ $webp := $image.Resize (printf "800x webp q%d" $quality) }}
+  {{ $small := $image.Resize (printf "400x webp q%d" $quality) }}
+  {{ $medium := $image.Resize (printf "800x webp q%d" $quality) }}
+  {{ $large := $image.Resize (printf "1200x webp q%d" $quality) }}
+  
+  <picture class="{{ $class }}">
+    <source 
+      srcset="{{ $small.RelPermalink }} 400w, {{ $medium.RelPermalink }} 800w, {{ $large.RelPermalink }} 1200w"
+      sizes="{{ $sizes }}"
+      type="image/webp"
+    />
+    <img 
+      src="{{ $medium.RelPermalink }}" 
+      alt="{{ $alt }}" 
+      loading="{{ $loading }}"
+      decoding="async"
+      class="{{ $class }}"
+      width="{{ $medium.Width }}"
+      height="{{ $medium.Height }}"
+      style="max-width: 100%; height: auto;"
+    />
+  </picture>
+{{ else }}
+  {{/* Fallback for external images or when resource processing fails */}}
+  <img 
+    src="{{ $src }}" 
+    alt="{{ $alt }}" 
+    loading="{{ $loading }}"
+    decoding="async"
+    class="{{ $class }}"
+    style="max-width: 100%; height: auto;"
+  />
+{{ end }}

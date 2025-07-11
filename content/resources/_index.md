@@ -54,6 +54,8 @@ Access your account, view service status, and manage your cybersecurity services
 
 ---
 
-This is fine we're bad at our documentation.
+## Documentation
 
-We're working on improving our documentation. Please check back soon for more detailed guides and resources.
+Our comprehensive documentation covers all aspects of our cybersecurity services. From quick start guides to detailed technical specifications, everything you need to get the most from our platform.
+
+For technical documentation and API references, visit our [Documentation Hub](/resources/documentation/).
