@@ -1,0 +1,360 @@
+# Security configuration for Code Monkey Cybersecurity website
+name: "cybermonkey-website-security"
+description: "Security scanning and compliance configuration"
+
+# Security scanning configuration
+security:
+  # Vulnerability scanning
+  vulnerability_scanning:
+    enabled: true
+    schedule: "daily"
+    severity_threshold: "medium"
+    tools:
+      - trivy
+      - snyk
+      - npm-audit
+      - dependency-check
+    
+  # Secret scanning
+  secret_scanning:
+    enabled: true
+    patterns:
+      - "api[_-]?key"
+      - "secret[_-]?key"
+      - "password"
+      - "token"
+      - "private[_-]?key"
+      - "aws[_-]?access[_-]?key"
+      - "aws[_-]?secret[_-]?key"
+      - "ssh[_-]?key"
+      - "certificate"
+    exclude_paths:
+      - "node_modules/"
+      - "public/"
+      - ".git/"
+      - "*.log"
+    
+  # Code quality scanning
+  code_quality:
+    enabled: true
+    tools:
+      - semgrep
+      - codeql
+      - eslint-security
+      - stylelint
+    rules:
+      - "owasp-top-10"
+      - "sans-top-25"
+      - "javascript-security"
+      - "web-security"
+    
+  # Container scanning
+  container_scanning:
+    enabled: true
+    registries:
+      - "docker.io"
+      - "public.ecr.aws"
+    policies:
+      - "no-root-user"
+      - "no-secrets-in-env"
+      - "security-updates"
+      - "minimal-base-image"
+    
+  # Infrastructure scanning
+  infrastructure_scanning:
+    enabled: true
+    tools:
+      - checkov
+      - tfsec
+      - terraform-compliance
+    frameworks:
+      - "terraform"
+      - "dockerfile"
+      - "kubernetes"
+      - "github-actions"
+
+# Compliance configuration
+compliance:
+  # GDPR compliance
+  gdpr:
+    enabled: true
+    data_protection:
+      - "data-encryption"
+      - "data-retention"
+      - "data-portability"
+      - "right-to-erasure"
+    privacy_controls:
+      - "cookie-consent"
+      - "privacy-policy"
+      - "data-processing-agreement"
+    
+  # Australian Privacy Principles
+  australian_privacy:
+    enabled: true
+    principles:
+      - "open-transparent-handling"
+      - "anonymity-pseudonymity"
+      - "collection-solicitation"
+      - "dealing-unsolicited-info"
+      - "notification-collection"
+      - "use-disclosure"
+      - "direct-marketing"
+      - "cross-border-disclosure"
+      - "data-quality"
+      - "data-security"
+      - "access-correction"
+    
+  # Security frameworks
+  security_frameworks:
+    - "nist-cybersecurity-framework"
+    - "iso-27001"
+    - "owasp-top-10"
+    - "sans-top-25"
+
+# Monitoring and alerting
+monitoring:
+  security_events:
+    enabled: true
+    log_retention: "90d"
+    alert_channels:
+      - "email"
+      - "slack"
+      - "pagerduty"
+    
+  threat_intelligence:
+    enabled: true
+    feeds:
+      - "cve-database"
+      - "github-advisories"
+      - "npm-advisories"
+      - "docker-security"
+    
+  anomaly_detection:
+    enabled: true
+    metrics:
+      - "unusual-traffic-patterns"
+      - "failed-authentication"
+      - "suspicious-user-agents"
+      - "geographic-anomalies"
+
+# Incident response
+incident_response:
+  enabled: true
+  contacts:
+    - "security@cybermonkey.net.au"
+    - "devops@cybermonkey.net.au"
+  
+  severity_levels:
+    critical:
+      response_time: "15m"
+      escalation: "immediate"
+    high:
+      response_time: "1h"
+      escalation: "1h"
+    medium:
+      response_time: "4h"
+      escalation: "8h"
+    low:
+      response_time: "24h"
+      escalation: "72h"
+  
+  procedures:
+    - "incident-identification"
+    - "incident-classification"
+    - "incident-containment"
+    - "incident-eradication"
+    - "incident-recovery"
+    - "lessons-learned"
+
+# Access control
+access_control:
+  authentication:
+    methods:
+      - "multi-factor"
+      - "sso"
+      - "oauth2"
+    password_policy:
+      min_length: 12
+      complexity: "high"
+      rotation: "90d"
+  
+  authorization:
+    model: "rbac"
+    principles:
+      - "least-privilege"
+      - "separation-of-duties"
+      - "need-to-know"
+  
+  audit_logging:
+    enabled: true
+    events:
+      - "login-attempts"
+      - "privilege-escalation"
+      - "data-access"
+      - "configuration-changes"
+    retention: "1y"
+
+# Data protection
+data_protection:
+  encryption:
+    at_rest:
+      enabled: true
+      algorithm: "AES-256"
+      key_management: "vault"
+    in_transit:
+      enabled: true
+      protocol: "TLS-1.3"
+      cipher_suites: "secure-only"
+  
+  backup:
+    enabled: true
+    frequency: "daily"
+    retention: "30d"
+    encryption: true
+    offsite: true
+  
+  data_loss_prevention:
+    enabled: true
+    rules:
+      - "credit-card-numbers"
+      - "social-security-numbers"
+      - "api-keys"
+      - "private-keys"
+      - "passwords"
+
+# Network security
+network_security:
+  firewall:
+    enabled: true
+    default_policy: "deny"
+    rules:
+      - "allow-https-inbound"
+      - "allow-ssh-admin"
+      - "deny-all-other"
+  
+  ddos_protection:
+    enabled: true
+    rate_limiting: true
+    geo_blocking: false
+  
+  ssl_tls:
+    enabled: true
+    protocols: ["TLSv1.2", "TLSv1.3"]
+    certificate_transparency: true
+    hsts: true
+    hpkp: false
+
+# Application security
+application_security:
+  web_application_firewall:
+    enabled: true
+    rules:
+      - "owasp-core-rule-set"
+      - "custom-rules"
+  
+  content_security_policy:
+    enabled: true
+    directives:
+      - "default-src 'self'"
+      - "script-src 'self' 'unsafe-inline'"
+      - "style-src 'self' 'unsafe-inline'"
+      - "img-src 'self' data:"
+      - "font-src 'self'"
+      - "connect-src 'self'"
+  
+  input_validation:
+    enabled: true
+    sanitization: true
+    xss_protection: true
+    csrf_protection: true
+  
+  session_management:
+    enabled: true
+    secure_cookies: true
+    http_only: true
+    same_site: "strict"
+
+# Third-party security
+third_party:
+  dependency_management:
+    enabled: true
+    auto_updates: true
+    security_advisories: true
+    license_compliance: true
+  
+  vendor_assessment:
+    enabled: true
+    security_questionnaires: true
+    penetration_testing: true
+    compliance_verification: true
+
+# Training and awareness
+training:
+  security_awareness:
+    enabled: true
+    frequency: "quarterly"
+    topics:
+      - "phishing-awareness"
+      - "password-security"
+      - "social-engineering"
+      - "incident-reporting"
+  
+  developer_training:
+    enabled: true
+    frequency: "annually"
+    topics:
+      - "secure-coding"
+      - "owasp-top-10"
+      - "security-testing"
+      - "threat-modeling"
+
+# Metrics and reporting
+metrics:
+  security_metrics:
+    enabled: true
+    kpis:
+      - "vulnerability-resolution-time"
+      - "security-incident-count"
+      - "compliance-score"
+      - "security-training-completion"
+  
+  reporting:
+    enabled: true
+    frequency: "monthly"
+    stakeholders:
+      - "security-team"
+      - "management"
+      - "board"
+    formats:
+      - "dashboard"
+      - "pdf-report"
+      - "executive-summary"
+
+# Continuous improvement
+continuous_improvement:
+  security_reviews:
+    enabled: true
+    frequency: "quarterly"
+    scope:
+      - "policies"
+      - "procedures"
+      - "technologies"
+      - "training"
+  
+  threat_modeling:
+    enabled: true
+    frequency: "annually"
+    methodology: "stride"
+    scope:
+      - "application"
+      - "infrastructure"
+      - "data-flows"
+  
+  penetration_testing:
+    enabled: true
+    frequency: "annually"
+    scope:
+      - "external"
+      - "internal"
+      - "web-application"
+      - "infrastructure"

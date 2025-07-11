@@ -1,0 +1,447 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run security scans daily at 2 AM UTC
+    - cron: '0 2 * * *'
+
+env:
+  HUGO_VERSION: 0.128.0
+  NODE_VERSION: 20
+  GO_VERSION: 1.21
+
+jobs:
+  # Security and vulnerability scanning
+  security-scan:
+    name: Security Scanning
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+
+      - name: Upload Trivy scan results
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: 'trivy-results.sarif'
+
+      - name: Run Semgrep security analysis
+        uses: returntocorp/semgrep-action@v1
+        with:
+          config: auto
+          publishToken: ${{ secrets.SEMGREP_APP_TOKEN }}
+          publishDeployment: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+
+      - name: Check for secrets
+        uses: trufflesecurity/trufflehog@main
+        with:
+          path: ./
+          base: main
+          head: HEAD
+          extra_args: --debug --only-verified
+
+  # Dependency and license scanning
+  dependency-scan:
+    name: Dependency Scanning
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run npm audit
+        run: npm audit --audit-level=high
+
+      - name: Check for outdated dependencies
+        run: npm outdated
+
+      - name: License compliance check
+        uses: fossa-contrib/fossa-action@v2
+        with:
+          api-key: ${{ secrets.FOSSA_API_KEY }}
+
+  # Build and test
+  build-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        environment: [staging, production]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: ${{ env.HUGO_VERSION }}
+          extended: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build CSS and JS assets
+        run: npm run build
+
+      - name: Build Hugo site
+        run: hugo --minify --environment ${{ matrix.environment }}
+        env:
+          HUGO_ENVIRONMENT: ${{ matrix.environment }}
+
+      - name: Test HTML output
+        run: |
+          npm install -g html-validate
+          html-validate public/**/*.html
+
+      - name: Test links
+        run: |
+          npm install -g markdown-link-check
+          find . -name "*.md" -not -path "./node_modules/*" -exec markdown-link-check {} \;
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: hugo-site-${{ matrix.environment }}
+          path: public/
+          retention-days: 30
+
+  # Performance and accessibility testing
+  performance-test:
+    name: Performance Testing
+    runs-on: ubuntu-latest
+    needs: build-test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: hugo-site-staging
+          path: public/
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install Lighthouse CI
+        run: npm install -g @lhci/cli
+
+      - name: Serve site locally
+        run: |
+          npx http-server public -p 8080 &
+          sleep 5
+
+      - name: Run Lighthouse CI
+        run: |
+          lhci autorun --config=.lighthouserc.json
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+      - name: Upload Lighthouse reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-reports
+          path: .lighthouseci/
+          retention-days: 30
+
+  # Security headers and SSL testing
+  security-headers-test:
+    name: Security Headers Testing
+    runs-on: ubuntu-latest
+    needs: build-test
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Test security headers
+        run: |
+          curl -s -I https://cybermonkey.net.au | grep -i "content-security-policy\|x-frame-options\|x-content-type-options\|referrer-policy\|strict-transport-security"
+
+      - name: SSL/TLS configuration test
+        run: |
+          curl -s https://api.ssllabs.com/api/v3/analyze?host=cybermonkey.net.au&publish=off&startNew=on
+
+  # Container image build and scan
+  container-build:
+    name: Container Build and Scan
+    runs-on: ubuntu-latest
+    needs: build-test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: hugo-site-production
+          path: public/
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ secrets.CONTAINER_REGISTRY }}
+          username: ${{ secrets.CONTAINER_REGISTRY_USER }}
+          password: ${{ secrets.CONTAINER_REGISTRY_PASSWORD }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ secrets.CONTAINER_REGISTRY }}/cybermonkey/website
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=sha,prefix=sha-
+            type=raw,value=latest,enable={{is_default_branch}}
+
+      - name: Build and push container image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./deploy/Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Run container security scan
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ${{ secrets.CONTAINER_REGISTRY }}/cybermonkey/website:latest
+          format: 'sarif'
+          output: 'container-scan-results.sarif'
+
+      - name: Upload container scan results
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: 'container-scan-results.sarif'
+
+  # Deploy to staging
+  deploy-staging:
+    name: Deploy to Staging
+    runs-on: ubuntu-latest
+    needs: [security-scan, dependency-scan, build-test, performance-test, container-build]
+    if: github.ref == 'refs/heads/develop' || github.ref == 'refs/heads/main'
+    environment:
+      name: staging
+      url: https://staging.cybermonkey.net.au
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.6.0
+
+      - name: Terraform Init
+        working-directory: ./deploy/terraform
+        run: terraform init
+        env:
+          TF_VAR_environment: staging
+
+      - name: Terraform Plan
+        working-directory: ./deploy/terraform
+        run: terraform plan -var="environment=staging"
+        env:
+          TF_VAR_environment: staging
+          TF_VAR_container_image: ${{ secrets.CONTAINER_REGISTRY }}/cybermonkey/website:sha-${{ github.sha }}
+
+      - name: Terraform Apply
+        working-directory: ./deploy/terraform
+        run: terraform apply -auto-approve -var="environment=staging"
+        env:
+          TF_VAR_environment: staging
+          TF_VAR_container_image: ${{ secrets.CONTAINER_REGISTRY }}/cybermonkey/website:sha-${{ github.sha }}
+
+      - name: Deploy to Nomad
+        run: |
+          curl -X POST \
+            -H "X-Nomad-Token: ${{ secrets.NOMAD_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d @deploy/nomad/website-staging.nomad.json \
+            ${{ secrets.NOMAD_ADDRESS }}/v1/jobs
+
+      - name: Wait for deployment
+        run: |
+          sleep 30
+          curl -f https://staging.cybermonkey.net.au/health || exit 1
+
+  # Deploy to production
+  deploy-production:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    needs: [deploy-staging]
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: production
+      url: https://cybermonkey.net.au
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.6.0
+
+      - name: Terraform Init
+        working-directory: ./deploy/terraform
+        run: terraform init
+        env:
+          TF_VAR_environment: production
+
+      - name: Terraform Plan
+        working-directory: ./deploy/terraform
+        run: terraform plan -var="environment=production"
+        env:
+          TF_VAR_environment: production
+          TF_VAR_container_image: ${{ secrets.CONTAINER_REGISTRY }}/cybermonkey/website:sha-${{ github.sha }}
+
+      - name: Terraform Apply
+        working-directory: ./deploy/terraform
+        run: terraform apply -auto-approve -var="environment=production"
+        env:
+          TF_VAR_environment: production
+          TF_VAR_container_image: ${{ secrets.CONTAINER_REGISTRY }}/cybermonkey/website:sha-${{ github.sha }}
+
+      - name: Blue-Green Deployment to Nomad
+        run: |
+          # Deploy new version (green)
+          curl -X POST \
+            -H "X-Nomad-Token: ${{ secrets.NOMAD_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d @deploy/nomad/website-production.nomad.json \
+            ${{ secrets.NOMAD_ADDRESS }}/v1/jobs
+
+      - name: Health check and traffic switch
+        run: |
+          # Wait for new deployment to be healthy
+          sleep 60
+          
+          # Check health of new deployment
+          curl -f https://cybermonkey.net.au/health || exit 1
+          
+          # Run smoke tests
+          curl -f https://cybermonkey.net.au/ || exit 1
+          curl -f https://cybermonkey.net.au/offerings/delphi/ || exit 1
+
+      - name: Post-deployment monitoring
+        run: |
+          # Trigger monitoring checks
+          curl -X POST \
+            -H "Authorization: Bearer ${{ secrets.MONITORING_API_KEY }}" \
+            -d '{"event": "deployment", "version": "${{ github.sha }}", "environment": "production"}' \
+            ${{ secrets.MONITORING_WEBHOOK_URL }}
+
+  # Automated dependency updates
+  dependency-update:
+    name: Dependency Updates
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Update npm dependencies
+        run: |
+          npm update
+          npm audit fix --force || true
+
+      - name: Update Hugo modules
+        run: |
+          hugo mod get -u
+          hugo mod tidy
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'chore: update dependencies'
+          title: 'Automated dependency updates'
+          body: |
+            This PR contains automated dependency updates:
+            - Updated npm packages to latest versions
+            - Updated Hugo modules
+            - Applied security patches where available
+            
+            Please review and merge if all tests pass.
+          branch: dependency-updates
+          delete-branch: true
+
+  # Backup and disaster recovery test
+  backup-test:
+    name: Backup and Recovery Test
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    steps:
+      - name: Test backup restoration
+        run: |
+          # Test backup restoration process
+          curl -X POST \
+            -H "Authorization: Bearer ${{ secrets.BACKUP_API_KEY }}" \
+            -d '{"action": "test_restore", "environment": "staging"}' \
+            ${{ secrets.BACKUP_WEBHOOK_URL }}
+
+      - name: Verify backup integrity
+        run: |
+          # Verify backup integrity
+          curl -X GET \
+            -H "Authorization: Bearer ${{ secrets.BACKUP_API_KEY }}" \
+            ${{ secrets.BACKUP_WEBHOOK_URL }}/verify
+
+  # Notification on failure
+  notify-failure:
+    name: Notify on Failure
+    runs-on: ubuntu-latest
+    needs: [security-scan, dependency-scan, build-test, performance-test, container-build, deploy-staging, deploy-production]
+    if: failure()
+    steps:
+      - name: Send Slack notification
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          channel: '#devops'
+          webhook_url: ${{ secrets.SLACK_WEBHOOK }}
+          fields: repo,message,commit,author,action,eventName,ref,workflow

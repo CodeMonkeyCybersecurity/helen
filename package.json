@@ -1,31 +1,174 @@
 {
-  "name": "helen",
+  "name": "cybermonkey-website",
   "version": "1.0.0",
-  "description": "Helen of Troy was a woman who was said to be the most beautiful woman in ancient Greece. She now has the honour of being the name of our website's git repo.",
+  "description": "Code Monkey Cybersecurity website built with Hugo",
   "main": "index.js",
   "scripts": {
-    "build-css": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/css/tailwind.css",
-    "watch-css": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/css/tailwind.css --watch",
-    "build": "npm run build-css && hugo --minify",
-    "dev": "npm run watch-css & hugo server --buildDrafts"
+    "dev": "hugo server --buildDrafts --environment development",
+    "build": "npm run build:css && npm run build:js && hugo --minify --environment production",
+    "build:staging": "npm run build:css && npm run build:js && hugo --minify --environment staging",
+    "build:css": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/css/tailwind.css",
+    "build:js": "webpack --mode production",
+    "watch:css": "npx tailwindcss -i ./assets/tailwind.css -o ./assets/css/tailwind.css --watch",
+    "watch:js": "webpack --mode development --watch",
+    "lint": "npm run lint:css && npm run lint:js && npm run lint:html",
+    "lint:css": "stylelint 'assets/css/**/*.css'",
+    "lint:js": "eslint 'assets/js/**/*.js'",
+    "lint:html": "html-validate public/**/*.html",
+    "test": "npm run test:security && npm run test:performance && npm run test:accessibility",
+    "test:security": "npm run audit && npm run test:deps",
+    "test:performance": "lighthouse-ci",
+    "test:accessibility": "axe-core public/**/*.html",
+    "test:deps": "npm audit --audit-level=high",
+    "optimize": "npm run optimize:images && npm run optimize:css && npm run optimize:js",
+    "optimize:images": "imagemin 'static/images/**/*.{jpg,jpeg,png}' --out-dir=static/images --plugin=imagemin-mozjpeg --plugin=imagemin-pngquant",
+    "optimize:css": "cssnano static/css/main.css static/css/main.min.css",
+    "optimize:js": "terser static/js/main.js -o static/js/main.min.js",
+    "clean": "rm -rf public/ static/css/ static/js/",
+    "serve": "http-server public -p 8080 -c-1",
+    "lighthouse": "lighthouse https://cybermonkey.net.au --output json --output html",
+    "security-scan": "npm run audit && npm run test:security && npm run scan:deps",
+    "scan:deps": "snyk test",
+    "analyze": "npm run build && webpack-bundle-analyzer static/js/main.js",
+    "hugo:update": "hugo mod get -u && hugo mod tidy"
   },
+  "keywords": [
+    "hugo",
+    "cybersecurity",
+    "website",
+    "static-site",
+    "security"
+  ],
+  "author": "Code Monkey Cybersecurity <dev@cybermonkey.net.au>",
+  "license": "AGPL-3.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CodeMonkeyCybersecurity/helen.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/CodeMonkeyCybersecurity/helen/issues"
   },
-  "homepage": "https://github.com/CodeMonkeyCybersecurity/helen#readme",
+  "homepage": "https://cybermonkey.net.au",
   "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "@lhci/cli": "^0.12.0",
     "@tailwindcss/typography": "^0.5.16",
     "autoprefixer": "^10.4.21",
+    "axe-core": "^4.8.0",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.8.1",
+    "cssnano": "^6.0.1",
+    "cssnano-cli": "^1.0.5",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-security": "^1.7.1",
+    "html-validate": "^8.7.0",
+    "http-server": "^14.1.1",
+    "imagemin": "^8.0.1",
+    "imagemin-cli": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^10.0.1",
+    "imagemin-webp": "^7.0.0",
+    "lighthouse": "^11.3.0",
+    "lighthouse-ci": "^0.12.0",
+    "markdown-link-check": "^3.11.2",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
-    "tailwindcss": "^3.4.17"
+    "postcss-import": "^15.1.0",
+    "postcss-nesting": "^12.0.1",
+    "prettier": "^3.0.3",
+    "snyk": "^1.1242.0",
+    "stylelint": "^15.11.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.7.0",
+    "stylelint-order": "^6.0.3",
+    "tailwindcss": "^3.4.17",
+    "terser": "^5.24.0",
+    "webpack": "^5.89.0",
+    "webpack-bundle-analyzer": "^4.9.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "private": true,
+  "postcss": {
+    "plugins": {
+      "postcss-import": {},
+      "postcss-nesting": {},
+      "autoprefixer": {}
+    }
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-prettier"
+    ],
+    "plugins": [
+      "stylelint-declaration-block-no-ignored-properties",
+      "stylelint-order"
+    ],
+    "rules": {
+      "declaration-empty-line-before": "never",
+      "no-descending-specificity": null,
+      "property-no-unknown": [
+        true,
+        {
+          "ignoreProperties": ["content-visibility"]
+        }
+      ]
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:security/recommended",
+      "prettier"
+    ],
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "node": true
+    },
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-console": "warn",
+      "no-debugger": "error",
+      "security/detect-object-injection": "error",
+      "security/detect-non-literal-fs-filename": "error",
+      "security/detect-non-literal-regexp": "error",
+      "security/detect-non-literal-require": "error",
+      "security/detect-possible-timing-attacks": "error",
+      "security/detect-pseudoRandomBytes": "error",
+      "security/detect-unsafe-regex": "error"
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "printWidth": 80,
+    "endOfLine": "lf"
+  },
+  "snyk": {
+    "org": "cybermonkey",
+    "severity-threshold": "medium"
   }
 }
