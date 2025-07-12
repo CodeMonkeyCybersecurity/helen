@@ -1,0 +1,38 @@
+{{/* 
+  Simple Hugo Native Navigation
+  - Uses Hugo's built-in menu system
+  - Mobile-first responsive design
+  - No JavaScript required
+*/}}
+
+<nav class="site-navigation">
+  {{/* Site Header */}}
+  <div class="nav-header">
+    <a href="{{ .Site.BaseURL }}" class="site-brand">
+      <img src="/favicon.png" alt="{{ .Site.Title }}" class="brand-logo">
+      <span class="brand-text">{{ .Site.Title }}</span>
+    </a>
+  </div>
+
+  {{/* Main Navigation Menu */}}
+  <div class="nav-menu">
+    {{ range .Site.Menus.main }}
+      {{ if .HasChildren }}
+        <div class="nav-group">
+          <span class="nav-group-title">{{ .Name }}</span>
+          <ul class="nav-submenu">
+            {{ range .Children }}
+            <li><a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}">{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+      {{ else }}
+        <a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}">{{ .Name }}</a>
+      {{ end }}
+    {{ end }}
+    
+    {{/* Additional links */}}
+    <a href="/search/" class="nav-link">Search</a>
+    <a href="/offerings/delphi/sign-up/" class="nav-cta">Get Started</a>
+  </div>
+</nav>

@@ -1,0 +1,125 @@
+// Simple Hugo Navigation Styles
+// Mobile-first, responsive design
+
+.site-navigation {
+  background: white;
+  border-bottom: 1px solid var(--gray-200);
+  padding: 1rem;
+  
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+}
+
+.nav-header {
+  margin-bottom: 1rem;
+  
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--gray-900);
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.brand-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 0;
+  color: var(--gray-700);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: var(--accent-color);
+  }
+  
+  &.active {
+    color: var(--accent-color);
+    font-weight: 600;
+  }
+  
+  @media (min-width: 768px) {
+    padding: 0.5rem;
+  }
+}
+
+.nav-cta {
+  display: inline-block;
+  background: var(--accent-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+  margin-top: 0.5rem;
+  
+  &:hover {
+    background: var(--accent-color-dark);
+  }
+  
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
+}
+
+.nav-group {
+  .nav-group-title {
+    font-weight: 600;
+    color: var(--gray-800);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .nav-submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 1rem;
+    
+    @media (min-width: 768px) {
+      margin: 0;
+    }
+    
+    li {
+      margin-bottom: 0.25rem;
+    }
+  }
+}
+
+// Main content adjustment when using simple nav
+.site-main {
+  margin-left: 0;
+  padding: 2rem 1rem;
+  
+  @media (min-width: 768px) {
+    padding: 2rem 3rem;
+  }
+}

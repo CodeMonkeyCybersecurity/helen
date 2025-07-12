@@ -1,7 +1,6 @@
 /* Custom styles for site content and components */
 
-// Import Hugo native navigation system (CSS-only, no JavaScript)
-@import "navigation-hugo";
+// Navigation now handled by main.scss via _navigation-simple.scss
 
 // Site-wide styling overrides
 html {

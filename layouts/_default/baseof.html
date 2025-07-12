@@ -121,7 +121,7 @@
   <a href="#main-content" class="skip-link">Skip to main content</a>
   
   {{/* Site Header with Navigation */}}
-  {{ partial "navigation/hugo-native" . }}
+  {{ partial "navigation/simple-hugo" . }}
   
   {{/* Main Content Area */}}
   <main id="main-content" class="site-main" role="main">
@@ -131,25 +131,6 @@
   {{/* Site Footer */}}
   {{ partial "footer/site-footer" . }}
   
-  {{/* JavaScript for Progressive Enhancement */}}
-  {{ if resources.Get "js/main.js" }}
-  {{ $js := resources.Get "js/main.js" | resources.Minify }}
-  <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
-  {{ end }}
-  
-  {{/* Service Worker Registration */}}
-  <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('/sw.js')
-        .then(function(registration) {
-          console.log('ServiceWorker registration successful');
-        })
-        .catch(function(error) {
-          console.log('ServiceWorker registration failed: ', error);
-        });
-    });
-  }
-  </script>
+  {{/* No JavaScript - CSS-only site */}}
 </body>
 </html>
