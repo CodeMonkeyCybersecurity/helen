@@ -24,7 +24,7 @@ In ancient Greek mythology and religion, Eos is the goddess and personification 
 
 This repo contains lots of tools to help you get started on your ubuntu server journey, including tools for easy server management and turn-key web app configurations.
 
--   Includes [`Delphi`](/Eos/Delphi/Delphi) - powered by [Wazuh](/https://wazuh.com), an enterprise level security system.  
+-   Includes [`Delphi`](/Eos/Delphi/Delphi) - powered by [Wazuh](/https://wazuh.com), an  level security system.  
     Contains instructions and best practices for deploying and managing Wazuh within your infrastructure.
 
 ## [Persephone](/Persephone/Persephone)
@@ -121,7 +121,7 @@ The configurations to deploy these can be found in the [`eos/apps/`](https://git
 | MinIO | ![✅](/_assets/svg/twemoji/2705.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [S3 compatible object storage](https://min.io/) | [s3.domain.com](http://s3.domain.com)<br><br>[s3api.domain.com](s3api.domain.com) | :8123<br><br>:9123 |
 | Penpot | ![](/_assets/svg/twemoji/274c.svg) | ![](/_assets/svg/twemoji/274c.svg) | [UX design](https://github.com/penpot/penpot) | [penpot.domain.com](http://penpot.domain.com) | :8147 |
 | Wiki.js | ![✅](/_assets/svg/twemoji/2705.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [Knowledge base/wiki](https://js.wiki/) | [wiki.domain.com](http://wiki.domain.com) | :8161 |
-| ERPNext | ![✅](/_assets/svg/twemoji/2705.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [Enterprise Resource Planning (ERP)](https://erpnext.com/) | [erp.domain.com](http://erp.domain.com) | :8167 |
+| ERPNext | ![✅](/_assets/svg/twemoji/2705.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [ Resource Planning (ERP)](https://erpnext.com/) | [erp.domain.com](http://erp.domain.com) | :8167 |
 | Jellyfin | ![✅](/_assets/svg/twemoji/2705.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [Media server](https://jellyfin.org/) | [media.domain.com](http://media.domain.com) | :8171<br><br>:9171 |
 | Vault | ![](/_assets/svg/twemoji/274c.svg) | ![✅](/_assets/svg/twemoji/2705.svg) | [Secrets Management](https://github.com/hashicorp/vault) | [pandora.domain.com](http://pandora.domain.com) | :8179 |
 | Consul | ![](/_assets/svg/twemoji/274c.svg) | ![](/_assets/svg/twemoji/274c.svg) | [Service Networking](https://github.com/hashicorp/consul) | N/A | :8191 :8209 |

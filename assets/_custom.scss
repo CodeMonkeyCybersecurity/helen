@@ -742,3 +742,29 @@ html {
   background-color: rgba($text-muted, 0.1);
   color: $text-muted;
 }
+
+// CompTIA badge size constraints
+// Limit badge sizes in content areas to be reasonable on larger screens
+img[src*="comptia"],
+img[src*="badge"] {
+  // In footer, badges should be small (h-10 = 2.5rem = 40px)
+  // In content, limit to 2-3x footer size maximum
+  &:not(.h-10) {
+    max-width: 120px; // 3x footer size (40px * 3)
+    max-height: 120px;
+    width: auto;
+    height: auto;
+  }
+}
+
+// Specific constraint for certification badge sections
+.certification-badges,
+div:has(> img[src*="comptia"]) {
+  img {
+    max-width: 100px; // 2.5x footer size
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    margin: 0.5rem;
+  }
+}

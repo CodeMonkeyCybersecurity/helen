@@ -115,7 +115,7 @@ Hugo handles asset compilation automatically:
 ## Writing Style Guidelines
 
 ### Tone and Language
-- **Target audience**: Home users, small businesses, and community groups (not enterprise IT professionals)
+- **Target audience**: Home users, small businesses, and community groups (not  IT professionals)
 - **Tone**: Approachable, helpful, and confidence-building rather than intimidating
 - **Avoid**: Military terminology, threat-focused language, imposing costs, "cyber warfare" rhetoric
 - **No padlock emojis or symbols** - use friendly alternatives like , , , 
@@ -130,7 +130,7 @@ Hugo handles asset compilation automatically:
 -  FUD
 
 ### Preferred Language
--  "Easy to use" instead of "enterprise-ready"
+-  "Easy to use" instead of "-ready"
 -  "Helps you stay safe" instead of "defends against threats"
 -  "Practical tools" instead of "security arsenal"
 -  "Peace of mind" instead of "threat mitigation"

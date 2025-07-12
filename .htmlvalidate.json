@@ -1,0 +1,49 @@
+{
+  "extends": [
+    "html-validate:recommended",
+    "html-validate:a11y"
+  ],
+  "rules": {
+    "doctype-style": "error",
+    "element-permitted-content": "error",
+    "element-required-attributes": "error",
+    "no-duplicate-id": "error",
+    "no-inline-style": "warn",
+    "script-type": "error",
+    "valid-id": "error",
+    "no-raw-characters": "error",
+    "prefer-native-element": "error",
+    "no-missing-references": "error",
+    "heading-level": "error",
+    "meta-refresh": "error",
+    "no-autoplay": "error",
+    "area-alt": "error",
+    "input-missing-label": "error",
+    "require-sri": ["error", {
+      "target": "crossorigin"
+    }],
+    "long-title": ["error", {
+      "maxlength": 70
+    }],
+    "missing-doctype": "error",
+    "no-self-closing": "off",
+    "void-style": "off",
+    "attribute-boolean-style": "off",
+    "element-permitted-occurrences": "off"
+  },
+  "elements": [
+    "html5",
+    {
+      "svg": {
+        "attributes": {
+          "xmlns": {
+            "required": false
+          }
+        }
+      }
+    }
+  ],
+  "transform": {
+    "^.*\\.html$": "html-validate-angular"
+  }
+}

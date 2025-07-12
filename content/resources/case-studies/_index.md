@@ -36,7 +36,7 @@ Dr. Sarah Mitchell runs a busy family medical practice serving 2,500 patients ac
 - **Compliance requirements** for medical data protection
 - **Previous security incidents** with patient data exposure
 
-"We knew we needed better security, but enterprise solutions were too expensive and complex. Our staff needed something simple that wouldn't interfere with patient care."
+"We knew we needed better security, but  solutions were too expensive and complex. Our staff needed something simple that wouldn't interfere with patient care."
 
 ### The Solution
 
@@ -277,7 +277,7 @@ Perth Outdoor Gear operates four retail locations across Perth, selling outdoor 
 
 ### Customer Testimonial
 
-> "Delphi Notify gave us enterprise-level security across all our stores without the enterprise complexity. The centralized monitoring means we know all locations are protected, and the clear alerts help our staff respond appropriately. Our customers trust us with their information, and we can confidently protect that trust."
+> "Delphi Notify gave us -level security across all our stores without the  complexity. The centralized monitoring means we know all locations are protected, and the clear alerts help our staff respond appropriately. Our customers trust us with their information, and we can confidently protect that trust."
 > 
 > **David Chen, Owner, Perth Outdoor Gear**
 

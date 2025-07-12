@@ -21,7 +21,7 @@ Joining the Fremantle Chamber of Commerce represents more than just membership -
 
 ## About Fremantle Chamber of Commerce
 
-The Fremantle Chamber of Commerce has been supporting local businesses for decades, fostering growth, innovation, and community connections. Their mission aligns perfectly with our goal of making cybersecurity accessible to small and medium businesses who often struggle with complex, enterprise-focused security solutions.
+The Fremantle Chamber of Commerce has been supporting local businesses for decades, fostering growth, innovation, and community connections. Their mission aligns perfectly with our goal of making cybersecurity accessible to small and medium businesses who often struggle with complex, -focused security solutions.
 
 ## Our Local Impact
 

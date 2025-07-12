@@ -249,7 +249,7 @@ eos monitor setup
 ### **Local Support (Australia)**
 - **Code Monkey Cybersecurity** provides commercial support
 - **Understanding of Australian small business needs** [^30]
-- **Reasonable rates** - not enterprise pricing for small business problems
+- **Reasonable rates** - not  pricing for small business problems
 
 ---
 
@@ -298,7 +298,7 @@ You don't need to set up everything at once. Start with what matters most:
 
 ## ** The Bottom Line for Home Users and Small Businesses**
 
-The big IT companies have left you behind. They focus on large corporations that can pay enterprise prices, while you're stuck with either toys or tools too complex to use [^35].
+The big IT companies have left you behind. They focus on large corporations that can pay  prices, while you're stuck with either toys or tools too complex to use [^35].
 
 **Eos bridges that gap:**
 - **Professional-quality tools** without professional complexity
@@ -369,4 +369,4 @@ This isn't about "cyber warfare" or "threat intelligence." It's about having rel
 [^32]: [IT Monitoring for Small Business - CompTIA](https://www.comptia.org/content/research/it-industry-trends-analysis)
 [^33]: [Proactive IT Management Benefits](https://www.techrepublic.com/article/proactive-vs-reactive-it-management/)
 [^34]: [Mobile Device Management Trends](https://www.gartner.com/en/information-technology/insights/mobile-device-management)
-[^35]: [Enterprise vs SMB Technology Gap Analysis](https://www.forrester.com/research/)
+[^35]: [ vs SMB Technology Gap Analysis](https://www.forrester.com/research/)

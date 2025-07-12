@@ -10,7 +10,7 @@ weight: 2
 
 ## Cybersecurity. With humans.
 
-**Code Monkey Cybersecurity** delivers enterprise security solutions to small businesses, nonprofits, and communities across Australia.
+**Code Monkey Cybersecurity** delivers  security solutions to small businesses, nonprofits, and communities across Australia.
 
 **Founded:** 2024 | **Location:** Fremantle, WA | **ABN:** 77 177 673 061
 
@@ -22,7 +22,7 @@ Industry-recognized certifications in cybersecurity, networking, and infrastruct
 
 ### Delphi Security Platform
 
-**Delphi** is a multi-tenant XDR and SIEM platform that makes enterprise security accessible to small businesses.
+**Delphi** is a multi-tenant XDR and SIEM platform that makes  security accessible to small businesses.
 
 **Key features:**
 - Real-time threat detection and response

@@ -32,10 +32,17 @@
     "availableLanguage": "English"
   },
   "sameAs": [
-    "{{ .Site.Social.github }}",
-    "{{ .Site.Social.facebook }}",
-    "{{ .Site.Social.linkedin }}",
-    "{{ .Site.Social.instagram }}"
+    {{ with .Site.Params.social }}
+    {{ with .github }}"{{ . }}",{{ end }}
+    {{ with .facebook }}"{{ . }}",{{ end }}
+    {{ with .linkedin }}"{{ . }}",{{ end }}
+    {{ with .instagram }}"{{ . }}"{{ end }}
+    {{ else }}
+    "https://github.com/CodeMonkeyCybersecurity",
+    "https://facebook.com/codemonkeycyber",
+    "https://linkedin.com/company/codemonkeycyber",
+    "https://instagram.com/code_monkey_cyber"
+    {{ end }}
   ],
   "industry": "Computer Security",
   "numberOfEmployees": "1-10",
@@ -134,7 +141,7 @@
     "@id": "{{ .Permalink }}"
   },
   "articleSection": "Cybersecurity",
-  "keywords": "{{ delimit .Params.keywords "," }}",
+  {{ with .Params.keywords }}"keywords": "{{ delimit . "," }}",{{ end }}
   "wordCount": {{ .WordCount }},
   "inLanguage": "en-AU"
 }

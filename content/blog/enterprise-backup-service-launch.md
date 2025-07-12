@@ -4,7 +4,7 @@ date: "2025-07-05"
 author: "Henry Oliver"
 tags: ["Backup Services", "Data Safety", "Restic", "Memory Safety", "SME Security"]
 categories: ["Service Announcement", "Data Safety"]
-description: "Launching August 2025: True enterprise backup powered by Restic and built with memory-safe Go. Starting at $5-8 per person per month - because sync isn't backup."
+description: "Launching August 2025: True  backup powered by Restic and built with memory-safe Go. Starting at $5-8 per person per month - because sync isn't backup."
 ---
 
 ![Backup Service Launch](/images/oh_the_hacks_web.jpg)
@@ -56,7 +56,7 @@ After watching too many WA businesses discover the hard way that **OneDrive and 
 When you delete a file locally, **it deletes everywhere**. That's sync working as designed - but it's the opposite of what backup should do.
 
 ### **2. Limited Retention (93 Days Max)**
-Delete something and don't notice for 4 months? **Gone forever.** No enterprise would accept this limitation.
+Delete something and don't notice for 4 months? **Gone forever.** No  would accept this limitation.
 
 ### **3. Ransomware Propagation**
 Ransomware encrypts your local files → Encrypted files sync to cloud → **All your "backup" copies are now encrypted too**
@@ -316,10 +316,10 @@ We'll evaluate your current data protection and show you:
 - **Insurance requirements** getting stricter on backup compliance
 
 ### **Technology Maturity**
-- **Restic ecosystem** now production-ready for enterprise
+- **Restic ecosystem** now production-ready for 
 - **Go language adoption** accelerating in critical infrastructure
 - **Memory-safe languages** becoming cybersecurity standard
-- **Cloud storage costs** making enterprise backup affordable
+- **Cloud storage costs** making  backup affordable
 
 ---
 

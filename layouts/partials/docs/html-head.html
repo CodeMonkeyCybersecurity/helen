@@ -72,6 +72,16 @@
 
 <script async defer data-website-id="970ff30a-ab5d-4c66-8f77-55cafc76083c" src="https://u.cybermonkey.dev/script.js"></script>
 
+<!-- Alpine.js x-cloak support -->
+<style>
+  [x-cloak] { display: none !important; }
+  /* Ensure mobile menu starts hidden */
+  .mobile-menu-dropdown { display: none; }
+  @media (min-width: 768px) {
+    .mobile-menu-dropdown { display: none !important; }
+  }
+</style>
+
 <!-- Alpine.js for interactive components -->
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 

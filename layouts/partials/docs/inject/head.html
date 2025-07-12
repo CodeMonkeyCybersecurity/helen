@@ -44,7 +44,10 @@
 {{/* Preconnect to external domains for performance */}}
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preconnect" href="{{ .Site.Params.umami_script | urls.Parse | printf "%s://%s" .Scheme .Host }}" />
+{{ with .Site.Params.umami_script }}
+  {{ $url := urls.Parse . }}
+  <link rel="preconnect" href="{{ printf "%s://%s" $url.Scheme $url.Host }}" />
+{{ end }}
 
 {{/* DNS prefetch for external resources */}}
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
@@ -74,7 +77,12 @@
 <meta name="theme-color" content="#ffffff" />
 
 {{/* Content Security Policy (adjust as needed) */}}
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' {{ .Site.Params.umami_script | urls.Parse | printf "%s://%s" .Scheme .Host }}; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data:; connect-src 'self' {{ .Site.Params.umami_script | urls.Parse | printf "%s://%s" .Scheme .Host }};" />
+{{ $umami_host := "" }}
+{{ with .Site.Params.umami_script }}
+  {{ $url := urls.Parse . }}
+  {{ $umami_host = printf "%s://%s" $url.Scheme $url.Host }}
+{{ end }}
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'{{ with $umami_host }} {{ . }}{{ end }}; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data:; connect-src 'self'{{ with $umami_host }} {{ . }}{{ end }};" />
 
 {{/* Umami Analytics - Privacy-first analytics */}}
 {{ if .Site.Params.umami_script }}

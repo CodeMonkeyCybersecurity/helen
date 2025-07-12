@@ -1,6 +1,6 @@
 ---
 title: "What is XDR? Technology Behind Delphi"
-description: "Simple explanation of XDR (Extended Detection and Response) technology. Learn how Delphi uses open-source tools like Wazuh to provide enterprise security for everyone."
+description: "Simple explanation of XDR (Extended Detection and Response) technology. Learn how Delphi uses open-source tools like Wazuh to provide  security for everyone."
 keywords: ["XDR", "Extended Detection Response", "Wazuh", "cybersecurity technology", "SIEM"]
 weight: 30
 ---
@@ -105,4 +105,4 @@ For those interested in the technical implementation:
 {{< button href="/offerings/delphi/sign-up/" >}}Try Delphi Notify{{< /button >}}
 {{% /hint %}}
 
-Get the benefits of enterprise XDR technology with human-friendly alerts and expert support.
+Get the benefits of  XDR technology with human-friendly alerts and expert support.

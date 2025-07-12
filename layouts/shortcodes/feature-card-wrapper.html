@@ -17,28 +17,29 @@ Your content here...
             shadow-sm hover:shadow-md transition-shadow rounded-xl p-6 my-6">
   <!-- eyebrow -->
   {{ with $eyebrow }}
-  <p class="text-xs tracking-widest font-semibold text-neutral-500 uppercase mb-2">
+  <p class="text-xs tracking-widest font-semibold text-neutral-500 uppercase mb-2 text-center">
     {{ . }}
   </p>
   {{ end }}
 
   <!-- title -->
   {{ with $title }}
-  <h2 class="text-xl font-semibold leading-snug text-neutral-900 dark:text-neutral-100 mb-3">
+  <h2 class="text-xl font-semibold leading-snug text-neutral-900 dark:text-neutral-100 mb-3 text-center">
     {{ . }}
   </h2>
   {{ end }}
 
   <!-- content -->
-  <div class="prose prose-sm max-w-none text-neutral-700 dark:text-neutral-300 mb-6">
+  <div class="prose prose-sm max-w-none text-neutral-700 dark:text-neutral-300 mb-6 text-center mx-auto">
     {{ .Inner | .Page.RenderString }}
   </div>
 
   <!-- CTA -->
   {{ if and $ctaLabel $ctaUrl }}
+  <div class="flex justify-center">
     <a href="{{ $ctaUrl }}" class="inline-flex items-center gap-2
        px-4 py-2 rounded-lg font-medium text-sm
-       transition-colors self-start
+       transition-colors
        {{ if eq $ctaStyle "primary" }}
          bg-black text-white hover:bg-neutral-800
        {{ else if eq $ctaStyle "teal" }}
@@ -51,5 +52,6 @@ Your content here...
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
       </svg>
     </a>
+  </div>
   {{ end }}
 </div>

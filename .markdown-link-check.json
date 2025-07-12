@@ -1,0 +1,38 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^http://localhost"
+    },
+    {
+      "pattern": "^https://localhost"
+    },
+    {
+      "pattern": "^#"
+    },
+    {
+      "pattern": "^/offerings/delphi/sign-up/"
+    },
+    {
+      "pattern": "^/about-us/contact/"
+    }
+  ],
+  "replacementPatterns": [
+    {
+      "pattern": "^/",
+      "replacement": "https://cybermonkey.net.au/"
+    }
+  ],
+  "httpHeaders": [
+    {
+      "urls": ["https://cybermonkey.net.au"],
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (compatible; markdown-link-check/3.0; +https://github.com/tcort/markdown-link-check)"
+      }
+    }
+  ],
+  "timeout": "10s",
+  "retryOn429": true,
+  "retryCount": 3,
+  "fallbackRetryDelay": "30s",
+  "aliveStatusCodes": [200, 201, 202, 203, 204, 301, 302, 303, 307, 308]
+}

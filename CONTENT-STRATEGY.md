@@ -136,7 +136,7 @@ Homepage
 ├── Pricing
 │   ├── Individual/Family Plans
 │   ├── Small Business Plans
-│   └── Enterprise Solutions
+│   └──  Solutions
 └── Support
     ├── Customer Portal
     ├── Documentation

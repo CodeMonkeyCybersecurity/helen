@@ -4,7 +4,7 @@ description: "Cybersecurity. With Humans."
 bookFlatSection: true
 ---
 
-{{< content-section title="Enterprise Security for Everyone" style="transparent" >}}
+{{< content-section title="Super simple cybersecurity" style="transparent" >}}
 
 ![Code Monkey Cybersecurity team providing human-centered cybersecurity protection with friendly puppy mascot representing approachable security](/images/cover_puppy_moni_monkey_optimized.jpg)
 
@@ -33,10 +33,14 @@ bookFlatSection: true
 
 {{< feature-card-wrapper eyebrow="HOW IT WORKS" title="Security in 4 Steps" cta-label="Start Free Trial" cta-url="/offerings/delphi/sign-up/" cta-style="teal" >}}
 
+<div class="inline-block text-left">
+
 1. **Monitor** - Advanced detection watches your devices 24/7
 2. **Review** - Security specialists filter out false alarms
 3. **Alert** - Receive clear guidance when action is needed
 4. **Protect** - Stop threats before they cause damage
+
+</div>
 
 {{< /feature-card-wrapper >}}
 
@@ -44,11 +48,15 @@ bookFlatSection: true
 
 ### Who We Serve
 
-**Small businesses** that need [enterprise security](/offerings/delphi/) without IT complexity
+<div class="text-center space-y-4">
+
+**Small businesses** that need [security](/offerings/delphi/) without IT complexity
 
 **Professional practices** in medical, legal, and financial services that require [cybersecurity compliance](/about-us/governance/)
 
 **Families** who want protection without technical expertise through our [training programs](/offerings/phishing-simulation/training/)
+
+</div>
 
 {{< /content-section >}}
 
@@ -89,6 +97,8 @@ bookFlatSection: true
 
 {{< content-section style="transparent" >}}
 
-*Location: Fremantle, WA • ABN: 77 177 673 061 • [Contact Us](/about-us/contact/) • [Customer Login](/about-us/customer-login/)*
+<p class="text-center text-sm text-slate-600">
+<em>Location: Fremantle, WA • ABN: 77 177 673 061 • <a href="/about-us/contact/">Contact Us</a> • <a href="/about-us/customer-login/">Customer Login</a></em>
+</p>
 
 {{< /content-section >}}

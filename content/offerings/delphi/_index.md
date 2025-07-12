@@ -12,7 +12,7 @@ offeringDescription: "XDR Security Platform"
 
 ![Diagram showing the relationship between antivirus, security information and event management (SIEM), and extended detection and response (XDR) technologies](/images/antivirus_siem_xdr_web.jpg)
 
-**Delphi** provides enterprise-grade threat detection for small businesses and nonprofits. Get real-world security without technical complexity.
+**Delphi** provides -grade threat detection for small businesses and nonprofits. Get real-world security without technical complexity.
 
 Delphi Notify detects threats, explains them clearly, and guides you through response actions. Built on proven open-source technology with expert human support.
 

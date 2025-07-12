@@ -119,8 +119,8 @@ weight = 20
   priority = 0.7
   filename = "sitemap.xml"
 
-# Optional: social links
-[social]
+# Social links moved to params
+[params.social]
   github = "https://github.com/CodeMonkeyCybersecurity"
   facebook = "https://facebook.com/codemonkeycyber"
   instagram = "https://instagram.com/code_monkey_cyber"
