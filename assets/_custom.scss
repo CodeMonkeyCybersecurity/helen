@@ -3,6 +3,9 @@
 // Import navigation interaction patterns
 @import "nav-interactions";
 
+// Import unified navigation styles
+@import "navigation-unified";
+
 // Unified navigation styling mixins
 @mixin nav-base-styling {
   background-color: $nav-background;
@@ -133,7 +136,7 @@ html {
   }
 }
 
-@media screen and (min-width: #{$mobile-breakpoint + 0.0625rem}) {
+@media screen and (min-width: #{$mobile-breakpoint + 1px}) {
   // Desktop: hide header completely
   .book-header {
     display: none !important;
@@ -329,6 +332,32 @@ html {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
+}
+
+// Button styles
+.btn-brand-teal {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  background-color: $brand-teal;
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background-color: darken($brand-teal, 10%);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    text-decoration: none;
+    color: white;
+  }
+  
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($brand-teal, 0.5);
+  }
 }
 
 // Unified search component styling
@@ -883,6 +912,8 @@ main {
 .mobile-menu-dropdown {
   background: white;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  max-height: calc(100vh - 4rem); // Ensure it doesn't overflow viewport
+  overflow-y: auto;
   
   // Override sidebar styles for mobile
   .book-menu-enhanced {
@@ -928,4 +959,68 @@ main {
   &[x-show="true"] {
     display: block !important;
   }
+}
+
+// Unified responsive breakpoints - using 768px consistently
+@media (max-width: 767px) {
+  // Mobile styles
+  .mobile-menu-button {
+    position: relative;
+    z-index: 60;
+  }
+  
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: white;
+  }
+  
+  // Show mobile elements
+  .mobile-menu-button,
+  .mobile-menu-dropdown {
+    display: block;
+  }
+  
+  // Hide desktop elements
+  .desktop-nav {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  // Desktop styles
+  .mobile-menu-button,
+  .mobile-menu-dropdown,
+  .mobile-search-wrapper {
+    display: none !important;
+  }
+  
+  .desktop-nav {
+    display: flex !important;
+  }
+}
+
+// Override book theme header styles
+.book-header {
+  all: unset;
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  
+  // Remove book theme's mobile menu controls
+  label[for="menu-control"] {
+    display: none !important;
+  }
+}
+
+// Ensure proper dropdown animation
+[x-cloak] {
+  display: none !important;
+}
+
+// Fix nav background
+nav {
+  background-color: white !important;
 }
