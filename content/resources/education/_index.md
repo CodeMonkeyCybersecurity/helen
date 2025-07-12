@@ -132,6 +132,4 @@ Dealing with an active security incident? We provide emergency response support 
 
 **Email**: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
-
-
 *All educational resources are provided free of charge as part of our commitment to improving cybersecurity awareness in Australian communities.*

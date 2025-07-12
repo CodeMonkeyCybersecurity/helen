@@ -19,7 +19,8 @@ $container-max-width: 80rem !default;
 $menu-width: 16rem !default;
 $toc-width: 16rem !default;
 
-$mobile-breakpoint: $menu-width + $body-min-width * 1.2 + $toc-width !default;
+// Unified breakpoint to match Tailwind's md (768px)
+$mobile-breakpoint: 768px !default; // Was: $menu-width + $body-min-width * 1.2 + $toc-width
 
 $hint-colors: (
   info: #6bf,

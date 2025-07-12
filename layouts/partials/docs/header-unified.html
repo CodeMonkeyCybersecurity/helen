@@ -1,0 +1,202 @@
+{{/* Unified responsive navigation header */}}
+<nav class="sticky top-0 z-50 bg-white border-b border-slate-200" x-data="{ mobileMenuOpen: false, resourcesDropdownOpen: false }" x-cloak>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      
+      {{/* Logo and Brand */}}
+      <div class="flex-shrink-0">
+        {{ partial "docs/brand-unified" (dict "Site" .Site "context" "header") }}
+      </div>
+      
+      {{/* Desktop Navigation - Hidden below 768px */}}
+      <div class="hidden md:flex items-center space-x-8">
+        {{/* Offerings - Direct Links */}}
+        {{ $offeringsSection := .Site.GetPage "/offerings" }}
+        {{ if $offeringsSection }}
+          {{ $offeringsPages := where $offeringsSection.Pages "Params.offering" true }}
+          {{ range $offeringsPages.ByWeight }}
+            {{ if not .Params.bookHidden }}
+              {{ $isActive := or (eq $.RelPermalink .RelPermalink) (hasPrefix $.RelPermalink .RelPermalink) }}
+              <a href="{{ .RelPermalink }}" 
+                 class="text-slate-700 hover:text-brand-teal transition-colors duration-200{{ if $isActive }} text-brand-teal font-medium{{ end }}">
+                {{ .Title }}
+              </a>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        
+        {{/* Resources Dropdown */}}
+        {{ if .Site.Menus.resources }}
+          <div class="relative" 
+               @mouseenter="resourcesDropdownOpen = true" 
+               @mouseleave="resourcesDropdownOpen = false">
+            <button class="text-slate-700 hover:text-brand-teal transition-colors duration-200 flex items-center space-x-1 focus:outline-none">
+              <span>Resources</span>
+              <svg class="w-4 h-4 transition-transform duration-200" 
+                   :class="{ 'rotate-180': resourcesDropdownOpen }"
+                   fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div x-show="resourcesDropdownOpen" 
+                 x-transition:enter="transition ease-out duration-200"
+                 x-transition:enter-start="opacity-0 translate-y-1"
+                 x-transition:enter-end="opacity-100 translate-y-0"
+                 x-transition:leave="transition ease-in duration-150"
+                 x-transition:leave-start="opacity-100 translate-y-0"
+                 x-transition:leave-end="opacity-0 translate-y-1"
+                 class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50">
+              {{ range .Site.Menus.resources }}
+                {{ $isActive := eq $.RelPermalink .URL }}
+                <a href="{{ .URL }}" 
+                   class="block px-4 py-2 text-slate-700 hover:bg-slate-50 hover:text-brand-teal transition-colors{{ if $isActive }} bg-slate-50 text-brand-teal{{ end }}">
+                  {{ .Name }}
+                </a>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+        
+        {{/* About Us */}}
+        {{ range .Site.Menus.about }}
+          {{ $isActive := eq $.RelPermalink .URL }}
+          <a href="{{ .URL }}" 
+             class="text-slate-700 hover:text-brand-teal transition-colors duration-200{{ if $isActive }} text-brand-teal font-medium{{ end }}">
+            {{ .Name }}
+          </a>
+        {{ end }}
+        
+        {{/* Blog */}}
+        {{ range .Site.Menus.blog }}
+          {{ $isActive := eq $.RelPermalink .URL }}
+          <a href="{{ .URL }}" 
+             class="text-slate-700 hover:text-brand-teal transition-colors duration-200{{ if $isActive }} text-brand-teal font-medium{{ end }}">
+            {{ .Name }}
+          </a>
+        {{ end }}
+      </div>
+      
+      {{/* Right Side - Search, CTA, Mobile Menu */}}
+      <div class="flex items-center space-x-4">
+        {{/* Desktop Search - Hidden below 768px */}}
+        <div class="hidden md:block">
+          {{ partial "docs/search-unified" (dict "Site" .Site "context" "desktop" "placeholder" "Search...") }}
+        </div>
+        
+        {{/* Desktop CTA Button - Hidden below 768px */}}
+        <a href="/offerings/delphi/sign-up/" 
+           class="hidden md:inline-flex items-center px-4 py-2 bg-brand-teal text-white rounded-lg hover:bg-opacity-90 transition-all duration-200 text-sm font-medium shadow-sm hover:shadow">
+          Get Started
+        </a>
+        
+        {{/* Mobile Search - Visible below 768px */}}
+        <div class="md:hidden">
+          {{ partial "docs/search-unified" (dict "Site" .Site "context" "mobile" "placeholder" "Search...") }}
+        </div>
+        
+        {{/* Mobile Menu Toggle - Visible below 768px */}}
+        <button @click="mobileMenuOpen = !mobileMenuOpen" 
+                class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-teal focus:ring-opacity-50"
+                :class="{ 'bg-slate-100': mobileMenuOpen }"
+                aria-label="Toggle menu"
+                aria-expanded="mobileMenuOpen">
+          <svg x-show="!mobileMenuOpen" 
+               class="h-6 w-6 text-slate-700" 
+               fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg x-show="mobileMenuOpen" 
+               class="h-6 w-6 text-slate-700" 
+               fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  {{/* Mobile Menu Dropdown - Visible below 768px */}}
+  <div x-show="mobileMenuOpen" 
+       x-transition:enter="transition ease-out duration-300"
+       x-transition:enter-start="opacity-0 -translate-y-2"
+       x-transition:enter-end="opacity-100 translate-y-0"
+       x-transition:leave="transition ease-in duration-200"
+       x-transition:leave-start="opacity-100 translate-y-0"
+       x-transition:leave-end="opacity-0 -translate-y-2"
+       @click.away="mobileMenuOpen = false"
+       class="md:hidden absolute top-full left-0 right-0 bg-white border-b border-slate-200 shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto">
+    
+    <div class="px-4 py-4 space-y-6">
+      {{/* Mobile CTA - Prominent placement */}}
+      <div>
+        <a href="/offerings/delphi/sign-up/" 
+           @click="mobileMenuOpen = false"
+           class="block w-full text-center px-4 py-3 bg-brand-teal text-white rounded-lg hover:bg-opacity-90 transition-colors font-medium shadow-sm">
+          Get Started - Free Trial
+        </a>
+      </div>
+      
+      {{/* Offerings Section */}}
+      {{ if $offeringsSection }}
+        {{ $offeringsPages := where $offeringsSection.Pages "Params.offering" true }}
+        {{ if $offeringsPages }}
+          <div class="space-y-2">
+            <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider px-2">Our Services</div>
+            {{ range $offeringsPages.ByWeight }}
+              {{ if not .Params.bookHidden }}
+                {{ $isActive := or (eq $.RelPermalink .RelPermalink) (hasPrefix $.RelPermalink .RelPermalink) }}
+                <a href="{{ .RelPermalink }}" 
+                   @click="mobileMenuOpen = false"
+                   class="block px-2 py-2 text-slate-700 hover:text-brand-teal hover:bg-slate-50 rounded transition-colors{{ if $isActive }} text-brand-teal bg-slate-50{{ end }}">
+                  {{ .Title }}
+                </a>
+              {{ end }}
+            {{ end }}
+          </div>
+        {{ end }}
+      {{ end }}
+      
+      {{/* Resources Section */}}
+      {{ if .Site.Menus.resources }}
+        <div class="space-y-2">
+          <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider px-2">Resources</div>
+          {{ range .Site.Menus.resources }}
+            {{ $isActive := eq $.RelPermalink .URL }}
+            <a href="{{ .URL }}" 
+               @click="mobileMenuOpen = false"
+               class="block px-2 py-2 text-slate-700 hover:text-brand-teal hover:bg-slate-50 rounded transition-colors{{ if $isActive }} text-brand-teal bg-slate-50{{ end }}">
+              {{ .Name }}
+            </a>
+          {{ end }}
+        </div>
+      {{ end }}
+      
+      {{/* Other Links */}}
+      <div class="space-y-2 border-t border-slate-200 pt-4">
+        {{ range .Site.Menus.about }}
+          {{ $isActive := eq $.RelPermalink .URL }}
+          <a href="{{ .URL }}" 
+             @click="mobileMenuOpen = false"
+             class="block px-2 py-2 text-slate-700 hover:text-brand-teal hover:bg-slate-50 rounded transition-colors{{ if $isActive }} text-brand-teal bg-slate-50{{ end }}">
+            {{ .Name }}
+          </a>
+        {{ end }}
+        
+        {{ range .Site.Menus.blog }}
+          {{ $isActive := eq $.RelPermalink .URL }}
+          <a href="{{ .URL }}" 
+             @click="mobileMenuOpen = false"
+             class="block px-2 py-2 text-slate-700 hover:text-brand-teal hover:bg-slate-50 rounded transition-colors{{ if $isActive }} text-brand-teal bg-slate-50{{ end }}">
+            {{ .Name }}
+          </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</nav>
+
+{{/* Legacy menu control for theme compatibility */}}
+<div class="hidden">
+  <input type="checkbox" id="menu-control" class="hidden" />
+  <label for="menu-control" class="fixed inset-0 z-0 hidden"></label>
+</div>

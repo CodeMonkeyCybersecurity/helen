@@ -4,8 +4,19 @@
   {{ partial "docs/html-head" . }}
   {{ partial "docs/inject/head" . }}
 </head>
-<body dir="{{ default "ltr" .Site.Language.LanguageDirection }}" class="brand-website has-unified-nav">
-  <input type="checkbox" class="hidden toggle" id="menu-control" />
+<body dir="{{ default "ltr" .Site.Language.LanguageDirection }}" class="brand-website has-unified-nav" 
+      x-data="{ 
+        menuOpen: false,
+        init() {
+          // Auto-close menu when switching to desktop
+          window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+              this.menuOpen = false;
+            }
+          });
+        }
+      }" 
+      x-cloak>
   
   <!-- Unified header structure for all pages -->
   <header class="book-header">
@@ -13,7 +24,7 @@
   </header>
   
   <main class="container flex">
-    <aside class="book-menu">
+    <aside class="book-menu" :class="{ 'menu-open': menuOpen }">
       <div class="book-menu-content">
         {{ template "menu" . }} <!-- Left menu Content -->
       </div>
@@ -31,7 +42,11 @@
 
       {{ template "comments" . }} <!-- Comments block -->
 
-      <label for="menu-control" class="hidden book-menu-overlay"></label>
+      <!-- Menu overlay for mobile -->
+      <div x-show="menuOpen" 
+           @click="menuOpen = false"
+           x-transition.opacity
+           class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
     </div>
 
     {{/* Right-hand TOC menu removed for cleaner layout */}}

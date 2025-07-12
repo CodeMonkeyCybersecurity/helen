@@ -3,8 +3,8 @@
 // Import navigation interaction patterns
 @import "nav-interactions";
 
-// Import unified navigation styles
-@import "navigation-unified";
+// Complete navigation override (replaces Hugo Book theme navigation)
+@import "navigation-override";
 
 // Unified navigation styling mixins
 @mixin nav-base-styling {
@@ -104,58 +104,19 @@ html {
   }
 }
 
-// Clean responsive behavior - let theme handle most of it
-@media screen and (max-width: $mobile-breakpoint) {
-  // Mobile: sticky header, sidebar handled by theme
-  .book-header {
-    display: block !important;
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 50 !important;
+// Mobile menu dropdown styling (from header)
+.mobile-menu-dropdown {
+  max-height: calc(100vh - 3.5rem) !important; // Viewport height minus header
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch; // Smooth scrolling on iOS
+  
+  @media (min-width: 640px) {
+    max-height: calc(100vh - 4rem) !important; // Larger header on sm screens
   }
   
-  // Fix mobile menu height to fit on screen
-  .mobile-menu-dropdown {
-    max-height: calc(100vh - 3.5rem) !important; // Viewport height minus header
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch; // Smooth scrolling on iOS
-    
-    @media (min-width: 640px) {
-      max-height: calc(100vh - 4rem) !important; // Larger header on sm screens
-    }
-    
-    // Ensure last item (Get Started button) has bottom padding
-    > div {
-      padding-bottom: 2rem !important; // Extra padding at bottom
-    }
-  }
-  
-  // Mobile search wrapper - just contains the unified search
-  .mobile-search-wrapper {
-    display: block;
-  }
-}
-
-@media screen and (min-width: #{$mobile-breakpoint + 1px}) {
-  // Desktop: hide header completely
-  .book-header {
-    display: none !important;
-  }
-  
-  // Ensure menu stays pinned to left edge
-  .book-menu {
-    position: sticky !important;
-    top: 0 !important;
-    height: 100vh !important;
-    overflow: visible !important; // Allow menu content to handle its own scroll
-    
-    .book-menu-content {
-      position: sticky !important;
-      top: 0 !important;
-      height: 100vh !important;
-      overflow-y: auto !important;
-      -webkit-overflow-scrolling: touch !important;
-    }
+  // Ensure last item (Get Started button) has bottom padding
+  > div {
+    padding-bottom: 2rem !important; // Extra padding at bottom
   }
 }
 
@@ -756,6 +717,24 @@ html {
   overflow: hidden;
 }
 
+// Button styles
+.btn-brand-teal {
+  background-color: $brand-teal;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-block;
+  
+  &:hover {
+    background-color: darken($brand-teal, 10%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
 // Icon color classes
 .teal-icon {
   background-color: rgba($brand-primary, 0.1);
@@ -961,66 +940,4 @@ main {
   }
 }
 
-// Unified responsive breakpoints - using 768px consistently
-@media (max-width: 767px) {
-  // Mobile styles
-  .mobile-menu-button {
-    position: relative;
-    z-index: 60;
-  }
-  
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    background: white;
-  }
-  
-  // Show mobile elements
-  .mobile-menu-button,
-  .mobile-menu-dropdown {
-    display: block;
-  }
-  
-  // Hide desktop elements
-  .desktop-nav {
-    display: none !important;
-  }
-}
-
-@media (min-width: 768px) {
-  // Desktop styles
-  .mobile-menu-button,
-  .mobile-menu-dropdown,
-  .mobile-search-wrapper {
-    display: none !important;
-  }
-  
-  .desktop-nav {
-    display: flex !important;
-  }
-}
-
-// Override book theme header styles
-.book-header {
-  all: unset;
-  display: block;
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  
-  // Remove book theme's mobile menu controls
-  label[for="menu-control"] {
-    display: none !important;
-  }
-}
-
-// Ensure proper dropdown animation
-[x-cloak] {
-  display: none !important;
-}
-
-// Fix nav background
-nav {
-  background-color: white !important;
-}
+// Navigation override handles all responsive behavior
