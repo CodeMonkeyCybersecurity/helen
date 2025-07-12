@@ -104,7 +104,7 @@ jobs:
         run: npm run lint:html
 
       - name: Check for broken links
-        uses: lycheeverse/lychee-action@v1
+        uses: lycheeverse/lychee-action@v2
         with:
           args: --verbose --no-progress './public/**/*.html'
           fail: true
