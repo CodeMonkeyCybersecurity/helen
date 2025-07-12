@@ -241,9 +241,9 @@ isPlainText = true
     keepQuotes = false
     keepWhitespace = false
 
-# Image processing optimization
+# Hugo-native image processing optimization
 [imaging]
-  quality = 85
+  quality = 75              # Reduced for better compression
   resampleFilter = "Lanczos"
   anchor = "Smart"
   bgColor = "#ffffff"
@@ -252,7 +252,7 @@ isPlainText = true
   # Default image processing options
   [imaging.exif]
     includeFields = ""
-    excludeFields = "GPS|Orientation"
+    excludeFields = "GPS|Orientation|ColorSpace|Software"
     disableDate = false
     disableLatLong = true
 

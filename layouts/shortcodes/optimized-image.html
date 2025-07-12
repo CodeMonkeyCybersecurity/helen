@@ -1,38 +1,47 @@
-{{/* Optimized image shortcode with lazy loading and responsive sizes */}}
+{{/* Hugo-native optimized image with WebP and responsive sizes */}}
 {{ $src := .Get "src" }}
 {{ $alt := .Get "alt" }}
 {{ $class := .Get "class" | default "" }}
 {{ $loading := .Get "loading" | default "lazy" }}
 {{ $sizes := .Get "sizes" | default "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" }}
-{{ $quality := .Get "quality" | default 85 }}
-{{ $format := .Get "format" | default "webp" }}
+{{ $quality := .Get "quality" | default 75 }}
 
 {{ $image := resources.Get $src }}
 {{ if $image }}
-  {{ $webp := $image.Resize (printf "800x webp q%d" $quality) }}
-  {{ $small := $image.Resize (printf "400x webp q%d" $quality) }}
-  {{ $medium := $image.Resize (printf "800x webp q%d" $quality) }}
-  {{ $large := $image.Resize (printf "1200x webp q%d" $quality) }}
+  {{/* Generate responsive sizes in both WebP and original format */}}
+  {{ $small_webp := $image.Resize (printf "400x webp q%d" $quality) }}
+  {{ $medium_webp := $image.Resize (printf "800x webp q%d" $quality) }}
+  {{ $large_webp := $image.Resize (printf "1200x webp q%d" $quality) }}
+  
+  {{ $small_fallback := $image.Resize (printf "400x q%d" $quality) }}
+  {{ $medium_fallback := $image.Resize (printf "800x q%d" $quality) }}
+  {{ $large_fallback := $image.Resize (printf "1200x q%d" $quality) }}
   
   <picture class="{{ $class }}">
+    {{/* WebP sources for modern browsers */}}
     <source 
-      srcset="{{ $small.RelPermalink }} 400w, {{ $medium.RelPermalink }} 800w, {{ $large.RelPermalink }} 1200w"
+      srcset="{{ $small_webp.RelPermalink }} 400w, {{ $medium_webp.RelPermalink }} 800w, {{ $large_webp.RelPermalink }} 1200w"
       sizes="{{ $sizes }}"
       type="image/webp"
     />
+    {{/* Fallback for older browsers */}}
+    <source 
+      srcset="{{ $small_fallback.RelPermalink }} 400w, {{ $medium_fallback.RelPermalink }} 800w, {{ $large_fallback.RelPermalink }} 1200w"
+      sizes="{{ $sizes }}"
+    />
     <img 
-      src="{{ $medium.RelPermalink }}" 
+      src="{{ $medium_fallback.RelPermalink }}" 
       alt="{{ $alt }}" 
       loading="{{ $loading }}"
       decoding="async"
       class="{{ $class }}"
-      width="{{ $medium.Width }}"
-      height="{{ $medium.Height }}"
+      width="{{ $medium_fallback.Width }}"
+      height="{{ $medium_fallback.Height }}"
       style="max-width: 100%; height: auto;"
     />
   </picture>
 {{ else }}
-  {{/* Fallback for external images or when resource processing fails */}}
+  {{/* Fallback for missing resources */}}
   <img 
     src="{{ $src }}" 
     alt="{{ $alt }}" 

@@ -1,12 +1,18 @@
 [
-{{- $pages := where .Site.Pages "Kind" "not in" (slice "taxonomy" "taxonomyTerm") -}}
+{{- $pages := .Site.RegularPages -}}
 {{- range $i, $p := $pages }}
   {{- if $i }},{{ end }}
   {
     "title": {{ $p.Title | jsonify }},
-    "url": {{ $p.Permalink | jsonify }},
+    "permalink": {{ $p.Permalink | jsonify }},
+    "url": {{ $p.RelPermalink | jsonify }},
+    "section": {{ $p.Section | jsonify }},
+    "type": {{ $p.Type | jsonify }},
+    "date": {{ $p.Date.Format "2006-01-02" | jsonify }},
     "summary": {{ $p.Summary | plainify | chomp | jsonify }},
-    "content": {{ $p.Content | plainify | chomp | jsonify }}
+    "content": {{ $p.Content | plainify | chomp | truncate 1000 | jsonify }},
+    "tags": [{{ range $t := $p.Params.tags }}{{ $t | jsonify }},{{ end }}],
+    "categories": [{{ range $c := $p.Params.categories }}{{ $c | jsonify }},{{ end }}]
   }
 {{- end }}
 ]

@@ -102,10 +102,13 @@ Not everyone needs access to everything - use the principle of least privilege
 
 ### **Quick Reference Guides**
 
-**[Suspicious Email Checklist]** - Print this out for your desk
-**[Password Manager Setup Guide]** - Step-by-step instructions for popular password managers
+{{< feature-cards >}}
+{{< feature-card title="Suspicious Email Checklist" description="Print this out for your desk - quick reference for identifying phishing attempts" buttonText="Download PDF" buttonUrl="/resources/guides/suspicious-email-checklist.pdf" >}}
 
-**[What to Do If You've Been Scammed]** - Immediate steps to take if you think you've been compromised
+{{< feature-card title="Password Manager Setup Guide" description="Step-by-step instructions for popular password managers including Bitwarden and 1Password" buttonText="Read Guide" buttonUrl="/resources/guides/password-manager-setup/" >}}
+
+{{< feature-card title="Incident Response Checklist" description="Immediate steps to take if you think you've been compromised or scammed" buttonText="Download PDF" buttonUrl="/resources/guides/incident-response-checklist.pdf" >}}
+{{< /feature-cards >}}
 
 ### **Stay Informed**
 
