@@ -251,3 +251,65 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+// =================================
+// GLOBAL CENTER ALIGNMENT
+// =================================
+
+// Default center alignment for all sections and containers
+.site,
+.homepage,
+.page-content,
+.site-footer,
+section,
+article,
+.hero-section,
+.features-section,
+.recent-content,
+.cta-section,
+.trust-indicators {
+  text-align: center;
+}
+
+// Specific elements that should maintain center alignment
+h1, h2, h3, h4, h5, h6,
+p, 
+.hero-title,
+.hero-description,
+.section-title,
+.page-title,
+.page-description,
+.feature-card,
+.post-preview,
+.resource-preview,
+.cta-content,
+.indicator {
+  text-align: center;
+}
+
+// Navigation and menu items should be centered
+nav,
+.nav-section,
+.menu,
+.page-navigation {
+  text-align: center;
+}
+
+// Footer content should be centered
+.footer-content,
+.footer-links,
+.footer-bottom,
+.footer-legal-links {
+  text-align: center;
+}
+
+// Responsive adjustments for center alignment
+@media (max-width: 1023px) {
+  .site,
+  .homepage,
+  .page-content,
+  section,
+  article {
+    text-align: center;
+  }
+}

@@ -102,9 +102,13 @@ For individual users: Each additional device is $5/month. For businesses: We can
 
 {{% details title="Do you offer discounts?" open=true %}}
 Yes! We offer:
-- 20% discount for annual payments
-- Non-profit and educational institution discounts (contact us)
-- Multi-location business discounts
+
+20% discount for annual payments
+
+Non-profit and educational institution discounts (contact us)
+
+Multi-location business discounts
+
 {{% /details %}}
 
 {{% details title="What's included in the setup assistance?" open=true %}}
