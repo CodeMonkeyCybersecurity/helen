@@ -41,6 +41,9 @@ $font-family-body: 'Inter', sans-serif;
 // Monospace font (Noto Sans Mono)
 $font-family-mono: 'Noto Sans Mono', monospace;
 
+// Legacy compatibility
+$font-family-primary: $font-family-brand;
+
 // =================================
 // FONT SIZES - Custom Specification
 // =================================
@@ -92,6 +95,8 @@ $line-height-body: 1.6;
   
   // Legacy compatibility
   --font-family-primary: #{$font-family-brand};
+  --font-family-body: #{$font-family-body};
+  --font-family-mono: #{$font-family-mono};
   --font-weight-normal: #{$font-weight-normal};
   --font-weight-medium: #{$font-weight-medium};
   --font-weight-semibold: #{$font-weight-semibold};

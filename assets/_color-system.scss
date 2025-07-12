@@ -34,6 +34,10 @@ $brand-orange-alt: #da7756;  // Yet another orange
 // Error/Alert color
 $brand-alert-red: #e45549;
 
+// Define compatibility variables early
+$purple-600: $brand-purple;            // Use brand purple
+$orange-500: $brand-orange-logo;       // Use brand orange
+
 // =================================
 // SEMANTIC COLORS - Using Brand Colors
 // =================================
@@ -108,6 +112,9 @@ $bg-dark-primary: $neutral-800;
 $bg-dark-secondary: $neutral-700;
 $bg-dark-tertiary: $neutral-600;
 
+// Legacy compatibility
+$bg-secondary: $neutral-50;         // Light background for cards/panels
+
 // =================================
 // TEXT COLORS - Custom Typography
 // =================================
@@ -139,10 +146,6 @@ $security-safe: $primary-500;          // Safe/secure (0ca678)
 $trust-verified: $brand-green;         // Verified/trusted (51a14f)
 $trust-warning: $brand-gold;           // Requires attention (b66b02)
 $trust-unknown: $neutral-500;          // Unknown status (a0a1a6)
-
-// Define missing variables for compatibility
-$purple-600: $brand-purple;            // Use brand purple
-$orange-500: $brand-orange-logo;       // Use brand orange
 
 // =================================
 // CSS CUSTOM PROPERTIES
