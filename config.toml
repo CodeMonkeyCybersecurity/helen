@@ -30,6 +30,18 @@ buildExpired = false
   enableGitInfo = true
   Logo = 'favicon.png'
   
+  # Content organization
+  mainSections = ["posts", "resources"]
+  paginate = 12
+  rssLimit = 20
+  
+  # Development helpers
+  enableRobotsTXT = true
+  enableEmoji = true
+  
+  # Related content configuration
+  related_posts = true
+  
   # SEO and Social Media
   images = ["images/cover_puppy_moni_monkey_optimized.jpg"]
   twitter_site = "@codemonkeycyber"
@@ -173,14 +185,36 @@ mediaType = "application/json"
 baseName = "index"
 isPlainText = true
 
-# Optional: default settings for content
+# Enhanced markup configuration
 [markup]
   [markup.goldmark.renderer]
     unsafe = true
+    hardWraps = false
+    xhtml = false
   [markup.goldmark.extensions]
     attribute = true
+    autoHeadingID = true
+    definitionList = true
+    footnote = true
+    linkify = true
+    strikethrough = true
+    table = true
+    taskList = true
+    typographer = true
+  [markup.goldmark.parser]
+    autoHeadingIDType = "github"
+    wrapStandAloneImageWithinParagraph = false
   [markup.tableOfContents]
-    startLevel = 1
+    startLevel = 2
+    endLevel = 4
+    ordered = false
+  [markup.highlight]
+    style = "github"
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
 
 # Optional: default frontmatter for new pages
 [frontmatter]
@@ -206,15 +240,75 @@ isPlainText = true
   quality = 85
   resampleFilter = "Lanczos"
   anchor = "Smart"
+  bgColor = "#ffffff"
+  hint = "photo"
+  
+  # Default image processing options
+  [imaging.exif]
+    includeFields = ""
+    excludeFields = "GPS|Orientation"
+    disableDate = false
+    disableLatLong = true
 
-# Caching configuration
+# Enhanced caching configuration
 [caches]
   [caches.images]
     dir = ":resourceDir/_gen"
-    maxAge = "24h"
+    maxAge = "168h"  # 1 week for images
   [caches.assets]
     dir = ":resourceDir/_gen"
-    maxAge = "24h"
+    maxAge = "72h"   # 3 days for CSS/JS
   [caches.modules]
     dir = ":cacheDir/modules"
+    maxAge = "168h"  # 1 week for modules
+  [caches.getjson]
+    dir = ":cacheDir/:project"
     maxAge = "24h"
+  [caches.getcsv]
+    dir = ":cacheDir/:project"
+    maxAge = "24h"
+
+# Related content configuration
+[related]
+  threshold = 80
+  includeNewer = true
+  toLower = false
+  [[related.indices]]
+    name = "keywords"
+    weight = 100
+  [[related.indices]]
+    name = "tags"
+    weight = 80
+  [[related.indices]]
+    name = "categories"
+    weight = 60
+  [[related.indices]]
+    name = "section"
+    weight = 40
+
+# Taxonomies
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  series = "series"
+
+# Privacy configuration
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = false
+    simple = true
+  [privacy.x]
+    disable = false
+    enableDNT = true
+    simple = true
+  [privacy.vimeo]
+    disable = false
+    enableDNT = true
+    simple = true
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = true

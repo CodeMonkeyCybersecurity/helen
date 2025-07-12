@@ -1,0 +1,270 @@
+{{ define "main" }}
+<div class="offline-page">
+  <div class="offline-content">
+    <div class="offline-icon">
+      <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3Z"/>
+        <path d="M16 8L2 22"/>
+        <path d="M17.5 15H9"/>
+      </svg>
+    </div>
+    
+    <article class="offline-article">
+      {{ .Content }}
+    </article>
+    
+    <div class="offline-actions">
+      <button onclick="location.reload()" class="btn btn-primary offline-retry">
+        🔄 Try Again
+      </button>
+      
+      <button onclick="goHome()" class="btn btn-secondary offline-home">
+         Go Home
+      </button>
+    </div>
+    
+    <div class="cached-pages" id="cached-pages">
+      <h3>Recently Viewed Pages</h3>
+      <div class="cached-list" id="cached-list">
+        <p>Loading cached content...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Check for cached pages and display them
+document.addEventListener('DOMContentLoaded', function() {
+  displayCachedPages();
+  checkOnlineStatus();
+});
+
+function goHome() {
+  window.location.href = '/';
+}
+
+function displayCachedPages() {
+  if ('caches' in window) {
+    caches.open('codemonkey-v1').then(cache => {
+      cache.keys().then(requests => {
+        const cachedList = document.getElementById('cached-list');
+        
+        if (requests.length === 0) {
+          cachedList.innerHTML = '<p>No cached pages available.</p>';
+          return;
+        }
+        
+        const pageList = requests
+          .filter(request => {
+            const url = new URL(request.url);
+            return url.pathname !== '/offline/' && 
+                   url.pathname !== '/sw.js' && 
+                   url.pathname !== '/manifest.json' &&
+                   !url.pathname.includes('/css/') &&
+                   !url.pathname.includes('/js/');
+          })
+          .slice(0, 10) // Show max 10 pages
+          .map(request => {
+            const url = new URL(request.url);
+            const pathname = url.pathname;
+            const title = pathname === '/' ? 'Home' : 
+                         pathname.split('/').filter(Boolean).pop() || pathname;
+            
+            return `<a href="${pathname}" class="cached-page-link">
+              📄 ${title.charAt(0).toUpperCase() + title.slice(1)}
+            </a>`;
+          })
+          .join('');
+        
+        cachedList.innerHTML = pageList || '<p>No cached pages available.</p>';
+      });
+    }).catch(() => {
+      document.getElementById('cached-list').innerHTML = '<p>Cache not available.</p>';
+    });
+  } else {
+    document.getElementById('cached-list').innerHTML = '<p>Caching not supported in this browser.</p>';
+  }
+}
+
+function checkOnlineStatus() {
+  function updateOnlineStatus() {
+    if (navigator.onLine) {
+      document.body.classList.add('online');
+      showOnlineNotification();
+    } else {
+      document.body.classList.remove('online');
+    }
+  }
+  
+  function showOnlineNotification() {
+    const notification = document.createElement('div');
+    notification.className = 'online-notification';
+    notification.innerHTML = `
+      <div class="notification-content">
+        <span>🌐 You're back online!</span>
+        <button onclick="location.reload()" class="btn btn-primary btn-small">Refresh Page</button>
+      </div>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+      notification.remove();
+    }, 5000);
+  }
+  
+  window.addEventListener('online', updateOnlineStatus);
+  window.addEventListener('offline', updateOnlineStatus);
+  updateOnlineStatus();
+}
+</script>
+
+<style>
+.offline-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.offline-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.offline-icon {
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+  opacity: 0.7;
+}
+
+.offline-icon svg {
+  width: 120px;
+  height: 120px;
+}
+
+.offline-article {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.offline-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.offline-retry, .offline-home {
+  min-width: 140px;
+}
+
+.cached-pages {
+  background: var(--gray-50);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.cached-pages h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.cached-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cached-page-link {
+  display: block;
+  padding: 0.75rem;
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--gray-700);
+  transition: all 0.2s ease;
+}
+
+.cached-page-link:hover {
+  background: var(--accent-color-light);
+  color: white;
+  transform: translateX(4px);
+}
+
+.online-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--accent-color);
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 1000;
+  animation: slideInRight 0.3s ease;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-small {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+body.online .offline-icon {
+  color: var(--accent-color);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .offline-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .offline-retry, .offline-home {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .online-notification {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+  }
+  
+  .notification-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+{{ end }}

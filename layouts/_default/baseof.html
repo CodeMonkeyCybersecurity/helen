@@ -18,6 +18,13 @@
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/favicon.png">
   
+  {{/* Progressive Web App */}}
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0ca678">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="{{ .Site.Title }}">
+  
   {{/* RSS Feed */}}
   {{ with .OutputFormats.Get "rss" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
@@ -129,5 +136,20 @@
   {{ $js := resources.Get "js/main.js" | resources.Minify }}
   <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
   {{ end }}
+  
+  {{/* Service Worker Registration */}}
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js')
+        .then(function(registration) {
+          console.log('ServiceWorker registration successful');
+        })
+        .catch(function(error) {
+          console.log('ServiceWorker registration failed: ', error);
+        });
+    });
+  }
+  </script>
 </body>
 </html>

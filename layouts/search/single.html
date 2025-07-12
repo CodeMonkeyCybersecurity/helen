@@ -1,12 +1,350 @@
 {{ define "main" }}
 <div class="search-page">
   <header class="search-header">
-    <h1>Search</h1>
-    {{ partial "navigation/search-hugo" . }}
+    <h1 class="search-title">{{ .Title }}</h1>
+    <p class="search-description">{{ .Description | default "Search our documentation, resources, and content." }}</p>
   </header>
-  
-  <main class="search-content">
-    {{ partial "navigation/search-hugo" . }}
-  </main>
+
+  <div class="search-form-container">
+    <form class="search-form" role="search">
+      <div class="search-input-group">
+        <input 
+          type="search" 
+          id="search-input" 
+          class="search-input" 
+          placeholder="Search documentation, guides, and resources..."
+          autocomplete="off"
+          autofocus
+        >
+        <button type="submit" class="search-button">
+          <span class="search-icon"></span>
+          <span class="sr-only">Search</span>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="search-results" id="search-results" aria-live="polite">
+    <div class="search-placeholder">
+      <h2>Popular Resources</h2>
+      <div class="popular-resources">
+        {{ range first 6 (where .Site.RegularPages "Section" "resources") }}
+        <div class="resource-card">
+          <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+          {{ if .Description }}
+          <p>{{ .Description | truncate 100 }}</p>
+          {{ end }}
+          {{ if .Params.type }}
+          <span class="resource-type">{{ .Params.type | title }}</span>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <div class="search-tips">
+    <h3>Search Tips</h3>
+    <ul>
+      <li>Use specific keywords related to cybersecurity, security tools, or documentation</li>
+      <li>Try searching for "phishing", "backup", "XDR", or "training"</li>
+      <li>Search includes content from documentation, education resources, and blog posts</li>
+    </ul>
+  </div>
 </div>
+
+<script>
+(function() {
+  const searchInput = document.getElementById('search-input');
+  const searchResults = document.getElementById('search-results');
+  const searchForm = document.querySelector('.search-form');
+  
+  let searchIndex = null;
+  let searchData = null;
+  
+  // Load search index
+  async function loadSearchIndex() {
+    try {
+      const response = await fetch('/index.json');
+      searchData = await response.json();
+      
+      // Simple search index creation
+      searchIndex = searchData.map((item, index) => ({
+        ...item,
+        searchText: (item.title + ' ' + item.content + ' ' + (item.tags || []).join(' ')).toLowerCase(),
+        index: index
+      }));
+      
+      console.log('Search index loaded:', searchIndex.length, 'items');
+    } catch (error) {
+      console.error('Failed to load search index:', error);
+    }
+  }
+  
+  // Perform search
+  function performSearch(query) {
+    if (!searchIndex || !query.trim()) {
+      return [];
+    }
+    
+    const terms = query.toLowerCase().split(' ').filter(term => term.length > 2);
+    const results = [];
+    
+    searchIndex.forEach(item => {
+      let score = 0;
+      let matches = 0;
+      
+      terms.forEach(term => {
+        const titleMatches = (item.title.toLowerCase().match(new RegExp(term, 'g')) || []).length;
+        const contentMatches = (item.searchText.match(new RegExp(term, 'g')) || []).length;
+        
+        if (titleMatches > 0) {
+          score += titleMatches * 10; // Title matches are more important
+          matches++;
+        }
+        if (contentMatches > 0) {
+          score += contentMatches;
+          matches++;
+        }
+      });
+      
+      // Only include results that match at least one term
+      if (matches > 0) {
+        results.push({ ...item, score, matches });
+      }
+    });
+    
+    // Sort by score (relevance)
+    return results.sort((a, b) => b.score - a.score).slice(0, 20);
+  }
+  
+  // Display search results
+  function displayResults(results, query) {
+    if (results.length === 0) {
+      searchResults.innerHTML = '<div class="search-no-results"><h2>No results found for "' + query + '"</h2><p>Try different keywords or browse our <a href="/resources/">resources</a> and <a href="/posts/">blog posts</a>.</p></div>';
+      return;
+    }
+    
+    const resultsHTML = results.map(result => {
+      const excerpt = result.content.length > 200 
+        ? result.content.substring(0, 200) + '...' 
+        : result.content;
+        
+      return '<div class="search-result"><h3 class="search-result-title"><a href="' + result.permalink + '">' + result.title + '</a></h3><p class="search-result-excerpt">' + excerpt + '</p><div class="search-result-meta"><span class="search-result-section">' + result.section + '</span></div></div>';
+    }).join('');
+    
+    searchResults.innerHTML = '<div class="search-results-header"><h2>Search Results for "' + query + '"</h2><p>' + results.length + ' result' + (results.length !== 1 ? 's' : '') + ' found</p></div><div class="search-results-list">' + resultsHTML + '</div>';
+  }
+  
+  // Handle search input
+  let searchTimeout;
+  searchInput.addEventListener('input', function() {
+    const query = this.value.trim();
+    
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(() => {
+      if (query.length > 2) {
+        const results = performSearch(query);
+        displayResults(results, query);
+      } else if (query.length === 0) {
+        // Show placeholder content
+        searchResults.innerHTML = '<div class="search-placeholder"><h2>Popular Resources</h2><p>Start typing to search our documentation and resources.</p></div>';
+      }
+    }, 300);
+  });
+  
+  // Handle form submission
+  searchForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const query = searchInput.value.trim();
+    if (query.length > 2) {
+      const results = performSearch(query);
+      displayResults(results, query);
+    }
+  });
+  
+  // Load search index when page loads
+  loadSearchIndex();
+  
+  // Handle URL search parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  const queryParam = urlParams.get('q');
+  if (queryParam) {
+    searchInput.value = queryParam;
+    setTimeout(() => {
+      if (searchIndex) {
+        const results = performSearch(queryParam);
+        displayResults(results, queryParam);
+      }
+    }, 500);
+  }
+})();
+</script>
+
+<style>
+.search-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.search-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.search-title {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.search-form-container {
+  margin-bottom: 2rem;
+}
+
+.search-input-group {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.search-input {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+.search-button {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.search-button:hover {
+  background: var(--accent-color-dark);
+}
+
+.search-results {
+  min-height: 200px;
+}
+
+.search-result {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.search-result-title a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.search-result-title a:hover {
+  text-decoration: underline;
+}
+
+.search-result-excerpt {
+  color: var(--gray-600);
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.search-result-meta {
+  display: flex;
+  gap: 1rem;
+  color: var(--gray-500);
+  font-size: 0.9rem;
+}
+
+.search-result-section {
+  background: var(--gray-100);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+
+.search-no-results {
+  text-align: center;
+  padding: 2rem;
+  color: var(--gray-600);
+}
+
+.popular-resources {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.resource-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.resource-card h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.resource-card a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.resource-type {
+  background: var(--accent-color-light);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.search-tips {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: var(--gray-50);
+  border-radius: 8px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .search-input-group {
+    flex-direction: column;
+  }
+  
+  .search-button {
+    border-radius: 0 0 8px 8px;
+  }
+  
+  .popular-resources {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 {{ end }}

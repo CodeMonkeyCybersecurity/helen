@@ -1,0 +1,68 @@
+{{/*
+Hugo Image Processing Shortcode
+Usage: {{< img src="image.jpg" alt="Description" width="800" height="600" >}}
+Optional: class, loading, sizes
+*/}}
+
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $width := .Get "width" | default 800 }}
+{{ $height := .Get "height" | default 600 }}
+{{ $class := .Get "class" | default "responsive-image" }}
+{{ $loading := .Get "loading" | default "lazy" }}
+{{ $sizes := .Get "sizes" | default "(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 60vw" }}
+
+{{ if $src }}
+  {{ $image := "" }}
+  
+  {{/* Try to get image from different locations */}}
+  {{ if resources.Get $src }}
+    {{ $image = resources.Get $src }}
+  {{ else if resources.Get (printf "images/%s" $src) }}
+    {{ $image = resources.Get (printf "images/%s" $src) }}
+  {{ else if fileExists (printf "static/%s" $src) }}
+    {{/* Static image - no processing */}}
+    <img src="{{ $src | relURL }}" 
+         alt="{{ $alt }}" 
+         class="{{ $class }}" 
+         loading="{{ $loading }}"
+         {{ with $width }}width="{{ . }}"{{ end }}
+         {{ with $height }}height="{{ . }}"{{ end }}>
+  {{ end }}
+  
+  {{ if $image }}
+    {{/* Process the image */}}
+    {{ $webp := $image.Resize (printf "%sx%s webp" $width $height) }}
+    {{ $jpg := $image.Resize (printf "%sx%s jpg" $width $height) }}
+    {{ $small := $image.Resize "400x webp" }}
+    {{ $medium := $image.Resize "800x webp" }}
+    {{ $large := $image.Resize "1200x webp" }}
+    
+    <picture class="{{ $class }}">
+      {{/* WebP sources with responsive sizes */}}
+      <source 
+        srcset="{{ $small.RelPermalink }} 400w,
+                {{ $medium.RelPermalink }} 800w,
+                {{ $large.RelPermalink }} 1200w"
+        sizes="{{ $sizes }}"
+        type="image/webp">
+      
+      {{/* Fallback JPG */}}
+      <img src="{{ $jpg.RelPermalink }}" 
+           alt="{{ $alt }}" 
+           loading="{{ $loading }}"
+           width="{{ $jpg.Width }}"
+           height="{{ $jpg.Height }}"
+           class="image-fallback">
+    </picture>
+  {{ else }}
+    {{/* Fallback for missing images */}}
+    <div class="image-placeholder {{ $class }}">
+      <span>Image not found: {{ $src }}</span>
+    </div>
+  {{ end }}
+{{ else }}
+  <div class="image-error">
+    <span>Error: No image source specified</span>
+  </div>
+{{ end }}

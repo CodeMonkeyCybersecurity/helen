@@ -1,85 +1,44 @@
 {{/*
-  Individual Resource Highlight Card
-  
-  Parameters:
-  - title: Resource title
-  - url: Link to full resource (optional)
-  - type: Resource type (guide, tool, checklist, video)
-  - time: Reading/completion time
-  - difficulty: beginner, intermediate, advanced
-  - featured: true/false for special highlighting
+Resource Highlight Card
+Usage: {{< resource-highlight title="Title" type="guide" time="5 min" difficulty="beginner" featured="true" >}}Content{{< /resource-highlight >}}
 */}}
 
 {{ $title := .Get "title" }}
-{{ $url := .Get "url" }}
 {{ $type := .Get "type" | default "guide" }}
 {{ $time := .Get "time" }}
-{{ $difficulty := .Get "difficulty" }}
+{{ $difficulty := .Get "difficulty" | default "beginner" }}
 {{ $featured := .Get "featured" }}
+{{ $url := .Get "url" }}
 
-{{ $typeIcons := dict 
-  "guide" ""
-  "tool" ""
-  "checklist" ""
-  "video" "🎥"
-  "tip" "💡"
-  "warning" "⚠️"
-}}
-
-{{ $difficultyColors := dict 
-  "beginner" "bg-green-100 text-green-800"
-  "intermediate" "bg-yellow-100 text-yellow-800"
-  "advanced" "bg-red-100 text-red-800"
-}}
-
-<div class="resource-highlight {{ if $featured }}ring-2 ring-brand-teal{{ end }}">
-  {{ if $url }}
-    <a href="{{ $url }}" class="block h-full">
-  {{ end }}
-  
-  <div class="h-full p-6 bg-white border border-slate-200 rounded-lg {{ if $url }}hover:shadow-md transition-shadow{{ end }} {{ if $featured }}border-brand-teal{{ end }}">
-    
-    <div class="flex items-start justify-between mb-3">
-      <div class="flex items-center space-x-2">
-        <span class="text-xl">{{ index $typeIcons $type }}</span>
-        <span class="text-sm font-medium text-slate-500 uppercase tracking-wide">{{ $type }}</span>
-      </div>
-      
-      {{ if $difficulty }}
-      <span class="px-2 py-1 text-xs font-medium rounded-full {{ index $difficultyColors $difficulty }}">
-        {{ $difficulty }}
-      </span>
-      {{ end }}
-    </div>
-    
-    <h3 class="text-lg font-semibold text-slate-900 mb-3 {{ if $featured }}text-brand-teal{{ end }}">
+<div class="resource-highlight-card {{ if $featured }}featured{{ end }}">
+  <div class="resource-highlight-header">
+    <h3 class="resource-highlight-title">
+      {{ if $url }}
+      <a href="{{ $url }}">{{ $title }}</a>
+      {{ else }}
       {{ $title }}
+      {{ end }}
     </h3>
     
-    <div class="text-slate-600 mb-4 text-sm leading-relaxed">
-      {{ .Inner | markdownify }}
-    </div>
-    
-    <div class="flex items-center justify-between mt-auto">
+    <div class="resource-highlight-meta">
+      <span class="resource-type type-{{ $type }}">{{ $type | title }}</span>
       {{ if $time }}
-      <span class="text-xs text-slate-500 flex items-center">
-        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-        </svg>
-        {{ $time }}
-      </span>
+      <span class="resource-time">⏱️ {{ $time }}</span>
       {{ end }}
-      
-      {{ if $url }}
-      <span class="text-xs text-brand-teal font-medium flex items-center">
-        View →
-      </span>
+      <span class="resource-difficulty difficulty-{{ $difficulty }}">{{ $difficulty | title }}</span>
+      {{ if $featured }}
+      <span class="resource-featured">⭐ Featured</span>
       {{ end }}
     </div>
-    
+  </div>
+  
+  <div class="resource-highlight-content">
+    {{ .Inner | markdownify }}
   </div>
   
   {{ if $url }}
-    </a>
+  <div class="resource-highlight-footer">
+    <a href="{{ $url }}" class="resource-highlight-link">Read More →</a>
+  </div>
   {{ end }}
 </div>

@@ -1,14 +1,18 @@
-{{- $ref := "" }}
-{{- $target := "" -}}
-{{- with .Get "href" -}}
-  {{- $ref = . -}}
-  {{- if not (hasPrefix . "/") -}}
-    {{- $target = "_blank" -}}
-  {{- end -}}
-{{- end -}}
-{{- with .Get "relref" -}}
-  {{- $ref = relref $ . -}}
-{{- end -}}
-<a {{ with $ref }} href="{{.}}" {{ end }} {{ with $target }} target="{{.}}" rel="noopener" {{ end }} class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-white/20 hover:bg-white/30 backdrop-blur-sm transition-all duration-200 hover:scale-105{{ with .Get "class" }} {{ . }}{{ end }}">
-  {{- .InnerDeindent -}}
+{{/*
+Button Shortcode
+Usage: {{< button href="/link" style="primary" >}}Button Text{{< /button >}}
+Styles: primary, secondary, outline, danger
+*/}}
+
+{{ $href := .Get "href" | default "#" }}
+{{ $style := .Get "style" | default "primary" }}
+{{ $target := .Get "target" | default "_self" }}
+{{ $class := .Get "class" | default "" }}
+{{ $size := .Get "size" | default "normal" }}
+
+<a href="{{ $href }}" 
+   target="{{ $target }}" 
+   class="btn btn-{{ $style }} btn-{{ $size }} {{ $class }}"
+   {{ if eq $target "_blank" }}rel="noopener noreferrer"{{ end }}>
+  {{ .Inner | markdownify }}
 </a>

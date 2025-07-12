@@ -54,7 +54,7 @@ run_test_with_warnings() {
     fi
 }
 
-echo "🔍 Code Monkey Cybersecurity - Comprehensive Test Suite"
+echo " Code Monkey Cybersecurity - Comprehensive Test Suite"
 echo "======================================================"
 
 # Check prerequisites
