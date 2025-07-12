@@ -104,7 +104,7 @@ weight = 30
 
 [[menu.main]]
 name = "Blog"
-url = "/posts/"
+url = "/blog/"
 weight = 40
 
 # Before menu (appears at top of left sidebar) - removed to avoid duplication

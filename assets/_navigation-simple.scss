@@ -56,8 +56,15 @@
   color: var(--gray-700);
   text-decoration: none;
   transition: color 0.2s ease;
+  border-radius: 4px;
   
   &:hover {
+    color: var(--accent-color);
+  }
+  
+  &:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
     color: var(--accent-color);
   }
   
@@ -83,6 +90,12 @@
   margin-top: 0.5rem;
   
   &:hover {
+    background: var(--accent-color-dark);
+  }
+  
+  &:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
     background: var(--accent-color-dark);
   }
   

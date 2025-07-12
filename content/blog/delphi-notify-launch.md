@@ -7,17 +7,19 @@ categories: ["Product News", "Security Software"]
 description: "Free until August 1st - Meet Delphi Notify, the security monitoring tool that explains threats in plain English instead of confusing technical alerts."
 ---
 
-![Delphi Notify Launch](/images/oh_the_hacks_web.jpg)
+![Cybersecurity monitoring dashboard showing threat detection and human-reviewed alerts for Delphi Notify security service](/images/oh_the_hacks_web.jpg)
 
 # **Cybersecurity. Now with Humans.**
 
 ## The Problem with Security Alerts
 
-Most security software treats you like an IT professional. You get alerts like:
+Most security software treats you like an IT professional. According to [Cisco's 2024 Cybersecurity Readiness Index](https://www.cisco.com/c/en/us/about/trust-center/cybersecurity-series.html), 61% of small businesses lack dedicated cybersecurity staff, yet face the same complex alerts as enterprise IT teams.
+
+You get alerts like:
 
 *"Process svchost.exe attempting network connection to 192.168.1.1 on port 445 - Risk Level: MEDIUM"*
 
-What does that even mean? 
+What does that even mean? [IBM's Security Intelligence Report](https://www.ibm.com/security/data-breach) shows that the average time to identify a security breach is 277 days - partly because traditional alerts are too technical for everyday users to understand and act upon. 
 
 ## Meet Delphi Notify 
 
@@ -69,8 +71,10 @@ No confusing technical alerts. You get the **full story**: what happened, what e
 We're offering Delphi Notify **completely free** until August 1st as part of our Fremantle rollout.
 
 ### Perfect For:
-**Small businesses** who can't afford security teams
-**Home users** who want protection without complexity  
+**Small businesses** who can't afford security teams - [ACSC's Small Business Cyber Security Guide](https://www.cyber.gov.au/resources/small-business-cyber-security) shows 43% of cyber attacks target small businesses
+
+**Home users** who want protection without complexity - [Australia's 2024 Cyber Security Report](https://www.cyber.gov.au/about-us/reports-and-statistics/acsc-annual-cyber-threat-report) indicates home users face 67,500 cybercrime reports annually
+
 **Anyone** tired of confusing security alerts that make no sense
 
 ## Ready to Try It?

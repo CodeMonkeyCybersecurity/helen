@@ -7,7 +7,7 @@ categories: ["Security Training", "Company News"]
 description: "Code Monkey Cybersecurity's Phishing training"
 ---
 
-![Phishing and Scam Training Workshop](/images/oh_the_hacks_web.jpg)
+![Interactive cybersecurity training workshop showing participants learning to identify phishing emails and social engineering attacks](/images/oh_the_hacks_web.jpg)
 
 # Why this is important
 

@@ -5,34 +5,34 @@
   - No JavaScript required
 */}}
 
-<nav class="site-navigation">
+<nav class="site-navigation" role="navigation" aria-label="Main navigation">
   {{/* Site Header */}}
   <div class="nav-header">
-    <a href="{{ .Site.BaseURL }}" class="site-brand">
-      <img src="/favicon.png" alt="{{ .Site.Title }}" class="brand-logo">
+    <a href="{{ .Site.BaseURL }}" class="site-brand" aria-label="Code Monkey Cybersecurity homepage">
+      <img src="/favicon.png" alt="Code Monkey Cybersecurity logo" class="brand-logo">
       <span class="brand-text">{{ .Site.Title }}</span>
     </a>
   </div>
 
   {{/* Main Navigation Menu */}}
-  <div class="nav-menu">
+  <div class="nav-menu" role="menubar">
     {{ range .Site.Menus.main }}
       {{ if .HasChildren }}
-        <div class="nav-group">
-          <span class="nav-group-title">{{ .Name }}</span>
-          <ul class="nav-submenu">
+        <div class="nav-group" role="none">
+          <span class="nav-group-title" role="menuitem">{{ .Name }}</span>
+          <ul class="nav-submenu" role="menu" aria-label="{{ .Name }} submenu">
             {{ range .Children }}
-            <li><a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}">{{ .Name }}</a></li>
+            <li role="none"><a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}" role="menuitem"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
             {{ end }}
           </ul>
         </div>
       {{ else }}
-        <a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}">{{ .Name }}</a>
+        <a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}" role="menuitem"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
       {{ end }}
     {{ end }}
     
     {{/* Additional links */}}
-    <a href="/search/" class="nav-link">Search</a>
-    <a href="/offerings/delphi/sign-up/" class="nav-cta">Get Started</a>
+    <a href="/search/" class="nav-link" role="menuitem" aria-label="Search our website">Search</a>
+    <a href="/offerings/delphi/sign-up/" class="nav-cta" role="menuitem" aria-label="Get started with our cybersecurity services">Get Started</a>
   </div>
 </nav>

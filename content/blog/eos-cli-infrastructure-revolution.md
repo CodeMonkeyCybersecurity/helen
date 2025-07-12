@@ -7,7 +7,7 @@ categories: ["Product Showcase", "Small Business Technology"]
 description: "The home-friendly open source CLI that gives you professional IT capabilities without the complexity or cost. Built for real people, not just IT professionals."
 ---
 
-![Home and Small Business Technology](/images/oh_the_hacks_web.jpg)
+![Modern home office setup with cybersecurity monitoring tools and EOS CLI infrastructure management software protecting small business networks](/images/oh_the_hacks_web.jpg)
 
 # **Professional IT Tools Made Simple for Home Users and Small Businesses** 
 
