@@ -18,12 +18,21 @@
       <span class="brand-text">{{ .Site.Title }}</span>
     </a>
     
-    {{/* Mobile Hamburger Button */}}
-    <label for="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu">
-      <span class="hamburger"></span>
-      <span class="hamburger"></span>
-      <span class="hamburger"></span>
-    </label>
+    {{/* Mobile Controls */}}
+    <div class="mobile-controls">
+      {{/* Mobile Search Toggle */}}
+      <input type="checkbox" id="mobile-search-toggle" class="mobile-search-checkbox" aria-label="Toggle search">
+      <label for="mobile-search-toggle" class="mobile-search-btn" aria-label="Toggle search">
+        <span class="search-icon">🔍</span>
+      </label>
+      
+      {{/* Mobile Hamburger Button */}}
+      <label for="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </label>
+    </div>
   </div>
 
   {{/* Main Navigation Menu */}}
@@ -36,17 +45,25 @@
       </a>
     </div>
     
-    {{/* Secondary Navigation - Search */}}
-    {{ if .Site.Menus.secondary }}
-    <div class="nav-secondary">
-      {{ range .Site.Menus.secondary }}
-        <a href="{{ .URL }}" class="nav-link nav-link-secondary" role="menuitem" aria-label="{{ .Name }} our website">
-          <span class="nav-icon"></span>
-          <span class="nav-text">{{ .Name }}</span>
-        </a>
-      {{ end }}
+    {{/* Search Section - Desktop */}}
+    <div class="nav-search-section">
+      <form action="/search/" method="GET" class="nav-search-form">
+        <div class="nav-search-input-container">
+          <span class="nav-search-icon">🔍</span>
+          <input 
+            type="search" 
+            name="q" 
+            class="nav-search-input"
+            placeholder="Search..."
+            autocomplete="off"
+            aria-label="Search"
+          >
+          <button type="submit" class="nav-search-submit" aria-label="Search">
+            <span class="submit-arrow">→</span>
+          </button>
+        </div>
+      </form>
     </div>
-    {{ end }}
     
     <div class="nav-primary">
       {{ range .Site.Menus.main }}
@@ -64,6 +81,43 @@
         {{ end }}
       {{ end }}
     </div>
+  </div>
+  
+  {{/* CSS-only Search Overlay - inside nav for CSS selectors to work */}}
+  <div class="search-overlay">
+  <label for="mobile-search-toggle" class="search-overlay-backdrop" aria-label="Close search"></label>
+  <div class="search-spotlight">
+    <div class="search-spotlight-header">
+      <h2 class="visually-hidden">Search</h2>
+      <label for="mobile-search-toggle" class="search-close-btn" aria-label="Close search">
+        <span class="close-icon">×</span>
+      </label>
+    </div>
+    
+    <form action="/search/" method="GET" class="search-spotlight-form">
+      <div class="search-spotlight-input-container">
+        <span class="search-spotlight-icon">🔍</span>
+        <input 
+          type="search" 
+          name="q"
+          class="search-spotlight-input" 
+          placeholder="Search documentation, guides, and resources..."
+          autocomplete="off"
+          aria-label="Search query"
+          required
+        >
+        <button type="submit" class="search-submit-btn" aria-label="Search">
+          <span class="submit-icon">↵</span>
+        </button>
+      </div>
+    </form>
+    
+    <div class="search-spotlight-shortcuts">
+      <span class="shortcut-hint">
+        <kbd>Enter</kbd> to search • Click outside to close
+      </span>
+    </div>
+  </div>
   </div>
 </nav>
 

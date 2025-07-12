@@ -43,10 +43,10 @@ Protect your data from ransomware and device failures with a proper backup strat
 **What it looks like**: Emails pretending to be from banks, government agencies, or familiar companies asking you to "verify" account information.
 
 **Red flags**: 
-- Generic greetings ("Dear Customer")
-- Urgent threats ("Your account will be closed!")
-- Requests for personal information via email
-- Links that don't match the supposed sender
+Generic greetings ("Dear Customer")
+Urgent threats ("Your account will be closed!")
+Requests for personal information via email
+Links that don't match the supposed sender
 
 ### Phone Scams
 **What it looks like**: Callers claiming to be from banks, tech support, or government agencies requesting immediate action.

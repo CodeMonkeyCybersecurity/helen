@@ -1,0 +1,253 @@
+// Code Monkey Cybersecurity - Mixins & Placeholders
+// Centralized reusable styles to reduce duplication
+
+// =================================
+// CARD MIXINS
+// =================================
+
+@mixin card-base($padding: 1.5rem, $border-radius: 8px) {
+  background: white;
+  border: 1px solid var(--color-neutral-200);
+  border-radius: $border-radius;
+  padding: $padding;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@mixin card-hover($lift: -2px) {
+  &:hover {
+    transform: translateY($lift);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+}
+
+@mixin card-full($padding: 1.5rem, $border-radius: 8px) {
+  @include card-base($padding, $border-radius);
+  @include card-hover();
+}
+
+// =================================
+// BUTTON MIXINS
+// =================================
+
+@mixin button-base($padding: 0.75rem 1.5rem, $border-radius: 6px) {
+  display: inline-block;
+  padding: $padding;
+  text-decoration: none;
+  border-radius: $border-radius;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+@mixin button-hover($color: #d77350) {
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $color;
+    text-underline-offset: 2px;
+  }
+}
+
+@mixin button-active($bg-color: #d77350, $text-color: white) {
+  &:active, &.active {
+    background: $bg-color;
+    color: $text-color;
+  }
+}
+
+@mixin button-primary {
+  @include button-base();
+  background: var(--bg-button-primary);
+  color: var(--text-primary);
+  
+  @include button-hover();
+  @include button-active();
+}
+
+@mixin button-secondary {
+  @include button-base();
+  background: var(--bg-button-secondary);
+  color: var(--text-primary);
+  
+  @include button-hover();
+  @include button-active();
+}
+
+// =================================
+// LAYOUT MIXINS
+// =================================
+
+@mixin center-content($max-width: 800px) {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+@mixin section-spacing($top: 3rem, $bottom: 3rem) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
+@mixin container-padding($mobile: 1rem, $desktop: 2rem) {
+  padding-left: $mobile;
+  padding-right: $mobile;
+  
+  @media (min-width: 1024px) {
+    padding-left: $desktop;
+    padding-right: $desktop;
+  }
+}
+
+// =================================
+// FOCUS MIXINS
+// =================================
+
+@mixin focus-outline($color: var(--color-primary), $offset: 2px) {
+  outline: 2px solid $color;
+  outline-offset: $offset;
+  border-radius: 4px;
+}
+
+@mixin focus-visible {
+  &:focus-visible {
+    @include focus-outline();
+  }
+}
+
+// =================================
+// TYPOGRAPHY MIXINS
+// =================================
+
+@mixin heading-base($size: var(--font-size-xl), $weight: 700) {
+  font-family: var(--font-heading);
+  font-size: $size;
+  font-weight: $weight;
+  line-height: 1.25;
+  color: #393a42;
+}
+
+@mixin body-text($size: var(--font-size-base)) {
+  font-family: var(--font-body);
+  font-size: $size;
+  line-height: var(--font-line-height);
+}
+
+@mixin text-gradient($color-start: var(--color-primary), $color-end: var(--color-primary-dark)) {
+  background: linear-gradient(135deg, $color-start, $color-end);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
+  // Fallback for unsupported browsers
+  @supports not (-webkit-background-clip: text) {
+    color: $color-start;
+  }
+}
+
+// =================================
+// GRID MIXINS
+// =================================
+
+@mixin responsive-grid($min-width: 300px, $gap: 2rem) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+  gap: $gap;
+}
+
+@mixin flex-center($direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+// =================================
+// ANIMATION MIXINS
+// =================================
+
+@mixin smooth-transition($properties: all, $duration: 0.2s) {
+  transition: $properties $duration ease;
+}
+
+@mixin hover-lift($amount: -2px) {
+  &:hover {
+    transform: translateY($amount);
+  }
+}
+
+// =================================
+// UTILITY MIXINS
+// =================================
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// =================================
+// RESPONSIVE MIXINS
+// =================================
+
+@mixin mobile-only {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+// Note: This mixin pattern doesn't work in SCSS - removed for now
+// Individual mobile-only and desktop-only mixins should be used separately
+
+// =================================
+// PLACEHOLDERS (for @extend)
+// =================================
+
+%card-base {
+  @include card-full();
+}
+
+%button-reset {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+%list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+%text-center {
+  text-align: center;
+}
+
+%truncate-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

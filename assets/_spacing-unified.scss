@@ -1,0 +1,135 @@
+// Code Monkey Cybersecurity - Unified Spacing & Layout System
+// Consistent spacing, sizing, and layout values
+
+// =================================
+// SPACING SCALE
+// =================================
+
+// Base spacing unit
+$spacing-base: 1rem;               // 16px
+
+// Spacing scale (following 8px grid)
+$spacing-1: 0.125rem;              // 2px
+$spacing-2: 0.25rem;               // 4px  
+$spacing-3: 0.375rem;              // 6px
+$spacing-4: 0.5rem;                // 8px
+$spacing-6: 0.75rem;               // 12px
+$spacing-8: 1rem;                  // 16px
+$spacing-12: 1.5rem;               // 24px
+$spacing-16: 2rem;                 // 32px
+$spacing-20: 2.5rem;               // 40px
+$spacing-24: 3rem;                 // 48px
+$spacing-32: 4rem;                 // 64px
+
+// Legacy padding variables (for backwards compatibility)
+$padding-1: $spacing-1;
+$padding-4: $spacing-2;
+$padding-8: $spacing-4;
+$padding-16: $spacing-8;
+
+// =================================
+// BORDER RADIUS
+// =================================
+
+$border-radius-sm: 4px;
+$border-radius: 6px;               // Default
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+$border-radius-full: 50%;
+
+// =================================
+// CONTAINER SIZES
+// =================================
+
+$container-sm: 640px;
+$container-md: 768px;
+$container-lg: 1024px;
+$container-xl: 1280px;
+$container-2xl: 1536px;
+
+// Default container
+$container-max-width: $container-xl;
+$body-min-width: 20rem;
+
+// =================================
+// SIDEBAR & NAVIGATION
+// =================================
+
+$sidebar-width: 280px;
+$nav-height-mobile: 72px;
+$nav-height-desktop: 80px;
+
+// =================================
+// BREAKPOINTS
+// =================================
+
+$breakpoint-mobile: 1023px;       // Mobile max-width
+$breakpoint-desktop: 1024px;      // Desktop min-width
+
+// =================================
+// Z-INDEX SCALE
+// =================================
+
+$z-dropdown: 10;
+$z-sticky: 20;
+$z-fixed: 30;
+$z-modal-backdrop: 40;
+$z-modal: 50;
+$z-popover: 60;
+$z-tooltip: 70;
+$z-toast: 80;
+
+// Navigation specific
+$z-nav: 100;
+$z-nav-mobile: 102;
+
+// =================================
+// BOX SHADOWS
+// =================================
+
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+
+// Card shadows
+$shadow-card: $shadow;
+$shadow-card-hover: $shadow-md;
+
+// =================================
+// CSS CUSTOM PROPERTIES
+// =================================
+
+:root {
+  // Spacing
+  --spacing-1: #{$spacing-1};
+  --spacing-2: #{$spacing-2};
+  --spacing-3: #{$spacing-3};
+  --spacing-4: #{$spacing-4};
+  --spacing-6: #{$spacing-6};
+  --spacing-8: #{$spacing-8};
+  --spacing-12: #{$spacing-12};
+  --spacing-16: #{$spacing-16};
+  --spacing-20: #{$spacing-20};
+  --spacing-24: #{$spacing-24};
+  --spacing-32: #{$spacing-32};
+  
+  // Border radius
+  --border-radius-sm: #{$border-radius-sm};
+  --border-radius: #{$border-radius};
+  --border-radius-md: #{$border-radius-md};
+  --border-radius-lg: #{$border-radius-lg};
+  --border-radius-xl: #{$border-radius-xl};
+  --border-radius-full: #{$border-radius-full};
+  
+  // Shadows
+  --shadow-sm: #{$shadow-sm};
+  --shadow: #{$shadow};
+  --shadow-md: #{$shadow-md};
+  --shadow-lg: #{$shadow-lg};
+  --shadow-xl: #{$shadow-xl};
+  --shadow-card: #{$shadow-card};
+  --shadow-card-hover: #{$shadow-card-hover};
+}

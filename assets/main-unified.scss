@@ -17,16 +17,12 @@
 // 4. Mixins and placeholders (new - reduces duplication)
 @import 'mixins';
 
-// 5. Unified components (new - consolidates repeated patterns) - DISABLED TEMPORARILY
-// @import 'components';
+// 5. Unified components (new - consolidates repeated patterns)
+@import 'components';
 
 // =================================
 // LEGACY COMPATIBILITY IMPORTS
 // =================================
-
-// Legacy variables needed for compatibility
-@import 'variables';
-@import 'defaults';
 
 // Keep these for now to avoid breaking existing functionality
 @import 'markdown';
@@ -49,8 +45,7 @@
 
 // Site container
 .site {
-  font-family: var(--font-body);
-  line-height: var(--line-height-normal);
+  @include body-text();
   color: var(--text-primary);
   background-color: var(--bg-website);
   display: flex;
@@ -99,25 +94,19 @@
 // =================================
 
 .page-content {
-  max-width: 800px;
-  margin: 0 auto;
+  @include center-content();
   
   .page-header {
     margin-bottom: var(--spacing-16);
     
     .page-title {
-      font-family: var(--font-heading);
-      font-size: var(--font-size-2xl);
-      font-weight: 700;
-      line-height: 1.25;
+      @include heading-base(var(--font-size-2xl));
       color: var(--color-primary);
       margin-bottom: var(--spacing-8);
     }
     
     .page-description {
-      font-family: var(--font-body);
-      font-size: var(--font-size-lg);
-      line-height: var(--line-height-normal);
+      @include body-text(var(--font-size-lg));
       color: var(--text-secondary);
       margin-bottom: var(--spacing-8);
     }
@@ -234,7 +223,7 @@
     flex-wrap: wrap;
     gap: var(--spacing-8);
     
-    @media (max-width: 1023px) {
+    @include mobile-only {
       flex-direction: column;
       text-align: center;
     }
@@ -263,11 +252,10 @@
 // =================================
 
 .search-page {
-  max-width: 800px;
-  margin: 0 auto;
+  @include center-content();
   padding: var(--spacing-16) var(--spacing-8);
   
-  @media (max-width: 1023px) {
+  @include mobile-only {
     padding: var(--spacing-12) var(--spacing-8);
   }
 }
@@ -282,7 +270,7 @@
   color: var(--color-primary);
   margin-bottom: var(--spacing-8);
   
-  @media (max-width: 1023px) {
+  @include mobile-only {
     font-size: var(--font-size-2xl);
   }
 }
@@ -298,23 +286,21 @@
 }
 
 .search-input-group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center();
   max-width: 600px;
   margin: 0 auto;
   box-shadow: var(--shadow-md);
   border-radius: var(--border-radius-md);
   overflow: hidden;
   border: 2px solid transparent;
-  transition: border-color 0.2s ease;
+  @include smooth-transition(border-color);
   
   &:focus-within {
     border-color: var(--color-primary);
     box-shadow: 0 2px 8px rgba(12, 166, 120, 0.2);
   }
   
-  @media (max-width: 1023px) {
+  @include mobile-only {
     flex-direction: column;
     max-width: 100%;
   }
@@ -335,30 +321,19 @@
 }
 
 .search-button {
-  display: inline-block;
-  padding: var(--spacing-8) var(--spacing-12);
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
-  text-align: center;
-  transition: all 0.2s ease;
-  border: none;
-  cursor: pointer;
+  @include button-base(var(--spacing-8) var(--spacing-12));
   background: var(--color-primary);
   color: var(--text-inverse);
+  border: none;
   font-size: var(--font-size-lg);
   
   &:hover {
     background: var(--color-primary-dark);
   }
   
-  &:focus-visible {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
-    border-radius: 4px;
-  }
+  @include focus-visible;
   
-  @media (max-width: 1023px) {
+  @include mobile-only {
     border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
   }
 }
@@ -374,17 +349,7 @@
 }
 
 .search-result {
-  background: white;
-  border: 1px solid var(--color-neutral-200);
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  }
+  @include card-full();
 }
 
 .search-result-title {
@@ -400,11 +365,7 @@
       text-decoration: underline;
     }
     
-    &:focus-visible {
-      outline: 2px solid var(--color-primary);
-      outline-offset: 2px;
-      border-radius: 4px;
-    }
+    @include focus-visible;
   }
 }
 
@@ -460,7 +421,7 @@
 // RESPONSIVE DESIGN
 // =================================
 
-@media (max-width: 1023px) {
+@include mobile-only {
   .site-main {
     padding: var(--spacing-12) var(--spacing-8);
   }
@@ -530,9 +491,7 @@
 // =================================
 
 .popular-resources {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--spacing-8);
+  @include responsive-grid(250px, var(--spacing-8));
   margin-top: var(--spacing-8);
 }
 

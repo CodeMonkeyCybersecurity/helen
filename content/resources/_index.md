@@ -27,7 +27,7 @@ Test your team's security awareness with realistic phishing simulations and comp
 ## Training & Education
 
 {{< promo-tiles columns="2" >}}
-{{< promo-tile title="Security Education" url="/resources/education/" icon="📚" color="teal" >}}
+{{< promo-tile title="Security Education" url="/resources/education/" icon="" color="teal" >}}
 Free cybersecurity learning materials, guides, and resources to help improve your security knowledge and practices.
 {{< /promo-tile >}}
 

@@ -1,0 +1,150 @@
+// Code Monkey Cybersecurity - Unified Color System
+// Single source of truth for all colors
+
+// =================================
+// BRAND COLORS - Primary Identity
+// =================================
+
+// Main brand color - Teal
+$brand-primary: #0ca678;            // Main teal brand color
+$brand-secondary: #51a14f;          // Brand green
+$brand-purple: #a625a4;             // Brand purple  
+$brand-blue: #4078f2;               // Brand blue
+$brand-orange: #d77350;             // Brand orange/logo color
+$brand-gold: #b66b02;               // Brand gold
+$brand-alert-red: #e45549;          // Error/alert color
+
+// Legacy aliases for backwards compatibility
+$primary-main: $brand-primary;
+$primary-500: $brand-primary;
+$purple-600: $brand-purple;
+$orange-500: $brand-orange;
+$brand-orange-logo: $brand-orange;
+$brand-green: $brand-secondary;
+$brand-teal: $brand-primary;
+
+// =================================
+// NEUTRAL COLORS - Grays & Background
+// =================================
+
+$neutral-50: #fdfbf9;              // Lightest background
+$neutral-100: #f5f5f4;             // Light background
+$neutral-200: #e5e5e4;             // Border light
+$neutral-300: #d4d4d3;             // Border
+$neutral-400: #a3a3a2;             // Text muted
+$neutral-500: #737372;             // Text secondary
+$neutral-600: #525251;             // Text primary light
+$neutral-700: #404040;             // Text primary
+$neutral-800: #262626;             // Text dark
+$neutral-900: #171717;             // Text darkest
+
+// Background colors
+$bg-website: #e3dacc;              // Main site background
+$bg-primary: #fdfbf9;              // Primary content background (neutral-50)
+$bg-secondary: #fdfbf9;            // Secondary content background
+$bg-accent: rgba($brand-secondary, 0.1);  // Accent background (green tint)
+$bg-highlight: rgba($brand-gold, 0.1);    // Highlight background (gold tint)
+
+// Button backgrounds
+$bg-button-primary: $brand-primary;
+$bg-button-secondary: $bg-primary;
+
+// =================================
+// TEXT COLORS
+// =================================
+
+$text-primary: #141413;            // Main text color
+$text-secondary: $neutral-500;     // Secondary text
+$text-muted: $neutral-400;         // Muted text
+$text-inverse: white;              // Text on dark backgrounds
+
+// =================================
+// SEMANTIC COLORS
+// =================================
+
+// Success (green)
+$color-success: $brand-secondary;
+$color-success-light: rgba($brand-secondary, 0.1);
+
+// Warning (gold)
+$color-warning: $brand-gold;
+$color-warning-light: rgba($brand-gold, 0.1);
+
+// Error (red)
+$color-error: $brand-alert-red;
+$color-error-light: rgba($brand-alert-red, 0.1);
+
+// Info (blue)
+$color-info: $brand-blue;
+$color-info-light: rgba($brand-blue, 0.1);
+
+// =================================
+// CSS CUSTOM PROPERTIES
+// =================================
+
+:root {
+  // Brand colors
+  --color-primary: #{$brand-primary};
+  --color-secondary: #{$brand-secondary};
+  --color-purple: #{$brand-purple};
+  --color-blue: #{$brand-blue};
+  --color-orange-logo: #{$brand-orange};
+  --color-gold: #{$brand-gold};
+  --color-alert-red: #{$brand-alert-red};
+  
+  // Primary variants
+  --color-primary-light: #{lighten($brand-primary, 20%)};
+  --color-primary-dark: #{darken($brand-primary, 20%)};
+  
+  // Neutral scale
+  --color-neutral-50: #{$neutral-50};
+  --color-neutral-100: #{$neutral-100};
+  --color-neutral-200: #{$neutral-200};
+  --color-neutral-300: #{$neutral-300};
+  --color-neutral-400: #{$neutral-400};
+  --color-neutral-500: #{$neutral-500};
+  --color-neutral-600: #{$neutral-600};
+  --color-neutral-700: #{$neutral-700};
+  --color-neutral-800: #{$neutral-800};
+  --color-neutral-900: #{$neutral-900};
+  
+  // Background colors
+  --bg-website: #{$bg-website};
+  --bg-primary: #{$bg-primary};
+  --bg-secondary: #{$bg-secondary};
+  --bg-accent: #{$bg-accent};
+  --bg-highlight: #{$bg-highlight};
+  --bg-button-primary: #{$bg-button-primary};
+  --bg-button-secondary: #{$bg-button-secondary};
+  
+  // Text colors
+  --text-primary: #{$text-primary};
+  --text-secondary: #{$text-secondary};
+  --text-muted: #{$text-muted};
+  --text-inverse: #{$text-inverse};
+  
+  // Semantic colors
+  --color-success: #{$color-success};
+  --color-warning: #{$color-warning};
+  --color-error: #{$color-error};
+  --color-info: #{$color-info};
+  
+  // Links
+  --link-primary: #{$brand-primary};
+  --link-hover: #{darken($brand-primary, 15%)};
+  
+  // Legacy aliases for backwards compatibility
+  --gray-50: #{$neutral-50};
+  --gray-100: #{$neutral-100};
+  --gray-200: #{$neutral-200};
+  --gray-300: #{$neutral-300};
+  --gray-400: #{$neutral-400};
+  --gray-500: #{$neutral-500};
+  --gray-600: #{$neutral-600};
+  --gray-700: #{$neutral-700};
+  --gray-800: #{$neutral-800};
+  --gray-900: #{$neutral-900};
+  
+  --body-background: #{$bg-primary};
+  --body-font-color: #{$text-primary};
+}

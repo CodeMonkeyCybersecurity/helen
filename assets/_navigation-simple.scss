@@ -146,6 +146,53 @@
   }
 }
 
+// Mobile controls container
+.mobile-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+// Mobile search functionality
+.mobile-search-checkbox {
+  display: none;
+}
+
+.mobile-search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  background: rgba(12, 166, 120, 0.1);
+  border: 1px solid rgba(12, 166, 120, 0.3);
+  
+  .search-icon {
+    font-size: 14px;
+    color: var(--color-primary);
+  }
+  
+  &:hover {
+    background: rgba(12, 166, 120, 0.2);
+    transform: scale(1.05);
+    border-color: rgba(12, 166, 120, 0.5);
+  }
+  
+  &:focus,
+  &:focus-within {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
 // Mobile hamburger toggle
 .mobile-menu-toggle {
   display: flex;
@@ -191,16 +238,16 @@
 // Hamburger animation when menu is open
 .mobile-menu-checkbox:checked ~ .nav-header .mobile-menu-toggle {
   .hamburger:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
+    transform: rotate(45deg) translate(5px, 5px);
   }
   
   .hamburger:nth-child(2) {
     opacity: 0;
-    transform: scale(0);
+    transform: scaleX(0);
   }
   
   .hamburger:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
+    transform: rotate(-45deg) translate(7px, -6px);
   }
 }
 
@@ -562,6 +609,233 @@
   }
 }
 
+// Desktop search section
+.nav-search-section {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-neutral-200);
+  
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.nav-search-form {
+  width: 100%;
+}
+
+.nav-search-input-container {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid var(--color-neutral-300);
+  border-radius: 8px;
+  padding: 0.5rem;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 2px 4px rgba(12, 166, 120, 0.1);
+  }
+  
+  &:focus-within {
+    border-color: var(--color-primary);
+    box-shadow: 0 2px 8px rgba(12, 166, 120, 0.2);
+  }
+}
+
+.nav-search-icon {
+  color: var(--color-neutral-500);
+  margin-right: 0.5rem;
+  font-size: 14px;
+}
+
+.nav-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.9rem;
+  color: var(--color-neutral-700);
+  
+  &::placeholder {
+    color: var(--color-neutral-400);
+  }
+}
+
+.nav-search-submit {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: var(--color-neutral-100);
+    transform: translateX(2px);
+  }
+  
+  .submit-arrow {
+    font-size: 12px;
+  }
+}
+
+// Search overlay (CSS-only)
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 10vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  
+  @media (min-width: 1024px) {
+    display: none; // Only show on mobile
+  }
+}
+
+// Show overlay when search is toggled
+.mobile-search-checkbox:checked ~ .search-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.search-overlay-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.search-spotlight {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transform: scale(0.9) translateY(-20px);
+  transition: all 0.3s ease;
+}
+
+.mobile-search-checkbox:checked ~ .search-overlay .search-spotlight {
+  transform: scale(1) translateY(0);
+}
+
+.search-spotlight-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 1rem 0;
+}
+
+.search-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-neutral-500);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: var(--color-neutral-100);
+    color: var(--color-neutral-700);
+  }
+}
+
+.search-spotlight-form {
+  padding: 0 1.5rem;
+}
+
+.search-spotlight-input-container {
+  display: flex;
+  align-items: center;
+  background: var(--color-neutral-50);
+  border: 2px solid var(--color-neutral-200);
+  border-radius: 12px;
+  padding: 1rem;
+  transition: all 0.2s ease;
+  
+  &:focus-within {
+    border-color: var(--color-primary);
+    background: white;
+    box-shadow: 0 4px 12px rgba(12, 166, 120, 0.2);
+  }
+}
+
+.search-spotlight-icon {
+  color: var(--color-neutral-500);
+  margin-right: 0.75rem;
+  font-size: 18px;
+}
+
+.search-spotlight-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.1rem;
+  color: var(--color-neutral-700);
+  
+  &::placeholder {
+    color: var(--color-neutral-400);
+  }
+}
+
+.search-submit-btn {
+  background: var(--color-primary);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  margin-left: 0.5rem;
+  
+  &:hover {
+    background: var(--color-primary-dark);
+    transform: scale(1.05);
+  }
+  
+  .submit-icon {
+    font-size: 16px;
+  }
+}
+
+.search-spotlight-shortcuts {
+  padding: 1rem 1.5rem 1.5rem;
+  text-align: center;
+  
+  .shortcut-hint {
+    color: var(--color-neutral-500);
+    font-size: 0.85rem;
+    
+    kbd {
+      background: var(--color-neutral-100);
+      border: 1px solid var(--color-neutral-300);
+      border-radius: 4px;
+      padding: 0.2rem 0.4rem;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+    }
+  }
+}
+
 // Main content adjustment when using simple nav
 .site-main {
   margin-left: 0;
@@ -569,6 +843,7 @@
   flex: 1; /* Allow main content to grow and fill available space */
   width: 100%;
   transition: all 0.3s ease;
+  overflow-x: hidden; // Prevent horizontal overflow
   
   // Desktop layout with sidebar offset
   @media (min-width: 1024px) {
