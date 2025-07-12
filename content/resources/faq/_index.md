@@ -1,7 +1,6 @@
 ---
 title: "Frequently Asked Questions"
 description: "Get answers to common cybersecurity questions. From basic security practices to advanced threat protection."
-bookFlatSection: true
 weight: 10
 ---
 

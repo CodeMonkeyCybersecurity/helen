@@ -2,7 +2,6 @@
 title: "Pricing"
 description: "Simple, transparent pricing for Delphi Notify cybersecurity monitoring. Free trial available."
 keywords: ["cybersecurity pricing", "Delphi Notify cost", "security monitoring price", "small business cybersecurity"]
-bookFlatSection: true
 weight: 3
 ---
 

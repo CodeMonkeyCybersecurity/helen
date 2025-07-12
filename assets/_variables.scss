@@ -1,73 +1,27 @@
-/* You can override SASS variables here. */
+/* Legacy Hugo Book theme compatibility */
+/* All colors now defined in _colors-unified.scss */
 
-// Brand Colors - Main brand color
-$brand-primary: #0ca678; // Teal 7 - Main brand color
-$brand-teal: #0ca678; // Alias for backward compatibility
-$brand-logo-orange: #d77350;
-$brand-purple: #a625a4;
-$brand-blue: #4078f2;
-$brand-gold: #b66b02;
-$brand-alert-red: #e45549;
+// Hugo Book theme variables - mapped to unified system
+$body-background: var(--bg-website);
+$body-font-color: var(--text-primary);
+$color-link: var(--link-primary);
+$color-visited-link: var(--link-visited);
 
-$bg-website: #f0eee6;
-$bg-section-neutral: #e3dacc;
-$bg-section-mint: #bcd1ca;
-$bg-section-blue: #cbcadb;
-$bg-light: #fdfbf9;
-$bg-light-alt: #faf9f5;
+// Font families - mapped to unified typography system  
+$font-brand: var(--font-brand);
+$font-heading: var(--font-heading);
+$font-body: var(--font-body);
+$font-mono: var(--font-mono);
 
-$text-base-dark: #141413;
-$text-muted: #393a42;
-$text-mono: #002a1e;
-$text-soft: #a0a1a6;
+// Navigation styling - using unified colors
+$nav-background: var(--bg-primary);
+$nav-border: 1px solid var(--color-neutral-300);
+$nav-text-color: var(--text-primary);
+$nav-padding: var(--spacing-8);
+$nav-shadow: var(--shadow);
 
-$btn-primary-bg: #b9b2a7;
-$btn-secondary-bg: #cdc6b9;
-$hover-orange: #da7756;
-$highlight-bg: #fff8d0;
-
-// Override Hugo Book theme variables with brand colors
-$body-background: $bg-website;
-$body-font-color: $text-base-dark;
-$color-link: $brand-primary; // Use main brand color for links
-$color-visited-link: $brand-purple;
-
-// CSS Custom Properties for Native Hugo Layouts
-:root {
-  --accent-color: #{$brand-primary};
-  --accent-color-light: #2dd4bf;  // lighter teal
-  --accent-color-dark: #005c46;   // darker teal
-  --body-background: #{$body-background};
-  --text-color: #{$text-base-dark};
-  --gray-50: #f9fafb;
-  --gray-100: #f3f4f6;
-  --gray-200: #e5e7eb;
-  --gray-300: #d1d5db;
-  --gray-400: #9ca3af;
-  --gray-500: #6b7280;
-  --gray-600: #4b5563;
-  --gray-700: #374151;
-  --gray-800: #1f2937;
-  --gray-900: #111827;
-}
-
-// Font families - Noto Sans for all branding and titles
-$font-brand: 'Noto Sans', sans-serif;    // Brand/logo text
-$font-heading: 'Noto Sans', sans-serif;  // All headings and titles
-$font-body: 'Inter', 'Atkinson Hyperlegible', ui-sans-serif, system-ui; // Body text (unchanged)
-$font-mono: 'Noto Sans Mono', ui-monospace, 'SFMono-Regular';
-
-// Unified navigation styling variables
-$nav-background: #ffffff; // White background for both nav bars
-$nav-border: 1px solid darken($bg-section-neutral, 10%);
-$nav-text-color: $text-base-dark;
-$nav-padding: 1rem;
-$nav-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-
-// Mixins for accessibility and focus states
+// Accessibility mixins - using unified colors
 @mixin outline {
-  outline: 2px solid $brand-primary;
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
-
-// @import "plugins/dark";

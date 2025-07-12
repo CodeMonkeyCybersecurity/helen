@@ -2,7 +2,6 @@
 title: "Customer Login"
 description: "Secure customer login portal for Code Monkey Cybersecurity services including Delphi Notify monitoring and support."
 keywords: ["customer login", "secure portal", "Delphi Notify", "cybersecurity dashboard"]
-bookFlatSection: true
 weight: 7
 ---
 

@@ -2,7 +2,6 @@
 title: "Delphi"
 description: " cybersecurity made accessible. Delphi provides threat detection and response for small businesses and individuals with human-reviewed alerts in plain English."
 keywords: ["cybersecurity", "threat detection", "XDR", "SIEM", "small business security", "Fremantle", "Australia"]
-bookFlatSection: true
 weight: 1
 offering: true
 offeringDescription: "XDR Security Platform"

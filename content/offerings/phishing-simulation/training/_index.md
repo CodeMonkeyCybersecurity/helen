@@ -2,7 +2,6 @@
 title: "Scam Education & Phishing Training"
 description: "Protect your team from the #1 cause of cyber breaches. Interactive training workshops to help employees recognize and respond to phishing attempts."
 keywords: ["phishing training", "scam education", "cybersecurity awareness", "employee training", "business email compromise"]
-bookFlatSection: true
 weight: 1
 ---
 

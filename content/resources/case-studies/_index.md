@@ -1,7 +1,6 @@
 ---
 title: "Customer Success Stories"
 description: "Real stories from businesses and individuals who've strengthened their security with Delphi Notify. See how we help protect what matters most."
-bookFlatSection: true
 weight: 30
 ---
 

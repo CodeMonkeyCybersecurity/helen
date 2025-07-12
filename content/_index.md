@@ -1,7 +1,6 @@
 ---
 title: "Code Monkey Cybersecurity"
 description: "Cybersecurity. With Humans."
-bookFlatSection: true
 ---
 
 {{< content-section title="Super simple cybersecurity" style="transparent" >}}

@@ -1,7 +1,6 @@
 ---
 title: "Security Solution Comparisons"
 description: "Compare Delphi Notify with competitors and DIY security solutions. Make informed decisions about your cybersecurity protection."
-bookFlatSection: true
 weight: 20
 ---
 

@@ -2,7 +2,6 @@
 title: "Contact Us"
 description: "Contact Code Monkey Cybersecurity for expert cybersecurity support. Based in Fremantle, WA. Email, phone, and public key verification available."
 keywords: ["contact", "cybersecurity support", "Fremantle", "Western Australia", "security consultation"]
-bookFlatSection: true
 weight: 6
 ---
 

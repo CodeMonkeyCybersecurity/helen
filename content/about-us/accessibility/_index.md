@@ -2,7 +2,6 @@
 title: "Accessibility Statement"
 description: "Code Monkey Cybersecurity's commitment to digital accessibility and WCAG compliance."
 keywords: ["accessibility", "WCAG", "screen reader", "disability access", "inclusive design"]
-bookFlatSection: true
 weight: 8
 ---
 

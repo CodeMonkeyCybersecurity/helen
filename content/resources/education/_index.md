@@ -2,7 +2,6 @@
 title: "Security Education"
 description: "Free security awareness resources and guides for individuals and businesses"
 weight: 3
-bookFlatSection: true
 ---
 
 # Security Education Hub

@@ -1,7 +1,6 @@
 ---
 title: "Delphi Technical Documentation"
 description: "Complete technical documentation for the Delphi Notify platform. Installation guides, API references, and integration instructions."
-bookFlatSection: true
 weight: 40
 ---
 

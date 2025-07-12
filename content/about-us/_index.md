@@ -2,7 +2,6 @@
 title: "About Us"
 description: "Code Monkey Cybersecurity provides human-centered cybersecurity solutions from Fremantle, WA. Open source XDR platform Delphi and container orchestration system Eos."
 keywords: ["about us", "cybersecurity company", "Fremantle", "Western Australia", "open source security", "XDR platform", "Delphi", "Eos"]
-bookFlatSection: true
 weight: 2
 ---
 

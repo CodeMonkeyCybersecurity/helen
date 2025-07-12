@@ -1,7 +1,6 @@
 ---
 title: "Security Guides & Checklists"
 description: "Practical cybersecurity resources for Australian businesses and individuals. Download free guides, checklists, and templates."
-bookFlatSection: true
 weight: 40
 ---
 

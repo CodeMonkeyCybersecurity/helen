@@ -3,7 +3,6 @@ title: "Governance"
 description: "Code Monkey Cybersecurity governance policies including privacy, security, data handling, and open source licensing. Transparent cybersecurity practices."
 keywords: ["governance", "privacy policy", "security policy", "data handling", "open source licensing", "cybersecurity compliance"]
 weight: 5
-bookFlatSection: true
 ---
 
 # Governance

@@ -80,14 +80,10 @@
   }
   </script>
   
-  {{/* Optimized font loading - preload critical fonts */}}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.gstatic.com/s/notosans/v36/o-0mIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjcz6L1SoM-jCpoiyD9A-9a6Vw7qw.woff2" as="font" type="font/woff2" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  </noscript>
+  {{/* Local font loading - all fonts served from /static/fonts/ */}}
+  {{/* Font preloading for critical fonts */}}
+  <link rel="preload" href="/fonts/Noto_Sans/static/NotoSans-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="/fonts/Inter/static/Inter_18pt-Regular.ttf" as="font" type="font/ttf" crossorigin>
   
   {{/* CSS Assets */}}
   {{ $sassOptions := (dict "targetPath" "css/main.css" "outputStyle" "compressed") }}
