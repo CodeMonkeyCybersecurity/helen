@@ -10,9 +10,9 @@ weight: 20
 Delphi Notify detects security threats and explains them clearly.
 
 **Key benefits:**
-- Security experts review every alert
-- Plain English explanations with clear next steps
-- Built for small businesses and non-technical users
+Security experts review every alert
+Plain English explanations with clear next steps
+Built for small businesses and non-technical users
 
 {{< button href="/offerings/delphi/sign-up/" >}}Start Free Trial{{< /button >}}
 
@@ -55,9 +55,9 @@ Your security system detected unusual activity on your computer. This is an earl
 
 ### Impact
 
-- **Risk level:** Low to moderate
-- **Urgency:** Check within 24 hours
-- **Likely cause:** Software conflict or temporary system issue
+**Risk level:** Low to moderate
+**Urgency:** Check within 24 hours
+**Likely cause:** Software conflict or temporary system issue
 
 ### Action required
 
@@ -97,9 +97,9 @@ Your Windows computer failed to synchronize its clock with the time server. The 
 
 ### Impact
 
-- **Risk level:** Medium  
-- **Urgency:** Check today  
-- **Potential issues:** Login problems, email sync failures, website access issues
+**Risk level:** Medium  
+**Urgency:** Check today  
+**Potential issues:** Login problems, email sync failures, website access issues
 
 ### Action required
 
@@ -124,17 +124,17 @@ Monitor for 2-3 days. If time stays correct and no login issues occur, the probl
 Agent Details:
 --------------
 
--   Agent Name: Bobs-PC
--   Agent ID: 017
--   IP Address: 192.168.6.173
--   Wazuh Version: Wazuh v4.12.0
--   Status: disconnected
--   Operating System: Microsoft Windows 11 Pro 10.0.26100.4202 ()
--   Registered: 2025-03-07 23:15:20 AWST+0800
--   Last Seen: 2025-06-15 06:33:34 AWST+0800
--   Disconnected: 2025-06-15 06:48:24 AWST+0800
--   Manager: vhost11-centos9-2
--   Groups: default
+ Agent Name: Bobs-PC
+ Agent ID: 017
+ IP Address: 192.168.6.173
+ Wazuh Version: Wazuh v4.12.0
+ Status: disconnected
+ Operating System: Microsoft Windows 11 Pro 10.0.26100.4202 ()
+ Registered: 2025-03-07 23:15:20 AWST+0800
+ Last Seen: 2025-06-15 06:33:34 AWST+0800
+ Disconnected: 2025-06-15 06:48:24 AWST+0800
+ Manager: vhost11-centos9-2
+ Groups: default
 
 You’re taking the right steps — Delphi Notify helps you stay ahead of problems. This was sent automatically by Delphi Notify.
 
@@ -172,17 +172,17 @@ If this works, ChatGPT should open and run smoothly without freezing. You should
 Agent Details:
 --------------
 
--   Agent Name: Alices-PC
--   Agent ID: 022
--   IP Address: 192.168.11.20
--   Wazuh Version: Wazuh v4.12.0
--   Status: disconnected
--   Operating System: Microsoft Windows 10 Home 10.0.19045.5965 ()
--   Registered: 2025-03-27 00:22:32 AWST+0800
--   Last Seen: 2025-06-17 11:56:51 AWST+0800
--   Disconnected: 2025-06-17 12:10:14 AWST+0800
--   Manager: vhost11-centos9-2
--   Groups: default
+ Agent Name: Alices-PC
+ Agent ID: 022
+ IP Address: 192.168.11.20
+ Wazuh Version: Wazuh v4.12.0
+ Status: disconnected
+ Operating System: Microsoft Windows 10 Home 10.0.19045.5965 ()
+ Registered: 2025-03-27 00:22:32 AWST+0800
+ Last Seen: 2025-06-17 11:56:51 AWST+0800
+ Disconnected: 2025-06-17 12:10:14 AWST+0800
+ Manager: vhost11-centos9-2
+ Groups: default
 
 You’re taking the right steps — Delphi Notify helps you stay ahead of problems. This was sent automatically by Delphi Notify.
 

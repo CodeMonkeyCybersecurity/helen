@@ -11,9 +11,9 @@ This page demonstrates the new brand color scheme and professional typography ap
 ## Typography System
 
 ### Fonts Used
-- **Headings**: Atkinson Hyperlegible (accessibility-focused)
-- **Body Text**: Inter (professional, highly readable)
-- **Code/Terminal**: Noto Sans Mono (clear monospace)
+**Headings**: Atkinson Hyperlegible (accessibility-focused)
+**Body Text**: Inter (professional, highly readable)
+**Code/Terminal**: Noto Sans Mono (clear monospace)
 
 ### Heading Examples
 

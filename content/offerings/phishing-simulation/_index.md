@@ -13,37 +13,37 @@ Test your team's security awareness with realistic phishing simulations that mea
 ## Why Phishing Simulation?
 
 **The Reality:**
-- **95%** of successful cyber attacks start with phishing
-- **1 in 4** employees will click on a phishing link without training
-- **60%** of organizations experience phishing attacks monthly
-- **$55,000** average cost per successful business email compromise
+**95%** of successful cyber attacks start with phishing
+**1 in 4** employees will click on a phishing link without training
+**60%** of organizations experience phishing attacks monthly
+**$55,000** average cost per successful business email compromise
 
 Don't wait to find out how vulnerable your team is. Our simulation service provides safe, controlled testing that improves security awareness without real-world consequences.
 
 ## How It Works
 
 ### Assessment Phase
-- **Baseline testing** with realistic phishing emails
-- **Risk analysis** by department and role
-- **Vulnerability mapping** across your organization
-- **Custom threat modeling** for your industry
+**Baseline testing** with realistic phishing emails
+**Risk analysis** by department and role
+**Vulnerability mapping** across your organization
+**Custom threat modeling** for your industry
 
 ### 2. Simulation Campaign
-- **Monthly phishing tests** with increasing sophistication
-- **Industry-relevant scenarios** tailored to your business
-- **Real-time tracking** of clicks, submissions, and reports
-- **Immediate micro-learning** for those who fall for tests
+**Monthly phishing tests** with increasing sophistication
+**Industry-relevant scenarios** tailored to your business
+**Real-time tracking** of clicks, submissions, and reports
+**Immediate micro-learning** for those who fall for tests
 
 ### 3. Improvement Tracking
-- **Performance dashboards** showing organization-wide progress
-- **Individual improvement tracking** without naming and shaming
-- **Department comparison** to identify areas needing focus
-- **ROI measurement** through reduced successful attacks
+**Performance dashboards** showing organization-wide progress
+**Individual improvement tracking** without naming and shaming
+**Department comparison** to identify areas needing focus
+**ROI measurement** through reduced successful attacks
 
 ## Simulation Features
 
 ### Realistic Scenarios
-- Industry-specific attack templates
+Industry-specific attack templates
 - Current threat landscape integration
 - Seasonal campaigns (tax time, holidays)
 - Executive impersonation attempts
@@ -73,7 +73,7 @@ Don't wait to find out how vulnerable your team is. Our simulation service provi
 ### Email Phishing
 - Credential harvesting attempts
 - Malicious attachment simulations
-- Business email compromise scenarios
+Business email compromise scenarios
 - CEO fraud and executive impersonation
 - Vendor payment redirection scams
 
@@ -103,7 +103,7 @@ Don't wait to find out how vulnerable your team is. Our simulation service provi
 - Basic performance dashboard
 - Automated micro-learning
 - Quarterly progress reports
-- Email support
+Email support
 {{< /service-tier >}}
 
 {{< service-tier name="Professional" price="$45" period="per employee/year" featured="true" cta_text="Upgrade to Pro" badge="Recommended" >}}
@@ -111,7 +111,7 @@ Don't wait to find out how vulnerable your team is. Our simulation service provi
 - Advanced analytics and reporting
 - Custom scenario development
 - Manager training and coaching
-- Priority support + phone
+ support + phone
 {{< /service-tier >}}
 
 
@@ -175,7 +175,7 @@ Already dealing with a successful phishing attack? We provide emergency simulati
 - ACSC Essential Eight alignment
 - ISO 27001 evidence generation
 - Privacy Act compliance documentation
-- Industry-specific requirement coverage
+Industry-specific requirement coverage
 
 ### Insurance Requirements
 - Cyber insurance compliance demonstration
@@ -189,7 +189,7 @@ Already dealing with a successful phishing attack? We provide emergency simulati
 
 Don't find out about your vulnerabilities the hard way. Start with our free pilot program and see where your team stands.
 
-**Call**: (+61) 0432 038 310  
+:   
 **Email**: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
 *All simulation services include Australian-based support and comply with Australian privacy and employment laws.*

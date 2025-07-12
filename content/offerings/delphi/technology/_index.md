@@ -87,17 +87,17 @@ For those interested in the technical implementation:
 
 ### What Delphi Uses
 
-- **Wazuh** - Open-source XDR/SIEM platform for threat detection
-- **OpenSearch** - Real-time log analysis and dashboards  
-- **Keycloak** - Secure identity and access management
-- **StackStorm** - Automation and alert enrichment
+**Wazuh** - Open-source XDR/SIEM platform for threat detection
+**OpenSearch** - Real-time log analysis and dashboards  
+**Keycloak** - Secure identity and access management
+**StackStorm** - Automation and alert enrichment
 
 ### Why These Tools?
 
-- **Open Source** - Transparent, audit-friendly, community-driven
-- **** - Battle-tested by organizations worldwide
-- **Privacy-Focused** - Your data stays under your control
-- **Cost-Effective** - No vendor lock-in or licensing fees
+**Open Source** - Transparent, audit-friendly, community-driven
+**** - Battle-tested by organizations worldwide
+**Privacy-Focused** - Your data stays under your control
+**Cost-Effective** - No vendor lock-in or licensing fees
 
 ## Ready to Experience XDR Safety?
 

@@ -33,7 +33,7 @@ Expected output:
 ```plaintext
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-100   404  100   404    0     0   1223      0 --:--:-- --:--:-- --:--:--  1224
+100   404  100   404    0     0   1223      0 --:--:-- --:--:-- --:--:-1224
 ```
 
 ### Echo `$TOKEN` to terminal
@@ -84,7 +84,7 @@ Expected should be the same again:
 ```plaintext
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-100   404  100   404    0     0   1223      0 --:--:-- --:--:-- --:--:--  1224
+100   404  100   404    0     0   1223      0 --:--:-- --:--:-- --:--:-1224
 ```
 
 ### Echo `$TOKEN` to terminal
@@ -208,13 +208,13 @@ Because the Wazuh API is focused on managing agent records and sending commands 
 
 ## Summary
 
--   Direct API Stop: Not available.
+ Direct API Stop: Not available.
 
 Alternative Approaches:
 
--   Use the API to block the agent so the manager ignores its data.
--   Disable or modify auto-registration to prevent re-registration.
--   Use OS-specific commands (manually or via remote execution tools) on the agent host to actually stop the service.
+ Use the API to block the agent so the manager ignores its data.
+ Disable or modify auto-registration to prevent re-registration.
+ Use OS-specific commands (manually or via remote execution tools) on the agent host to actually stop the service.
 
 Choose the approach that best fits your operational needs.
 

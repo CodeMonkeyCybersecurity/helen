@@ -56,7 +56,7 @@ We regularly audit our website for accessibility issues and implement improvemen
 If you experience any accessibility barriers on our website, please contact us:
 
 **Email:** [accessibility@cybermonkey.net.au](mailto:accessibility@cybermonkey.net.au)  
-**Phone:** (+61) 0432 038 310  
+**Phone:**   
 **Mail:** Code Monkey Cybersecurity, Fremantle, WA 6160
 
 Please provide:
@@ -89,9 +89,9 @@ This website has been tested with:
 ## Legal Framework
 
 This accessibility statement complies with:
-- **Australian Disability Discrimination Act (DDA) 1992**
-- **Web Content Accessibility Guidelines (WCAG) 2.1 Level AA**
-- **Australian Government Digital Service Standard**
+**Australian Disability Discrimination Act (DDA) 1992**
+**Web Content Accessibility Guidelines (WCAG) 2.1 Level AA**
+**Australian Government Digital Service Standard**
 
 ---
 

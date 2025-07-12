@@ -46,7 +46,7 @@ Most security tools dump technical alerts on you and expect you to figure it out
 
 **How to check if it worked:** No similar alerts should appear in the next 2 hours if this was normal activity.
 
-**Need help?** Reply to this email or call us at (+61) 0432 038 310
+**Need help?** Reply to this email or call us at 
 {{% /hint %}}
 
 **See the difference?** No technical jargon. Clear explanation. Specific steps. Human support when you need it.
@@ -75,28 +75,28 @@ We handle the technical setup. You focus on running your business.
 
 ### Starter
 **$79/month**
-- Up to 5 computers
-- Email alerts in plain English
-- Business hours support
-- **Perfect for:** Small offices, cafes, retail stores
+Up to 5 computers
+Email alerts in plain English
+Business hours support
+**Perfect for:** Small offices, cafes, retail stores
 
 <--->
 
 ### Professional 
 **$149/month**
-- Up to 25 computers  
-- Priority phone support
-- Industry compliance reporting
-- **Perfect for:** Medical practices, law firms, accounting offices
+Up to 25 computers  
+Priority phone support
+Industry compliance reporting
+**Perfect for:** Medical practices, law firms, accounting offices
 
 
 {{% /columns %}}
 
 **All plans include:**
--  30-day free trial
--  Setup assistance included
--  No contracts or hidden fees
--  Cancel anytime
+30-day free trial
+Setup assistance included
+No contracts or hidden fees
+Cancel anytime
 
 
 ---
@@ -130,6 +130,6 @@ We're a **Fremantle-based cybersecurity company** that believes security should 
 
 ---
 
-Questions? Email [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au) or call (+61) 0432 038 310
+Questions? Email [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au) or call 
 
 **Cybersecurity. Finally with humans.**

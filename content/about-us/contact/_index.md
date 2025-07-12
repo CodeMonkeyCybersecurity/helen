@@ -10,7 +10,7 @@ weight: 6
 
 Email: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
-Phone: (+61) 0432 038 310
+Phone: 
 
 Location: Fremantle, WA
 

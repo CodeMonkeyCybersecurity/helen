@@ -5,13 +5,13 @@ This document outlines the accessibility standards and implementation guidelines
 ## Compliance Standards
 
 ### Primary Standards
-- **WCAG 2.1 Level AA** - Web Content Accessibility Guidelines
-- **Australian Disability Discrimination Act (DDA) 1992**
-- **Australian Government Digital Service Standard**
+**WCAG 2.1 Level AA** - Web Content Accessibility Guidelines
+**Australian Disability Discrimination Act (DDA) 1992**
+**Australian Government Digital Service Standard**
 
 ### Additional Guidelines
-- **Section 508** (US Federal accessibility standard)
-- **EN 301 549** (European accessibility standard)
+**Section 508** (US Federal accessibility standard)
+**EN 301 549** (European accessibility standard)
 
 ## Implementation Checklist
 
@@ -110,35 +110,35 @@ This document outlines the accessibility standards and implementation guidelines
 5. **Error messages** - Clear, helpful error descriptions
 
 ### Image Alt Text Guidelines
-- **Decorative images**: Use empty alt="" or CSS background-image
-- **Informative images**: Describe the image content and purpose
-- **Complex images**: Provide detailed description or link to long description
-- **Text in images**: Include all text in alt attribute
+**Decorative images**: Use empty alt="" or CSS background-image
+**Informative images**: Describe the image content and purpose
+**Complex images**: Provide detailed description or link to long description
+**Text in images**: Include all text in alt attribute
 
 ### Form Accessibility
-- **Labels**: Every form field must have a label
-- **Instructions**: Provide clear field instructions
-- **Error handling**: Clear error messages with suggestions
-- **Required fields**: Clearly marked with asterisk and text
-- **Grouping**: Use fieldsets for related fields
+**Labels**: Every form field must have a label
+**Instructions**: Provide clear field instructions
+**Error handling**: Clear error messages with suggestions
+**Required fields**: Clearly marked with asterisk and text
+**Grouping**: Use fieldsets for related fields
 
 ## Testing Procedures
 
 ### Automated Testing
-- **axe-core** - Browser extension for automated accessibility testing
-- **WAVE** - Web Accessibility Evaluation Tool
-- **Lighthouse** - Accessibility audit in Chrome DevTools
+**axe-core** - Browser extension for automated accessibility testing
+**WAVE** - Web Accessibility Evaluation Tool
+**Lighthouse** - Accessibility audit in Chrome DevTools
 
 ### Manual Testing
-- **Keyboard navigation** - Test with Tab, Shift+Tab, Enter, Space
-- **Screen readers** - Test with NVDA, JAWS, VoiceOver
-- **Color contrast** - Use color contrast analyzer tools
-- **Mobile accessibility** - Test on mobile devices and screen readers
+**Keyboard navigation** - Test with Tab, Shift+Tab, Enter, Space
+**Screen readers** - Test with NVDA, JAWS, VoiceOver
+**Color contrast** - Use color contrast analyzer tools
+**Mobile accessibility** - Test on mobile devices and screen readers
 
 ### User Testing
-- **Disability user testing** - Include users with disabilities in testing
-- **Assistive technology testing** - Test with various assistive technologies
-- **Cognitive load testing** - Test with users who have cognitive disabilities
+**Disability user testing** - Include users with disabilities in testing
+**Assistive technology testing** - Test with various assistive technologies
+**Cognitive load testing** - Test with users who have cognitive disabilities
 
 ## Common Issues and Solutions
 
@@ -177,16 +177,16 @@ This document outlines the accessibility standards and implementation guidelines
 ## Compliance Monitoring
 
 ### Regular Audits
-- **Monthly**: Automated accessibility scans
-- **Quarterly**: Manual accessibility review
-- **Annually**: Comprehensive accessibility audit
-- **Ongoing**: User feedback collection
+**Monthly**: Automated accessibility scans
+**Quarterly**: Manual accessibility review
+**Annually**: Comprehensive accessibility audit
+**Ongoing**: User feedback collection
 
 ### Documentation
-- **Accessibility statement** - Published and updated regularly
-- **Compliance reports** - Document accessibility testing results
-- **Issue tracking** - Log and track accessibility issues
-- **Training records** - Document staff accessibility training
+**Accessibility statement** - Published and updated regularly
+**Compliance reports** - Document accessibility testing results
+**Issue tracking** - Log and track accessibility issues
+**Training records** - Document staff accessibility training
 
 ## Resources
 

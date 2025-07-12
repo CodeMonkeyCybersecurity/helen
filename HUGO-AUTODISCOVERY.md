@@ -39,10 +39,10 @@ bookHidden: false            # Hugo Book theme compatibility
 
 ### Supported Content Types
 
-- **offerings** - Products/services (filtered by `offering: true`)
-- **training** - Training content (filtered by `training: true`)
-- **sections** - Section pages (filtered by `Kind: "section"`)
-- **pages** - General pages (all pages in section)
+**offerings** - Products/services (filtered by `offering: true`)
+**training** - Training content (filtered by `training: true`)
+**sections** - Section pages (filtered by `Kind: "section"`)
+**pages** - General pages (all pages in section)
 
 ## Hugo's Built-in Auto-Discovery Capabilities
 

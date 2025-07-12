@@ -18,9 +18,9 @@ Our design philosophy centers on making cybersecurity **approachable and underst
 ## Enhanced Typography
 
 ### Professional Font Stack
-- **Atkinson Hyperlegible** for headings (accessibility-focused)
-- **Inter** for body text (clean, modern readability)
-- **Noto Sans Mono** for code examples
+**Atkinson Hyperlegible** for headings (accessibility-focused)
+**Inter** for body text (clean, modern readability)
+**Noto Sans Mono** for code examples
 
 The typography scales beautifully across devices with generous line heights for comfortable reading.
 {{< /spaced-section >}}

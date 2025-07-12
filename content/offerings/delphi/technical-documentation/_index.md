@@ -69,17 +69,17 @@ Delphi Notify is a cloud-native security monitoring platform that combines autom
 ### System Requirements
 
 **Minimum Requirements:**
-- **Operating System**: Windows 10/11, macOS 10.14+, Ubuntu 18.04+
-- **RAM**: 4GB (2GB available)
-- **Storage**: 500MB free space
-- **Network**: Stable internet connection
-- **Privileges**: Administrator/root access for installation
+**Operating System**: Windows 10/11, macOS 10.14+, Ubuntu 18.04+
+**RAM**: 4GB (2GB available)
+**Storage**: 500MB free space
+**Network**: Stable internet connection
+**Privileges**: Administrator/root access for installation
 
 **Recommended Requirements:**
-- **RAM**: 8GB+ for optimal performance
-- **Storage**: 1GB+ free space for logs
-- **Network**: 10Mbps+ for real-time monitoring
-- **Backup**: System backup solution in place
+**RAM**: 8GB+ for optimal performance
+**Storage**: 1GB+ free space for logs
+**Network**: 10Mbps+ for real-time monitoring
+**Backup**: System backup solution in place
 
 ---
 
@@ -736,10 +736,10 @@ grep "timeout\|slow" /var/log/delphi-notify.log
 ### Support Resources
 
 **Getting Help:**
-- **Email**: support@cybermonkey.net.au
-- **Phone**: (+61) 0432 038 310
-- **Customer Portal**: https://portal.delphi.net
-- **Documentation**: https://docs.delphi.net
+**Email**: support@cybermonkey.net.au
+
+**Customer Portal**: https://portal.delphi.net
+**Documentation**: https://docs.delphi.net
 
 **Information to Include:**
 - Agent version and operating system

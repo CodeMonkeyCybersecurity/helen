@@ -23,20 +23,20 @@ This guide provides comprehensive instructions for deploying the Code Monkey Cyb
 
 ### Required Tools
 
-- **Terraform** >= 1.6.0
-- **Nomad** >= 1.6.0
-- **Consul** >= 1.16.0
-- **Vault** >= 1.14.0
-- **Docker** >= 24.0.0
-- **AWS CLI** >= 2.0.0
-- **Git** >= 2.30.0
+**Terraform** >= 1.6.0
+**Nomad** >= 1.6.0
+**Consul** >= 1.16.0
+**Vault** >= 1.14.0
+**Docker** >= 24.0.0
+**AWS CLI** >= 2.0.0
+**Git** >= 2.30.0
 
 ### Required Accounts and Access
 
-- **AWS Account** with appropriate permissions
-- **GitHub Account** with repository access
-- **Container Registry** (AWS ECR, Docker Hub, etc.)
-- **Domain Name** management access
+**AWS Account** with appropriate permissions
+**GitHub Account** with repository access
+**Container Registry** (AWS ECR, Docker Hub, etc.)
+**Domain Name** management access
 
 ### Environment Variables
 
@@ -329,17 +329,17 @@ vault kv put secret/api/external-services \
 
 ### Monitoring Stack Components
 
-- **Prometheus**: Metrics collection and storage
-- **Grafana**: Visualization and dashboards
-- **Alertmanager**: Alert routing and notifications
-- **Blackbox Exporter**: Uptime monitoring
+**Prometheus**: Metrics collection and storage
+**Grafana**: Visualization and dashboards
+**Alertmanager**: Alert routing and notifications
+**Blackbox Exporter**: Uptime monitoring
 
 ### Key Metrics
 
-- **Website Availability**: 99.9% uptime target
-- **Response Time**: < 200ms for 95th percentile
-- **Error Rate**: < 0.1% of requests
-- **SSL Certificate**: 30-day expiry warnings
+**Website Availability**: 99.9% uptime target
+**Response Time**: < 200ms for 95th percentile
+**Error Rate**: < 0.1% of requests
+**SSL Certificate**: 30-day expiry warnings
 
 ### Alerting Rules
 
@@ -375,31 +375,31 @@ Pre-configured dashboards:
 
 ### Container Security
 
-- **Base Image**: Alpine Linux for minimal attack surface
-- **Non-root User**: Containers run as nginx user
-- **Security Scanning**: Trivy scans for vulnerabilities
-- **Regular Updates**: Automated dependency updates
+**Base Image**: Alpine Linux for minimal attack surface
+**Non-root User**: Containers run as nginx user
+**Security Scanning**: Trivy scans for vulnerabilities
+**Regular Updates**: Automated dependency updates
 
 ### Network Security
 
-- **VPC Isolation**: Private subnets for application tiers
-- **Security Groups**: Restrictive firewall rules
-- **WAF**: Web Application Firewall for production
-- **DDoS Protection**: AWS Shield integration
+**VPC Isolation**: Private subnets for application tiers
+**Security Groups**: Restrictive firewall rules
+**WAF**: Web Application Firewall for production
+**DDoS Protection**: AWS Shield integration
 
 ### Secrets Management
 
-- **Vault Integration**: All secrets stored in Vault
-- **Rotation**: Automatic secret rotation
-- **Encryption**: Data encrypted at rest and in transit
-- **Access Control**: Role-based access policies
+**Vault Integration**: All secrets stored in Vault
+**Rotation**: Automatic secret rotation
+**Encryption**: Data encrypted at rest and in transit
+**Access Control**: Role-based access policies
 
 ### Compliance
 
-- **GDPR**: Data protection measures implemented
-- **Australian Privacy**: Local data sovereignty
-- **Security Headers**: Comprehensive HTTP security headers
-- **Audit Logging**: Complete audit trail
+**GDPR**: Data protection measures implemented
+**Australian Privacy**: Local data sovereignty
+**Security Headers**: Comprehensive HTTP security headers
+**Audit Logging**: Complete audit trail
 
 ## Troubleshooting
 
@@ -464,10 +464,10 @@ lighthouse https://cybermonkey.net.au --output json
 
 ### Backup Strategy
 
-- **Infrastructure State**: Terraform state backed up to S3
-- **Vault Data**: Encrypted snapshots to S3
-- **Consul Data**: Periodic snapshots
-- **Application Data**: Static site regeneration
+**Infrastructure State**: Terraform state backed up to S3
+**Vault Data**: Encrypted snapshots to S3
+**Consul Data**: Periodic snapshots
+**Application Data**: Static site regeneration
 
 ### Recovery Procedures
 
@@ -532,10 +532,10 @@ scaling {
 
 ### Cost Optimization
 
-- **Spot Instances**: Used for non-critical workloads
-- **Right-sizing**: Regular instance size optimization
-- **Reserved Instances**: For predictable workloads
-- **Resource Monitoring**: Continuous optimization
+**Spot Instances**: Used for non-critical workloads
+**Right-sizing**: Regular instance size optimization
+**Reserved Instances**: For predictable workloads
+**Resource Monitoring**: Continuous optimization
 
 ## Maintenance
 
@@ -581,10 +581,10 @@ Updates are automatically deployed through GitHub Actions when code is pushed to
 
 ### Getting Help
 
-- **Documentation**: Check this deployment guide
-- **Logs**: Review application and infrastructure logs
-- **Monitoring**: Check Grafana dashboards
-- **Status Page**: Monitor system status
+**Documentation**: Check this deployment guide
+**Logs**: Review application and infrastructure logs
+**Monitoring**: Check Grafana dashboards
+**Status Page**: Monitor system status
 
 ### Emergency Procedures
 
@@ -631,11 +631,11 @@ npm run build --analyze
 
 This deployment guide provides a comprehensive foundation for deploying and managing the Code Monkey Cybersecurity website. The infrastructure is designed to be:
 
-- **Scalable**: Automatically handles traffic increases
-- **Secure**: Implements security best practices
-- **Reliable**: Provides high availability and disaster recovery
-- **Observable**: Comprehensive monitoring and alerting
-- **Maintainable**: Clear documentation and automation
+**Scalable**: Automatically handles traffic increases
+**Secure**: Implements security best practices
+**Reliable**: Provides high availability and disaster recovery
+**Observable**: Comprehensive monitoring and alerting
+**Maintainable**: Clear documentation and automation
 
 For additional support or questions, contact the DevOps team at devops@cybermonkey.net.au.
 

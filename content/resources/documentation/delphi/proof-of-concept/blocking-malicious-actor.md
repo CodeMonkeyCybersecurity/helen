@@ -2,8 +2,8 @@
 
 Version 4.11 (current)
 
--   [Proof of Concept guide](https://documentation.wazuh.com/current/proof-of-concept-guide/index.html)
--   Blocking a known malicious actor
+ [Proof of Concept guide](https://documentation.wazuh.com/current/proof-of-concept-guide/index.html)
+ Blocking a known malicious actor
 
 In this use case, we demonstrate how to block malicious IP addresses from accessing web resources on a web server. You set up Apache web servers on Ubuntu and Windows endpoints, and try to access them from an RHEL endpoint.
 
@@ -169,33 +169,33 @@ Windows - `rule.id:(657 OR 100100)`
 
 **Explore**
 
--   [Overview](https://wazuh.com/platform/overview/)
--   [XDR](https://wazuh.com/platform/xdr/)
--   [SIEM](https://wazuh.com/platform/siem/)
+ [Overview](https://wazuh.com/platform/overview/)
+ [XDR](https://wazuh.com/platform/xdr/)
+ [SIEM](https://wazuh.com/platform/siem/)
 
 **Services**
 
--   [Wazuh Cloud](https://wazuh.com/cloud/)
--   [Professional support](https://wazuh.com/services/professional-support/)
--   [Consulting services](https://wazuh.com/services/consulting-services/)
--   [Training courses](https://wazuh.com/services/training-courses/)
+ [Wazuh Cloud](https://wazuh.com/cloud/)
+ [Professional support](https://wazuh.com/services/professional-support/)
+ [Consulting services](https://wazuh.com/services/consulting-services/)
+ [Training courses](https://wazuh.com/services/training-courses/)
 
 **Company**
 
--   [About us](https://wazuh.com/about-us/)
--   [Customers](https://wazuh.com/our-customers/)
--   [Partners](https://wazuh.com/partners/)
+ [About us](https://wazuh.com/about-us/)
+ [Customers](https://wazuh.com/our-customers/)
+ [Partners](https://wazuh.com/partners/)
 
 **Documentation**
 
--   [Quickstart](https://documentation.wazuh.com/current/quickstart.html)
--   [Getting started](https://wazuh.com/current/getting-started/index.html)
--   [Installation guide](https://wazuh.com/current/installation-guide/index.html)
+ [Quickstart](https://documentation.wazuh.com/current/quickstart.html)
+ [Getting started](https://wazuh.com/current/getting-started/index.html)
+ [Installation guide](https://wazuh.com/current/installation-guide/index.html)
 
 **Resources**
 
--   [Blog](https://wazuh.com/blog/)
--   [Community](https://wazuh.com/community/)
+ [Blog](https://wazuh.com/blog/)
+ [Community](https://wazuh.com/community/)
 
 © 2025 Wazuh Inc.
 
@@ -205,9 +205,9 @@ Windows - `rule.id:(657 OR 100100)`
 
 [+1 (844) 349 2984](tel:+18443492984)
 
--   [X](https://x.com/wazuh)
--   [LinkedIn](https://www.linkedin.com/company/wazuh)
--   [Reddit](https://www.reddit.com/r/Wazuh/)
--   [GitHub](https://github.com/wazuh)
--   [Slack](https://wazuh.com/community/join-us-on-slack/)
--   [Mailing list](mailto:wazuh+subscribe@googlegroups.com)
+ [X](https://x.com/wazuh)
+ [LinkedIn](https://www.linkedin.com/company/wazuh)
+ [Reddit](https://www.reddit.com/r/Wazuh/)
+ [GitHub](https://github.com/wazuh)
+ [Slack](https://wazuh.com/community/join-us-on-slack/)
+ [Mailing list](mailto:wazuh+subscribe@googlegroups.com)

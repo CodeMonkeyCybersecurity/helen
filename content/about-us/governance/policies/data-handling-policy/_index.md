@@ -30,8 +30,8 @@ This policy outlines how **Code Monkey Cybersecurity**, as a Managed Security Se
 
 ## Encryption: In Transit & At Rest
 
-- **TLS 1.2-1.3** with modern ciphers for all transport
-- **AES-256 encryption** at rest (LUKS/APFS/S3-SSE + GPG)
+**TLS 1.2-1.3** with modern ciphers for all transport
+**AES-256 encryption** at rest (LUKS/APFS/S3-SSE + GPG)
 - Optional **append-only storage** (e.g. S3 Object Lock, ZFS snapshot)
 
 ---

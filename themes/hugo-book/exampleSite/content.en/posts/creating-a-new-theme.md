@@ -129,7 +129,7 @@ total 8
 drwxr-xr-x  7 quoha  staff  238 Sep 29 16:49 .
 drwxr-xr-x  3 quoha  staff  102 Sep 29 16:49 ..
 drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 archetypes
--rw-r--r--  1 quoha  staff   82 Sep 29 16:49 config.toml
+-rw-r--r-1 quoha  staff   82 Sep 29 16:49 config.toml
 drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 content
 drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 layouts
 drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 static
@@ -167,7 +167,7 @@ We can verify that the command worked by looking at the directory again.
 $ ls -l
 total 8
 drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 archetypes
--rw-r--r--  1 quoha  staff   82 Sep 29 16:49 config.toml
+-rw-r--r-1 quoha  staff   82 Sep 29 16:49 config.toml
 drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 content
 drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 layouts
 drwxr-xr-x  4 quoha  staff  136 Sep 29 17:02 public
@@ -180,8 +180,8 @@ See that new public/ directory? Hugo placed all generated content there. When yo
 ```
 $ ls -l public
 total 16
--rw-r--r--  1 quoha  staff  416 Sep 29 17:02 index.xml
--rw-r--r--  1 quoha  staff  262 Sep 29 17:02 sitemap.xml
+-rw-r--r-1 quoha  staff  416 Sep 29 17:02 index.xml
+-rw-r--r-1 quoha  staff  262 Sep 29 17:02 sitemap.xml
 $ 
 ```
 
@@ -253,7 +253,7 @@ $ hugo new theme zafta
 $ ls -l
 total 8
 drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 archetypes
--rw-r--r--  1 quoha  staff   82 Sep 29 16:49 config.toml
+-rw-r--r-1 quoha  staff   82 Sep 29 16:49 config.toml
 drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 content
 drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 layouts
 drwxr-xr-x  4 quoha  staff  136 Sep 29 17:02 public
@@ -261,14 +261,14 @@ drwxr-xr-x  2 quoha  staff   68 Sep 29 16:49 static
 drwxr-xr-x  3 quoha  staff  102 Sep 29 17:31 themes
 
 $ find themes -type f | xargs ls -l
--rw-r--r--  1 quoha  staff  1081 Sep 29 17:31 themes/zafta/LICENSE.md
--rw-r--r--  1 quoha  staff     0 Sep 29 17:31 themes/zafta/archetypes/default.md
--rw-r--r--  1 quoha  staff     0 Sep 29 17:31 themes/zafta/layouts/_default/list.html
--rw-r--r--  1 quoha  staff     0 Sep 29 17:31 themes/zafta/layouts/_default/single.html
--rw-r--r--  1 quoha  staff     0 Sep 29 17:31 themes/zafta/layouts/index.html
--rw-r--r--  1 quoha  staff     0 Sep 29 17:31 themes/zafta/layouts/partials/footer.html
--rw-r--r--  1 quoha  staff     0 Sep 29 17:31 themes/zafta/layouts/partials/header.html
--rw-r--r--  1 quoha  staff    93 Sep 29 17:31 themes/zafta/theme.toml
+-rw-r--r-1 quoha  staff  1081 Sep 29 17:31 themes/zafta/LICENSE.md
+-rw-r--r-1 quoha  staff     0 Sep 29 17:31 themes/zafta/archetypes/default.md
+-rw-r--r-1 quoha  staff     0 Sep 29 17:31 themes/zafta/layouts/_default/list.html
+-rw-r--r-1 quoha  staff     0 Sep 29 17:31 themes/zafta/layouts/_default/single.html
+-rw-r--r-1 quoha  staff     0 Sep 29 17:31 themes/zafta/layouts/index.html
+-rw-r--r-1 quoha  staff     0 Sep 29 17:31 themes/zafta/layouts/partials/footer.html
+-rw-r--r-1 quoha  staff     0 Sep 29 17:31 themes/zafta/layouts/partials/header.html
+-rw-r--r-1 quoha  staff    93 Sep 29 17:31 themes/zafta/theme.toml
 $ 
 ```
 
@@ -294,11 +294,11 @@ Note that the the skeleton's template files are empty. Don't worry, we'll be cha
 
 ```
 $ find themes/zafta -name '*.html' | xargs ls -l
--rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/_default/list.html
--rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/_default/single.html
--rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/index.html
--rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/partials/footer.html
--rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/partials/header.html
+-rw-r--r-1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/_default/list.html
+-rw-r--r-1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/_default/single.html
+-rw-r--r-1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/index.html
+-rw-r--r-1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/partials/footer.html
+-rw-r--r-1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/partials/header.html
 $
 ```
 
@@ -349,10 +349,10 @@ Let's check the public/ directory to see what Hugo's created.
 $ ls -l public
 total 16
 drwxr-xr-x  2 quoha  staff   68 Sep 29 17:56 css
--rw-r--r--  1 quoha  staff    0 Sep 29 17:56 index.html
--rw-r--r--  1 quoha  staff  407 Sep 29 17:56 index.xml
+-rw-r--r-1 quoha  staff    0 Sep 29 17:56 index.html
+-rw-r--r-1 quoha  staff  407 Sep 29 17:56 index.xml
 drwxr-xr-x  2 quoha  staff   68 Sep 29 17:56 js
--rw-r--r--  1 quoha  staff  243 Sep 29 17:56 sitemap.xml
+-rw-r--r-1 quoha  staff  243 Sep 29 17:56 sitemap.xml
 $
 ```
 
@@ -377,8 +377,8 @@ When Hugo created our theme, it created an empty home page template. Now, when w
 
 ```
 $ find . -name index.html | xargs ls -l
--rw-r--r--  1 quoha  staff  0 Sep 29 20:21 ./public/index.html
--rw-r--r--  1 quoha  staff  0 Sep 29 17:31 ./themes/zafta/layouts/index.html
+-rw-r--r-1 quoha  staff  0 Sep 29 20:21 ./public/index.html
+-rw-r--r-1 quoha  staff  0 Sep 29 17:31 ./themes/zafta/layouts/index.html
 $ 
 ```
 
@@ -519,7 +519,7 @@ WARN: 2014/09/29 Unable to locate layout: [404.html theme/404.html]
 in 2 ms
 
 $ find public -type f -name '*.html' | xargs ls -l
--rw-r--r--  1 quoha  staff  78 Sep 29 21:26 public/index.html
+-rw-r--r-1 quoha  staff  78 Sep 29 21:26 public/index.html
 
 $ cat public/index.html 
 <!DOCTYPE html> 
@@ -582,8 +582,8 @@ Categories = []
 :wq
 
 $ find themes/zafta/archetypes -type f | xargs ls -l
--rw-r--r--  1 quoha  staff   0 Sep 29 21:53 themes/zafta/archetypes/default.md
--rw-r--r--  1 quoha  staff  51 Sep 29 21:54 themes/zafta/archetypes/post.md
+-rw-r--r-1 quoha  staff   0 Sep 29 21:53 themes/zafta/archetypes/default.md
+-rw-r--r-1 quoha  staff  51 Sep 29 21:54 themes/zafta/archetypes/post.md
 
 $ hugo --verbose new post/first.md
 INFO: 2014/09/29 Using config file: /Users/quoha/Sites/zafta/config.toml
@@ -601,8 +601,8 @@ INFO: 2014/09/29 creating /Users/quoha/Sites/zafta/content/post/second.md
 
 $ ls -l content/post
 total 16
--rw-r--r--  1 quoha  staff  104 Sep 29 21:54 first.md
--rw-r--r--  1 quoha  staff  105 Sep 29 21:57 second.md
+-rw-r--r-1 quoha  staff  104 Sep 29 21:54 first.md
+-rw-r--r-1 quoha  staff  105 Sep 29 21:57 second.md
 
 $ cat content/post/first.md 
 +++
@@ -652,10 +652,10 @@ The output says that it created 2 pages. Those are our new posts:
 
 ```
 $ find public -type f -name '*.html' | xargs ls -l
--rw-r--r--  1 quoha  staff  78 Sep 29 22:13 public/index.html
--rw-r--r--  1 quoha  staff   0 Sep 29 22:13 public/post/first/index.html
--rw-r--r--  1 quoha  staff   0 Sep 29 22:13 public/post/index.html
--rw-r--r--  1 quoha  staff   0 Sep 29 22:13 public/post/second/index.html
+-rw-r--r-1 quoha  staff  78 Sep 29 22:13 public/index.html
+-rw-r--r-1 quoha  staff   0 Sep 29 22:13 public/post/first/index.html
+-rw-r--r-1 quoha  staff   0 Sep 29 22:13 public/post/index.html
+-rw-r--r-1 quoha  staff   0 Sep 29 22:13 public/post/second/index.html
 $
 ```
 
@@ -719,10 +719,10 @@ WARN: 2014/09/29 Unable to locate layout: [404.html theme/404.html]
 0 categories created
 in 4 ms
 $ find public -type f -name '*.html' | xargs ls -l 
--rw-r--r--  1 quoha  staff  94 Sep 29 22:23 public/index.html
--rw-r--r--  1 quoha  staff   0 Sep 29 22:23 public/post/first/index.html
--rw-r--r--  1 quoha  staff   0 Sep 29 22:23 public/post/index.html
--rw-r--r--  1 quoha  staff   0 Sep 29 22:23 public/post/second/index.html
+-rw-r--r-1 quoha  staff  94 Sep 29 22:23 public/index.html
+-rw-r--r-1 quoha  staff   0 Sep 29 22:23 public/post/first/index.html
+-rw-r--r-1 quoha  staff   0 Sep 29 22:23 public/post/index.html
+-rw-r--r-1 quoha  staff   0 Sep 29 22:23 public/post/second/index.html
 $ cat public/index.html 
 <!DOCTYPE html>
 <html>
@@ -751,7 +751,7 @@ Now that we know the search rule, let's see what we actually have available:
 
 ```
 $ find themes/zafta -name single.html | xargs ls -l
--rw-r--r--  1 quoha  staff  132 Sep 29 17:31 themes/zafta/layouts/_default/single.html
+-rw-r--r-1 quoha  staff  132 Sep 29 17:31 themes/zafta/layouts/_default/single.html
 ```
 
 We could create a new template, post/single.html, or change the default. Since we don't know of any other content types, let's start with updating the default.
@@ -797,10 +797,10 @@ WARN: 2014/09/29 Unable to locate layout: [404.html theme/404.html]
 in 4 ms
 
 $ find public -type f -name '*.html' | xargs ls -l
--rw-r--r--  1 quoha  staff   94 Sep 29 22:40 public/index.html
--rw-r--r--  1 quoha  staff  125 Sep 29 22:40 public/post/first/index.html
--rw-r--r--  1 quoha  staff    0 Sep 29 22:40 public/post/index.html
--rw-r--r--  1 quoha  staff  128 Sep 29 22:40 public/post/second/index.html
+-rw-r--r-1 quoha  staff   94 Sep 29 22:40 public/index.html
+-rw-r--r-1 quoha  staff  125 Sep 29 22:40 public/post/first/index.html
+-rw-r--r-1 quoha  staff    0 Sep 29 22:40 public/post/index.html
+-rw-r--r-1 quoha  staff  128 Sep 29 22:40 public/post/second/index.html
 
 $ cat public/post/first/index.html 
 <!DOCTYPE html>
@@ -866,10 +866,10 @@ WARN: 2014/09/29 Unable to locate layout: [404.html theme/404.html]
 in 4 ms
 
 $ find public -type f -name '*.html' | xargs ls -l
--rw-r--r--  1 quoha  staff  149 Sep 29 22:44 public/index.html
--rw-r--r--  1 quoha  staff  125 Sep 29 22:44 public/post/first/index.html
--rw-r--r--  1 quoha  staff    0 Sep 29 22:44 public/post/index.html
--rw-r--r--  1 quoha  staff  128 Sep 29 22:44 public/post/second/index.html
+-rw-r--r-1 quoha  staff  149 Sep 29 22:44 public/index.html
+-rw-r--r-1 quoha  staff  125 Sep 29 22:44 public/post/first/index.html
+-rw-r--r-1 quoha  staff    0 Sep 29 22:44 public/post/index.html
+-rw-r--r-1 quoha  staff  128 Sep 29 22:44 public/post/second/index.html
 
 $ cat public/index.html 
 <!DOCTYPE html>
@@ -894,7 +894,7 @@ We need to decide which template to update. This will be a listing, so it should
 
 ```
 $ find themes/zafta -name list.html | xargs ls -l
--rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/_default/list.html
+-rw-r--r-1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/_default/list.html
 ```
 
 As with the single post, we have to decide to update _default/list.html or create post/list.html. We still don't have multiple content types, so let's stay consistent and update the default list template.
@@ -924,11 +924,11 @@ Generate the web site and verify the results.
 
 ```
 $ find public -name '*.html' | xargs ls -l
--rw-rw-r--  1 mdhender  staff   334 Sep 27 15:08 public/about-time/index.html
--rw-rw-r--  1 mdhender  staff   527 Sep 27 15:08 public/index.html
--rw-rw-r--  1 mdhender  staff   358 Sep 27 15:08 public/post/first-post/index.html
--rw-rw-r--  1 mdhender  staff     0 Sep 27 15:08 public/post/index.html
--rw-rw-r--  1 mdhender  staff   342 Sep 27 15:08 public/post/second-post/index.html
+-rw-rw-r-1 mdhender  staff   334 Sep 27 15:08 public/about-time/index.html
+-rw-rw-r-1 mdhender  staff   527 Sep 27 15:08 public/index.html
+-rw-rw-r-1 mdhender  staff   358 Sep 27 15:08 public/post/first-post/index.html
+-rw-rw-r-1 mdhender  staff     0 Sep 27 15:08 public/post/index.html
+-rw-rw-r-1 mdhender  staff   342 Sep 27 15:08 public/post/second-post/index.html
 ```
 
 Notice that the page wasn't created at the top level. It was created in a sub-directory named 'about-time/'. That name came from our slug. Hugo will use the slug to name the generated content. It's a reasonable default, by the way, but we can learn a few things by fighting it for this file.
@@ -982,11 +982,11 @@ But, that about page still renders to about-time/index.html.
 
 ```
 $ find public -name '*.html' | xargs ls -l
--rw-rw-r--  1 mdhender  staff    334 Sep 27 15:33 public/about-time/index.html
--rw-rw-r--  1 mdhender  staff    645 Sep 27 15:33 public/index.html
--rw-rw-r--  1 mdhender  staff    358 Sep 27 15:33 public/post/first-post/index.html
--rw-rw-r--  1 mdhender  staff      0 Sep 27 15:33 public/post/index.html
--rw-rw-r--  1 mdhender  staff    342 Sep 27 15:33 public/post/second-post/index.html
+-rw-rw-r-1 mdhender  staff    334 Sep 27 15:33 public/about-time/index.html
+-rw-rw-r-1 mdhender  staff    645 Sep 27 15:33 public/index.html
+-rw-rw-r-1 mdhender  staff    358 Sep 27 15:33 public/post/first-post/index.html
+-rw-rw-r-1 mdhender  staff      0 Sep 27 15:33 public/post/index.html
+-rw-rw-r-1 mdhender  staff    342 Sep 27 15:33 public/post/second-post/index.html
 ```
 
 Knowing that hugo is using the slug to generate the file name, the simplest solution is to change the slug. Let's do it the hard way and change the permalink in the configuration file.

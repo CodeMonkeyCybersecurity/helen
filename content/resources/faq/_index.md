@@ -26,10 +26,10 @@ Get clear answers to common cybersecurity questions. No technical jargon - just 
 
 Cybersecurity protects your devices, data, and accounts from digital threats like malware, ransomware, and hackers. You need it because:
 
-- **Financial protection**: Prevent identity theft and financial fraud
-- **Privacy protection**: Keep personal information secure
-- **Business continuity**: Avoid costly downtime and data loss
-- **Peace of mind**: Know your digital life is protected
+**Financial protection**: Prevent identity theft and financial fraud
+**Privacy protection**: Keep personal information secure
+**Business continuity**: Avoid costly downtime and data loss
+**Peace of mind**: Know your digital life is protected
 
 ### How do I know if my computer is infected?
 
@@ -154,10 +154,10 @@ We recommend keeping your antivirus for basic malware protection.
 ### What security compliance do small businesses need?
 
 **Common requirements:**
-- **GDPR**: If you handle EU customer data
-- **CCPA**: If you serve California customers
-- **Australian Privacy Principles**: For Australian businesses
-- **Industry-specific**: Medical (HIPAA), financial (PCI-DSS), etc.
+**GDPR**: If you handle EU customer data
+**CCPA**: If you serve California customers
+**Australian Privacy Principles**: For Australian businesses
+**Industry-specific**: Medical (HIPAA), financial (PCI-DSS), etc.
 
 **Our approach**: We help you understand and meet these requirements without legal complexity.
 
@@ -240,10 +240,10 @@ We recommend keeping your antivirus for basic malware protection.
 ### What should I teach my family about online safety?
 
 **Age-appropriate guidelines:**
-- **Children**: Don't share personal information online
-- **Teenagers**: Recognize social engineering and cyberbullying
-- **Adults**: Understand financial fraud and identity theft
-- **Seniors**: Recognize common scams and technical support fraud
+**Children**: Don't share personal information online
+**Teenagers**: Recognize social engineering and cyberbullying
+**Adults**: Understand financial fraud and identity theft
+**Seniors**: Recognize common scams and technical support fraud
 
 **Family security**: Use parental controls, secure home networks, and establish clear online rules.
 
@@ -268,22 +268,22 @@ We recommend keeping your antivirus for basic malware protection.
 ### What's included in each pricing tier?
 
 **Individual/Home ($29/month):**
-- Up to 5 devices
-- 24/7 monitoring
-- Expert-reviewed alerts
-- Email and phone support
+Up to 5 devices
+24/7 monitoring
+Expert-reviewed alerts
+Email and phone support
 
 **Small Business ($79/month):**
-- Up to 10 devices
-- Priority support
-- Business compliance reporting
-- Team management features
+Up to 10 devices
+Priority support
+Business compliance reporting
+Team management features
 
 **Growing Business (Custom pricing):**
-- Unlimited devices
-- Dedicated account manager
-- Advanced reporting
-- Custom integrations
+Unlimited devices
+Dedicated account manager
+Advanced reporting
+Custom integrations
 
 ### Are there any setup fees or hidden costs?
 
@@ -324,10 +324,10 @@ We recommend keeping your antivirus for basic malware protection.
 ### How do I get help if I have problems?
 
 **Support channels:**
-- **Phone**: (+61) 0432 038 310 (business hours)
-- **Email**: support@cybermonkey.net.au (24/7)
-- **Live chat**: Available on our website
-- **Customer portal**: Access guides and submit tickets
+ (business hours)
+**Email**: support@cybermonkey.net.au (24/7)
+**Live chat**: Available on our website
+**Customer portal**: Access guides and submit tickets
 
 **Response times:**
 - Critical issues: 1 hour
@@ -370,9 +370,9 @@ We recommend keeping your antivirus for basic malware protection.
 ## Still Have Questions?
 
 **Contact our experts:**
-- **Phone**: (+61) 0432 038 310
-- **Email**: main@cybermonkey.net.au
-- **Live chat**: Available on our website
+
+**Email**: main@cybermonkey.net.au
+**Live chat**: Available on our website
 
 **Or explore:**
 - [Resource Library](/resources/) for security guides

@@ -45,10 +45,10 @@ docker-compose down
 ## Architecture Overview
 
 ### Core Technology Stack
-- **Hugo Extended 0.128.0+** - Static site generator
-- **Hugo Book Theme** - Managed as git submodule in `themes/hugo-book/`
-- **SCSS** - Styling with Hugo's asset pipeline
-- **Docker + Nginx** - Production deployment
+**Hugo Extended 0.128.0+** - Static site generator
+**Hugo Book Theme** - Managed as git submodule in `themes/hugo-book/`
+**SCSS** - Styling with Hugo's asset pipeline
+**Docker + Nginx** - Production deployment
 
 ### Directory Structure
 - `content/` - Markdown content files
@@ -62,13 +62,13 @@ docker-compose down
 The `/posts/` section serves dual purposes:
 1. **Public blog** for company news, achievements, and industry insights
 2. **Social media tracking** - content often repurposed for Facebook/LinkedIn posts
-3. **SEO content marketing** - industry-specific articles and case studies
+3. **SEO content marketing** Industry-specific articles and case studies
 
 **Blog content types:**
 - Company milestones (Microsoft partnership, Chamber membership, directory listings)
 - Security awareness articles and tips
 - Case studies and customer success stories
-- Industry news and commentary
+Industry news and commentary
 - Product updates and feature announcements
 - `layouts/` - Hugo HTML templates and partials
 - `assets/` - Source assets (SCSS, JavaScript)
@@ -115,29 +115,29 @@ Hugo handles asset compilation automatically:
 ## Writing Style Guidelines
 
 ### Tone and Language
-- **Target audience**: Home users, small businesses, and community groups (not  IT professionals)
-- **Tone**: Approachable, helpful, and confidence-building rather than intimidating
-- **Avoid**: Military terminology, threat-focused language, imposing costs, "cyber warfare" rhetoric
-- **No padlock emojis or symbols** - use friendly alternatives like , , , 
-- **Focus on empowerment** rather than fear-based messaging
+**Target audience**: Home users, small businesses, and community groups (not  IT professionals)
+**Tone**: Approachable, helpful, and confidence-building rather than intimidating
+**Avoid**: Military terminology, threat-focused language, imposing costs, "cyber warfare" rhetoric
+**No padlock emojis or symbols** - use friendly alternatives like , , , 
+**Focus on empowerment** rather than fear-based messaging
 
 ### Prohibited Terms/Phrases
--  "Military-grade" or "" (use "reliable" or "professional-quality")
--  "Threat intelligence" or "killchain" 
--  "Cyber warfare" or aggressive security terminology
--  Padlock symbols   (use alternatives)
--  Fear-inducing language about costs or consequences
--  FUD
+"Military-grade" or "" (use "reliable" or "professional-quality")
+"Threat intelligence" or "killchain" 
+"Cyber warfare" or aggressive security terminology
+Padlock symbols   (use alternatives)
+Fear-inducing language about costs or consequences
+FUD
 
 ### Preferred Language
--  "Easy to use" instead of "-ready"
--  "Helps you stay safe" instead of "defends against threats"
--  "Practical tools" instead of "security arsenal"
--  "Peace of mind" instead of "threat mitigation"
--  Focus on positive outcomes and user empowerment
+"Easy to use" instead of "-ready"
+"Helps you stay safe" instead of "defends against threats"
+"Practical tools" instead of "security arsenal"
+"Peace of mind" instead of "threat mitigation"
+Focus on positive outcomes and user empowerment
 
 ### Reference Guidelines
-- **Blog posts require citations**: Include approximately one reference/link per 100 words
-- **Use reputable sources**: Link to research studies, industry reports, government data, established news outlets
-- **Reference integration**: Work citations naturally into the narrative flow
-- **Social media ready**: Blog content serves as basis for Facebook, LinkedIn, and Instagram posts
+**Blog posts require citations**: Include approximately one reference/link per 100 words
+**Use reputable sources**: Link to research studies, industry reports, government data, established news outlets
+**Reference integration**: Work citations naturally into the narrative flow
+**Social media ready**: Blog content serves as basis for Facebook, LinkedIn, and Instagram posts

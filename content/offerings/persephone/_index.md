@@ -23,22 +23,22 @@ Don't become a statistic. Our backup services ensure your data is always protect
 ## **Our Backup Solutions**
 
 ### **Automated Cloud Backup**
-- **Daily automated backups** of critical business data
-- **Encrypted storage** in Australian data centers
-- **Version history** - recover files from any point in time
-- **Instant alerts** if backups fail or data changes unexpectedly
+**Daily automated backups** of critical business data
+**Encrypted storage** in Australian data centers
+**Version history** - recover files from any point in time
+**Instant alerts** if backups fail or data changes unexpectedly
 
 ### **Endpoint Safety**
-- **Automatic laptop/desktop backup** for remote workers
-- **Real-time file sync** across devices
-- **Ransomware protection** - detect and block malicious encryption
-- **Lost device recovery** - access your files from anywhere
+**Automatic laptop/desktop backup** for remote workers
+**Real-time file sync** across devices
+**Ransomware protection** - detect and block malicious encryption
+**Lost device recovery** - access your files from anywhere
 
 ### **Server & Database Backup**
-- **Application-aware backups** for databases and business applications
-- **Minimal downtime** backup processes
-- **Rapid recovery** options including bare-metal restore
-- **Compliance documentation** for audits and insurance
+**Application-aware backups** for databases and business applications
+**Minimal downtime** backup processes
+**Rapid recovery** options including bare-metal restore
+**Compliance documentation** for audits and insurance
 
 ## **Features That Matter**
 
@@ -64,19 +64,19 @@ Don't become a statistic. Our backup services ensure your data is always protect
 
 ### **Essential Business**
 **$99/month** - Perfect for small offices
-- Up to 500GB storage
+Up to 500GB storage
 - 5 endpoints (computers/laptops)
 - Daily automated backups
 - 30-day version history
-- Email support
+Email support
 
 ### **Professional**
 **$199/month** - Growing businesses
-- Up to 2TB storage
+Up to 2TB storage
 - 15 endpoints
 - Real-time file sync
 - 90-day version history
-- Priority support + phone
+ support + phone
 
 ## **What's Included**
 
@@ -104,7 +104,7 @@ Already experiencing data loss? We provide emergency recovery services for exist
 
 Contact us today for a free backup assessment and discover how our solutions can protect your critical business data.
 
-**Call**: (+61) 0432 038 310  
+:   
 **Email**: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
 *All backup plans include Australian-based support and comply with Australian data protection requirements.*

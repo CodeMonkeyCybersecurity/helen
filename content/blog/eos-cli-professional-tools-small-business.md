@@ -34,10 +34,10 @@ eos status                       # See everything in plain English
 ```
 
 **Why this matters for you:**
-- **No monthly subscriptions** - you own the tools
-- **Works on your existing equipment** - no need to buy new hardware [^6]
-- **Plain English explanations** - know what's happening with your technology
-- **Community support** - help from people who understand small business needs
+**No monthly subscriptions** - you own the tools
+**Works on your existing equipment** - no need to buy new hardware [^6]
+**Plain English explanations** - know what's happening with your technology
+**Community support** - help from people who understand small business needs
 
 ---
 
@@ -46,18 +46,18 @@ eos status                       # See everything in plain English
 Research from 2024-2025 shows just how underserved small businesses are:
 
 ### **The Problem Is Getting Worse**
-- **72% of Canadian small businesses** experienced a cyberattack in 2024 [^7]
-- **82% of ransomware attacks** target companies with less than 1000 employees [^8]
-- **95% of security breaches** happen due to human error (because the tools are too complicated) [^9]
+**72% of Canadian small businesses** experienced a cyberattack in 2024 [^7]
+**82% of ransomware attacks** target companies with less than 1000 employees [^8]
+**95% of security breaches** happen due to human error (because the tools are too complicated) [^9]
 
 ### **The Help Isn't There**
-- **Less than 30% of small businesses** manage IT security in-house [^10]
-- **54% of businesses** admit their IT departments lack experience with complex problems [^11]
-- **Only 17% rate current small business IT capabilities** as "effective" [^12]
+**Less than 30% of small businesses** manage IT security in-house [^10]
+**54% of businesses** admit their IT departments lack experience with complex problems [^11]
+**Only 17% rate current small business IT capabilities** as "effective" [^12]
 
 ### **The Costs Are Crushing**
 - Small businesses spend between **$826 and $653,587** recovering from IT incidents [^13]
-- **75% of small businesses** are worried about losing data on personal devices [^14]
+**75% of small businesses** are worried about losing data on personal devices [^14]
 - Many can't afford the $50K-$200K+ annual costs of professional IT services [^15]
 
 **The bottom line:** Small businesses need professional-quality tools at prices that make sense.
@@ -75,10 +75,10 @@ eos backup test restore           # Make sure it actually works
 ```
 
 **What you get:**
-- **Automatic daily backups** of your important files
-- **Multiple backup locations** - local, cloud, or both [^16]
-- **Verified backups** - test that your backups actually work
-- **Simple restoration** - get your files back quickly when you need them
+**Automatic daily backups** of your important files
+**Multiple backup locations** - local, cloud, or both [^16]
+**Verified backups** - test that your backups actually work
+**Simple restoration** - get your files back quickly when you need them
 
 **Real scenario:** Your laptop crashes the day before a big presentation. With Eos, you restore everything to a new computer in 20 minutes instead of losing days of work.
 
@@ -93,10 +93,10 @@ eos secrets get website-login     # Retrieve when you need them
 ```
 
 **Professional password management:**
-- **Secure storage** for all your passwords and important information
-- **Easy access** when you need it [^17]
-- **Multi-device sync** - access from your phone, laptop, and tablet
-- **No monthly fees** - you own your password manager
+**Secure storage** for all your passwords and important information
+**Easy access** when you need it [^17]
+**Multi-device sync** - access from your phone, laptop, and tablet
+**No monthly fees** - you own your password manager
 
 **Why this matters:** Instead of writing passwords on sticky notes or using the same password everywhere, you get professional-quality security that's actually easy to use [^18].
 
@@ -111,10 +111,10 @@ eos ai check system-health               # Regular health checkups
 ```
 
 **Your personal IT assistant:**
-- **Plain English explanations** for technical problems [^19]
-- **Step-by-step guidance** for fixing common issues
-- **Preventive maintenance** suggestions
-- **No technical jargon** - advice you can actually follow
+**Plain English explanations** for technical problems [^19]
+**Step-by-step guidance** for fixing common issues
+**Preventive maintenance** suggestions
+**No technical jargon** - advice you can actually follow
 
 **Real example:** "Your computer is slow because you have 47 browser tabs open and two video calls running. Close the tabs you're not using and restart your browser."
 
@@ -129,10 +129,10 @@ eos alerts setup email           # Get notified about real problems
 ```
 
 **Know what's happening:**
-- **Internet connection monitoring** - know when your connection is having problems [^20]
-- **Device health checks** - catch problems before they cause downtime
-- **Simple alerts** - get notified about real issues, not technical noise
-- **Performance tracking** - see if your computer is getting slower over time
+**Internet connection monitoring** - know when your connection is having problems [^20]
+**Device health checks** - catch problems before they cause downtime
+**Simple alerts** - get notified about real issues, not technical noise
+**Performance tracking** - see if your computer is getting slower over time
 
 **Real benefit:** Instead of wondering "why is the internet so slow?" you'll know if it's your WiFi, your internet provider, or something else entirely.
 
@@ -161,12 +161,12 @@ eos alerts setup email           # Get notified about real problems
 
 ### ** Perfect For:**
 
-- **Home offices** needing reliable backups and simple security
-- **Small businesses (1-50 people)** wanting professional tools at reasonable costs [^22]
-- **Freelancers and consultants** who need reliable technology without IT departments
-- **Family computers** that need better security and maintenance
-- **Small retail or service businesses** that can't afford dedicated IT staff
-- **Anyone tired of** subscription fees and vendor lock-in
+**Home offices** needing reliable backups and simple security
+**Small businesses (1-50 people)** wanting professional tools at reasonable costs [^22]
+**Freelancers and consultants** who need reliable technology without IT departments
+**Family computers** that need better security and maintenance
+**Small retail or service businesses** that can't afford dedicated IT staff
+**Anyone tired of** subscription fees and vendor lock-in
 
 ### **Real Stories from Small Business Users:**
 
@@ -185,20 +185,20 @@ eos alerts setup email           # Get notified about real problems
 
 ### ** What This Means for You:**
 
-- **No vendor lock-in** - you own your setup and your data [^23]
-- **No monthly fees** - install once, use forever
-- **Community support** - help from people who understand small business needs
-- **Professional backing** - Code Monkey Cybersecurity provides commercial support when you need it
-- **Transparency** - see exactly how everything works, no hidden surprises
+**No vendor lock-in** - you own your setup and your data [^23]
+**No monthly fees** - install once, use forever
+**Community support** - help from people who understand small business needs
+**Professional backing** - Code Monkey Cybersecurity provides commercial support when you need it
+**Transparency** - see exactly how everything works, no hidden surprises
 
 ### ** Built on Trusted, Proven Tools:**
 
 Eos doesn't reinvent everything - it makes existing professional tools easy to use:
-- **Restic** - professional backup software used by major companies [^24]
-- **HashiCorp Vault** - the gold standard for password and secret management [^25]
-- **Wazuh** - professional security monitoring [^26]
-- **PostgreSQL** - reliable database for your information
-- **Standard encryption** - the same security banks use [^27]
+**Restic** - professional backup software used by major companies [^24]
+**HashiCorp Vault** - the gold standard for password and secret management [^25]
+**Wazuh** - professional security monitoring [^26]
+**PostgreSQL** - reliable database for your information
+**Standard encryption** - the same security banks use [^27]
 
 ---
 
@@ -225,31 +225,31 @@ eos monitor setup
 3. **Everything works together** - no complex integration needed
 
 ### **You Get:**
-- **Professional backup system** protecting your important files
-- **Secure password management** for all your accounts
-- **System monitoring** that tells you about problems before they cause downtime
-- **AI assistant** for troubleshooting and maintenance
-- **Plain English status reports** so you know everything is working
+**Professional backup system** protecting your important files
+**Secure password management** for all your accounts
+**System monitoring** that tells you about problems before they cause downtime
+**AI assistant** for troubleshooting and maintenance
+**Plain English status reports** so you know everything is working
 
 ---
 
 ## ** The Support You Actually Need**
 
 ### **Community Support (Free)**
-- **User forums** with people facing similar challenges [^29]
-- **Video tutorials** showing real-world setup and use
-- **Documentation** written for non-technical users
+**User forums** with people facing similar challenges [^29]
+**Video tutorials** showing real-world setup and use
+**Documentation** written for non-technical users
 
 ### **Professional Support (When You Need It)**
-- **Remote assistance** with setup and troubleshooting
-- **Custom configurations** for specific business needs
-- **Priority support** when things go wrong
-- **Training sessions** for your team
+**Remote assistance** with setup and troubleshooting
+**Custom configurations** for specific business needs
+**Priority support** when things go wrong
+**Training sessions** for your team
 
 ### **Local Support (Australia)**
-- **Code Monkey Cybersecurity** provides commercial support
-- **Understanding of Australian small business needs** [^30]
-- **Reasonable rates** - not  pricing for small business problems
+**Code Monkey Cybersecurity** provides commercial support
+**Understanding of Australian small business needs** [^30]
+**Reasonable rates** - not  pricing for small business problems
 
 ---
 
@@ -282,17 +282,17 @@ You don't need to set up everything at once. Start with what matters most:
 ## ** Built for the Future, Designed for Today**
 
 ### ** What Works Right Now:**
-- **Professional backup and recovery** - protect your business data
-- **Secure password and secret management** - stop password chaos
-- **System monitoring and alerts** - catch problems early [^33]
-- **AI-powered troubleshooting** - get help when things go wrong
-- **Simple automation** - let computers do the boring work
+**Professional backup and recovery** - protect your business data
+**Secure password and secret management** - stop password chaos
+**System monitoring and alerts** - catch problems early [^33]
+**AI-powered troubleshooting** - get help when things go wrong
+**Simple automation** - let computers do the boring work
 
 ### ** What's Coming:**
-- **Windows and Mac support** - currently Linux-focused
-- **Mobile apps** - manage everything from your phone [^34]
-- **Team collaboration features** - better tools for small teams
-- **Industry-specific templates** - pre-configured setups for common businesses
+**Windows and Mac support** - currently Linux-focused
+**Mobile apps** - manage everything from your phone [^34]
+**Team collaboration features** - better tools for small teams
+**Industry-specific templates** - pre-configured setups for common businesses
 
 ---
 
@@ -301,11 +301,11 @@ You don't need to set up everything at once. Start with what matters most:
 The big IT companies have left you behind. They focus on large corporations that can pay  prices, while you're stuck with either toys or tools too complex to use [^35].
 
 **Eos bridges that gap:**
-- **Professional-quality tools** without professional complexity
-- **One-time setup** instead of endless monthly subscriptions  
-- **Community support** from people who understand your challenges
-- **Local backing** from an Australian cybersecurity company
-- **Real solutions** for real problems you face every day
+**Professional-quality tools** without professional complexity
+**One-time setup** instead of endless monthly subscriptions  
+**Community support** from people who understand your challenges
+**Local backing** from an Australian cybersecurity company
+**Real solutions** for real problems you face every day
 
 This isn't about "cyber warfare" or "threat intelligence." It's about having reliable technology that works when you need it, protects what matters to you, and doesn't require a computer science degree to use.
 

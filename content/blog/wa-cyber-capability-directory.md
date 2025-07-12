@@ -22,23 +22,23 @@ CyberWest Hub serves as Western Australia's premier cybersecurity innovation hub
 ## Our Growing Recognition
 
 This directory listing joins our other recent achievements:
-- **Microsoft for Startups Partnership** (announced earlier this year)
-- **Fremantle Chamber of Commerce Membership**
+**Microsoft for Startups Partnership** (announced earlier this year)
+**Fremantle Chamber of Commerce Membership**
 - Active participation in the WA cybersecurity community
 
 ## Why This Matters for Our Clients
 
 Being recognized in the official state directory demonstrates:
-- **Local expertise** with deep understanding of WA business challenges
-- **Industry validation** of our approach and services
-- **Established presence** in the Australian cybersecurity landscape
-- **Commitment to innovation** in making security accessible
+**Local expertise** with deep understanding of WA business challenges
+**Industry validation** of our approach and services
+**Established presence** in the Australian cybersecurity landscape
+**Commitment to innovation** in making security accessible
 
 ## Looking Ahead
 
 This recognition comes at an exciting time as we continue expanding our services:
-- **Delphi Notify** monitoring platform gaining traction with 200+ small businesses
-- **Scam Education & Phishing Training** workshops helping teams reduce click rates by 70%+
+**Delphi Notify** monitoring platform gaining traction with 200+ small businesses
+**Scam Education & Phishing Training** workshops helping teams reduce click rates by 70%+
 
 ## Thank You CyberWest
 

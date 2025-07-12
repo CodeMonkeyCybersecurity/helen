@@ -10,7 +10,9 @@ weight: 7
 
 ## Access Your Security Dashboard
 
-Welcome to the Code Monkey Cybersecurity customer portal. Log in to access your Delphi Notify security dashboard, alerts, and account management.
+Welcome to the Code Monkey Cybersecurity customer portal. 
+
+Log in to access your Delphi Notify security dashboard, alerts, and account management.
 
 ### Delphi Notify Dashboard
 
@@ -22,34 +24,43 @@ Access your personalized security monitoring dashboard:
 
 If you need help accessing your account or have questions about your security monitoring:
 
-- **Email**: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
-- **Phone**: (+61) 0432 038 310
-- **Business Hours**: Monday-Friday, 9 AM - 5 PM AWST
+**Email**: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
+
+
+
+**Business Hours**: Monday-Friday, 9 AM - 5 PM AWST
 
 ### Account Recovery
 
 Forgot your password or need to reset your access?
 
-1. Visit the [Delphi Notify login page](https://delphi.cybermonkey.net.au)
-2. Click "Forgot Password" 
-3. Enter your registered email address
-4. Follow the reset instructions sent to your email
+Visit the [Delphi Notify login page](https://delphi.cybermonkey.net.au)
+
+
+Click "Forgot Password" 
+
+Enter your registered email address
+
+Follow the reset instructions sent to your email
 
 ### New Customer Setup
 
 If you're a new customer who just signed up for Delphi Notify:
 
-1. Check your email for setup instructions
-2. Your security dashboard will be available within 24 hours
-3. Contact us if you don't receive setup instructions within 2 business days
+Check your email for setup instructions
+Your security dashboard will be available within 24 hours
+Contact us if you don't receive setup instructions within 2 business days
 
 ### Security Notice
 
 For your protection:
-- Always verify you're on the correct login page (delphi.cybermonkey.net.au)
-- Never share your login credentials
-- Contact us immediately if you suspect unauthorized access
+
+Always verify you're on the correct login page (delphi.cybermonkey.net.au)
+
+Never share your login credentials
+
+Contact us immediately if you suspect unauthorized access
 
 ---
 
-*Having trouble? Contact our support team at [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au) or call (+61) 0432 038 310.*
+*Having trouble? Contact our support team at [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au) or call .*

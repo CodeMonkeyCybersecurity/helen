@@ -37,16 +37,16 @@ After watching too many WA businesses discover the hard way that **OneDrive and 
 
 ### **The Statistics That Should Scare You**
 
-- **96% of businesses** don't back up their workstations properly
-- **93% of businesses** that lose data for more than 10 days file for bankruptcy within a year
-- **88% of data loss** is caused by human error (accidental deletion)
-- **67% of data loss** comes from hard drive crashes and system failures
-- **$2,000+ per hour** - average cost of business downtime from data loss
+**96% of businesses** don't back up their workstations properly
+**93% of businesses** that lose data for more than 10 days file for bankruptcy within a year
+**88% of data loss** is caused by human error (accidental deletion)
+**67% of data loss** comes from hard drive crashes and system failures
+**$2,000+ per hour** - average cost of business downtime from data loss
 
 **Australian small businesses are particularly vulnerable:**
-- **60% fail within three years** - often due to operational disruptions like data loss
-- **40% don't back up their data at all**
-- **40-50% of existing backups** aren't fully recoverable when needed
+**60% fail within three years** - often due to operational disruptions like data loss
+**40% don't back up their data at all**
+**40-50% of existing backups** aren't fully recoverable when needed
 
 ---
 
@@ -79,25 +79,25 @@ Doesn't meet **3-2-1 backup standards** recommended by US Cybersecurity and Infr
 Our backup service is powered by **Restic**, written in **Go** - one of the memory-safe programming languages **recommended by the White House** for critical infrastructure.
 
 **Why this matters:**
-- **White House cybersecurity guidance** specifically recommends Go alongside C#, Java, Ruby, and Swift
-- **Memory-safe languages** prevent many cybersecurity vulnerabilities at the code level
-- **"Since many cybersecurity issues start with a line of code"** - using memory-safe languages means inheriting security automatically
+**White House cybersecurity guidance** specifically recommends Go alongside C#, Java, Ruby, and Swift
+**Memory-safe languages** prevent many cybersecurity vulnerabilities at the code level
+**"Since many cybersecurity issues start with a line of code"** - using memory-safe languages means inheriting security automatically
 
 ### **Restic: The Backup Tool Actually Use**
 
 **Technical Excellence:**
-- **Fast, secure, efficient** - designed for production environments
-- **Cross-platform support** - Linux, macOS, Windows, FreeBSD, OpenBSD
-- **Cryptographic guarantee** of data confidentiality and integrity
-- **Deduplication and compression** - only store what's actually changed
-- **Multiple backend support** - local storage, cloud providers, SFTP
+**Fast, secure, efficient** - designed for production environments
+**Cross-platform support** - Linux, macOS, Windows, FreeBSD, OpenBSD
+**Cryptographic guarantee** of data confidentiality and integrity
+**Deduplication and compression** - only store what's actually changed
+**Multiple backend support** - local storage, cloud providers, SFTP
 
 **Features:**
-- **Incremental backups** - only backup changes, not everything
-- **Point-in-time recovery** - restore to any moment in history
-- **Verification and integrity testing** - prove your backups actually work
-- **Retention policies** - keep what you need, delete what you don't
-- **Cross-cloud replication** - multiple geographic locations
+**Incremental backups** - only backup changes, not everything
+**Point-in-time recovery** - restore to any moment in history
+**Verification and integrity testing** - prove your backups actually work
+**Retention policies** - keep what you need, delete what you don't
+**Cross-cloud replication** - multiple geographic locations
 
 ---
 
@@ -109,23 +109,23 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 **Perfect for:** Small offices, retail stores, professional practices
 
 **What you get:**
-- **Daily automated backups** of all work files and folders
-- **30-day retention** with point-in-time recovery
-- **Local and cloud storage** (your choice of provider)
-- **Email alerts** when backups succeed or fail
-- **Self-service restore** via web interface
-- **Business hours support** for setup and questions
+**Daily automated backups** of all work files and folders
+**30-day retention** with point-in-time recovery
+**Local and cloud storage** (your choice of provider)
+**Email alerts** when backups succeed or fail
+**Self-service restore** via web interface
+**Business hours support** for setup and questions
 
 ### ** Custom Solutions**
 **Quote on request**
 
 **For businesses with specific needs:**
-- **Unlimited retention** periods
-- **Real-time replication** to multiple locations
-- **Integration with existing systems** and workflows
-- **24/7 monitoring and support**
-- **On-premises backup appliances**
-- **Disaster recovery planning and testing**
+**Unlimited retention** periods
+**Real-time replication** to multiple locations
+**Integration with existing systems** and workflows
+**24/7 monitoring and support**
+**On-premises backup appliances**
+**Disaster recovery planning and testing**
 
 ---
 
@@ -148,28 +148,28 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 ## **Technical Implementation: Standards** 
 
 ### **Memory-Safe Architecture**
-- **Restic core** written in Go (White House-recommended memory-safe language)
-- **Prevents buffer overflows** and memory corruption vulnerabilities
-- **Secure by design** at the programming language level
+**Restic core** written in Go (White House-recommended memory-safe language)
+**Prevents buffer overflows** and memory corruption vulnerabilities
+**Secure by design** at the programming language level
 
 ### **Encryption and Security**
-- **AES-256 encryption** for all backup data
-- **Client-side encryption** - we never see your unencrypted data
-- **Cryptographic verification** of backup integrity
-- **Secure key management** integrated with our Vault infrastructure
+**AES-256 encryption** for all backup data
+**Client-side encryption** - we never see your unencrypted data
+**Cryptographic verification** of backup integrity
+**Secure key management** integrated with our Vault infrastructure
 
 ### **Reliability and Performance**
-- **Incremental backups** - only changed data transferred
-- **Deduplication** - 50-90% storage savings typical
-- **Bandwidth throttling** - won't impact business operations
-- **Automated testing** - regular restore verification
-- **Multiple storage backends** - local, S3, Azure, Google Cloud
+**Incremental backups** - only changed data transferred
+**Deduplication** - 50-90% storage savings typical
+**Bandwidth throttling** - won't impact business operations
+**Automated testing** - regular restore verification
+**Multiple storage backends** - local, S3, Azure, Google Cloud
 
 ### **Monitoring and Alerting**
-- **Real-time backup status** via our Delphi platform
-- **Failed backup alerts** in plain English
-- **Storage usage monitoring** and forecasting
-- **Performance metrics** and optimization recommendations
+**Real-time backup status** via our Delphi platform
+**Failed backup alerts** in plain English
+**Storage usage monitoring** and forecasting
+**Performance metrics** and optimization recommendations
 
 ---
 
@@ -216,11 +216,11 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 **Limited to 20 businesses - apply now**
 
 **Benefits:**
-- **50% discount** for first 3 months
-- **Direct access** to development team
-- **Priority feature requests** and customization
-- **Case study participation** (optional)
-- **Guaranteed service migration** if you're unsatisfied
+**50% discount** for first 3 months
+**Direct access** to development team
+**Priority feature requests** and customization
+**Case study participation** (optional)
+**Guaranteed service migration** if you're unsatisfied
 
 ---
 
@@ -246,21 +246,21 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 ## **Integration with Our Security Ecosystem** 
 
 ### **Works with Delphi Notify**
-- **Security monitoring** alerts if backup systems are compromised
-- **Threat correlation** - identify if data loss was malicious
-- **Incident response** coordination between security and backup teams
+**Security monitoring** alerts if backup systems are compromised
+**Threat correlation** - identify if data loss was malicious
+**Incident response** coordination between security and backup teams
 
 ### **Leverages Our Infrastructure**
-- **HashiCorp Vault** for secure key management
-- **Same monitoring systems** we use for security alerting
-- **Established support processes** and team expertise
-- **Geographic distribution** across Australian data centers
+**HashiCorp Vault** for secure key management
+**Same monitoring systems** we use for security alerting
+**Established support processes** and team expertise
+**Geographic distribution** across Australian data centers
 
 ### **Complements Our Training**
-- **Backup procedures** included in security awareness training
-- **Recovery testing** as part of business continuity planning
-- **Employee education** on difference between sync and backup
-- **Incident response** procedures for data loss events
+**Backup procedures** included in security awareness training
+**Recovery testing** as part of business continuity planning
+**Employee education** on difference between sync and backup
+**Incident response** procedures for data loss events
 
 ---
 
@@ -270,11 +270,11 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 **Available now through July 31st**
 
  **Email:** [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au?subject=Early%20Access%20Application)
- **Phone:** (+61) 0432 038 310
+ **Phone:** 
  **Web:** [cybermonkey.net.au/backup](https://cybermonkey.net.au/offerings/delphi/)
 
 **Include in your application:**
-- Business size and industry
+Business size and industry
 - Current backup solution (if any)
 - Critical data types and volumes
 - Compliance requirements
@@ -284,11 +284,11 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 **Available starting July 15th**
 
 We'll evaluate your current data protection and show you:
-- **What's actually protected** vs. just synced
-- **Recovery time estimates** for different scenarios
-- **Cost comparison** between current solution and ours
-- **Risk assessment** of current backup gaps
-- **Implementation timeline** and process
+**What's actually protected** vs. just synced
+**Recovery time estimates** for different scenarios
+**Cost comparison** between current solution and ours
+**Risk assessment** of current backup gaps
+**Implementation timeline** and process
 
 ### **Launch Day Pricing**
 **August 1st special offers:**
@@ -304,22 +304,22 @@ We'll evaluate your current data protection and show you:
 ## **Why August Is the Right Time** 
 
 ### **Financial Year Timing**
-- **New budget cycles** starting for many Australian businesses
-- **Tax time focus** on business systems and record keeping
-- **Insurance renewals** often requiring backup compliance
-- **Fresh start mentality** after EOFY reviews
+**New budget cycles** starting for many Australian businesses
+**Tax time focus** on business systems and record keeping
+**Insurance renewals** often requiring backup compliance
+**Fresh start mentality** after EOFY reviews
 
 ### **Threat Landscape Evolution**
-- **Ransomware attacks** increasing 424% year-over-year
-- **Supply chain attacks** affecting small business vendors
-- **Regulatory changes** requiring better data protection
-- **Insurance requirements** getting stricter on backup compliance
+**Ransomware attacks** increasing 424% year-over-year
+**Supply chain attacks** affecting small business vendors
+**Regulatory changes** requiring better data protection
+**Insurance requirements** getting stricter on backup compliance
 
 ### **Technology Maturity**
-- **Restic ecosystem** now production-ready for 
-- **Go language adoption** accelerating in critical infrastructure
-- **Memory-safe languages** becoming cybersecurity standard
-- **Cloud storage costs** making  backup affordable
+**Restic ecosystem** now production-ready for 
+**Go language adoption** accelerating in critical infrastructure
+**Memory-safe languages** becoming cybersecurity standard
+**Cloud storage costs** making  backup affordable
 
 ---
 
@@ -369,7 +369,7 @@ A: No. Client-side encryption means we only see encrypted data. You control the 
 
 **Contact Information:**
  **Email:** [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)  
- **Phone:** (+61) 0432 038 310  
+ **Phone:**   
  **Website:** [cybermonkey.net.au](https://cybermonkey.net.au)  
  **Location:** Fremantle, Western Australia 
 

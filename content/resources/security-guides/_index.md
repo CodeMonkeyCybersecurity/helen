@@ -35,7 +35,7 @@ Practical cybersecurity resources for Australian businesses and individuals. Dow
 **Perfect for:**
 - New business owners
 - Startups with limited budgets
-- Businesses without IT staff
+Businesses without IT staff
 - Quick security improvements
 
 ### Home Office Security Guide
@@ -317,7 +317,7 @@ Practical cybersecurity resources for Australian businesses and individuals. Dow
 
 **Plan components:**
 - Risk assessment
-- Business impact analysis
+Business impact analysis
 - Recovery strategies
 - Communication plans
 - Testing procedures
@@ -346,7 +346,7 @@ Practical cybersecurity resources for Australian businesses and individuals. Dow
 
 **Topics covered:**
 - Password security
-- Email security
+Email security
 - Social engineering
 - Physical security
 - Mobile device security
@@ -367,7 +367,7 @@ Practical cybersecurity resources for Australian businesses and individuals. Dow
 - Instructor-led sessions
 - Self-paced learning
 - Lunch-and-learn presentations
-- Email campaigns
+Email campaigns
 - Poster campaigns
 
 ### Executive Security Briefing
@@ -376,7 +376,7 @@ Practical cybersecurity resources for Australian businesses and individuals. Dow
 
 **Executive summary:**
 - Current threat landscape
-- Business impact of cyber attacks
+Business impact of cyber attacks
 - ROI of cybersecurity investment
 - Regulatory requirements
 - Strategic recommendations
@@ -397,8 +397,8 @@ Practical cybersecurity resources for Australian businesses and individuals. Dow
 **[Use Online Tool](/tools/security-risk-calculator/)**
 
 **Calculate your risk based on:**
-- Industry type
-- Business size
+Industry type
+Business size
 - Current security measures
 - Data sensitivity
 - Regulatory requirements
@@ -408,7 +408,7 @@ Practical cybersecurity resources for Australian businesses and individuals. Dow
 - Specific recommendations
 - Cost-benefit analysis
 - Implementation timeline
-- Priority actions
+ actions
 
 ### Password Strength Checker
 
@@ -507,7 +507,7 @@ Practical cybersecurity resources for Australian businesses and individuals. Dow
 
 **Free resources include:**
 - Basic implementation guidance
-- Email support for questions
+Email support for questions
 - Community forum access
 - Update notifications
 

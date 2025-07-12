@@ -13,7 +13,7 @@ description: "Starting Monday July 7th: We're launching dedicated scam education
 
 ## Because Australian businesses lost $7.9 million to scams in 2024 - and most could have been prevented
 
-After months of seeing the same pattern - **smart business owners falling for increasingly sophisticated scams** - we're expanding beyond our Delphi Notify monitoring service to offer something WA businesses desperately need:
+After months of seeing the same pattern **smart business owners falling for increasingly sophisticated scams** - we're expanding beyond our Delphi Notify monitoring service to offer something WA businesses desperately need:
 
 **Practical, no-nonsense scam education and phishing training that actually works.**
 
@@ -24,24 +24,24 @@ After months of seeing the same pattern - **smart business owners falling for in
 Here's what's happening to Australian businesses right now:
 
 ### The Scary Statistics
-- **85% of Australian businesses** experienced phishing attacks in the past 12 months
-- **One account is compromised every second** across Australia  
-- **$4.26 million** - average cost of a data breach in Australia (up 27% since 2020)
-- **47 million data breaches** hit Australia in 2024 alone
-- **90% of cyber incidents** start with human error - usually clicking a phishing link
+**85% of Australian businesses** experienced phishing attacks in the past 12 months
+**One account is compromised every second** across Australia  
+**$4.26 million** - average cost of a data breach in Australia (up 27% since 2020)
+**47 million data breaches** hit Australia in 2024 alone
+**90% of cyber incidents** start with human error - usually clicking a phishing link
 
 ### Small Businesses Are Prime Targets
-- **43% of cyberattacks** specifically target small businesses
-- **Nearly half of WA SMEs** spend less than $500 annually on cybersecurity
-- **48% of Australian SMEs** have inadequate cybersecurity measures
-- **$55,000** average loss per successful business email compromise
+**43% of cyberattacks** specifically target small businesses
+**Nearly half of WA SMEs** spend less than $500 annually on cybersecurity
+**48% of Australian SMEs** have inadequate cybersecurity measures
+**$55,000** average loss per successful business email compromise
 
 ### But Here's the Good News
 Training works. Businesses with proper phishing awareness training see:
-- **30% reduction** in employees clicking malicious links
-- **70% reduction** in security-related risks overall
-- **3X return on investment** from training programs
-- **86% reduction** in successful phishing incidents
+**30% reduction** in employees clicking malicious links
+**70% reduction** in security-related risks overall
+**3X return on investment** from training programs
+**86% reduction** in successful phishing incidents
 
 ---
 
@@ -57,7 +57,7 @@ Starting **Monday, July 7th**, we're offering three levels of scam education and
 - Weekly simulated phishing tests with immediate feedback
 - Quarterly "scam alert" updates covering new threats
 - Plain English reports showing who needs extra help
-- Email and phone support during business hours
+Email and phone support during business hours
 
 **Perfect for:** Small offices, retail stores, cafes, professional practices
 
@@ -69,7 +69,7 @@ Starting **Monday, July 7th**, we're offering three levels of scam education and
 - Advanced phishing simulations (including voice and SMS)
 - Manager dashboards with detailed vulnerability reports
 - Incident response support when attacks happen
-- Priority phone support and emergency consultation
+ phone support and emergency consultation
 
 **Perfect for:** Medical practices, law firms, accounting offices, manufacturing
 
@@ -92,7 +92,7 @@ Starting **Monday, July 7th**, we're offering three levels of scam education and
 ###  Measurable Results
 - Monthly click-rate tracking with improvement goals
 - Individual coaching for high-risk employees
-- Business impact reporting (time saved, incidents prevented)
+Business impact reporting (time saved, incidents prevented)
 - ROI calculations showing training value
 
 ###  Immediate Action
@@ -154,7 +154,7 @@ Unlike expensive security software, **training delivers immediate, measurable re
 ### Option 1: Quick Assessment
 **Free 15-minute phone call** to discuss your current security training and identify immediate risks.
 
- **Call us:** (+61) 0432 038 310  
+ **Call us:**   
  **Email:** [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
 ### Option 2: Vulnerability Test
@@ -199,7 +199,7 @@ Don't wait until you're part of the statistics.
 
 **Contact Information:**
  **Email:** [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)  
- **Phone:** (+61) 0432 038 310  
+ **Phone:**   
  **Website:** [cybermonkey.net.au/training](https://cybermonkey.net.au/offerings/phishing-simulation/training/)  
  **Location:** Fremantle, Western Australia
 

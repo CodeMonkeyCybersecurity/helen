@@ -69,16 +69,16 @@ No confusing technical alerts. You get the **full story**: what happened, what e
 We're offering Delphi Notify **completely free** until August 1st as part of our Fremantle rollout.
 
 ### Perfect For:
-- **Small businesses** who can't afford security teams
-- **Home users** who want protection without complexity  
-- **Anyone** tired of confusing security alerts that make no sense
+**Small businesses** who can't afford security teams
+**Home users** who want protection without complexity  
+**Anyone** tired of confusing security alerts that make no sense
 
 ## Ready to Try It?
 
  **Based in Fremantle, WA** - Supporting local businesses with human-shaped cybersecurity
 
  **Get Started**: Email [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au?subject=Delphi%20Notify%20Free%20Trial)  
- **Questions?** Message us here or call (+61) 0432 038 310  
+ **Questions?** Message us here or call   
  **Learn More**: [cybermonkey.net.au/offerings/delphi/](https://cybermonkey.net.au/offerings/delphi/)
 
 

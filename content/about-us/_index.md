@@ -41,21 +41,21 @@ We build security tools that serve people, not exploit fear. We focus on clear c
 **Eos** is an open source container orchestration platform equivalent to Google's Borg system. This large-scale platform demonstrates our technical expertise and commitment to open source innovation.
 
 **Core Capabilities:**
-- **Large-scale distributed container management** - Deploy and manage thousands of containers across cluster nodes
-- **Intelligent resource allocation** - CPU, memory, and storage optimization with real-time rebalancing
-- **Advanced scheduling algorithms** - Constraint-based placement with affinity/anti-affinity rules
-- **High availability and fault tolerance** - Automatic failover, health monitoring, and self-healing infrastructure
-- **Multi-tenant isolation** - Secure workload separation with namespace-based resource quotas
-- **Real-time metrics and observability** - Comprehensive monitoring, logging, and alerting
-- **API-driven automation** - Full REST API for CI/CD integration and infrastructure as code
-- **Complete open source implementation** - No vendor lock-in, full transparency, community-driven development
+**Large-scale distributed container management** - Deploy and manage thousands of containers across cluster nodes
+**Intelligent resource allocation** - CPU, memory, and storage optimization with real-time rebalancing
+**Advanced scheduling algorithms** - Constraint-based placement with affinity/anti-affinity rules
+**High availability and fault tolerance** - Automatic failover, health monitoring, and self-healing infrastructure
+**Multi-tenant isolation** - Secure workload separation with namespace-based resource quotas
+**Real-time metrics and observability** - Comprehensive monitoring, logging, and alerting
+**API-driven automation** - Full REST API for CI/CD integration and infrastructure as code
+**Complete open source implementation** - No vendor lock-in, full transparency, community-driven development
 
 **Real-World Applications:**
-- **Microservices orchestration** for scalable web applications
-- **Batch processing** for data analytics and ML workloads  
-- **DevSecOps pipelines** with integrated security scanning and compliance
-- **Multi-cloud deployments** with consistent management across providers
-- **Edge computing** support for distributed IoT and CDN workloads
+**Microservices orchestration** for scalable web applications
+**Batch processing** for data analytics and ML workloads  
+**DevSecOps pipelines** with integrated security scanning and compliance
+**Multi-cloud deployments** with consistent management across providers
+**Edge computing** support for distributed IoT and CDN workloads
 
 Eos powers our own production infrastructure, running Delphi, Vault, Keycloak, and Wazuh services with  reliability and security.
 

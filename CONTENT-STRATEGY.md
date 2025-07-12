@@ -15,11 +15,11 @@ This comprehensive content strategy establishes Code Monkey Cybersecurity as the
 
 ### Key Success Metrics
 
-- **Monthly organic traffic**: 10,000+ visitors by end of 2024
-- **Lead generation**: 50+ qualified leads per month from content
-- **Conversion rate**: 15% of content visitors to trial/consultation
-- **Brand awareness**: Top 3 for "cybersecurity Fremantle" and related terms
-- **Customer education**: 80% of customers use our resources
+**Monthly organic traffic**: 10,000+ visitors by end of 2024
+**Lead generation**: 50+ qualified leads per month from content
+**Conversion rate**: 15% of content visitors to trial/consultation
+**Brand awareness**: Top 3 for "cybersecurity Fremantle" and related terms
+**Customer education**: 80% of customers use our resources
 
 ---
 
@@ -30,11 +30,11 @@ This comprehensive content strategy establishes Code Monkey Cybersecurity as the
 **Core Brand Promise**: "Cybersecurity. With Humans."
 
 **Voice Characteristics:**
-- **Approachable**: Never intimidating or overly technical
-- **Confident**: Demonstrates expertise without arrogance
-- **Helpful**: Always focused on practical value
-- **Australian**: Uses local context, examples, and cultural references
-- **Human-centered**: Emphasizes people over technology
+**Approachable**: Never intimidating or overly technical
+**Confident**: Demonstrates expertise without arrogance
+**Helpful**: Always focused on practical value
+**Australian**: Uses local context, examples, and cultural references
+**Human-centered**: Emphasizes people over technology
 
 **Messaging Pillars:**
 
@@ -61,48 +61,48 @@ This comprehensive content strategy establishes Code Monkey Cybersecurity as the
 ### Target Audience Personas
 
 **Primary Persona: Small Business Owner (Sarah)**
-- **Demographics**: 35-55, business owner, 1-20 employees
-- **Pain Points**: Limited IT knowledge, budget constraints, compliance concerns
-- **Goals**: Protect business data, avoid costly breaches, maintain customer trust
-- **Content Preferences**: Practical guides, checklists, case studies
+**Demographics**: 35-55, business owner, 1-20 employees
+**Pain Points**: Limited IT knowledge, budget constraints, compliance concerns
+**Goals**: Protect business data, avoid costly breaches, maintain customer trust
+**Content Preferences**: Practical guides, checklists, case studies
 
 **Secondary Persona: Professional Practice Owner (Michael)**
-- **Demographics**: 40-60, healthcare/legal/finance, 5-50 employees
-- **Pain Points**: Regulatory compliance, client confidentiality, complex requirements
-- **Goals**: Meet compliance requirements, protect client data, maintain reputation
-- **Content Preferences**: Compliance guides, industry-specific content, expert analysis
+**Demographics**: 40-60, healthcare/legal/finance, 5-50 employees
+**Pain Points**: Regulatory compliance, client confidentiality, complex requirements
+**Goals**: Meet compliance requirements, protect client data, maintain reputation
+**Content Preferences**: Compliance guides, industry-specific content, expert analysis
 
 **Tertiary Persona: Family Technology User (Jennifer)**
-- **Demographics**: 30-50, working parent, tech-conscious family
-- **Pain Points**: Family digital safety, work-from-home security, limited time
-- **Goals**: Protect family online, secure home office, educate children
-- **Content Preferences**: Quick tips, family-friendly guides, seasonal safety
+**Demographics**: 30-50, working parent, tech-conscious family
+**Pain Points**: Family digital safety, work-from-home security, limited time
+**Goals**: Protect family online, secure home office, educate children
+**Content Preferences**: Quick tips, family-friendly guides, seasonal safety
 
 ### Content Pillars and Themes
 
 **Pillar 1: Security Education (40% of content)**
-- **Theme**: "Security Made Simple"
-- **Content Types**: How-to guides, explainer articles, best practices
-- **Keywords**: cybersecurity tips, security best practices, how to protect
-- **Goals**: Build trust, demonstrate expertise, capture educational search traffic
+**Theme**: "Security Made Simple"
+**Content Types**: How-to guides, explainer articles, best practices
+**Keywords**: cybersecurity tips, security best practices, how to protect
+**Goals**: Build trust, demonstrate expertise, capture educational search traffic
 
 **Pillar 2: Industry Insights (25% of content)**
-- **Theme**: "Australian Cyber Landscape"
-- **Content Types**: Threat analysis, regulatory updates, industry trends
-- **Keywords**: Australian cybersecurity, cyber threats Australia, security regulations
-- **Goals**: Establish thought leadership, attract industry professionals
+**Theme**: "Australian Cyber Landscape"
+**Content Types**: Threat analysis, regulatory updates, industry trends
+**Keywords**: Australian cybersecurity, cyber threats Australia, security regulations
+**Goals**: Establish thought leadership, attract industry professionals
 
 **Pillar 3: Product & Technology (20% of content)**
-- **Theme**: "Delphi Platform Excellence"
-- **Content Types**: Product updates, technical documentation, feature explanations
-- **Keywords**: Delphi Notify, XDR platform, security monitoring
-- **Goals**: Support sales process, reduce support burden, showcase capabilities
+**Theme**: "Delphi Platform Excellence"
+**Content Types**: Product updates, technical documentation, feature explanations
+**Keywords**: Delphi Notify, XDR platform, security monitoring
+**Goals**: Support sales process, reduce support burden, showcase capabilities
 
 **Pillar 4: Community & Business (15% of content)**
-- **Theme**: "Local Security Leadership"
-- **Content Types**: Company news, partnerships, customer success stories
-- **Keywords**: Code Monkey Cybersecurity, Fremantle security, local business
-- **Goals**: Build local reputation, showcase results, attract local customers
+**Theme**: "Local Security Leadership"
+**Content Types**: Company news, partnerships, customer success stories
+**Keywords**: Code Monkey Cybersecurity, Fremantle security, local business
+**Goals**: Build local reputation, showcase results, attract local customers
 
 ---
 
@@ -146,17 +146,17 @@ Homepage
 ### Content Categories and Tags
 
 **Primary Categories:**
-- **Education**: How-to guides, tutorials, best practices
-- **Industry**: Threat analysis, regulatory updates, trends
-- **Products**: Platform updates, features, comparisons
-- **Company**: News, partnerships, team updates
-- **Resources**: Tools, templates, checklists
+**Education**: How-to guides, tutorials, best practices
+**Industry**: Threat analysis, regulatory updates, trends
+**Products**: Platform updates, features, comparisons
+**Company**: News, partnerships, team updates
+**Resources**: Tools, templates, checklists
 
 **Content Tags:**
-- **Audience**: small-business, healthcare, legal, family
-- **Topic**: ransomware, phishing, compliance, training
-- **Geography**: australia, perth, fremantle, wa
-- **Content Type**: guide, checklist, case-study, news
+**Audience**: small-business, healthcare, legal, family
+**Topic**: ransomware, phishing, compliance, training
+**Geography**: australia, perth, fremantle, wa
+**Content Type**: guide, checklist, case-study, news
 
 ### SEO Content Strategy
 
@@ -185,11 +185,11 @@ Homepage
 - "security monitoring platform"
 
 **Content-to-Keyword Mapping:**
-- **Educational content**: Long-tail, how-to keywords
-- **Service pages**: Commercial, transactional keywords
-- **Blog content**: Informational, educational keywords
-- **Case studies**: Industry-specific, local keywords
-- **Comparison pages**: Competitive, evaluation keywords
+**Educational content**: Long-tail, how-to keywords
+**Service pages**: Commercial, transactional keywords
+**Blog content**: Informational, educational keywords
+**Case studies**: Industry-specific, local keywords
+**Comparison pages**: Competitive, evaluation keywords
 
 ---
 
@@ -260,17 +260,17 @@ Due Date: [Content deadline]
 ### Publication Channels
 
 **Primary Distribution:**
-- **Website blog**: All content published here first
-- **Email newsletter**: Monthly digest with exclusive content
-- **LinkedIn**: Professional articles and thought leadership
-- **Facebook**: Community engagement and local business focus
-- **Instagram**: Visual content and quick security tips
+**Website blog**: All content published here first
+**Email newsletter**: Monthly digest with exclusive content
+**LinkedIn**: Professional articles and thought leadership
+**Facebook**: Community engagement and local business focus
+**Instagram**: Visual content and quick security tips
 
 **Secondary Distribution:**
-- **YouTube**: Video tutorials and expert interviews
-- **Twitter**: Industry news and quick tips
-- **Medium**: Republished thought leadership articles
-- **Industry publications**: Guest articles and expert commentary
+**YouTube**: Video tutorials and expert interviews
+**Twitter**: Industry news and quick tips
+**Medium**: Republished thought leadership articles
+**Industry publications**: Guest articles and expert commentary
 
 ### Content Promotion Timeline
 
@@ -301,22 +301,22 @@ Due Date: [Content deadline]
 ### Social Media Strategy
 
 **LinkedIn Strategy:**
-- **Publishing frequency**: 2-3 times per week
-- **Content mix**: 60% educational, 30% industry insights, 10% company news
-- **Engagement tactics**: Industry polls, expert commentary, case study sharing
-- **Target connections**: Business owners, IT professionals, industry leaders
+**Publishing frequency**: 2-3 times per week
+**Content mix**: 60% educational, 30% industry insights, 10% company news
+**Engagement tactics**: Industry polls, expert commentary, case study sharing
+**Target connections**: Business owners, IT professionals, industry leaders
 
 **Facebook Strategy:**
-- **Publishing frequency**: 1-2 times per week
-- **Content mix**: 50% educational, 30% community engagement, 20% local news
-- **Engagement tactics**: Local business groups, community events, customer stories
-- **Target audience**: Local business owners, families, community members
+**Publishing frequency**: 1-2 times per week
+**Content mix**: 50% educational, 30% community engagement, 20% local news
+**Engagement tactics**: Local business groups, community events, customer stories
+**Target audience**: Local business owners, families, community members
 
 **Instagram Strategy:**
-- **Publishing frequency**: 3-4 times per week
-- **Content mix**: 70% educational tips, 20% behind-the-scenes, 10% user-generated content
-- **Engagement tactics**: Story polls, carousel tutorials, quick tip videos
-- **Target audience**: Small business owners, working parents, tech-conscious families
+**Publishing frequency**: 3-4 times per week
+**Content mix**: 70% educational tips, 20% behind-the-scenes, 10% user-generated content
+**Engagement tactics**: Story polls, carousel tutorials, quick tip videos
+**Target audience**: Small business owners, working parents, tech-conscious families
 
 ---
 
@@ -325,57 +325,57 @@ Due Date: [Content deadline]
 ### Key Performance Indicators (KPIs)
 
 **Traffic Metrics:**
-- **Monthly organic visitors**: Target 10,000+ by end of 2024
-- **Page views per session**: Target 2.5+ pages
-- **Average session duration**: Target 3+ minutes
-- **Bounce rate**: Target under 50%
-- **Traffic sources**: Target 70% organic, 20% social, 10% direct
+**Monthly organic visitors**: Target 10,000+ by end of 2024
+**Page views per session**: Target 2.5+ pages
+**Average session duration**: Target 3+ minutes
+**Bounce rate**: Target under 50%
+**Traffic sources**: Target 70% organic, 20% social, 10% direct
 
 **Engagement Metrics:**
-- **Social shares**: Target 15+ per article
-- **Comments and discussion**: Target 5+ per article
-- **Email newsletter opens**: Target 30% open rate
-- **Email click-through rate**: Target 5%
-- **Video completion rate**: Target 60%
+**Social shares**: Target 15+ per article
+**Comments and discussion**: Target 5+ per article
+**Email newsletter opens**: Target 30% open rate
+**Email click-through rate**: Target 5%
+**Video completion rate**: Target 60%
 
 **Conversion Metrics:**
-- **Lead generation**: Target 50+ leads per month
-- **Trial sign-ups**: Target 20+ per month
-- **Consultation requests**: Target 10+ per month
-- **Resource downloads**: Target 100+ per month
-- **Customer acquisition cost**: Target under $200
+**Lead generation**: Target 50+ leads per month
+**Trial sign-ups**: Target 20+ per month
+**Consultation requests**: Target 10+ per month
+**Resource downloads**: Target 100+ per month
+**Customer acquisition cost**: Target under $200
 
 **SEO Metrics:**
-- **Keyword rankings**: Target top 10 for 25+ keywords
-- **Featured snippets**: Target 5+ featured snippets
-- **Local search rankings**: Target top 3 for local terms
-- **Backlink acquisition**: Target 10+ quality backlinks per month
-- **Domain authority**: Target 40+ by end of 2024
+**Keyword rankings**: Target top 10 for 25+ keywords
+**Featured snippets**: Target 5+ featured snippets
+**Local search rankings**: Target top 3 for local terms
+**Backlink acquisition**: Target 10+ quality backlinks per month
+**Domain authority**: Target 40+ by end of 2024
 
 ### Reporting and Analytics
 
 **Monthly Performance Report:**
-- **Content performance**: Top performing articles by traffic and engagement
-- **SEO progress**: Keyword ranking improvements and opportunities
-- **Social media growth**: Follower growth and engagement rates
-- **Lead generation**: Content-to-lead attribution and conversion rates
-- **Competitive analysis**: Content gaps and opportunities
+**Content performance**: Top performing articles by traffic and engagement
+**SEO progress**: Keyword ranking improvements and opportunities
+**Social media growth**: Follower growth and engagement rates
+**Lead generation**: Content-to-lead attribution and conversion rates
+**Competitive analysis**: Content gaps and opportunities
 
 **Quarterly Strategic Review:**
-- **Content strategy effectiveness**: ROI and goal achievement
-- **Audience insights**: Demographic and behavioral analysis
-- **Content optimization**: Performance-based content improvements
-- **Strategy adjustments**: Pivots based on data and market changes
-- **Resource allocation**: Budget and team optimization
+**Content strategy effectiveness**: ROI and goal achievement
+**Audience insights**: Demographic and behavioral analysis
+**Content optimization**: Performance-based content improvements
+**Strategy adjustments**: Pivots based on data and market changes
+**Resource allocation**: Budget and team optimization
 
 ### A/B Testing Framework
 
 **Elements to Test:**
-- **Headlines**: Keyword placement, emotional triggers, length
-- **Content formats**: Long-form vs. short-form, video vs. text
-- **Call-to-actions**: Placement, wording, button colors
-- **Publication timing**: Day of week, time of day
-- **Distribution channels**: Platform performance comparison
+**Headlines**: Keyword placement, emotional triggers, length
+**Content formats**: Long-form vs. short-form, video vs. text
+**Call-to-actions**: Placement, wording, button colors
+**Publication timing**: Day of week, time of day
+**Distribution channels**: Platform performance comparison
 
 **Testing Protocol:**
 1. **Hypothesis formation**: Clear prediction of expected outcome
@@ -400,7 +400,7 @@ Due Date: [Content deadline]
 
 **Subject Matter Experts:**
 - Technical accuracy review
-- Industry expertise input
+Industry expertise input
 - Regulatory compliance verification
 - Customer insight sharing
 
@@ -430,28 +430,28 @@ Due Date: [Content deadline]
 - Technical accuracy and completeness
 - SEO optimization and best practices
 - Legal and regulatory compliance
-- Business goal alignment
+Business goal alignment
 
 ### Content Maintenance and Updates
 
 **Regular Content Audits:**
-- **Monthly**: New content performance review
-- **Quarterly**: Top content optimization
-- **Annually**: Complete content inventory and strategy review
+**Monthly**: New content performance review
+**Quarterly**: Top content optimization
+**Annually**: Complete content inventory and strategy review
 
 **Content Update Triggers:**
-- **Regulatory changes**: Immediate updates to compliance content
-- **Product updates**: Feature announcements and documentation
-- **Performance issues**: Low-performing content optimization
-- **Seasonal relevance**: Holiday and seasonal content updates
-- **Competitive changes**: Market position adjustments
+**Regulatory changes**: Immediate updates to compliance content
+**Product updates**: Feature announcements and documentation
+**Performance issues**: Low-performing content optimization
+**Seasonal relevance**: Holiday and seasonal content updates
+**Competitive changes**: Market position adjustments
 
 **Content Lifecycle Management:**
-- **Evergreen content**: Annual review and updates
-- **Trending content**: Quarterly relevance assessment
-- **Promotional content**: Monthly performance evaluation
-- **Technical content**: Update with product releases
-- **Compliance content**: Update with regulatory changes
+**Evergreen content**: Annual review and updates
+**Trending content**: Quarterly relevance assessment
+**Promotional content**: Monthly performance evaluation
+**Technical content**: Update with product releases
+**Compliance content**: Update with regulatory changes
 
 ---
 
@@ -460,44 +460,44 @@ Due Date: [Content deadline]
 ### Content Management System
 
 **Hugo Static Site Generator:**
-- **Benefits**: Fast loading, secure, version control integration
-- **Workflow**: Markdown content creation, Git-based collaboration
-- **Optimization**: Automated SEO optimization, image compression
-- **Deployment**: Automated builds and publishing
+**Benefits**: Fast loading, secure, version control integration
+**Workflow**: Markdown content creation, Git-based collaboration
+**Optimization**: Automated SEO optimization, image compression
+**Deployment**: Automated builds and publishing
 
 **Content Creation Tools:**
-- **Writing**: Markdown editors, collaborative editing platforms
-- **Design**: Canva, Adobe Creative Suite for visual content
-- **SEO**: Keyword research tools, optimization plugins
-- **Analytics**: Google Analytics, Search Console, social media insights
+**Writing**: Markdown editors, collaborative editing platforms
+**Design**: Canva, Adobe Creative Suite for visual content
+**SEO**: Keyword research tools, optimization plugins
+**Analytics**: Google Analytics, Search Console, social media insights
 
 ### Content Automation
 
 **Automated Workflows:**
-- **Publishing**: Scheduled content release and social media posting
-- **SEO**: Automated meta tag generation and optimization
-- **Distribution**: Cross-platform content syndication
-- **Analytics**: Performance reporting and alert systems
+**Publishing**: Scheduled content release and social media posting
+**SEO**: Automated meta tag generation and optimization
+**Distribution**: Cross-platform content syndication
+**Analytics**: Performance reporting and alert systems
 
 **Content Templates:**
-- **Blog post templates**: Different formats for various content types
-- **Social media templates**: Consistent branding and messaging
-- **Email templates**: Newsletter and promotional content
-- **Landing page templates**: Lead generation and conversion optimization
+**Blog post templates**: Different formats for various content types
+**Social media templates**: Consistent branding and messaging
+**Email templates**: Newsletter and promotional content
+**Landing page templates**: Lead generation and conversion optimization
 
 ### Performance Monitoring
 
 **Analytics Tools:**
-- **Google Analytics**: Traffic, engagement, and conversion tracking
-- **Google Search Console**: SEO performance and opportunity identification
-- **Social media analytics**: Platform-specific performance metrics
-- **Email marketing analytics**: Newsletter performance and engagement
+**Google Analytics**: Traffic, engagement, and conversion tracking
+**Google Search Console**: SEO performance and opportunity identification
+**Social media analytics**: Platform-specific performance metrics
+**Email marketing analytics**: Newsletter performance and engagement
 
 **Reporting Dashboards:**
-- **Monthly content performance**: Traffic, engagement, and conversion metrics
-- **SEO progress tracking**: Keyword rankings and search visibility
-- **Social media growth**: Follower growth and engagement rates
-- **Lead generation tracking**: Content-to-lead attribution
+**Monthly content performance**: Traffic, engagement, and conversion metrics
+**SEO progress tracking**: Keyword rankings and search visibility
+**Social media growth**: Follower growth and engagement rates
+**Lead generation tracking**: Content-to-lead attribution
 
 ---
 
@@ -572,16 +572,16 @@ Due Date: [Content deadline]
 ### ROI Expectations
 
 **Year 1 Targets:**
-- **Traffic growth**: 500% increase in organic traffic
-- **Lead generation**: 600+ qualified leads from content
-- **Customer acquisition**: 100+ new customers from content
-- **Brand awareness**: Top 5 ranking for key local terms
+**Traffic growth**: 500% increase in organic traffic
+**Lead generation**: 600+ qualified leads from content
+**Customer acquisition**: 100+ new customers from content
+**Brand awareness**: Top 5 ranking for key local terms
 
 **Investment Recovery:**
-- **Customer lifetime value**: $2,400 average
-- **Content-to-customer conversion**: 15%
-- **Break-even**: 50 customers (Month 8)
-- **ROI**: 300% by end of year 1
+**Customer lifetime value**: $2,400 average
+**Content-to-customer conversion**: 15%
+**Break-even**: 50 customers (Month 8)
+**ROI**: 300% by end of year 1
 
 ---
 
@@ -594,12 +594,12 @@ Due Date: [Content deadline]
 - Content-generated lead volume
 - SEO keyword ranking improvements
 - Social media engagement rates
-- Email newsletter performance
+Email newsletter performance
 
 **Qualitative Measures:**
 - Brand recognition and reputation
 - Customer feedback and testimonials
-- Industry recognition and awards
+Industry recognition and awards
 - Thought leadership positioning
 - Community engagement quality
 

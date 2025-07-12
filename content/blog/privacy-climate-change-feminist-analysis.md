@@ -55,15 +55,15 @@ This categorization is incredibly telling about our social priorities [^15]. Iss
 
 Look at how this played out specifically with data brokers:
 
-- **2010s**: Women's shelters and domestic violence advocates warned that data broker sites were being used by abusers to track survivors across state lines [^16]. Response: "That's a domestic violence issue, not a technology policy issue."
+**2010s**: Women's shelters and domestic violence advocates warned that data broker sites were being used by abusers to track survivors across state lines [^16]. Response: "That's a domestic violence issue, not a technology policy issue."
 
-- **2015-2018**: Female journalists, activists, and public figures documented systematic harassment campaigns that used publicly available data to target them at home [^17]. Response: "That's a harassment issue, we need better content moderation."
+**2015-2018**: Female journalists, activists, and public figures documented systematic harassment campaigns that used publicly available data to target them at home [^17]. Response: "That's a harassment issue, we need better content moderation."
 
-- **2018-2020**: Reproductive rights advocates warned that anti-abortion extremists were using data brokers to target clinic workers and patients [^18]. Response: "That's an abortion access issue, not a broader privacy concern."
+**2018-2020**: Reproductive rights advocates warned that anti-abortion extremists were using data brokers to target clinic workers and patients [^18]. Response: "That's an abortion access issue, not a broader privacy concern."
 
-- **2020**: A gunman used similar methods to target Federal Judge Esther Salas's family, killing her son [^19]. Response: Limited action protecting federal judges specifically.
+**2020**: A gunman used similar methods to target Federal Judge Esther Salas's family, killing her son [^19]. Response: Limited action protecting federal judges specifically.
 
-- **2025**: Male politicians are targeted and killed using identical methods. Response: "This is a threat to democracy! We need comprehensive data privacy legislation immediately!"
+**2025**: Male politicians are targeted and killed using identical methods. Response: "This is a threat to democracy! We need comprehensive data privacy legislation immediately!"
 
 ## **Why "Women's Issues" Get Segregated**
 
@@ -125,27 +125,27 @@ The pattern is clear: **as long as the violence stayed contained to women, peopl
 
 We need legislation that addresses the root infrastructure, not just the symptoms:
 
-- **End the data broker industry** as we know it [^26]
-- **Require explicit consent** for all personal data collection and sale
-- **Create real penalties** that make privacy violations unprofitable
-- **Establish a privacy right** that can't be waived by terms of service
+**End the data broker industry** as we know it [^26]
+**Require explicit consent** for all personal data collection and sale
+**Create real penalties** that make privacy violations unprofitable
+**Establish a privacy right** that can't be waived by terms of service
 
 ### **Centering Marginalized Expertise**
 
 Policy-making needs to fundamentally change how it values expertise:
 
-- **Include women's safety advocates** in technology policy discussions from the beginning
-- **Fund grassroots organizations** that understand these issues firsthand  
-- **Recognize experiential knowledge** as valid expertise, not just advocacy
-- **Connect academic disciplines** that have been artificially separated
+**Include women's safety advocates** in technology policy discussions from the beginning
+**Fund grassroots organizations** that understand these issues firsthand  
+**Recognize experiential knowledge** as valid expertise, not just advocacy
+**Connect academic disciplines** that have been artificially separated
 
 ### **Intersectional Safety Analysis**
 
 We need to understand how these systems affect different communities:
 
-- **Recognize that privacy is a safety issue** for marginalized communities first
-- **Understand how surveillance disproportionately affects** women, people of color, LGBTQ+ individuals, immigrants, and activists
-- **Design protections** that work for the most vulnerable, not just the most privileged
+**Recognize that privacy is a safety issue** for marginalized communities first
+**Understand how surveillance disproportionately affects** women, people of color, LGBTQ+ individuals, immigrants, and activists
+**Design protections** that work for the most vulnerable, not just the most privileged
 
 ---
 
@@ -171,10 +171,10 @@ Just as climate change can't be solved by individual recycling while fossil fuel
 
 The climate movement has shown how to center affected communities and build coalitions for system change. The privacy movement needs to learn these lessons:
 
-- **Center the voices** of people most affected by surveillance and harassment
-- **Build coalitions** between technology advocates and social justice organizations  
-- **Focus on system change** rather than individual behavior modification
-- **Hold corporations accountable** for externalized costs
+**Center the voices** of people most affected by surveillance and harassment
+**Build coalitions** between technology advocates and social justice organizations  
+**Focus on system change** rather than individual behavior modification
+**Hold corporations accountable** for externalized costs
 
 ---
 

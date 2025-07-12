@@ -19,7 +19,7 @@ DNS4EU has officially launched, and it's exactly what the internet needed - a **
 - Developed by a consortium of **13 members from 10 EU countries**
 - Powered by **Whalebone**, a Czech cybersecurity company
 - Operates entirely within **EU digital infrastructure**
-- **Strictly adheres to GDPR** (unlike certain US providers)
+**Strictly adheres to GDPR** (unlike certain US providers)
 
 ### ** Five Resolver Configurations**
 DNS4EU isn't one-size-fits-all. Choose your protection level:
@@ -33,10 +33,10 @@ DNS4EU isn't one-size-fits-all. Choose your protection level:
 ## **Why This Matters for Privacy**
 
 ### ** Real Privacy Safety**
-- **No data harvesting** for advertising
-- **GDPR compliance** built in from day one
-- **EU-based infrastructure** means EU privacy laws apply
-- **Transparent governance** with public oversight
+**No data harvesting** for advertising
+**GDPR compliance** built in from day one
+**EU-based infrastructure** means EU privacy laws apply
+**Transparent governance** with public oversight
 
 ### ** Compare to Big Tech DNS:**
 
@@ -51,10 +51,10 @@ DNS4EU isn't one-size-fits-all. Choose your protection level:
 ## **Technical Excellence**
 
 ### ** Modern DNS Standards**
-- **DNS over HTTPS (DoH)** support
-- **DNS over TLS (DoT)** for encrypted queries
-- **Real-time threat intelligence** across EU countries
-- **Malware Information Sharing Platform (MISP)** integration
+**DNS over HTTPS (DoH)** support
+**DNS over TLS (DoT)** for encrypted queries
+**Real-time threat intelligence** across EU countries
+**Malware Information Sharing Platform (MISP)** integration
 
 ### ** Targeting 100 Million Users**
 This isn't a small project - DNS4EU aims to protect **100 million users** across Europe, making it a genuine alternative to the US-dominated DNS landscape.
@@ -63,9 +63,9 @@ This isn't a small project - DNS4EU aims to protect **100 million users** across
 
 ### ** Part of EU's Digital Strategy**
 DNS4EU includes:
-- **DNS4GOV** - Specialized service for government institutions
-- **Aura Infrastructure** - Tools for telecom operators
-- **Threat Intelligence Exchange** - Cross-border security cooperation
+**DNS4GOV** - Specialized service for government institutions
+**Aura Infrastructure** - Tools for telecom operators
+**Threat Intelligence Exchange** - Cross-border security cooperation
 
 This is Europe taking control of its digital infrastructure, reducing dependence on US tech giants.
 
@@ -73,10 +73,10 @@ This is Europe taking control of its digital infrastructure, reducing dependence
 
 As a **Fremantle-based cybersecurity company**, we love seeing alternatives to Big Tech monopolies. DNS4EU represents:
 
-- **User choice** over corporate control
-- **Privacy by design** instead of privacy as an afterthought  
-- **Regional digital sovereignty** that other countries can learn from
-- **Open, transparent governance** of critical internet infrastructure
+**User choice** over corporate control
+**Privacy by design** instead of privacy as an afterthought  
+**Regional digital sovereignty** that other countries can learn from
+**Open, transparent governance** of critical internet infrastructure
 
 ## **How to Use DNS4EU**
 

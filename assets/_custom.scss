@@ -768,3 +768,113 @@ div:has(> img[src*="comptia"]) {
     margin: 0.5rem;
   }
 }
+
+// Ensure no bullets in feature-card-wrapper prose content
+.feature-card-wrapper .prose {
+  ul, ol {
+    list-style: none !important;
+    padding-left: 0 !important;
+    
+    li {
+      list-style: none !important;
+      
+      &::before {
+        display: none !important;
+      }
+    }
+  }
+}
+
+// Remove bullets from recent posts section
+section:has(ul.list-none) {
+  ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+    
+    li {
+      list-style: none !important;
+      
+      &::before,
+      &::marker {
+        display: none !important;
+        content: none !important;
+      }
+    }
+  }
+}
+
+// Fix heading styles in content sections and override Hugo Book theme
+.content-section,
+section {
+  h2 {
+    // Reset any Hugo Book theme styles
+    all: unset;
+    // Apply our custom styles
+    display: block;
+    font-size: 1.875rem; // text-3xl
+    font-weight: 700; // font-bold
+    letter-spacing: -0.025em; // tracking-tight
+    color: rgb(15, 23, 42); // text-slate-900
+    text-align: center;
+    margin-bottom: 2rem; // mb-8
+    line-height: 1.2;
+    
+    @media (min-width: 640px) {
+      font-size: 2.25rem; // sm:text-4xl
+    }
+  }
+}
+
+// Ensure book-article doesn't interfere with our heading styles
+.book-article {
+  h2 {
+    text-align: inherit !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+// Global center alignment for main content
+main {
+  text-align: center;
+  
+  // All paragraphs and lists should be centered
+  p, ul, ol, li {
+    text-align: center;
+  }
+  
+  // Ensure all headings are centered
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
+  
+  // Center all sections
+  section {
+    text-align: center;
+  }
+  
+  // Prose content should also be centered
+  .prose {
+    text-align: center;
+    
+    p, ul, ol, li, h1, h2, h3, h4, h5, h6 {
+      text-align: center;
+    }
+  }
+  
+  // Make sure markdown content is centered
+  .markdown {
+    text-align: center;
+    
+    * {
+      text-align: inherit;
+    }
+  }
+}
+
+// Ensure feature cards maintain center alignment
+.feature-card {
+  text-align: center;
+}

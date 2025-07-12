@@ -4,16 +4,17 @@ Shows 5 most recent blog posts with proper semantic markup and accessibility
 Usage: {{ partial "recent-posts.html" . }}
 */}}
 
-<section class="py-12">
-  <div class="container mx-auto max-w-7xl px-6">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-8">
-      <!-- Heading always full-width above content -->
-      <header class="col-span-full text-center md:text-left">
-        <h2 class="text-2xl font-semibold">Recent posts</h2>
-      </header>
-
-      <!-- Post list centered beneath heading -->
-      <ul class="md:col-start-3 md:col-span-8 divide-y divide-slate-200 list-none">
+<section class="py-16 sm:py-24">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <!-- Title section matching feature-cards style -->
+    <div class="mx-auto max-w-2xl mb-12 text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl font-heading">Recent posts</h2>
+      <p class="mt-4 text-lg text-slate-600 font-body">Stay updated with our latest insights and announcements</p>
+    </div>
+    
+    <!-- Post list container - responsive width that expands with screen -->
+    <div class="max-w-4xl mx-auto">
+      <ul class="divide-y divide-slate-200 list-none" style="list-style: none; padding-left: 0;">
         {{ $posts := where .Site.RegularPages "Section" "blog" }}
         {{ $recentPosts := first 5 ($posts.ByDate.Reverse) }}
         {{ range $recentPosts }}

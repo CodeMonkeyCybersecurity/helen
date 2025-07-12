@@ -52,13 +52,13 @@ Make informed decisions about your cybersecurity protection. See how Delphi Noti
 
 **Traditional Antivirus:**
 - Consumer: $30-60/year
-- Business: $20-40/device/year
-- **Hidden costs**: IT time, incident response, business disruption
+Business: $20-40/device/year
+**Hidden costs**: IT time, incident response, business disruption
 
 **Delphi Notify:**
 - Individual: $348/year (5 devices)
 - Small Business: $948/year (10 devices)
-- **Includes**: Expert analysis, incident response, ongoing support
+**Includes**: Expert analysis, incident response, ongoing support
 
 **ROI Analysis**: Delphi Notify prevents one moderate security incident, it pays for itself for the year.
 
@@ -96,16 +96,16 @@ Make informed decisions about your cybersecurity protection. See how Delphi Noti
 ### Implementation Comparison
 
 ** SIEM/XDR:**
-- **Setup time**: 3-6 months
-- **Training required**: Extensive
-- **Staff needed**: Dedicated security team
-- **Ongoing management**: Daily attention
+**Setup time**: 3-6 months
+**Training required**: Extensive
+**Staff needed**: Dedicated security team
+**Ongoing management**: Daily attention
 
 **Delphi Notify:**
-- **Setup time**: 10 minutes
-- **Training required**: None
-- **Staff needed**: None
-- **Ongoing management**: Automated
+**Setup time**: 10 minutes
+**Training required**: None
+**Staff needed**: None
+**Ongoing management**: Automated
 
 ### Cost Analysis
 
@@ -113,13 +113,13 @@ Make informed decisions about your cybersecurity protection. See how Delphi Noti
 - Software: $10,000-$100,000+/year
 - Implementation: $25,000-$100,000+
 - Staff: $70,000-$150,000/year per security analyst
-- **Total first year**: $105,000-$350,000+
+**Total first year**: $105,000-$350,000+
 
 **Delphi Notify:**
 - Software: $948-$5,000/year
 - Implementation: $0
 - Staff: $0
-- **Total first year**: $948-$5,000
+**Total first year**: $948-$5,000
 
 ---
 
@@ -147,11 +147,11 @@ Make informed decisions about your cybersecurity protection. See how Delphi Noti
 - Basic router security
 
 **Why DIY often fails:**
-- **Time intensive**: 5-10 hours/week minimum
-- **Knowledge gaps**: Security expertise takes years to develop
-- **Alert fatigue**: Too many false positives
-- **Inconsistent monitoring**: Gaps in coverage
-- **Rapid threat evolution**: Can't keep up with new attack methods
+**Time intensive**: 5-10 hours/week minimum
+**Knowledge gaps**: Security expertise takes years to develop
+**Alert fatigue**: Too many false positives
+**Inconsistent monitoring**: Gaps in coverage
+**Rapid threat evolution**: Can't keep up with new attack methods
 
 ### True Cost of DIY
 
@@ -159,7 +159,7 @@ Make informed decisions about your cybersecurity protection. See how Delphi Noti
 - Initial setup: 20-40 hours
 - Weekly monitoring: 5-10 hours
 - Incident response: 10-20 hours per incident
-- **Annual time cost**: 300-500 hours
+**Annual time cost**: 300-500 hours
 
 **Opportunity cost:**
 - 300 hours × $50/hour = $15,000 in lost productivity
@@ -168,8 +168,8 @@ Make informed decisions about your cybersecurity protection. See how Delphi Noti
 **Delphi Notify alternative:**
 - Setup: 10 minutes
 - Ongoing time: 0 hours
-- **Annual cost**: $948 (small business)
-- **Savings**: $14,000+ in time and peace of mind
+**Annual cost**: $948 (small business)
+**Savings**: $14,000+ in time and peace of mind
 
 ---
 
@@ -205,16 +205,16 @@ Make informed decisions about your cybersecurity protection. See how Delphi Noti
 ### Support Comparison
 
 **Consumer Security Suites:**
-- **Support model**: Self-service knowledge base
-- **Response time**: 24-48 hours for basic issues
-- **Expertise level**: General technical support
-- **Business hours**: Limited availability
+**Support model**: Self-service knowledge base
+**Response time**: 24-48 hours for basic issues
+**Expertise level**: General technical support
+**Business hours**: Limited availability
 
 **Delphi Notify:**
-- **Support model**: Proactive expert guidance
-- **Response time**: 1-4 hours based on priority
-- **Expertise level**: Cybersecurity specialists
-- **Business hours**: 24/7 monitoring, business hours support
+**Support model**: Proactive expert guidance
+**Response time**: 1-4 hours based on priority
+**Expertise level**: Cybersecurity specialists
+**Business hours**: 24/7 monitoring, business hours support
 
 ---
 
@@ -232,27 +232,27 @@ Make informed decisions about your cybersecurity protection. See how Delphi Noti
 ### Business Impact Analysis
 
 **Security incident costs by business size:**
-- **1-10 employees**: Average $25,000 per incident
-- **11-50 employees**: Average $50,000 per incident
-- **51-100 employees**: Average $100,000 per incident
+**1-10 employees**: Average $25,000 per incident
+**11-50 employees**: Average $50,000 per incident
+**51-100 employees**: Average $100,000 per incident
 
 **Delphi Notify ROI:**
-- **Annual cost**: $948 (small business)
-- **Prevents one incident**: $25,000+ savings
-- **ROI**: 2,500%+ return on investment
+**Annual cost**: $948 (small business)
+**Prevents one incident**: $25,000+ savings
+**ROI**: 2,500%+ return on investment
 
 ### Compliance Considerations
 
 **Common small business compliance needs:**
-- **GDPR**: EU customer data protection
-- **CCPA**: California consumer privacy
-- **Australian Privacy Principles**: Local data protection
-- **Industry-specific**: Healthcare, finance, legal
+**GDPR**: EU customer data protection
+**CCPA**: California consumer privacy
+**Australian Privacy Principles**: Local data protection
+**Industry-specific**: Healthcare, finance, legal
 
 **How solutions compare:**
-- **DIY/Consumer**: No compliance support
-- ****: Expensive compliance modules
-- **Delphi Notify**: Built-in compliance reporting
+**DIY/Consumer**: No compliance support
+****: Expensive compliance modules
+**Delphi Notify**: Built-in compliance reporting
 
 ---
 

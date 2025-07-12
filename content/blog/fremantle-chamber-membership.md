@@ -14,10 +14,10 @@ We're excited to announce that **Code Monkey Cybersecurity has been formally wel
 ## Why This Matters
 
 Joining the Fremantle Chamber of Commerce represents more than just membership - it's a commitment to:
-- **Supporting local businesses** with practical cybersecurity solutions
-- **Building community connections** in the heart of WA's port city
-- **Contributing to Fremantle's growing tech ecosystem**
-- **Networking with like-minded business leaders** who value innovation and community
+**Supporting local businesses** with practical cybersecurity solutions
+**Building community connections** in the heart of WA's port city
+**Contributing to Fremantle's growing tech ecosystem**
+**Networking with like-minded business leaders** who value innovation and community
 
 ## About Fremantle Chamber of Commerce
 
@@ -26,26 +26,26 @@ The Fremantle Chamber of Commerce has been supporting local businesses for decad
 ## Our Local Impact
 
 Since establishing our base in Fremantle, we've been committed to:
-- **Protecting local businesses** from the rising tide of cyber threats
-- **Providing training workshops** to help WA businesses recognize and prevent phishing attacks
-- **Building partnerships** with other local tech companies and service providers
-- **Contributing to the local economy** through job creation and business support
+**Protecting local businesses** from the rising tide of cyber threats
+**Providing training workshops** to help WA businesses recognize and prevent phishing attacks
+**Building partnerships** with other local tech companies and service providers
+**Contributing to the local economy** through job creation and business support
 
 ## Chamber Benefits for Our Clients
 
 Our Chamber membership brings additional value to our clients:
-- **Enhanced credibility** through formal business community recognition
-- **Local networking opportunities** for security-conscious business introductions
-- **Community support** for incident response and business continuity
-- **Shared resources** for business growth and development
+**Enhanced credibility** through formal business community recognition
+**Local networking opportunities** for security-conscious business introductions
+**Community support** for incident response and business continuity
+**Shared resources** for business growth and development
 
 ## Looking Forward
 
 As Chamber members, we're excited to participate in:
-- **Regular networking events** to connect with potential clients and partners
-- **Community initiatives** that strengthen Fremantle's business ecosystem
-- **Knowledge sharing** about cybersecurity best practices for local businesses
-- **Collaborative projects** that benefit the broader business community
+**Regular networking events** to connect with potential clients and partners
+**Community initiatives** that strengthen Fremantle's business ecosystem
+**Knowledge sharing** about cybersecurity best practices for local businesses
+**Collaborative projects** that benefit the broader business community
 
 ## Join the Conversation
 

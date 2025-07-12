@@ -13,10 +13,10 @@ Advanced email security training that goes beyond basic awareness - protecting y
 While our [general security training](/offerings/phishing-simulation/training/) covers the basics, this specialized program focuses specifically on the evolving world of phishing attacks that are becoming increasingly sophisticated and targeted.
 
 **Recent Australian Phishing Statistics:**
-- **95%** of successful cyber attacks start with phishing
-- **$55,000** average loss per business email compromise incident
-- **300%** increase in targeted phishing since 2023
-- **1 in 3** Australian employees click on phishing links
+**95%** of successful cyber attacks start with phishing
+**$55,000** average loss per business email compromise incident
+**300%** increase in targeted phishing since 2023
+**1 in 3** Australian employees click on phishing links
 
 ## **Advanced Phishing Scenarios**
 
@@ -27,7 +27,7 @@ While our [general security training](/offerings/phishing-simulation/training/) 
 - Wire transfer verification procedures
 
 ### **Spear Phishing**
-- Industry-specific targeted attacks
+Industry-specific targeted attacks
 - Social media reconnaissance defense
 - Personalized threat recognition
 - Advanced social engineering tactics
@@ -35,7 +35,7 @@ While our [general security training](/offerings/phishing-simulation/training/) 
 ### **Technical Phishing**
 - Malicious attachment identification
 - URL analysis and verification
-- Email header examination
+Email header examination
 - DNS spoofing awareness
 
 ## **Training Methodology**
@@ -79,7 +79,7 @@ While our [general security training](/offerings/phishing-simulation/training/) 
 ### **IT Security Team Training**
 **$400 per person** - For technical staff
 - Advanced threat analysis
-- Email security architecture
+Email security architecture
 - Incident response coordination
 - Security awareness program management
 - Technical countermeasures
@@ -115,7 +115,7 @@ While our [general security training](/offerings/phishing-simulation/training/) 
 ## **Ongoing Support Program**
 
 ### **Monthly Simulation Testing**
-- Industry-relevant phishing scenarios
+Industry-relevant phishing scenarios
 - Difficulty progression based on performance
 - Individual coaching for repeat clickers
 - Department-level performance tracking
@@ -136,7 +136,7 @@ While our [general security training](/offerings/phishing-simulation/training/) 
 
 ### **Custom Email Templates**
 - Phishing simulations using your company branding
-- Industry-specific attack scenarios
+Industry-specific attack scenarios
 - Seasonal and event-based campaigns
 - Compliance and regulatory themed attacks
 
@@ -147,7 +147,7 @@ While our [general security training](/offerings/phishing-simulation/training/) 
 - ROI calculation and reporting
 
 ### **Integration Support**
-- Email security platform integration
+Email security platform integration
 - Security awareness platform compatibility
 - HR system reporting
 - Compliance documentation generation
@@ -169,7 +169,7 @@ Experiencing active phishing attacks? We provide emergency training within 48 ho
 
 Don't wait until after a successful attack. Contact us for a free phishing risk assessment and see where your vulnerabilities are.
 
-**Call**: (+61) 0432 038 310  
+:   
 **Email**: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
 *Specialized phishing training includes ongoing support, regular updates, and emergency incident response consultation.*

@@ -14,18 +14,18 @@ Security solutions designed for businesses of all sizes. No hidden fees, no surp
 
 {{< service-comparison >}}
 {{< service-tier name="Individual/Home" price="$29" period="per month" cta_text="Start Free Trial" cta_url="/offerings/delphi/sign-up/" >}}
-- Up to 5 devices
+Up to 5 devices
 - 24/7 threat monitoring
 - Human-reviewed alerts
-- Email support
+Email support
 - Plain English explanations
 {{< /service-tier >}}
 
 {{< service-tier name="Small Business" price="$79" period="per month" featured="true" cta_text="Start Free Trial" cta_url="/offerings/delphi/sign-up/" badge="Most Popular" >}}
-- Up to 10 devices
+Up to 10 devices
 - 24/7 threat monitoring
 - Human-reviewed alerts
-- Priority phone support
+ phone support
 - Plain English explanations
 - Compliance reporting
 {{< /service-tier >}}
@@ -44,18 +44,18 @@ Security solutions designed for businesses of all sizes. No hidden fees, no surp
 
 {{< service-comparison >}}
 {{< service-tier name="Small Office" price="$99" period="per month" cta_text="Get Started" cta_url="/offerings/persephone/" >}}
-- Up to 1TB storage
+Up to 1TB storage
 - Daily automated backups
 - 30-day retention
-- Email support
+Email support
 - Australian data centers
 {{< /service-tier >}}
 
 {{< service-tier name="Growing Business" price="$199" period="per month" cta_text="Get Started" cta_url="/offerings/persephone/" >}}
-- Up to 5TB storage
+Up to 5TB storage
 - Hourly automated backups
 - 90-day retention
-- Priority support
+ support
 - Compliance reporting
 {{< /service-tier >}}
 {{< /service-comparison >}}
@@ -67,7 +67,7 @@ Security solutions designed for businesses of all sizes. No hidden fees, no surp
 - Monthly phishing tests
 - Basic training modules
 - Progress tracking
-- Email support
+Email support
 {{< /service-tier >}}
 
 {{< service-tier name="Professional" price="$45" period="per employee/year" featured="true" cta_text="Upgrade to Pro" cta_url="/offerings/phishing-simulation/" badge="Recommended" >}}
@@ -75,7 +75,7 @@ Security solutions designed for businesses of all sizes. No hidden fees, no surp
 - Advanced training library
 - Custom scenarios
 - Detailed reporting
-- Priority support
+ support
 {{< /service-tier >}}
 {{< /service-comparison >}}
 
@@ -91,7 +91,7 @@ Security solutions designed for businesses of all sizes. No hidden fees, no surp
 
 {{< service-tier name="Ongoing Program" price="$149" period="per month" cta_text="Start Program" cta_url="/offerings/phishing-simulation/training/" >}}
 - Monthly training sessions
-- Up to 25 employees
+Up to 25 employees
 - Progress tracking
 - Quarterly assessments
 {{< /service-tier >}}
@@ -107,10 +107,10 @@ Not satisfied? Get a full refund within 60 days of starting any paid service.
 
 ## Volume Discounts
 
-- **10+ employees**: 10% discount
-- **25+ employees**: 15% discount
-- **50+ employees**: 20% discount
-- **100+ employees**: Contact for custom pricing
+**10+ employees**: 10% discount
+**25+ employees**: 15% discount
+**50+ employees**: 20% discount
+**100+ employees**: Contact for custom pricing
 
 ## Frequently Asked Questions
 

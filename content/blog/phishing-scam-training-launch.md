@@ -12,11 +12,11 @@ description: "Code Monkey Cybersecurity's Phishing training"
 # Why this is important
 
 ## **The Brutal Reality:**
-- **90% of cyber breaches** start with human error (usually phishing)
-- **$2.7 billion** lost to scams in Australia in 2024
-- **$4.26 million** - average cost of a data breach in Australia
-- **85% of Australian businesses** experienced phishing attacks
-- **ONE account compromised every SECOND** in Australia
+**90% of cyber breaches** start with human error (usually phishing)
+**$2.7 billion** lost to scams in Australia in 2024
+**$4.26 million** - average cost of a data breach in Australia
+**85% of Australian businesses** experienced phishing attacks
+**ONE account compromised every SECOND** in Australia
 
 But **Training can work.**
 
@@ -29,7 +29,7 @@ But **Training can work.**
 
 ### ** Interactive, Not Boring**
 - Live phishing demonstrations
-- Industry-specific scenarios
+Industry-specific scenarios
 - Hands-on threat identification
 - Role-playing exercises
 
@@ -43,10 +43,10 @@ But **Training can work.**
 ![Professional Certifications and Memberships](/images/badges/comptia-security-ce-certification.png)
 
 **Recently Recognized:**
--  **WA Cyber Capability Directory** (CyberWest Hub)
--  **Microsoft for Startups Partner**
--  **Fremantle Chamber of Commerce Member**
--  **CompTIA Certified** (Security+, Network+, PenTest+)
+**WA Cyber Capability Directory** (CyberWest Hub)
+**Microsoft for Startups Partner**
+**Fremantle Chamber of Commerce Member**
+**CompTIA Certified** (Security+, Network+, PenTest+)
 
 **Official Directory Description:**
 *"Human-focused, open-source cybersecurity for small businesses, community organisations, and DV survivors. Education, cloud security, threat intelligence/detection, and R&D."*
@@ -55,7 +55,7 @@ But **Training can work.**
 
 ### ** On-Site Workshops** - $150/person
 - 90-minute interactive session at your location
-- Industry-specific threat scenarios
+Industry-specific threat scenarios
 - Take-home reference materials
 - 30-day follow-up testing included
 
@@ -81,7 +81,7 @@ With **47 million accounts compromised in 2024** and scams targeting **every ind
 
 ## **Ready to Protect Your Team?**
 
- **Call**: (+61) 0432 038 310  
+ :   
  **Email**: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)  
  **Book Now**: [cybermonkey.net.au/offerings/phishing-simulation/training/](https://cybermonkey.net.au/offerings/phishing-simulation/training/)
 

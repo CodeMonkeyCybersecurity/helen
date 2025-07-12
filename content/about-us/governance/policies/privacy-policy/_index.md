@@ -14,15 +14,15 @@ description: "How Code Monkey Cybersecurity protects your data."
 
 We collect **only what we need** to deliver secure, reliable services:
 
-- **Website Visits**  
+**Website Visits**  
   - IP (anonymized), browser, device type — for basic analytics via privacy-first platforms (e.g. Fathom, Plausible)  
-- **Account & Platform Usage (Delphi)**  
+**Account & Platform Usage (Delphi)**  
   - Name, email, role  
   - Device metadata (e.g. OS, scan state, agent ID)  
   - Logs, alerts, and telemetry from your monitored systems  
-- **Support Requests**  
+**Support Requests**  
   - Your messages and any files you voluntarily provide  
-- **Security Events & Audit Trails**  
+**Security Events & Audit Trails**  
   - Access logs, SSO activity, Vault actions — for compliance and forensic integrity
 
 We **do not collect** behavioral tracking data, biometric data, or advertising profiles.
@@ -46,13 +46,13 @@ We **never sell** your data, and we do not use third-party advertising or tracki
 
 Access is strictly limited to:
 
-- **Authorized internal staff**  
+**Authorized internal staff**  
   - Access is scoped by RBAC, logged, and reviewed  
-- **Trusted infrastructure providers**  
+**Trusted infrastructure providers**  
   - e.g. Hetzner (servers), Proton (internal mail), Tailscale (private network overlay)  
-- **Legal authorities**, *only when required*  
+**Legal authorities**, *only when required*  
   - e.g. valid subpoena or legal obligation  
-- **No third-party analytics** (Google Analytics, Meta Pixel, etc.) are used
+**No third-party analytics** (Google Analytics, Meta Pixel, etc.) are used
 
 ---
 
@@ -79,14 +79,14 @@ Deletion requests may be submitted at any time (see below).
 
 Under GDPR, CCPA, and Australian Privacy Principles, you have the right to:
 
-- **Access** your personal data and receive a copy
-- **Rectify** inaccurate or incomplete data
-- **Erase** your data ("right to be forgotten")
-- **Restrict** processing of your data
-- **Object** to processing based on legitimate interests
-- **Data portability** in a machine-readable format
-- **Withdraw consent** for processing based on consent
-- **Lodge a complaint** with supervisory authorities (OAIC for Australia, relevant DPA for EU)
+**Access** your personal data and receive a copy
+**Rectify** inaccurate or incomplete data
+**Erase** your data ("right to be forgotten")
+**Restrict** processing of your data
+**Object** to processing based on legitimate interests
+**Data portability** in a machine-readable format
+**Withdraw consent** for processing based on consent
+**Lodge a complaint** with supervisory authorities (OAIC for Australia, relevant DPA for EU)
 
 **How to exercise your rights:**
 Email [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au) with your request. We will respond within 30 days (or as required by applicable law).
@@ -128,19 +128,19 @@ We will publish updates here. Major changes will be communicated via email to af
 
 We process your personal data based on:
 
-- **Contractual necessity** for service delivery
-- **Legitimate interests** for security monitoring and service improvement
-- **Legal compliance** for audit trails and regulatory requirements
-- **Consent** where explicitly provided
+**Contractual necessity** for service delivery
+**Legitimate interests** for security monitoring and service improvement
+**Legal compliance** for audit trails and regulatory requirements
+**Consent** where explicitly provided
 
 ## International Transfers
 
 When transferring data outside Australia/EU, we ensure adequate protection through:
 
-- **Adequacy decisions** where available
-- **Standard contractual clauses** (EU Commission approved)
-- **Binding corporate rules** with service providers
-- **Data processing agreements** with third parties
+**Adequacy decisions** where available
+**Standard contractual clauses** (EU Commission approved)
+**Binding corporate rules** with service providers
+**Data processing agreements** with third parties
 
 ## Contact Us
 

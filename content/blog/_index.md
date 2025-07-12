@@ -15,7 +15,7 @@ Stay up to date with the latest cybersecurity insights, company news, and indust
 
 ## Categories
 
-- **Company News** - Updates about our services, partnerships, and milestones
-- **Security Insights** - Cybersecurity analysis and industry commentary  
-- **Product Updates** - New features and improvements to our platforms
-- **Education** - Security awareness and best practices
+**Company News** - Updates about our services, partnerships, and milestones
+**Security Insights** - Cybersecurity analysis and industry commentary  
+**Product Updates** - New features and improvements to our platforms
+**Education** - Security awareness and best practices

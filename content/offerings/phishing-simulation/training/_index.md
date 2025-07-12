@@ -28,18 +28,18 @@ Want to see how vulnerable your team really is? We'll send harmless test phishin
 ## **Why This Training Is Critical**
 
 ### **The Australian Reality:**
-- **$4.26 million** - Average cost of a data breach in Australia (2024)
-- **$2.7 billion** - Total scam losses in Australia (2024)
-- **85%** - Percentage of Australian businesses that experienced phishing attacks
-- **One every second** - Rate of account compromises in Australia
-- **30%** - Reduction in click rates after proper training
+**$4.26 million** - Average cost of a data breach in Australia (2024)
+**$2.7 billion** - Total scam losses in Australia (2024)
+**85%** - Percentage of Australian businesses that experienced phishing attacks
+**One every second** - Rate of account compromises in Australia
+**30%** - Reduction in click rates after proper training
 
 ### **Common Threats We Address:**
-- **"Hi Mum" text scams** (up 469% in Australia)
-- **Business email compromise** (average loss: $55,000 per incident)
-- **Fake invoice scams** targeting small businesses
-- **CEO fraud** and executive impersonation
-- **LinkedIn and social media scams**
+**"Hi Mum" text scams** (up 469% in Australia)
+**Business email compromise** (average loss: $55,000 per incident)
+**Fake invoice scams** targeting small businesses
+**CEO fraud** and executive impersonation
+**LinkedIn and social media scams**
 
 ---
 
@@ -47,10 +47,10 @@ Want to see how vulnerable your team really is? We'll send harmless test phishin
 
 ### ** Interactive, Not Boring**
 No death-by-PowerPoint. Our workshops include:
-- **Live phishing demonstrations** - we'll show you how easy it is
-- **Real scam examples** from Australian businesses
-- **Hands-on practice** identifying threats
-- **Role-playing scenarios** relevant to your industry
+**Live phishing demonstrations** - we'll show you how easy it is
+**Real scam examples** from Australian businesses
+**Hands-on practice** identifying threats
+**Role-playing scenarios** relevant to your industry
 
 ### ** Real-World Focus**
 We cover the scams actually hitting Australian businesses:
@@ -119,7 +119,7 @@ We track improvement with:
 ### ** Ongoing Support**
 - 6-month follow-up assessments included
 - Updated threat briefings quarterly
-- Email support for suspicious items
+Email support for suspicious items
 - Refresher sessions available
 
 
@@ -147,7 +147,7 @@ Don't wait until after a breach. Book your scam education workshop today and sle
 
 {{< button href="mailto:main@cybermonkey.net.au?subject=Phishing%20Training%20Booking&body=Hi!%20I'd%20like%20to%20book%20phishing%20training%20for%20our%20team.%0A%0ACompany:%0ANumber%20of%20employees:%0APreferred%20format%20(on-site/virtual):%0AIndustry:%0APreferred%20dates:%0ASpecific%20concerns%20or%20requirements:" >}}Book Training Now{{< /button >}}
 
-**Call**: (+61) 0432 038 310  
+:   
 **Email**: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
 *Emergency training available within 48 hours for active threats*

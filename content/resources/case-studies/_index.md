@@ -30,21 +30,21 @@ Real stories from businesses and individuals who've strengthened their security 
 
 Dr. Sarah Mitchell runs a busy family medical practice serving 2,500 patients across Fremantle. Like many healthcare providers, her practice faced significant cybersecurity challenges:
 
-- **Sensitive patient data** requiring strict protection
-- **Limited IT budget** for comprehensive security
-- **Staff with varying technical skills**
-- **Compliance requirements** for medical data protection
-- **Previous security incidents** with patient data exposure
+**Sensitive patient data** requiring strict protection
+**Limited IT budget** for comprehensive security
+**Staff with varying technical skills**
+**Compliance requirements** for medical data protection
+**Previous security incidents** with patient data exposure
 
 "We knew we needed better security, but  solutions were too expensive and complex. Our staff needed something simple that wouldn't interfere with patient care."
 
 ### The Solution
 
 **Delphi Notify implementation:**
-- **Quick deployment**: 15 minutes across all systems
-- **Staff training**: 30-minute group session
-- **Compliance reporting**: Automated for medical data protection
-- **24/7 monitoring**: Continuous protection without staff involvement
+**Quick deployment**: 15 minutes across all systems
+**Staff training**: 30-minute group session
+**Compliance reporting**: Automated for medical data protection
+**24/7 monitoring**: Continuous protection without staff involvement
 
 ### The Results
 
@@ -55,13 +55,13 @@ Dr. Sarah Mitchell runs a busy family medical practice serving 2,500 patients ac
 - Security experts identified ransomware deployment attempt
 - Practice received immediate alert with clear action steps
 - Attack stopped before any data encryption occurred
-- **Estimated damage prevented**: $150,000+ in downtime and recovery costs
+**Estimated damage prevented**: $150,000+ in downtime and recovery costs
 
 **Ongoing benefits:**
-- **Zero successful attacks** since implementation
-- **Improved staff confidence** in handling security alerts
-- **Streamlined compliance** reporting for medical audits
-- **Reduced IT stress** with expert guidance
+**Zero successful attacks** since implementation
+**Improved staff confidence** in handling security alerts
+**Streamlined compliance** reporting for medical audits
+**Reduced IT stress** with expert guidance
 
 ### Customer Testimonial
 
@@ -84,21 +84,21 @@ Dr. Sarah Mitchell runs a busy family medical practice serving 2,500 patients ac
 
 Henderson Legal Services handles sensitive client information including corporate mergers, family law cases, and criminal defense matters. They faced several security challenges:
 
-- **Client confidentiality** requirements
-- **Regulatory compliance** for legal data protection
-- **Remote work security** for attorneys
-- **Limited cybersecurity expertise** in-house
-- **Previous data breach** resulting in client notification requirements
+**Client confidentiality** requirements
+**Regulatory compliance** for legal data protection
+**Remote work security** for attorneys
+**Limited cybersecurity expertise** in-house
+**Previous data breach** resulting in client notification requirements
 
 "Client trust is everything in our business. After our previous security incident, we needed bulletproof protection that our staff could actually use."
 
 ### The Solution
 
 **Comprehensive security implementation:**
-- **Delphi Notify** for threat detection and expert analysis
-- **Staff training program** on legal industry security practices
-- **Compliance documentation** for client security assessments
-- **Remote work security** for home-based attorneys
+**Delphi Notify** for threat detection and expert analysis
+**Staff training program** on legal industry security practices
+**Compliance documentation** for client security assessments
+**Remote work security** for home-based attorneys
 
 ### The Results
 
@@ -108,13 +108,13 @@ Henderson Legal Services handles sensitive client information including corporat
 - Detected sophisticated phishing attempt targeting client files
 - Identified unauthorized access attempt to case management system
 - Stopped malware designed to steal legal documents
-- **Protected**: 2,500+ client files and confidential case information
+**Protected**: 2,500+ client files and confidential case information
 
 **Compliance achievements:**
-- **100% client security audits** passed
-- **Streamlined incident reporting** for regulatory requirements
-- **Reduced insurance premiums** through demonstrated security practices
-- **Enhanced client trust** through transparent security measures
+**100% client security audits** passed
+**Streamlined incident reporting** for regulatory requirements
+**Reduced insurance premiums** through demonstrated security practices
+**Enhanced client trust** through transparent security measures
 
 ### Customer Testimonial
 
@@ -137,21 +137,21 @@ Henderson Legal Services handles sensitive client information including corporat
 
 Coastal Catering Co. is a third-generation family business serving Perth's corporate catering market. They process hundreds of credit card transactions daily and maintain extensive customer databases. Security challenges included:
 
-- **Credit card data protection** (PCI compliance)
-- **Customer database security** with 5,000+ client records
-- **Family members with varying tech skills**
-- **Seasonal staff** requiring security training
-- **Budget constraints** of a family business
+**Credit card data protection** (PCI compliance)
+**Customer database security** with 5,000+ client records
+**Family members with varying tech skills**
+**Seasonal staff** requiring security training
+**Budget constraints** of a family business
 
 "We're caterers, not IT experts. But we handle people's credit cards and personal information daily. We needed security that works without requiring a computer science degree."
 
 ### The Solution
 
 **Tailored security approach:**
-- **Delphi Notify** monitoring for payment systems and customer databases
-- **Family-friendly training** for all staff levels
-- **PCI compliance support** for credit card processing
-- **Incident response planning** for business continuity
+**Delphi Notify** monitoring for payment systems and customer databases
+**Family-friendly training** for all staff levels
+**PCI compliance support** for credit card processing
+**Incident response planning** for business continuity
 
 ### The Results
 
@@ -161,13 +161,13 @@ Coastal Catering Co. is a third-generation family business serving Perth's corpo
 - Detected point-of-sale malware targeting credit card data
 - Identified compromised employee credentials
 - Stopped unauthorized access to customer database
-- **Protected**: 5,000+ customer records and payment information
+**Protected**: 5,000+ customer records and payment information
 
 **Business continuity:**
-- **Zero downtime** from security incidents
-- **Maintained PCI compliance** for payment processing
-- **Improved customer trust** through transparent security practices
-- **Reduced insurance costs** through demonstrated security practices
+**Zero downtime** from security incidents
+**Maintained PCI compliance** for payment processing
+**Improved customer trust** through transparent security practices
+**Reduced insurance costs** through demonstrated security practices
 
 ### Customer Testimonial
 
@@ -190,21 +190,21 @@ Coastal Catering Co. is a third-generation family business serving Perth's corpo
 
 Digital Marketing Collective operates as a fully remote agency with team members across Australia. They manage social media accounts, advertising campaigns, and sensitive client data for 50+ businesses. Security challenges included:
 
-- **Distributed workforce** with no central office
-- **Client data protection** including social media credentials
-- **BYOD policies** with personal and work device mixing
-- **Varying home network security**
-- **Client compliance requirements** for data protection
+**Distributed workforce** with no central office
+**Client data protection** including social media credentials
+**BYOD policies** with personal and work device mixing
+**Varying home network security**
+**Client compliance requirements** for data protection
 
 "Managing security across 15 different home offices and personal devices seemed impossible. Our clients trust us with their brand accounts - we couldn't afford a security incident."
 
 ### The Solution
 
 **Remote-first security strategy:**
-- **Delphi Notify** deployment across all remote devices
-- **Centralized monitoring** for distributed workforce
-- **VPN and network security** guidance
-- **Client data protection** protocols
+**Delphi Notify** deployment across all remote devices
+**Centralized monitoring** for distributed workforce
+**VPN and network security** guidance
+**Client data protection** protocols
 
 ### The Results
 
@@ -214,13 +214,13 @@ Digital Marketing Collective operates as a fully remote agency with team members
 - Detected compromised personal device accessing client accounts
 - Identified phishing attempts targeting team members
 - Stopped malware on home networks from spreading to work systems
-- **Protected**: 50+ client social media accounts and campaign data
+**Protected**: 50+ client social media accounts and campaign data
 
 **Business benefits:**
-- **100% client security audits** passed
-- **Improved team productivity** through reduced security concerns
-- **Enhanced client trust** leading to contract renewals
-- **Streamlined remote work** policies
+**100% client security audits** passed
+**Improved team productivity** through reduced security concerns
+**Enhanced client trust** leading to contract renewals
+**Streamlined remote work** policies
 
 ### Customer Testimonial
 
@@ -243,21 +243,21 @@ Digital Marketing Collective operates as a fully remote agency with team members
 
 Perth Outdoor Gear operates four retail locations across Perth, selling outdoor equipment and apparel. They process thousands of transactions monthly and maintain extensive customer databases for loyalty programs. Security challenges included:
 
-- **Multi-location security** consistency
-- **Customer payment data** protection
-- **Loyalty program database** with 10,000+ members
-- **Staff security training** across all locations
-- **Seasonal inventory systems** with varying security needs
+**Multi-location security** consistency
+**Customer payment data** protection
+**Loyalty program database** with 10,000+ members
+**Staff security training** across all locations
+**Seasonal inventory systems** with varying security needs
 
 "Each store had different security practices, and we knew that was a vulnerability. We needed consistent protection across all locations without complex IT management."
 
 ### The Solution
 
 **Multi-location security deployment:**
-- **Centralized Delphi Notify** monitoring across all four locations
-- **Standardized security protocols** for all staff
-- **Customer data protection** for loyalty programs
-- **Point-of-sale security** for payment processing
+**Centralized Delphi Notify** monitoring across all four locations
+**Standardized security protocols** for all staff
+**Customer data protection** for loyalty programs
+**Point-of-sale security** for payment processing
 
 ### The Results
 
@@ -267,13 +267,13 @@ Perth Outdoor Gear operates four retail locations across Perth, selling outdoor 
 - Detected attempted breach of loyalty program database
 - Identified compromised point-of-sale terminal at one location
 - Stopped insider threat from seasonal employee
-- **Protected**: 10,000+ customer records and payment information
+**Protected**: 10,000+ customer records and payment information
 
 **Operational improvements:**
-- **Consistent security** across all locations
-- **Reduced training complexity** with standardized procedures
-- **Enhanced customer trust** in loyalty program participation
-- **Improved staff confidence** in handling security situations
+**Consistent security** across all locations
+**Reduced training complexity** with standardized procedures
+**Enhanced customer trust** in loyalty program participation
+**Improved staff confidence** in handling security situations
 
 ### Customer Testimonial
 
@@ -297,7 +297,7 @@ Perth Outdoor Gear operates four retail locations across Perth, selling outdoor 
 **2. Expert guidance**
 - Human analysis of security events
 - Clear, actionable recommendations
-- Industry-specific compliance support
+Industry-specific compliance support
 
 **3. Staff empowerment**
 - Training that builds confidence

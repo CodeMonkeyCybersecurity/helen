@@ -81,10 +81,10 @@ No surprise bills for "premium features." Everything you need for comprehensive 
 
 **Free antivirus is great** - and we recommend it as your first line of defense. But Delphi Notify goes further:
 
-- **Monitors behavior**, not just known viruses
-- **Catches sophisticated attacks** that bypass traditional antivirus
-- **Explains what's happening** in language you can understand
-- **Provides expert guidance** when problems arise
+**Monitors behavior**, not just known viruses
+**Catches sophisticated attacks** that bypass traditional antivirus
+**Explains what's happening** in language you can understand
+**Provides expert guidance** when problems arise
 
 Think of it as having a cybersecurity expert on call for less than the cost of a single consultation.
 
@@ -115,7 +115,7 @@ During your trial, our team helps you install and configure Delphi Notify on you
 
 {{< cta-anthropic 
   title="Ready to Get Started?" 
-  text="Questions about pricing? We're happy to discuss your specific needs and find the right plan for you. Email us at main@cybermonkey.net.au or call (+61) 0432 038 310."
+  text="Questions about pricing? We're happy to discuss your specific needs and find the right plan for you. Email us at main@cybermonkey.net.au or call ."
   link="/offerings/delphi/sign-up/" 
   linkText="Start Your Free Trial"
   style="dark"

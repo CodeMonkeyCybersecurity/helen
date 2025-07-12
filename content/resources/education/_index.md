@@ -52,44 +52,68 @@ Protect your data from ransomware and device failures with a proper backup strat
 **What it looks like**: Callers claiming to be from banks, tech support, or government agencies requesting immediate action.
 
 **Red flags**:
-- Unsolicited calls asking for personal information
-- High-pressure tactics or threats
-- Requests for remote computer access
-- Demands for payment via gift cards or wire transfers
+Unsolicited calls asking for personal information
+High-pressure tactics or threats
+Requests for remote computer access
+Demands for payment via gift cards or wire transfers
 
 ### **Text Message Scams**
-**What it looks like**: Messages about package deliveries, bank alerts, or "urgent" account issues.
+
+**What it looks like**: 
+
+Messages about package deliveries, bank alerts, or "urgent" account issues.
 
 **Red flags**:
-- Links to websites that look almost (but not quite) like legitimate sites
-- Requests to download apps or provide personal information
-- Messages claiming to be from family members in trouble
+
+Links to websites that look almost (but not quite) like legitimate sites
+
+Requests to download apps or provide personal information
+
+Messages claiming to be from family members in trouble
 
 ## **For Business Owners**
 
 ### **Protecting Your Business**
-- **Employee Training**: Your staff are your first line of defense - invest in their security awareness
-- **Regular Backups**: Automated, tested backups protect against ransomware and data loss
-- **Access Controls**: Not everyone needs access to everything - use the principle of least privilege
-- **Incident Response Plan**: Know what to do if something goes wrong
+**Employee Training**: 
+
+Your staff are your first line of defense - invest in their security awareness
+
+**Regular Backups**: 
+
+Automated, tested backups protect against ransomware and data loss
+
+**Access Controls**: 
+
+Not everyone needs access to everything - use the principle of least privilege
+
+**Incident Response Plan**: Know what to do if something goes wrong
 
 ### **Common Business Threats**
-- **Business Email Compromise**: Scammers impersonating executives or suppliers to redirect payments
-- **Invoice Fraud**: Fake invoices or changes to legitimate supplier payment details
-- **Ransomware**: Malicious software that encrypts your files and demands payment
-- **Social Engineering**: Manipulating staff to reveal information or perform actions
+
+**Business Email Compromise**: Scammers impersonating executives or suppliers to redirect payments
+
+**Invoice Fraud**: Fake invoices or changes to legitimate supplier payment details
+
+**Ransomware**: Malicious software that encrypts your files and demands payment
+
+**Social Engineering**: Manipulating staff to reveal information or perform actions
 
 ## **Free Resources**
 
 ### **Quick Reference Guides**
-- **[Suspicious Email Checklist]** - Print this out for your desk
-- **[Password Manager Setup Guide]** - Step-by-step instructions for popular password managers
-- **[What to Do If You've Been Scammed]** - Immediate steps to take if you think you've been compromised
+
+**[Suspicious Email Checklist]** - Print this out for your desk
+**[Password Manager Setup Guide]** - Step-by-step instructions for popular password managers
+
+**[What to Do If You've Been Scammed]** - Immediate steps to take if you think you've been compromised
 
 ### **Stay Informed**
-- **Monthly Security Tips**: Sign up for our newsletter with practical, actionable advice
-- **Threat Alerts**: Get notified about scams currently targeting Australian businesses
-- **Local Security Events**: Free community workshops and awareness sessions
+
+**Monthly Security Tips**: Sign up for our newsletter with practical, actionable advice
+
+**Threat Alerts**: Get notified about scams currently targeting Australian businesses
+
+**Local Security Events**: Free community workshops and awareness sessions
 
 ## **Need More Help?**
 
@@ -105,7 +129,9 @@ Dealing with an active security incident? We provide emergency response support 
 ---
 
 **Contact Us**
-- **Email**: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
-- **Phone**: (+61) 0432 038 310
+
+**Email**: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
+
+
 
 *All educational resources are provided free of charge as part of our commitment to improving cybersecurity awareness in Australian communities.*

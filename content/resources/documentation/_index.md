@@ -10,7 +10,7 @@ For the main knowledge base, see [Athena](/Athena/Athena).
 
 ## [Hecate](/Hecate/Hecate)
 
--   Frontend
+ Frontend
 
 Hecate, named after the ancient Greek goddess of crossroads, boundaries, and the arcane arts, Hecate stands as the gatekeeper between your infrastructure and the outside world.
 
@@ -18,18 +18,18 @@ Hecate is a modular reverse proxy framework aimed at helping humans set up their
 
 ## [Eos](/Eos/Eos)
 
--   Backend
+ Backend
 
 In ancient Greek mythology and religion, Eos is the goddess and personification of the dawn, helping everyone start the day.
 
 This repo contains lots of tools to help you get started on your ubuntu server journey, including tools for easy server management and turn-key web app configurations.
 
--   Includes [`Delphi`](/Eos/Delphi/Delphi) - powered by [Wazuh](/https://wazuh.com), an  level security system.  
+ Includes [`Delphi`](/Eos/Delphi/Delphi) - powered by [Wazuh](/https://wazuh.com), an  level security system.  
     Contains instructions and best practices for deploying and managing Wazuh within your infrastructure.
 
 ## [Persephone](/Persephone/Persephone)
 
--   Backups
+ Backups
 
 Persephone is a solution designed to simplify and enhance the use of Restic for backups and recovery.
 
@@ -37,7 +37,7 @@ It provides additional features like cross platform compatibility, centralized m
 
 ## [Athena](/Athena/Athena)
 
--   Knowledge Base
+ Knowledge Base
 
 Athena is the Greek goddess of wisdom and practical reasoning. Accordingly, we think this is a fitting name for the repository of our how-to files and knowledge base.
 
@@ -45,7 +45,7 @@ Athena has comprehensive guides, tutorials, and documentation to help you naviga
 
 ## [Metis](/Metis/Metis)
 
--   Knowledge Base, specifically for Troubleshooting
+ Knowledge Base, specifically for Troubleshooting
 
 Metis, the Greek goddess of wisdom, deep thought, and cunning. She was known for her resourcefulness and intelligence, making her an ideal symbol our troubleshooting knowledge base.
 
@@ -77,7 +77,7 @@ So today, Hecate still stands as the gatekeeper between your infrastructure and 
 [Eos GitHub](https://github.com/CodeMonkeyCybersecurity/eos)  
 In ancient Greek mythology and religion, Eos is the goddess and personification of the dawn, helping everyone start the day. This repo contains lots of tools to help you get started on your ubuntu server journey.
 
--   [Delphi](/Eos/Delphi/Delphi)  
+ [Delphi](/Eos/Delphi/Delphi)  
     Detailed instructions and best practices for deploying and managing Wazuh within your infrastructure.
 
 See [here](/Eos/Eos) for other supported Web Applications
@@ -161,16 +161,16 @@ In the example above about you, your trusted friend (`Hecate`), and your ex (*Th
 
 This is an bizarre analogy to read, and it was even more bizarre to write down. But, we think it gets the point across of the main functionality of how cloud servers work. If you get confused, we recommend coming back to these three main actors:
 
--   `The Internet`, your ex, who you don't trust, is toxic, and you want to limit interraction with as much as possible.
--   `Hecate`, your trusted friend, the proxy, who acts as a messenger between you, `Eos` and your ex, *The Internet*.
--   `Eos`, you, the backend cloud server, which does all the thinking. You have to listen to Hecate, think about what she tells you, before giving your reply back to her for her to return to your ex.
+ `The Internet`, your ex, who you don't trust, is toxic, and you want to limit interraction with as much as possible.
+ `Hecate`, your trusted friend, the proxy, who acts as a messenger between you, `Eos` and your ex, *The Internet*.
+ `Eos`, you, the backend cloud server, which does all the thinking. You have to listen to Hecate, think about what she tells you, before giving your reply back to her for her to return to your ex.
 
 There is a more in-depth diagram later on, but here is a very simple diagram to help clarify the common terminology, the more technical terms, and `Eos` and `Hecate`.
 
 ```plaintext
 #
 #        Common terms                  More technical                     Our stuff                   The story
-#   ---------------------           ---------------------            ------------------          ------------------
+#   --------------------         --------------------          -----------------        ------------------
 #          Internet            #          Client              #          Internet            #          You ex
 #             ^                #             ^                #             ^                #             ^
 #             |                #             |                #             |                #             |
@@ -277,12 +277,12 @@ Below is a slightly more technical version of the diagram above outlining how th
 
 ## Features
 
--   Lightweight `NGINX` container based on the `nginx` `docker` image.
--   Automatic `HTTPS` certificate generation using `Certbot`.
--   Support for serving custom static files from the `html` directory, for a landing page/website
--   Automatic redirection from `HTTP` to `HTTPS`.
--   `docker compose` for easy deployment and management.
--   Accessible on the web, via domain name (eg. `domain.com`) pointing to your server’s IP address (eg. `12.34.56.78`) and any subdomains ( eg. `sub.domain.com`) as needed
+ Lightweight `NGINX` container based on the `nginx` `docker` image.
+ Automatic `HTTPS` certificate generation using `Certbot`.
+ Support for serving custom static files from the `html` directory, for a landing page/website
+ Automatic redirection from `HTTP` to `HTTPS`.
+ `docker compose` for easy deployment and management.
+ Accessible on the web, via domain name (eg. `domain.com`) pointing to your server’s IP address (eg. `12.34.56.78`) and any subdomains ( eg. `sub.domain.com`) as needed
 
 ## Simple Diagram
 
