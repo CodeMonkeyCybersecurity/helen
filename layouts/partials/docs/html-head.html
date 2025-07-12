@@ -55,6 +55,11 @@
 {{- $styles := resources.Get "book.scss" | resources.ExecuteAsTemplate "book.scss" . | css.Sass | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" {{ template "integrity" $styles }}>
 
+<!-- Google Fonts - Noto Sans -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 <!-- Tailwind CSS -->
 {{- $tailwind := resources.Get "css/tailwind.css" | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $tailwind.RelPermalink }}" {{ template "integrity" $tailwind }}>
@@ -77,8 +82,7 @@
   [x-cloak] { display: none !important; }
 </style>
 
-<!-- Alpine.js for interactive components -->
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- CSS-only navigation - no JavaScript dependencies -->
 
 <!-- RSS -->
 {{- with .OutputFormats.Get "rss" -}}

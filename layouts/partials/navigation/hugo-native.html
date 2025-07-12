@@ -1,0 +1,104 @@
+{{/* 
+  Hugo-Native Navigation System
+  - Uses Hugo's built-in menu system
+  - Server-side active state detection
+  - No JavaScript dependencies
+  - Pure Go template logic
+*/}}
+
+{{/* CSS-only mobile menu toggle */}}
+<input type="checkbox" id="mobile-nav" class="mobile-nav-toggle" hidden>
+
+<nav class="site-navigation">
+  {{/* Desktop/Mobile Header */}}
+  <header class="nav-header">
+    <div class="nav-container">
+      {{/* Brand */}}
+      <div class="nav-brand">
+        <a href="{{ .Site.BaseURL }}" class="brand-link">
+          <img src="/favicon-circular-64x64.png" alt="{{ .Site.Title }}" class="brand-logo">
+          <span class="brand-name">{{ .Site.Title }}</span>
+        </a>
+      </div>
+
+      {{/* Desktop Navigation */}}
+      <div class="nav-desktop">
+        {{/* Main Menu Items */}}
+        {{ range .Site.Menus.main }}
+          {{ $isActive := partial "navigation/is-active" (dict "menuItem" . "page" $) }}
+          {{ if .HasChildren }}
+            {{/* Dropdown Menu */}}
+            <div class="nav-dropdown">
+              <span class="nav-item dropdown-trigger{{ if $isActive }} active{{ end }}">
+                {{ .Name }}
+                <svg class="dropdown-icon" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>
+              </span>
+              <div class="dropdown-menu">
+                {{ range .Children }}
+                  {{ $childActive := partial "navigation/is-active" (dict "menuItem" . "page" $) }}
+                  <a href="{{ .URL }}" class="dropdown-item{{ if $childActive }} active{{ end }}">
+                    {{ .Name }}
+                  </a>
+                {{ end }}
+              </div>
+            </div>
+          {{ else }}
+            {{/* Regular Link */}}
+            <a href="{{ .URL }}" class="nav-item{{ if $isActive }} active{{ end }}">
+              {{ .Name }}
+            </a>
+          {{ end }}
+        {{ end }}
+
+        {{/* Search */}}
+        <div class="nav-search">
+          {{ partial "navigation/search-hugo" . }}
+        </div>
+
+        {{/* CTA Button */}}
+        <a href="/offerings/delphi/sign-up/" class="nav-cta">Get Started</a>
+      </div>
+
+      {{/* Mobile Menu Toggle */}}
+      <label for="mobile-nav" class="mobile-toggle">
+        <span class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </label>
+    </div>
+  </header>
+
+  {{/* Mobile Menu Overlay */}}
+  <label for="mobile-nav" class="mobile-overlay"></label>
+
+  {{/* Sidebar (Desktop) / Mobile Menu */}}
+  <aside class="nav-sidebar">
+    <div class="sidebar-content">
+      {{/* Mobile Header */}}
+      <div class="mobile-header">
+        <div class="nav-brand">
+          <a href="{{ .Site.BaseURL }}" class="brand-link">
+            <img src="/favicon-circular-64x64.png" alt="{{ .Site.Title }}" class="brand-logo">
+            <span class="brand-name">{{ .Site.Title }}</span>
+          </a>
+        </div>
+        <label for="mobile-nav" class="close-button">×</label>
+      </div>
+
+      {{/* Mobile CTA */}}
+      <div class="mobile-cta">
+        <a href="/offerings/delphi/sign-up/" class="nav-cta mobile">
+          Get Started - Free Trial
+        </a>
+      </div>
+
+      {{/* Navigation Menu */}}
+      <nav class="sidebar-nav">
+        {{/* Auto-generated from Hugo content structure */}}
+        {{ partial "navigation/menu-tree" . }}
+      </nav>
+    </div>
+  </aside>
+</nav>

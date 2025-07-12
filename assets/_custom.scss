@@ -1,30 +1,11 @@
-/* You can add custom styles here. */
+/* Custom styles for site content and components */
 
-// Import navigation interaction patterns
-@import "nav-interactions";
+// Import Hugo native navigation system (CSS-only, no JavaScript)
+@import "navigation-hugo";
 
-// Complete navigation override (replaces Hugo Book theme navigation)
-@import "navigation-override";
-
-// Unified navigation styling mixins
-@mixin nav-base-styling {
-  background-color: $nav-background;
-  color: $nav-text-color;
-  border-color: rgba($bg-section-neutral, 0.8);
-  box-shadow: $nav-shadow;
-}
-
-@mixin nav-link-styling {
-  @extend .nav-text-primary;
-  @extend .nav-interactive;
-  @extend .nav-spacing-item;
-  text-decoration: none;
-  display: block;
-}
-
-// Ensure full-width background with no margins
+// Site-wide styling overrides
 html {
-  background-color: $bg-website !important; // Set background on html for overscroll
+  background-color: $bg-website !important;
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -33,99 +14,34 @@ body {
   margin: 0 !important;
   padding: 0 !important;
   min-width: 100vw;
-  overflow-x: hidden; // Prevent horizontal scroll from 100vw
-  background-color: $bg-website !important; // Ensure consistent background
+  overflow-x: hidden;
+  background-color: $bg-website !important;
 }
 
-// Set CSS variable that theme uses for menu background
-:root {
-  --body-background: #{$nav-background};
-}
-
-// Force override any CSS variable issues
-html {
-  --body-background: #{$nav-background} !important;
-}
-
-// Add more spacing to header and footer
-.book-header {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.book-footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-// Brand-specific overrides for Hugo Book theme
-.book-menu {
-  @include nav-base-styling;
-  border-right: $nav-border;
-  flex: 0 0 $menu-width; // Maintain consistent width
+// Button styles
+.btn-brand-teal {
+  background-color: $brand-teal;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-block;
   
-  .book-menu-content {
-    width: $menu-width; // Consistent width
-    background: $nav-background !important; // Force unified background
-    background-color: $nav-background !important; // Double override
+  &:hover {
+    background-color: darken($brand-teal, 10%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 }
 
-// .book-brand a {
-//   color: $brand-teal !important;
-//   &:hover {
-//     color: $brand-logo-orange !important;
-//   }
-// }
-
-.book-page {
-  background-color: $bg-light;
-}
-
-.book-header {
-  @include nav-base-styling;
-  background-color: $nav-background !important; // Force unified background
-  border-bottom: $nav-border;
-  box-shadow: $nav-shadow;
-  
-  // Override theme's default display: none and ensure sticky positioning works
-  display: block !important;
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 50 !important;
-  margin-bottom: 0 !important; // Remove theme's margin-bottom
-  
-  // Unified styling for all dropdown menus and navigation container
-  nav,
-  .brand-dropdown,
-  .mobile-menu-dropdown {
-    background-color: $nav-background !important;
-    border-color: rgba($bg-section-neutral, 0.8) !important;
-  }
-}
-
-// Mobile menu dropdown styling (from header)
-.mobile-menu-dropdown {
-  max-height: calc(100vh - 3.5rem) !important; // Viewport height minus header
-  overflow-y: auto !important;
-  -webkit-overflow-scrolling: touch; // Smooth scrolling on iOS
-  
-  @media (min-width: 640px) {
-    max-height: calc(100vh - 4rem) !important; // Larger header on sm screens
-  }
-  
-  // Ensure last item (Get Started button) has bottom padding
-  > div {
-    padding-bottom: 2rem !important; // Extra padding at bottom
-  }
-}
-
+// Content styling
 .book-toc {
   background-color: $bg-section-blue;
   border-left: 1px solid $bg-section-mint;
 }
 
-// Button styles
 .book-btn {
   background-color: $btn-primary-bg;
   color: $text-base-dark;
@@ -154,513 +70,6 @@ html {
     background-color: rgba($brand-alert-red, 0.1);
   }
 }
-
-
-// Apply unified navigation styling to nav links
-.book-menu a {
-  @include nav-link-styling;
-  
-  // Override theme's interfering opacity changes
-  opacity: 1 !important;
-  
-  // Remove theme's hover opacity interference - unified hover logic now in _nav-interactions.scss
-  &:hover {
-    opacity: 1 !important;
-  }
-}
-
-// Unified active state styling for all navigation - hover logic now centralized in _nav-interactions.scss
-.book-menu-enhanced .menu-item.active,
-.book-menu .menu-item.active,
-.brand-nav-active,
-.brand-nav-active-mobile,
-.brand-nav-dropdown-active {
-  @extend .nav-interactive;
-}
-
-// Special styling for dropdown items - using unified hover logic
-.brand-nav-dropdown-active {
-  @extend .nav-dropdown-item;
-  
-  .font-semibold,
-  .text-xs {
-    color: white !important;
-  }
-}
-
-// Special styling for mobile active cards - using unified hover logic
-.brand-nav-active-mobile {
-  @extend .nav-interactive;
-  
-  .flex {
-    background-color: rgba($brand-logo-orange, 0.1) !important;
-  }
-  
-  .font-medium {
-    color: $brand-logo-orange !important;
-    font-weight: 600 !important;
-  }
-}
-
-// Expandable menu parent active state - using unified hover logic
-.menu-item-expandable input:checked + label.menu-item {
-  @extend .nav-expandable-parent;
-  @extend .expanded;
-}
-
-// Remove active highlighting from expandable parent when not expanded
-.menu-item-expandable input:not(:checked) + label.menu-item.active {
-  @extend .nav-expandable-parent;
-  @extend .has-active-child;
-}
-
-// Final catch-all: Force unified background on ALL navigation elements
-.book-header,
-.book-header nav,
-.book-menu,
-.book-menu-content,
-.mobile-menu-dropdown,
-.brand-dropdown {
-  background: $nav-background !important;
-  background-color: $nav-background !important;
-}
-
-// Unified typography system for all navigation
-.nav-text-primary {
-  font-family: $font-body;
-  font-size: 0.875rem; // 14px
-  font-weight: 500;
-  line-height: 1.5;
-  color: $nav-text-color;
-}
-
-.nav-text-heading {
-  font-family: $font-heading;
-  font-size: 1.125rem; // 18px
-  font-weight: 600;
-  line-height: 1.4;
-  color: $nav-text-color;
-}
-
-.nav-text-description {
-  font-family: $font-body;
-  font-size: 0.75rem; // 12px
-  font-weight: 400;
-  line-height: 1.4;
-  color: $text-muted;
-}
-
-// Navigation interactive styles are now imported from _nav-interactions.scss
-
-// Override theme's old search styles to prevent conflicts
-.book-search {
-  display: none !important; // Hide any old search implementations
-}
-
-#book-search-input,
-#book-search-results {
-  display: none !important; // Hide old search elements if they exist
-}
-
-// Unified spacing system
-.nav-spacing-item {
-  padding: 0.5rem 0.75rem;
-  margin-bottom: 0.25rem;
-}
-
-.nav-spacing-section {
-  margin-bottom: 1.5rem;
-}
-
-.nav-spacing-gap {
-  gap: 0.75rem;
-}
-
-// Unified visual elements
-.nav-visual-dropdown {
-  border: 1px solid rgba($bg-section-neutral, 0.8);
-  box-shadow: $nav-shadow;
-  border-radius: 0.75rem;
-  background: $nav-background;
-}
-
-.nav-visual-section-divider {
-  border-top: 1px solid rgba($bg-section-neutral, 0.3);
-  padding-top: 1rem;
-}
-
-.nav-visual-icon {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
-}
-
-// Button styles
-.btn-brand-teal {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.5rem 1.5rem;
-  background-color: $brand-teal;
-  color: white;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  text-decoration: none;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  transition: all 0.2s ease;
-  
-  &:hover {
-    background-color: darken($brand-teal, 10%);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    text-decoration: none;
-    color: white;
-  }
-  
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba($brand-teal, 0.5);
-  }
-}
-
-// Unified search component styling
-.unified-search {
-  position: relative;
-  
-  // Base input styling - shared across all contexts
-  .unified-search-input {
-    width: 100%;
-    padding: 0.5rem 0.75rem;
-    border: 1px solid $bg-section-neutral;
-    border-radius: 0.375rem;
-    background-color: $bg-light;
-    font-size: 0.875rem;
-    transition: all 0.2s ease;
-    
-    &:focus {
-      outline: none;
-      border-color: $brand-primary;
-      box-shadow: 0 0 0 2px rgba($brand-primary, 0.2);
-      background-color: white;
-    }
-    
-    &::placeholder {
-      color: $text-soft;
-    }
-  }
-  
-  // Search spinner
-  .unified-search-spinner {
-    position: absolute;
-    right: 0.75rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1rem;
-    height: 1rem;
-    border: 2px solid $bg-section-neutral;
-    border-top-color: $brand-primary;
-    border-radius: 50%;
-    animation: spin 0.6s linear infinite;
-    
-    &.hidden {
-      display: none;
-    }
-  }
-  
-  // Search results dropdown
-  .unified-search-results {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    margin-top: 0.25rem;
-    padding: 0;
-    list-style: none;
-    background-color: white;
-    border: 1px solid $bg-section-neutral;
-    border-radius: 0.375rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-height: 400px;
-    overflow-y: auto;
-    z-index: 100;
-    display: none; // Hidden by default, shown by JavaScript
-    
-    .nav-search-result {
-      border-bottom: 1px solid $bg-section-neutral;
-      
-      &:last-child {
-        border-bottom: none;
-      }
-      
-      &.highlighted {
-        background-color: rgba($brand-primary, 0.1);
-      }
-      
-      &.no-results {
-        padding: 1rem;
-        text-align: center;
-        color: $text-muted;
-        font-style: italic;
-      }
-      
-      a {
-        @extend .nav-search-result;
-        padding: 0.75rem;
-        text-decoration: none;
-        color: $text-base-dark;
-        display: block;
-        transition: all 0.2s ease;
-        
-        &:hover {
-          background-color: $bg-light;
-          
-          .search-result-title {
-            color: $brand-primary;
-          }
-        }
-      }
-      
-      .search-result-title {
-        font-weight: 600;
-        margin-bottom: 0.25rem;
-        transition: color 0.2s ease;
-      }
-      
-      .search-result-excerpt {
-        font-size: 0.8rem;
-        color: $text-muted;
-        line-height: 1.3;
-      }
-    }
-  }
-  
-  // Context-specific styles
-  &.unified-search-sidebar {
-    margin-bottom: 1.5rem;
-    
-    .unified-search-wrapper {
-      position: relative;
-    }
-  }
-  
-  &.unified-search-mobile {
-    .unified-search-wrapper {
-      position: relative;
-    }
-    
-    .unified-search-input {
-      width: 120px;
-      padding: 0.375rem 0.75rem;
-      font-size: 0.875rem;
-      
-      @media (min-width: 400px) {
-        width: 150px;
-      }
-      
-      @media (min-width: 500px) {
-        width: 180px;
-      }
-    }
-    
-    // Mobile search shows results in dropdown too
-    .unified-search-results {
-      // Mobile results positioned properly
-      right: 0;
-      left: auto;
-      min-width: 280px;
-    }
-  }
-}
-
-@keyframes spin {
-  to { transform: translateY(-50%) rotate(360deg); }
-}
-
-// Remove container constraints to use full width
-.container {
-  max-width: 100% !important; // Override theme's $container-max-width
-  margin: 0 !important; // Remove auto centering
-  padding: 0 !important; // Remove any padding
-  display: flex;
-  width: 100%;
-}
-
-.book-page {
-  flex: 1;
-  max-width: none;
-  min-width: 0; // Allows proper text wrapping
-  padding: 0 1rem; // Consistent padding on all screen sizes
-  
-  @media (min-width: $mobile-breakpoint) {
-    padding: 0 2rem; // More padding on larger screens
-  }
-  
-  @media (min-width: 1200px) {
-    padding: 0 3rem; // Even more padding on very large screens
-    max-width: 1200px; // Prevent text lines from getting too long
-    margin: 0 auto; // Center content on very wide screens
-  }
-}
-
-// Unified brand component styling
-.brand-unified {
-  .brand-link {
-    @extend .brand-link; // Use unified brand link interactions
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    color: $text-base-dark;
-  }
-  
-  .brand-logo {
-    height: 2rem;
-    width: auto;
-    flex-shrink: 0;
-  }
-  
-  .brand-text {
-    font-size: 1.25rem;
-    font-weight: 700;
-    font-family: $font-brand;
-    line-height: 1.2;
-  }
-  
-  // Context-specific styling
-  &.brand-unified-sidebar {
-    margin-bottom: 1.5rem;
-  }
-  
-  &.brand-unified-mobile {
-    // Mobile-specific adjustments
-    .brand-text {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-    
-    @media (max-width: 640px) {
-      .brand-logo {
-        height: 1.5rem; // Smaller logo on very small screens
-      }
-      
-      .brand-text {
-        font-size: 1rem; // Smaller text on very small screens
-      }
-    }
-    
-    @media (min-width: 768px) {
-      .brand-logo {
-        height: 2rem; // Standard size on larger screens
-      }
-    }
-  }
-}
-
-// Enhanced menu styles
-.book-menu-enhanced {
-  
-  .menu-search {
-    margin-bottom: 1.5rem;
-  }
-  
-  .menu-section {
-    margin-bottom: 2rem;
-    
-    .menu-section-header {
-      @extend .nav-text-description;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 0.5rem 0;
-      margin-bottom: 0.5rem;
-      border-bottom: 1px solid $bg-section-neutral;
-    }
-    
-    .menu-section-items {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    .menu-item {
-      @include nav-link-styling;
-      display: block;
-      
-      &.menu-item-cta {
-        @extend .nav-button;
-      }
-    }
-    
-    .menu-item-expandable {
-      input[type="checkbox"] {
-        display: none;
-        
-        & + label {
-          cursor: pointer;
-          position: relative;
-          
-          &::after {
-            content: "▸";
-            position: absolute;
-            right: 0.75rem;
-            transition: transform 0.2s ease;
-          }
-        }
-        
-        &:checked + label::after {
-          transform: rotate(90deg);
-        }
-        
-        & + label + .menu-sub-items {
-          display: none;
-          margin: 0;
-          padding: 0;
-          list-style: none;
-        }
-        
-        &:checked + label + .menu-sub-items {
-          display: block;
-        }
-      }
-    }
-    
-    .menu-sub-item {
-      @include nav-link-styling;
-      display: block;
-      padding-left: 2rem;
-      font-size: 0.9rem;
-      color: $text-muted;
-      
-      // Hover logic now centralized in _nav-interactions.scss
-      
-      &.active {
-        color: $brand-primary;
-        font-weight: 600;
-        background-color: transparent;
-      }
-    }
-    
-    .menu-sub-sub-items {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    .menu-sub-sub-item {
-      @include nav-link-styling;
-      display: block;
-      padding-left: 3rem;
-      font-size: 0.85rem;
-      color: $text-muted;
-      
-      &.active {
-        color: $brand-primary;
-        font-weight: 600;
-        background-color: transparent;
-      }
-    }
-  }
-}
-
-// @import "plugins/numbered";
 
 // Enhanced content presentation components
 .promo-tiles-container {
@@ -717,24 +126,6 @@ html {
   overflow: hidden;
 }
 
-// Button styles
-.btn-brand-teal {
-  background-color: $brand-teal;
-  color: white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.2s ease;
-  display: inline-block;
-  
-  &:hover {
-    background-color: darken($brand-teal, 10%);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-}
-
 // Icon color classes
 .teal-icon {
   background-color: rgba($brand-primary, 0.1);
@@ -752,24 +143,20 @@ html {
 }
 
 // CompTIA badge size constraints
-// Limit badge sizes in content areas to be reasonable on larger screens
 img[src*="comptia"],
 img[src*="badge"] {
-  // In footer, badges should be small (h-10 = 2.5rem = 40px)
-  // In content, limit to 2-3x footer size maximum
   &:not(.h-10) {
-    max-width: 120px; // 3x footer size (40px * 3)
+    max-width: 120px;
     max-height: 120px;
     width: auto;
     height: auto;
   }
 }
 
-// Specific constraint for certification badge sections
 .certification-badges,
 div:has(> img[src*="comptia"]) {
   img {
-    max-width: 100px; // 2.5x footer size
+    max-width: 100px;
     max-height: 100px;
     width: auto;
     height: auto;
@@ -777,7 +164,60 @@ div:has(> img[src*="comptia"]) {
   }
 }
 
-// Ensure no bullets in feature-card-wrapper prose content
+// Content section styling
+.content-section,
+section {
+  h2 {
+    all: unset;
+    display: block;
+    font-size: 1.875rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    color: rgb(15, 23, 42);
+    text-align: center;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    
+    @media (min-width: 640px) {
+      font-size: 2.25rem;
+    }
+  }
+}
+
+// Global center alignment for main content
+main {
+  text-align: center;
+  
+  p, ul, ol, li, h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
+  
+  section {
+    text-align: center;
+  }
+  
+  .prose {
+    text-align: center;
+    
+    p, ul, ol, li, h1, h2, h3, h4, h5, h6 {
+      text-align: center;
+    }
+  }
+  
+  .markdown {
+    text-align: center;
+    
+    * {
+      text-align: inherit;
+    }
+  }
+}
+
+.feature-card {
+  text-align: center;
+}
+
+// Remove bullets from certain lists
 .feature-card-wrapper .prose {
   ul, ol {
     list-style: none !important;
@@ -793,7 +233,6 @@ div:has(> img[src*="comptia"]) {
   }
 }
 
-// Remove bullets from recent posts section
 section:has(ul.list-none) {
   ul {
     list-style: none !important;
@@ -810,134 +249,3 @@ section:has(ul.list-none) {
     }
   }
 }
-
-// Fix heading styles in content sections and override Hugo Book theme
-.content-section,
-section {
-  h2 {
-    // Reset any Hugo Book theme styles
-    all: unset;
-    // Apply our custom styles
-    display: block;
-    font-size: 1.875rem; // text-3xl
-    font-weight: 700; // font-bold
-    letter-spacing: -0.025em; // tracking-tight
-    color: rgb(15, 23, 42); // text-slate-900
-    text-align: center;
-    margin-bottom: 2rem; // mb-8
-    line-height: 1.2;
-    
-    @media (min-width: 640px) {
-      font-size: 2.25rem; // sm:text-4xl
-    }
-  }
-}
-
-// Ensure book-article doesn't interfere with our heading styles
-.book-article {
-  h2 {
-    text-align: inherit !important;
-    margin-top: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding: 0 !important;
-  }
-}
-
-// Global center alignment for main content
-main {
-  text-align: center;
-  
-  // All paragraphs and lists should be centered
-  p, ul, ol, li {
-    text-align: center;
-  }
-  
-  // Ensure all headings are centered
-  h1, h2, h3, h4, h5, h6 {
-    text-align: center;
-  }
-  
-  // Center all sections
-  section {
-    text-align: center;
-  }
-  
-  // Prose content should also be centered
-  .prose {
-    text-align: center;
-    
-    p, ul, ol, li, h1, h2, h3, h4, h5, h6 {
-      text-align: center;
-    }
-  }
-  
-  // Make sure markdown content is centered
-  .markdown {
-    text-align: center;
-    
-    * {
-      text-align: inherit;
-    }
-  }
-}
-
-// Ensure feature cards maintain center alignment
-.feature-card {
-  text-align: center;
-}
-
-// Mobile menu styling
-.mobile-menu-dropdown {
-  background: white;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  max-height: calc(100vh - 4rem); // Ensure it doesn't overflow viewport
-  overflow-y: auto;
-  
-  // Override sidebar styles for mobile
-  .book-menu-enhanced {
-    .menu-section {
-      margin-bottom: 1.5rem;
-      
-      .menu-section-header {
-        font-size: 1rem;
-        font-weight: 600;
-        color: rgb(51, 65, 85);
-        margin-bottom: 0.5rem;
-      }
-      
-      .menu-item {
-        padding: 0.75rem 1rem;
-        display: block;
-        color: rgb(71, 85, 105);
-        text-decoration: none;
-        border-radius: 0.375rem;
-        transition: all 0.2s;
-        
-        &:hover {
-          background-color: rgb(241, 245, 249);
-          color: $brand-teal;
-        }
-        
-        &.active {
-          background-color: rgba($brand-teal, 0.1);
-          color: $brand-teal;
-          font-weight: 600;
-        }
-      }
-    }
-    
-    // Hide sidebar-specific elements in mobile
-    .menu-search,
-    .brand-link {
-      display: none;
-    }
-  }
-  
-  // Ensure mobile menu is visible when open
-  &[x-show="true"] {
-    display: block !important;
-  }
-}
-
-// Navigation override handles all responsive behavior

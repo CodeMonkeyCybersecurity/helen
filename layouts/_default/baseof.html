@@ -1,83 +1,133 @@
 <!DOCTYPE html>
-<html lang="{{ default .Site.Language.Lang .Site.LanguageCode  }}" dir="{{ default "ltr" .Site.Language.LanguageDirection }}">
+<html lang="{{ .Site.Language.Lang | default "en" }}" dir="ltr">
 <head>
-  {{ partial "docs/html-head" . }}
-  {{ partial "docs/inject/head" . }}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  {{/* Title and Meta Tags */}}
+  <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta name="keywords" content="{{ range .Site.Params.keywords }}{{ . }}, {{ end }}{{ range .Params.tags }}{{ . }}, {{ end }}">
+  <meta name="author" content="{{ .Site.Params.author }}">
+  
+  {{/* Canonical URL */}}
+  <link rel="canonical" href="{{ .Permalink }}">
+  
+  {{/* Favicon */}}
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  
+  {{/* RSS Feed */}}
+  {{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
+  
+  {{/* JSON Search Index */}}
+  {{ with .OutputFormats.Get "JSON" -}}
+    <link rel="alternate" type="application/json" href="{{ .Permalink }}" title="{{ $.Site.Title }} Search Index">
+  {{ end -}}
+  
+  {{/* OpenGraph Tags */}}
+  <meta property="og:title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}">
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  {{ with .Site.Params.images }}<meta property="og:image" content="{{ index . 0 | absURL }}">{{ end }}
+  
+  {{/* Twitter Card */}}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="{{ .Site.Params.twitter_site }}">
+  <meta name="twitter:title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}">
+  <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  {{ with .Site.Params.images }}<meta name="twitter:image" content="{{ index . 0 | absURL }}">{{ end }}
+  
+  {{/* Schema.org JSON-LD */}}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "{{ .Site.Params.business_name }}",
+    "url": "{{ .Site.BaseURL }}",
+    "logo": "{{ .Site.BaseURL }}favicon.png",
+    "description": "{{ .Site.Params.description }}",
+    "telephone": "{{ .Site.Params.phone }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{{ .Site.Params.address_locality }}",
+      "addressRegion": "{{ .Site.Params.address_region }}",
+      "addressCountry": "{{ .Site.Params.address_country }}",
+      "postalCode": "{{ .Site.Params.postal_code }}"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "{{ index (split .Site.Params.geo_position ";") 0 }}",
+      "longitude": "{{ index (split .Site.Params.geo_position ";") 1 }}"
+    },
+    "sameAs": [
+      "{{ .Site.Params.social.github }}",
+      "{{ .Site.Params.social.facebook }}",
+      "{{ .Site.Params.social.linkedin }}"
+    ]
+  }
+  </script>
+  
+  {{/* Google Fonts - Noto Sans */}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  {{/* CSS Assets */}}
+  {{ $sassOptions := (dict "targetPath" "css/main.css" "outputStyle" "compressed") }}
+  {{ if resources.Get "main.scss" }}
+  {{ $css := resources.Get "main.scss" | css.Sass $sassOptions | resources.Minify }}
+  <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" media="all">
+  {{ else if resources.Get "css/main.css" }}
+  {{ $css := resources.Get "css/main.css" | resources.Minify }}
+  <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}" media="all">
+  {{ end }}
+  
+  {{/* Umami Analytics */}}
+  {{ if .Site.Params.umami_script }}
+  <script async defer data-website-id="{{ .Site.Params.umami_site_id }}" src="{{ .Site.Params.umami_script }}"></script>
+  {{ end }}
+  
+  {{/* SEO and Geographic Meta */}}
+  <meta name="geo.region" content="{{ .Site.Params.geo_region }}">
+  <meta name="geo.placename" content="{{ .Site.Params.geo_placename }}">
+  <meta name="geo.position" content="{{ .Site.Params.geo_position }}">
+  <meta name="ICBM" content="{{ .Site.Params.ICBM }}">
+  
+  {{/* Robots */}}
+  {{ if eq .Kind "404" }}
+  <meta name="robots" content="noindex, nofollow">
+  {{ else if .Params.noindex }}
+  <meta name="robots" content="noindex, follow">
+  {{ else }}
+  <meta name="robots" content="index, follow">
+  {{ end }}
 </head>
-<body dir="{{ default "ltr" .Site.Language.LanguageDirection }}" class="brand-website has-unified-nav" 
-      x-data="{ 
-        menuOpen: false,
-        init() {
-          // Auto-close menu when switching to desktop
-          window.addEventListener('resize', () => {
-            if (window.innerWidth >= 768) {
-              this.menuOpen = false;
-            }
-          });
-        }
-      }" 
-      x-cloak>
+
+<body class="site">
+  {{/* Skip Navigation for Accessibility */}}
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   
-  <!-- Unified header structure for all pages -->
-  <header class="book-header">
-    {{ template "header" . }} <!-- Mobile layout header -->
-  </header>
+  {{/* Site Header with Navigation */}}
+  {{ partial "navigation/hugo-native" . }}
   
-  <main class="container flex">
-    <aside class="book-menu" :class="{ 'menu-open': menuOpen }">
-      <div class="book-menu-content">
-        {{ template "menu" . }} <!-- Left menu Content -->
-      </div>
-    </aside>
-
-    <div class="book-page">
-      {{ partial "docs/inject/content-before" . }}
-      {{ template "main" . }} <!-- Page Content -->
-      {{ partial "docs/inject/content-after" . }}
-
-      <footer class="book-footer">
-        {{ template "footer" . }} <!-- Footer under page content -->
-        {{ partial "docs/inject/footer" . }}
-      </footer>
-
-      {{ template "comments" . }} <!-- Comments block -->
-
-      <!-- Menu overlay for mobile -->
-      <div x-show="menuOpen" 
-           @click="menuOpen = false"
-           x-transition.opacity
-           class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
-    </div>
-
-    {{/* Right-hand TOC menu removed for cleaner layout */}}
+  {{/* Main Content Area */}}
+  <main id="main-content" class="site-main" role="main">
+    {{ block "main" . }}{{ end }}
   </main>
-
-  {{ partial "docs/inject/body" . }}
+  
+  {{/* Site Footer */}}
+  {{ partial "footer/site-footer" . }}
+  
+  {{/* JavaScript for Progressive Enhancement */}}
+  {{ if resources.Get "js/main.js" }}
+  {{ $js := resources.Get "js/main.js" | resources.Minify }}
+  <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+  {{ end }}
 </body>
 </html>
-
-{{ define "menu" }}
-  {{ partial "docs/menu" . }}
-{{ end }}
-
-{{ define "header" }}
-  {{ partial "docs/header" . }}
-{{ end }}
-
-{{ define "footer" }}
-  {{ partial "docs/footer" . }}
-{{ end }}
-
-{{ define "comments" }}
-  {{ if and .Content (default true (default .Site.Params.BookComments .Params.BookComments)) }}
-  <div class="book-comments">
-    {{- partial "docs/comments" . -}}
-  </div>
-  {{ end }}
-{{ end }}
-
-{{ define "main" }}
-  {{ partial "docs/heading-renderer" (dict "content" .Content "context" .) }}
-{{ end }}
-
-{{/* TOC removed for cleaner layout */}}

@@ -147,12 +147,12 @@ echo -e "${RED}Failed: ${FAILED}${NC}"
 echo "======================================"
 
 if [ $FAILED -gt 0 ]; then
-    echo -e "\n${RED}❌ Test suite failed with ${FAILED} errors${NC}"
+    echo -e "\n${RED} Test suite failed with ${FAILED} errors${NC}"
     exit 1
 elif [ $WARNINGS -gt 0 ]; then
     echo -e "\n${YELLOW}⚠️  Test suite completed with ${WARNINGS} warnings${NC}"
     exit 0
 else
-    echo -e "\n${GREEN}✅ All tests passed!${NC}"
+    echo -e "\n${GREEN} All tests passed!${NC}"
     exit 0
 fi

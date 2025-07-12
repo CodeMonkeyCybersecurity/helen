@@ -1,0 +1,18 @@
+{{- $pages := where .Site.RegularPages "Type" "in" (slice "posts" "resources" "offerings" "about") -}}
+{{- $pages = $pages | first 1000 -}}
+[
+{{- range $i, $page := $pages -}}
+  {{- if $i }},{{ end }}
+  {
+    "title": {{ $page.Title | jsonify }},
+    "url": {{ $page.RelPermalink | jsonify }},
+    "content": {{ $page.Plain | truncate 300 | jsonify }},
+    "summary": {{ $page.Summary | jsonify }},
+    "date": {{ $page.Date.Format "2006-01-02" | jsonify }},
+    "section": {{ $page.Section | jsonify }},
+    "type": {{ $page.Type | jsonify }},
+    "tags": {{ $page.Params.tags | jsonify }},
+    "categories": {{ $page.Params.categories | jsonify }}
+  }
+{{- end -}}
+]

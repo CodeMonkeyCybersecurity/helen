@@ -14,9 +14,9 @@ buildDrafts = false
 buildFuture = false
 buildExpired = false
 
-[module]
-[[module.imports]]
-  path = "github.com/alex-shpak/hugo-book"
+# Output formats for search - moved to end of file
+
+# Hugo Book theme removed - using native layouts
 
 # Site-wide metadata
 [params]
@@ -28,7 +28,7 @@ buildExpired = false
   umami_site_id = "970ff30a-ab5d-4c66-8f77-55cafc76083c"
   assetDir = "assets"
   enableGitInfo = true
-  BookLogo = 'favicon.png'
+  Logo = 'favicon.png'
   
   # SEO and Social Media
   images = ["images/cover_puppy_moni_monkey_optimized.jpg"]
@@ -60,6 +60,40 @@ buildExpired = false
 # Navigation now uses auto-discovery - configuration removed
 
 [menu]
+
+# Main navigation menu (for desktop header)
+[[menu.main]]
+name = "Services"
+url = "/offerings/"
+weight = 10
+
+[[menu.main]]
+name = "Resources"
+url = "/resources/"
+weight = 20
+hasChildren = true
+
+  [[menu.main]]
+  parent = "Resources"
+  name = "Documentation"
+  url = "/resources/"
+  weight = 21
+
+  [[menu.main]]
+  parent = "Resources"
+  name = "Education"
+  url = "/resources/education/"
+  weight = 22
+
+[[menu.main]]
+name = "About"
+url = "/about-us/"
+weight = 30
+
+[[menu.main]]
+name = "Blog"
+url = "/posts/"
+weight = 40
 
 # Before menu (appears at top of left sidebar) - removed to avoid duplication
 
@@ -109,10 +143,7 @@ name = "Github"
 url = "https://github.com/CodeMonkeyCybersecurity"
 weight = 10
 
-[[menu.after]]
-name = "Theme"
-url = "https://themes.gohugo.io/themes/hugo-book/"
-weight = 20
+# Theme reference removed - using native Hugo layouts
 
 [sitemap]
   changefreq = "weekly"
@@ -128,6 +159,8 @@ weight = 20
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
+page = ["HTML"]
+section = ["HTML", "RSS"]
 
 [outputFormats.Robots]
 mediaType = "text/plain"

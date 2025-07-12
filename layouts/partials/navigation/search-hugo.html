@@ -1,0 +1,154 @@
+{{/* Hugo Native Search Component - No JavaScript Required */}}
+
+{{/* Search Form */}}
+<form class="search-form" action="/search/" method="get" role="search">
+  <div class="search-wrapper">
+    <label for="search-input" class="sr-only">Search</label>
+    <input type="search" 
+           id="search-input"
+           name="q" 
+           placeholder="Search documentation..." 
+           class="search-input"
+           autocomplete="off"
+           {{ with .Params.q }}value="{{ . }}"{{ end }}
+           required>
+    <button type="submit" class="search-button" aria-label="Search">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <circle cx="11" cy="11" r="8"></circle>
+        <path d="M21 21l-4.35-4.35"></path>
+      </svg>
+    </button>
+  </div>
+</form>
+
+{{/* Optional: Enhanced search with Hugo's taxonomy search */}}
+{{ if .Site.Params.enableAdvancedSearch }}
+<div class="search-filters">
+  <details class="search-advanced">
+    <summary>Advanced Search</summary>
+    <div class="filter-options">
+      {{/* Section Filter */}}
+      {{ if .Site.Sections }}
+        <div class="filter-group">
+          <label for="section-filter">Section:</label>
+          <select name="section" id="section-filter">
+            <option value="">All Sections</option>
+            {{ range .Site.Sections }}
+              <option value="{{ .Section }}">{{ .Title }}</option>
+            {{ end }}
+          </select>
+        </div>
+      {{ end }}
+      
+      {{/* Tag Filter */}}
+      {{ if .Site.Taxonomies.tags }}
+        <div class="filter-group">
+          <label for="tag-filter">Tag:</label>
+          <select name="tag" id="tag-filter">
+            <option value="">All Tags</option>
+            {{ range .Site.Taxonomies.tags.Alphabetical }}
+              <option value="{{ .Name }}">{{ .Name }} ({{ .Count }})</option>
+            {{ end }}
+          </select>
+        </div>
+      {{ end }}
+    </div>
+  </details>
+</div>
+{{ end }}
+
+{{/* Search Results Display (for search page) */}}
+{{ if eq .Type "search" }}
+<div class="search-results" id="search-results">
+  {{ $query := .Params.q | default "" }}
+  {{ if $query }}
+    <h2>Search Results for "{{ $query }}"</h2>
+    
+    {{/* Hugo native search using where and intersect */}}
+    {{ $results := slice }}
+    {{ $searchTerms := split (lower $query) " " }}
+    
+    {{/* Search through all regular pages */}}
+    {{ range .Site.RegularPages }}
+      {{ $match := false }}
+      {{ $content := lower (printf "%s %s %s" .Title .Summary .Plain) }}
+      
+      {{/* Check if all search terms are present */}}
+      {{ range $searchTerms }}
+        {{ if in $content . }}
+          {{ $match = true }}
+        {{ else }}
+          {{ $match = false }}
+          {{ break }}
+        {{ end }}
+      {{ end }}
+      
+      {{ if $match }}
+        {{ $results = $results | append . }}
+      {{ end }}
+    {{ end }}
+    
+    {{ if $results }}
+      <div class="results-count">Found {{ len $results }} result(s)</div>
+      <div class="results-list">
+        {{ range first 20 $results }}
+          <article class="search-result">
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p class="result-meta">
+              <span class="result-section">{{ .Section | title }}</span>
+              {{ if .Date }}
+                <span class="result-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+              {{ end }}
+            </p>
+            <p class="result-excerpt">{{ .Summary | truncate 150 }}</p>
+            {{ if .Params.tags }}
+              <div class="result-tags">
+                {{ range .Params.tags }}
+                  <span class="tag">{{ . }}</span>
+                {{ end }}
+              </div>
+            {{ end }}
+          </article>
+        {{ end }}
+      </div>
+    {{ else }}
+      <div class="no-results">
+        <p>No results found for "{{ $query }}". Try:</p>
+        <ul>
+          <li>Using different keywords</li>
+          <li>Checking your spelling</li>
+          <li>Using more general terms</li>
+        </ul>
+        
+        {{/* Suggest popular pages */}}
+        <div class="suggestions">
+          <h3>Popular Pages:</h3>
+          <ul>
+            {{ range first 5 (where .Site.RegularPages "Section" "offerings") }}
+              <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    {{ end }}
+  {{ else }}
+    <div class="search-help">
+      <h2>Search</h2>
+      <p>Enter your search terms above to find relevant content.</p>
+      
+      {{/* Show popular content */}}
+      <div class="popular-content">
+        <h3>Popular Sections:</h3>
+        <div class="section-links">
+          {{ range .Site.Sections }}
+            <a href="{{ .RelPermalink }}" class="section-link">
+              {{ .Title }}
+              <span class="page-count">({{ len .Pages }} pages)</span>
+            </a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  {{ end }}
+</div>
+{{ end }}

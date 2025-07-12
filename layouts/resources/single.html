@@ -1,0 +1,132 @@
+{{ define "main" }}
+<article class="resource-page">
+  <header class="resource-header">
+    <h1 class="resource-title">{{ .Title }}</h1>
+    
+    {{ if .Description }}
+    <p class="resource-description">{{ .Description }}</p>
+    {{ end }}
+    
+    <div class="resource-meta">
+      {{ if .Params.type }}
+      <span class="resource-type type-{{ .Params.type }}">{{ .Params.type | title }}</span>
+      {{ end }}
+      
+      {{ if .Params.difficulty }}
+      <span class="resource-difficulty difficulty-{{ .Params.difficulty }}">
+        {{ .Params.difficulty | title }} Level
+      </span>
+      {{ end }}
+      
+      {{ if .Params.time }}
+      <span class="resource-time">⏱️ {{ .Params.time }}</span>
+      {{ end }}
+      
+      {{ if .Params.featured }}
+      <span class="resource-featured">⭐ Featured</span>
+      {{ end }}
+    </div>
+    
+    {{ if .Date }}
+    <div class="resource-date">
+      <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+        Published: {{ .Date.Format "January 2, 2006" }}
+      </time>
+      {{ if .Lastmod }}
+      {{ if ne .Date .Lastmod }}
+      <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+        Updated: {{ .Lastmod.Format "January 2, 2006" }}
+      </time>
+      {{ end }}
+      {{ end }}
+    </div>
+    {{ end }}
+  </header>
+
+  {{ if .TableOfContents }}
+  <aside class="resource-toc">
+    <details open>
+      <summary>Quick Navigation</summary>
+      {{ .TableOfContents }}
+    </details>
+  </aside>
+  {{ end }}
+
+  <div class="resource-content">
+    {{ .Content }}
+  </div>
+
+  <footer class="resource-footer">
+    {{ if .Params.prerequisites }}
+    <div class="resource-prerequisites">
+      <h3>Prerequisites</h3>
+      <ul>
+        {{ range .Params.prerequisites }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+    
+    {{ if .Params.related_tools }}
+    <div class="resource-tools">
+      <h3>Related Tools</h3>
+      <ul>
+        {{ range .Params.related_tools }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+    
+    <div class="resource-navigation">
+      {{ with .NextInSection }}
+      <a href="{{ .Permalink }}" class="nav-next" title="{{ .Title }}">
+        <span class="nav-label">Next Resource:</span>
+        <span class="nav-title">{{ .Title }}</span>
+      </a>
+      {{ end }}
+      
+      {{ with .PrevInSection }}
+      <a href="{{ .Permalink }}" class="nav-prev" title="{{ .Title }}">
+        <span class="nav-label">Previous Resource:</span>
+        <span class="nav-title">{{ .Title }}</span>
+      </a>
+      {{ end }}
+    </div>
+    
+    <div class="resource-feedback">
+      <h3>Was this helpful?</h3>
+      <p>Help us improve our resources by providing feedback.</p>
+      <a href="/about-us/contact/" class="btn btn-outline">Give Feedback</a>
+    </div>
+  </footer>
+</article>
+
+{{ $sectionResources := where .Site.RegularPages "Section" .Section }}
+{{ $relatedResources := where $sectionResources "Params.type" .Params.type | first 3 }}
+{{ if $relatedResources }}
+<aside class="related-resources">
+  <h3>More {{ .Params.type | title }} Resources</h3>
+  <div class="related-resources-grid">
+    {{ range $relatedResources }}
+    {{ if ne .Permalink $.Permalink }}
+    <div class="related-resource">
+      <h4 class="related-title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h4>
+      {{ if .Description }}
+      <p class="related-description">{{ .Description | truncate 100 }}</p>
+      {{ end }}
+      {{ if .Params.difficulty }}
+      <span class="resource-difficulty difficulty-{{ .Params.difficulty }}">
+        {{ .Params.difficulty | title }}
+      </span>
+      {{ end }}
+    </div>
+    {{ end }}
+    {{ end }}
+  </div>
+</aside>
+{{ end }}
+{{ end }}

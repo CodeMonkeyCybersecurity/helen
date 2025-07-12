@@ -1,1 +1,119 @@
-{{ define "dummy" }}{{ end }}
+{{ define "main" }}
+<article class="page-content">
+  <header class="page-header">
+    <h1 class="page-title">{{ .Title }}</h1>
+    
+    {{ if .Description }}
+    <p class="page-description">{{ .Description }}</p>
+    {{ end }}
+    
+    {{ if or .Date .Lastmod .Params.author }}
+    <div class="page-meta">
+      {{ if .Date }}
+      <time class="page-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+        Published: {{ .Date.Format "January 2, 2006" }}
+      </time>
+      {{ end }}
+      
+      {{ if .Lastmod }}
+      {{ if ne .Date .Lastmod }}
+      <time class="page-updated" datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+        Updated: {{ .Lastmod.Format "January 2, 2006" }}
+      </time>
+      {{ end }}
+      {{ end }}
+      
+      {{ if .Params.author }}
+      <span class="page-author">By {{ .Params.author }}</span>
+      {{ end }}
+      
+      {{ if .ReadingTime }}
+      <span class="reading-time">{{ .ReadingTime }} min read</span>
+      {{ end }}
+    </div>
+    {{ end }}
+    
+    {{ if .Params.tags }}
+    <div class="page-tags">
+      {{ range .Params.tags }}
+      <span class="tag">{{ . }}</span>
+      {{ end }}
+    </div>
+    {{ end }}
+  </header>
+
+  {{ if .TableOfContents }}
+  <aside class="page-toc">
+    <details open>
+      <summary>Contents</summary>
+      {{ .TableOfContents }}
+    </details>
+  </aside>
+  {{ end }}
+
+  <div class="page-body">
+    {{ .Content }}
+  </div>
+
+  {{ if or (.Params.categories) (.Params.series) }}
+  <footer class="page-footer">
+    {{ if .Params.categories }}
+    <div class="page-categories">
+      <strong>Categories:</strong>
+      {{ range .Params.categories }}
+      <a href="/categories/{{ . | urlize }}" class="category-link">{{ . }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+    
+    {{ if .Params.series }}
+    <div class="page-series">
+      <strong>Series:</strong>
+      {{ range .Params.series }}
+      <a href="/series/{{ . | urlize }}" class="series-link">{{ . }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </footer>
+  {{ end }}
+</article>
+
+{{ if .Section }}
+<nav class="page-navigation" aria-label="Page navigation">
+  {{ with .NextInSection }}
+  <a href="{{ .Permalink }}" class="nav-next" title="{{ .Title }}">
+    <span class="nav-label">Next:</span>
+    <span class="nav-title">{{ .Title }}</span>
+  </a>
+  {{ end }}
+  
+  {{ with .PrevInSection }}
+  <a href="{{ .Permalink }}" class="nav-prev" title="{{ .Title }}">
+    <span class="nav-label">Previous:</span>
+    <span class="nav-title">{{ .Title }}</span>
+  </a>
+  {{ end }}
+</nav>
+{{ end }}
+
+{{ if .Site.Params.related_posts }}
+{{ $related := .Site.RegularPages.Related . | first 3 }}
+{{ if $related }}
+<aside class="related-content">
+  <h3>Related Articles</h3>
+  <ul class="related-list">
+    {{ range $related }}
+    <li class="related-item">
+      <a href="{{ .Permalink }}" class="related-link">
+        <h4 class="related-title">{{ .Title }}</h4>
+        {{ if .Description }}
+        <p class="related-description">{{ .Description | truncate 100 }}</p>
+        {{ end }}
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</aside>
+{{ end }}
+{{ end }}
+{{ end }}

@@ -1,0 +1,76 @@
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3 class="footer-title">{{ .Site.Title }}</h3>
+        <p class="footer-description">{{ .Site.Params.description }}</p>
+        
+        <div class="footer-contact">
+          <p><strong>Email:</strong> <a href="mailto:{{ .Site.Params.contact_email }}">{{ .Site.Params.contact_email }}</a></p>
+          <p><strong>Phone:</strong> <a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a></p>
+          <p><strong>ABN:</strong> {{ .Site.Params.abn }}</p>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-heading">Services</h4>
+        <ul class="footer-links">
+          <li><a href="/offerings/delphi/">Delphi Notify XDR</a></li>
+          <li><a href="/offerings/phishing-simulation/">Security Training</a></li>
+          <li><a href="/offerings/backup/">Backup Solutions</a></li>
+          <li><a href="/offerings/penetration-testing/">Penetration Testing</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-heading">Resources</h4>
+        <ul class="footer-links">
+          <li><a href="/resources/documentation/">Documentation</a></li>
+          <li><a href="/resources/education/">Security Education</a></li>
+          <li><a href="/posts/">Blog</a></li>
+          <li><a href="/about-us/">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4 class="footer-heading">Connect</h4>
+        <div class="footer-social">
+          {{ with .Site.Params.social.github }}
+          <a href="{{ . }}" class="social-link github" aria-label="GitHub">GitHub</a>
+          {{ end }}
+          {{ with .Site.Params.social.facebook }}
+          <a href="{{ . }}" class="social-link facebook" aria-label="Facebook">Facebook</a>
+          {{ end }}
+          {{ with .Site.Params.social.linkedin }}
+          <a href="{{ . }}" class="social-link linkedin" aria-label="LinkedIn">LinkedIn</a>
+          {{ end }}
+          {{ with .Site.Params.social.instagram }}
+          <a href="{{ . }}" class="social-link instagram" aria-label="Instagram">Instagram</a>
+          {{ end }}
+        </div>
+        
+        <div class="footer-location">
+          <p><strong>Location:</strong></p>
+          <p>{{ .Site.Params.address_locality }}, {{ .Site.Params.address_region }}</p>
+          <p>{{ .Site.Params.address_country }} {{ .Site.Params.postal_code }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <p>&copy; {{ now.Year }} {{ .Site.Params.business_name }}. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="/about-us/governance/privacy-policy/">Privacy Policy</a>
+          <a href="/about-us/governance/terms-of-service/">Terms of Service</a>
+          <a href="/about-us/governance/">Governance</a>
+        </div>
+      </div>
+      
+      <div class="footer-certifications">
+        <p class="footer-certification">Australian Business • Fremantle Chamber Member</p>
+        <p class="footer-certification">Microsoft for Startups Partner</p>
+      </div>
+    </div>
+  </div>
+</footer>

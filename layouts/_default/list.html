@@ -1,1 +1,184 @@
-{{ define "dummy" }}{{ end }}
+{{ define "main" }}
+<div class="section-content">
+  <header class="section-header">
+    <h1 class="section-title">{{ .Title }}</h1>
+    
+    {{ if .Description }}
+    <p class="section-description">{{ .Description }}</p>
+    {{ end }}
+    
+    {{ if .Content }}
+    <div class="section-body">
+      {{ .Content }}
+    </div>
+    {{ end }}
+    
+    {{ if .Params.bookFlatSection }}
+    <div class="section-meta">
+      <span class="section-type">Flat Section</span>
+    </div>
+    {{ end }}
+  </header>
+
+  {{ if .Pages }}
+  <div class="page-list">
+    {{ if eq .Section "posts" }}
+    {{/* Blog/Posts layout with featured content */}}
+    <div class="posts-grid">
+      {{ range .Pages }}
+      <article class="post-card">
+        {{ if .Params.featured_image }}
+        <div class="post-image">
+          <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" loading="lazy">
+        </div>
+        {{ end }}
+        
+        <div class="post-content">
+          <h2 class="post-title">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h2>
+          
+          {{ if .Description }}
+          <p class="post-excerpt">{{ .Description }}</p>
+          {{ else if .Summary }}
+          <p class="post-excerpt">{{ .Summary | truncate 150 }}</p>
+          {{ end }}
+          
+          <div class="post-meta">
+            {{ if .Date }}
+            <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+              {{ .Date.Format "January 2, 2006" }}
+            </time>
+            {{ end }}
+            
+            {{ if .Params.author }}
+            <span class="post-author">By {{ .Params.author }}</span>
+            {{ end }}
+            
+            {{ if .ReadingTime }}
+            <span class="reading-time">{{ .ReadingTime }} min read</span>
+            {{ end }}
+          </div>
+          
+          {{ if .Params.tags }}
+          <div class="post-tags">
+            {{ range first 3 .Params.tags }}
+            <span class="tag">{{ . }}</span>
+            {{ end }}
+          </div>
+          {{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+    
+    {{ else if eq .Section "resources" }}
+    {{/* Resources layout with organized categories */}}
+    <div class="resources-grid">
+      {{ range .Pages }}
+      <div class="resource-card">
+        <h3 class="resource-title">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h3>
+        
+        {{ if .Description }}
+        <p class="resource-description">{{ .Description }}</p>
+        {{ end }}
+        
+        {{ if .Params.type }}
+        <span class="resource-type">{{ .Params.type | title }}</span>
+        {{ end }}
+        
+        {{ if .Params.difficulty }}
+        <span class="resource-difficulty difficulty-{{ .Params.difficulty }}">
+          {{ .Params.difficulty | title }}
+        </span>
+        {{ end }}
+        
+        {{ if .Params.time }}
+        <span class="resource-time">{{ .Params.time }}</span>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+    
+    {{ else }}
+    {{/* Generic layout for other sections */}}
+    <div class="pages-list">
+      {{ range .Pages }}
+      <div class="page-item">
+        <h3 class="page-title">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h3>
+        
+        {{ if .Description }}
+        <p class="page-description">{{ .Description }}</p>
+        {{ else if .Summary }}
+        <p class="page-summary">{{ .Summary | truncate 200 }}</p>
+        {{ end }}
+        
+        {{ if or .Date .Params.weight }}
+        <div class="page-meta">
+          {{ if .Date }}
+          <time class="page-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+            {{ .Date.Format "January 2, 2006" }}
+          </time>
+          {{ end }}
+          
+          {{ if .Params.weight }}
+          <span class="page-weight">Priority: {{ .Params.weight }}</span>
+          {{ end }}
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+  
+  {{ else }}
+  {{/* Empty section message */}}
+  <div class="empty-section">
+    <p>No content available in this section yet.</p>
+  </div>
+  {{ end }}
+
+  {{/* Subsections navigation */}}
+  {{ $subsections := where .Site.Pages "Section" .Section }}
+  {{ $currentSections := where $subsections "Parent" . }}
+  {{ if $currentSections }}
+  <aside class="subsections">
+    <h3>Subsections</h3>
+    <ul class="subsections-list">
+      {{ range $currentSections }}
+      <li class="subsection-item">
+        <a href="{{ .Permalink }}" class="subsection-link">
+          <strong>{{ .Title }}</strong>
+          {{ if .Description }}
+          <span class="subsection-description">{{ .Description }}</span>
+          {{ end }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </aside>
+  {{ end }}
+
+  {{/* Pagination */}}
+  {{ if gt .Paginator.TotalPages 1 }}
+  <nav class="pagination" aria-label="Pagination">
+    {{ if .Paginator.HasPrev }}
+    <a href="{{ .Paginator.Prev.URL }}" class="pagination-prev">← Previous</a>
+    {{ end }}
+    
+    <span class="pagination-info">
+      Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}
+    </span>
+    
+    {{ if .Paginator.HasNext }}
+    <a href="{{ .Paginator.Next.URL }}" class="pagination-next">Next →</a>
+    {{ end }}
+  </nav>
+  {{ end }}
+</div>
+{{ end }}

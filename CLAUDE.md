@@ -46,7 +46,6 @@ docker-compose down
 
 ### Core Technology Stack
 **Hugo Extended 0.128.0+** - Static site generator
-**Hugo Book Theme** - Managed as git submodule in `themes/hugo-book/`
 **SCSS** - Styling with Hugo's asset pipeline
 **Docker + Nginx** - Production deployment
 
@@ -81,15 +80,6 @@ Industry news and commentary
 - `docker-compose.yml` - Container orchestration
 - Base URL: `https://cybermonkey.net.au`
 
-### Theme Management
-The Hugo Book theme is included as a git submodule. When working with the theme:
-```bash
-# Initialize submodules after cloning
-git submodule update --init --recursive
-
-# Update theme
-git submodule update --remote themes/hugo-book
-```
 
 ### Content Features
 - Mathematical notation support (KaTeX)

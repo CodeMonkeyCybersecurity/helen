@@ -1,0 +1,119 @@
+{{ define "main" }}
+<div class="homepage">
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">{{ .Site.Title }}</h1>
+      <p class="hero-description">{{ .Site.Params.description }}</p>
+      
+      <div class="hero-actions">
+        <a href="/offerings/" class="btn btn-primary">Our Services</a>
+        <a href="/resources/education/" class="btn btn-secondary">Security Education</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Delphi Notify XDR</h3>
+        <p>Advanced threat detection and response powered by Wazuh. Protect your infrastructure with real-time monitoring and automated incident response.</p>
+        <a href="/offerings/delphi/" class="feature-link">Learn More →</a>
+      </div>
+      
+      <div class="feature-card">
+        <h3>Security Training</h3>
+        <p>Practical cybersecurity education for individuals and teams. Build confidence in identifying and responding to security threats.</p>
+        <a href="/offerings/phishing-simulation/" class="feature-link">View Training →</a>
+      </div>
+      
+      <div class="feature-card">
+        <h3>Open Source Tools</h3>
+        <p>Transparent, community-driven cybersecurity solutions. Access our complete ecosystem of self-hosted security tools.</p>
+        <a href="/resources/documentation/" class="feature-link">Explore Tools →</a>
+      </div>
+    </div>
+  </section>
+
+  {{ if .Site.RegularPages }}
+  <section class="recent-content">
+    <div class="content-columns">
+      {{ $recentPosts := first 3 (where .Site.RegularPages "Section" "posts") }}
+      {{ if $recentPosts }}
+      <div class="recent-posts">
+        <h2>Latest News</h2>
+        <div class="posts-list">
+          {{ range $recentPosts }}
+          <article class="post-preview">
+            <h3 class="post-title">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h3>
+            <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+              {{ .Date.Format "January 2, 2006" }}
+            </time>
+            {{ if .Description }}
+            <p class="post-excerpt">{{ .Description | truncate 120 }}</p>
+            {{ end }}
+          </article>
+          {{ end }}
+        </div>
+        <a href="/posts/" class="view-all">View All Posts →</a>
+      </div>
+      {{ end }}
+
+      {{ $recentResources := first 3 (where .Site.RegularPages "Section" "resources") }}
+      {{ if $recentResources }}
+      <div class="recent-resources">
+        <h2>Security Resources</h2>
+        <div class="resources-list">
+          {{ range $recentResources }}
+          <div class="resource-preview">
+            <h4 class="resource-title">
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h4>
+            {{ if .Description }}
+            <p class="resource-description">{{ .Description | truncate 100 }}</p>
+            {{ end }}
+            {{ if .Params.type }}
+            <span class="resource-type">{{ .Params.type | title }}</span>
+            {{ end }}
+          </div>
+          {{ end }}
+        </div>
+        <a href="/resources/" class="view-all">View All Resources →</a>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <section class="cta-section">
+    <div class="cta-content">
+      <h2>Ready to Secure Your Business?</h2>
+      <p>Get started with our free security assessment or explore our educational resources.</p>
+      <div class="cta-actions">
+        <a href="/about-us/contact/" class="btn btn-primary">Contact Us</a>
+        <a href="/resources/education/" class="btn btn-outline">Free Resources</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-indicators">
+    <div class="indicators-grid">
+      <div class="indicator">
+        <h4>Australian Based</h4>
+        <p>Fremantle, WA • ABN {{ .Site.Params.abn }}</p>
+      </div>
+      
+      <div class="indicator">
+        <h4>Open Source</h4>
+        <p>Transparent security solutions with AGPL v3 licensing</p>
+      </div>
+      
+      <div class="indicator">
+        <h4>Microsoft Partner</h4>
+        <p>Officially part of Microsoft for Startups program</p>
+      </div>
+    </div>
+  </section>
+</div>
+{{ end }}

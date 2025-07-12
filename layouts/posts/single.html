@@ -1,26 +1,107 @@
 {{ define "main" }}
-<article class="max-w-none mx-auto">
-  <!-- Blog post header in a styled card -->
-  <div class="mx-auto max-w-4xl px-6 lg:px-8 py-12">
-    <div class="bg-white rounded-2xl shadow-sm p-8 sm:p-12 border border-slate-200">
-      <header class="space-y-4">
-        <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
-          {{ partial "docs/title.html" . }}
-        </h1>
-        <div class="text-slate-600">
-          {{ partial "docs/post-meta" . }}
-        </div>
-      </header>
+<article class="blog-post">
+  <header class="post-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+    
+    {{ if .Description }}
+    <p class="post-description">{{ .Description }}</p>
+    {{ end }}
+    
+    <div class="post-meta">
+      {{ if .Date }}
+      <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+        Published: {{ .Date.Format "January 2, 2006" }}
+      </time>
+      {{ end }}
+      
+      {{ if .Lastmod }}
+      {{ if ne .Date .Lastmod }}
+      <time class="post-updated" datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+        Updated: {{ .Lastmod.Format "January 2, 2006" }}
+      </time>
+      {{ end }}
+      {{ end }}
+      
+      {{ if .Params.author }}
+      <span class="post-author">By {{ .Params.author }}</span>
+      {{ end }}
+      
+      {{ if .ReadingTime }}
+      <span class="reading-time">{{ .ReadingTime }} min read</span>
+      {{ end }}
     </div>
-  </div>
-  
-  <!-- Blog post content renders on background -->
-  <div class="mx-auto max-w-4xl px-6 lg:px-8 pb-12">
-    <div class="prose prose-slate prose-lg max-w-none text-slate-700 [&>h2]:text-slate-900 [&>h3]:text-slate-900 [&>h4]:text-slate-900">
-      {{- .Content -}}
+    
+    {{ if .Params.tags }}
+    <div class="post-tags">
+      {{ range .Params.tags }}
+      <a href="/tags/{{ . | urlize }}" class="tag">{{ . }}</a>
+      {{ end }}
     </div>
-  </div>
-</article>
-{{ end }}
+    {{ end }}
+    
+    {{ if .Params.categories }}
+    <div class="post-categories">
+      <strong>Categories:</strong>
+      {{ range .Params.categories }}
+      <a href="/categories/{{ . | urlize }}" class="category-link">{{ . }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </header>
 
-{{/* TOC removed for cleaner layout */}}
+  {{ if .Params.featured_image }}
+  <div class="post-featured-image">
+    <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" loading="lazy">
+  </div>
+  {{ end }}
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+
+  <footer class="post-footer">
+    {{ if .Params.linktitle }}
+    <div class="post-social-media">
+      <h3>Share this post</h3>
+      <p>This content was originally shared on our social media channels.</p>
+    </div>
+    {{ end }}
+    
+    <div class="post-navigation">
+      {{ with .NextInSection }}
+      <a href="{{ .Permalink }}" class="nav-next" title="{{ .Title }}">
+        <span class="nav-label">Next Post:</span>
+        <span class="nav-title">{{ .Title }}</span>
+      </a>
+      {{ end }}
+      
+      {{ with .PrevInSection }}
+      <a href="{{ .Permalink }}" class="nav-prev" title="{{ .Title }}">
+        <span class="nav-label">Previous Post:</span>
+        <span class="nav-title">{{ .Title }}</span>
+      </a>
+      {{ end }}
+    </div>
+  </footer>
+</article>
+
+{{ $related := .Site.RegularPages.Related . | first 3 }}
+{{ if $related }}
+<aside class="related-posts">
+  <h3>Related Articles</h3>
+  <div class="related-posts-grid">
+    {{ range $related }}
+    <div class="related-post">
+      <h4 class="related-title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h4>
+      {{ if .Description }}
+      <p class="related-description">{{ .Description | truncate 100 }}</p>
+      {{ end }}
+      <time class="related-date">{{ .Date.Format "January 2, 2006" }}</time>
+    </div>
+    {{ end }}
+  </div>
+</aside>
+{{ end }}
+{{ end }}
