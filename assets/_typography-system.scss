@@ -1,14 +1,85 @@
 // Code Monkey Cybersecurity - Custom Typography System
-// Implementing exact typography specifications
+// Using local fonts from static/fonts directory
 
 // =================================
-// FONT IMPORTS - Google Fonts
+// FONT IMPORTS - Local Files
 // =================================
 
-// Import Google Fonts as specified
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700&family=Noto+Sans+Mono&display=swap');
+// Atkinson Hyperlegible - For headings
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf') format('truetype');
+}
 
-// Keep self-hosted Noto Sans for brand titles
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-BoldItalic.ttf') format('truetype');
+}
+
+// Inter - For body text
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Inter/static/Inter_18pt-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/Inter/static/Inter_18pt-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/Inter/static/Inter_18pt-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Inter/static/Inter_18pt-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Inter/static/Inter_18pt-Italic.ttf') format('truetype');
+}
+
+// Noto Sans - For brand titles
 @font-face {
   font-family: 'Noto Sans';
   font-style: normal;
@@ -23,6 +94,56 @@
   font-weight: 700;
   font-display: swap;
   src: url('/fonts/NotoSans-Bold.ttf') format('truetype');
+}
+
+// Additional Noto Sans weights from subdirectory
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/Noto_Sans/static/NotoSans-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/Noto_Sans/static/NotoSans-SemiBold.ttf') format('truetype');
+}
+
+// Noto Sans Mono - For code blocks
+@font-face {
+  font-family: 'Noto Sans Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Noto_Sans_Mono/static/NotoSansMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/Noto_Sans_Mono/static/NotoSansMono-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/Noto_Sans_Mono/static/NotoSansMono-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Noto_Sans_Mono/static/NotoSansMono-Bold.ttf') format('truetype');
 }
 
 // =================================
