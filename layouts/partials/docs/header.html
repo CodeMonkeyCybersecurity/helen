@@ -74,28 +74,36 @@
               class="p-2 rounded-lg hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-teal focus:ring-opacity-50 transition-all duration-200 touch-manipulation"
               :class="{ 'bg-slate-100': open }"
               aria-label="Toggle menu">
-        <svg x-show="!open" 
-             x-transition:enter="transition ease-in duration-100" 
-             x-transition:enter-start="opacity-0 rotate-90" 
-             x-transition:enter-end="opacity-100 rotate-0"
-             xmlns="http://www.w3.org/2000/svg" 
-             class="h-6 w-6 text-slate-700" 
-             fill="none"
-             viewBox="0 0 24 24" 
-             stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-        <svg x-show="open" 
-             x-transition:enter="transition ease-in duration-100" 
-             x-transition:enter-start="opacity-0 rotate-90" 
-             x-transition:enter-end="opacity-100 rotate-0"
-             xmlns="http://www.w3.org/2000/svg" 
-             class="h-6 w-6 text-slate-700" 
-             fill="none"
-             viewBox="0 0 24 24" 
-             stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
+        <div class="relative w-6 h-6">
+          <svg x-show="!open" 
+               x-transition:enter="transition ease-in duration-100" 
+               x-transition:enter-start="opacity-0 rotate-90" 
+               x-transition:enter-end="opacity-100 rotate-0"
+               x-transition:leave="transition ease-out duration-100"
+               x-transition:leave-start="opacity-100 rotate-0"
+               x-transition:leave-end="opacity-0 rotate-90"
+               xmlns="http://www.w3.org/2000/svg" 
+               class="absolute inset-0 h-6 w-6 text-slate-700" 
+               fill="none"
+               viewBox="0 0 24 24" 
+               stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg x-show="open" 
+               x-transition:enter="transition ease-in duration-100" 
+               x-transition:enter-start="opacity-0 -rotate-90" 
+               x-transition:enter-end="opacity-100 rotate-0"
+               x-transition:leave="transition ease-out duration-100"
+               x-transition:leave-start="opacity-100 rotate-0"
+               x-transition:leave-end="opacity-0 -rotate-90"
+               xmlns="http://www.w3.org/2000/svg" 
+               class="absolute inset-0 h-6 w-6 text-slate-700" 
+               fill="none"
+               viewBox="0 0 24 24" 
+               stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </div>
       </button>
     </div>
   </div>
@@ -120,86 +128,23 @@
        x-transition:leave="transition ease-in duration-200 transform"
        x-transition:leave-start="opacity-100 scale-100 translate-y-0"
        x-transition:leave-end="opacity-0 scale-95 -translate-y-4"
-       class="mobile-menu-dropdown absolute top-full left-0 right-0 z-50 max-h-screen overflow-y-auto nav-visual-section-divider">
+       class="md:hidden mobile-menu-dropdown absolute top-full left-0 right-0 z-50 max-h-screen overflow-y-auto nav-visual-section-divider"
+       @click.away="open = false">
     
-    <div class="px-4 py-6 space-y-6">
-      <!-- Offerings Section - Direct links -->
-      {{ $offeringsSection := .Site.GetPage "/offerings" }}
-      {{ $offeringsPages := where $offeringsSection.Pages "Params.offering" true }}
-      {{ if $offeringsPages }}
-      <div class="space-y-4">
-        <div class="flex items-center space-x-2">
-          <div class="nav-visual-icon bg-brand-teal"></div>
-          <h3 class="nav-text-heading">Offerings</h3>
+    <div class="px-4 py-6 bg-white">
+      <!-- Use the same menu structure as sidebar but with mobile styling -->
+      <div class="mobile-menu-content space-y-6">
+        <!-- Quick Actions -->
+        <div class="space-y-2">
+          <a href="/offerings/delphi/sign-up/" 
+             class="btn-brand-teal w-full text-center block text-base py-3"
+             @click="open = false">
+            Get Started - Free Trial
+          </a>
         </div>
         
-        <div class="space-y-3 pl-4">
-          {{ range $offeringsPages.ByWeight }}
-            {{ if not .Params.bookHidden }}
-            {{ $isActive := partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $ "url" .RelPermalink) }}
-            <a href="{{ .RelPermalink }}" class="block group" @click="open = false">
-              <div class="flex items-start nav-spacing-gap nav-spacing-item nav-interactive{{ if $isActive }} active{{ end }}">
-                <div class="w-8 h-8 bg-brand-teal bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <div class="nav-visual-icon bg-brand-teal"></div>
-                </div>
-                <div class="flex-1 min-w-0">
-                  <div class="nav-text-primary font-semibold">{{ .Title }}</div>
-                  {{ with .Params.offeringDescription }}
-                  <div class="nav-text-description mt-1">{{ . }}</div>
-                  {{ end }}
-                  {{/* Show sub-items for offerings with children */}}
-                  {{ if .Pages }}
-                  <div class="mt-2 space-y-1">
-                    {{ range .Pages.ByWeight }}
-                      {{ if not .Params.bookHidden }}
-                      {{ $childIsActive := partial "docs/nav-helpers" (dict "type" "isActive" "currentPage" $ "url" .RelPermalink) }}
-                      <a href="{{ .RelPermalink }}" class="block text-sm nav-text-description{{ if $childIsActive }} text-brand-teal font-semibold{{ end }}" @click="open = false">
-                        {{ .Title }}
-                      </a>
-                      {{ end }}
-                    {{ end }}
-                  </div>
-                  {{ end }}
-                </div>
-              </div>
-            </a>
-            {{ end }}
-          {{ end }}
-        </div>
-      </div>
-      {{ end }}
-      
-      <!-- Resources Section -->
-      {{ partial "docs/nav-section" (dict 
-        "currentPage" . 
-        "title" "Resources" 
-        "items" .Site.Menus.resources 
-        "context" "mobile" 
-        "icon" "bg-slate-400") }}
-      
-      <!-- About Us Section -->
-      {{ partial "docs/nav-section" (dict 
-        "currentPage" . 
-        "title" "About Us" 
-        "items" .Site.Menus.about 
-        "context" "mobile" 
-        "icon" "bg-slate-600") }}
-      
-      <!-- Blog Section -->
-      {{ partial "docs/nav-section" (dict 
-        "currentPage" . 
-        "title" "Blog" 
-        "items" .Site.Menus.blog 
-        "context" "mobile" 
-        "icon" "bg-slate-500") }}
-      
-      <!-- CTA Section -->
-      <div class="pt-4 border-t border-slate-100">
-        <a href="/offerings/delphi/sign-up/" 
-           class="btn-brand-teal w-full text-center block text-base py-4"
-           @click="open = false">
-          Get Started
-        </a>
+        <!-- Menu sections using same structure as sidebar -->
+        {{ partial "docs/menu-autodiscovery" . }}
       </div>
     </div>
   </div>

@@ -878,3 +878,54 @@ main {
 .feature-card {
   text-align: center;
 }
+
+// Mobile menu styling
+.mobile-menu-dropdown {
+  background: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  
+  // Override sidebar styles for mobile
+  .book-menu-enhanced {
+    .menu-section {
+      margin-bottom: 1.5rem;
+      
+      .menu-section-header {
+        font-size: 1rem;
+        font-weight: 600;
+        color: rgb(51, 65, 85);
+        margin-bottom: 0.5rem;
+      }
+      
+      .menu-item {
+        padding: 0.75rem 1rem;
+        display: block;
+        color: rgb(71, 85, 105);
+        text-decoration: none;
+        border-radius: 0.375rem;
+        transition: all 0.2s;
+        
+        &:hover {
+          background-color: rgb(241, 245, 249);
+          color: $brand-teal;
+        }
+        
+        &.active {
+          background-color: rgba($brand-teal, 0.1);
+          color: $brand-teal;
+          font-weight: 600;
+        }
+      }
+    }
+    
+    // Hide sidebar-specific elements in mobile
+    .menu-search,
+    .brand-link {
+      display: none;
+    }
+  }
+  
+  // Ensure mobile menu is visible when open
+  &[x-show="true"] {
+    display: block !important;
+  }
+}
