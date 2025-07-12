@@ -34,9 +34,9 @@ $brand-orange-alt: #da7756;  // Yet another orange
 // Error/Alert color
 $brand-alert-red: #e45549;
 
-// Define compatibility variables early
-$purple-600: $brand-purple;            // Use brand purple
-$orange-500: $brand-orange-logo;       // Use brand orange
+// Define all referenced variables first
+$purple-600: #a625a4;                  // Brand purple
+$orange-500: #d77350;                  // Brand orange
 
 // =================================
 // SEMANTIC COLORS - Using Brand Colors
@@ -113,7 +113,7 @@ $bg-dark-secondary: $neutral-700;
 $bg-dark-tertiary: $neutral-600;
 
 // Legacy compatibility
-$bg-secondary: $neutral-50;         // Light background for cards/panels
+$bg-secondary: #fdfbf9;             // Light background for cards/panels (neutral-50)
 
 // =================================
 // TEXT COLORS - Custom Typography

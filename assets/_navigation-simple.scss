@@ -1,33 +1,37 @@
 // Mobile-First Navigation with CSS-Only Hamburger Menu
 // Responsive design with enhanced mobile experience
 
-// Skip navigation for keyboard accessibility
+// Skip navigation for keyboard accessibility - hidden by default
 .skip-navigation {
-  position: fixed;
-  top: -100px;
-  left: 1rem;
-  z-index: 1001;
-  background: var(--accent-color);
-  color: white;
-  padding: 0.75rem 1rem;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
   
   &:focus,
   &:focus-visible {
+    position: fixed;
+    left: 1rem;
     top: 1rem;
+    width: auto;
+    height: auto;
+    z-index: 1001;
+    background: var(--color-primary);
+    color: white;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     outline: 3px solid rgba(255,255,255,0.8);
     outline-offset: 2px;
-    transform: scale(1.05);
   }
 }
 
 // Enhanced focus styles for all interactive elements
 *:focus-visible {
-  outline: 2px solid var(--accent-color);
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -38,7 +42,7 @@
   
   // Enhanced keyboard accessibility
   &:focus-visible + .nav-header .mobile-menu-toggle {
-    outline: 2px solid var(--accent-color);
+    outline: 2px solid var(--color-primary);
     outline-offset: 2px;
   }
 }
@@ -65,20 +69,8 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.12);
   }
   
-  @media (min-width: 768px) and (max-width: 1199px) {
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-    
-    &:hover {
-      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-    }
-    
-    &.scrolled {
-      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-    }
-  }
-  
-  // Wide screen sidebar layout
-  @media (min-width: 1200px) {
+  // Desktop sidebar layout (single breakpoint)
+  @media (min-width: 1024px) {
     position: fixed;
     top: 0;
     left: 0;
@@ -103,7 +95,7 @@
   padding: 1.25rem 1rem;
   min-height: 72px; // Consistent height across devices
   
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     padding: 1.5rem 2rem;
     min-height: 80px;
   }
@@ -125,7 +117,7 @@
   }
   
   &:focus {
-    outline: 2px solid var(--accent-color);
+    outline: 2px solid var(--color-primary);
     outline-offset: 2px;
     border-radius: 4px;
   }
@@ -145,7 +137,7 @@
     position: absolute;
     inset: -2px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-color-dark));
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
     opacity: 0;
     z-index: -1;
     transition: opacity 0.3s ease;
@@ -165,7 +157,7 @@
 
 .brand-text {
   font-family: var(--font-brand); // Noto Sans for brand
-  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-color-dark) 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -175,12 +167,12 @@
   
   // Add subtle text shadow fallback for unsupported browsers
   @supports not (-webkit-background-clip: text) {
-    color: var(--accent-color);
+    color: var(--color-primary);
     text-shadow: 0 1px 2px rgba(12, 166, 120, 0.3);
   }
   
   // Enhanced responsive typography
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     font-size: 1.375rem;
   }
 }
@@ -206,12 +198,12 @@
   
   &:focus,
   &:focus-within {
-    outline: 2px solid var(--accent-color);
+    outline: 2px solid var(--color-primary);
     outline-offset: 2px;
     background-color: var(--gray-100);
   }
   
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     display: none;
   }
 }
@@ -250,19 +242,8 @@
   transition: max-height 0.4s ease, padding 0.4s ease;
   background: white;
   
-  @media (min-width: 768px) and (max-width: 1199px) {
-    max-height: none;
-    overflow: visible;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem 1.5rem;
-    background: transparent;
-    gap: 2rem; // Better spacing between sections
-  }
-  
-  // Wide screen sidebar layout
-  @media (min-width: 1200px) {
+  // Desktop sidebar layout
+  @media (min-width: 1024px) {
     max-height: none;
     overflow: visible;
     display: flex;
@@ -303,9 +284,9 @@
     }
   }
   
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     border-top: none;
-    padding: 0 2rem 1.5rem;
+    padding: 0;
     
     .nav-link, .nav-cta {
       animation: none;
@@ -330,15 +311,8 @@
   gap: 0.75rem; // Slightly increased mobile gap
   margin-bottom: 2rem; // Better section separation
   
-  @media (min-width: 768px) and (max-width: 1199px) {
-    flex-direction: row;
-    gap: 2.5rem; // Increased desktop spacing
-    margin-bottom: 0;
-    align-items: center; // Better vertical alignment
-  }
-  
-  // Wide screen sidebar layout
-  @media (min-width: 1200px) {
+  // Desktop sidebar layout
+  @media (min-width: 1024px) {
     flex-direction: column;
     gap: 0.5rem;
     margin-bottom: 2rem;
@@ -366,7 +340,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--accent-color);
+    background: var(--color-primary);
     transition: width 0.3s ease;
   }
   
@@ -376,19 +350,19 @@
   
   &:hover {
     background: var(--gray-50);
-    color: var(--accent-color);
+    color: var(--color-primary);
     transform: translateX(4px);
   }
   
   &:focus {
-    outline: 2px solid var(--accent-color);
+    outline: 2px solid var(--color-primary);
     outline-offset: 2px;
     background: var(--gray-50);
-    color: var(--accent-color);
+    color: var(--color-primary);
   }
   
   &.active {
-    background: linear-gradient(135deg, var(--accent-color-light) 0%, var(--accent-color) 100%);
+    background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
     color: white;
     font-weight: 600;
     box-shadow: 0 2px 4px rgba(12, 166, 120, 0.3);
@@ -419,29 +393,29 @@
     }
   }
   
-  @media (min-width: 768px) {
-    padding: 0.5rem 1rem;
+  @media (min-width: 1024px) {
+    padding: 0.75rem 1.25rem;
     
     &:hover {
-      transform: translateY(-1px);
-      background: transparent;
-      color: var(--accent-color);
+      transform: translateX(4px);
+      background: var(--bg-accent);
+      color: var(--color-primary);
     }
     
     &.active {
-      // Desktop active indicator - bottom border instead of left
+      // Desktop active indicator - left border for sidebar
       &::before {
-        top: auto;
-        bottom: 0;
+        top: 0;
+        bottom: auto;
         left: 0;
-        width: 100%;
-        height: 3px;
-        border-radius: 2px 2px 0 0;
+        width: 4px;
+        height: 100%;
+        border-radius: 0 2px 2px 0;
         background: white;
       }
       
       &:hover {
-        transform: translateY(-2px);
+        transform: translateX(2px);
       }
     }
   }
@@ -464,22 +438,13 @@
     height: 1px;
     background: linear-gradient(90deg, transparent, var(--gray-300), transparent);
     
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       display: none;
     }
   }
   
-  @media (min-width: 768px) and (max-width: 1199px) {
-    margin-bottom: 0;
-    padding-top: 0;
-    border-top: none;
-    margin-left: 2rem;
-    padding-left: 2rem;
-    border-left: 1px solid var(--gray-200);
-  }
-  
-  // Wide screen sidebar layout
-  @media (min-width: 1200px) {
+  // Desktop sidebar layout
+  @media (min-width: 1024px) {
     margin-bottom: 1.5rem;
     padding-top: 1rem;
     border-top: 1px solid var(--gray-200);
@@ -503,7 +468,7 @@
   }
   
   &:hover {
-    color: var(--accent-color);
+    color: var(--color-primary);
     background: var(--gray-50);
   }
 }
@@ -523,22 +488,12 @@
     transform: translateX(-50%);
     width: 60px;
     height: 2px;
-    background: linear-gradient(90deg, var(--accent-color), var(--accent-color-dark));
+    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
     border-radius: 1px;
   }
   
-  @media (min-width: 768px) and (max-width: 1199px) {
-    margin-left: auto;
-    padding-top: 0;
-    border-top: none;
-    
-    &::before {
-      display: none;
-    }
-  }
-  
-  // Wide screen sidebar layout
-  @media (min-width: 1200px) {
+  // Desktop sidebar layout
+  @media (min-width: 1024px) {
     margin-top: auto; // Push to bottom of sidebar
     padding-top: 1.5rem;
     border-top: 2px solid var(--gray-100);
@@ -557,7 +512,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-color-dark) 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: white;
   padding: 1rem 1.5rem;
   border-radius: 12px;
@@ -628,7 +583,7 @@
     padding: 0;
     margin: 0 0 1rem 1rem;
     
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       margin: 0;
     }
     
@@ -644,12 +599,8 @@
   padding: 2rem 1rem;
   flex: 1; /* Allow main content to grow and fill available space */
   
-  @media (min-width: 768px) and (max-width: 1199px) {
-    padding: 2rem 3rem;
-  }
-  
-  // Wide screen layout with sidebar offset
-  @media (min-width: 1200px) {
+  // Desktop layout with sidebar offset
+  @media (min-width: 1024px) {
     margin-left: 280px; // Match sidebar width
     padding: 2rem 3rem;
     min-height: 100vh;

@@ -35,8 +35,8 @@ $color-visited-link: $brand-purple;
 // CSS Custom Properties for Native Hugo Layouts
 :root {
   --accent-color: #{$brand-primary};
-  --accent-color-light: #{lighten($brand-primary, 10%)};
-  --accent-color-dark: #{darken($brand-primary, 10%)};
+  --accent-color-light: #2dd4bf;  // lighter teal
+  --accent-color-dark: #005c46;   // darker teal
   --body-background: #{$body-background};
   --text-color: #{$text-base-dark};
   --gray-50: #f9fafb;

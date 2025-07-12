@@ -50,7 +50,7 @@
   position: absolute;
   top: -40px;
   left: 6px;
-  background: var(--accent-color);
+  background: var(--color-primary);
   color: white;
   padding: 8px;
   text-decoration: none;
@@ -69,7 +69,7 @@
   .hero-section {
     text-align: center;
     padding: 4rem 0 3rem;
-    background: linear-gradient(135deg, var(--accent-color-light) 0%, var(--accent-color) 100%);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
     color: white;
     border-radius: 8px;
     margin-bottom: 3rem;
@@ -81,7 +81,7 @@
       line-height: 1.25;
       margin-bottom: 1rem;
       
-      @media (max-width: 768px) {
+      @media (max-width: 1023px) {
         font-size: var(--font-size-xl);
       }
     }
@@ -125,12 +125,12 @@
       }
       
       h3 {
-        color: var(--accent-color);
+        color: var(--color-primary);
         margin-bottom: 1rem;
       }
       
       .feature-link {
-        color: var(--accent-color);
+        color: var(--color-primary);
         text-decoration: none;
         font-weight: 600;
         
@@ -182,7 +182,7 @@
       flex-wrap: wrap;
       
       .tag {
-        background: var(--accent-color-light);
+        background: var(--color-primary-light);
         color: white;
         padding: 0.25rem 0.75rem;
         border-radius: 1rem;
@@ -200,7 +200,7 @@
     summary {
       font-weight: 600;
       cursor: pointer;
-      color: var(--accent-color);
+      color: var(--color-primary);
     }
   }
 }
@@ -214,7 +214,7 @@
     .section-title {
       font-size: 2.5rem;
       font-weight: 700;
-      color: var(--accent-color);
+      color: var(--color-primary);
       margin-bottom: 1rem;
     }
   }
@@ -242,7 +242,7 @@
       }
       
       .post-title a {
-        color: var(--accent-color);
+        color: var(--color-primary);
         text-decoration: none;
         
         &:hover {
@@ -265,22 +265,22 @@
   border: 2px solid transparent;
   
   &.btn-primary {
-    background: var(--accent-color);
+    background: var(--color-primary);
     color: white;
     
     &:hover {
-      background: var(--accent-color-dark);
+      background: var(--color-primary-dark);
       transform: translateY(-1px);
     }
   }
   
   &.btn-secondary {
     background: transparent;
-    color: var(--accent-color);
-    border-color: var(--accent-color);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
     
     &:hover {
-      background: var(--accent-color);
+      background: var(--color-primary);
       color: white;
     }
   }
@@ -317,7 +317,7 @@
   }
   
   .footer-title {
-    color: var(--accent-color-light);
+    color: var(--color-primary-light);
     font-size: 1.5rem;
     margin-bottom: 1rem;
   }
@@ -340,7 +340,7 @@
       text-decoration: none;
       
       &:hover {
-        color: var(--accent-color-light);
+        color: var(--color-primary-light);
         text-decoration: underline;
       }
     }
@@ -355,7 +355,7 @@
     flex-wrap: wrap;
     gap: 1rem;
     
-    @media (max-width: 768px) {
+    @media (max-width: 1023px) {
       flex-direction: column;
       text-align: center;
     }
@@ -372,7 +372,7 @@
       font-size: 0.9rem;
       
       &:hover {
-        color: var(--accent-color-light);
+        color: var(--color-primary-light);
         text-decoration: underline;
       }
     }
@@ -402,33 +402,33 @@
   }
   
   &.alert-info {
-    background-color: #eff6ff;
-    border-color: #3b82f6;
-    color: #1e40af;
+    background-color: var(--bg-accent);
+    border-color: var(--color-blue);
+    color: var(--color-blue);
   }
   
   &.alert-warning {
-    background-color: #fffbeb;
-    border-color: #f59e0b;
-    color: #92400e;
+    background-color: var(--bg-highlight);
+    border-color: var(--color-gold);
+    color: var(--color-gold);
   }
   
   &.alert-danger {
-    background-color: #fef2f2;
-    border-color: #ef4444;
-    color: #dc2626;
+    background-color: var(--bg-primary);
+    border-color: var(--color-alert-red);
+    color: var(--color-alert-red);
   }
   
   &.alert-success {
-    background-color: #f0fdf4;
-    border-color: #22c55e;
-    color: #16a34a;
+    background-color: var(--bg-accent);
+    border-color: var(--color-green);
+    color: var(--color-green);
   }
   
   &.alert-tip {
-    background-color: #fefce8;
-    border-color: #eab308;
-    color: #a16207;
+    background-color: var(--bg-highlight);
+    border-color: var(--color-gold);
+    color: var(--color-gold);
   }
 }
 
@@ -453,15 +453,15 @@
   }
   
   &.featured {
-    border-color: var(--accent-color);
-    background: linear-gradient(135deg, var(--accent-color-light) 0%, white 50%);
+    border-color: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-primary-light) 0%, white 50%);
   }
   
   .resource-highlight-title {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: var(--accent-color);
+    color: var(--color-primary);
     
     a {
       color: inherit;
@@ -492,29 +492,29 @@
     }
     
     .resource-time {
-      background: var(--accent-color-light);
+      background: var(--color-primary-light);
       color: white;
     }
     
     .resource-difficulty {
       &.difficulty-beginner {
-        background: #dcfce7;
-        color: #166534;
+        background: var(--bg-accent);
+        color: var(--color-green);
       }
       
       &.difficulty-intermediate {
-        background: #fef3c7;
-        color: #92400e;
+        background: var(--bg-highlight);
+        color: var(--color-gold);
       }
       
       &.difficulty-advanced {
-        background: #fee2e2;
-        color: #dc2626;
+        background: var(--bg-primary);
+        color: var(--color-alert-red);
       }
     }
     
     .resource-featured {
-      background: var(--accent-color);
+      background: var(--color-primary);
       color: white;
     }
   }
@@ -527,7 +527,7 @@
   
   .resource-highlight-footer {
     .resource-highlight-link {
-      color: var(--accent-color);
+      color: var(--color-primary);
       text-decoration: none;
       font-weight: 600;
       
@@ -595,7 +595,7 @@
 
 .search-title {
   font-size: 2.5rem;
-  color: var(--accent-color);
+  color: var(--color-primary);
   margin-bottom: 1rem;
 }
 
@@ -620,7 +620,7 @@
   transition: border-color 0.2s ease;
   
   &:focus-within {
-    border-color: var(--accent-color);
+    border-color: var(--color-primary);
     box-shadow: 0 2px 8px rgba(12, 166, 120, 0.2);
   }
 }
@@ -640,7 +640,7 @@
 }
 
 .search-button {
-  background: var(--accent-color);
+  background: var(--color-primary);
   color: white;
   border: none;
   padding: 1rem 1.5rem;
@@ -650,7 +650,7 @@
   transition: background 0.2s ease;
   
   &:hover {
-    background: var(--accent-color-dark);
+    background: var(--color-primary-dark);
   }
   
   &:focus {
@@ -674,7 +674,7 @@
   border-bottom: 2px solid var(--gray-200);
   
   h2 {
-    color: var(--accent-color);
+    color: var(--color-primary);
     margin-bottom: 0.5rem;
   }
   
@@ -709,7 +709,7 @@
   margin: 0 0 0.5rem 0;
   
   a {
-    color: var(--accent-color);
+    color: var(--color-primary);
     text-decoration: none;
     font-size: 1.25rem;
     font-weight: 600;
@@ -719,7 +719,7 @@
     }
     
     &:focus {
-      outline: 2px solid var(--accent-color);
+      outline: 2px solid var(--color-primary);
       outline-offset: 2px;
     }
   }
@@ -762,7 +762,7 @@
     margin: 0;
     
     a {
-      color: var(--accent-color);
+      color: var(--color-primary);
       text-decoration: none;
       font-weight: 600;
       
@@ -778,7 +778,7 @@
   padding: 2rem;
   
   h2 {
-    color: var(--accent-color);
+    color: var(--color-primary);
     margin-bottom: 1rem;
   }
   
@@ -813,7 +813,7 @@
   }
   
   a {
-    color: var(--accent-color);
+    color: var(--color-primary);
     text-decoration: none;
     font-weight: 600;
     
@@ -831,7 +831,7 @@
 }
 
 .resource-type {
-  background: var(--accent-color-light);
+  background: var(--color-primary-light);
   color: white;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
@@ -846,10 +846,10 @@
   padding: 2rem;
   background: var(--gray-50);
   border-radius: 8px;
-  border-left: 4px solid var(--accent-color);
+  border-left: 4px solid var(--color-primary);
   
   h3 {
-    color: var(--accent-color);
+    color: var(--color-primary);
     margin: 0 0 1rem 0;
     font-size: 1.25rem;
   }
@@ -879,7 +879,7 @@
 }
 
 // Responsive Design
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .site-main {
     padding: 1.5rem 1rem;
   }
@@ -893,7 +893,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .hero-actions {
     flex-direction: column;
     align-items: center;
