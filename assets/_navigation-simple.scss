@@ -1,115 +1,626 @@
-// Simple Hugo Navigation Styles
-// Mobile-first, responsive design
+// Mobile-First Navigation with CSS-Only Hamburger Menu
+// Responsive design with enhanced mobile experience
 
+// Skip navigation for keyboard accessibility
+.skip-navigation {
+  position: fixed;
+  top: -100px;
+  left: 1rem;
+  z-index: 1001;
+  background: var(--accent-color);
+  color: white;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  
+  &:focus,
+  &:focus-visible {
+    top: 1rem;
+    outline: 3px solid rgba(255,255,255,0.8);
+    outline-offset: 2px;
+    transform: scale(1.05);
+  }
+}
+
+// Enhanced focus styles for all interactive elements
+*:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+// Mobile menu checkbox (hidden)
+.mobile-menu-checkbox {
+  display: none;
+  
+  // Enhanced keyboard accessibility
+  &:focus-visible + .nav-header .mobile-menu-toggle {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+  }
+}
+
+// Navigation container with micro-interactions and responsive layout
 .site-navigation {
   background: white;
   border-bottom: 1px solid var(--gray-200);
-  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
   
-  @media (min-width: 768px) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+  // Enhanced shadow when scrolled (sticky)
+  &.scrolled {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+  }
+  
+  // Subtle hover enhancement for entire nav
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  
+  @media (min-width: 768px) and (max-width: 1199px) {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    
+    &:hover {
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+    
+    &.scrolled {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+  }
+  
+  // Wide screen sidebar layout
+  @media (min-width: 1200px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    border-bottom: none;
+    border-right: 1px solid var(--gray-200);
+    box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    
+    &.scrolled {
+      box-shadow: 2px 0 12px rgba(0,0,0,0.15);
+    }
   }
 }
 
+// Navigation header with brand and mobile toggle
 .nav-header {
-  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1rem;
+  min-height: 72px; // Consistent height across devices
   
   @media (min-width: 768px) {
-    margin-bottom: 0;
+    padding: 1.5rem 2rem;
+    min-height: 80px;
   }
 }
 
+// Brand styling with enhanced visual presence
 .site-brand {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
   color: var(--gray-900);
-  font-weight: 600;
-  font-size: 1.125rem;
-}
-
-.brand-logo {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-}
-
-.nav-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  
-  @media (min-width: 768px) {
-    flex-direction: row;
-    align-items: center;
-    gap: 2rem;
-  }
-}
-
-.nav-link {
-  display: block;
-  padding: 0.5rem 0;
-  color: var(--gray-700);
-  text-decoration: none;
-  transition: color 0.2s ease;
-  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  transition: transform 0.2s ease;
   
   &:hover {
-    color: var(--accent-color);
+    transform: translateY(-1px);
   }
   
   &:focus {
     outline: 2px solid var(--accent-color);
     outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  
+  // Add subtle glow effect
+  &::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-color-dark));
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+  }
+  
+  .site-brand:hover &::after,
+  .site-brand:focus &::after {
+    opacity: 0.2;
+  }
+  
+  .site-brand:hover &,
+  .site-brand:focus & {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+}
+
+.brand-text {
+  font-family: var(--font-brand); // Noto Sans for brand
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-color-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  position: relative;
+  
+  // Add subtle text shadow fallback for unsupported browsers
+  @supports not (-webkit-background-clip: text) {
+    color: var(--accent-color);
+    text-shadow: 0 1px 2px rgba(12, 166, 120, 0.3);
+  }
+  
+  // Enhanced responsive typography
+  @media (min-width: 768px) {
+    font-size: 1.375rem;
+  }
+}
+
+// Mobile hamburger toggle
+.mobile-menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 102;
+  
+  &:hover {
+    background-color: var(--gray-100);
+    transform: scale(1.05);
+  }
+  
+  &:focus,
+  &:focus-within {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    background-color: var(--gray-100);
+  }
+  
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+// Hamburger lines
+.hamburger {
+  display: block;
+  height: 3px;
+  width: 20px;
+  background: var(--gray-700);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+// Hamburger animation when menu is open
+.mobile-menu-checkbox:checked ~ .nav-header .mobile-menu-toggle {
+  .hamburger:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  
+  .hamburger:nth-child(2) {
+    opacity: 0;
+    transform: scale(0);
+  }
+  
+  .hamburger:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+// Navigation menu with mobile collapse behavior
+.nav-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  background: white;
+  
+  @media (min-width: 768px) and (max-width: 1199px) {
+    max-height: none;
+    overflow: visible;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem 1.5rem;
+    background: transparent;
+    gap: 2rem; // Better spacing between sections
+  }
+  
+  // Wide screen sidebar layout
+  @media (min-width: 1200px) {
+    max-height: none;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    background: transparent;
+    gap: 2rem;
+    height: calc(100vh - 120px); // Account for header height
+  }
+}
+
+// Show menu when checkbox is checked with stagger animation
+.mobile-menu-checkbox:checked ~ .nav-menu {
+  max-height: 600px; // Increased for better spacing
+  padding: 1.5rem 1rem 2rem; // Enhanced mobile padding
+  border-top: 1px solid var(--gray-200);
+  
+  // Stagger animation for menu items (mobile only)
+  @media (max-width: 767px) {
+    .nav-primary .nav-link {
+      animation: slideInUp 0.3s ease forwards;
+      opacity: 0;
+      transform: translateY(10px);
+      
+      @for $i from 1 through 6 {
+        &:nth-child(#{$i}) {
+          animation-delay: #{$i * 0.05}s;
+        }
+      }
+    }
+    
+    .nav-secondary .nav-link,
+    .nav-cta {
+      animation: slideInUp 0.3s ease forwards;
+      opacity: 0;
+      transform: translateY(10px);
+      animation-delay: 0.3s;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    border-top: none;
+    padding: 0 2rem 1.5rem;
+    
+    .nav-link, .nav-cta {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+// Keyframe for menu item entrance animation
+@keyframes slideInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Primary navigation section with optimized spacing
+.nav-primary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; // Slightly increased mobile gap
+  margin-bottom: 2rem; // Better section separation
+  
+  @media (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: row;
+    gap: 2.5rem; // Increased desktop spacing
+    margin-bottom: 0;
+    align-items: center; // Better vertical alignment
+  }
+  
+  // Wide screen sidebar layout
+  @media (min-width: 1200px) {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    flex: 1; // Allow to grow and fill space
+  }
+}
+
+// Navigation links with enhanced styling and micro-interactions
+.nav-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--gray-700);
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  
+  // Subtle loading bar animation on click
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+  }
+  
+  &:active::after {
+    width: 100%;
+  }
+  
+  &:hover {
+    background: var(--gray-50);
+    color: var(--accent-color);
+    transform: translateX(4px);
+  }
+  
+  &:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    background: var(--gray-50);
     color: var(--accent-color);
   }
   
   &.active {
-    color: var(--accent-color);
+    background: linear-gradient(135deg, var(--accent-color-light) 0%, var(--accent-color) 100%);
+    color: white;
     font-weight: 600;
+    box-shadow: 0 2px 4px rgba(12, 166, 120, 0.3);
+    position: relative;
+    
+    // Enhanced active indicator with progress bar
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: white;
+      border-radius: 0 2px 2px 0;
+      opacity: 0.8;
+    }
+    
+    // Subtle pulse animation for active state
+    &::after {
+      width: 100%;
+      animation: none;
+    }
+    
+    &:hover {
+      transform: translateX(0) translateY(-1px);
+      box-shadow: 0 4px 8px rgba(12, 166, 120, 0.4);
+    }
   }
   
   @media (min-width: 768px) {
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
+    
+    &:hover {
+      transform: translateY(-1px);
+      background: transparent;
+      color: var(--accent-color);
+    }
+    
+    &.active {
+      // Desktop active indicator - bottom border instead of left
+      &::before {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        border-radius: 2px 2px 0 0;
+        background: white;
+      }
+      
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+// Secondary navigation with enhanced visual separation
+.nav-secondary {
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray-200);
+  position: relative;
+  
+  // Add subtle visual separator with gradient
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    right: 1rem;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gray-300), transparent);
+    
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 0;
+    padding-top: 0;
+    border-top: none;
+    margin-left: 2rem;
+    padding-left: 2rem;
+    border-left: 1px solid var(--gray-200);
+  }
+  
+  // Wide screen sidebar layout
+  @media (min-width: 1200px) {
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--gray-200);
+    
+    &::before {
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+.nav-link-secondary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  
+  .nav-icon {
+    font-size: 1rem;
+  }
+  
+  &:hover {
+    color: var(--accent-color);
+    background: var(--gray-50);
+  }
+}
+
+// CTA section with prominent styling and visual separation
+.nav-cta-section {
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--gray-100);
+  position: relative;
+  
+  // Add decorative accent line
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-color-dark));
+    border-radius: 1px;
+  }
+  
+  @media (min-width: 768px) and (max-width: 1199px) {
+    margin-left: auto;
+    padding-top: 0;
+    border-top: none;
+    
+    &::before {
+      display: none;
+    }
+  }
+  
+  // Wide screen sidebar layout
+  @media (min-width: 1200px) {
+    margin-top: auto; // Push to bottom of sidebar
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--gray-100);
+    
+    &::before {
+      left: 0;
+      right: 0;
+      width: 100%;
+      transform: none;
+    }
   }
 }
 
 .nav-cta {
-  display: inline-block;
-  background: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-color-dark) 100%);
   color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
-  transition: background 0.2s ease;
-  margin-top: 0.5rem;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(12, 166, 120, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+  }
   
   &:hover {
-    background: var(--accent-color-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(12, 166, 120, 0.4);
+    
+    &::before {
+      left: 100%;
+    }
   }
   
   &:focus {
-    outline: 2px solid white;
+    outline: 3px solid rgba(12, 166, 120, 0.3);
     outline-offset: 2px;
-    background: var(--accent-color-dark);
   }
   
-  @media (min-width: 768px) {
-    margin-top: 0;
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(12, 166, 120, 0.4);
+  }
+  
+  .cta-text {
+    font-weight: 700;
+  }
+  
+  .cta-icon {
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+  }
+  
+  &:hover .cta-icon {
+    transform: translateX(2px);
   }
 }
 
+// Submenu styling
 .nav-group {
   .nav-group-title {
     font-weight: 600;
     color: var(--gray-800);
     margin-bottom: 0.5rem;
     display: block;
+    padding: 0.5rem 1rem;
   }
   
   .nav-submenu {
@@ -131,8 +642,16 @@
 .site-main {
   margin-left: 0;
   padding: 2rem 1rem;
+  flex: 1; /* Allow main content to grow and fill available space */
   
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1199px) {
     padding: 2rem 3rem;
+  }
+  
+  // Wide screen layout with sidebar offset
+  @media (min-width: 1200px) {
+    margin-left: 280px; // Match sidebar width
+    padding: 2rem 3rem;
+    min-height: 100vh;
   }
 }

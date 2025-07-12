@@ -1,0 +1,210 @@
+// Code Monkey Cybersecurity - Custom Typography System
+// Implementing exact typography specifications
+
+// =================================
+// FONT IMPORTS - Google Fonts
+// =================================
+
+// Import Google Fonts as specified
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700&family=Noto+Sans+Mono&display=swap');
+
+// Keep self-hosted Noto Sans for brand titles
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/NotoSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/NotoSans-Bold.ttf') format('truetype');
+}
+
+// =================================
+// FONT FAMILY STACKS - Custom Specification
+// =================================
+
+// Brand title font (Noto Sans for "Code Monkey Cybersecurity")
+$font-family-brand: 'Noto Sans', sans-serif;
+
+// Heading font (Atkinson Hyperlegible)
+$font-family-heading: 'Atkinson Hyperlegible', sans-serif;
+
+// Body text font (Inter)
+$font-family-body: 'Inter', sans-serif;
+
+// Monospace font (Noto Sans Mono)
+$font-family-mono: 'Noto Sans Mono', monospace;
+
+// =================================
+// FONT SIZES - Custom Specification
+// =================================
+
+// Base font size
+$font-size-base: 1rem;       // 16px
+$font-size-sm: 0.875rem;     // 14px
+$font-size-lg: 1.25rem;      // 20px
+$font-size-xl: 1.5rem;       // 24px
+$font-size-2xl: 2rem;        // 32px
+
+// Line height
+$font-line-height: 1.6;
+
+// =================================
+// FONT WEIGHTS - Custom Specification
+// =================================
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// =================================
+// LINE HEIGHTS - Custom Specification
+// =================================
+
+$line-height-heading: 1.25;
+$line-height-body: 1.6;
+
+// =================================
+// CSS CUSTOM PROPERTIES - Custom Specification
+// =================================
+
+:root {
+  // Font families (matching exact specification)
+  --font-brand: #{$font-family-brand};
+  --font-heading: #{$font-family-heading};
+  --font-body: #{$font-family-body};
+  --font-mono: #{$font-family-mono};
+  
+  // Font sizes (matching exact specification)
+  --font-size-base: #{$font-size-base};       /* 16px */
+  --font-size-sm: #{$font-size-sm};           /* 14px */
+  --font-size-lg: #{$font-size-lg};           /* 20px */
+  --font-size-xl: #{$font-size-xl};           /* 24px */
+  --font-size-2xl: #{$font-size-2xl};         /* 32px */
+  --font-line-height: #{$font-line-height};   /* 1.6 */
+  
+  // Legacy compatibility
+  --font-family-primary: #{$font-family-brand};
+  --font-weight-normal: #{$font-weight-normal};
+  --font-weight-medium: #{$font-weight-medium};
+  --font-weight-semibold: #{$font-weight-semibold};
+  --font-weight-bold: #{$font-weight-bold};
+  --line-height-normal: #{$line-height-body};
+  --line-height-tight: #{$line-height-heading};
+}
+
+// =================================
+// BASE TYPOGRAPHY STYLES - Custom Specification
+// =================================
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--font-line-height);
+  color: #1a1a1a;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+// =================================
+// HEADING STYLES - Custom Specification
+// =================================
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #111;
+}
+
+h1 { font-size: var(--font-size-2xl); }
+h2 { font-size: var(--font-size-xl); }
+h3 { font-size: var(--font-size-lg); }
+h4, h5, h6 { font-size: var(--font-size-base); }
+
+// =================================
+// BODY TEXT STYLES - Custom Specification
+// =================================
+
+p, li, blockquote {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  margin-bottom: 1em;
+}
+
+// =================================
+// SPECIALIZED TEXT STYLES - Custom Specification
+// =================================
+
+// Brand text (Code Monkey Cybersecurity - uses Noto Sans)
+.brand-text {
+  font-family: var(--font-brand);
+  font-weight: var(--font-weight-bold);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
+  // Fallback for unsupported browsers
+  @supports not (-webkit-background-clip: text) {
+    color: var(--color-primary);
+  }
+}
+
+// Code and technical text
+code, pre, .code-block {
+  font-family: var(--font-mono);
+  background-color: #f4f4f4;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: var(--font-size-sm);
+  color: #333;
+}
+
+pre {
+  padding: 1em;
+  overflow-x: auto;
+}
+
+// Text formatting
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+// =================================
+// LINK STYLES - Custom Specification
+// =================================
+
+a {
+  color: #005ecb;
+  text-decoration: underline;
+  font-weight: 500;
+  
+  &:hover {
+    color: #003f8a;
+    text-decoration: none;
+  }
+}
+
+// =================================
+// UTILITY CLASSES - Essential Only
+// =================================
+
+// Font family utilities
+.font-brand { font-family: var(--font-brand); }
+.font-heading { font-family: var(--font-heading); }
+.font-body { font-family: var(--font-body); }
+.font-mono { font-family: var(--font-mono); }

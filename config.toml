@@ -107,6 +107,12 @@ name = "Blog"
 url = "/blog/"
 weight = 40
 
+# Secondary navigation menu
+[[menu.secondary]]
+name = "Search"
+url = "/search/"
+weight = 10
+
 # Before menu (appears at top of left sidebar) - removed to avoid duplication
 
 # Resources section

@@ -1,38 +1,95 @@
 {{/* 
-  Simple Hugo Native Navigation
+  Mobile-First Navigation with CSS-Only Hamburger Menu
   - Uses Hugo's built-in menu system
-  - Mobile-first responsive design
-  - No JavaScript required
+  - CSS-only hamburger menu for mobile
+  - Responsive collapse behavior
+  - Mobile-friendly touch targets
 */}}
 
+{{/* Skip Navigation Link for Keyboard Users */}}
+<a href="#main-content" class="skip-navigation" aria-label="Skip to main content">Skip to main content</a>
+
 <nav class="site-navigation" role="navigation" aria-label="Main navigation">
-  {{/* Site Header */}}
+  {{/* Mobile Menu Toggle */}}
+  <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox" aria-label="Toggle mobile menu">
+  
+  {{/* Site Header with Brand and Mobile Toggle */}}
   <div class="nav-header">
     <a href="{{ .Site.BaseURL }}" class="site-brand" aria-label="Code Monkey Cybersecurity homepage">
       <img src="/favicon.png" alt="Code Monkey Cybersecurity logo" class="brand-logo">
       <span class="brand-text">{{ .Site.Title }}</span>
     </a>
+    
+    {{/* Mobile Hamburger Button */}}
+    <label for="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+      <span class="hamburger"></span>
+      <span class="hamburger"></span>
+      <span class="hamburger"></span>
+    </label>
   </div>
 
   {{/* Main Navigation Menu */}}
   <div class="nav-menu" role="menubar">
-    {{ range .Site.Menus.main }}
-      {{ if .HasChildren }}
-        <div class="nav-group" role="none">
-          <span class="nav-group-title" role="menuitem">{{ .Name }}</span>
-          <ul class="nav-submenu" role="menu" aria-label="{{ .Name }} submenu">
-            {{ range .Children }}
-            <li role="none"><a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}" role="menuitem"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
-            {{ end }}
-          </ul>
-        </div>
-      {{ else }}
-        <a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}" role="menuitem"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
+    <div class="nav-primary">
+      {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+          <div class="nav-group" role="none">
+            <span class="nav-group-title" role="menuitem">{{ .Name }}</span>
+            <ul class="nav-submenu" role="menu" aria-label="{{ .Name }} submenu">
+              {{ range .Children }}
+              <li role="none"><a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}" role="menuitem"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+              {{ end }}
+            </ul>
+          </div>
+        {{ else }}
+          <a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}" role="menuitem"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
+        {{ end }}
       {{ end }}
+    </div>
+    
+    {{/* Secondary Navigation */}}
+    {{ if .Site.Menus.secondary }}
+    <div class="nav-secondary">
+      {{ range .Site.Menus.secondary }}
+        <a href="{{ .URL }}" class="nav-link nav-link-secondary" role="menuitem" aria-label="{{ .Name }} our website">
+          <span class="nav-icon">🔍</span>
+          <span class="nav-text">{{ .Name }}</span>
+        </a>
+      {{ end }}
+    </div>
     {{ end }}
     
-    {{/* Additional links */}}
-    <a href="/search/" class="nav-link" role="menuitem" aria-label="Search our website">Search</a>
-    <a href="/offerings/delphi/sign-up/" class="nav-cta" role="menuitem" aria-label="Get started with our cybersecurity services">Get Started</a>
+    {{/* CTA Section */}}
+    <div class="nav-cta-section">
+      <a href="/offerings/delphi/sign-up/" class="nav-cta" role="menuitem" aria-label="Get started with our cybersecurity services">
+        <span class="cta-text">Get Started</span>
+        <span class="cta-icon">→</span>
+      </a>
+    </div>
   </div>
 </nav>
+
+{{/* Minimal JavaScript for sticky navigation enhancement */}}
+<script>
+(function() {
+  const nav = document.querySelector('.site-navigation');
+  if (!nav) return;
+  
+  let ticking = false;
+  
+  function updateNavigation() {
+    const scrolled = window.scrollY > 10;
+    nav.classList.toggle('scrolled', scrolled);
+    ticking = false;
+  }
+  
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(updateNavigation);
+      ticking = true;
+    }
+  }
+  
+  window.addEventListener('scroll', requestTick, { passive: true });
+})();
+</script>

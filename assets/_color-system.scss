@@ -1,0 +1,296 @@
+// Code Monkey Cybersecurity - Custom Brand Color System
+// Using exact brand color palette as specified
+
+// =================================
+// BRAND COLORS - Primary Identity
+// =================================
+
+// Main brand color - Teal 7
+$primary-main: #0ca678; // Main brand color (teal 7)
+
+// Generate teal scale around main brand color
+$primary-50: #f0fdfa;
+$primary-100: #ccfbf1; 
+$primary-200: #99f6e4;
+$primary-300: #5eead4;
+$primary-400: #2dd4bf;
+$primary-500: #0ca678; // Main brand color
+$primary-600: #005c46; // Keyboard color (darker teal)
+$primary-700: #004d3a;
+$primary-800: #003d2e;
+$primary-900: #002a1e; // Letters color (darkest)
+$primary-950: #001f17;
+
+// Secondary brand colors - Exact hex values
+$brand-green: #51a14f;
+$brand-purple: #a625a4;
+$brand-blue: #4078f2;
+$brand-gold: #b66b02;
+
+// Orange variations
+$brand-orange-logo: #d77350; // Logo orange
+$brand-orange-alt: #da7756;  // Yet another orange
+
+// Error/Alert color
+$brand-alert-red: #e45549;
+
+// =================================
+// SEMANTIC COLORS - Using Brand Colors
+// =================================
+
+// Success colors - Using brand green
+$success-50: #f0fdf4;
+$success-100: #dcfce7;
+$success-500: #51a14f; // Brand green
+$success-600: #459a42;
+$success-700: #3a8036;
+
+// Warning colors - Using brand gold
+$warning-50: #fffbeb;
+$warning-100: #fef3c7;
+$warning-500: #b66b02; // Brand gold
+$warning-600: #a05e02;
+$warning-700: #8a5002;
+
+// Error colors - Using brand alert red
+$error-50: #fef2f2;
+$error-100: #fee2e2;
+$error-500: #e45549; // Brand alert red
+$error-600: #d73e33;
+$error-700: #c1342a;
+
+// Info colors - Using brand blue
+$info-50: #eff6ff;
+$info-100: #dbeafe;
+$info-500: #4078f2; // Brand blue
+$info-600: #3666e0;
+$info-700: #2d55ce;
+
+// =================================
+// NEUTRAL COLORS - Custom Brand Grays
+// =================================
+
+// Using exact brand color specifications
+$neutral-0: #ffffff;
+$neutral-50: #fdfbf9;     // Light background
+$neutral-alt-50: #faf9f5;  // Alternative light background
+$neutral-100: #f0eee6;    // Website background
+$neutral-200: #e3dacc;    // Website section background
+$neutral-300: #cdc6b9;    // Button type 2
+$neutral-400: #b9b2a7;    // Button type 1
+$neutral-500: #a0a1a6;    // Brand gray
+$neutral-600: #393a42;    // Muted text
+$neutral-700: #141413;    // Primary text (dark)
+$neutral-800: #002a1e;    // Letters color (darkest text)
+$neutral-900: #000000;
+$neutral-950: #000000;
+
+// =================================
+// BACKGROUND COLORS - Custom Surfaces
+// =================================
+
+// Light theme backgrounds using brand colors
+$bg-primary: $neutral-50;           // Main content (fdfbf9)
+$bg-alt-primary: $neutral-alt-50;   // Alternative main (faf9f5)
+$bg-website: $neutral-100;          // Website background (f0eee6)
+$bg-section: $neutral-200;          // Section background (e3dacc)
+$bg-mint-section: #bcd1ca;         // Mint website section
+$bg-blue-section: #cbcadb;         // Blue website section
+$bg-highlight: #fff8d0;            // Highlight background
+$bg-accent: $primary-50;           // Accent backgrounds
+
+// Button backgrounds
+$bg-button-primary: $neutral-400;   // Button type 1 (b9b2a7)
+$bg-button-secondary: $neutral-300; // Button type 2 (cdc6b9)
+
+// Dark theme backgrounds (for future implementation)
+$bg-dark-primary: $neutral-800;
+$bg-dark-secondary: $neutral-700;
+$bg-dark-tertiary: $neutral-600;
+
+// =================================
+// TEXT COLORS - Custom Typography
+// =================================
+
+$text-primary: $neutral-700;       // Main content (141413)
+$text-secondary: $neutral-600;     // Secondary content (393a42)
+$text-tertiary: $neutral-500;      // Muted content (a0a1a6)
+$text-letters: $neutral-800;       // Letters color (002a1e)
+$text-inverse: $neutral-0;         // Text on dark backgrounds
+$text-disabled: $neutral-500;      // Disabled text
+
+// Link colors using brand colors
+$link-primary: $primary-500;       // Main brand teal (0ca678)
+$link-hover: $primary-600;         // Darker teal (005c46)
+$link-visited: $brand-purple;      // Brand purple (a625a4)
+
+// =================================
+// CYBERSECURITY SPECIFIC COLORS
+// =================================
+
+// Security status colors using brand palette
+$security-critical: $brand-alert-red;  // Critical threats (e45549)
+$security-high: $brand-orange-alt;     // High priority (da7756) 
+$security-medium: $brand-gold;         // Medium priority (b66b02)
+$security-low: $brand-green;           // Low priority (51a14f)
+$security-safe: $primary-500;          // Safe/secure (0ca678)
+
+// Trust indicators using brand colors
+$trust-verified: $brand-green;         // Verified/trusted (51a14f)
+$trust-warning: $brand-gold;           // Requires attention (b66b02)
+$trust-unknown: $neutral-500;          // Unknown status (a0a1a6)
+
+// Define missing variables for compatibility
+$purple-600: $brand-purple;            // Use brand purple
+$orange-500: $brand-orange-logo;       // Use brand orange
+
+// =================================
+// CSS CUSTOM PROPERTIES
+// =================================
+
+:root {
+  // Brand colors
+  --color-primary: #{$primary-500};
+  --color-primary-light: #{$primary-400};
+  --color-primary-dark: #{$primary-600};
+  --color-primary-50: #{$primary-50};
+  --color-primary-100: #{$primary-100};
+  
+  // Secondary brand colors (exact hex values)
+  --color-green: #{$brand-green};         // 51a14f
+  --color-purple: #{$brand-purple};       // a625a4
+  --color-blue: #{$brand-blue};           // 4078f2
+  --color-gold: #{$brand-gold};           // b66b02
+  --color-orange-logo: #{$brand-orange-logo}; // d77350
+  --color-orange-alt: #{$brand-orange-alt};   // da7756
+  --color-alert-red: #{$brand-alert-red};     // e45549
+  
+  // Semantic colors
+  --color-success: #{$success-500};
+  --color-warning: #{$warning-500};
+  --color-error: #{$error-500};
+  --color-info: #{$info-500};
+  
+  // Neutral colors (custom brand grays)
+  --color-neutral-0: #{$neutral-0};        // ffffff
+  --color-neutral-50: #{$neutral-50};      // fdfbf9
+  --color-neutral-alt-50: #{$neutral-alt-50}; // faf9f5
+  --color-neutral-100: #{$neutral-100};    // f0eee6
+  --color-neutral-200: #{$neutral-200};    // e3dacc
+  --color-neutral-300: #{$neutral-300};    // cdc6b9
+  --color-neutral-400: #{$neutral-400};    // b9b2a7
+  --color-neutral-500: #{$neutral-500};    // a0a1a6
+  --color-neutral-600: #{$neutral-600};    // 393a42
+  --color-neutral-700: #{$neutral-700};    // 141413
+  --color-neutral-800: #{$neutral-800};    // 002a1e
+  
+  // Background colors (custom surfaces)
+  --bg-primary: #{$bg-primary};            // fdfbf9
+  --bg-alt-primary: #{$bg-alt-primary};    // faf9f5
+  --bg-website: #{$bg-website};            // f0eee6
+  --bg-section: #{$bg-section};            // e3dacc
+  --bg-mint-section: #{$bg-mint-section};  // bcd1ca
+  --bg-blue-section: #{$bg-blue-section};  // cbcadb
+  --bg-highlight: #{$bg-highlight};        // fff8d0
+  --bg-accent: #{$bg-accent};
+  --bg-button-primary: #{$bg-button-primary};   // b9b2a7
+  --bg-button-secondary: #{$bg-button-secondary}; // cdc6b9
+  
+  // Text colors (custom typography)
+  --text-primary: #{$text-primary};      // 141413
+  --text-secondary: #{$text-secondary};  // 393a42
+  --text-tertiary: #{$text-tertiary};    // a0a1a6
+  --text-letters: #{$text-letters};      // 002a1e
+  --text-inverse: #{$text-inverse};      // ffffff
+  --text-disabled: #{$text-disabled};    // a0a1a6
+  
+  // Link colors (using brand colors)
+  --link-primary: #{$link-primary};      // 0ca678
+  --link-hover: #{$link-hover};          // 005c46
+  --link-visited: #{$link-visited};      // a625a4
+  
+  // Security colors (using brand palette)
+  --security-critical: #{$security-critical}; // e45549
+  --security-high: #{$security-high};         // da7756
+  --security-medium: #{$security-medium};     // b66b02
+  --security-low: #{$security-low};           // 51a14f
+  --security-safe: #{$security-safe};         // 0ca678
+  
+  // Trust colors (using brand palette)
+  --trust-verified: #{$trust-verified};       // 51a14f
+  --trust-warning: #{$trust-warning};         // b66b02
+  --trust-unknown: #{$trust-unknown};         // a0a1a6
+  
+  // Legacy variables for backward compatibility
+  --accent-color: #{$primary-500};           // 0ca678
+  --accent-color-light: #{$primary-400};     // 2dd4bf
+  --accent-color-dark: #{$primary-600};      // 005c46
+  --body-background: #{$bg-website};         // f0eee6 (website background)
+  
+  // Legacy gray mappings to new neutral system
+  --gray-50: #{$neutral-50};       // fdfbf9
+  --gray-100: #{$neutral-100};     // f0eee6
+  --gray-200: #{$neutral-200};     // e3dacc
+  --gray-300: #{$neutral-300};     // cdc6b9
+  --gray-400: #{$neutral-400};     // b9b2a7
+  --gray-500: #{$neutral-500};     // a0a1a6
+  --gray-600: #{$neutral-600};     // 393a42
+  --gray-700: #{$neutral-700};     // 141413
+  --gray-800: #{$neutral-800};     // 002a1e
+  --gray-900: #{$neutral-700};     // 141413 (mapped to primary text)
+}
+
+// =================================
+// DARK MODE SUPPORT
+// =================================
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #{$bg-dark-primary};
+    --bg-secondary: #{$bg-dark-secondary};
+    --bg-tertiary: #{$bg-dark-tertiary};
+    --text-primary: #{$neutral-100};
+    --text-secondary: #{$neutral-300};
+    --text-tertiary: #{$neutral-400};
+  }
+}
+
+// Dark mode class override
+.dark-mode {
+  --bg-primary: #{$bg-dark-primary};
+  --bg-secondary: #{$bg-dark-secondary};
+  --bg-tertiary: #{$bg-dark-tertiary};
+  --text-primary: #{$neutral-100};
+  --text-secondary: #{$neutral-300};
+  --text-tertiary: #{$neutral-400};
+}
+
+// =================================
+// UTILITY CLASSES
+// =================================
+
+// Background utilities
+.bg-primary { background-color: var(--bg-primary); }
+.bg-secondary { background-color: var(--bg-secondary); }
+.bg-tertiary { background-color: var(--bg-tertiary); }
+.bg-accent { background-color: var(--bg-accent); }
+
+// Text color utilities
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-tertiary { color: var(--text-tertiary); }
+.text-success { color: var(--color-success); }
+.text-warning { color: var(--color-warning); }
+.text-error { color: var(--color-error); }
+
+// Security status utilities
+.status-critical { color: var(--security-critical); }
+.status-high { color: var(--security-high); }
+.status-medium { color: var(--security-medium); }
+.status-low { color: var(--security-low); }
+.status-safe { color: var(--security-safe); }
+
+// Trust indicator utilities
+.trust-verified { color: var(--trust-verified); }
+.trust-warning { color: var(--trust-warning); }
+.trust-unknown { color: var(--trust-unknown); }
