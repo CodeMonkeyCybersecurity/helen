@@ -65,7 +65,7 @@ Your custom brand colors have been implemented exactly as specified:
 | **Low** | Green | `#51a14f` | `--security-low` |
 | **Safe** | Teal | `#0ca678` | `--security-safe` |
 
-## 🛡️ Trust Indicators
+##  Trust Indicators
 
 | Status | Color | Hex Code | CSS Variable |
 |--------|-------|----------|--------------|

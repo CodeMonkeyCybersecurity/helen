@@ -20,7 +20,7 @@ Usage: {{ partial "recent-posts.html" . }}
         {{ range $recentPosts }}
           <li class="relative py-4 hover:bg-slate-50 transition-colors group">
             <h3 class="font-medium text-slate-900 group-hover:text-brand-teal transition-colors">
-              {{ .Title | replaceRE "^👁️ " "" | replaceRE "^💡 " "" | replaceRE "^ " "" | replaceRE "^🎯 " "" | replaceRE "^🚀 " "" | replaceRE "^✨ " "" | replaceRE "^🛡️ " "" }}
+              {{ .Title | replaceRE "^👁️ " "" | replaceRE "^💡 " "" | replaceRE "^ " "" | replaceRE "^🎯 " "" | replaceRE "^🚀 " "" | replaceRE "^✨ " "" | replaceRE "^ " "" }}
             </h3>
             <div class="flex justify-between text-sm text-slate-500 mt-1">
               {{ with .Params.category }}

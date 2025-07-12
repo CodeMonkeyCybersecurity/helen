@@ -6,8 +6,6 @@
   - Mobile-friendly touch targets
 */}}
 
-{{/* Skip Navigation Link for Keyboard Users */}}
-<a href="#main-content" class="skip-navigation" aria-label="Skip to main content">Skip to main content</a>
 
 <nav class="site-navigation" role="navigation" aria-label="Main navigation">
   {{/* Mobile Menu Toggle */}}
@@ -30,6 +28,26 @@
 
   {{/* Main Navigation Menu */}}
   <div class="nav-menu" role="menubar">
+    {{/* CTA Section - Moved to top */}}
+    <div class="nav-cta-section">
+      <a href="/offerings/delphi/sign-up/" class="nav-cta" role="menuitem" aria-label="Get started with our cybersecurity services">
+        <span class="cta-text">Get Started</span>
+        <span class="cta-icon">→</span>
+      </a>
+    </div>
+    
+    {{/* Secondary Navigation - Search */}}
+    {{ if .Site.Menus.secondary }}
+    <div class="nav-secondary">
+      {{ range .Site.Menus.secondary }}
+        <a href="{{ .URL }}" class="nav-link nav-link-secondary" role="menuitem" aria-label="{{ .Name }} our website">
+          <span class="nav-icon"></span>
+          <span class="nav-text">{{ .Name }}</span>
+        </a>
+      {{ end }}
+    </div>
+    {{ end }}
+    
     <div class="nav-primary">
       {{ range .Site.Menus.main }}
         {{ if .HasChildren }}
@@ -45,26 +63,6 @@
           <a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}" role="menuitem"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
         {{ end }}
       {{ end }}
-    </div>
-    
-    {{/* Secondary Navigation */}}
-    {{ if .Site.Menus.secondary }}
-    <div class="nav-secondary">
-      {{ range .Site.Menus.secondary }}
-        <a href="{{ .URL }}" class="nav-link nav-link-secondary" role="menuitem" aria-label="{{ .Name }} our website">
-          <span class="nav-icon">🔍</span>
-          <span class="nav-text">{{ .Name }}</span>
-        </a>
-      {{ end }}
-    </div>
-    {{ end }}
-    
-    {{/* CTA Section */}}
-    <div class="nav-cta-section">
-      <a href="/offerings/delphi/sign-up/" class="nav-cta" role="menuitem" aria-label="Get started with our cybersecurity services">
-        <span class="cta-text">Get Started</span>
-        <span class="cta-icon">→</span>
-      </a>
     </div>
   </div>
 </nav>

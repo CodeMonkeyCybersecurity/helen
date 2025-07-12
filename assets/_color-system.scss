@@ -96,7 +96,7 @@ $neutral-950: #000000;
 // Light theme backgrounds using brand colors
 $bg-primary: $neutral-50;           // Main content (fdfbf9)
 $bg-alt-primary: $neutral-alt-50;   // Alternative main (faf9f5)
-$bg-website: $neutral-100;          // Website background (f0eee6)
+$bg-website: #e3dacc;          // Website background
 $bg-section: $neutral-200;          // Section background (e3dacc)
 $bg-mint-section: #bcd1ca;         // Mint website section
 $bg-blue-section: #cbcadb;         // Blue website section
@@ -119,9 +119,9 @@ $bg-secondary: #fdfbf9;             // Light background for cards/panels (neutra
 // TEXT COLORS - Custom Typography
 // =================================
 
-$text-primary: $neutral-700;       // Main content (141413)
-$text-secondary: $neutral-600;     // Secondary content (393a42)
-$text-tertiary: $neutral-500;      // Muted content (a0a1a6)
+$text-primary: #141413;       // Main content
+$text-secondary: #393a42;     // Secondary content
+$text-tertiary: #a0a1a6;      // Muted content
 $text-letters: $neutral-800;       // Letters color (002a1e)
 $text-inverse: $neutral-0;         // Text on dark backgrounds
 $text-disabled: $neutral-500;      // Disabled text
@@ -228,7 +228,7 @@ $trust-unknown: $neutral-500;          // Unknown status (a0a1a6)
   --accent-color: #{$primary-500};           // 0ca678
   --accent-color-light: #{$primary-400};     // 2dd4bf
   --accent-color-dark: #{$primary-600};      // 005c46
-  --body-background: #{$bg-website};         // f0eee6 (website background)
+  --body-background: #{$bg-website};         // e3dacc (website background)
   
   // Legacy gray mappings to new neutral system
   --gray-50: #{$neutral-50};       // fdfbf9

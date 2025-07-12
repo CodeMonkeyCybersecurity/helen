@@ -234,8 +234,8 @@ body {
   font-family: var(--font-body);
   font-size: var(--font-size-base);
   line-height: var(--font-line-height);
-  color: #1a1a1a;
-  background-color: #fff;
+  color: var(--text-primary);
+  background-color: var(--bg-website);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -249,7 +249,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
-  color: #111;
+  color: #393a42;
 }
 
 h1 { font-size: var(--font-size-2xl); }
@@ -275,10 +275,7 @@ p, li, blockquote {
 .brand-text {
   font-family: var(--font-brand);
   font-weight: var(--font-weight-bold);
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-primary);
   
   // Fallback for unsupported browsers
   @supports not (-webkit-background-clip: text) {
@@ -315,12 +312,12 @@ em {
 // =================================
 
 a {
-  color: #005ecb;
+  color: var(--link-primary);
   text-decoration: underline;
   font-weight: 500;
   
   &:hover {
-    color: #003f8a;
+    color: var(--link-hover);
     text-decoration: none;
   }
 }

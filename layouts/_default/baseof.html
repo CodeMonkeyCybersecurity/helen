@@ -117,14 +117,12 @@
 </head>
 
 <body class="site">
-  {{/* Skip Navigation for Accessibility */}}
-  <a href="#main-content" class="skip-link">Skip to main content</a>
   
   {{/* Site Header with Navigation */}}
   {{ partial "navigation/simple-hugo" . }}
   
   {{/* Main Content Area */}}
-  <main id="main-content" class="site-main" role="main">
+  <main class="site-main" role="main">
     {{ block "main" . }}{{ end }}
   </main>
   

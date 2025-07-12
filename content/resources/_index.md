@@ -11,7 +11,7 @@ Welcome to the Code Monkey Cybersecurity resource center.
 ## Platform Services
 
 {{< promo-tiles columns="3" >}}
-{{< promo-tile title="Delphi Notify" url="/offerings/delphi/" icon="🛡️" color="teal" badge="XDR Platform" >}}
+{{< promo-tile title="Delphi Notify" url="/offerings/delphi/" icon="" color="teal" badge="XDR Platform" >}}
 Advanced threat detection and response platform designed for small businesses. Real-time monitoring with human-curated alerts.
 {{< /promo-tile >}}
 

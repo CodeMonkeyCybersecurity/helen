@@ -1,33 +1,6 @@
 // Mobile-First Navigation with CSS-Only Hamburger Menu
 // Responsive design with enhanced mobile experience
 
-// Skip navigation for keyboard accessibility - hidden by default
-.skip-navigation {
-  position: absolute;
-  left: -9999px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  
-  &:focus,
-  &:focus-visible {
-    position: fixed;
-    left: 1rem;
-    top: 1rem;
-    width: auto;
-    height: auto;
-    z-index: 1001;
-    background: var(--color-primary);
-    color: white;
-    padding: 0.75rem 1rem;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    outline: 3px solid rgba(255,255,255,0.8);
-    outline-offset: 2px;
-  }
-}
 
 // Enhanced focus styles for all interactive elements
 *:focus-visible {
@@ -50,7 +23,7 @@
 // Navigation container with micro-interactions and responsive layout
 .site-navigation {
   background: white;
-  border-bottom: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--color-neutral-200);
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
@@ -60,8 +33,7 @@
   // Enhanced shadow when scrolled (sticky)
   &.scrolled {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.95);
+    background: white;
   }
   
   // Subtle hover enhancement for entire nav
@@ -77,7 +49,7 @@
     width: 280px;
     height: 100vh;
     border-bottom: none;
-    border-right: 1px solid var(--gray-200);
+    border-right: 1px solid var(--color-neutral-200);
     box-shadow: 2px 0 8px rgba(0,0,0,0.1);
     overflow-y: auto;
     
@@ -107,7 +79,7 @@
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
-  color: var(--gray-900);
+  color: var(--color-neutral-700);
   font-weight: 700;
   font-size: 1.25rem;
   transition: transform 0.2s ease;
@@ -137,7 +109,7 @@
     position: absolute;
     inset: -2px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    background: var(--color-primary);
     opacity: 0;
     z-index: -1;
     transition: opacity 0.3s ease;
@@ -157,10 +129,7 @@
 
 .brand-text {
   font-family: var(--font-brand); // Noto Sans for brand
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-primary);
   font-weight: 700;
   letter-spacing: -0.025em;
   position: relative;
@@ -192,7 +161,7 @@
   z-index: 102;
   
   &:hover {
-    background-color: var(--gray-100);
+    background-color: var(--color-neutral-100);
     transform: scale(1.05);
   }
   
@@ -200,7 +169,7 @@
   &:focus-within {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
-    background-color: var(--gray-100);
+    background-color: var(--color-neutral-100);
   }
   
   @media (min-width: 1024px) {
@@ -213,7 +182,7 @@
   display: block;
   height: 3px;
   width: 20px;
-  background: var(--gray-700);
+  background: var(--color-neutral-700);
   border-radius: 2px;
   transition: all 0.3s ease;
   transform-origin: center;
@@ -259,10 +228,10 @@
 .mobile-menu-checkbox:checked ~ .nav-menu {
   max-height: 600px; // Increased for better spacing
   padding: 1.5rem 1rem 2rem; // Enhanced mobile padding
-  border-top: 1px solid var(--gray-200);
+  border-top: 1px solid var(--color-neutral-200);
   
   // Stagger animation for menu items (mobile only)
-  @media (max-width: 767px) {
+  @media (max-width: 1023px) {
     .nav-primary .nav-link {
       animation: slideInUp 0.3s ease forwards;
       opacity: 0;
@@ -309,7 +278,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem; // Slightly increased mobile gap
-  margin-bottom: 2rem; // Better section separation
+  flex: 1; // Take remaining space
   
   // Desktop sidebar layout
   @media (min-width: 1024px) {
@@ -324,7 +293,7 @@
 .nav-link {
   display: block;
   padding: 0.75rem 1rem;
-  color: var(--gray-700);
+  color: var(--color-neutral-700);
   text-decoration: none;
   font-weight: 500;
   border-radius: 8px;
@@ -349,23 +318,23 @@
   }
   
   &:hover {
-    background: var(--gray-50);
-    color: var(--color-primary);
-    transform: translateX(4px);
+    text-decoration: underline;
+    text-decoration-color: var(--color-orange-logo);
+    text-underline-offset: 2px;
   }
   
   &:focus {
     outline: 2px solid var(--color-primary);
     outline-offset: 2px;
-    background: var(--gray-50);
+    background: var(--color-neutral-50);
     color: var(--color-primary);
   }
   
   &.active {
-    background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+    background: #d77350;
     color: white;
     font-weight: 600;
-    box-shadow: 0 2px 4px rgba(12, 166, 120, 0.3);
+    box-shadow: 0 2px 4px rgba(215, 115, 80, 0.3);
     position: relative;
     
     // Enhanced active indicator with progress bar
@@ -397,9 +366,9 @@
     padding: 0.75rem 1.25rem;
     
     &:hover {
-      transform: translateX(4px);
-      background: var(--bg-accent);
-      color: var(--color-primary);
+      text-decoration: underline;
+      text-decoration-color: var(--color-orange-logo);
+      text-underline-offset: 2px;
     }
     
     &.active {
@@ -424,8 +393,8 @@
 // Secondary navigation with enhanced visual separation
 .nav-secondary {
   margin-bottom: 1.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--gray-200);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-neutral-200);
   position: relative;
   
   // Add subtle visual separator with gradient
@@ -436,7 +405,7 @@
     left: 1rem;
     right: 1rem;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gray-300), transparent);
+    background: var(--color-neutral-300);
     
     @media (min-width: 1024px) {
       display: none;
@@ -447,7 +416,7 @@
   @media (min-width: 1024px) {
     margin-bottom: 1.5rem;
     padding-top: 1rem;
-    border-top: 1px solid var(--gray-200);
+    border-top: 1px solid var(--color-neutral-200);
     
     &::before {
       left: 0;
@@ -460,7 +429,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--gray-600);
+  color: var(--color-neutral-600);
   font-size: 0.9rem;
   
   .nav-icon {
@@ -469,14 +438,14 @@
   
   &:hover {
     color: var(--color-primary);
-    background: var(--gray-50);
+    background: var(--color-neutral-50);
   }
 }
 
 // CTA section with prominent styling and visual separation
 .nav-cta-section {
   padding-top: 1.5rem;
-  border-top: 2px solid var(--gray-100);
+  border-top: 2px solid var(--color-neutral-100);
   position: relative;
   
   // Add decorative accent line
@@ -488,15 +457,15 @@
     transform: translateX(-50%);
     width: 60px;
     height: 2px;
-    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-dark));
+    background: var(--color-primary);
     border-radius: 1px;
   }
   
   // Desktop sidebar layout
   @media (min-width: 1024px) {
-    margin-top: auto; // Push to bottom of sidebar
-    padding-top: 1.5rem;
-    border-top: 2px solid var(--gray-100);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--color-neutral-100);
     
     &::before {
       left: 0;
@@ -512,7 +481,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  background: var(--color-primary);
   color: white;
   padding: 1rem 1.5rem;
   border-radius: 12px;
@@ -531,7 +500,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    background: rgba(255,255,255,0.2);
     transition: left 0.5s ease;
   }
   
@@ -572,7 +541,7 @@
 .nav-group {
   .nav-group-title {
     font-weight: 600;
-    color: var(--gray-800);
+    color: var(--color-neutral-800);
     margin-bottom: 0.5rem;
     display: block;
     padding: 0.5rem 1rem;
@@ -598,10 +567,13 @@
   margin-left: 0;
   padding: 2rem 1rem;
   flex: 1; /* Allow main content to grow and fill available space */
+  width: 100%;
+  transition: all 0.3s ease;
   
   // Desktop layout with sidebar offset
   @media (min-width: 1024px) {
     margin-left: 280px; // Match sidebar width
+    width: calc(100% - 280px); // Adjust width to account for sidebar
     padding: 2rem 3rem;
     min-height: 100vh;
   }

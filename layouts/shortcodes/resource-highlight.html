@@ -23,11 +23,11 @@ Usage: {{< resource-highlight title="Title" type="guide" time="5 min" difficulty
     <div class="resource-highlight-meta">
       <span class="resource-type type-{{ $type }}">{{ $type | title }}</span>
       {{ if $time }}
-      <span class="resource-time">⏱️ {{ $time }}</span>
+      <span class="resource-time"> {{ $time }}</span>
       {{ end }}
       <span class="resource-difficulty difficulty-{{ $difficulty }}">{{ $difficulty | title }}</span>
       {{ if $featured }}
-      <span class="resource-featured">⭐ Featured</span>
+      <span class="resource-featured"> Featured</span>
       {{ end }}
     </div>
   </div>
