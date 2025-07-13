@@ -9,7 +9,7 @@ title: "Stop Getting Scary Security Alerts You Don't Understand"
 **For small business owners who can't afford full-time IT teams but need to keep customer data safe.**
 
 {{% hint info %}}
-{{< button href="#demo" >}}See How It Works{{< /button >}}
+{{< btn href="#demo" style="primary" >}}See How It Works{{< /btn >}}
 {{% /hint %}}
 
 

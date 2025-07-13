@@ -31,6 +31,6 @@ Part of Code Monkey Technologies
 
 Trust, but verify:
 
-{{< button href="/pub_keys/publickey.cybermonkey.net.au-e3f0434f633b9745e69858add19e08d1ec7a6f2f.asc" >}}Download{{< /button >}}
+{{< btn href="/pub_keys/publickey.cybermonkey.net.au-e3f0434f633b9745e69858add19e08d1ec7a6f2f.asc" style="primary" >}}Download{{< /btn >}}
 
-{{< button href="/pub_keys/publickey.cybermonkey.net.au-e3f0434f633b9745e69858add19e08d1ec7a6f2f.txt" >}}View{{< /button >}}
+{{< btn href="/pub_keys/publickey.cybermonkey.net.au-e3f0434f633b9745e69858add19e08d1ec7a6f2f.txt" style="primary" >}}View{{< /btn >}}

@@ -212,30 +212,64 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
   margin-bottom: 1.5rem;
 }
 
-// CTA Button
+// ========================================
+// CTA BUTTON - ORIGINAL STYLES RESTORED
+// ========================================
+
 .nav-cta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
+  // Original nav-cta styling restored
+  display: block;
+  padding: 0.75rem 1rem;
   background: $nav-cta-bg;
   color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
+  border-radius: 6px;
   transition: all $nav-transition-speed $nav-transition-easing;
+  position: relative;
   
-  // Universal hover underline
-  @include hover-underline();
-  
+  // Original hover behavior
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: darken($nav-cta-bg, 10%);
+    color: white;
   }
   
+  // Active state with teal background (not orange like other nav items)
   &.active {
-    background: $nav-active-bg;
+    background: darken($nav-cta-bg, 15%);
+    color: white;
+    font-weight: 600;
+    
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  
+  // Focus state consistent with other nav links
+  &:focus-visible {
+    outline: 2px solid $nav-focus-color;
+    outline-offset: 2px;
+  }
+  
+  // Responsive sizing
+  @media (min-width: 768px) {
+    padding: 0.75rem 1.5rem;
+  }
+  
+  @media (min-width: 1024px) {
+    width: 100%; // Full width in desktop sidebar
+  }
+  
+  // Text and icon sizing
+  .cta-text {
+    font-size: 1rem;
+    line-height: 1;
+  }
+  
+  .cta-icon {
+    font-size: 1.2rem;
+    line-height: 1;
+    margin-left: 0.5rem;
   }
 }
 
@@ -271,7 +305,7 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
 // NAVIGATION LINKS
 // ========================================
 
-// Base link styles
+// Base link styles - ORIGINAL STYLES RESTORED
 .nav-link,
 .nav-link-parent,
 .nav-link-child {
@@ -284,26 +318,14 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
   transition: all $nav-transition-speed $nav-transition-easing;
   position: relative;
   
-  // Universal hover underline animation
-  @include hover-underline();
-  
-  // Active state - red background
+  // Active state - red background (ORIGINAL)
   &.active {
     background: $nav-active-bg;
     color: $nav-active-text;
     font-weight: 600;
     
-    // Disable underline animation on active items
-    &::after {
-      display: none;
-    }
-    
     &:hover {
       text-decoration: none;
-      
-      &::after {
-        display: none;
-      }
     }
   }
   
@@ -353,22 +375,33 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
     margin: 0;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
     
     li {
       list-style: none;
     }
   }
   
-  // CSS-only dropdown using checkbox (click-only)
+  // CSS-only dropdown using checkbox (stays open until clicked again)
   .dropdown-checkbox:checked ~ .nav-submenu {
     max-height: 400px;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+    opacity: 1;
+    visibility: visible;
   }
   
   .dropdown-checkbox:checked ~ .nav-link-parent .dropdown-arrow {
     transform: rotate(180deg);
+  }
+  
+  // Keep dropdown open when hovering over submenu items
+  .nav-submenu:hover {
+    max-height: 400px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 }
 

@@ -17,7 +17,7 @@ Log in to access your Delphi Notify security dashboard, alerts, and account mana
 
 Access your personalized security monitoring dashboard:
 
-{{< button href="https://delphi.cybermonkey.net.au" >}}Login to Delphi Notify{{< /button >}}
+{{< btn href="https://delphi.cybermonkey.net.au" style="primary" >}}Login to Delphi Notify{{< /btn >}}
 
 ### Customer Support
 

@@ -192,7 +192,7 @@ A: We provide immediate incident response support to minimize damage and use it 
 Don't wait until you're part of the statistics. 
 
 {{% hint info %}}
-{{< button href="mailto:main@cybermonkey.net.au?subject=Scam Training Consultation" >}}Book Your Free Consultation{{< /button >}}
+{{< btn href="mailto:main@cybermonkey.net.au?subject=Scam Training Consultation" style="primary" >}}Book Your Free Consultation{{< /btn >}}
 {{% /hint %}}
 
 ---

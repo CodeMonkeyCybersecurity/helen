@@ -17,7 +17,7 @@ Delphi Notify provides expert-reviewed security alerts in plain English. Get cle
 {{% hint info %}}
 **Start Your Free Trial Today**
 
-{{< button href="https://hera.cybermonkey.dev" aria-label="Start your free 30-day trial of Delphi Notify security monitoring" >}}Get Started Now - Free for 30 Days{{< /button >}}
+{{< btn href="https://hera.cybermonkey.dev" style="primary" aria-label="Start your free 30-day trial of Delphi Notify security monitoring" >}}Get Started Now - Free for 30 Days{{< /btn >}}
 
 **Benefits of your free trial:**
 No credit card required

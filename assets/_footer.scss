@@ -1,0 +1,235 @@
+// ========================================
+// FOOTER COMPONENT STYLES
+// ========================================
+
+.site-footer {
+  background: $neutral-50;
+  border-top: 1px solid $neutral-200;
+  padding: 3rem 0 2rem 0;
+  color: $neutral-700;
+  
+  @media (max-width: $breakpoint-mobile-max) {
+    padding: 2rem 0 1.5rem 0;
+  }
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  
+  @media (min-width: $breakpoint-desktop-min) {
+    padding: 0 2rem;
+  }
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer-section {
+  .footer-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $neutral-900;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-heading {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $neutral-800;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-description {
+    color: $neutral-600;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.footer-contact {
+  p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    
+    a {
+      color: $brand-primary;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  li {
+    margin-bottom: 0.5rem;
+    
+    a {
+      color: $neutral-600;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s ease;
+      
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+  }
+}
+
+// ========================================
+// SOCIAL ICONS - PROPERLY SIZED (ORIGINAL STYLES RESTORED)
+// ========================================
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;         // Fixed size container
+  height: 40px;        // Fixed size container
+  background: $neutral-100;
+  border-radius: 8px;
+  color: $neutral-600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  
+  // Original hover behavior (will also get purple underline from universal hover)
+  &:hover {
+    background: $brand-primary;
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  // Properly sized SVG icons
+  .icon {
+    width: 20px;       // Consistent icon size
+    height: 20px;      // Consistent icon size
+    flex-shrink: 0;    // Prevent shrinking
+  }
+  
+  // Brand-specific hover colors (original)
+  &.github:hover {
+    background: #333;
+  }
+  
+  &.facebook:hover {
+    background: #1877f2;
+  }
+  
+  &.linkedin:hover {
+    background: #0a66c2;
+  }
+  
+  &.instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  }
+  
+  &.email:hover {
+    background: $brand-primary;
+  }
+}
+
+.footer-location {
+  p {
+    font-size: 0.9rem;
+    color: $neutral-600;
+    margin-bottom: 0.25rem;
+    
+    &:first-child {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.footer-bottom {
+  border-top: 1px solid $neutral-200;
+  padding-top: 2rem;
+  
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer-legal {
+  text-align: center;
+  
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    color: $neutral-600;
+    margin-bottom: 1rem;
+    
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.footer-legal-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+  }
+  
+  a {
+    font-size: 0.85rem;
+    color: $neutral-500;
+    text-decoration: none;
+    
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+}
+
+.footer-certifications {
+  text-align: center;
+  margin-top: 1rem;
+  
+  @media (min-width: 768px) {
+    text-align: right;
+    margin-top: 0;
+  }
+  
+  .footer-certification {
+    font-size: 0.8rem;
+    color: $neutral-500;
+    margin: 0;
+  }
+}

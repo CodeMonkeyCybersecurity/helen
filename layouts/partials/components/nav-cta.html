@@ -1,0 +1,26 @@
+{{/*
+  Navigation CTA Button Partial
+  Centralized Get Started button logic with responsive behavior
+  
+  Usage: {{ partial "components/nav-cta" . }}
+  
+  Features:
+  - Automatically detects if current page is the CTA target
+  - Responsive sizing and positioning
+  - Consistent styling across all instances
+  - ARIA accessibility labels
+*/}}
+
+{{- $ctaUrl := "/services/delphi/sign-up/" -}}
+{{- $ctaText := "Get Started" -}}
+{{- $ctaIcon := "→" -}}
+{{- $isActive := or (eq .RelPermalink $ctaUrl) (eq .RelPermalink (printf "%s/" $ctaUrl)) -}}
+
+<a href="{{ $ctaUrl }}" 
+   class="nav-cta{{ if $isActive }} active{{ end }}" 
+   role="menuitem" 
+   aria-label="Get started with our cybersecurity services"
+   {{ if $isActive }}aria-current="page"{{ end }}>
+  <span class="cta-text">{{ $ctaText }}</span>
+  <span class="cta-icon">{{ $ctaIcon }}</span>
+</a>

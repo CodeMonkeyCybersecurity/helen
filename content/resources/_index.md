@@ -10,47 +10,47 @@ Welcome to the Code Monkey Cybersecurity resource center.
 
 ## Platform Services
 
-{{< promo-tiles columns="3" >}}
-{{< promo-tile title="Delphi Notify" url="/offerings/delphi/" icon="" color="teal" badge="XDR Platform" >}}
+{{< grid columns="3" >}}
+{{< card-unified title="Delphi Notify" link="/offerings/delphi/" badge="XDR Platform" style="promo" >}}
 Advanced threat detection and response platform designed for small businesses. Real-time monitoring with human-curated alerts.
-{{< /promo-tile >}}
+{{< /card-unified >}}
 
-{{< promo-tile title="Persephone" url="/offerings/persephone/" icon="" color="slate" badge="Backup" >}}
+{{< card-unified title="Persephone" link="/offerings/persephone/" badge="Backup" style="default" >}}
 Automated data protection and backup solutions. Protect your business data with secure, Australian-hosted backup services.
-{{< /promo-tile >}}
+{{< /card-unified >}}
 
-{{< promo-tile title="Phishing Simulation" url="/offerings/phishing-simulation/" icon="" color="orange" badge="Training" >}}
+{{< card-unified title="Phishing Simulation" link="/offerings/phishing-simulation/" badge="Training" style="resource" >}}
 Test your team's security awareness with realistic phishing simulations and comprehensive training programs.
-{{< /promo-tile >}}
-{{< /promo-tiles >}}
+{{< /card-unified >}}
+{{< /grid >}}
 
 ## Training & Education
 
-{{< promo-tiles columns="2" >}}
-{{< promo-tile title="Security Education" url="/resources/education/" icon="" color="teal" >}}
+{{< grid columns="2" >}}
+{{< card-unified title="Security Education" link="/resources/education/" style="promo" >}}
 Free cybersecurity learning materials, guides, and resources to help improve your security knowledge and practices.
-{{< /promo-tile >}}
+{{< /card-unified >}}
 
-{{< promo-tile title="Professional Training" url="/offerings/phishing-simulation/training/" icon="🎓" color="orange" badge="Paid Service" >}}
+{{< card-unified title="Professional Training" link="/offerings/phishing-simulation/training/" badge="Paid Service" style="resource" >}}
 Expert-led phishing awareness training and scam education workshops for your team.
-{{< /promo-tile >}}
-{{< /promo-tiles >}}
+{{< /card-unified >}}
+{{< /grid >}}
 
 ## Support & Information
 
-{{< promo-tiles columns="3" >}}
-{{< promo-tile title="About Us" url="/about-us/" icon="🏢" color="slate" >}}
+{{< grid columns="3" >}}
+{{< card-unified title="About Us" link="/about-us/" style="default" >}}
 Learn about Code Monkey Cybersecurity, our mission, and our commitment to transparent, human-focused security.
-{{< /promo-tile >}}
+{{< /card-unified >}}
 
-{{< promo-tile title="Contact Us" url="/about-us/contact/" icon="📞" color="teal" >}}
+{{< card-unified title="Contact Us" link="/about-us/contact/" style="promo" >}}
 Get in touch with our team for support, questions, or to discuss your cybersecurity needs.
-{{< /promo-tile >}}
+{{< /card-unified >}}
 
-{{< promo-tile title="Customer Portal" url="/about-us/customer-login/" icon="" color="orange" >}}
+{{< card-unified title="Customer Portal" link="/about-us/customer-login/" style="resource" >}}
 Access your account, view service status, and manage your cybersecurity services.
-{{< /promo-tile >}}
-{{< /promo-tiles >}}
+{{< /card-unified >}}
+{{< /grid >}}
 
 ---
 

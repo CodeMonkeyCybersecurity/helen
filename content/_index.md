@@ -33,7 +33,7 @@ Detect sophisticated attacks that bypass traditional antivirus software.
   {{< /card >}}
 {{< /grid >}}
 
-{{< feature title="Security in 4 Steps" badge="HOW IT WORKS" url="/services/delphi/sign-up/" button="Start Free Trial" >}}
+{{< card-unified title="Security in 4 Steps" badge="HOW IT WORKS" link="/services/delphi/sign-up/" linkText="Start Free Trial" style="feature" >}}
 
 **Monitor** - Advanced detection watches your devices 24/7
 
@@ -43,7 +43,7 @@ Detect sophisticated attacks that bypass traditional antivirus software.
 
 **Protect** - Stop threats before they cause damage
 
-{{< /feature >}}
+{{< /card-unified >}}
 
 {{< section title="Built For" >}}
 

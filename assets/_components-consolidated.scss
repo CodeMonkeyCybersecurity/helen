@@ -1,0 +1,262 @@
+// ========================================
+// UNIFIED COMPONENT SYSTEM
+// Single source for all buttons and cards
+// ========================================
+
+// =================================
+// UNIFIED BUTTON SYSTEM - RESTORED ORIGINAL STYLES
+// =================================
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: $border-radius;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  
+  // Size variations
+  &-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  &-md {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  &-lg {
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+  }
+  
+  // Style variations - ORIGINAL COLORS RESTORED
+  &-primary {
+    background: $brand-purple;
+    color: white;
+    
+    // Original hover behavior preserved, universal hover adds purple underline
+    &:hover {
+      background: darken($brand-purple, 10%);
+      transform: translateY(-2px);
+      box-shadow: $shadow-md;
+    }
+  }
+  
+  &-secondary {
+    background: $neutral-100;
+    color: $text-primary;
+    border: 1px solid $neutral-300;
+    
+    &:hover {
+      background: $neutral-200;
+    }
+  }
+  
+  &-outline {
+    background: transparent;
+    color: $brand-purple;
+    border: 2px solid $brand-purple;
+    
+    &:hover {
+      background: $brand-purple;
+      color: white;
+    }
+  }
+  
+  &-cta {
+    background: $brand-primary;
+    color: white;
+    
+    &:hover {
+      background: darken($brand-primary, 10%);
+      transform: translateY(-2px);
+      box-shadow: $shadow-md;
+    }
+  }
+  
+  &-danger {
+    background: $brand-alert-red;
+    color: white;
+    
+    &:hover {
+      background: darken($brand-alert-red, 10%);
+    }
+  }
+}
+
+// =================================
+// UNIFIED CARD SYSTEM
+// =================================
+
+.card-unified {
+  border-radius: $border-radius-lg;
+  transition: all 0.2s ease;
+  position: relative;
+  
+  .card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .card-image {
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: $border-radius-lg $border-radius-lg 0 0;
+    }
+  }
+  
+  .card-content {
+    padding: 1.5rem;
+  }
+  
+  .card-badge {
+    display: inline-block;
+    background: $brand-primary;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+  
+  .card-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    color: $brand-purple;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+  
+  .card-subtitle {
+    font-size: 0.875rem;
+    color: $text-muted;
+    margin-bottom: 1rem;
+  }
+  
+  .card-body {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: $text-secondary;
+    margin-bottom: 1rem;
+    
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  .card-action {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $brand-purple;
+    display: inline-flex;
+    align-items: center;
+    
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 2px;
+      background: $brand-purple;
+      transition: width 0.2s ease;
+      margin-left: 0.5rem;
+    }
+  }
+  
+  // Style variations
+  &.card-default {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: $shadow-sm;
+    
+    &:hover {
+      box-shadow: $shadow-md;
+      transform: translateY(-2px);
+      
+      .card-action::after {
+        width: 1rem;
+      }
+    }
+  }
+  
+  &.card-highlight {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 2px solid $brand-purple;
+    
+    .card-badge {
+      background: $brand-purple;
+    }
+  }
+  
+  &.card-minimal {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    
+    .card-content {
+      padding: 1rem;
+    }
+  }
+  
+  &.card-promo {
+    background: $brand-primary;
+    color: white;
+    
+    .card-title,
+    .card-subtitle,
+    .card-body {
+      color: white;
+    }
+    
+    .card-action {
+      color: white;
+      
+      &::after {
+        background: white;
+      }
+    }
+  }
+  
+  &.card-resource {
+    background: white;
+    border: 1px solid $neutral-200;
+    
+    .card-icon {
+      color: $brand-orange;
+    }
+    
+    .card-badge {
+      background: $brand-orange;
+    }
+  }
+  
+  &.card-feature {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+    &:hover {
+      box-shadow: $shadow-lg;
+      transform: translateY(-4px);
+    }
+  }
+}

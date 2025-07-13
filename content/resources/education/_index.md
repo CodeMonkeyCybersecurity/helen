@@ -10,31 +10,37 @@ Free resources to help you understand and improve your cybersecurity - no techni
 
 ## Quick Security Guides
 
-{{< resource-highlights >}}
-{{< resource-highlight title="Essential Security Basics" type="guide" time="5 min read" difficulty="beginner" featured="true" >}}
+{{< grid columns="3" >}}
+{{< card-unified title="Essential Security Basics" badge="Featured Guide" style="highlight" >}}
 Master the fundamentals: strong passwords, software updates, safe browsing, and backup strategies. Everything you need to start protecting yourself online.
-{{< /resource-highlight >}}
+**5 min read • Beginner**
+{{< /card-unified >}}
 
-{{< resource-highlight title="Email Security Checklist" type="checklist" time="3 min read" difficulty="beginner" >}}
+{{< card-unified title="Email Security Checklist" style="resource" >}}
 Learn to identify suspicious emails, verify senders, and avoid phishing attempts. Essential skills for staying safe in your inbox.
-{{< /resource-highlight >}}
+**3 min read • Beginner**
+{{< /card-unified >}}
 
-{{< resource-highlight title="Mobile Device Safety" type="guide" time="4 min read" difficulty="beginner" >}}
+{{< card-unified title="Mobile Device Safety" style="default" >}}
 Protect your smartphone and tablet with screen locks, app permission reviews, and safe browsing practices for mobile devices.
-{{< /resource-highlight >}}
+**4 min read • Beginner**
+{{< /card-unified >}}
 
-{{< resource-highlight title="Password Manager Setup" type="tool" time="10 min setup" difficulty="intermediate" >}}
+{{< card-unified title="Password Manager Setup" style="resource" >}}
 Step-by-step guide to choosing and setting up a password manager. Stop reusing passwords and protect all your accounts.
-{{< /resource-highlight >}}
+**10 min setup • Intermediate**
+{{< /card-unified >}}
 
-{{< resource-highlight title="Two-Factor Authentication" type="guide" time="7 min read" difficulty="beginner" >}}
+{{< card-unified title="Two-Factor Authentication" style="default" >}}
 Add an extra layer of security to your most important accounts. Learn what 2FA is and how to enable it everywhere.
-{{< /resource-highlight >}}
+**7 min read • Beginner**
+{{< /card-unified >}}
 
-{{< resource-highlight title="Backup Strategy Guide" type="guide" time="8 min read" difficulty="intermediate" >}}
+{{< card-unified title="Backup Strategy Guide" style="resource" >}}
 Protect your data from ransomware and device failures with a proper backup strategy. Learn the 3-2-1 rule and practical implementation.
-{{< /resource-highlight >}}
-{{< /resource-highlights >}}
+**8 min read • Intermediate**
+{{< /card-unified >}}
+{{< /grid >}}
 
 ## **Common Threats to Watch For**
 

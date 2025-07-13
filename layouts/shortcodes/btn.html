@@ -1,0 +1,26 @@
+{{/*
+UNIFIED BUTTON SYSTEM - Replaces button.html, cta.html, and scattered button CSS
+Usage: {{< btn href="/link" style="primary|secondary|outline|cta|danger" size="sm|md|lg" >}}Text{{< /btn >}}
+
+Styles:
+- primary: Main purple button
+- secondary: Gray outline button  
+- outline: Transparent with border
+- cta: Teal background (like nav-cta)
+- danger: Red for destructive actions
+
+Sizes: sm, md (default), lg
+*/}}
+
+{{ $href := .Get "href" | default "#" }}
+{{ $style := .Get "style" | default "primary" }}
+{{ $size := .Get "size" | default "md" }}
+{{ $target := .Get "target" | default "_self" }}
+{{ $class := .Get "class" | default "" }}
+
+<a href="{{ $href }}" 
+   target="{{ $target }}" 
+   class="btn btn-{{ $style }} btn-{{ $size }} {{ $class }}"
+   {{ if eq $target "_blank" }}rel="noopener noreferrer"{{ end }}>
+  {{ .Inner | markdownify }}
+</a>

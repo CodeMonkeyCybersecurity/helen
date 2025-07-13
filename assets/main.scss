@@ -32,8 +32,10 @@
 @import 'navigation-unified';
 
 // Content components (use typography and layout)
-@import 'sections-simplified'; // Simplified sections and CTAs
-@import 'components-unified';  // Unified component system
+@import 'sections-simplified';     // Simplified sections and CTAs
+@import 'components-consolidated'; // NEW: Single unified component system
+@import 'universal-hover';        // NEW: Site-wide hover behavior
+@import 'footer';                 // Footer and social icon styles
 @import 'custom';             // Site-specific custom styles
 @import 'promo-tiles';
 @import 'heading-permalinks';
@@ -155,53 +157,8 @@
   }
 }
 
-// Button styles
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-4);
-  padding: var(--spacing-8) var(--spacing-16);
-  border: none;
-  border-radius: var(--border-radius);
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  
-  // Universal hover underline for all buttons
-  @include hover-underline();
-  
-  &-primary {
-    background: var(--color-primary);
-    color: white;
-    
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-    }
-  }
-  
-  &-secondary {
-    background: var(--color-neutral-100);
-    color: var(--text-primary);
-    border: 1px solid var(--color-neutral-300);
-    
-    &:hover {
-      background: var(--color-neutral-200);
-    }
-  }
-  
-  &-outline {
-    background: transparent;
-    color: var(--color-primary);
-    border: 2px solid var(--color-primary);
-    
-    &:hover {
-      background: var(--color-primary);
-      color: white;
-    }
-  }
-}
+// Button styles now handled by _components-consolidated.scss
+// This section kept for legacy compatibility if needed
 
 // =================================
 // RESPONSIVE UTILITIES

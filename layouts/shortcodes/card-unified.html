@@ -1,0 +1,71 @@
+{{/*
+UNIFIED CARD SYSTEM - Replaces card.html, promo-tile.html, resource-highlight.html, feature.html
+Usage: {{< card-unified title="Title" style="default|highlight|minimal|promo|resource|feature" >}}Content{{< /card-unified >}}
+
+Styles:
+- default: Basic white card with shadow
+- highlight: Colored border/background for important content
+- minimal: No border/shadow, just content
+- promo: Marketing card with background color
+- resource: Resource/download card with icon
+- feature: Product feature card with hover effects
+
+Parameters:
+- title: Card title (required)
+- subtitle: Optional subtitle
+- link: Optional link URL  
+- linkText: Link text (default: "Learn more →")
+- icon: Optional icon
+- image: Optional image URL
+- badge: Optional badge text
+- style: Card variant
+*/}}
+
+{{ $title := .Get "title" }}
+{{ $subtitle := .Get "subtitle" }}
+{{ $link := .Get "link" }}
+{{ $linkText := .Get "linkText" | default "Learn more →" }}
+{{ $icon := .Get "icon" }}
+{{ $image := .Get "image" }}
+{{ $badge := .Get "badge" }}
+{{ $style := .Get "style" | default "default" }}
+
+<div class="card-unified card-{{ $style }}">
+  {{ if $link }}<a href="{{ $link }}" class="card-link">{{ end }}
+    
+    {{ with $image }}
+    <div class="card-image">
+      <img src="{{ . }}" alt="{{ $title }}" loading="lazy">
+    </div>
+    {{ end }}
+    
+    <div class="card-content">
+      {{ with $badge }}
+      <span class="card-badge">{{ . }}</span>
+      {{ end }}
+      
+      {{ with $icon }}
+      <div class="card-icon">
+        <i class="icon-{{ . }}"></i>
+      </div>
+      {{ end }}
+      
+      <h3 class="card-title">{{ $title }}</h3>
+      
+      {{ with $subtitle }}
+      <p class="card-subtitle">{{ . }}</p>
+      {{ end }}
+      
+      {{ if .Inner }}
+      <div class="card-body">
+        {{ .Inner | markdownify }}
+      </div>
+      {{ end }}
+      
+      {{ if and $link (not (eq $linkText "")) }}
+      <div class="card-action">{{ $linkText }}</div>
+      {{ end }}
+    </div>
+    
+  {{ if $link }}</a>{{ end }}
+</div>

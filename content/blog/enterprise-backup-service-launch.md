@@ -362,7 +362,7 @@ A: No. Client-side encryption means we only see encrypted data. You control the 
 **Ready to protect your business properly?**
 
 {{% hint info %}}
-{{< button href="mailto:main@cybermonkey.net.au?subject=Early%20Access%20Interest" >}}Apply for Early Access{{< /button >}}
+{{< btn href="mailto:main@cybermonkey.net.au?subject=Early%20Access%20Interest" style="primary" >}}Apply for Early Access{{< /btn >}}
 {{% /hint %}}
 
 ---

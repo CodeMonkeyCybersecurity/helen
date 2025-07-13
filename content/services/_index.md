@@ -24,7 +24,7 @@ No confusing tiers, no hidden fees, no surprise bills. Just straightforward cybe
  No credit card required  
  Cancel anytime  
 
-{{< button href="/offerings/delphi/sign-up/" >}}Start Your Free Trial{{< /button >}}
+{{< btn href="/offerings/delphi/sign-up/" style="primary" >}}Start Your Free Trial{{< /btn >}}
 {{% /hint %}}
 
 ---

@@ -1,0 +1,140 @@
+// ========================================
+// UNIVERSAL HOVER SYSTEM
+// Site-wide clickable element styling
+// ========================================
+
+// Base hover-only styling - HIGHEST SPECIFICITY
+%hover-only-styling {
+  position: relative;
+  transition: all 0.2s ease;
+  
+  // Purple underline on hover ONLY
+  @include hover-underline();
+  
+  &::after {
+    background: $brand-purple !important;
+  }
+  
+  // Use higher specificity to override button-specific styles
+  &:hover,
+  &.btn-primary:hover,
+  &.btn-secondary:hover,
+  &.btn-outline:hover,
+  &.btn-cta:hover,
+  &.btn-danger:hover {
+    color: $text-primary !important;        // Dark text on hover
+    background: transparent !important;     // Transparent background on hover
+    text-decoration: none !important;
+    
+    // Reset any transforms/shadows from original button styles
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  
+  &:focus-visible {
+    outline: 2px solid $brand-purple;
+    outline-offset: 2px;
+  }
+}
+
+// ========================================
+// UNIVERSAL APPLICATION
+// ========================================
+
+// Text links in content - HOVER ONLY
+a:not(.card-link):not(.nav-cta):not(.social-icon):not(.site-brand) {
+  @extend %hover-only-styling;
+}
+
+// Navigation links - HOVER ONLY
+.nav-link,
+.nav-link-parent,
+.nav-link-child {
+  @extend %hover-only-styling;
+  
+  // Maintain active state functionality
+  &.active {
+    &::after {
+      display: none;
+    }
+    
+    &:hover::after {
+      display: none;
+    }
+  }
+}
+
+// Button components - HOVER ONLY (all buttons get universal hover)
+.btn {
+  @extend %hover-only-styling;
+}
+
+// Get Started button (nav-cta) - HOVER ONLY
+.nav-cta {
+  @extend %hover-only-styling;
+  
+  // Maintain active state
+  &.active {
+    &::after {
+      display: none;
+    }
+    
+    &:hover::after {
+      display: none;
+    }
+  }
+}
+
+// Footer links - HOVER ONLY
+.footer-links a,
+.footer-legal-links a {
+  @extend %hover-only-styling;
+}
+
+// Social icons - HOVER ONLY
+.social-icon {
+  @extend %hover-only-styling;
+  
+  // Keep the lift effect on hover
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+// Site brand/logo - HOVER ONLY
+.site-brand {
+  @extend %hover-only-styling;
+}
+
+// Card titles when cards are clickable - HOVER ONLY
+.card-link {
+  // Apply hover to card title only
+  .card-title {
+    @extend %hover-only-styling;
+  }
+  
+  // Maintain card lift effect
+  &:hover {
+    .card-unified {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+// Card-unified clickable cards
+.card-unified {
+  // Maintain existing hover effects for cards
+  &:hover {
+    box-shadow: $shadow-md;
+    
+    &.card-default,
+    &.card-feature {
+      transform: translateY(-2px);
+    }
+    
+    &.card-feature {
+      box-shadow: $shadow-lg;
+      transform: translateY(-4px);
+    }
+  }
+}

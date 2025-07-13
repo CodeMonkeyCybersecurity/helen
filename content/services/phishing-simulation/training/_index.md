@@ -18,7 +18,7 @@ Don't let your business become another statistic. Our practical training worksho
 
 Want to see how vulnerable your team really is? We'll send harmless test phishing emails and show you the results.
 
-{{< button href="mailto:main@cybermonkey.net.au?subject=Free%20Phishing%20Assessment&body=Hi!%20I'd%20like%20a%20free%20phishing%20assessment%20for%20our%20team.%0A%0ACompany:%0ANumber%20of%20employees:%0AIndustry:%0ABest%20contact%20method:" >}}Get Your Free Assessment{{< /button >}}
+{{< btn href="mailto:main@cybermonkey.net.au?subject=Free%20Phishing%20Assessment&body=Hi!%20I'd%20like%20a%20free%20phishing%20assessment%20for%20our%20team.%0A%0ACompany:%0ANumber%20of%20employees:%0AIndustry:%0ABest%20contact%20method:" style="primary" >}}Get Your Free Assessment{{< /btn >}}
 
 {{% /hint %}}
 
@@ -144,7 +144,7 @@ Email support for suspicious items
 
 Don't wait until after a breach. Book your scam education workshop today and sleep better tonight.
 
-{{< button href="mailto:main@cybermonkey.net.au?subject=Phishing%20Training%20Booking&body=Hi!%20I'd%20like%20to%20book%20phishing%20training%20for%20our%20team.%0A%0ACompany:%0ANumber%20of%20employees:%0APreferred%20format%20(on-site/virtual):%0AIndustry:%0APreferred%20dates:%0ASpecific%20concerns%20or%20requirements:" >}}Book Training Now{{< /button >}}
+{{< btn href="mailto:main@cybermonkey.net.au?subject=Phishing%20Training%20Booking&body=Hi!%20I'd%20like%20to%20book%20phishing%20training%20for%20our%20team.%0A%0ACompany:%0ANumber%20of%20employees:%0APreferred%20format%20(on-site/virtual):%0AIndustry:%0APreferred%20dates:%0ASpecific%20concerns%20or%20requirements:" style="primary" >}}Book Training Now{{< /btn >}}
 
 :   
 **Email**: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)

@@ -48,12 +48,9 @@
 
   {{/* Main Navigation Menu */}}
   <div class="nav-menu" role="menubar">
-    {{/* CTA Section - Moved to top */}}
+    {{/* CTA Section - Centralized logic */}}
     <div class="nav-cta-section">
-      <a href="/offerings/delphi/sign-up/" class="nav-cta{{ if eq .RelPermalink "/offerings/delphi/sign-up/" }} active{{ end }}" role="menuitem" aria-label="Get started with our cybersecurity services"{{ if eq .RelPermalink "/offerings/delphi/sign-up/" }} aria-current="page"{{ end }}>
-        <span class="cta-text">Get Started</span>
-        <span class="cta-icon">→</span>
-      </a>
+      {{ partial "components/nav-cta" . }}
     </div>
     
     {{/* Search Section - Desktop (go.dev pattern) */}}
