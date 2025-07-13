@@ -43,7 +43,8 @@
 // ========================================
 
 // Text links in content - HOVER ONLY
-a:not(.card-link):not(.nav-cta):not(.social-icon):not(.site-brand) {
+// Exclude feature cards and indicator links from getting underlines
+a:not(.card-link):not(.nav-cta):not(.social-icon):not(.site-brand):not(.feature-card-link):not(.indicator-link) {
   @extend %hover-only-styling;
 }
 

@@ -301,9 +301,10 @@ em { @extend .text-italic; }
 .link {
   color: var(--link-primary);
   font-weight: var(--font-weight-medium);
+  position: relative;
+  text-decoration: none;
   
-  // Universal hover underline animation
-  @include hover-underline();
+  // Remove hover underline - let universal hover handle it
   
   &:hover {
     color: var(--link-hover);
@@ -316,8 +317,17 @@ em { @extend .text-italic; }
 .link-button { @extend .link; text-decoration: none; }
 .link-nav { @extend .link; text-decoration: none; font-weight: normal; }
 
-// Element selector for backwards compatibility
-a { @extend .link; }
+// Basic anchor styles without hover animation
+a {
+  color: var(--link-primary);
+  font-weight: var(--font-weight-medium);
+  position: relative;
+  text-decoration: none;
+  
+  &:hover {
+    color: var(--link-hover);
+  }
+}
 
 // =================================
 // UTILITY CLASSES

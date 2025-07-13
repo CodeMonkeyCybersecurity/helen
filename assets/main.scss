@@ -55,13 +55,7 @@
 @import 'print';         // Print media queries
 
 // =================================
-// UNIVERSAL HOVER (MUST BE LAST)
-// =================================
-
-@import 'universal-hover';        // Site-wide hover behavior - HIGHEST PRECEDENCE
-
-// =================================
-// BASE STYLES
+// PAGE-SPECIFIC STYLES (Before universal hover)
 // =================================
 
 // Box model reset
@@ -594,15 +588,16 @@ ul, ol {
 // =================================
 
 // Fix for unwanted scrollable tooltips/dropdowns on buttons
+// But allow ::after pseudo-element to show for underlines
 .btn,
 .btn-outline,
 .btn-primary,
 .btn-secondary,
 [class*="btn-"] {
-  overflow: hidden !important;
+  overflow: visible !important;
+  position: relative;
   
-  &::before,
-  &::after,
+  // Only hide overflow on child elements, not pseudo-elements
   * {
     overflow: hidden !important;
   }
@@ -657,3 +652,9 @@ ul, ol {
     width: 100% !important;
   }
 }
+
+// =================================
+// UNIVERSAL HOVER (MUST BE LAST!)
+// =================================
+// This MUST be the last import to ensure highest specificity
+@import 'universal-hover';
