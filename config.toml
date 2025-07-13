@@ -73,29 +73,29 @@ buildExpired = false
 
 [menu]
 
-# Main navigation menu (for desktop header)
+# Main navigation menu (simplified)
 [[menu.main]]
 name = "Services"
-url = "/offerings/"
+url = "/services/"
 weight = 10
 hasChildren = true
 
   [[menu.main]]
   parent = "Services"
   name = "Delphi Notify XDR"
-  url = "/offerings/delphi/"
+  url = "/services/delphi/"
   weight = 11
   
   [[menu.main]]
   parent = "Services"
   name = "Security Training"
-  url = "/offerings/phishing-simulation/"
+  url = "/services/phishing-simulation/"
   weight = 12
   
   [[menu.main]]
   parent = "Services"
   name = "Backup Solutions"
-  url = "/offerings/persephone/"
+  url = "/services/persephone/"
   weight = 13
 
 [[menu.main]]
@@ -130,7 +130,7 @@ hasChildren = true
 
 [[menu.main]]
 name = "About"
-url = "/about-us/"
+url = "/company/"
 weight = 30
 
 [[menu.main]]
@@ -138,53 +138,21 @@ name = "Blog"
 url = "/blog/"
 weight = 40
 
-# Secondary navigation menu
-[[menu.secondary]]
-name = "Search"
-url = "/search/"
-weight = 10
-
-# Before menu (appears at top of left sidebar) - removed to avoid duplication
-
-# Resources section
-[[menu.resources]]
-name = "Documentation"
-url = "/resources/"
-weight = 10
-
-[[menu.resources]]
-name = "Education"
-url = "/resources/education/"
-weight = 12
-
-# About Us section
-[[menu.about]]
-name = "About Us"
-url = "/about-us/"
-weight = 10
-
-[[menu.about]]
+# Footer menu (simplified)
+[[menu.footer]]
 name = "Contact"
-url = "/about-us/contact/"
-weight = 15
+url = "/company/contact/"
+weight = 10
 
-[[menu.about]]
+[[menu.footer]]
 name = "Governance"
-url = "/about-us/governance/"
+url = "/company/governance/"
 weight = 20
 
-[[menu.about]]
+[[menu.footer]]
 name = "Customer Login"
-url = "/about-us/customer-login/"
-weight = 25
-
-# Blog section
-[[menu.blog]]
-name = "Blog"
-url = "/blog/"
-weight = 10
-
-# Platform/Training menus removed - now using auto-discovery
+url = "/company/customer-login/"
+weight = 30
 
 # External links (External section)
 [[menu.after]]

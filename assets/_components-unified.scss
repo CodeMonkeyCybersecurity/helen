@@ -5,7 +5,7 @@
 // Card Component
 .card {
   position: relative;
-  border-radius: $radius-medium;
+  border-radius: $border-radius-md;
   background: white;
   transition: all $hover-animation-speed ease-out;
   
@@ -21,7 +21,7 @@
   
   &-highlight {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border: 2px solid $color-brand-purple;
+    border: 2px solid $brand-purple;
     padding: 2rem;
   }
   
@@ -41,7 +41,7 @@
     width: 3rem;
     height: 3rem;
     margin-bottom: 1rem;
-    color: $color-brand-purple;
+    color: $brand-purple;
   }
   
   &-title {
@@ -53,14 +53,14 @@
   
   &-subtitle {
     font-size: 0.875rem;
-    color: $color-text-muted;
+    color: $text-muted;
     margin-bottom: 1rem;
   }
   
   &-body {
     font-size: 1rem;
     line-height: 1.6;
-    color: $color-text-body;
+    color: $text-secondary;
     
     p:last-child {
       margin-bottom: 0;
@@ -71,7 +71,7 @@
     margin-top: 1rem;
     font-size: 0.875rem;
     font-weight: 500;
-    color: $color-brand-purple;
+    color: $brand-purple;
     display: inline-flex;
     align-items: center;
     
@@ -80,7 +80,7 @@
       display: inline-block;
       width: 0;
       height: 2px;
-      background: $color-brand-purple;
+      background: $brand-purple;
       transition: width $hover-animation-speed ease-out;
       margin-left: 0.5rem;
     }
@@ -166,7 +166,7 @@
     figcaption {
       margin-top: 0.5rem;
       font-size: 0.875rem;
-      color: $color-text-muted;
+      color: $text-muted;
       text-align: center;
       font-style: italic;
     }
@@ -178,7 +178,7 @@
   padding: 2rem;
   background: #fee;
   border: 1px solid #fcc;
-  border-radius: $radius-small;
+  border-radius: $border-radius-sm;
   color: #c00;
   text-align: center;
 }
@@ -187,18 +187,18 @@
 .button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: $radius-small;
+  border-radius: $border-radius-sm;
   font-weight: 500;
   text-decoration: none;
   transition: all $hover-animation-speed ease-out;
   text-align: center;
   
   &-primary {
-    background: $color-brand-purple;
+    background: $brand-purple;
     color: white;
     
     &:hover {
-      background: darken($color-brand-purple, 10%);
+      background: darken($brand-purple, 10%);
       transform: translateY(-2px);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
@@ -206,18 +206,18 @@
   
   &-secondary {
     background: white;
-    color: $color-brand-purple;
-    border: 2px solid $color-brand-purple;
+    color: $brand-purple;
+    border: 2px solid $brand-purple;
     
     &:hover {
-      background: $color-brand-purple;
+      background: $brand-purple;
       color: white;
     }
   }
   
   &-text {
     background: transparent;
-    color: $color-brand-purple;
+    color: $brand-purple;
     @include hover-underline;
   }
 }
@@ -231,11 +231,11 @@
   
   &-default {
     background: #f8f9fa;
-    color: $color-text-primary;
+    color: $text-primary;
   }
   
   &-dark {
-    background: $color-brand-purple;
+    background: $brand-purple;
     color: white;
     
     .cta-subtitle,
@@ -245,7 +245,7 @@
     
     .button-primary {
       background: white;
-      color: $color-brand-purple;
+      color: $brand-purple;
       
       &:hover {
         background: rgba(255, 255, 255, 0.9);
@@ -276,7 +276,7 @@
   
   &-subtitle {
     font-size: 1.25rem;
-    color: $color-text-muted;
+    color: $text-muted;
     margin-bottom: 1.5rem;
   }
   
@@ -284,7 +284,7 @@
     font-size: 1.125rem;
     line-height: 1.6;
     margin-bottom: 2rem;
-    color: $color-text-body;
+    color: $text-secondary;
     
     p:last-child {
       margin-bottom: 0;

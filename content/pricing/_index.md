@@ -132,10 +132,11 @@ We accept all major credit cards, bank transfers, and can arrange invoicing for 
 
 All prices are in Australian dollars and include GST. For custom requirements or volume pricing, [contact our team](/about-us/contact/) for a personalized quote.
 
-{{< cta-anthropic 
+{{< cta 
   title="Questions About Pricing?" 
   text="Our team is here to help you find the right security solution for your budget. No pressure, just expert advice tailored to your needs."
   link="/about-us/contact/" 
   linkText="Contact Us"
   style="light"
   buttonStyle="teal" >}}
+{{< /cta >}}

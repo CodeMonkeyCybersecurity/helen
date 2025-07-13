@@ -18,17 +18,20 @@ Plain English explanations with clear next steps
 
 {{< /content-section >}}
 
-{{< feature-cards title="Why Choose Delphi Notify?" subtitle="Professional security without the complexity" >}}
-  {{< feature-card 
-    title="Expert-Reviewed Alerts" 
-    description="Security specialists review every alert. Receive only meaningful notifications that require action." >}}
-  {{< feature-card 
-    title="Plain English Guidance" 
-    description="Get clear explanations of what happened and what to do next. No technical jargon." >}}
-  {{< feature-card 
-    title="Advanced Threat Detection" 
-    description="Detect sophisticated attacks that bypass traditional antivirus software." >}}
-{{< /feature-cards >}}
+## Why Choose Delphi Notify?
+### Professional security without the complexity
+
+{{< grid columns="3" >}}
+  {{< card title="Expert-Reviewed Alerts" >}}
+Security specialists review every alert. Receive only meaningful notifications that require action.
+  {{< /card >}}
+  {{< card title="Plain English Guidance" >}}
+Get clear explanations of what happened and what to do next. No technical jargon.
+  {{< /card >}}
+  {{< card title="Advanced Threat Detection" >}}
+Detect sophisticated attacks that bypass traditional antivirus software.
+  {{< /card >}}
+{{< /grid >}}
 
 {{< feature-card-wrapper eyebrow="HOW IT WORKS" title="Security in 4 Steps" cta-label="Start Free Trial" cta-url="/offerings/delphi/sign-up/" cta-style="teal" >}}
 
@@ -70,30 +73,39 @@ Plain English explanations with clear next steps
 
 {{< /content-section >}}
 
-{{< cta-anthropic 
+{{< cta 
   title="Start Free 30-Day Trial" 
-  text="Set up security monitoring in 10 minutes. Get expert-reviewed alerts within 24 hours.<br><br>Questions? Call  or email main@cybermonkey.net.au"
   link="/offerings/delphi/sign-up/" 
   linkText="Get Started Now"
   style="dark"
-  buttonStyle="teal" >}}
+  buttonStyle="primary" >}}
+Set up security monitoring in 10 minutes. Get expert-reviewed alerts within 24 hours.
+
+Questions? Call or email main@cybermonkey.net.au
+{{< /cta >}}
 
 {{< recent-posts >}}
 
-{{< feature-cards title="Our Commitments" subtitle="How we approach security, ethics, and transparency" >}}
-  {{< feature-card 
+## Our Commitments
+### How we approach security, ethics, and transparency
+
+{{< grid columns="3" >}}
+  {{< card 
     title="Privacy-First Security" 
-    description="We monitor threats without accessing your files. Your data stays yours." 
     link="/about-us/governance/policies/privacy-policy/" >}}
-  {{< feature-card 
+We monitor threats without accessing your files. Your data stays yours.
+  {{< /card >}}
+  {{< card 
     title="Open Source Principles" 
-    description="Transparent technology with dual AGPL v3 and Do No Harm licensing." 
     link="/about-us/governance/open-source-licensing/" >}}
-  {{< feature-card 
+Transparent technology with dual AGPL v3 and Do No Harm licensing.
+  {{< /card >}}
+  {{< card 
     title="Human-Centered Design" 
-    description="Technology that empowers people without intimidation or complexity." 
     link="/about-us/" >}}
-{{< /feature-cards >}}
+Technology that empowers people without intimidation or complexity.
+  {{< /card >}}
+{{< /grid >}}
 
 {{< content-section style="transparent" >}}
 

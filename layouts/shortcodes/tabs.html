@@ -1,3 +1,7 @@
-<div class="book-tabs">
-{{ .Inner }}
+{{/*
+Simple Tabs Replacement - Just show content without tabs
+Usage: {{< tabs "id" >}}...content...{{< /tabs >}}
+*/}}
+<div class="content-section">
+  {{ .Inner | markdownify }}
 </div>

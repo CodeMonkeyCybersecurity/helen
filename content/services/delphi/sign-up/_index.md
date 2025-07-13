@@ -66,10 +66,11 @@ Since we're talking about keeping you secure, here's a friendly reminder about p
 If you don't have one yet, we personally use [Proton Pass](https://proton.me/pass), which comes with secure email too. You can check it out through our [referral link](https://pr.tn/ref/KF4YS3NCHZ4G) if you're interested.
 
 
-{{< cta-anthropic 
+{{< cta 
   title="Have Questions?" 
   text="We're real people and we're here to help. Drop us a line and we'll get back to you promptly."
   link="mailto:main@cybermonkey.net.au?subject=Delphi%20Notify%20Question&body=Hi!%20I%20have%20a%20question%20about%20Delphi%20Notify:%0A%0A[Tell%20us%20what%20you'd%20like%20to%20know]" 
   linkText="Contact Us"
   style="light"
   buttonStyle="teal" >}}
+{{< /cta >}}
