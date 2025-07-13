@@ -9,8 +9,6 @@ weight: 6
 
 Email: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
-Phone: 
-
 Location: Fremantle, WA
 
 ABN: 77 177 673 061

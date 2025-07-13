@@ -293,11 +293,7 @@ alerts:
       url: "https://hooks.company.com/delphi"
       headers:
         Authorization: "Bearer webhook_token"
-    
-    sms:
-      enabled: false
-      numbers:
-        - "+61432038310"
+
 ```
 
 ---
@@ -828,7 +824,6 @@ alerts:
         notify_immediately: true
         contacts:
           - "security@company.com"
-          - "+61432038310"
 ```
 
 ---

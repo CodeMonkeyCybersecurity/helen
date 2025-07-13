@@ -31,7 +31,6 @@ Don't worry! Some content is still available even without an internet connection
 If you need immediate cybersecurity assistance:
 
 **Email:** main@cybermonkey.net.au  
-**Phone:** +61 432 038 310  
 **Location:** Fremantle, Western Australia
 
 ---

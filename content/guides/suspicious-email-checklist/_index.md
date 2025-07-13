@@ -148,7 +148,6 @@ Print this guide and keep it near your computer for quick reference.
 
 **Code Monkey Cybersecurity**  
 **Email:** main@cybermonkey.net.au  
-**Phone:** +61 432 038 310  
 **Web:** cybermonkey.net.au  
 
 *Helping Australian families and small businesses stay safe online*

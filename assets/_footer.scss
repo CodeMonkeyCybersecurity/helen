@@ -106,6 +106,7 @@
   gap: 1rem;
   margin-bottom: 1.5rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .social-icon {
@@ -153,6 +154,10 @@
   
   &.email:hover {
     background: $brand-primary;
+  }
+  
+  &.bluesky:hover {
+    background: #0085ff;
   }
 }
 

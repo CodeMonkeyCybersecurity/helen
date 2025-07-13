@@ -46,6 +46,10 @@ buildExpired = false
   images = ["images/cover_puppy_moni_monkey_optimized.jpg"]
   twitter_site = "@codemonkeycyber"
   facebook_admins = "codemonkeycyber"
+  github_username = "CodeMonkeyCybersecurity"
+  bluesky_handle = "@codemonkeycyber.bsky.social"
+  linkedin_company = "codemonkeycyber"
+  instagram_username = "code_monkey_cyber"
   
   # Business Information
   business_name = "Code Monkey Cybersecurity"
@@ -54,7 +58,7 @@ buildExpired = false
   address_region = "WA"
   address_country = "Australia"
   postal_code = "6160"
-  phone = "+61432038310"
+  email = "main@cybermonkey.net.au"
   abn = "77 177 673 061"
   
   # Geographic targeting
@@ -173,6 +177,7 @@ weight = 10
   facebook = "https://facebook.com/codemonkeycyber"
   instagram = "https://instagram.com/code_monkey_cyber"
   linkedin = "https://linkedin.com/company/codemonkeycyber"
+  bluesky = "https://bsky.app/profile/codemonkeycyber.bsky.social"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
@@ -196,6 +201,11 @@ isPlainText = true
     unsafe = true
     hardWraps = false
     xhtml = false
+    
+    # Enable Hugo's built-in heading anchors
+    [markup.goldmark.renderer.heading]
+      autoHeadingIDType = "github"
+      autoHeadingAnchor = true
   [markup.goldmark.extensions]
     attribute = true
     autoHeadingID = true

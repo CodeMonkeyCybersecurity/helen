@@ -199,7 +199,6 @@ Don't wait until you're part of the statistics.
 
 **Contact Information:**
  **Email:** [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)  
- **Phone:**   
  **Website:** [cybermonkey.net.au/training](https://cybermonkey.net.au/offerings/phishing-simulation/training/)  
  **Location:** Fremantle, Western Australia
 

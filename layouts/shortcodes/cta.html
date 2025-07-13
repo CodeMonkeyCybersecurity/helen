@@ -16,7 +16,11 @@ Parameters:
 
 <section class="cta cta-{{ $style }}">
   <div class="cta-container">
-    <h2 class="cta-title">{{ $title }}</h2>
+    {{ $titleID := $title | anchorize }}
+    <h2 class="cta-title" id="{{ $titleID }}">
+      {{ $title }}
+      <a class="anchor" href="#{{ $titleID }}">#</a>
+    </h2>
     
     {{ if .Inner }}
     <div class="cta-text">

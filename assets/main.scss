@@ -34,7 +34,6 @@
 // Content components (use typography and layout)
 @import 'sections-simplified';     // Simplified sections and CTAs
 @import 'components-consolidated'; // NEW: Single unified component system
-@import 'universal-hover';        // NEW: Site-wide hover behavior
 @import 'footer';                 // Footer and social icon styles
 @import 'custom';             // Site-specific custom styles
 @import 'promo-tiles';
@@ -54,6 +53,12 @@
 // =================================
 
 @import 'print';         // Print media queries
+
+// =================================
+// UNIVERSAL HOVER (MUST BE LAST)
+// =================================
+
+@import 'universal-hover';        // Site-wide hover behavior - HIGHEST PRECEDENCE
 
 // =================================
 // BASE STYLES
@@ -154,6 +159,54 @@
     gap: var(--spacing-8);
     justify-content: center;
     flex-wrap: wrap;
+  }
+}
+
+// CTA section styling (same as hero)
+.cta-actions {
+  display: flex;
+  gap: var(--spacing-8);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+// Section footer styling (for blog section)
+.section-footer {
+  display: flex;
+  gap: var(--spacing-8);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-12);
+}
+
+// Blog posts grid - remove scrollable behavior
+.blog-posts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-12);
+  overflow: visible;
+  max-height: none;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.blog-post-card {
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-12);
+  background: white;
+  transition: all 0.2s ease;
+  overflow: visible;
+  
+  &:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
   }
 }
 

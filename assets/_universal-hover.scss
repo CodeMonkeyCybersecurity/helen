@@ -29,6 +29,7 @@
     // Reset any transforms/shadows from original button styles
     transform: none !important;
     box-shadow: none !important;
+    border-color: transparent !important;   // Remove button borders on hover
   }
   
   &:focus-visible {
@@ -65,7 +66,12 @@ a:not(.card-link):not(.nav-cta):not(.social-icon):not(.site-brand) {
 }
 
 // Button components - HOVER ONLY (all buttons get universal hover)
-.btn {
+.btn,
+.btn.btn-primary,
+.btn.btn-secondary, 
+.btn.btn-outline,
+.btn.btn-cta,
+.btn.btn-danger {
   @extend %hover-only-styling;
 }
 
@@ -73,14 +79,23 @@ a:not(.card-link):not(.nav-cta):not(.social-icon):not(.site-brand) {
 .nav-cta {
   @extend %hover-only-styling;
   
-  // Maintain active state
+  // Maintain active state - override universal hover for active nav-cta
   &.active {
+    // Use default nav active color (red/orange) not teal
+    background: $brand-orange !important;
+    color: white !important;
+    
     &::after {
       display: none;
     }
     
-    &:hover::after {
-      display: none;
+    &:hover {
+      background: $brand-orange !important;
+      color: white !important;
+      
+      &::after {
+        display: none;
+      }
     }
   }
 }

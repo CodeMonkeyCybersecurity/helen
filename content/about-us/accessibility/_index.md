@@ -55,7 +55,6 @@ We regularly audit our website for accessibility issues and implement improvemen
 If you experience any accessibility barriers on our website, please contact us:
 
 **Email:** [accessibility@cybermonkey.net.au](mailto:accessibility@cybermonkey.net.au)  
-**Phone:**   
 **Mail:** Code Monkey Cybersecurity, Fremantle, WA 6160
 
 Please provide:

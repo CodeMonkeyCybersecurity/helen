@@ -234,10 +234,10 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
     color: white;
   }
   
-  // Active state with teal background (not orange like other nav items)
+  // Active state with default red/orange background (same as other nav items)
   &.active {
-    background: darken($nav-cta-bg, 15%);
-    color: white;
+    background: $nav-active-bg;
+    color: $nav-active-text;
     font-weight: 600;
     
     &:hover {

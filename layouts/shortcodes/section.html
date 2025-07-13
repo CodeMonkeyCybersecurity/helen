@@ -19,7 +19,11 @@ Parameters:
     {{ if or $title $subtitle }}
     <header class="section-header">
       {{ with $title }}
-      <h2 class="section-title">{{ . }}</h2>
+      {{ $titleID := . | anchorize }}
+      <h2 class="section-title" id="{{ $titleID }}">
+        {{ . }}
+        <a class="anchor" href="#{{ $titleID }}">#</a>
+      </h2>
       {{ end }}
       {{ with $subtitle }}
       <p class="section-subtitle">{{ . }}</p>
