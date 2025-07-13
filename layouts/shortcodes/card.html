@@ -1,0 +1,53 @@
+{{/*
+Unified Card Shortcode - Replaces feature-card, info-card, and other card variants
+Usage: {{< card title="Card Title" >}}Content here{{< /card >}}
+
+Parameters:
+- title: Card title (required)
+- subtitle: Optional subtitle
+- link: Optional link URL
+- linkText: Link text (default: "Learn more →")
+- icon: Optional icon name
+- style: Card style variant (default, highlight, minimal)
+*/}}
+
+{{ $title := .Get "title" }}
+{{ $subtitle := .Get "subtitle" }}
+{{ $link := .Get "link" }}
+{{ $linkText := .Get "linkText" | default "Learn more →" }}
+{{ $icon := .Get "icon" }}
+{{ $style := .Get "style" | default "default" }}
+
+<div class="card card-{{ $style }}">
+  {{ if $link }}
+  <a href="{{ $link }}" class="card-link">
+  {{ end }}
+    <div class="card-content">
+      {{ with $icon }}
+      <div class="card-icon">
+        <i class="icon-{{ . }}"></i>
+      </div>
+      {{ end }}
+      
+      <h3 class="card-title">{{ $title }}</h3>
+      
+      {{ with $subtitle }}
+      <p class="card-subtitle">{{ . }}</p>
+      {{ end }}
+      
+      {{ if .Inner }}
+      <div class="card-body">
+        {{ .Inner | markdownify }}
+      </div>
+      {{ end }}
+      
+      {{ if and $link (not (eq $linkText "")) }}
+      <div class="card-action">
+        {{ $linkText }}
+      </div>
+      {{ end }}
+    </div>
+  {{ if $link }}
+  </a>
+  {{ end }}
+</div>

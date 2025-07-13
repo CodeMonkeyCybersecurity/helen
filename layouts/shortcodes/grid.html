@@ -1,0 +1,17 @@
+{{/*
+Unified Grid Shortcode - Responsive grid container for cards and other content
+Usage: {{< grid columns="3" >}}...content...{{< /grid >}}
+
+Parameters:
+- columns: Number of columns (1-4, default: 3)
+- gap: Gap size (small, medium, large, default: medium)
+- center: Center align items (true/false, default: false)
+*/}}
+
+{{ $columns := .Get "columns" | default "3" }}
+{{ $gap := .Get "gap" | default "medium" }}
+{{ $center := .Get "center" | default false }}
+
+<div class="grid grid-cols-{{ $columns }} gap-{{ $gap }}{{ if $center }} grid-center{{ end }}">
+  {{ .Inner }}
+</div>

@@ -1,0 +1,41 @@
+{{/*
+Unified CTA Shortcode - Call to Action component
+Usage: {{< cta title="Ready to get started?" link="/sign-up/" linkText="Sign Up" >}}Optional content{{< /cta >}}
+
+Parameters:
+- title: Main heading (required)
+- subtitle: Optional subtitle
+- link: Button URL (required)
+- linkText: Button text (default: "Get Started")
+- style: Visual style (default, dark, light)
+- buttonStyle: Button appearance (primary, secondary, text)
+*/}}
+
+{{ $title := .Get "title" | default "Ready to protect what matters?" }}
+{{ $subtitle := .Get "subtitle" }}
+{{ $link := .Get "link" | default "/docs/delphi/sign-up/" }}
+{{ $linkText := .Get "linkText" | default "Get Started" }}
+{{ $style := .Get "style" | default "default" }}
+{{ $buttonStyle := .Get "buttonStyle" | default "primary" }}
+
+<section class="cta cta-{{ $style }}">
+  <div class="cta-container">
+    <div class="cta-content">
+      <h2 class="cta-title">{{ $title }}</h2>
+      
+      {{ with $subtitle }}
+      <p class="cta-subtitle">{{ . }}</p>
+      {{ end }}
+      
+      {{ if .Inner }}
+      <div class="cta-body">
+        {{ .Inner | markdownify }}
+      </div>
+      {{ end }}
+      
+      <a href="{{ $link }}" class="button button-{{ $buttonStyle }}">
+        {{ $linkText }}
+      </a>
+    </div>
+  </div>
+</section>

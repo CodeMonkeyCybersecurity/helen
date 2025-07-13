@@ -1,0 +1,293 @@
+// Unified Components - Simplified and consistent
+@import 'config';
+@import 'mixins';
+
+// Card Component
+.card {
+  position: relative;
+  border-radius: $radius-medium;
+  background: white;
+  transition: all $hover-animation-speed ease-out;
+  
+  &-default {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    
+    &:hover {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      border-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  &-highlight {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 2px solid $color-brand-purple;
+    padding: 2rem;
+  }
+  
+  &-minimal {
+    border: none;
+    padding: 1rem;
+    background: transparent;
+  }
+  
+  &-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  &-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    color: $color-brand-purple;
+  }
+  
+  &-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+  
+  &-subtitle {
+    font-size: 0.875rem;
+    color: $color-text-muted;
+    margin-bottom: 1rem;
+  }
+  
+  &-body {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: $color-text-body;
+    
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  &-action {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $color-brand-purple;
+    display: inline-flex;
+    align-items: center;
+    
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 2px;
+      background: $color-brand-purple;
+      transition: width $hover-animation-speed ease-out;
+      margin-left: 0.5rem;
+    }
+  }
+  
+  &:hover .card-action::after {
+    width: 1rem;
+  }
+}
+
+// Grid Component
+.grid {
+  display: grid;
+  width: 100%;
+  
+  &-cols-1 {
+    grid-template-columns: 1fr;
+  }
+  
+  &-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+    
+    @media (max-width: $layout-mobile-breakpoint) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+    
+    @media (max-width: $layout-desktop-breakpoint) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (max-width: $layout-mobile-breakpoint) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+    
+    @media (max-width: 1280px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    @media (max-width: $layout-desktop-breakpoint) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (max-width: $layout-mobile-breakpoint) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  &-gap-small {
+    gap: 1rem;
+  }
+  
+  &-gap-medium {
+    gap: 1.5rem;
+  }
+  
+  &-gap-large {
+    gap: 2rem;
+  }
+  
+  &-center {
+    place-items: center;
+    text-align: center;
+  }
+}
+
+// Image Component
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  
+  &-wrapper {
+    margin: 2rem 0;
+    
+    figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.875rem;
+      color: $color-text-muted;
+      text-align: center;
+      font-style: italic;
+    }
+  }
+}
+
+// Error States
+.image-error {
+  padding: 2rem;
+  background: #fee;
+  border: 1px solid #fcc;
+  border-radius: $radius-small;
+  color: #c00;
+  text-align: center;
+}
+
+// Button Component (for CTA shortcode consolidation)
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: $radius-small;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all $hover-animation-speed ease-out;
+  text-align: center;
+  
+  &-primary {
+    background: $color-brand-purple;
+    color: white;
+    
+    &:hover {
+      background: darken($color-brand-purple, 10%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  }
+  
+  &-secondary {
+    background: white;
+    color: $color-brand-purple;
+    border: 2px solid $color-brand-purple;
+    
+    &:hover {
+      background: $color-brand-purple;
+      color: white;
+    }
+  }
+  
+  &-text {
+    background: transparent;
+    color: $color-brand-purple;
+    @include hover-underline;
+  }
+}
+
+// CTA Component
+.cta {
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  
+  &-default {
+    background: #f8f9fa;
+    color: $color-text-primary;
+  }
+  
+  &-dark {
+    background: $color-brand-purple;
+    color: white;
+    
+    .cta-subtitle,
+    .cta-body {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .button-primary {
+      background: white;
+      color: $color-brand-purple;
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.9);
+      }
+    }
+  }
+  
+  &-light {
+    background: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  &-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  &-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    
+    @media (min-width: $layout-desktop-breakpoint) {
+      font-size: 2.5rem;
+    }
+  }
+  
+  &-subtitle {
+    font-size: 1.25rem;
+    color: $color-text-muted;
+    margin-bottom: 1.5rem;
+  }
+  
+  &-body {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: $color-text-body;
+    
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

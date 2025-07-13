@@ -1,0 +1,79 @@
+{{/*
+Unified Image Shortcode - Combines features from img, optimized-image, and figure
+Usage: {{< image src="path/to/image.jpg" alt="Description" >}}
+
+Parameters:
+- src: Image source (required)
+- alt: Alt text (required for accessibility)
+- caption: Optional caption text
+- class: CSS classes (default: "responsive-image")
+- loading: Loading strategy (default: "lazy")
+- sizes: Responsive sizes (default: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw")
+- quality: Image quality for optimization (default: 75)
+*/}}
+
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $caption := .Get "caption" }}
+{{ $class := .Get "class" | default "responsive-image" }}
+{{ $loading := .Get "loading" | default "lazy" }}
+{{ $sizes := .Get "sizes" | default "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" }}
+{{ $quality := .Get "quality" | default 75 }}
+
+{{ if not $src }}
+  <div class="image-error">Error: No image source specified</div>
+{{ else }}
+  {{ $image := resources.Get $src }}
+  {{ if not $image }}
+    {{ $image = resources.Get (printf "images/%s" $src) }}
+  {{ end }}
+  
+  {{ if $image }}
+    {{/* Generate responsive images */}}
+    {{ $small_webp := $image.Resize (printf "400x webp q%d" $quality) }}
+    {{ $medium_webp := $image.Resize (printf "800x webp q%d" $quality) }}
+    {{ $large_webp := $image.Resize (printf "1200x webp q%d" $quality) }}
+    {{ $fallback := $image.Resize (printf "800x q%d" $quality) }}
+    
+    {{ if $caption }}
+    <figure class="{{ $class }}-wrapper">
+    {{ end }}
+      <picture class="{{ $class }}">
+        <source 
+          srcset="{{ $small_webp.RelPermalink }} 400w, {{ $medium_webp.RelPermalink }} 800w, {{ $large_webp.RelPermalink }} 1200w"
+          sizes="{{ $sizes }}"
+          type="image/webp"
+        />
+        <img 
+          src="{{ $fallback.RelPermalink }}" 
+          alt="{{ $alt }}" 
+          loading="{{ $loading }}"
+          decoding="async"
+          width="{{ $fallback.Width }}"
+          height="{{ $fallback.Height }}"
+          style="max-width: 100%; height: auto;"
+        />
+      </picture>
+    {{ if $caption }}
+      <figcaption>{{ $caption }}</figcaption>
+    </figure>
+    {{ end }}
+  {{ else }}
+    {{/* Static fallback */}}
+    {{ if $caption }}
+    <figure class="{{ $class }}-wrapper">
+    {{ end }}
+      <img 
+        src="{{ $src | relURL }}" 
+        alt="{{ $alt }}" 
+        loading="{{ $loading }}"
+        decoding="async"
+        class="{{ $class }}"
+        style="max-width: 100%; height: auto;"
+      />
+    {{ if $caption }}
+      <figcaption>{{ $caption }}</figcaption>
+    </figure>
+    {{ end }}
+  {{ end }}
+{{ end }}
