@@ -12,15 +12,13 @@ Parameters:
 
 {{ if eq $style "transparent" }}
 <!-- Transparent style - content renders directly on page background -->
-<section class="py-16 sm:py-24">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+<section class="content-section content-section-transparent">
+  <div class="layout-container">
     {{ with $title }}
-    <div class="mx-auto max-w-2xl mb-12 text-center">
-      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl font-heading">{{ . }}</h2>
-    </div>
+    <h2 class="section-title">{{ . }}</h2>
     {{ end }}
-    <div class="max-w-4xl mx-auto">
-      <div class="markdown book-article prose prose-lg max-w-none text-center">
+    <div class="content-wrapper">
+      <div class="markdown">
         {{ .Inner | .Page.RenderString | safeHTML }}
       </div>
     </div>
@@ -28,24 +26,13 @@ Parameters:
 </section>
 {{ else }}
 <!-- Card/bubble style -->
-{{ $bgClass := "bg-white" }}
-{{ if eq $style "light" }}
-  {{ $bgClass = "bg-slate-50" }}
-{{ else if eq $style "mint" }}
-  {{ $bgClass = "bg-green-50" }}
-{{ else if eq $style "blue" }}
-  {{ $bgClass = "bg-blue-50" }}
-{{ end }}
-
-<section class="py-16 sm:py-24">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+<section class="content-section content-section-{{ $style }}">
+  <div class="layout-container">
     {{ with $title }}
-    <div class="mx-auto max-w-2xl mb-12 text-center">
-      <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl font-heading">{{ . }}</h2>
-    </div>
+    <h2 class="section-title">{{ . }}</h2>
     {{ end }}
-    <div class="{{ $bgClass }} rounded-2xl p-8 sm:p-12 shadow-sm border border-slate-200 max-w-4xl mx-auto">
-      <div class="markdown book-article prose prose-lg max-w-none text-center">
+    <div class="content-card">
+      <div class="markdown">
         {{ .Inner | .Page.RenderString | safeHTML }}
       </div>
     </div>

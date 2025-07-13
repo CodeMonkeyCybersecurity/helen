@@ -29,6 +29,9 @@
   color: inherit;
   transition: all 0.3s ease;
   
+  // Universal hover underline
+  @include hover-underline();
+  
   &:hover {
     transform: translateY(-4px);
     

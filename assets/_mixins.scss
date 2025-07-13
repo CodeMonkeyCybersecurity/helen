@@ -42,12 +42,9 @@
   cursor: pointer;
 }
 
-@mixin button-hover($color: $brand-orange) {
-  &:hover {
-    text-decoration: underline;
-    text-decoration-color: $color;
-    text-underline-offset: 2px;
-  }
+@mixin button-hover($color: $hover-underline-color) {
+  // Use universal hover system instead of custom underlines
+  @include hover-underline($color);
 }
 
 @mixin button-active($bg-color: $brand-orange, $text-color: white) {
@@ -250,6 +247,42 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+// =================================
+// UNIFIED HOVER SYSTEM
+// =================================
+
+// Universal hover underline animation (left-to-right pink underline)
+@mixin hover-underline($color: $hover-underline-color, $thickness: $hover-underline-thickness) {
+  position: relative;
+  text-decoration: none;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -#{$hover-underline-offset};
+    left: 0;
+    width: 0;
+    height: $thickness;
+    background-color: $color;
+    transition: width $hover-animation-speed ease-out;
+  }
+  
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+// Apply hover underline to all clickable elements
+@mixin universal-hover() {
+  @include hover-underline();
+}
+
+// Accessibility outline mixin
+@mixin outline {
+  outline: 2px solid $hover-underline-color;
+  outline-offset: 2px;
 }
 
 // =================================

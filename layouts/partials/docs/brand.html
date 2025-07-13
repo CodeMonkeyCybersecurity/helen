@@ -1,8 +1,0 @@
-<div class="mb-8">
-  <a class="flex items-center space-x-3 text-brand-teal hover:text-brand-logo-orange transition-colors duration-300" href="{{ cond (not .Site.Home.File) .Sites.Default.Home.RelPermalink .Site.Home.RelPermalink }}">
-    {{- with .Site.Params.BookLogo -}}
-    <img src="{{ . | relURL }}" alt="Logo" class="w-10 h-10" />
-    {{- end -}}
-    <span class="font-heading text-xl font-bold">{{ .Site.Title }}</span>
-  </a>
-</div>

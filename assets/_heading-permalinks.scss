@@ -37,11 +37,8 @@ h1, h2, h3, h4, h5, h6 {
   color: $brand-blue;
   text-decoration: none;
   
-  &:hover {
-    text-decoration: underline;
-    text-decoration-color: $brand-blue;
-    text-underline-offset: 3px;
-  }
+  // Universal hover underline (but keep blue color for headings)
+  @include hover-underline($brand-blue);
 }
 
 // Apply to all heading levels

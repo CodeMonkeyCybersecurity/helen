@@ -77,12 +77,13 @@
       {{ range .Site.Menus.main }}
         {{ if .HasChildren }}
           <div class="nav-dropdown" role="none">
-            <a href="{{ .URL }}" class="nav-link nav-link-parent{{ if or (eq $.RelPermalink .URL) ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} active{{ end }}" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            <input type="checkbox" id="dropdown-{{ .Name | urlize }}" class="dropdown-checkbox">
+            <label for="dropdown-{{ .Name | urlize }}" class="nav-link nav-link-parent{{ if or (eq $.RelPermalink .URL) ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} active{{ end }}" role="menuitem" aria-haspopup="true" aria-expanded="false">
               {{ .Name }}
               <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
-            </a>
+            </label>
             <ul class="nav-submenu" role="menu" aria-label="{{ .Name }} submenu">
               {{ range .Children }}
               <li role="none"><a href="{{ .URL }}" class="nav-link nav-link-child{{ if or (eq $.RelPermalink .URL) ($.IsMenuCurrent "main" .) }} active{{ end }}" role="menuitem"{{ if or (eq $.RelPermalink .URL) ($.IsMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a></li>

@@ -96,11 +96,8 @@
     text-decoration: none;
     font-weight: 600;
     
-    &:hover {
-      text-decoration: underline;
-      text-decoration-color: var(--color-orange-logo);
-      text-underline-offset: 2px;
-    }
+    // Universal hover underline
+    @include hover-underline();
   }
 }
 
@@ -122,9 +119,8 @@
     color: var(--color-primary);
     text-decoration: none;
     
-    &:hover {
-      text-decoration: underline;
-    }
+    // Universal hover underline
+    @include hover-underline();
   }
 }
 
@@ -141,9 +137,8 @@
     text-decoration: none;
     font-weight: 600;
     
-    &:hover {
-      text-decoration: underline;
-    }
+    // Universal hover underline
+    @include hover-underline();
   }
   
   p {
@@ -172,9 +167,8 @@
       color: inherit;
       text-decoration: none;
       
-      &:hover {
-        text-decoration: underline;
-      }
+      // Universal hover underline
+      @include hover-underline();
     }
   }
   
@@ -236,9 +230,8 @@
       text-decoration: none;
       font-weight: 600;
       
-      &:hover {
-        text-decoration: underline;
-      }
+      // Universal hover underline
+      @include hover-underline();
     }
   }
 }

@@ -1,36 +1,36 @@
 .markdown {
   // {{< expand "Label" "icon" >}}
-  .book-expand {
-    margin-top: $padding-16;
-    margin-bottom: $padding-16;
+  .expand {
+    margin-top: $spacing-4;
+    margin-bottom: $spacing-4;
 
-    border: $padding-1 solid var(--gray-200);
+    border: 1px solid var(--gray-200);
     border-radius: $border-radius;
 
     overflow: hidden;
 
-    .book-expand-head {
+    .expand-head {
       background: var(--gray-100);
-      padding: $padding-8 $padding-16;
+      padding: $spacing-2 $spacing-4;
       cursor: pointer;
     }
 
-    .book-expand-content {
+    .expand-content {
       display: none;
-      padding: $padding-16;
+      padding: $spacing-4;
     }
 
-    input[type="checkbox"]:checked + .book-expand-content {
+    input[type="checkbox"]:checked + .expand-content {
       display: block;
     }
   }
 
   // {{< tabs >}}
-  .book-tabs {
-    margin-top: $padding-16;
-    margin-bottom: $padding-16;
+  .tabs {
+    margin-top: $spacing-4;
+    margin-bottom: $spacing-4;
 
-    border: $padding-1 solid var(--gray-200);
+    border: 1px solid var(--gray-200);
     border-radius: $border-radius;
 
     overflow: hidden;
@@ -40,23 +40,23 @@
 
     label {
       display: inline-block;
-      padding: $padding-8 $padding-16;
-      border-bottom: $padding-1 transparent;
+      padding: $spacing-2 $spacing-4;
+      border-bottom: 1px transparent;
       cursor: pointer;
     }
 
-    .book-tabs-content {
+    .tabs-content {
       order: 999; //Move content blocks to the end
       width: 100%;
-      border-top: $padding-1 solid var(--gray-100);
-      padding: $padding-16;
+      border-top: 1px solid var(--gray-100);
+      padding: $spacing-4;
       display: none;
     }
 
     input[type="radio"]:checked + label {
-      border-bottom: $padding-1 solid var(--color-link);
+      border-bottom: 1px solid var(--color-link);
     }
-    input[type="radio"]:checked + label + .book-tabs-content {
+    input[type="radio"]:checked + label + .tabs-content {
       display: block;
     }
     input[type="radio"]:focus + label {
@@ -65,25 +65,25 @@
   }
 
   // {{< columns >}}
-  .book-columns {
-    margin-left: -$padding-16;
-    margin-right: -$padding-16;
+  .columns {
+    margin-left: -$spacing-4;
+    margin-right: -$spacing-4;
 
     > div {
-      margin: $padding-16 0;
+      margin: $spacing-4 0;
       min-width: $body-min-width * 0.66;
-      padding: 0 $padding-16;
+      padding: 0 $spacing-4;
     }
   }
 
   // {{< button >}}
-  a.book-btn {
+  a.shortcode-btn {
     display: inline-block;
     font-size: $font-size-14;
     color: var(--color-link);
-    line-height: $padding-16 * 2;
-    padding: 0 $padding-16;
-    border: $padding-1 solid var(--color-link);
+    line-height: $spacing-4 * 2;
+    padding: 0 $spacing-4;
+    border: 1px solid var(--color-link);
     border-radius: $border-radius;
     cursor: pointer;
 
@@ -93,7 +93,7 @@
   }
 
   // {{< hint >}}
-  .book-hint {
+  .hint {
     @each $name, $color in $hint-colors {
       &.#{$name} {
         border-color: $color;

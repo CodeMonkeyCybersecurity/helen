@@ -226,6 +226,9 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
   font-weight: 600;
   transition: all $nav-transition-speed $nav-transition-easing;
   
+  // Universal hover underline
+  @include hover-underline();
+  
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -281,13 +284,8 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
   transition: all $nav-transition-speed $nav-transition-easing;
   position: relative;
   
-  // Subtle underline on hover
-  &:hover {
-    text-decoration: underline;
-    text-decoration-color: $nav-hover-color;
-    text-underline-offset: 4px;
-    text-decoration-thickness: 2px;
-  }
+  // Universal hover underline animation
+  @include hover-underline();
   
   // Active state - red background
   &.active {
@@ -345,6 +343,10 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
 // ========================================
 
 .nav-dropdown {
+  .dropdown-checkbox {
+    display: none;
+  }
+  
   .nav-submenu {
     list-style: none;
     padding: 0;
@@ -358,31 +360,15 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
     }
   }
   
-  // CSS-only dropdown using hover (desktop) and focus-within (keyboard)
-  &:hover,
-  &:focus-within {
-    .nav-submenu {
-      max-height: 400px;
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
-    
-    .dropdown-arrow {
-      transform: rotate(180deg);
-    }
+  // CSS-only dropdown using checkbox (click-only)
+  .dropdown-checkbox:checked ~ .nav-submenu {
+    max-height: 400px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
   
-  // Keep backward compatibility for any existing .open classes
-  &.open {
-    .nav-submenu {
-      max-height: 400px;
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
-    
-    .dropdown-arrow {
-      transform: rotate(180deg);
-    }
+  .dropdown-checkbox:checked ~ .nav-link-parent .dropdown-arrow {
+    transform: rotate(180deg);
   }
 }
 

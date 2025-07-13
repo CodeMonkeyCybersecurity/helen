@@ -175,6 +175,29 @@ $form-input-padding-x: $spacing-3;
 $form-input-padding-y: $spacing-2;
 $form-input-border-radius: $border-radius;
 
+// Legacy compatibility values
+$body-min-width: 20rem;
+$container-max-width: 80rem;
+$menu-width: 16rem;
+$toc-width: 16rem;
+
+// Hint colors for shortcodes
+$hint-colors: (
+  info: #0ea5e9,
+  warning: #f59e0b,  
+  danger: #ef4444,
+);
+
+// =================================
+// HOVER SYSTEM
+// =================================
+
+// Unified hover underline color (pink/purple)
+$hover-underline-color: #a625a4;     // Brand purple/pink
+$hover-underline-thickness: 2px;
+$hover-underline-offset: 4px;
+$hover-animation-speed: 0.3s;
+
 // =================================
 // PRINT SETTINGS
 // =================================

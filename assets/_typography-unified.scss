@@ -38,112 +38,52 @@
   src: url('/fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-BoldItalic.ttf') format('truetype');
 }
 
-// Inter - For body text
+// Inter Variable - For body text (covers all weights 100-900)
 @font-face {
   font-family: 'Inter';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100 900;
   font-display: swap;
-  src: url('/fonts/Inter/static/Inter_18pt-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/Inter/static/Inter_18pt-Medium.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('/fonts/Inter/static/Inter_18pt-SemiBold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/Inter/static/Inter_18pt-Bold.ttf') format('truetype');
+  src: url('/fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype-variations');
 }
 
 @font-face {
   font-family: 'Inter';
   font-style: italic;
-  font-weight: 400;
+  font-weight: 100 900;
   font-display: swap;
-  src: url('/fonts/Inter/static/Inter_18pt-Italic.ttf') format('truetype');
+  src: url('/fonts/Inter/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype-variations');
 }
 
-// Noto Sans - For brand titles
+// Noto Sans Variable - Alternative body text
 @font-face {
   font-family: 'Noto Sans';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100 900;
+  font-stretch: 62.5% 100%;
   font-display: swap;
-  src: url('/fonts/NotoSans-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/Noto_Sans/static/NotoSans-Medium.ttf') format('truetype');
+  src: url('/fonts/Noto_Sans/NotoSans-VariableFont_wdth,wght.ttf') format('truetype-variations');
 }
 
 @font-face {
   font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 600;
+  font-style: italic;
+  font-weight: 100 900;
+  font-stretch: 62.5% 100%;
   font-display: swap;
-  src: url('/fonts/Noto_Sans/static/NotoSans-SemiBold.ttf') format('truetype');
+  src: url('/fonts/Noto_Sans/NotoSans-Italic-VariableFont_wdth,wght.ttf') format('truetype-variations');
 }
 
-@font-face {
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/NotoSans-Bold.ttf') format('truetype');
-}
-
-// Noto Sans Mono - For code blocks
+// Noto Sans Mono Variable - For code blocks
 @font-face {
   font-family: 'Noto Sans Mono';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100 900;
+  font-stretch: 62.5% 100%;
   font-display: swap;
-  src: url('/fonts/Noto_Sans_Mono/static/NotoSansMono-Regular.ttf') format('truetype');
+  src: url('/fonts/Noto_Sans_Mono/NotoSansMono-VariableFont_wdth,wght.ttf') format('truetype-variations');
 }
 
-@font-face {
-  font-family: 'Noto Sans Mono';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/Noto_Sans_Mono/static/NotoSansMono-Medium.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Noto Sans Mono';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('/fonts/Noto_Sans_Mono/static/NotoSansMono-SemiBold.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Noto Sans Mono';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/Noto_Sans_Mono/static/NotoSansMono-Bold.ttf') format('truetype');
-}
 
 // =================================
 // FONT FAMILY STACKS
@@ -360,12 +300,13 @@ em { @extend .text-italic; }
 // Base link styles
 .link {
   color: var(--link-primary);
-  text-decoration: underline;
   font-weight: var(--font-weight-medium);
+  
+  // Universal hover underline animation
+  @include hover-underline();
   
   &:hover {
     color: var(--link-hover);
-    text-decoration: none;
   }
 }
 

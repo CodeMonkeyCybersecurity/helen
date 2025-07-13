@@ -32,6 +32,8 @@
 @import 'navigation-unified';
 
 // Content components (use typography and layout)
+@import 'components';    // Feature cards, alerts, etc
+@import 'custom';        // Site-specific custom styles
 @import 'promo-tiles';
 @import 'heading-permalinks';
 
@@ -40,11 +42,15 @@
 // =================================
 
 // Keep essential legacy files for existing content
-@import 'variables';     // Legacy variables mapped to unified system
-@import 'defaults';      // Hugo Book theme compatibility
 @import 'markdown';      // Markdown content styling
 @import 'shortcodes';    // Hugo shortcode styling
 @import 'utils';         // Utility classes
+
+// =================================
+// PRINT STYLES
+// =================================
+
+@import 'print';         // Print media queries
 
 // =================================
 // BASE STYLES
@@ -160,6 +166,9 @@
   text-decoration: none;
   transition: all 0.2s ease;
   cursor: pointer;
+  
+  // Universal hover underline for all buttons
+  @include hover-underline();
   
   &-primary {
     background: var(--color-primary);

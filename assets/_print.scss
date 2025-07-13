@@ -1,13 +1,9 @@
 @media print {
-  .book-menu,
-  .book-footer,
-  .book-toc {
+  // Hide navigation and non-content elements
+  .site-navigation,
+  .site-footer,
+  .site-toc {
     display: none;
-  }
-
-  .book-header,
-  .book-header aside {
-    display: block;
   }
 
   main {

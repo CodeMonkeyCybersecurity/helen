@@ -1,14 +1,13 @@
-@import "defaults";
-@import "variables";
+// Variables now imported globally via main.scss
 
 // Webkit
 ::-webkit-scrollbar {
-  width: $padding-8;
+  width: $spacing-2;
 }
 
 ::-webkit-scrollbar-thumb {
   background: transparent;
-  border-radius: $padding-8;
+  border-radius: $spacing-2;
 }
 
 :hover::-webkit-scrollbar-thumb {
@@ -21,6 +20,6 @@ body {
 }
 
 // Future
-.book-menu nav {
+.site-navigation nav {
   scrollbar-color: transparent var(--gray-500);
 }
