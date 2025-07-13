@@ -1,0 +1,52 @@
+// Heading Permalinks
+// Style for clickable heading anchors
+
+// Import colors
+@import 'colors-unified';
+
+// Heading permalink styles
+h1, h2, h3, h4, h5, h6 {
+  // Permalink anchors
+  a.heading-link,
+  a.anchor,
+  .header-anchor {
+    color: $brand-blue; // Blue color (#4078f2)
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    margin-left: 0.5rem;
+    
+    &:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+  }
+  
+  // Show permalink on heading hover
+  &:hover {
+    a.heading-link,
+    a.anchor,
+    .header-anchor {
+      opacity: 0.7;
+    }
+  }
+}
+
+// Direct heading links (when heading itself is a link)
+.heading-direct-link {
+  color: $brand-blue;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $brand-blue;
+    text-underline-offset: 3px;
+  }
+}
+
+// Apply to all heading levels
+h1, h2, h3, h4, h5, h6 {
+  > a:not(.heading-link):not(.anchor) {
+    @extend .heading-direct-link;
+  }
+}

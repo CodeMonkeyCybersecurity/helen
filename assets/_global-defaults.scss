@@ -1,0 +1,68 @@
+// Global Default Styles
+// Conservative defaults that don't override browser behavior
+
+// ========================================
+// BOX MODEL RESET
+// ========================================
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// ========================================
+// DEFAULT CENTER ALIGNMENT
+// ========================================
+
+// Set center alignment as the default for content
+body {
+  text-align: center;
+}
+
+// Main content areas maintain center alignment
+main,
+.site-main,
+.page-content,
+.homepage,
+section,
+article {
+  text-align: center;
+}
+
+// ========================================
+// FORM DEFAULTS
+// ========================================
+
+// Ensure forms maintain usability
+form {
+  text-align: left; // Forms should always be left-aligned
+}
+
+// ========================================
+// NAVIGATION DEFAULTS  
+// ========================================
+
+// Navigation stays left-aligned for usability
+nav {
+  text-align: left;
+}
+
+// ========================================
+// CODE DEFAULTS
+// ========================================
+
+// Code blocks maintain left alignment for readability
+pre,
+code,
+.code-block {
+  text-align: left;
+}
+
+// ========================================
+// UTILITY CLASSES (no !important)
+// ========================================
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }

@@ -5,8 +5,8 @@
 // BRAND COLORS - Primary Identity
 // =================================
 
-// Main brand color - Teal
-$brand-primary: #0ca678;            // Main teal brand color
+// Main brand color - Teal (for backgrounds/accents only)
+$brand-primary: #0ca678;            // Teal for CTAs and accents
 $brand-secondary: #51a14f;          // Brand green
 $brand-purple: #a625a4;             // Brand purple  
 $brand-blue: #4078f2;               // Brand blue
@@ -39,7 +39,7 @@ $neutral-800: #262626;             // Text dark
 $neutral-900: #171717;             // Text darkest
 
 // Background colors
-$bg-website: #e3dacc;              // Main site background
+$bg-website: #f0eee6;              // Main site background
 $bg-primary: #fdfbf9;              // Primary content background (neutral-50)
 $bg-secondary: #fdfbf9;            // Secondary content background
 $bg-accent: rgba($brand-secondary, 0.1);  // Accent background (green tint)

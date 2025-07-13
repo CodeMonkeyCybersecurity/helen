@@ -1,0 +1,407 @@
+// Unified Navigation System
+// Single source of truth for all navigation styles
+
+// =================================
+// NAVIGATION CONFIGURATION
+// =================================
+// Uses layout system for consistency
+
+// Navigation-specific color assignments (colors already imported via layout)
+$nav-text-color: $neutral-700;                    // Dark text
+$nav-hover-color: $brand-purple;                  // Purple for hover (#a625a4)
+$nav-active-bg: $brand-orange;                    // Orange for active background
+$nav-active-text: white;                          // White text on active
+$nav-cta-bg: $brand-primary;                      // Teal for CTA
+$nav-focus-color: $brand-orange;                  // Orange for focus outlines
+$nav-border-color: $neutral-200;                  // Light gray borders
+
+// Navigation measurements are now used directly from config
+// $nav-sidebar-width and $nav-header-height available globally
+
+// Transitions (using config values)
+$nav-transition-speed: $duration-slow;            // 0.5s from config
+$nav-transition-easing: $ease-in-out;             // Smooth easing from config
+
+// Use centralized breakpoints
+$nav-mobile-max: $breakpoint-mobile-max;          // From config
+$nav-desktop-min: $breakpoint-desktop-min;        // From config
+
+// ========================================
+// BASE NAVIGATION CONTAINER
+// ========================================
+
+.site-navigation {
+  background: white;
+  border-bottom: 1px solid $nav-border-color;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  
+  // Desktop sidebar
+  @media (min-width: 1024px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: $nav-sidebar-width;
+    height: 100vh;
+    border-bottom: none;
+    border-right: 1px solid $nav-border-color;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+// ========================================
+// MOBILE MENU TOGGLE
+// ========================================
+
+.mobile-menu-checkbox {
+  display: none;
+}
+
+.mobile-menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 32px;
+  height: 24px;
+  cursor: pointer;
+  
+  @media (min-width: 1024px) {
+    display: none;
+  }
+  
+  .hamburger {
+    width: 100%;
+    height: 3px;
+    background: $nav-text-color;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+}
+
+.mobile-menu-checkbox:checked {
+  ~ .nav-header .mobile-menu-toggle {
+    .hamburger:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+    .hamburger:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  }
+  
+  ~ .nav-menu {
+    max-height: 600px;
+    padding: 1.5rem 1rem;
+  }
+}
+
+// ========================================
+// NAVIGATION HEADER
+// ========================================
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  
+  @media (min-width: 1024px) {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--color-neutral-100);
+  }
+}
+
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: $nav-text-color;
+  font-weight: 700;
+  
+  &:hover {
+    color: $nav-hover-color;
+  }
+}
+
+.brand-logo {
+  width: 32px;
+  height: 32px;
+}
+
+// ========================================
+// MOBILE CONTROLS
+// ========================================
+
+.mobile-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.mobile-search-container {
+  display: flex;
+}
+
+.mobile-search-form {
+  display: flex;
+  position: relative;
+}
+
+// Base search input styles
+.search-input {
+  padding: 0.75rem;
+  border: 1px solid $nav-border-color;
+  border-radius: 6px;
+  font-size: 1rem;  // Consistent font size
+  
+  &:focus {
+    outline: 2px solid $nav-focus-color;
+    outline-offset: -1px;
+  }
+}
+
+.mobile-search-input {
+  @extend .search-input;
+  width: 150px;
+}
+
+.mobile-search-submit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 0 0.75rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+// ========================================
+// NAVIGATION MENU
+// ========================================
+
+.nav-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  
+  @media (min-width: 1024px) {
+    max-height: none;
+    overflow: visible;
+    padding: 1rem;
+  }
+}
+
+// ========================================
+// NAVIGATION SECTIONS
+// ========================================
+
+.nav-cta-section,
+.nav-search-section,
+.nav-primary {
+  margin-bottom: 1.5rem;
+}
+
+// CTA Button
+.nav-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: $nav-cta-bg;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all $nav-transition-speed $nav-transition-easing;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  &.active {
+    background: $nav-active-bg;
+  }
+}
+
+// Desktop Search
+.nav-search-section {
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.desktop-search-form {
+  position: relative;
+}
+
+.nav-search-input {
+  @extend .search-input;
+  width: 100%;
+  padding-right: 2.5rem;
+}
+
+.nav-search-submit {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+// ========================================
+// NAVIGATION LINKS
+// ========================================
+
+// Base link styles
+.nav-link,
+.nav-link-parent,
+.nav-link-child {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: $nav-text-color;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all $nav-transition-speed $nav-transition-easing;
+  position: relative;
+  
+  // Subtle underline on hover
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $nav-hover-color;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+  }
+  
+  // Active state - red background
+  &.active {
+    background: $nav-active-bg;
+    color: $nav-active-text;
+    font-weight: 600;
+    
+    // Disable underline animation on active items
+    &::after {
+      display: none;
+    }
+    
+    &:hover {
+      text-decoration: none;
+      
+      &::after {
+        display: none;
+      }
+    }
+  }
+  
+  // Focus state
+  &:focus-visible {
+    outline: 2px solid $nav-focus-color;
+    outline-offset: 2px;
+  }
+}
+
+// Parent link with dropdown
+.nav-link-parent {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  .dropdown-arrow {
+    width: 12px;
+    height: 12px;
+    transition: transform 0.3s ease;
+  }
+}
+
+// Child links
+.nav-link-child {
+  font-size: 0.9rem;
+  margin-left: 1rem;
+  
+  @media (min-width: 1024px) {
+    margin-left: 1.5rem;
+  }
+}
+
+// ========================================
+// ACCORDION DROPDOWN
+// ========================================
+
+.nav-dropdown {
+  .nav-submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    
+    li {
+      list-style: none;
+    }
+  }
+  
+  // CSS-only dropdown using hover (desktop) and focus-within (keyboard)
+  &:hover,
+  &:focus-within {
+    .nav-submenu {
+      max-height: 400px;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .dropdown-arrow {
+      transform: rotate(180deg);
+    }
+  }
+  
+  // Keep backward compatibility for any existing .open classes
+  &.open {
+    .nav-submenu {
+      max-height: 400px;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .dropdown-arrow {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+// ========================================
+// UTILITY OVERRIDES
+// ========================================
+
+// Consistent focus styles for navigation elements
+.site-navigation *:focus-visible,
+.nav-menu *:focus-visible,
+.nav-link:focus-visible,
+.nav-search-input:focus-visible,
+.mobile-search-input:focus-visible {
+  outline-color: $nav-focus-color;
+  outline-width: 2px;
+  outline-style: solid;
+}
+
+// Search icon color
+.search-icon {
+  color: lighten($nav-text-color, 30%);
+}

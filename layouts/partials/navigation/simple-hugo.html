@@ -50,7 +50,7 @@
   <div class="nav-menu" role="menubar">
     {{/* CTA Section - Moved to top */}}
     <div class="nav-cta-section">
-      <a href="/offerings/delphi/sign-up/" class="nav-cta" role="menuitem" aria-label="Get started with our cybersecurity services">
+      <a href="/offerings/delphi/sign-up/" class="nav-cta{{ if eq .RelPermalink "/offerings/delphi/sign-up/" }} active{{ end }}" role="menuitem" aria-label="Get started with our cybersecurity services"{{ if eq .RelPermalink "/offerings/delphi/sign-up/" }} aria-current="page"{{ end }}>
         <span class="cta-text">Get Started</span>
         <span class="cta-icon">→</span>
       </a>
@@ -76,70 +76,24 @@
     <div class="nav-primary">
       {{ range .Site.Menus.main }}
         {{ if .HasChildren }}
-          <div class="nav-group" role="none">
-            <span class="nav-group-title" role="menuitem">{{ .Name }}</span>
+          <div class="nav-dropdown" role="none">
+            <a href="{{ .URL }}" class="nav-link nav-link-parent{{ if or (eq $.RelPermalink .URL) ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} active{{ end }}" role="menuitem" aria-haspopup="true" aria-expanded="false">
+              {{ .Name }}
+              <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
             <ul class="nav-submenu" role="menu" aria-label="{{ .Name }} submenu">
               {{ range .Children }}
-              <li role="none"><a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}" role="menuitem"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+              <li role="none"><a href="{{ .URL }}" class="nav-link nav-link-child{{ if or (eq $.RelPermalink .URL) ($.IsMenuCurrent "main" .) }} active{{ end }}" role="menuitem"{{ if or (eq $.RelPermalink .URL) ($.IsMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
               {{ end }}
             </ul>
           </div>
         {{ else }}
-          <a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}" role="menuitem"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
+          <a href="{{ .URL }}" class="nav-link{{ if or (eq $.RelPermalink .URL) ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) (eq (printf "%s/" $.RelPermalink) .URL) (eq $.RelPermalink (printf "%s/" .URL)) }} active{{ end }}" role="menuitem"{{ if or (eq $.RelPermalink .URL) ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>
         {{ end }}
       {{ end }}
     </div>
   </div>
   
 </nav>
-
-{{/* Minimal JavaScript for navigation enhancement */}}
-<script>
-(function() {
-  // Sticky navigation
-  const nav = document.querySelector('.site-navigation');
-  if (nav) {
-    let ticking = false;
-    
-    function updateNavigation() {
-      const scrolled = window.scrollY > 10;
-      nav.classList.toggle('scrolled', scrolled);
-      ticking = false;
-    }
-    
-    function requestTick() {
-      if (!ticking) {
-        requestAnimationFrame(updateNavigation);
-        ticking = true;
-      }
-    }
-    
-    window.addEventListener('scroll', requestTick, { passive: true });
-  }
-  
-  // Keyboard shortcuts for search (go.dev pattern)
-  const mobileSearchInput = document.querySelector('.mobile-search-input');
-  const desktopSearchInput = document.querySelector('.nav-search-input');
-  
-  function focusSearch() {
-    if (window.innerWidth < 1024 && mobileSearchInput) {
-      mobileSearchInput.focus();
-    } else if (desktopSearchInput) {
-      desktopSearchInput.focus();
-    }
-  }
-  
-  document.addEventListener('keydown', function(e) {
-    // "/" key focuses search (like go.dev)
-    if (e.key === '/' && !e.target.closest('input, textarea')) {
-      e.preventDefault();
-      focusSearch();
-    }
-    
-    // Escape unfocuses search
-    if (e.key === 'Escape' && e.target.closest('.mobile-search-input, .nav-search-input')) {
-      e.target.blur();
-    }
-  });
-})();
-</script>

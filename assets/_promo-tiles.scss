@@ -1,0 +1,209 @@
+// Promo Tiles Component Styles
+// Responsive grid of promotional tiles
+
+// Container styles
+.promo-tiles-container {
+  display: grid;
+  gap: 1.5rem;
+  width: 100%;
+  margin: 2rem 0;
+  
+  // Responsive grid columns
+  &.promo-tiles-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  &.promo-tiles-3 {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Individual tile styles
+.promo-tile {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+    
+    .promo-tile-content {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+    
+    .cta-arrow {
+      transform: translateX(4px);
+    }
+  }
+}
+
+.promo-tile-content {
+  height: 100%;
+  padding: 1.5rem;
+  background: white;
+  border: 2px solid var(--color-neutral-200);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+// Color variant modifiers - single class approach
+.promo-tile-content-teal {
+  border-color: var(--color-primary);
+}
+
+.promo-tile:hover .promo-tile-content-teal {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.promo-tile-content-orange {
+  border-color: var(--color-orange-logo);
+}
+
+.promo-tile:hover .promo-tile-content-orange {
+  background: var(--color-orange-logo);
+  color: white;
+  border-color: var(--color-orange-logo);
+}
+
+.promo-tile-content-slate {
+  border-color: var(--color-neutral-400);
+}
+
+.promo-tile:hover .promo-tile-content-slate {
+  background: var(--color-neutral-600);
+  color: white;
+  border-color: var(--color-neutral-600);
+}
+
+.promo-tile-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.promo-tile-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.promo-tile-icon {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-neutral-100);
+  border-radius: 8px;
+  
+  .icon-emoji {
+    font-size: 1.25rem;
+  }
+}
+
+// Icon color variants
+.promo-tile-icon-teal {
+  background: rgba(12, 166, 120, 0.1);
+}
+
+.promo-tile-icon-orange {
+  background: rgba(215, 115, 80, 0.1);
+}
+
+.promo-tile:hover .promo-tile-icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.promo-tile-title {
+  flex: 1;
+  min-width: 0;
+  
+  h3 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-neutral-800);
+  }
+}
+
+.promo-tile:hover .promo-tile-title h3 {
+  color: inherit;
+}
+
+.promo-tile-badge {
+  flex-shrink: 0;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  
+  &.badge-teal {
+    background: rgba(12, 166, 120, 0.1);
+    color: var(--color-primary);
+  }
+  
+  &.badge-orange {
+    background: rgba(215, 115, 80, 0.1);
+    color: var(--color-orange-logo);
+  }
+  
+  &.badge-slate {
+    background: var(--color-neutral-100);
+    color: var(--color-neutral-600);
+  }
+  
+}
+
+.promo-tile:hover .promo-tile-badge {
+  background: rgba(255, 255, 255, 0.2);
+  color: inherit;
+}
+
+.promo-tile-description {
+  margin-bottom: 1rem;
+  color: var(--color-neutral-600);
+  line-height: 1.6;
+}
+
+.promo-tile:hover .promo-tile-description {
+  color: inherit;
+}
+
+.promo-tile-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  
+  .cta-arrow {
+    transition: transform 0.2s ease;
+  }
+}
+
+// CTA color variants
+.promo-tile-cta-teal {
+  color: var(--color-primary);
+}
+
+.promo-tile-cta-orange {
+  color: var(--color-orange-logo);
+}
+
+.promo-tile-cta-slate {
+  color: var(--color-neutral-600);
+}
+
+.promo-tile:hover .promo-tile-cta {
+  color: inherit;
+}

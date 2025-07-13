@@ -1,0 +1,197 @@
+// Unified Layout System
+// Single source of truth for all layout measurements and responsive behavior
+
+// =================================
+// LAYOUT CONSTANTS (from config)
+// =================================
+
+// Navigation measurements (using centralized config)
+$layout-sidebar-width: $nav-sidebar-width;
+$layout-mobile-breakpoint: $breakpoint-mobile-max;
+$layout-desktop-breakpoint: $breakpoint-desktop-min;
+
+// Container measurements
+$layout-container-max: $container-max;
+$layout-content-max: $content-max-width;
+$layout-header-height: $nav-header-height;
+$layout-footer-height: $footer-min-height;
+
+// Spacing measurements
+$layout-padding-mobile: $padding-mobile;
+$layout-padding-desktop: $padding-desktop;
+$layout-margin-mobile: $margin-mobile;
+$layout-margin-desktop: $margin-desktop;
+
+// =================================
+// RESPONSIVE LAYOUT SYSTEM
+// =================================
+
+// Main site container
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+// Main content area - accounts for sidebar
+.site-main {
+  flex: 1;
+  width: 100%;
+  min-height: calc(100vh - #{$layout-header-height} - #{$layout-footer-height});
+  padding: $layout-margin-mobile $layout-padding-mobile;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+  
+  // Desktop layout with sidebar
+  @media (min-width: $layout-desktop-breakpoint) {
+    margin-left: $layout-sidebar-width;
+    width: calc(100% - #{$layout-sidebar-width});
+    padding: $layout-margin-desktop $layout-padding-desktop;
+  }
+}
+
+// Content containers
+.page-content,
+.homepage,
+.article-content {
+  max-width: $layout-container-max;
+  margin: 0 auto;
+  width: 100%;
+}
+
+// Readable content width
+.content,
+.entry-content,
+.post-content,
+.markdown {
+  max-width: $layout-content-max;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// =================================
+// FOOTER LAYOUT
+// =================================
+
+.site-footer {
+  margin-top: auto;
+  min-height: $layout-footer-height;
+  transition: margin-left 0.3s ease, width 0.3s ease;
+  
+  // Desktop layout with sidebar
+  @media (min-width: $layout-desktop-breakpoint) {
+    margin-left: $layout-sidebar-width;
+    width: calc(100% - #{$layout-sidebar-width});
+  }
+}
+
+// =================================
+// SECTION LAYOUT
+// =================================
+
+// Ensure sections don't overflow
+section,
+.section {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin-bottom: $layout-margin-mobile;
+  
+  @media (min-width: $layout-desktop-breakpoint) {
+    margin-bottom: $layout-margin-desktop;
+  }
+}
+
+// =================================
+// RESPONSIVE UTILITIES
+// =================================
+
+// Container with consistent padding
+.layout-container {
+  max-width: $layout-container-max;
+  margin: 0 auto;
+  padding: 0 $layout-padding-mobile;
+  
+  @media (min-width: $layout-desktop-breakpoint) {
+    padding: 0 $layout-padding-desktop;
+  }
+}
+
+// Content with readable width
+.layout-content {
+  max-width: $layout-content-max;
+  margin: 0 auto;
+}
+
+// Full width utility
+.layout-full-width {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  
+  @media (min-width: $layout-desktop-breakpoint) {
+    width: calc(100vw - #{$layout-sidebar-width});
+    margin-left: calc(-50vw + 50% + #{$layout-sidebar-width / 2});
+  }
+}
+
+// =================================
+// RESPONSIVE MEDIA
+// =================================
+
+// Ensure media elements are responsive
+img,
+video,
+iframe,
+embed,
+object {
+  max-width: 100%;
+  height: auto;
+}
+
+// Tables overflow handling
+table {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  display: block;
+  white-space: nowrap;
+  
+  @media (min-width: $layout-desktop-breakpoint) {
+    display: table;
+    white-space: normal;
+  }
+}
+
+// =================================
+// FIXED ELEMENTS
+// =================================
+
+// Handle fixed/absolute positioned elements
+.fixed,
+.absolute,
+[class*="fixed-"],
+[class*="absolute-"] {
+  @media (min-width: $layout-desktop-breakpoint) {
+    left: $layout-sidebar-width;
+    width: calc(100% - #{$layout-sidebar-width});
+  }
+}
+
+// =================================
+// PRINT LAYOUT
+// =================================
+
+@media print {
+  .site-main,
+  .site-footer {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  
+  .layout-full-width {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+}

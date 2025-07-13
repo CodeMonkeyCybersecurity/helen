@@ -6,7 +6,7 @@
   Parameters:
   - title: Tile title
   - url: Destination URL
-  - icon: CSS class for icon (optional)
+  - icon: Emoji or icon character (optional)
   - badge: Small badge text (optional)
   - color: Theme color (teal, orange, slate)
 */}}
@@ -17,46 +17,36 @@
 {{ $badge := .Get "badge" }}
 {{ $color := .Get "color" | default "teal" }}
 
-{{ $colorClasses := dict 
-  "teal" "border-brand-teal hover:bg-brand-teal hover:text-white"
-  "orange" "border-brand-logo-orange hover:bg-brand-logo-orange hover:text-white"
-  "slate" "border-slate-400 hover:bg-slate-400 hover:text-white"
-}}
-
-<a href="{{ $url }}" class="promo-tile group block">
-  <div class="h-full p-6 border-2 {{ index $colorClasses $color }} rounded-lg bg-white transition-all duration-300 hover:shadow-lg hover:scale-105">
+<a href="{{ $url }}" class="promo-tile promo-tile-{{ $color }}">
+  <div class="promo-tile-content">
     
-    <div class="flex items-start justify-between mb-4">
-      <div class="flex items-center space-x-3">
+    <div class="promo-tile-header">
+      <div class="promo-tile-title-group">
         {{ if $icon }}
-        <div class="flex-shrink-0">
-          <div class="w-10 h-10 {{ $color }}-icon rounded-lg flex items-center justify-center group-hover:bg-white group-hover:text-current transition-colors">
-            <i class="{{ $icon }} text-lg"></i>
-          </div>
+        <div class="promo-tile-icon">
+          <span class="icon-emoji">{{ $icon }}</span>
         </div>
         {{ end }}
         
-        <div class="flex-1 min-w-0">
-          <h3 class="text-lg font-semibold text-slate-900 group-hover:text-inherit transition-colors">
-            {{ $title }}
-          </h3>
+        <div class="promo-tile-title">
+          <h3>{{ $title }}</h3>
         </div>
       </div>
       
       {{ if $badge }}
-      <span class="flex-shrink-0 px-2 py-1 text-xs font-medium bg-{{ $color }}-100 text-{{ $color }}-800 rounded-full">
+      <span class="promo-tile-badge badge-{{ $color }}">
         {{ $badge }}
       </span>
       {{ end }}
     </div>
     
-    <div class="text-slate-600 group-hover:text-inherit transition-colors">
+    <div class="promo-tile-description">
       {{ .Inner | markdownify }}
     </div>
     
-    <div class="mt-4 flex items-center text-sm font-medium text-{{ $color }}-600 group-hover:text-inherit transition-colors">
+    <div class="promo-tile-cta">
       <span>Learn more</span>
-      <svg class="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="cta-arrow" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
       </svg>
     </div>

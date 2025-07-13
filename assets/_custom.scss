@@ -2,19 +2,19 @@
 
 // Navigation now handled by main.scss via _navigation-simple.scss
 
-// Site-wide styling overrides
+// Site-wide styling defaults (no !important needed)
 html {
-  background-color: $bg-website !important;
-  margin: 0 !important;
-  padding: 0 !important;
+  background-color: $bg-website;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0 !important;
-  padding: 0 !important;
+  margin: 0;
+  padding: 0;
   min-width: 100vw;
   overflow-x: hidden;
-  background-color: $bg-website !important;
+  background-color: $bg-website;
 }
 
 // Button styles
@@ -172,7 +172,7 @@ section {
     font-size: 1.875rem;
     font-weight: 700;
     letter-spacing: -0.025em;
-    color: rgb(15, 23, 42);
+    color: var(--text-primary);
     text-align: center;
     margin-bottom: 2rem;
     line-height: 1.2;
@@ -183,68 +183,45 @@ section {
   }
 }
 
-// Global center alignment for main content
-main {
+// Selective center alignment for hero sections and headers only
+.hero-section,
+.page-header,
+.section-header {
   text-align: center;
-  
-  p, ul, ol, li, h1, h2, h3, h4, h5, h6 {
-    text-align: center;
-  }
-  
-  section {
-    text-align: center;
-  }
-  
-  .prose {
-    text-align: center;
-    
-    p, ul, ol, li, h1, h2, h3, h4, h5, h6 {
-      text-align: center;
-    }
-  }
-  
-  .markdown {
-    text-align: center;
-    
-    * {
-      text-align: inherit;
-    }
-  }
 }
 
 .feature-card {
   text-align: center;
 }
 
-// Remove bullets from certain lists
-.feature-card-wrapper .prose {
-  ul, ol {
-    list-style: none !important;
-    padding-left: 0 !important;
+// Feature card list styles - single class approach
+.feature-card-list {
+  list-style: none;
+  padding-left: 0;
+  
+  li {
+    list-style: none;
     
-    li {
-      list-style: none !important;
-      
-      &::before {
-        display: none !important;
-      }
+    &::before,
+    &::marker {
+      display: none;
+      content: none;
     }
   }
 }
 
-section:has(ul.list-none) {
-  ul {
-    list-style: none !important;
-    padding-left: 0 !important;
+// List without bullets utility class
+.list-none {
+  list-style: none;
+  padding-left: 0;
+  
+  li {
+    list-style: none;
     
-    li {
-      list-style: none !important;
-      
-      &::before,
-      &::marker {
-        display: none !important;
-        content: none !important;
-      }
+    &::before,
+    &::marker {
+      display: none;
+      content: none;
     }
   }
 }

@@ -254,10 +254,11 @@ body {
 }
 
 // =================================
-// HEADING STYLES
+// HEADING STYLES - Semantic Classes
 // =================================
 
-h1, h2, h3, h4, h5, h6 {
+// Base heading styles (semantic classes)
+.heading {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.25;
@@ -266,20 +267,40 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
 }
 
-h1 { font-size: var(--font-size-2xl); }
-h2 { font-size: var(--font-size-xl); }
-h3 { font-size: var(--font-size-lg); }
-h4, h5, h6 { font-size: var(--font-size-base); }
+// Heading size modifiers
+.heading-1, .page-title { @extend .heading; font-size: var(--font-size-2xl); }
+.heading-2, .section-title { @extend .heading; font-size: var(--font-size-xl); }
+.heading-3, .subsection-title { @extend .heading; font-size: var(--font-size-lg); }
+.heading-4, .heading-5, .heading-6 { @extend .heading; font-size: var(--font-size-base); }
+
+// Element selectors for backwards compatibility (apply semantic classes)
+h1 { @extend .heading-1; }
+h2 { @extend .heading-2; }
+h3 { @extend .heading-3; }
+h4, h5, h6 { @extend .heading-4; }
 
 // =================================
-// BODY TEXT STYLES
+// BODY TEXT STYLES - Semantic Classes
 // =================================
 
-p, li, blockquote {
+// Base body text styles
+.body-text {
   font-family: var(--font-body);
   font-size: var(--font-size-base);
   margin-bottom: 1em;
 }
+
+// Body text size modifiers
+.body-text-sm { @extend .body-text; font-size: var(--font-size-sm); }
+.body-text-lg { @extend .body-text; font-size: var(--font-size-lg); }
+
+// Semantic content classes
+.paragraph { @extend .body-text; }
+.list-item { @extend .body-text; }
+.quote { @extend .body-text; font-style: italic; }
+
+// Element selectors for backwards compatibility
+p, li, blockquote { @extend .body-text; }
 
 // =================================
 // SPECIALIZED TEXT STYLES
@@ -296,8 +317,12 @@ p, li, blockquote {
   }
 }
 
-// Code and technical text
-code, pre, .code-block {
+// =================================
+// CODE & FORMATTING - Semantic Classes
+// =================================
+
+// Base code styles
+.code {
   font-family: var(--font-mono);
   background-color: #f4f4f4;
   padding: 0.2em 0.4em;
@@ -306,25 +331,34 @@ code, pre, .code-block {
   color: #333;
 }
 
-pre {
+.code-block {
+  @extend .code;
   padding: $spacing-8;
   overflow-x: auto;
+  display: block;
 }
 
-// Text formatting
-strong {
+// Text formatting classes
+.text-bold, .emphasis-strong {
   font-weight: var(--font-weight-semibold);
 }
 
-em {
+.text-italic, .emphasis-italic {
   font-style: italic;
 }
 
+// Element selectors for backwards compatibility
+code { @extend .code; }
+pre { @extend .code-block; }
+strong { @extend .text-bold; }
+em { @extend .text-italic; }
+
 // =================================
-// LINK STYLES
+// LINK STYLES - Semantic Classes
 // =================================
 
-a {
+// Base link styles
+.link {
   color: var(--link-primary);
   text-decoration: underline;
   font-weight: var(--font-weight-medium);
@@ -334,6 +368,15 @@ a {
     text-decoration: none;
   }
 }
+
+// Link variants
+.link-primary { @extend .link; }
+.link-secondary { @extend .link; color: var(--text-secondary); }
+.link-button { @extend .link; text-decoration: none; }
+.link-nav { @extend .link; text-decoration: none; font-weight: normal; }
+
+// Element selector for backwards compatibility
+a { @extend .link; }
 
 // =================================
 // UTILITY CLASSES

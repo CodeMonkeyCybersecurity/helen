@@ -15,7 +15,7 @@ Welcome to the Code Monkey Cybersecurity resource center.
 Advanced threat detection and response platform designed for small businesses. Real-time monitoring with human-curated alerts.
 {{< /promo-tile >}}
 
-{{< promo-tile title="Persephone" url="/offerings/persephone/" icon="💾" color="slate" badge="Backup" >}}
+{{< promo-tile title="Persephone" url="/offerings/persephone/" icon="" color="slate" badge="Backup" >}}
 Automated data protection and backup solutions. Protect your business data with secure, Australian-hosted backup services.
 {{< /promo-tile >}}
 
