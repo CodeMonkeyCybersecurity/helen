@@ -34,6 +34,7 @@
 // Content components (use typography and layout)
 @import 'sections-simplified';     // Simplified sections and CTAs
 @import 'components-consolidated'; // NEW: Single unified component system
+@import 'cards-design-system';    // Card component hierarchy
 @import 'footer';                 // Footer and social icon styles
 @import 'custom';             // Site-specific custom styles
 @import 'promo-tiles';
@@ -190,18 +191,9 @@
   }
 }
 
+// Blog post cards use the content card pattern
 .blog-post-card {
-  border: 1px solid var(--neutral-200);
-  border-radius: var(--border-radius);
-  padding: var(--spacing-12);
-  background: white;
-  transition: all 0.2s ease;
-  overflow: visible;
-  
-  &:hover {
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
-  }
+  @extend .card-content;
 }
 
 // ========================================
@@ -433,87 +425,21 @@ ul, ol {
     }
   }
   
+  // Feature cards are now styled via the card design system
+  // Map old classes to new system
   .feature-card {
-    background: white;
-    border: 3px solid $brand-primary;
-    border-radius: var(--border-radius-lg);
-    padding: var(--spacing-16);
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-    height: 100%;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @extend .card-feature;
     
     &.feature-card-gold {
-      border-color: #b66b02;
-      
-      .feature-link {
-        color: #b66b02;
-        
-        &:hover {
-          color: darken(#b66b02, 10%);
-        }
-      }
+      @extend .card-gold;
     }
     
     &.feature-card-purple {
-      border-color: #a625a4;
-      
-      .feature-link {
-        color: #a625a4;
-        
-        &:hover {
-          color: darken(#a625a4, 10%);
-        }
-      }
+      @extend .card-purple;
     }
     
     &.feature-card-orange {
-      border-color: #d77350;
-      
-      .feature-link {
-        color: #d77350;
-        
-        &:hover {
-          color: darken(#d77350, 10%);
-        }
-      }
-    }
-    
-    &:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-    }
-    
-    h3 {
-      font-size: var(--font-size-lg);
-      font-weight: 700;
-      color: var(--text-primary);
-      margin-bottom: var(--spacing-8);
-    }
-    
-    p {
-      font-size: var(--font-size-base);
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin-bottom: var(--spacing-12);
-    }
-    
-    .feature-link {
-      display: inline-block;
-      color: var(--brand-primary);
-      font-weight: 600;
-      text-decoration: none;
-      transition: color 0.2s ease;
-      
-      &:hover {
-        color: darken($brand-primary, 15%);
-        text-decoration: underline;
-      }
+      @extend .card-orange;
     }
   }
 }
@@ -561,25 +487,9 @@ ul, ol {
     }
   }
   
+  // Indicators now use the card design system
   .indicator {
-    text-align: center;
-    padding: var(--spacing-12);
-    border-radius: var(--border-radius);
-    transition: background-color 0.2s ease;
-    cursor: pointer;
-    
-    h3 {
-      font-size: var(--font-size-lg);
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: var(--spacing-4);
-    }
-    
-    p {
-      font-size: var(--font-size-base);
-      color: var(--text-secondary);
-      margin: 0;
-    }
+    @extend .card-indicator;
   }
 }
 
@@ -652,6 +562,12 @@ ul, ol {
     width: 100% !important;
   }
 }
+
+// =================================
+// CARD SYSTEM CUSTOMIZATIONS
+// =================================
+// The main card design system is defined in _cards-design-system.scss
+// Here we handle specific overrides for the homepage
 
 // =================================
 // UNIVERSAL HOVER (MUST BE LAST!)

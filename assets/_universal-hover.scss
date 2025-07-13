@@ -43,8 +43,9 @@
 // ========================================
 
 // Text links in content - HOVER ONLY
-// Exclude feature cards and indicator links from getting underlines
-a:not(.card-link):not(.nav-cta):not(.social-icon):not(.site-brand):not(.feature-card-link):not(.indicator-link) {
+// Feature cards excluded - they have their own hover system
+// But indicator cards CAN have underlines as they're more link-like
+a:not(.card-link):not(.nav-cta):not(.social-icon):not(.site-brand):not(.feature-card-link) {
   @extend %hover-only-styling;
 }
 
@@ -161,5 +162,21 @@ a.btn-outline,
       box-shadow: $shadow-lg;
       transform: translateY(-4px);
     }
+  }
+}
+
+// ========================================
+// CARD TYPE SPECIFIC HOVER BEHAVIORS
+// ========================================
+
+// Indicator cards get the purple underline on the title
+.indicator-link {
+  .indicator h3 {
+    @extend %hover-only-styling;
+  }
+  
+  // Maintain the lift effect on the whole card
+  &:hover {
+    transform: translateY(-2px);
   }
 }

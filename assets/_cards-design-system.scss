@@ -1,0 +1,332 @@
+// ========================================
+// CARD DESIGN SYSTEM
+// Code Monkey Cybersecurity
+// ========================================
+// 
+// This file defines our card component hierarchy and behaviors.
+// Cards are interactive UI elements that group related content.
+//
+// Card Types:
+// 1. Feature Cards (.card-feature) - Large service/product cards
+// 2. Indicator Cards (.card-indicator) - Trust signals and key info
+// 3. Content Cards (.card-content) - Blog posts, case studies
+// 4. Minor Cards (.card-minor) - Small utility cards
+//
+// ========================================
+
+// ========================================
+// 1. FEATURE CARDS
+// ========================================
+// Large cards for primary services/products
+// - Colored borders matching brand colors
+// - Full card is clickable
+// - No underline on hover
+// - Prominent lift effect on hover
+
+.card-feature {
+  background: white;
+  border: 3px solid $brand-primary;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-16);
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  // Color variants
+  &.card-gold {
+    border-color: #b66b02;
+    
+    .feature-link {
+      color: #b66b02;
+      
+      &:hover {
+        color: darken(#b66b02, 10%);
+      }
+    }
+  }
+  
+  &.card-purple {
+    border-color: #a625a4;
+    
+    .feature-link {
+      color: #a625a4;
+      
+      &:hover {
+        color: darken(#a625a4, 10%);
+      }
+    }
+  }
+  
+  &.card-orange {
+    border-color: #d77350;
+    
+    .feature-link {
+      color: #d77350;
+      
+      &:hover {
+        color: darken(#d77350, 10%);
+      }
+    }
+  }
+  
+  // Hover behavior
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  // Typography
+  h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-8);
+  }
+  
+  p {
+    font-size: var(--font-size-base);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-12);
+  }
+  
+  // CTA link
+  .feature-link {
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// ========================================
+// 2. INDICATOR CARDS
+// ========================================
+// Smaller cards for trust signals and key information
+// - Subtle background on hover
+// - Purple underline animation on title
+// - More link-like behavior
+// - Minimal lift effect
+
+.card-indicator {
+  text-align: center;
+  padding: var(--spacing-12);
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  
+  // Hover behavior
+  &:hover {
+    background: var(--neutral-50);
+  }
+  
+  // Typography
+  h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-4);
+    display: inline-block;
+    position: relative;
+  }
+  
+  p {
+    font-size: var(--font-size-base);
+    color: var(--text-secondary);
+    margin: 0;
+  }
+}
+
+// ========================================
+// 3. CONTENT CARDS
+// ========================================
+// Cards for blog posts, case studies, resources
+// - Clean borders
+// - Subtle shadow on hover
+// - No underline
+// - Small lift effect
+
+.card-content {
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-12);
+  background: white;
+  transition: all 0.2s ease;
+  overflow: visible;
+  
+  &:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  
+  // Typography
+  h3, h4 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-4);
+  }
+  
+  p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  
+  // Meta information
+  .card-meta {
+    font-size: var(--font-size-sm);
+    color: var(--text-tertiary);
+    margin-bottom: var(--spacing-4);
+  }
+}
+
+// ========================================
+// 4. MINOR CARDS
+// ========================================
+// Small utility cards for secondary information
+// - Compact size
+// - Minimal styling
+// - Can have underline based on context
+// - Subtle hover effects
+
+.card-minor {
+  padding: var(--spacing-8);
+  border-radius: var(--border-radius-sm);
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: var(--neutral-50);
+  }
+  
+  // Typography
+  h4, h5 {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-2);
+  }
+  
+  p {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    margin: 0;
+  }
+}
+
+// ========================================
+// CARD LINK WRAPPERS
+// ========================================
+// Wrapper styles for making entire cards clickable
+
+.feature-card-link,
+.indicator-link,
+.content-card-link,
+.minor-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+  
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Feature card links - no underline
+.feature-card-link {
+  // Excluded from universal hover system
+}
+
+// Indicator links - allow underline on title
+.indicator-link {
+  // Handled by universal hover system
+}
+
+// Content card links - no underline
+.content-card-link {
+  // Standard card behavior
+}
+
+// ========================================
+// RESPONSIVE CARD GRIDS
+// ========================================
+
+// Feature cards grid
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-12);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-8);
+  
+  @media (min-width: 768px) {
+    gap: var(--spacing-16);
+  }
+}
+
+// Indicator cards grid
+.indicators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-12);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-8);
+}
+
+// Content cards grid
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-12);
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// ========================================
+// USAGE EXAMPLES
+// ========================================
+// 
+// Feature Card:
+// <a href="/service" class="feature-card-link">
+//   <article class="card-feature card-gold">
+//     <h3>Service Name</h3>
+//     <p>Service description...</p>
+//     <span class="feature-link">Learn More →</span>
+//   </article>
+// </a>
+//
+// Indicator Card:
+// <a href="/about" class="indicator-link">
+//   <div class="card-indicator">
+//     <h3>Australian Based</h3>
+//     <p>Fremantle, WA</p>
+//   </div>
+// </a>
+//
+// Content Card:
+// <a href="/blog/post" class="content-card-link">
+//   <article class="card-content">
+//     <div class="card-meta">Jan 10, 2025</div>
+//     <h3>Blog Post Title</h3>
+//     <p>Post excerpt...</p>
+//   </article>
+// </a>
+//
+// ========================================
