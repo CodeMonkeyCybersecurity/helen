@@ -1,7 +1,6 @@
 ---
 title: "Code Monkey Cybersecurity"
 description: "Cybersecurity. With Humans."
-draft: true
 ---
 
 {{< section title="Super simple cybersecurity" style="hero" >}}
