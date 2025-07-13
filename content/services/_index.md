@@ -118,10 +118,10 @@ During your trial, our team helps you install and configure Delphi Notify on you
 
 {{< cta 
   title="Ready to Get Started?" 
-  link="/offerings/delphi/sign-up/" 
-  linkText="Start Your Free Trial"
+  url="/offerings/delphi/sign-up/" 
+  button="Start Your Free Trial"
   style="dark"
-  buttonStyle="primary" >}}
+   >}}
 Questions about pricing? We're happy to discuss your specific needs and find the right plan for you. Email us at main@cybermonkey.net.au or call .
 {{< /cta >}}
 

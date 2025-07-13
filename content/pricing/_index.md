@@ -12,90 +12,132 @@ Security solutions designed for businesses of all sizes. No hidden fees, no surp
 
 ## Delphi Notify - XDR Security Platform
 
-{{< service-comparison >}}
-{{< service-tier name="Individual/Home" price="$29" period="per month" cta_text="Start Free Trial" cta_url="/offerings/delphi/sign-up/" >}}
-Up to 5 devices
-- 24/7 threat monitoring
-- Human-reviewed alerts
-Email support
-- Plain English explanations
-{{< /service-tier >}}
+{{< grid columns="3" >}}
+{{< card title="Individual/Home" >}}
+**$29/month**
 
-{{< service-tier name="Small Business" price="$79" period="per month" featured="true" cta_text="Start Free Trial" cta_url="/offerings/delphi/sign-up/" badge="Most Popular" >}}
-Up to 10 devices
+- Up to 5 devices
 - 24/7 threat monitoring
 - Human-reviewed alerts
- phone support
+- Email support
+- Plain English explanations
+
+[Sign Up](/services/delphi/sign-up/)
+{{< /card >}}
+
+{{< card title="Small Business" style="highlight" >}}
+**$79/month** 
+
+*Most Popular*
+
+- Up to 10 devices
+- 24/7 threat monitoring
+- Human-reviewed alerts
+- Phone support
 - Plain English explanations
 - Compliance reporting
-{{< /service-tier >}}
 
-{{< service-tier name="Growing Business" price="Custom" period="pricing" cta_text="Contact Sales" cta_url="/about-us/contact/" >}}
+[Sign Up](/services/delphi/sign-up/)
+{{< /card >}}
+
+{{< card title="Growing Business" >}}
+**Custom pricing**
+
 - 10+ devices
 - 24/7 threat monitoring
 - Human-reviewed alerts
 - Dedicated support
 - Custom integrations
 - SLA agreements
-{{< /service-tier >}}
-{{< /service-comparison >}}
+
+[Contact Us](/company/contact/)
+{{< /card >}}
+{{< /grid >}}
 
 ## Persephone - Backup Services
 
-{{< service-comparison >}}
-{{< service-tier name="Small Office" price="$99" period="per month" cta_text="Get Started" cta_url="/offerings/persephone/" >}}
-Up to 1TB storage
+{{< grid columns="2" >}}
+{{< card title="Small Office" >}}
+**$99/month**
+
+- Up to 1TB storage
 - Daily automated backups
 - 30-day retention
-Email support
+- Email support
 - Australian data centers
-{{< /service-tier >}}
 
-{{< service-tier name="Growing Business" price="$199" period="per month" cta_text="Get Started" cta_url="/offerings/persephone/" >}}
-Up to 5TB storage
+[Learn More](/services/persephone/)
+{{< /card >}}
+
+{{< card title="Growing Business" >}}
+**$199/month**
+
+- Up to 5TB storage
 - Hourly automated backups
 - 90-day retention
- support
+- Phone support
 - Compliance reporting
-{{< /service-tier >}}
-{{< /service-comparison >}}
+
+[Learn More](/services/persephone/)
+{{< /card >}}
+{{< /grid >}}
 
 ## Phishing Simulation & Training
 
-{{< service-comparison >}}
-{{< service-tier name="Essentials" price="$25" period="per employee/year" cta_text="Start Training" cta_url="/offerings/phishing-simulation/" badge="Popular" >}}
+{{< grid columns="2" >}}
+{{< card title="Essentials" >}}
+**$25/employee/year**
+
+*Popular*
+
 - Monthly phishing tests
 - Basic training modules
 - Progress tracking
-Email support
-{{< /service-tier >}}
+- Email support
 
-{{< service-tier name="Professional" price="$45" period="per employee/year" featured="true" cta_text="Upgrade to Pro" cta_url="/offerings/phishing-simulation/" badge="Recommended" >}}
+[Learn More](/services/phishing-simulation/)
+{{< /card >}}
+
+{{< card title="Professional" style="highlight" >}}
+**$45/employee/year**
+
+*Recommended*
+
 - Weekly phishing tests
 - Advanced training library
 - Custom scenarios
 - Detailed reporting
- support
-{{< /service-tier >}}
-{{< /service-comparison >}}
+- Phone support
+
+[Learn More](/services/phishing-simulation/)
+{{< /card >}}
+{{< /grid >}}
 
 ## Workshop Training
 
-{{< service-comparison >}}
-{{< service-tier name="One-Time Workshop" price="$50" period="per employee" cta_text="Book Workshop" cta_url="/offerings/phishing-simulation/training/" >}}
+{{< grid columns="2" >}}
+{{< card title="One-Time Workshop" >}}
+**$50/employee**
+
 - 2-hour on-site training
 - Customized content
 - Certificate of completion
 - Follow-up resources
-{{< /service-tier >}}
 
-{{< service-tier name="Ongoing Program" price="$149" period="per month" cta_text="Start Program" cta_url="/offerings/phishing-simulation/training/" >}}
+[Book Now](/services/phishing-simulation/training/)
+{{< /card >}}
+
+{{< card title="Ongoing Program" >}}
+**$149/month**
+
 - Monthly training sessions
-Up to 25 employees
+- Up to 25 employees
 - Progress tracking
 - Quarterly assessments
-{{< /service-tier >}}
-{{< /service-comparison >}}
+
+[Learn More](/services/phishing-simulation/training/)
+{{< /card >}}
+{{< /grid >}}
 
 ## Free Trial & Money-Back Guarantee
 
@@ -134,9 +176,8 @@ All prices are in Australian dollars and include GST. For custom requirements or
 
 {{< cta 
   title="Questions About Pricing?" 
-  text="Our team is here to help you find the right security solution for your budget. No pressure, just expert advice tailored to your needs."
-  link="/about-us/contact/" 
-  linkText="Contact Us"
-  style="light"
-  buttonStyle="teal" >}}
+  url="/company/contact/" 
+  button="Contact Us"
+  style="light" >}}
+Contact us for custom requirements or volume pricing.
 {{< /cta >}}

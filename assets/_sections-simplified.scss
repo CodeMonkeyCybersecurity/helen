@@ -1,0 +1,245 @@
+// Simplified Sections & Components
+@import 'config';
+
+// =================================
+// SECTION COMPONENT
+// =================================
+
+.section {
+  margin: 2rem 0;
+  
+  &-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    
+    @media (min-width: $breakpoint-lg) {
+      padding: 0 2rem;
+    }
+  }
+  
+  &-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  &-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: $text-primary;
+    
+    @media (min-width: $breakpoint-lg) {
+      font-size: 2.5rem;
+    }
+  }
+  
+  &-subtitle {
+    font-size: 1.125rem;
+    color: $text-secondary;
+    margin-bottom: 0;
+  }
+  
+  // Section styles
+  &-simple {
+    // No additional styling - just content
+  }
+  
+  &-card {
+    background: white;
+    border-radius: $border-radius-lg;
+    padding: 2rem;
+    box-shadow: $shadow-sm;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  &-hero {
+    padding: 4rem 0;
+    text-align: center;
+    
+    .section-title {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      
+      @media (min-width: $breakpoint-lg) {
+        font-size: 4rem;
+      }
+    }
+  }
+  
+  // Background variations
+  &-bg-light {
+    background: #f8f9fa;
+  }
+  
+  &-bg-dark {
+    background: $brand-purple;
+    color: white;
+    
+    .section-title,
+    .section-subtitle {
+      color: white;
+    }
+  }
+  
+  &-bg-brand {
+    background: $brand-primary;
+    color: white;
+    
+    .section-title,
+    .section-subtitle {
+      color: white;
+    }
+  }
+}
+
+// =================================
+// CTA COMPONENT
+// =================================
+
+.cta {
+  padding: 3rem 2rem;
+  text-align: center;
+  margin: 3rem 0;
+  
+  &-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  &-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    
+    @media (min-width: $breakpoint-lg) {
+      font-size: 2.5rem;
+    }
+  }
+  
+  &-text {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    color: inherit;
+    
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  &-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: $brand-purple;
+    color: white;
+    text-decoration: none;
+    border-radius: $border-radius;
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition: all $duration-normal ease;
+    
+    &:hover {
+      background: darken($brand-purple, 10%);
+      transform: translateY(-2px);
+      box-shadow: $shadow-md;
+    }
+  }
+  
+  // CTA styles
+  &-default {
+    background: #f8f9fa;
+  }
+  
+  &-dark {
+    background: $brand-purple;
+    color: white;
+    
+    .cta-button {
+      background: white;
+      color: $brand-purple;
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.9);
+      }
+    }
+  }
+  
+  &-brand {
+    background: $brand-primary;
+    color: white;
+    
+    .cta-button {
+      background: white;
+      color: $brand-primary;
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.9);
+      }
+    }
+  }
+}
+
+// =================================
+// FEATURE CARD COMPONENT
+// =================================
+
+.feature-card {
+  background: white;
+  border-radius: $border-radius-lg;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all $duration-normal ease;
+  
+  &:hover {
+    box-shadow: $shadow-md;
+    transform: translateY(-2px);
+  }
+}
+
+.feature-badge {
+  display: inline-block;
+  background: $brand-primary;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: $text-primary;
+}
+
+.feature-content {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: $text-secondary;
+  margin-bottom: 1.5rem;
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.feature-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: $brand-primary;
+  color: white;
+  text-decoration: none;
+  border-radius: $border-radius;
+  font-weight: 500;
+  transition: all $duration-normal ease;
+  
+  &:hover {
+    background: darken($brand-primary, 10%);
+    transform: translateY(-1px);
+  }
+}

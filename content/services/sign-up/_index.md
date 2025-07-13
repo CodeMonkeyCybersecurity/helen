@@ -68,9 +68,8 @@ If you don't have one yet, we personally use [Proton Pass](https://proton.me/pas
 
 {{< cta 
   title="Have Questions?" 
-  text="We're real people and we're here to help. Drop us a line and we'll get back to you promptly."
-  link="mailto:main@cybermonkey.net.au?subject=Delphi%20Notify%20Question&body=Hi!%20I%20have%20a%20question%20about%20Delphi%20Notify:%0A%0A[Tell%20us%20what%20you'd%20like%20to%20know]" 
-  linkText="Contact Us"
-  style="light"
-  buttonStyle="teal" >}}
+  url="mailto:main@cybermonkey.net.au?subject=Delphi%20Notify%20Question&body=Hi!%20I%20have%20a%20question%20about%20Delphi%20Notify:%0A%0A[Tell%20us%20what%20you'd%20like%20to%20know]" 
+  button="Contact Us"
+  style="light" >}}
+We're here to help with any questions about Delphi Notify.
 {{< /cta >}}

@@ -1,0 +1,33 @@
+{{/*
+Simple Feature Card - Replaces feature-card-wrapper
+Usage: {{< feature title="Feature Title" badge="NEW" >}}Feature description{{< /feature >}}
+
+Parameters:
+- title: Feature heading (required)
+- badge: Optional badge text (appears above title)
+- url: Optional link URL
+- button: Optional button text
+*/}}
+
+{{ $title := .Get "title" }}
+{{ $badge := .Get "badge" }}
+{{ $url := .Get "url" }}
+{{ $button := .Get "button" }}
+
+<div class="feature-card">
+  {{ with $badge }}
+  <span class="feature-badge">{{ . }}</span>
+  {{ end }}
+  
+  {{ with $title }}
+  <h3 class="feature-title">{{ . }}</h3>
+  {{ end }}
+  
+  <div class="feature-content">
+    {{ .Inner | markdownify }}
+  </div>
+  
+  {{ if and $url $button }}
+  <a href="{{ $url }}" class="feature-button">{{ $button }}</a>
+  {{ end }}
+</div>

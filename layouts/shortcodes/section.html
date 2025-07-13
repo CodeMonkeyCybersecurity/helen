@@ -1,0 +1,34 @@
+{{/*
+Unified Section Shortcode - Replaces content-section, spaced-section, etc.
+Usage: {{< section title="Section Title" style="card|hero|simple" >}}Content{{< /section >}}
+
+Parameters:
+- title: Optional section heading
+- subtitle: Optional subtitle
+- style: "card" (with background), "hero" (large with background), "simple" (no styling)
+- background: Background color (light, dark, brand)
+*/}}
+
+{{ $title := .Get "title" }}
+{{ $subtitle := .Get "subtitle" }}
+{{ $style := .Get "style" | default "simple" }}
+{{ $background := .Get "background" | default "none" }}
+
+<section class="section section-{{ $style }} section-bg-{{ $background }}">
+  <div class="section-container">
+    {{ if or $title $subtitle }}
+    <header class="section-header">
+      {{ with $title }}
+      <h2 class="section-title">{{ . }}</h2>
+      {{ end }}
+      {{ with $subtitle }}
+      <p class="section-subtitle">{{ . }}</p>
+      {{ end }}
+    </header>
+    {{ end }}
+    
+    <div class="section-content">
+      {{ .Inner | markdownify }}
+    </div>
+  </div>
+</section>

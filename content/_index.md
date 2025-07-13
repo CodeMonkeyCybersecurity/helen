@@ -3,20 +3,20 @@ title: "Code Monkey Cybersecurity"
 description: "Cybersecurity. With Humans."
 ---
 
-{{< content-section title="Super simple cybersecurity" style="transparent" >}}
+{{< section title="Super simple cybersecurity" style="hero" >}}
 
 ![Code Monkey Cybersecurity team providing human-centered cybersecurity protection with friendly puppy mascot representing approachable security](/images/cover_puppy_moni_monkey_optimized.jpg)
 
 ## Cybersecurity. With Humans.
 
-**[Delphi Notify](/offerings/delphi/delphi-notify/)** detects security threats and explains them in plain English. Get step-by-step guidance when suspicious activity occurs.
+**[Delphi Notify](/services/delphi/delphi-notify/)** detects security threats and explains them in plain English. Get step-by-step guidance when suspicious activity occurs.
 
 **Key benefits:**
-Security experts review every alert
-Plain English explanations with clear next steps
-24/7 monitoring for small businesses
+- Security experts review every alert
+- Plain English explanations with clear next steps
+- 24/7 monitoring for small businesses
 
-{{< /content-section >}}
+{{< /section >}}
 
 ## Why Choose Delphi Notify?
 ### Professional security without the complexity
@@ -33,7 +33,7 @@ Detect sophisticated attacks that bypass traditional antivirus software.
   {{< /card >}}
 {{< /grid >}}
 
-{{< feature-card-wrapper eyebrow="HOW IT WORKS" title="Security in 4 Steps" cta-label="Start Free Trial" cta-url="/offerings/delphi/sign-up/" cta-style="teal" >}}
+{{< feature title="Security in 4 Steps" badge="HOW IT WORKS" url="/services/delphi/sign-up/" button="Start Free Trial" >}}
 
 **Monitor** - Advanced detection watches your devices 24/7
 
@@ -43,25 +43,21 @@ Detect sophisticated attacks that bypass traditional antivirus software.
 
 **Protect** - Stop threats before they cause damage
 
-{{< /feature-card-wrapper >}}
+{{< /feature >}}
 
-{{< content-section title="Built For" style="transparent" >}}
+{{< section title="Built For" >}}
 
 ### Who We Serve
 
-<div class="text-center space-y-4">
+**Small businesses** that need [security](/services/delphi/) without IT complexity
 
-**Small businesses** that need [security](/offerings/delphi/) without IT complexity
+**Professional practices** in medical, legal, and financial services that require [cybersecurity compliance](/company/governance/)
 
-**Professional practices** in medical, legal, and financial services that require [cybersecurity compliance](/about-us/governance/)
+**Families** who want protection without technical expertise through our [training programs](/services/phishing-simulation/training/)
 
-**Families** who want protection without technical expertise through our [training programs](/offerings/phishing-simulation/training/)
+{{< /section >}}
 
-</div>
-
-{{< /content-section >}}
-
-{{< content-section title="Pricing That Makes Sense" style="blue" >}}
+{{< section title="Pricing That Makes Sense" style="card" background="light" >}}
 
 **Individual/Home**: $29/month (up to 5 devices)
 
@@ -69,16 +65,15 @@ Detect sophisticated attacks that bypass traditional antivirus software.
 
 **Growing Business**: Custom pricing for larger needs
 
-[View All Pricing Details](/pricing/) | [Training Workshops](/offerings/phishing-simulation/training/)
+[View All Pricing Details](/pricing/) | [Training Workshops](/services/phishing-simulation/training/)
 
-{{< /content-section >}}
+{{< /section >}}
 
 {{< cta 
   title="Start Free 30-Day Trial" 
-  link="/offerings/delphi/sign-up/" 
-  linkText="Get Started Now"
-  style="dark"
-  buttonStyle="primary" >}}
+  url="/services/delphi/sign-up/" 
+  button="Get Started Now"
+  style="dark" >}}
 Set up security monitoring in 10 minutes. Get expert-reviewed alerts within 24 hours.
 
 Questions? Call or email main@cybermonkey.net.au
@@ -92,25 +87,23 @@ Questions? Call or email main@cybermonkey.net.au
 {{< grid columns="3" >}}
   {{< card 
     title="Privacy-First Security" 
-    link="/about-us/governance/policies/privacy-policy/" >}}
+    url="/about-us/governance/policies/privacy-policy/" >}}
 We monitor threats without accessing your files. Your data stays yours.
   {{< /card >}}
   {{< card 
     title="Open Source Principles" 
-    link="/about-us/governance/open-source-licensing/" >}}
+    url="/about-us/governance/open-source-licensing/" >}}
 Transparent technology with dual AGPL v3 and Do No Harm licensing.
   {{< /card >}}
   {{< card 
     title="Human-Centered Design" 
-    link="/about-us/" >}}
+    url="/about-us/" >}}
 Technology that empowers people without intimidation or complexity.
   {{< /card >}}
 {{< /grid >}}
 
-{{< content-section style="transparent" >}}
+{{< section >}}
 
-<p class="text-center text-sm text-slate-600">
-<em>Location: Fremantle, WA • ABN: 77 177 673 061 • <a href="/about-us/contact/">Contact Us</a> • <a href="/about-us/customer-login/">Customer Login</a></em>
-</p>
+*Location: Fremantle, WA • ABN: 77 177 673 061 • [Contact Us](/company/contact/) • [Customer Login](/company/customer-login/)*
 
-{{< /content-section >}}
+{{< /section >}}

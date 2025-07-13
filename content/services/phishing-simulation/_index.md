@@ -97,25 +97,35 @@ Business email compromise scenarios
 
 ## Service Packages
 
-{{< service-comparison >}}
-{{< service-tier name="Essentials" price="$25" period="per employee/year" cta_text="Start Essential" badge="Most Popular" >}}
+{{< grid columns="2" >}}
+{{< card title="Essentials" >}}
+**$25/employee/year**
+
+*Most Popular*
+
 - Monthly email phishing simulations
 - Basic performance dashboard
 - Automated micro-learning
 - Quarterly progress reports
-Email support
-{{< /service-tier >}}
+- Email support
 
-{{< service-tier name="Professional" price="$45" period="per employee/year" featured="true" cta_text="Upgrade to Pro" badge="Recommended" >}}
+[Start Essential](/services/phishing-simulation/sign-up/)
+{{< /card >}}
+
+{{< card title="Professional" style="highlight" >}}
+**$45/employee/year**
+
+*Recommended*
+
 - Multi-channel simulations (email, SMS, voice)
 - Advanced analytics and reporting
 - Custom scenario development
 - Manager training and coaching
- support + phone
-{{< /service-tier >}}
+- Email support + phone
 
-
-{{< /service-comparison >}}
+[Upgrade to Pro](/services/phishing-simulation/sign-up/)
+{{< /card >}}
+{{< /grid >}}
 
 ## Integration Capabilities
 

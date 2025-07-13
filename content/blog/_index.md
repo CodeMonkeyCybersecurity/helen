@@ -9,7 +9,7 @@ Stay up to date with the latest cybersecurity insights, company news, and indust
 
 ## Latest Posts
 
-{{< blog-preview-cards limit="6" >}}
+{{< recent-posts >}}
 
 ---
 

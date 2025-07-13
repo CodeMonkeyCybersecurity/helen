@@ -14,7 +14,7 @@ This page demonstrates the new minimalist, clean, professional design system wit
 
 Our design philosophy centers on making cybersecurity **approachable and understandable** for everyone. Every element serves a purpose, with generous whitespace creating breathing room for content.
 
-{{< spaced-section >}}
+{{< section style="card" >}}
 ## Enhanced Typography
 
 ### Professional Font Stack
@@ -23,9 +23,9 @@ Our design philosophy centers on making cybersecurity **approachable and underst
 **Noto Sans Mono** for code examples
 
 The typography scales beautifully across devices with generous line heights for comfortable reading.
-{{< /spaced-section >}}
+{{< /section >}}
 
-{{< spaced-section >}}
+{{< section style="card" >}}
 ## Button Examples
 
 Buttons now feature enhanced spacing and subtle animations:
@@ -36,9 +36,9 @@ Buttons now feature enhanced spacing and subtle animations:
   <button class="btn-brand-teal">Learn More</button>
   <button class="btn-brand-orange">Get Started</button>
 </div>
-{{< /spaced-section >}}
+{{< /section >}}
 
-{{< spaced-section >}}
+{{< section style="card" >}}
 ## Card Layouts
 
 Cards emphasize content with generous padding and subtle shadows:
@@ -53,15 +53,15 @@ Cards emphasize content with generous padding and subtle shadows:
     <p class="text-brand-body">Every design decision prioritizes user understanding and accessibility over complexity.</p>
   </div>
 </div>
-{{< /spaced-section >}}
+{{< /section >}}
 
-{{< spaced-section >}}
+{{< section style="card" >}}
 ## Human-Centered Security Principles
 
 Building security systems that align with human needs and dignity, making protection accessible to everyone through thoughtful design and clear communication.
-{{< /spaced-section >}}
+{{< /section >}}
 
-{{< spaced-section >}}
+{{< section style="card" >}}
 ## Information Hierarchy
 
 ### Important Information
@@ -75,9 +75,9 @@ Building security systems that align with human needs and dignity, making protec
   <h4 class="font-bold mb-2">Security Alert</h4>
   <p>Clear, non-threatening alerts help users take appropriate action without creating anxiety.</p>
 </div>
-{{< /spaced-section >}}
+{{< /section >}}
 
-{{< spaced-section >}}
+{{< section style="card" >}}
 ## Code Examples
 
 Terminal examples maintain the Solarized theme while benefiting from enhanced spacing:
@@ -88,7 +88,7 @@ Terminal examples maintain the Solarized theme while benefiting from enhanced sp
 <div class="comment"># Clean, minimal interface loading</div>
 <div><span class="keyword">const</span> <span class="variable">design</span> <span class="operator">=</span> <span class="string">"human-centered"</span><span class="operator">;</span></div>
 </div>
-{{< /spaced-section >}}
+{{< /section >}}
 
 ## Design Benefits
 
