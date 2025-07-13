@@ -3,11 +3,11 @@ title: " 90% of Cyber Breaches Start with ONE Click - Here's How We're Fighting 
 date: "2025-06-29"
 author: "Henry Oliver"
 tags: ["Phishing Training", "Scam Prevention", "Cybersecurity Statistics", "WA Business"]
-categories: ["Security Training", "Company News"]
+categories: ["Phishing Training", "Company News"]
 description: "Code Monkey Cybersecurity's Phishing training"
 ---
 
-![Interactive cybersecurity training workshop showing participants learning to identify phishing emails and social engineering attacks](/images/oh_the_hacks_web.jpg)
+![Interactive cyberPhishing Training workshop showing participants learning to identify phishing emails and social engineering attacks](/images/oh_the_hacks_web.jpg)
 
 # Why this is important
 

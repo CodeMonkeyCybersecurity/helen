@@ -13,7 +13,7 @@ This document describes the card design system implemented for Code Monkey Cyber
   - Full card is clickable
   - NO purple underline on hover
   - Prominent lift effect (4px) on hover
-  - Used for: Main services like Delphi Notify XDR, Security Training, Backup Solutions
+  - Used for: Main services like Delphi Notify XDR, Phishing Training, Backup and Recovey
 
 ### 2. Indicator Cards (`.card-indicator`)
 - **Purpose**: Trust signals and key information

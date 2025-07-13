@@ -6,11 +6,11 @@ weight: 2
 
 # Phishing Training Specialists
 
-Advanced email security training that goes beyond basic awareness - protecting your business from sophisticated phishing attacks.
+Advanced email Phishing Training that goes beyond basic awareness - protecting your business from sophisticated phishing attacks.
 
 ## **Why Specialized Phishing Training?**
 
-While our [general security training](/offerings/phishing-simulation/training/) covers the basics, this specialized program focuses specifically on the evolving world of phishing attacks that are becoming increasingly sophisticated and targeted.
+While our [general Phishing Training](/offerings/phishing-simulation/training/) covers the basics, this specialized program focuses specifically on the evolving world of phishing attacks that are becoming increasingly sophisticated and targeted.
 
 **Recent Australian Phishing Statistics:**
 **95%** of successful cyber attacks start with phishing

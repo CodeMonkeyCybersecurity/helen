@@ -181,7 +181,7 @@ Homepage
 - "Perth cybersecurity services"
 - "small business security audit"
 - "managed security services Perth"
-- "cybersecurity training Australia"
+- "cyberPhishing Training Australia"
 - "security monitoring platform"
 
 **Content-to-Keyword Mapping:**

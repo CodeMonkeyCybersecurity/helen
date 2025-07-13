@@ -9,7 +9,7 @@ weight: 1
 
 ## **The #1 Security Problem Australian Businesses Face**
 
-**90% of cyber breaches start with human error** - usually someone clicking a malicious link or falling for a scam. Yet **45% of Australian employees receive no security training** from their employers.
+**90% of cyber breaches start with human error** - usually someone clicking a malicious link or falling for a scam. Yet **45% of Australian employees receive no Phishing Training** from their employers.
 
 Don't let your business become another statistic. Our practical training workshops teach your team to spot and stop threats before they become expensive breaches.
 

@@ -92,13 +92,13 @@ hasChildren = true
   
   [[menu.main]]
   parent = "Services"
-  name = "Security Training"
+  name = "Phishing Training"
   url = "/services/phishing-simulation/"
   weight = 12
   
   [[menu.main]]
   parent = "Services"
-  name = "Backup Solutions"
+  name = "Backup and Recovey"
   url = "/services/persephone/"
   weight = 13
 

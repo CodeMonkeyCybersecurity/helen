@@ -44,8 +44,8 @@
 
 // Text links in content - HOVER ONLY
 // Feature cards excluded - they have their own hover system
-// But indicator cards CAN have underlines as they're more link-like
-a:not(.card-link):not(.nav-cta):not(.social-icon):not(.site-brand):not(.feature-card-link) {
+// Indicator cards excluded - they have their own custom hover behavior
+a:not(.card-link):not(.nav-cta):not(.social-icon):not(.site-brand):not(.feature-card-link):not(.indicator-link) {
   @extend %hover-only-styling;
 }
 
@@ -169,14 +169,53 @@ a.btn-outline,
 // CARD TYPE SPECIFIC HOVER BEHAVIORS
 // ========================================
 
-// Indicator cards get the purple underline on the title
+// Indicator cards get the purple underline on the CARD BORDER, not text
 .indicator-link {
-  .indicator h3 {
-    @extend %hover-only-styling;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  
+  &:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+    
+    .indicator {
+      background: var(--neutral-50);
+      
+      // Animate the bottom border
+      &::after {
+        transform: scaleX(1);
+      }
+    }
   }
   
-  // Maintain the lift effect on the whole card
-  &:hover {
-    transform: translateY(-2px);
+  // Apply the underline effect to the card itself
+  .indicator {
+    position: relative;
+    
+    // Create the animated underline at the bottom of the card
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      background: $brand-purple;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+  }
+  
+  // Ensure no text gets underlined
+  h3, p {
+    text-decoration: none !important;
+    position: static !important;
+    
+    &::after {
+      display: none !important;
+    }
   }
 }

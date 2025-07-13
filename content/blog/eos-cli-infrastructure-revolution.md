@@ -145,7 +145,7 @@ eos alerts setup email           # Get notified about real problems
 | Service | Typical Cost |
 |---------|-------------|
 | Managed IT Services | $100-$300/month per computer |
-| Professional Backup Solutions | $50-$200/month |
+| Professional Backup and Recovey | $50-$200/month |
 | Security Management | $75-$150/month |
 | Password Management | $3-$8/month per person |
 | Monitoring & Support | $100-$500/month |

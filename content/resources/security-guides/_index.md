@@ -469,7 +469,7 @@ Business size
 
 **Professional assessments:**
 - Vulnerability assessments
-- Penetration testing
+- Development/Code Auditing
 - Compliance audits
 - Risk assessments
 - Policy reviews

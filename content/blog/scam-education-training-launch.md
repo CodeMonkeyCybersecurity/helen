@@ -3,7 +3,7 @@ title: " New Service Launch: Scam Education & Phishing Training for WA Businesse
 date: "2025-07-04"
 author: "Henry Oliver"
 tags: ["Scam Education", "Phishing Training", "Service Launch", "Small Business Security", "WA Business"]
-categories: ["Service Announcement", "Cybersecurity Training"]
+categories: ["Service Announcement", "CyberPhishing Training"]
 description: "Starting Monday July 7th: We're launching dedicated scam education and phishing training programs to help WA businesses fight the $7.9 million in annual scam losses affecting Australian SMEs."
 ---
 
@@ -152,7 +152,7 @@ Unlike expensive security software, **training delivers immediate, measurable re
 ## Getting Started Is Simple 
 
 ### Option 1: Quick Assessment
-**Free 15-minute phone call** to discuss your current security training and identify immediate risks.
+**Free 15-minute phone call** to discuss your current Phishing Training and identify immediate risks.
 
  **Call us:**   
  **Email:** [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
@@ -172,7 +172,7 @@ Unlike expensive security software, **training delivers immediate, measurable re
 **Q: How is this different from online training videos?**
 A: Our training is live, interactive, and specific to threats targeting Australian businesses. Employees can ask questions in real-time and practice with scenarios relevant to their actual work.
 
-**Q: What if we already have some cybersecurity training?**
+**Q: What if we already have some cyberPhishing Training?**
 A: We'll assess your current program and fill any gaps. Most existing training focuses on general threats - we specialize in the scams actually targeting WA businesses.
 
 **Q: How quickly will we see results?**

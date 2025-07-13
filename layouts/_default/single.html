@@ -42,14 +42,6 @@
     {{ end }}
   </header>
 
-  {{ if .TableOfContents }}
-  <aside class="page-toc">
-    <details open>
-      <summary>Contents</summary>
-      {{ .TableOfContents }}
-    </details>
-  </aside>
-  {{ end }}
 
   <div class="page-body">
     {{ .Content }}
@@ -103,18 +95,20 @@
 {{ if $related }}
 <aside class="related-content">
   <h3>Related Articles</h3>
-  <ul class="related-list">
+  <div class="indicators-grid">
     {{ range $related }}
-    <li class="related-item">
-      <a href="{{ .Permalink }}" class="related-link">
-        <h4 class="related-title">{{ .Title }}</h4>
+    <a href="{{ .Permalink }}" class="indicator-link">
+      <article class="indicator">
+        <h3>{{ .Title }}</h3>
         {{ if .Description }}
-        <p class="related-description">{{ .Description | truncate 100 }}</p>
+        <p>{{ .Description | truncate 100 }}</p>
+        {{ else }}
+        <p>{{ .Summary | truncate 100 }}</p>
         {{ end }}
-      </a>
-    </li>
+      </article>
+    </a>
     {{ end }}
-  </ul>
+  </div>
 </aside>
 {{ end }}
 {{ end }}

@@ -1,6 +1,6 @@
 ---
 title: "Persephone"
-description: "Automated data protection and backup solutions for Australian businesses"
+description: "Automated data protection and Backup and Recovey for Australian businesses"
 weight: 2
 offering: true
 offeringDescription: "Data Safety Platform"
@@ -8,7 +8,7 @@ offeringDescription: "Data Safety Platform"
 
 # Persephone Backup Platform
 
-Protect your business data with automated, secure backup solutions designed for Australian small businesses.
+Protect your business data with automated, secure Backup and Recovey designed for Australian small businesses.
 
 ## **Why Backup Matters**
 
@@ -20,7 +20,7 @@ Protect your business data with automated, secure backup solutions designed for 
 
 Don't become a statistic. Our backup services ensure your data is always protected and recoverable.
 
-## **Our Backup Solutions**
+## **Our Backup and Recovey**
 
 ### **Automated Cloud Backup**
 **Daily automated backups** of critical business data
@@ -85,7 +85,7 @@ Up to 2TB storage
  **Regular testing** - monthly backup verification  
  **Compliance reports** - for insurance and audits  
  **Emergency support** - 24/7 critical recovery assistance  
- **Migration assistance** - moving from existing backup solutions  
+ **Migration assistance** - moving from existing Backup and Recovey  
 
 ## **Getting Started**
 

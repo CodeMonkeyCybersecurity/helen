@@ -13,7 +13,7 @@ description: "Launching August 2025: True  backup powered by Restic and built wi
 
 ## **Because "it's in the cloud" doesn't mean it's safe**
 
-After watching too many WA businesses discover the hard way that **OneDrive and iCloud are sync services, not backup solutions**, we're launching something that actually protects your data. According to [Backblaze's 2024 backup statistics](https://www.backblaze.com/blog/backup-awareness-survey/), 65% of businesses have experienced data loss, yet only 41% perform regular backups.
+After watching too many WA businesses discover the hard way that **OneDrive and iCloud are sync services, not Backup and Recovey**, we're launching something that actually protects your data. According to [Backblaze's 2024 backup statistics](https://www.backblaze.com/blog/backup-awareness-survey/), 65% of businesses have experienced data loss, yet only 41% perform regular backups.
 
 **Starting August 2025:  backup powered by Restic - from $5-8 per person per month.**
 
@@ -182,7 +182,7 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 4. **Verification** - test restore to prove it works
 5. **Training** - show team how real backup/restore works
 
-### **From Other Backup Solutions:**
+### **From Other Backup and Recovey:**
 1. **Compatibility check** - ensure we can read existing backup formats
 2. **Migration planning** - minimize disruption to operations
 3. **Parallel operation** - run both systems until confidence established
@@ -202,7 +202,7 @@ Our backup service is powered by **Restic**, written in **Go** - one of the memo
 
 ### **July 2025: Development Completion**
 - Final testing of Restic integration
-- Security audits and penetration testing
+- Security audits and Development/Code Auditing
 - Performance optimization and scaling tests
 - Documentation and training material completion
 
@@ -293,7 +293,7 @@ We'll evaluate your current data protection and show you:
 **August 1st special offers:**
 
  **First month free** for all new customers  
- **Free migration** from existing backup solutions  
+ **Free migration** from existing Backup and Recovey  
  **Setup included** - we handle the technical implementation  
  **30-day satisfaction guarantee** - full refund if not satisfied  
  **Priority support** for first 90 days

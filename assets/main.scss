@@ -244,12 +244,14 @@ ul, ol {
 // BLOG POST NAVIGATION BUTTONS
 // ========================================
 
-.page-navigation {
+.page-navigation,
+.post-navigation {
   margin: var(--spacing-24) 0;
   padding: var(--spacing-16);
   border-top: 1px solid var(--neutral-200);
   
-  .nav-buttons {
+  .nav-buttons,
+  .post-navigation {
     display: flex;
     gap: var(--spacing-12);
     justify-content: space-between;
@@ -267,7 +269,6 @@ ul, ol {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: var(--spacing-12);
     
     @media (max-width: 768px) {
       max-width: 100%;
@@ -278,47 +279,30 @@ ul, ol {
       font-weight: 600;
       opacity: 0.8;
       margin-bottom: 0.25rem;
+      display: block;
     }
     
     .nav-title {
       font-size: 1rem;
       font-weight: 500;
       line-height: 1.4;
+      display: block;
     }
   }
   
-  // Override button colors for navigation - use orange instead of purple
+  // Navigation buttons use orange color scheme
   .nav-prev.btn-secondary {
-    background: transparent;
     color: #b66b02;
-    border: 2px solid #b66b02;
-    
-    &:hover {
-      background: #b66b02;
-      color: white;
-    }
+    border-color: #b66b02;
   }
   
   .nav-next.btn-primary {
     background: #b66b02;
-    color: white;
+    border-color: #b66b02;
     
     &:hover {
-      background: darken(#b66b02, 10%);
-    }
-  }
-  
-  // Override universal hover for navigation buttons - keep orange styling
-  .nav-prev.btn-secondary,
-  .nav-next.btn-primary {
-    &::after {
-      display: none !important;
-    }
-    
-    &:hover {
-      &::after {
-        display: none !important;
-      }
+      background: #b66b02;
+      border-color: #b66b02;
     }
   }
   
@@ -326,10 +310,38 @@ ul, ol {
     align-items: flex-end;
     text-align: right;
     
+    .nav-label,
+    .nav-title {
+      text-align: right;
+    }
+    
     @media (max-width: 768px) {
       align-items: flex-start;
       text-align: left;
+      
+      .nav-label,
+      .nav-title {
+        text-align: left;
+      }
     }
+  }
+}
+
+// ========================================
+// RELATED ARTICLES STYLING
+// ========================================
+
+.related-posts,
+.related-content {
+  margin-top: var(--spacing-24);
+  padding-top: var(--spacing-24);
+  border-top: 1px solid var(--neutral-200);
+  
+  > h3 {
+    text-align: center;
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-16);
+    color: var(--text-primary);
   }
 }
 

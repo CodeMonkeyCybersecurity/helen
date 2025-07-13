@@ -51,7 +51,7 @@ hasChildren = true
 
   [[menu.main]]
   parent = "Services"
-  name = "Security Training"
+  name = "Phishing Training"
   url = "/services/training/"
   weight = 12
 

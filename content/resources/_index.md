@@ -16,7 +16,7 @@ Advanced threat detection and response platform designed for small businesses. R
 {{< /card-unified >}}
 
 {{< card-unified title="Persephone" link="/offerings/persephone/" badge="Backup" style="default" >}}
-Automated data protection and backup solutions. Protect your business data with secure, Australian-hosted backup services.
+Automated data protection and Backup and Recovey. Protect your business data with secure, Australian-hosted backup services.
 {{< /card-unified >}}
 
 {{< card-unified title="Phishing Simulation" link="/offerings/phishing-simulation/" badge="Training" style="resource" >}}

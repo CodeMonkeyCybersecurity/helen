@@ -139,7 +139,7 @@ Coastal Catering Co. is a third-generation family business serving Perth's corpo
 **Credit card data protection** (PCI compliance)
 **Customer database security** with 5,000+ client records
 **Family members with varying tech skills**
-**Seasonal staff** requiring security training
+**Seasonal staff** requiring Phishing Training
 **Budget constraints** of a family business
 
 "We're caterers, not IT experts. But we handle people's credit cards and personal information daily. We needed security that works without requiring a computer science degree."
@@ -245,7 +245,7 @@ Perth Outdoor Gear operates four retail locations across Perth, selling outdoor 
 **Multi-location security** consistency
 **Customer payment data** protection
 **Loyalty program database** with 10,000+ members
-**Staff security training** across all locations
+**Staff Phishing Training** across all locations
 **Seasonal inventory systems** with varying security needs
 
 "Each store had different security practices, and we knew that was a vulnerability. We needed consistent protection across all locations without complex IT management."

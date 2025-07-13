@@ -555,7 +555,7 @@ scaling {
 
 #### Quarterly
 - Disaster recovery testing
-- Security penetration testing
+- Security Development/Code Auditing
 - Performance optimization review
 - Infrastructure cost review
 

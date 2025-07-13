@@ -42,13 +42,13 @@ At Code Monkey Cybersecurity, security is not just our business—it's our respo
 **Internal Audits**: Quarterly security assessments and compliance reviews
 **External Audits**: Annual third-party security audits
 **Vulnerability Scanning**: Continuous automated vulnerability assessments
-**Penetration Testing**: Regular professional penetration testing
+**Development/Code Auditing**: Regular professional Development/Code Auditing
 
 ## Security Practices
 
 ### Employee Security
 **Background Checks**: All employees undergo security clearance verification
-**Security Training**: Regular cybersecurity awareness training for all staff
+**Phishing Training**: Regular cybersecurity awareness training for all staff
 **Access Management**: Principle of least privilege for all system access
 **Secure Development**: Security-first approach to all software development
 
