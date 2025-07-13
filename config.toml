@@ -77,60 +77,18 @@ buildExpired = false
 
 [menu]
 
-# Main navigation menu (simplified)
+# Dynamic navigation - automatically generates from content structure
+# Top-level sections are manually defined, subsections are auto-generated
+
 [[menu.main]]
 name = "Services"
 url = "/services/"
 weight = 10
-hasChildren = true
-
-  [[menu.main]]
-  parent = "Services"
-  name = "Delphi Notify XDR"
-  url = "/services/delphi/"
-  weight = 11
-  
-  [[menu.main]]
-  parent = "Services"
-  name = "Phishing Training"
-  url = "/services/phishing-simulation/"
-  weight = 12
-  
-  [[menu.main]]
-  parent = "Services"
-  name = "Backup and Recovey"
-  url = "/services/persephone/"
-  weight = 13
 
 [[menu.main]]
 name = "Resources"
 url = "/resources/"
 weight = 20
-hasChildren = true
-
-  [[menu.main]]
-  parent = "Resources"
-  name = "Documentation"
-  url = "/resources/documentation/"
-  weight = 21
-
-  [[menu.main]]
-  parent = "Resources"
-  name = "Security Education"
-  url = "/resources/education/"
-  weight = 22
-  
-  [[menu.main]]
-  parent = "Resources"
-  name = "FAQ"
-  url = "/resources/faq/"
-  weight = 23
-  
-  [[menu.main]]
-  parent = "Resources"
-  name = "Case Studies"
-  url = "/resources/case-studies/"
-  weight = 24
 
 [[menu.main]]
 name = "About"
@@ -145,17 +103,17 @@ weight = 40
 # Footer menu (simplified)
 [[menu.footer]]
 name = "Contact"
-url = "/company/contact/"
+url = "/about-us/contact/"
 weight = 10
 
 [[menu.footer]]
 name = "Governance"
-url = "/company/governance/"
+url = "/about-us/governance/"
 weight = 20
 
 [[menu.footer]]
 name = "Customer Login"
-url = "/company/customer-login/"
+url = "/about-us/customer-login/"
 weight = 30
 
 # External links (External section)

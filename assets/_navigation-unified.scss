@@ -49,6 +49,16 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
     border-right: 1px solid $nav-border-color;
     overflow-y: auto;
     overflow-x: hidden;
+    
+    // Smooth scrolling and momentum for desktop
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; // iOS momentum scrolling
+  }
+  
+  // Add scroll behavior to all scrollable elements
+  * {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -95,8 +105,28 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
   }
   
   ~ .nav-menu {
-    max-height: 600px;
+    max-height: calc(100vh - 80px); // Account for header height on mobile
     padding: 1.5rem 1rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+    // Mobile scrollbar styling - minimal and clean
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.15);
+      border-radius: 2px;
+    }
+    
+    // Firefox
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.15) transparent;
   }
 }
 
@@ -109,10 +139,17 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  gap: 0.5rem;
   
   @media (min-width: 1024px) {
     padding: 1.5rem;
     border-bottom: 1px solid var(--color-neutral-100);
+  }
+  
+  // Ensure brand doesn't shrink too much
+  .site-brand {
+    flex-shrink: 0;
+    min-width: 0; // Allow text to truncate if needed
   }
 }
 
@@ -123,16 +160,100 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
   text-decoration: none;
   color: $nav-text-color;
   font-weight: 700;
+  flex-shrink: 0; // Prevent shrinking on small screens
   
   &:hover {
     color: $nav-hover-color;
   }
+  
+  // Responsive behavior for different screen sizes
+  @media (max-width: 480px) {
+    gap: 0.5rem;
+  }
+  
+  @media (min-width: 1024px) {
+    // Desktop sidebar - allow more space for branding
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
 }
 
 .brand-logo {
-  width: 32px;
-  height: 32px;
+  // Base mobile size
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  
+  // Responsive scaling
+  @media (min-width: 480px) {
+    width: 32px;
+    height: 32px;
+  }
+  
+  @media (min-width: 768px) {
+    width: 36px;
+    height: 36px;
+  }
+  
+  @media (min-width: 1024px) {
+    // Desktop sidebar - scale with sidebar width
+    width: calc(#{$nav-sidebar-width} * 0.15); // 15% of sidebar width
+    height: calc(#{$nav-sidebar-width} * 0.15);
+    min-width: 40px;
+    max-width: 64px;
+    min-height: 40px;
+    max-height: 64px;
+  }
 }
+
+.brand-text {
+  font-size: 1rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.brand-text-full {
+  // Full company name - shown when there's space
+  display: inline;
+  
+  @media (max-width: 480px) {
+    display: none; // Hide on small mobile
+  }
+  
+  @media (min-width: 1024px) {
+    // Hide if sidebar is too narrow for full text
+    display: none;
+  }
+}
+
+.brand-text-short {
+  // Short version - "Code Monkey"
+  display: none;
+  
+  @media (max-width: 480px) {
+    display: inline; // Show on small mobile
+    font-size: 0.9rem;
+  }
+  
+  @media (min-width: 1024px) {
+    display: inline; // Show in narrow sidebar
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+}
+
+// Alternative: If you want to try full text in sidebar, uncomment this:
+/*
+@media (min-width: 1200px) {
+  .brand-text-full {
+    display: inline !important;
+    font-size: 1rem;
+  }
+  .brand-text-short {
+    display: none !important;
+  }
+}
+*/
 
 // ========================================
 // MOBILE CONTROLS
@@ -142,19 +263,35 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  flex: 1;
+  justify-content: flex-end;
   
   @media (min-width: 1024px) {
     display: none;
+  }
+  
+  // Extra small screens - prioritize hamburger menu
+  @media (max-width: 320px) {
+    gap: 0.25rem;
+    
+    .mobile-search-container {
+      max-width: 100px;
+      min-width: 80px;
+    }
   }
 }
 
 .mobile-search-container {
   display: flex;
+  flex: 1;
+  max-width: 200px; // Prevent it from getting too wide
+  min-width: 120px; // Prevent it from getting too narrow
 }
 
 .mobile-search-form {
   display: flex;
   position: relative;
+  width: 100%;
 }
 
 // Base search input styles
@@ -172,7 +309,21 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
 
 .mobile-search-input {
   @extend .search-input;
-  width: 150px;
+  width: 100%;
+  min-width: 0; // Allow shrinking
+  padding-right: 2.5rem; // Space for submit button
+  
+  // Responsive sizing
+  @media (max-width: 375px) {
+    padding: 0.5rem;
+    padding-right: 2rem;
+    font-size: 0.9rem;
+  }
+  
+  @media (min-width: 480px) {
+    padding: 0.75rem;
+    padding-right: 2.5rem;
+  }
 }
 
 .mobile-search-submit {
@@ -197,10 +348,33 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
   text-align: center;
   
   @media (min-width: 1024px) {
-    max-height: none;
-    overflow: visible;
+    max-height: calc(100vh - 120px); // Account for header height
+    overflow-y: auto;
+    overflow-x: hidden;
     padding: 1rem;
     text-align: center;
+    
+    // Custom scrollbar styling
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+      
+      &:hover {
+        background: rgba(0, 0, 0, 0.3);
+      }
+    }
+    
+    // Firefox scrollbar styling
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
   }
 }
 
@@ -392,11 +566,45 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
   
   // CSS-only dropdown using checkbox (stays open until clicked again)
   .dropdown-checkbox:checked ~ .nav-submenu {
-    max-height: 400px;
+    max-height: 300px; // Default max height
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     opacity: 1;
     visibility: visible;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+    // Responsive max heights for smaller screens
+    @media (max-height: 600px) {
+      max-height: 200px;
+    }
+    
+    @media (max-height: 400px) {
+      max-height: 150px;
+    }
+    
+    // Submenu scrollbar styling
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 2px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 2px;
+      
+      &:hover {
+        background: rgba(0, 0, 0, 0.3);
+      }
+    }
+    
+    // Firefox
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.05);
   }
   
   .dropdown-checkbox:checked ~ .nav-link-parent .dropdown-arrow {

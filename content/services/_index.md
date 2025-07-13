@@ -24,7 +24,7 @@ No confusing tiers, no hidden fees, no surprise bills. Just straightforward cybe
  No credit card required  
  Cancel anytime  
 
-{{< btn href="/offerings/delphi/sign-up/" style="primary" >}}Start Your Free Trial{{< /btn >}}
+{{< btn href="/services/delphi/sign-up/" style="primary" >}}Start Your Free Trial{{< /btn >}}
 {{% /hint %}}
 
 ---
@@ -118,7 +118,7 @@ During your trial, our team helps you install and configure Delphi Notify on you
 
 {{< cta 
   title="Ready to Get Started?" 
-  url="/offerings/delphi/sign-up/" 
+  url="/services/delphi/sign-up/" 
   button="Start Your Free Trial"
   style="dark"
    >}}

@@ -376,7 +376,7 @@ Custom integrations
 **Or explore:**
 - [Resource Library](/resources/) for security guides
 - [Blog](/blog/) for latest security insights
-- [Training Programs](/offerings/phishing-simulation/training/) for hands-on learning
+- [Training Programs](/services/phishing-simulation/training/) for hands-on learning
 
 ---
 

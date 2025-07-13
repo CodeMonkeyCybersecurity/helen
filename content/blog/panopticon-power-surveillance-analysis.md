@@ -5,6 +5,7 @@ author: "Henry Oliver"
 tags: ["Surveillance", "Philosophy", "Power Analysis", "Foucault", "Privacy"]
 categories: ["Philosophical Analysis", "Surveillance Studies", "Social Theory"]
 description: "How Jeremy Bentham's prison design became Michel Foucault's framework for understanding power, surveillance, and control in modern society."
+draft: true
 ---
 
 ![Surveillance and Power](/images/oh_the_hacks_web.jpg)

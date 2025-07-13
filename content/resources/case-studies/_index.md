@@ -328,7 +328,7 @@ Industry-specific compliance support
 
 **Ready to join our success stories?**
 
-**[Start Free Trial](/offerings/delphi/sign-up/)** - Experience Delphi Notify risk-free for 30 days
+**[Start Free Trial](/services/delphi/sign-up/)** - Experience Delphi Notify risk-free for 30 days
 
 **[Contact Sales](/about-us/contact/)** - Discuss your specific security needs
 

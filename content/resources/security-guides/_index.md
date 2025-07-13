@@ -593,7 +593,7 @@ Email support for questions
 - Executive briefings
 - Ongoing education programs
 
-**[Training Services](/offerings/phishing-simulation/training/)**
+**[Training Services](/services/phishing-simulation/training/)**
 
 ---
 

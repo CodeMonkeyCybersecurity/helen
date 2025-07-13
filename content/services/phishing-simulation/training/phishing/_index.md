@@ -10,7 +10,7 @@ Advanced email Phishing Training that goes beyond basic awareness - protecting y
 
 ## **Why Specialized Phishing Training?**
 
-While our [general Phishing Training](/offerings/phishing-simulation/training/) covers the basics, this specialized program focuses specifically on the evolving world of phishing attacks that are becoming increasingly sophisticated and targeted.
+While our [general Phishing Training](/services/phishing-simulation/training/) covers the basics, this specialized program focuses specifically on the evolving world of phishing attacks that are becoming increasingly sophisticated and targeted.
 
 **Recent Australian Phishing Statistics:**
 **95%** of successful cyber attacks start with phishing

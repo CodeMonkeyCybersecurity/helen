@@ -102,7 +102,7 @@ For those interested in the technical implementation:
 ## Ready to Experience XDR Safety?
 
 {{% hint info %}}
-{{< btn href="/offerings/delphi/sign-up/" style="primary" >}}Try Delphi Notify{{< /btn >}}
+{{< btn href="/services/delphi/sign-up/" style="primary" >}}Try Delphi Notify{{< /btn >}}
 {{% /hint %}}
 
 Get the benefits of  XDR technology with human-friendly alerts and expert support.

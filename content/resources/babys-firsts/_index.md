@@ -24,7 +24,7 @@ In ancient Greek mythology and religion, Eos is the goddess and personification 
 
 This repo contains lots of tools to help you get started on your ubuntu server journey, including tools for easy server management and turn-key web app configurations.
 
- Includes [`Delphi`](/Eos/Delphi/Delphi) - powered by [Wazuh](/https://wazuh.com), an  level security system.  
+ Includes [`Delphi`](/Eos/Delphi/Delphi) - powered by [Wazuh](https://wazuh.com), an enterprise level security system.  
     Contains instructions and best practices for deploying and managing Wazuh within your infrastructure.
 
 ## [Persephone](/Persephone/Persephone)

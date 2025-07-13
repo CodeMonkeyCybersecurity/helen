@@ -56,6 +56,6 @@ Follow our Chamber journey and connect with us:
 
 ---
 
-*Are you a Fremantle business looking to improve your cybersecurity? Chamber members receive priority booking for our [phishing training workshops](/offerings/phishing-simulation/training/) and [Delphi Notify](/offerings/delphi/sign-up/) consultations.*
+*Are you a Fremantle business looking to improve your cybersecurity? Chamber members receive priority booking for our [phishing training workshops](/services/phishing-simulation/training/) and [Delphi Notify](/services/delphi/sign-up/) consultations.*
 
 **Connect with Fremantle Chamber**: [fremantlechamber.com.au](https://fremantlechamber.com.au)

@@ -135,7 +135,7 @@ Immediate steps to take if you think you've been compromised or scammed
 Not sure where your vulnerabilities are? We offer free, no-obligation security assessments for small businesses.
 
 ### **Professional Training**
-Ready for hands-on training for your team? Check out our [professional training programs](/offerings/phishing-simulation/training/) with real-world scenarios and measurable results.
+Ready for hands-on training for your team? Check out our [professional training programs](/services/phishing-simulation/training/) with real-world scenarios and measurable results.
 
 ### **Emergency Response**
 Dealing with an active security incident? We provide emergency response support for Australian businesses.

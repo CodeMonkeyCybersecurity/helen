@@ -3,6 +3,7 @@ author: "Cybermonkey"
 date: "2025-05-20"
 linktitle: "Code Monkey Cybersecurity is now part of Microsoft for Startups"
 title: "Code Monkey Cybersecurity is now part of Microsoft for Startups"
+draft: true
 ---
 
 ![Microsoft for Startups logo and branding showing the startup support program that provides resources and credits to qualifying startups](/images/microsoft_for_startups.jpg)

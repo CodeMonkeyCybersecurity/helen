@@ -65,4 +65,4 @@ Chatbot-integrated alert explanations using LLM technology for instant, detailed
 
 **Read setup guides:** [Athena Knowledge Base](https://wiki.cybermonkey.net.au/Delphi)
 
-**Learn the technology:** [XDR Platform Overview](/offerings/delphi/technology/)
+**Learn the technology:** [XDR Platform Overview](/services/delphi/technology/)

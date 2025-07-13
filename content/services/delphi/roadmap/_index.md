@@ -2,6 +2,7 @@
 title: "Delphi Roadmap"
 description: "Development roadmap and future features for Delphi cybersecurity platform"
 weight: 30
+draft: true
 ---
 
 # Delphi Platform Roadmap

@@ -14,7 +14,7 @@ Security experts review every alert
 Plain English explanations with clear next steps
 Built for small businesses and non-technical users
 
-{{< btn href="/offerings/delphi/sign-up/" style="primary" >}}Start Free Trial{{< /btn >}}
+{{< btn href="/services/delphi/sign-up/" style="primary" >}}Start Free Trial{{< /btn >}}
 
 ![Illustration showing various cybersecurity threats and protective measures, demonstrating the scope of digital security challenges](/images/oh_the_hacks_web.jpg)
 

@@ -15,7 +15,10 @@
   <div class="nav-header">
     <a href="{{ .Site.BaseURL }}" class="site-brand" aria-label="Code Monkey Cybersecurity homepage">
       <img src="/favicon.png" alt="Code Monkey Cybersecurity logo" class="brand-logo">
-      <span class="brand-text">{{ .Site.Title }}</span>
+      <span class="brand-text">
+        <span class="brand-text-full">{{ .Site.Title }}</span>
+        <span class="brand-text-short">Code Monkey</span>
+      </span>
     </a>
     
     {{/* Mobile Controls */}}
@@ -71,24 +74,37 @@
     </div>
     
     <div class="nav-primary">
+      {{/* Capture the site context before entering the menu loop */}}
+      {{ $site := .Site }}
+      {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
-        {{ if .HasChildren }}
+        {{/* Check if this section has subsections by looking at content structure */}}
+        {{ $section := .Name | lower }}
+        {{ $sectionPath := cond (eq $section "about") "about-us" $section }}
+        {{ $sectionPages := where $site.Pages "Section" $sectionPath }}
+        {{ $subsections := where $sectionPages "Kind" "section" }}
+        {{ $hasSubsections := gt (len $subsections) 0 }}
+        
+        {{ if $hasSubsections }}
           <div class="nav-dropdown" role="none">
-            <input type="checkbox" id="dropdown-{{ .Name | urlize }}" class="dropdown-checkbox"{{ if or ($.HasMenuCurrent "main" .) (and (eq .Name "Services") (eq $.Section "services")) (and (eq .Name "Resources") (eq $.Section "resources")) }} checked{{ end }}>
-            <label for="dropdown-{{ .Name | urlize }}" class="nav-link nav-link-parent{{ if or (eq $.RelPermalink .URL) ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} active{{ end }}" role="menuitem" aria-haspopup="true" aria-expanded="{{ if $.HasMenuCurrent "main" . }}true{{ else }}false{{ end }}">
+            <input type="checkbox" id="dropdown-{{ .Name | urlize }}" class="dropdown-checkbox"{{ if or ($currentPage.HasMenuCurrent "main" .) (and (eq .Name "Services") (eq $currentPage.Section "services")) (and (eq .Name "Resources") (eq $currentPage.Section "resources")) (and (eq .Name "About") (eq $currentPage.Section "about-us")) }} checked{{ end }}>
+            <label for="dropdown-{{ .Name | urlize }}" class="nav-link nav-link-parent{{ if or (eq $currentPage.RelPermalink .URL) ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{ end }}" role="menuitem" aria-haspopup="true" aria-expanded="{{ if $currentPage.HasMenuCurrent "main" . }}true{{ else }}false{{ end }}">
               {{ .Name }}
               <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
             </label>
             <ul class="nav-submenu" role="menu" aria-label="{{ .Name }} submenu">
-              {{ range .Children }}
-              <li role="none"><a href="{{ .URL }}" class="nav-link nav-link-child{{ if or (eq $.RelPermalink .URL) ($.IsMenuCurrent "main" .) }} active{{ end }}" role="menuitem"{{ if or (eq $.RelPermalink .URL) ($.IsMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+              {{/* Auto-generate submenu items from content structure */}}
+              {{ range $subsections.ByWeight.ByTitle }}
+                {{ if .Title }}
+                <li role="none"><a href="{{ .RelPermalink }}" class="nav-link nav-link-child{{ if eq $currentPage.RelPermalink .RelPermalink }} active{{ end }}" role="menuitem"{{ if eq $currentPage.RelPermalink .RelPermalink }} aria-current="page"{{ end }}>{{ .Title }}</a></li>
+                {{ end }}
               {{ end }}
             </ul>
           </div>
         {{ else }}
-          <a href="{{ .URL }}" class="nav-link{{ if or (eq $.RelPermalink .URL) ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) (eq (printf "%s/" $.RelPermalink) .URL) (eq $.RelPermalink (printf "%s/" .URL)) }} active{{ end }}" role="menuitem"{{ if or (eq $.RelPermalink .URL) ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>
+          <a href="{{ .URL }}" class="nav-link{{ if or (eq $currentPage.RelPermalink .URL) ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) (eq (printf "%s/" $currentPage.RelPermalink) .URL) (eq $currentPage.RelPermalink (printf "%s/" .URL)) }} active{{ end }}" role="menuitem"{{ if or (eq $currentPage.RelPermalink .URL) ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>{{ .Name }}</a>
         {{ end }}
       {{ end }}
     </div>

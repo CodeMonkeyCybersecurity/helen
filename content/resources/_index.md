@@ -11,15 +11,15 @@ Welcome to the Code Monkey Cybersecurity resource center.
 ## Platform Services
 
 {{< grid columns="3" >}}
-{{< card-unified title="Delphi Notify" link="/offerings/delphi/" badge="XDR Platform" style="promo" >}}
+{{< card-unified title="Delphi Notify" link="/services/delphi/" badge="XDR Platform" style="promo" >}}
 Advanced threat detection and response platform designed for small businesses. Real-time monitoring with human-curated alerts.
 {{< /card-unified >}}
 
-{{< card-unified title="Persephone" link="/offerings/persephone/" badge="Backup" style="default" >}}
-Automated data protection and Backup and Recovey. Protect your business data with secure, Australian-hosted backup services.
+{{< card-unified title="Persephone" link="/services/persephone/" badge="Backup" style="default" >}}
+Automated data protection and Backup and Recovery. Protect your business data with secure, Australian-hosted backup services.
 {{< /card-unified >}}
 
-{{< card-unified title="Phishing Simulation" link="/offerings/phishing-simulation/" badge="Training" style="resource" >}}
+{{< card-unified title="Phishing Simulation" link="/services/phishing-simulation/" badge="Training" style="resource" >}}
 Test your team's security awareness with realistic phishing simulations and comprehensive training programs.
 {{< /card-unified >}}
 {{< /grid >}}
@@ -31,7 +31,7 @@ Test your team's security awareness with realistic phishing simulations and comp
 Free cybersecurity learning materials, guides, and resources to help improve your security knowledge and practices.
 {{< /card-unified >}}
 
-{{< card-unified title="Professional Training" link="/offerings/phishing-simulation/training/" badge="Paid Service" style="resource" >}}
+{{< card-unified title="Professional Training" link="/services/phishing-simulation/training/" badge="Paid Service" style="resource" >}}
 Expert-led phishing awareness training and scam education workshops for your team.
 {{< /card-unified >}}
 {{< /grid >}}

@@ -282,7 +282,7 @@ Business: $20-40/device/year
 - Cancel anytime
 - Full feature access
 
-**[Start Free Trial](/offerings/delphi/sign-up/)** | **[Contact Sales](/about-us/contact/)** | **[View Pricing](/pricing/)**
+**[Start Free Trial](/services/delphi/sign-up/)** | **[Contact Sales](/about-us/contact/)** | **[View Pricing](/pricing/)**
 
 ---
 

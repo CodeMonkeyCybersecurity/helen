@@ -7,6 +7,7 @@ layout: single
 keywords: ["phishing", "email security", "scam prevention", "suspicious email", "cybersecurity checklist"]
 tags: ["Email Security", "Phishing Prevention", "Security Checklist"]
 categories: ["Security Guides"]
+draft: true
 ---
 
 # Suspicious Email Checklist

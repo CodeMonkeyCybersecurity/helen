@@ -5,71 +5,138 @@ keywords: ["cybersecurity signup", "Delphi Notify", "security alerts", "cybersec
 weight: 10
 ---
 
-# Sign up for Delphi Notify
-
-## Simple, Smart Security Alerts
-Finally, security notifications that make sense.
-
-Delphi Notify provides expert-reviewed security alerts in plain English. Get clear explanations of what happened, why it matters, and what to do next.
-
-## Ready to Try Delphi Notify?
+# Security Alerts That Actually Make Sense
+## Start Your Free Trial of Delphi Notify Today
 
 {{% hint info %}}
-**Start Your Free Trial Today**
-
-{{< btn href="https://hera.cybermonkey.dev" style="primary" aria-label="Start your free 30-day trial of Delphi Notify security monitoring" >}}Get Started Now - Free for 30 Days{{< /btn >}}
-
-**Benefits of your free trial:**
-No credit card required
-
-Setup assistance included
-
-Cancel anytime
+**🎉 Special Launch Offer**: Free until August 1st, 2025  
+No credit card required • Setup assistance included • Cancel anytime
 {{% /hint %}}
 
-### Or Get More Information First
-**Not quite ready?** [Contact us](mailto:main@cybermonkey.net.au?subject=Delphi%20Notify%20Information%20Request&body=Hi!%20I'd%20like%20to%20learn%20more%20about%20Delphi%20Notify.%20Please%20tell%20me%20about:%0A%0A-%20Pricing%20and%20plans%0A-%20How%20it%20works%20for%20my%20situation%0A-%20Implementation%20process%0A%0AMyself/My%20Business:%0A[Tell%20us%20a%20bit%20about%20what%20you're%20protecting]) for a quick consultation call where we can answer your questions and see if Delphi Notify is right for you.
+{{< grid columns="2" >}}
+{{< card-unified title="What You Get" style="promo" >}}
+✅ **Plain English alerts** - No confusing technical jargon  
+✅ **Expert-reviewed notifications** - Real security professionals filter the noise  
+✅ **Actionable guidance** - Clear next steps for every alert  
+✅ **Personal setup assistance** - We help you get started  
+✅ **Small business focused** - Designed for real people, not IT departments
+{{< /card-unified >}}
 
-## How Delphi Notify Helps You
+{{< card-unified title="Ready to Start?" style="default" >}}
+{{< btn href="https://hera.cybermonkey.dev" style="primary" >}}Start Free Trial Now{{< /btn >}}
 
-**Clear, Helpful Notifications**: Instead of confusing technical alerts, you get straightforward messages that explain what happened and what (if anything) you should do about it. Think of it like having a security guard who speaks plain English.
+**Takes less than 2 minutes to get started**
 
-**Focus on What Matters**: Your systems generate lots of security events every day - most of them are perfectly normal. Delphi Notify takes note of what's typical for your environment and only alerts you to the things that might actually need your attention.
+[Not ready? Get more info first →](#learn-more)
+{{< /card-unified >}}
+{{< /grid >}}
 
-**No Technical Degree Required**: Our alerts are written for humans, not IT professionals. You'll understand exactly what's happening without needing to decode technical jargon.
+---
 
-## Peace of Mind: 
-Know that intelligent systems are monitoring your digital environment, with real security experts reviewing everything before you hear about it, so you can focus on what you do best - running your business or enjoying your digital life.
+## Why Choose Delphi Notify?
 
-Perfect for small businesses and home users alike.
+{{< grid columns="3" >}}
+{{< card-unified title="🗣️ Human-Friendly" style="resource" >}}
+Instead of "TCP_SYN_FLOOD detected on eth0", you get "Someone tried to overwhelm your internet connection. This is usually harmless, but keep an eye out for slow internet today."
+{{< /card-unified >}}
 
-Whether you're protecting a business, your family's devices, or just your own personal digital life, Delphi Notify helps you stay informed about your security without the complexity.
+{{< card-unified title="🎯 Focus on What Matters" style="resource" >}}
+Your systems create thousands of events daily. We filter out the noise and only tell you about things that might actually need your attention.
+{{< /card-unified >}}
 
+{{< card-unified title="🏠 Perfect for Small Business" style="resource" >}}
+Designed for business owners, families, and individuals - not Fortune 500 IT departments. Get enterprise-level security without the complexity.
+{{< /card-unified >}}
+{{< /grid >}}
 
+---
 
-## Sign-up Process
+## How It Works
 
-### Step 1: Create Your Account
-Provide your email, name, and password. Takes about 2 minutes.
+{{< grid columns="4" >}}
+{{< card-unified title="1. Sign Up" style="default" >}}
+Create your account in under 2 minutes. No credit card needed for your free trial.
+{{< /card-unified >}}
 
-### Step 2: Verify Your Email
-We'll send a verification email to confirm your address and secure your account.
+{{< card-unified title="2. We Contact You" style="default" >}}
+Our team reaches out within 1-2 business days to help set up your monitoring.
+{{< /card-unified >}}
 
-### Step 3: Personal Setup Assistance
-Our team will contact you within 1-2 business days to help configure your monitoring.
+{{< card-unified title="3. Start Monitoring" style="default" >}}
+We begin watching your systems and filtering security events in real-time.
+{{< /card-unified >}}
 
-### Step 4: Start Receiving Alerts
-Begin receiving clear, expert-reviewed security notifications tailored to your needs.
+{{< card-unified title="4. Get Smart Alerts" style="promo" >}}
+Receive clear, actionable notifications only when something actually needs your attention.
+{{< /card-unified >}}
+{{< /grid >}}
 
-## A Quick Word About Passwords
-Since we're talking about keeping you secure, here's a friendly reminder about passwords. We recommend using a password manager - it's like having a secure digital wallet that creates and remembers complex passwords for all your accounts.
-If you don't have one yet, we personally use [Proton Pass](https://proton.me/pass), which comes with secure email too. You can check it out through our [referral link](https://pr.tn/ref/KF4YS3NCHZ4G) if you're interested.
+---
 
+<div id="learn-more"></div>
+
+## Still Have Questions?
+
+{{% details title="How much does it cost after the free period?" %}}
+After August 1st, 2025, Delphi Notify will be **$29/month for households** and **$49/month for small businesses**. You can cancel anytime before then with no charges.
+{{% /details %}}
+
+{{% details title="What kind of devices can you monitor?" %}}
+We can monitor computers (Windows, Mac, Linux), servers, network devices, and cloud services. During setup, we'll help you determine what makes sense for your situation.
+{{% /details %}}
+
+{{% details title="Do I need technical knowledge?" %}}
+Not at all! That's the whole point. We handle the technical complexity and give you information in plain English. If you can use email, you can use Delphi Notify.
+{{% /details %}}
+
+{{% details title="What if I don't like it?" %}}
+No worries! You can cancel anytime with no fees or penalties. During the free period, there's absolutely nothing to lose.
+{{% /details %}}
+
+{{% details title="How is this different from antivirus software?" %}}
+Antivirus focuses on preventing malware infections. Delphi Notify monitors your entire digital environment for suspicious activities, network intrusions, unusual logins, and other security events that antivirus might miss.
+{{% /details %}}
+
+---
+
+## Ready to Get Started?
 
 {{< cta 
-  title="Have Questions?" 
-  url="mailto:main@cybermonkey.net.au?subject=Delphi%20Notify%20Question&body=Hi!%20I%20have%20a%20question%20about%20Delphi%20Notify:%0A%0A[Tell%20us%20what%20you'd%20like%20to%20know]" 
-  button="Contact Us"
-  style="light" >}}
-We're here to help with any questions about Delphi Notify.
+  title="Start Your Free Trial" 
+  url="https://hera.cybermonkey.dev" 
+  button="Sign Up Now - Free Until August 1st"
+  style="dark" >}}
+Join hundreds of small businesses and families who trust Delphi Notify to keep them informed about their digital security. No credit card required.
 {{< /cta >}}
+
+---
+
+## Quick Security Tip
+
+{{% hint warning %}}
+**About Passwords**: Since we're talking about security, remember to use a password manager! We personally recommend [Proton Pass](https://pr.tn/ref/KF4YS3NCHZ4G) - it creates strong passwords and keeps them safe, plus it comes with secure email. Think of it as a digital vault for all your login information.
+{{% /hint %}}
+
+---
+
+## Need More Information?
+
+Not quite ready to start your trial? That's perfectly fine! 
+
+{{< grid columns="2" >}}
+{{< card-unified title="Talk to a Human" style="default" >}}
+**Schedule a 15-minute call** to discuss your specific security needs and see if Delphi Notify is right for you.
+
+[📞 Schedule a Call](mailto:main@cybermonkey.net.au?subject=Delphi%20Notify%20Consultation&body=Hi!%20I'd%20like%20to%20schedule%20a%20consultation%20call%20about%20Delphi%20Notify.%0A%0APlease%20let%20me%20know%20your%20available%20times.%0A%0AMy%20questions:%0A-%20[What%20would%20you%20like%20to%20know?])
+{{< /card-unified >}}
+
+{{< card-unified title="Email Your Questions" style="resource" >}}
+**Send us your questions** and we'll get back to you with detailed answers within 24 hours.
+
+[✉️ Email Questions](mailto:main@cybermonkey.net.au?subject=Delphi%20Notify%20Questions&body=Hi!%20I%20have%20some%20questions%20about%20Delphi%20Notify:%0A%0A1.%20[Your%20first%20question]%0A2.%20[Your%20second%20question]%0A%0AAbout%20my%20situation:%0A[Tell%20us%20a%20bit%20about%20what%20you're%20protecting])
+{{< /card-unified >}}
+{{< /grid >}}
+
+---
+
+*Questions? Email us at [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au) or call during business hours (9 AM - 5 PM AWST). We're here to help!*

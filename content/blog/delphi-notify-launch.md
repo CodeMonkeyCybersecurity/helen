@@ -5,6 +5,7 @@ author: "Henry Oliver"
 tags: ["Delphi Notify", "Product Launch", "Fremantle Business", "Cybersecurity Software"]
 categories: ["Product News", "Security Software"]
 description: "Free until August 1st - Meet Delphi Notify, the security monitoring tool that explains threats in plain English instead of confusing technical alerts."
+draft: true
 ---
 
 # Introducing Delphi Notify

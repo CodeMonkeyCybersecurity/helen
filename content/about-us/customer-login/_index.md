@@ -1,6 +1,6 @@
 ---
 title: "Customer Login"
-description: "Secure customer login portal for Code Monkey Cybersecurity services including Delphi Notify monitoring and support."
+description: "Secure customer login portal for Code Monkey Cybersecurity services including [Delphi Notify](/services/delphi/) monitoring and support."
 keywords: ["customer login", "secure portal", "Delphi Notify", "cybersecurity dashboard"]
 weight: 7
 ---
@@ -11,9 +11,9 @@ weight: 7
 
 Welcome to the Code Monkey Cybersecurity customer portal. 
 
-Log in to access your Delphi Notify security dashboard, alerts, and account management.
+Log in to access your [Delphi Notify](/services/delphi/) security dashboard, alerts, and account management.
 
-### Delphi Notify Dashboard
+### [Delphi Notify](/services/delphi/) Dashboard
 
 Access your personalized security monitoring dashboard:
 
@@ -44,7 +44,7 @@ Follow the reset instructions sent to your email
 
 ### New Customer Setup
 
-If you're a new customer who just signed up for Delphi Notify:
+If you're a new customer who just signed up for [Delphi Notify](/services/delphi/):
 
 Check your email for setup instructions
 Your security dashboard will be available within 24 hours
