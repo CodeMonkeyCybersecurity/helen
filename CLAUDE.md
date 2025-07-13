@@ -40,7 +40,8 @@ docker-compose down
 
 ## Development Notes
 - Always use `hugo server --buildDrafts` for local development to see draft content
-- We need to start up the server with `npm run dev` in dev mode because we've added npm bits to the hugo base
+- Use `hugo server` for development without draft posts
+- Hugo handles all build processes natively without external dependencies
 
 ## Architecture Overview
 

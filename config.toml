@@ -134,7 +134,7 @@ hasChildren = true
 
 [[menu.main]]
 name = "About"
-url = "/company/"
+url = "/about-us/"
 weight = 30
 
 [[menu.main]]

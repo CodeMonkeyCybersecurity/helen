@@ -74,8 +74,8 @@
       {{ range .Site.Menus.main }}
         {{ if .HasChildren }}
           <div class="nav-dropdown" role="none">
-            <input type="checkbox" id="dropdown-{{ .Name | urlize }}" class="dropdown-checkbox">
-            <label for="dropdown-{{ .Name | urlize }}" class="nav-link nav-link-parent{{ if or (eq $.RelPermalink .URL) ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} active{{ end }}" role="menuitem" aria-haspopup="true" aria-expanded="false">
+            <input type="checkbox" id="dropdown-{{ .Name | urlize }}" class="dropdown-checkbox"{{ if or ($.HasMenuCurrent "main" .) (and (eq .Name "Services") (eq $.Section "services")) (and (eq .Name "Resources") (eq $.Section "resources")) }} checked{{ end }}>
+            <label for="dropdown-{{ .Name | urlize }}" class="nav-link nav-link-parent{{ if or (eq $.RelPermalink .URL) ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} active{{ end }}" role="menuitem" aria-haspopup="true" aria-expanded="{{ if $.HasMenuCurrent "main" . }}true{{ else }}false{{ end }}">
               {{ .Name }}
               <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>

@@ -1,0 +1,73 @@
+{{ define "main" }}
+<div class="blog-list">
+  <header class="blog-header">
+    <h1 class="blog-title">{{ .Title }}</h1>
+    {{ if .Description }}
+    <p class="blog-description">{{ .Description }}</p>
+    {{ end }}
+  </header>
+
+  {{ if .Content }}
+  <div class="blog-intro">
+    {{ .Content }}
+  </div>
+  {{ end }}
+
+  <div class="blog-posts">
+    {{ $paginator := .Paginate .Pages 10 }}
+    {{ range $paginator.Pages }}
+    <article class="blog-post-preview">
+      <header>
+        <h2 class="post-title">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h2>
+        <div class="post-meta">
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+            {{ .Date.Format "January 2, 2006" }}
+          </time>
+          {{ if .Params.author }}
+          <span class="post-author">by {{ .Params.author }}</span>
+          {{ end }}
+        </div>
+      </header>
+      
+      <div class="post-summary">
+        {{ if .Description }}
+          {{ .Description | safeHTML | truncate 200 }}
+        {{ else if .Summary }}
+          {{ .Summary | plainify | truncate 200 }}
+        {{ else }}
+          {{ .Content | plainify | truncate 200 }}
+        {{ end }}
+      </div>
+      
+      {{ if .Params.tags }}
+      <div class="post-tags">
+        {{ range .Params.tags }}
+        <span class="tag">{{ . }}</span>
+        {{ end }}
+      </div>
+      {{ end }}
+      
+      <a href="{{ .Permalink }}" class="read-more">Read More →</a>
+    </article>
+    {{ end }}
+  </div>
+
+  {{ if gt $paginator.TotalPages 1 }}
+  <nav class="pagination">
+    {{ if $paginator.HasPrev }}
+    <a href="{{ $paginator.Prev.URL }}" class="pagination-prev">← Previous</a>
+    {{ end }}
+    
+    <span class="pagination-info">
+      Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}
+    </span>
+    
+    {{ if $paginator.HasNext }}
+    <a href="{{ $paginator.Next.URL }}" class="pagination-next">Next →</a>
+    {{ end }}
+  </nav>
+  {{ end }}
+</div>
+{{ end }}
