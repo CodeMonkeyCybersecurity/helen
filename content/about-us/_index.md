@@ -67,16 +67,16 @@ Our production infrastructure choices (Vault, Keycloak, Wazuh, KVM, and Docker) 
 We're guided by hands-on experience with industry frameworks and practical certifications, including CompTIA A+, Network+, Security+, and PenTest+, which inform our focus on real-world resilience over theoretical compliance.
 
 <div style="display: flex; flex-wrap: wrap; gap: 12px; margin: 1em 0;">
-  <img src="/images/comptia-a-ce-certification.png" alt="CompTIA A+" width="100" />
-  <img src="/images/comptia-network-ce-certification.png" alt="Network+" width="100" />
-  <img src="/images/comptia-security-ce-certification.png" alt="Security+" width="100" />
-  <img src="/images/comptia-pentest-ce-certification.png" alt="PenTest+" width="100" />
+  <img src="/images/badges/comptia-a-ce-certification.png" alt="CompTIA A+" width="100" />
+  <img src="/images/badges/comptia-network-ce-certification.png" alt="Network+" width="100" />
+  <img src="/images/badges/comptia-security-ce-certification.png" alt="Security+" width="100" />
+  <img src="/images/badges/comptia-pentest-ce-certification.png" alt="PenTest+" width="100" />
 </div>
 
 <div style="display: flex; flex-wrap: wrap; gap: 12px; margin: 1em 0;">
-  <img src="/images/comptia-it-operations-specialist-cios-stackable-certification.png" alt="CIOS" width="100" />
-  <img src="/images/comptia-network-vulnerability-assessment-professional-cnvp-stackable-certification.png" alt="CNVP" width="100" />
-  <img src="/images/comptia-secure-infrastructure-specialist-csis-stackable-certification.png" alt="CSIS" width="100" />
+  <img src="/images/badges/comptia-it-operations-specialist-cios-stackable-certification.png" alt="CIOS" width="100" />
+  <img src="/images/badges/comptia-network-vulnerability-assessment-professional-cnvp-stackable-certification.png" alt="CNVP" width="100" />
+  <img src="/images/badges/comptia-secure-infrastructure-specialist-csis-stackable-certification.png" alt="CSIS" width="100" />
 </div>
 
 These certifications signal a baseline level of competence and understanding in our approach to DevSecOps, threat modeling, and practical infrastructure hardening — especially for small teams, nonprofits, and vulnerable users navigating complex risk landscapes.

@@ -21,8 +21,8 @@ buildExpired = false
 # Site-wide metadata
 [params]
   author = "Henry Oliver"
-  description = "Cybersecurity. With Humans. Managed XDR, backup, DevSecOps, and open source tools from Fremantle."
-  keywords = ["Cybersecurity", "XDR", "SIEM", "Penetration Testing", "Backup", "Open Source", "Australia"]
+  description = "Cybersecurity. Now with Humans | Phishing awareness training, XDR, Backups and Recovery, open source DevSecOps tooling from Fremantle."
+  keywords = ["Cybersecurity", "XDR", "SIEM", "Phishing Testing", "Backup", "Open Source", "Australia"]
   contact_email = "main@cybermonkey.net.au"
   umami_script = "https://u.cybermonkey.dev/script.js"
   umami_site_id = "970ff30a-ab5d-4c66-8f77-55cafc76083c"

@@ -7,7 +7,7 @@ categories: ["Company News", "Industry"]
 description: "We're excited to be included in the 2025 WA Cyber Capability Directory, showcasing Western Australia's cybersecurity expertise and innovation."
 ---
 
-![CyberWest Hub WA Cyber Capability Directory](/images/cyberwest-directory-feature.jpg)
+![CyberWest Hub WA Cyber Capability Directory](/static/images/cyberwest-directory-feature.jpg)
 
 We're thrilled to announce that **Code Monkey Cybersecurity has been included in the 2025 WA Cyber Capability Directory**, released during the CyberWest Summit last month.
 
@@ -22,8 +22,8 @@ CyberWest Hub serves as Western Australia's premier cybersecurity innovation hub
 ## Our Growing Recognition
 
 This directory listing joins our other recent achievements:
-**Microsoft for Startups Partnership** (announced earlier this year)
-**Fremantle Chamber of Commerce Membership**
+**[Microsoft for Startups Partnership](/blog/microsoft_for_startups/)** (announced earlier this year)
+**[Fremantle Chamber of Commerce Membership](/blog/fremantle-chamber-membership/)**
 - Active participation in the WA cybersecurity community
 
 ## Why This Matters for Our Clients

@@ -64,7 +64,7 @@ The `/posts/` section serves dual purposes:
 3. **SEO content marketing** Industry-specific articles and case studies
 
 **Blog content types:**
-- Company milestones (Microsoft partnership, Chamber membership, directory listings)
+- Company milestones (Microsoft Founders Sponsorship, Chamber membership, directory listings)
 - Security awareness articles and tips
 - Case studies and customer success stories
 Industry news and commentary

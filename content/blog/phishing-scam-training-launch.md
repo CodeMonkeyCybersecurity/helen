@@ -44,8 +44,8 @@ Industry-specific scenarios
 
 **Recently Recognized:**
 **WA Cyber Capability Directory** (CyberWest Hub)
-**Microsoft for Startups Partner**
-**Fremantle Chamber of Commerce Member**
+**[Microsoft for Startups Partner](/blog/microsoft_for_startups/)**
+**[Fremantle Chamber of Commerce Member](/blog/fremantle-chamber-membership/)**
 **CompTIA Certified** (Security+, Network+, PenTest+)
 
 **Official Directory Description:**

@@ -210,8 +210,417 @@
   }
 }
 
+// ========================================
+// GLOBAL LIST STYLING - REMOVE ALL BULLETS
+// ========================================
+
+// Remove bullets from all lists in content areas
+.site-main,
+.page-content,
+.content-section,
+section,
+article,
+.blog-post-card {
+  ul, ol {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    
+    li {
+      list-style: none;
+      
+      &::before,
+      &::marker {
+        display: none;
+        content: none;
+      }
+    }
+  }
+}
+
+// Remove bullets globally for any remaining lists
+ul, ol {
+  list-style: none;
+  padding-left: 0;
+  
+  li {
+    list-style: none;
+    
+    &::before,
+    &::marker {
+      display: none;
+      content: none;
+    }
+  }
+}
+
+// ========================================
+// BLOG POST NAVIGATION BUTTONS
+// ========================================
+
+.page-navigation {
+  margin: var(--spacing-24) 0;
+  padding: var(--spacing-16);
+  border-top: 1px solid var(--neutral-200);
+  
+  .nav-buttons {
+    display: flex;
+    gap: var(--spacing-12);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  
+  .nav-prev,
+  .nav-next {
+    flex: 1;
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--spacing-12);
+    
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+    
+    .nav-label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      opacity: 0.8;
+      margin-bottom: 0.25rem;
+    }
+    
+    .nav-title {
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+  }
+  
+  // Override button colors for navigation - use orange instead of purple
+  .nav-prev.btn-secondary {
+    background: transparent;
+    color: #b66b02;
+    border: 2px solid #b66b02;
+    
+    &:hover {
+      background: #b66b02;
+      color: white;
+    }
+  }
+  
+  .nav-next.btn-primary {
+    background: #b66b02;
+    color: white;
+    
+    &:hover {
+      background: darken(#b66b02, 10%);
+    }
+  }
+  
+  // Override universal hover for navigation buttons - keep orange styling
+  .nav-prev.btn-secondary,
+  .nav-next.btn-primary {
+    &::after {
+      display: none !important;
+    }
+    
+    &:hover {
+      &::after {
+        display: none !important;
+      }
+    }
+  }
+  
+  .nav-next {
+    align-items: flex-end;
+    text-align: right;
+    
+    @media (max-width: 768px) {
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+}
+
+// ========================================
+// SOCIAL MEDIA EMBEDS
+// ========================================
+
+.social-embeds {
+  margin: var(--spacing-24) 0;
+  padding: var(--spacing-16);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--border-radius);
+  background: var(--neutral-50);
+  text-align: center;
+  
+  h3 {
+    margin: var(--spacing-16) 0 var(--spacing-12) 0;
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  .facebook-embed,
+  .linkedin-embed {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-16);
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    iframe {
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--border-radius);
+      
+      @media (max-width: 768px) {
+        width: 100% !important;
+        max-width: 400px;
+        height: auto !important;
+      }
+    }
+  }
+}
+
 // Button styles now handled by _components-consolidated.scss
 // This section kept for legacy compatibility if needed
+
+// =================================
+// FEATURES GRID STYLING
+// =================================
+
+.features-section {
+  padding: var(--spacing-24) var(--spacing-8);
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-16);
+    
+    .section-title {
+      font-size: var(--font-size-2xl);
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+  }
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-12);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-8);
+  
+  @media (min-width: 768px) {
+    gap: var(--spacing-16);
+  }
+  
+  .feature-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  
+  .feature-card {
+    background: white;
+    border: 3px solid $brand-primary;
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-16);
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    &.feature-card-gold {
+      border-color: #b66b02;
+      
+      .feature-link {
+        color: #b66b02;
+        
+        &:hover {
+          color: darken(#b66b02, 10%);
+        }
+      }
+    }
+    
+    &.feature-card-purple {
+      border-color: #a625a4;
+      
+      .feature-link {
+        color: #a625a4;
+        
+        &:hover {
+          color: darken(#a625a4, 10%);
+        }
+      }
+    }
+    
+    &.feature-card-orange {
+      border-color: #d77350;
+      
+      .feature-link {
+        color: #d77350;
+        
+        &:hover {
+          color: darken(#d77350, 10%);
+        }
+      }
+    }
+    
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    h3 {
+      font-size: var(--font-size-lg);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-8);
+    }
+    
+    p {
+      font-size: var(--font-size-base);
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: var(--spacing-12);
+    }
+    
+    .feature-link {
+      display: inline-block;
+      color: var(--brand-primary);
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      
+      &:hover {
+        color: darken($brand-primary, 15%);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// =================================
+// TRUST INDICATORS STYLING
+// =================================
+
+.trust-indicators {
+  padding: var(--spacing-24) var(--spacing-8);
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-16);
+    
+    .section-title {
+      font-size: var(--font-size-2xl);
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+  }
+}
+
+.indicators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-12);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-8);
+  
+  .indicator-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s ease;
+    
+    &:hover {
+      text-decoration: none;
+      transform: translateY(-2px);
+      
+      .indicator {
+        background: var(--neutral-50);
+      }
+    }
+  }
+  
+  .indicator {
+    text-align: center;
+    padding: var(--spacing-12);
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    
+    h3 {
+      font-size: var(--font-size-lg);
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-4);
+    }
+    
+    p {
+      font-size: var(--font-size-base);
+      color: var(--text-secondary);
+      margin: 0;
+    }
+  }
+}
+
+// =================================
+// BUTTON OVERFLOW FIX
+// =================================
+
+// Fix for unwanted scrollable tooltips/dropdowns on buttons
+.btn,
+.btn-outline,
+.btn-primary,
+.btn-secondary,
+[class*="btn-"] {
+  overflow: hidden !important;
+  
+  &::before,
+  &::after,
+  * {
+    overflow: hidden !important;
+  }
+}
+
+// Ensure no nested scrollable elements on hover
+.section-footer,
+.cta-actions {
+  .btn,
+  .btn-outline {
+    position: relative;
+    z-index: 1;
+    
+    &:hover {
+      overflow: hidden !important;
+    }
+  }
+}
 
 // =================================
 // RESPONSIVE UTILITIES

@@ -194,11 +194,13 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease, padding 0.3s ease;
+  text-align: center;
   
   @media (min-width: 1024px) {
     max-height: none;
     overflow: visible;
     padding: 1rem;
+    text-align: center;
   }
 }
 
@@ -210,6 +212,7 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
 .nav-search-section,
 .nav-primary {
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 // ========================================
@@ -317,6 +320,7 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
   border-radius: 6px;
   transition: all $nav-transition-speed $nav-transition-easing;
   position: relative;
+  text-align: center;
   
   // Active state - red background (ORIGINAL)
   &.active {
@@ -341,7 +345,8 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 0.5rem;
   
   .dropdown-arrow {
     width: 12px;
@@ -378,6 +383,7 @@ $nav-desktop-min: $breakpoint-desktop-min;        // From config
     opacity: 0;
     visibility: hidden;
     transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    text-align: center;
     
     li {
       list-style: none;

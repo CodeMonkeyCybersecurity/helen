@@ -71,7 +71,16 @@ a:not(.card-link):not(.nav-cta):not(.social-icon):not(.site-brand) {
 .btn.btn-secondary, 
 .btn.btn-outline,
 .btn.btn-cta,
-.btn.btn-danger {
+.btn.btn-danger,
+a.btn,
+a.btn-primary,
+a.btn-secondary,
+a.btn-outline,
+.section-footer .btn-outline,
+.cta-actions .btn-primary,
+.cta-actions .btn-outline,
+.hero-actions .btn-primary,
+.hero-actions .btn-secondary {
   @extend %hover-only-styling;
 }
 

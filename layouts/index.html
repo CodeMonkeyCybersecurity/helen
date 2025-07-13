@@ -10,29 +10,41 @@
     </div>
   </section>
 
+  <div class="hero-image">
+    <img src="/images/cover_puppy_moni_monkey_optimized.jpg" 
+         alt="Code Monkey Cybersecurity team providing human-centered cybersecurity protection with friendly puppy mascot representing approachable security"
+         style="max-width: 100%; height: auto; display: block; margin: 2rem auto;">
+  </div>
+
   <section class="features-section">
     <header class="section-header">
       <h2 class="section-title">Our Security Solutions</h2>
     </header>
     
     <div class="features-grid">
-      <article class="feature-card">
-        <h3>Delphi Notify XDR</h3>
-        <p>Advanced threat detection and response powered by Wazuh. Protect your infrastructure with real-time monitoring and automated incident response.</p>
-        <a href="/offerings/delphi/" class="feature-link">Learn More →</a>
-      </article>
+      <a href="/offerings/delphi/" class="feature-card-link">
+        <article class="feature-card feature-card-gold">
+          <h3>Delphi Notify XDR</h3>
+          <p>Advanced threat detection and response powered by Wazuh. Protect your infrastructure with real-time monitoring and automated incident response.</p>
+          <span class="feature-link">Learn More →</span>
+        </article>
+      </a>
       
-      <article class="feature-card">
-        <h3>Security Training</h3>
-        <p>Practical cybersecurity education for individuals and teams. Build confidence in identifying and responding to security threats.</p>
-        <a href="/offerings/phishing-simulation/" class="feature-link">View Training →</a>
-      </article>
+      <a href="/offerings/phishing-simulation/" class="feature-card-link">
+        <article class="feature-card feature-card-purple">
+          <h3>Security Training</h3>
+          <p>Practical cybersecurity education for individuals and teams. Build confidence in identifying and responding to security threats.</p>
+          <span class="feature-link">View Training →</span>
+        </article>
+      </a>
       
-      <article class="feature-card">
-        <h3>Open Source Tools</h3>
-        <p>Transparent, community-driven cybersecurity solutions. Access our complete ecosystem of self-hosted security tools.</p>
-        <a href="/resources/documentation/" class="feature-link">Explore Tools →</a>
-      </article>
+      <a href="/resources/documentation/" class="feature-card-link">
+        <article class="feature-card feature-card-orange">
+          <h3>Open Source Tools</h3>
+          <p>Transparent, community-driven cybersecurity solutions. Access our complete ecosystem of self-hosted security tools.</p>
+          <span class="feature-link">Explore Tools →</span>
+        </article>
+      </a>
     </div>
   </section>
 
@@ -101,20 +113,26 @@
     </header>
     
     <div class="indicators-grid">
-      <article class="indicator">
-        <h3>Australian Based</h3>
-        <p>Fremantle, WA • ABN {{ .Site.Params.abn }}</p>
-      </article>
+      <a href="/about-us/" class="indicator-link">
+        <article class="indicator">
+          <h3>Australian Based</h3>
+          <p>Fremantle, WA • ABN {{ .Site.Params.abn }}</p>
+        </article>
+      </a>
       
-      <article class="indicator">
-        <h3>Open Source</h3>
-        <p>Transparent security solutions with AGPL v3 licensing</p>
-      </article>
+      <a href="/about-us/governance/open-source-licensing/" class="indicator-link">
+        <article class="indicator">
+          <h3>Open Source</h3>
+          <p>Transparent security solutions with AGPL v3 licensing</p>
+        </article>
+      </a>
       
-      <article class="indicator">
-        <h3>Microsoft Partner</h3>
-        <p>Officially part of Microsoft for Startups program</p>
-      </article>
+      <a href="/blog/microsoft_for_startups/" class="indicator-link">
+        <article class="indicator">
+          <h3>Microsoft Founders Sponsorship</h3>
+          <p>Officially part of Microsoft for Startups program</p>
+        </article>
+      </a>
     </div>
   </section>
 </div>
