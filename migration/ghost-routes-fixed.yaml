@@ -1,0 +1,23 @@
+routes:
+  /blog/:
+    controller: channel
+    filter: 'type:post'
+    template: index
+
+collections:
+  /:
+    permalink: /{slug}/
+    template:
+      - index
+      - home
+      - post
+    filter: 'type:post'
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
+
+# This configuration:
+# - Creates /blog/ as a listing of all posts
+# - Keeps individual posts at root level (e.g., /my-post/)
+# - Maintains the homepage at / (will show your homepage content)

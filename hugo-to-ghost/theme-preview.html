@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Code Monkey Cybersecurity - Theme Preview</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Embedded CSS to show how it should look -->
+    <style>
+/* ==========================================================================
+   Code Monkey Cybersecurity Ghost Theme - Embedded for Preview
+   ========================================================================== */
+
+:root {
+  /* Brand Colors - CORRECT COLORS */
+  --color-primary: #0ca678;
+  --color-secondary: #51a14f;
+  --color-accent: #d77350;
+  --color-purple: #a625a4;
+  --color-blue: #4078f2;
+  --color-gold: #b66b02;
+  --color-red: #e45549;
+  
+  /* Background Colors */
+  --color-bg-site: #f0eee6;
+  --color-bg-primary: #fdfbf9;
+  --color-bg-card: #ffffff;
+  --color-bg-sidebar: #fdfbf9;
+  
+  /* Text Colors */
+  --color-text: #171717;
+  --color-text-light: #666666;
+  --color-text-lighter: #999999;
+  
+  /* Typography */
+  --font-heading: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  /* Spacing */
+  --spacing-unit: 0.25rem;
+  --content-width: 800px;
+  --sidebar-width: 280px;
+  
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  --shadow-md: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
+  --shadow-lg: 0 10px 20px rgba(0,0,0,0.15), 0 3px 6px rgba(0,0,0,0.10);
+  
+  /* Override Ghost's pink accent */
+  --ghost-accent-color: #0ca678 !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg-site);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-purple);
+  text-decoration: underline;
+}
+
+.site-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.site-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  height: 100vh;
+  background-color: var(--color-bg-sidebar);
+  overflow-y: auto;
+  z-index: 100;
+  box-shadow: var(--shadow-md);
+}
+
+.sidebar-inner {
+  padding: 2rem 1.5rem;
+}
+
+.site-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.site-title a {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.site-description {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+/* CTA Button */
+.cta-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  margin: 1.5rem 0;
+  background-color: var(--color-primary);
+  color: white;
+  text-align: center;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--color-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  text-decoration: none;
+  color: white;
+}
+
+/* Search Box */
+.search-box {
+  margin: 1.5rem 0;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+}
+
+/* Navigation */
+.site-nav {
+  margin-top: 2rem;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  margin-bottom: 0.5rem;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--color-text);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--color-bg-site);
+  color: var(--color-purple);
+  text-decoration: none;
+}
+
+.nav-current .nav-link {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+/* Main Content */
+.site-main {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  background-color: var(--color-bg-primary);
+  min-height: 100vh;
+}
+
+.main-inner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* Post Feed */
+.post-feed {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.post-card {
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.post-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.post-card-content {
+  padding: 1.5rem;
+}
+
+.post-card-tag {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.5rem;
+}
+
+.post-card-title {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.post-card-title a {
+  color: var(--color-text);
+}
+
+.post-card-excerpt {
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+}
+
+.post-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: var(--color-text-lighter);
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--color-bg-sidebar);
+  margin-left: var(--sidebar-width);
+  padding: 3rem 0 1.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+  color: var(--color-text-light);
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 0.875rem;
+}
+
+/* Mobile Navigation Toggle */
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 200;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  background-color: var(--color-bg-primary);
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-toggle-label span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-text);
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle-label span:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+  .nav-toggle-label {
+    display: block;
+  }
+  
+  .site-sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-toggle:checked ~ .site-wrapper .site-sidebar {
+    transform: translateX(0);
+  }
+  
+  .site-main {
+    margin-left: 0;
+  }
+  
+  .site-footer {
+    margin-left: 0;
+  }
+  
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+    </style>
+</head>
+<body class="home-template">
+    
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    
+    <div class="site-wrapper">
+        <aside class="site-sidebar">
+            <div class="sidebar-inner">
+                <div class="site-header">
+                    <h1 class="site-title">
+                        <a href="#">Code Monkey Cybersecurity</a>
+                    </h1>
+                    <p class="site-description">Cybersecurity. With humans.</p>
+                </div>
+
+                <a href="/contact/" class="cta-button">
+                    Get Started
+                </a>
+
+                <div class="search-box">
+                    <input type="search" placeholder="Search..." id="search-input" />
+                </div>
+
+                <nav class="site-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item nav-current">
+                            <a href="#" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Resources</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <main id="main" class="site-main">
+            <div class="main-inner">
+                <h2 style="margin-bottom: 2rem;">Latest Posts</h2>
+                
+                <div class="post-feed">
+                    <article class="post-card">
+                        <img class="post-card-image" src="https://static.ghost.org/v4.0.0/images/feature-image.jpg" alt="Coming soon" />
+                        <div class="post-card-content">
+                            <header class="post-card-header">
+                                <span class="post-card-tag">News</span>
+                                <h2 class="post-card-title">
+                                    <a href="#">Coming soon</a>
+                                </h2>
+                            </header>
+                            <section class="post-card-excerpt">
+                                <p>This is ghost test, a brand new site by henry that's just getting started. Things will be up and running here shortly...</p>
+                            </section>
+                            <footer class="post-card-meta">
+                                <time class="post-card-date">16 Jul 2025</time>
+                                <span class="post-card-reading-time">1 min read</span>
+                            </footer>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <div class="post-card-content">
+                            <header class="post-card-header">
+                                <span class="post-card-tag" style="background-color: var(--color-gold);">Chamber</span>
+                                <h2 class="post-card-title">
+                                    <a href="#">Code Monkey Cybersecurity Joins Fremantle Chamber of Commerce</a>
+                                </h2>
+                            </header>
+                            <section class="post-card-excerpt">
+                                <p>We're excited to announce that Code Monkey Cybersecurity has been formally welcomed as a Member of the prestigious Fremantle Chamber of Commerce...</p>
+                            </section>
+                            <footer class="post-card-meta">
+                                <time class="post-card-date">29 Jun 2025</time>
+                                <span class="post-card-reading-time">1 min read</span>
+                            </footer>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <div class="post-card-content">
+                            <header class="post-card-header">
+                                <span class="post-card-tag" style="background-color: var(--color-purple);">Tech</span>
+                                <h2 class="post-card-title">
+                                    <a href="#">DNS4EU Goes Live: A European Alternative to Google and Cloudflare DNS</a>
+                                </h2>
+                            </header>
+                            <section class="post-card-excerpt">
+                                <p>This is cool and good DNS4EU Goes live: A European Alternative to Google and Cloudflare DNS, Powered by Whalebone...</p>
+                            </section>
+                            <footer class="post-card-meta">
+                                <time class="post-card-date">18 Jun 2025</time>
+                                <span class="post-card-reading-time">1 min read</span>
+                            </footer>
+                        </div>
+                    </article>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem; padding: 2rem; background: #fff; border-radius: 8px; box-shadow: var(--shadow-sm);">
+                    <h3 style="color: var(--color-primary);">✅ Theme Preview Working!</h3>
+                    <p>This is how your Ghost theme should look. The issues with your live site are:</p>
+                    <ul style="text-align: left; max-width: 600px; margin: 1rem auto; list-style: none;">
+                        <li>• CSS paths need to be relative, not absolute</li>
+                        <li>• Ghost's accent color needs to be overridden</li>
+                        <li>• Navigation menu needs more items added</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>About</h3>
+                        <p>Cybersecurity. With humans.</p>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Delphi Notify</a></li>
+                            <li><a href="#">All Services</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Security Training</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p class="copyright">&copy; 2025 Code Monkey Cybersecurity. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

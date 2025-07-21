@@ -1,52 +1,38 @@
-# docker-compose.yaml
-version: '3.8'
-
 services:
-  helen:
-    image: nginx:alpine
-    container_name: helen
-    
-    # Security: Run as non-root user
-    user: "nginx:nginx"
-    
-    # Resource limits
-    deploy:
-      resources:
-        limits:
-          memory: 128M
-          cpus: '0.5'
-        reservations:
-          memory: 64M
-          cpus: '0.25'
-    
-    # Read-only root filesystem for security
-    read_only: true
-    
-    volumes:
-      - ./public:/usr/share/nginx/html:ro # Shared webroot for validation
-      - /tmp # Writable temp directory
-      - /var/cache/nginx # Writable cache directory
-      - /var/run # Writable runtime directory
-    
-    ports:
-      - "8009:80"
-    
-    # Health check
-    healthcheck:
-      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
-    
-    # Security options
-    security_opt:
-      - no-new-privileges:true
-    
-    # Restart policy
+  ghost:
+    image: ghost:5-alpine
     restart: unless-stopped
-    
-    # Environment variables
+    container_name: ghost-cms
+    ports:
+      - "2368:2368"
     environment:
-      - NGINX_WORKER_PROCESSES=1
-      - NGINX_WORKER_CONNECTIONS=1024
+      # Use production mode for proper URL handling
+      NODE_ENV: production
+      # Use default database location
+      database__client: sqlite3
+      # Site configuration - update this to your production URL
+      url: ${GHOST_URL:-https://cybermonkey.net.au/blog}
+      # Logging
+      logging__level: info
+      logging__transports: '["stdout"]'
+      # Admin URL configuration
+      admin__url: ${GHOST_ADMIN_URL:-https://cybermonkey.net.au/blog}
+    volumes:
+      # Single volume for all Ghost data
+      - ghost-data:/var/lib/ghost/content
+      # Custom themes
+      - ./themes:/var/lib/ghost/content/themes
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:2368/ghost/api/admin/site/"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 60s  # Give more time to start
+
+volumes:
+  ghost-data:
+
+networks:
+  default:
+    name: ghost-network
+    

@@ -1,0 +1,54 @@
+{{!< default}}
+
+<article class="post-full {{post_class}}">
+    <header class="post-header">
+        <h1 class="post-title">{{title}}</h1>
+        <div class="post-meta">
+            <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
+            {{#if primary_tag}}
+                <span class="post-tag">{{primary_tag.name}}</span>
+            {{/if}}
+            <span class="reading-time">{{reading_time}}</span>
+        </div>
+    </header>
+
+    {{#if feature_image}}
+    <figure class="post-image">
+        <img src="{{feature_image}}" alt="{{title}}" />
+    </figure>
+    {{/if}}
+
+    <section class="post-content">
+        {{content}}
+    </section>
+
+    <footer class="post-footer">
+        {{#if tags}}
+        <div class="post-tags">
+            <h3>Tags</h3>
+            {{#foreach tags}}
+                <a href="{{url}}" class="tag tag-{{slug}}">{{name}}</a>
+            {{/foreach}}
+        </div>
+        {{/if}}
+
+        <div class="post-share">
+            <h3>Share this post</h3>
+            <a class="share-link" href="https://twitter.com/intent/tweet?text={{encode title}}&url={{url absolute="true"}}" target="_blank" rel="noopener">Twitter</a>
+            <a class="share-link" href="https://www.linkedin.com/sharing/share-offsite/?url={{url absolute="true"}}" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="share-link" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}" target="_blank" rel="noopener">Facebook</a>
+        </div>
+    </footer>
+</article>
+
+{{!-- Related posts --}}
+<aside class="related-posts">
+    <h2>You might also like</h2>
+    <div class="post-feed">
+        {{#get "posts" filter="id:-{{id}}+tag:{{primary_tag.slug}}" limit="3"}}
+            {{#foreach posts}}
+                {{> "post-card"}}
+            {{/foreach}}
+        {{/get}}
+    </div>
+</aside>

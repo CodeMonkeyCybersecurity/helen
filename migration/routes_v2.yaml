@@ -1,0 +1,42 @@
+# Ghost Routes Configuration v2
+# This configuration sets up:
+# - Homepage at / (using Code Monkey Cybersecurity page content)
+# - Blog listing at /blog/
+# - Individual posts at /{slug}/
+# - Pages remain at their current URLs
+
+routes:
+  # Set homepage to show the Code Monkey Cybersecurity page
+  /:
+    data: page.code-monkey-cybersecurity
+    template: 
+      - home
+      - page
+  
+  # Blog listing page
+  /blog/:
+    controller: channel
+    filter: 'type:post'
+    template: 
+      - blog
+      - index
+    data:
+      title: "Blog"
+      description: "Latest insights, updates, and cybersecurity news from Code Monkey Cybersecurity"
+
+  # Custom routes for special pages if needed
+  /home/:
+    redirect: /
+
+collections:
+  # Blog posts collection
+  /:
+    permalink: /{slug}/
+    template:
+      - post
+      - page
+    filter: 'type:post'
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/

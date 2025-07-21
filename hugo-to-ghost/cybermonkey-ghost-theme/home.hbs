@@ -1,0 +1,147 @@
+{{!< default}}
+
+<div class="homepage">
+  {{!-- Hero Section --}}
+  <section class="hero-section">
+    <h1 class="hero-title">{{@site.title}}</h1>
+    <p class="hero-description">Cybersecurity. Now with Humans | Phishing awareness training, XDR, Backups and Recovery, open source DevSecOps tooling from Fremantle.</p>
+    
+    <div class="hero-actions">
+      <a href="/offerings/" class="btn btn-primary">Our Services</a>
+      <a href="/resources/education/" class="btn btn-secondary">Security Education</a>
+    </div>
+  </section>
+
+  {{!-- Hero Image --}}
+  <div class="hero-image">
+    <img src="{{asset "images/cover_puppy_moni_monkey_optimized.jpg"}}" 
+         alt="Code Monkey Cybersecurity team providing human-centered cybersecurity protection with friendly puppy mascot representing approachable security"
+         style="max-width: 100%; height: auto; display: block; margin: 2rem auto;">
+  </div>
+
+  {{!-- Features Section --}}
+  <section class="features-section">
+    <header class="section-header">
+      <h2 class="section-title">Our Security Solutions</h2>
+    </header>
+    
+    <div class="features-grid">
+      <a href="/offerings/delphi/" class="feature-card-link">
+        <article class="feature-card feature-card-gold">
+          <h3>Delphi Notify XDR</h3>
+          <p>Advanced threat detection and response powered by Wazuh. Protect your infrastructure with real-time monitoring and automated incident response.</p>
+          <span class="feature-link">Learn More →</span>
+        </article>
+      </a>
+      
+      <a href="/offerings/phishing-simulation/" class="feature-card-link">
+        <article class="feature-card feature-card-purple">
+          <h3>Phishing Training</h3>
+          <p>Practical cybersecurity education for individuals and teams. Build confidence in identifying and responding to security threats.</p>
+          <span class="feature-link">View Training →</span>
+        </article>
+      </a>
+      
+      <a href="/resources/documentation/" class="feature-card-link">
+        <article class="feature-card feature-card-orange">
+          <h3>Open Source Tools</h3>
+          <p>Transparent, community-driven cybersecurity solutions. Access our complete ecosystem of self-hosted security tools.</p>
+          <span class="feature-link">Explore Tools →</span>
+        </article>
+      </a>
+    </div>
+  </section>
+
+  {{!-- Blog Section --}}
+  <section class="blog-section">
+    <header class="section-header">
+      <h2 class="section-title">Latest from Our Blog</h2>
+      <p class="section-description">Stay updated with our latest insights on cybersecurity, privacy, and digital safety.</p>
+    </header>
+    
+    <div class="blog-posts-grid">
+      {{#get "posts" limit="3" include="tags"}}
+        {{#foreach posts}}
+          <article class="blog-post-card">
+            <header class="post-header">
+              <h3 class="post-title">
+                <a href="{{url}}">{{title}}</a>
+              </h3>
+              <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">
+                {{date format="MMMM D, YYYY"}}
+              </time>
+            </header>
+            
+            {{!-- Clean excerpt without markdown --}}
+            <p class="post-excerpt">
+              {{#if custom_excerpt}}
+                {{custom_excerpt}}
+              {{else}}
+                {{excerpt words="25" characters="150"}}...
+              {{/if}}
+            </p>
+            
+            <footer class="post-footer">
+              <a href="{{url}}" class="read-more">Read More →</a>
+              
+              {{#if tags}}
+              <div class="post-tags">
+                {{#foreach tags limit="2"}}
+                  <span class="tag">{{name}}</span>
+                {{/foreach}}
+              </div>
+              {{/if}}
+            </footer>
+          </article>
+        {{/foreach}}
+      {{else}}
+        {{!-- Fallback if no posts --}}
+        <p>No blog posts available yet. Check back soon!</p>
+      {{/get}}
+    </div>
+    
+    <div class="section-footer">
+      <a href="/blog/" class="btn btn-outline">View All Blog Posts</a>
+    </div>
+  </section>
+
+  {{!-- CTA Section --}}
+  <section class="cta-section">
+    <h2>Ready to Secure Your Business?</h2>
+    <p>Get started with our free security assessment or explore our educational resources.</p>
+    <div class="cta-actions">
+      <a href="/about-us/contact/" class="btn btn-primary">Contact Us</a>
+      <a href="/resources/education/" class="btn btn-outline">Free Resources</a>
+    </div>
+  </section>
+
+  {{!-- Trust Indicators --}}
+  <section class="trust-indicators">
+    <header class="section-header">
+      <h2 class="section-title">Why Choose Code Monkey Cybersecurity</h2>
+    </header>
+    
+    <div class="indicators-grid">
+      <a href="/about-us/" class="indicator-link">
+        <article class="indicator">
+          <h3>Australian Based</h3>
+          <p>Fremantle, WA • ABN 77 177 673 061</p>
+        </article>
+      </a>
+      
+      <a href="/about-us/governance/open-source-licensing/" class="indicator-link">
+        <article class="indicator">
+          <h3>Open Source</h3>
+          <p>Transparent security solutions with AGPL v3 licensing</p>
+        </article>
+      </a>
+      
+      <a href="/blog/microsoft_for_startups/" class="indicator-link">
+        <article class="indicator">
+          <h3>Microsoft Founders Sponsorship</h3>
+          <p>Officially part of Microsoft for Startups program</p>
+        </article>
+      </a>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theme Test</title>
+    <style>
+        body {
+            font-family: monospace;
+            padding: 20px;
+        }
+        .test {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ghost Theme Diagnostic</h1>
+    
+    <div class="test info">
+        <h3>CSS Path Check</h3>
+        <p>Looking for CSS at: <code>/assets/css/main.css</code></p>
+        <p>If you see unstyled content, the CSS is not loading.</p>
+    </div>
+    
+    <div class="test info">
+        <h3>Common Issues:</h3>
+        <ol>
+            <li><strong>Theme not activated:</strong> Go to Ghost Admin → Settings → Theme → Activate "cybermonkey"</li>
+            <li><strong>Cache issues:</strong> Clear browser cache and restart Ghost</li>
+            <li><strong>Asset compilation:</strong> Ghost may need to restart to compile theme assets</li>
+        </ol>
+    </div>
+    
+    <div class="test info">
+        <h3>Quick Fix Steps:</h3>
+        <ol>
+            <li>Stop Ghost: <code>ghost stop</code></li>
+            <li>Clear cache: <code>ghost buster</code></li>
+            <li>Start Ghost: <code>ghost start</code></li>
+            <li>Hard refresh browser: <code>Ctrl+Shift+R</code> (Windows) or <code>Cmd+Shift+R</code> (Mac)</li>
+        </ol>
+    </div>
+    
+    <div class="test success">
+        <h3>Theme Structure ✓</h3>
+        <p>The theme HTML structure is loading correctly (sidebar, navigation, etc.)</p>
+    </div>
+    
+    <div class="test error">
+        <h3>CSS Loading ✗</h3>
+        <p>The CSS file is not loading, which is why the page looks unstyled.</p>
+    </div>
+</body>
+</html>

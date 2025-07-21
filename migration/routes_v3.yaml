@@ -1,0 +1,35 @@
+# Ghost Routes Configuration v3
+# Fixed data format for blog route
+
+routes:
+  # Set homepage to show the Code Monkey Cybersecurity page
+  /:
+    data: page.code-monkey-cybersecurity
+    template: 
+      - home
+      - page
+  
+  # Blog listing page - removed the data field that was causing the error
+  /blog/:
+    controller: channel
+    filter: 'type:post'
+    template: 
+      - blog
+      - index
+
+  # Custom routes for special pages if needed
+  /home/:
+    redirect: /
+
+collections:
+  # Blog posts collection
+  /:
+    permalink: /{slug}/
+    template:
+      - post
+      - page
+    filter: 'type:post'
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/

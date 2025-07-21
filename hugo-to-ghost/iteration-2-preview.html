@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Ghost Theme - Iteration 2 Preview</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="cybermonkey-ghost-theme/assets/css/main.css">
+</head>
+<body>
+    <div class="site-wrapper">
+        <!-- Navigation (Fixed Version) -->
+        <nav class="site-navigation">
+            <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox">
+            
+            <div class="nav-header">
+                <a href="#" class="site-brand">
+                    <img src="cybermonkey-ghost-theme/assets/images/favicon.png" alt="Logo" class="brand-logo">
+                    <span class="brand-text">
+                        <span class="brand-text-full">Code Monkey Cybersecurity</span>
+                        <span class="brand-text-short">Code Monkey</span>
+                    </span>
+                </a>
+                
+                <div class="mobile-controls">
+                    <label for="mobile-menu-toggle" class="mobile-menu-toggle">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="nav-menu">
+                <div class="nav-cta-section">
+                    <a href="#" class="nav-cta">
+                        <span class="cta-text">Get Started</span>
+                        <span class="cta-icon">→</span>
+                    </a>
+                </div>
+                
+                <div class="nav-search-section">
+                    <form class="desktop-search-form">
+                        <input type="search" class="nav-search-input" placeholder="Search...">
+                        <button type="submit" class="nav-search-submit">
+                            <span class="search-icon"></span>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="nav-primary">
+                    <a href="#" class="nav-link active">Home</a>
+                    <a href="#" class="nav-link">Services</a>
+                    <a href="#" class="nav-link">Resources</a>
+                    <a href="#" class="nav-link">About</a>
+                    <a href="#" class="nav-link">Blog</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="site-main">
+            <div class="homepage">
+                <!-- Hero Section (Updated) -->
+                <section class="hero-section">
+                    <h1 class="hero-title">Code Monkey Cybersecurity</h1>
+                    <p class="hero-description">Cybersecurity. Now with Humans | Phishing awareness training, XDR, Backups and Recovery, open source DevSecOps tooling from Fremantle.</p>
+                    
+                    <div class="hero-actions">
+                        <a href="#" class="btn btn-primary">Our Services</a>
+                        <a href="#" class="btn btn-secondary">Security Education</a>
+                    </div>
+                </section>
+
+                <!-- Blog Section Preview -->
+                <section class="blog-section">
+                    <header class="section-header">
+                        <h2 class="section-title">Latest from Our Blog</h2>
+                        <p class="section-description">Stay updated with our latest insights on cybersecurity, privacy, and digital safety.</p>
+                    </header>
+                    
+                    <div class="blog-posts-grid">
+                        <article class="blog-post-card">
+                            <header class="post-header">
+                                <h3 class="post-title">
+                                    <a href="#">Code Monkey Cybersecurity Joins Fremantle Chamber of Commerce</a>
+                                </h3>
+                                <time class="post-date">June 29, 2025</time>
+                            </header>
+                            
+                            <p class="post-excerpt">We're proud to announce our membership with the prestigious Fremantle Chamber of Commerce, strengthening our commitment to the local business...</p>
+                            
+                            <footer class="post-footer">
+                                <a href="#" class="read-more">Read More →</a>
+                                <div class="post-tags">
+                                    <span class="tag">Fremantle Chamber</span>
+                                    <span class="tag">Business Community</span>
+                                </div>
+                            </footer>
+                        </article>
+
+                        <article class="blog-post-card">
+                            <header class="post-header">
+                                <h3 class="post-title">
+                                    <a href="#">DNS4EU Goes Live: A European Alternative to Google and Cloudflare DNS</a>
+                                </h3>
+                                <time class="post-date">June 18, 2025</time>
+                            </header>
+                            
+                            <p class="post-excerpt">DNS4EU launches as Europe's GDPR-compliant alternative to Big Tech DNS providers, offering enhanced privacy and security for EU users.</p>
+                            
+                            <footer class="post-footer">
+                                <a href="#" class="read-more">Read More →</a>
+                                <div class="post-tags">
+                                    <span class="tag">DNS</span>
+                                    <span class="tag">Privacy</span>
+                                </div>
+                            </footer>
+                        </article>
+
+                        <article class="blog-post-card">
+                            <header class="post-header">
+                                <h3 class="post-title">
+                                    <a href="#">We love Proton and their password manager, Proton Pass.</a>
+                                </h3>
+                                <time class="post-date">December 11, 2024</time>
+                            </header>
+                            
+                            <p class="post-excerpt">We love Proton and their password manager, Proton Pass. We use it everyday. Password managers need to be the bread and butter of everyone's...</p>
+                            
+                            <footer class="post-footer">
+                                <a href="#" class="read-more">Read More →</a>
+                                <div class="post-tags">
+                                    <span class="tag">Proton</span>
+                                    <span class="tag">Proton Pass</span>
+                                </div>
+                            </footer>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Improvements List -->
+                <div style="margin: 3rem 0; padding: 2rem; background: #f0fdf4; border: 2px solid #0ca678; border-radius: 8px;">
+                    <h3 style="color: #0ca678; margin-top: 0;">✅ Iteration 2 Improvements</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin: 0.5rem 0;">✓ Navigation menu now displays (Services, Resources, About, Blog)</li>
+                        <li style="margin: 0.5rem 0;">✓ Correct logo using favicon.png</li>
+                        <li style="margin: 0.5rem 0;">✓ Full hero description matching Hugo</li>
+                        <li style="margin: 0.5rem 0;">✓ Clean blog excerpts (no markdown artifacts)</li>
+                        <li style="margin: 0.5rem 0;">✓ Tags displaying properly</li>
+                        <li style="margin: 0.5rem 0;">✓ Font preloading for performance</li>
+                        <li style="margin: 0.5rem 0;">✓ Blog cards have hover border effect</li>
+                        <li style="margin: 0.5rem 0;">✓ Improved spacing and typography</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

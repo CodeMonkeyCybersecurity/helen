@@ -1,0 +1,23 @@
+routes:
+  /blog/:
+    controller: channel
+    filter: 'type:post'
+    data:
+      page: {
+        title: "Blog",
+        description: "Latest news, insights, and updates from Code Monkey Cybersecurity"
+      }
+    template: 
+      - blog
+      - index
+
+collections:
+  /:
+    permalink: /{slug}/
+    template:
+      - index
+    filter: 'type:post'
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/

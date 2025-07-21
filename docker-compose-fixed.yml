@@ -1,0 +1,39 @@
+services:
+  ghost:
+    image: ghost:5-alpine
+    restart: unless-stopped
+    container_name: ghost-cms-prod
+    ports:
+      - "2368:2368"
+    environment:
+      # Force production mode
+      NODE_ENV: production
+      # Database configuration
+      database__client: sqlite3
+      database__connection__filename: /var/lib/ghost/content/data/ghost.db
+      # Paths configuration
+      paths__contentPath: /var/lib/ghost/content
+      # Site configuration
+      url: http://localhost:2368
+      # Admin configuration
+      admin__url: http://localhost:2368
+      # Logging
+      logging__level: info
+      logging__transports: '["stdout"]'
+    volumes:
+      # Persistent data volume
+      - ghost-content:/var/lib/ghost/content
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:2368/ghost/api/admin/site/"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 60s
+
+volumes:
+  ghost-content:
+    driver: local
+
+networks:
+  default:
+    name: ghost-network

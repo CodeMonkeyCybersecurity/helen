@@ -78,3 +78,21 @@ analytics-snippet.html
 /*.log
 .DS_Store
 /assets/style.css
+
+*.txt
+
+# Ghost migration artifacts
+/migration/extracted/
+/migration/converted/
+/migration/ghost-import.json
+/hugo-to-ghost/*.zip
+/hugo-to-ghost/extracted_theme/
+ghost-backup.db
+
+# Docker volumes
+/ghost-data/
+docker-compose.override.yml
+
+# Hugo build artifacts
+.hugo_build.lock
+/resources/_gen/

@@ -1,0 +1,20 @@
+routes:
+  /:
+    data: page.code-monkey-cybersecurity
+    template: page
+    
+  /blog/:
+    controller: channel
+    filter: 'type:post'
+    template: index
+
+collections:
+  /:
+    permalink: /{slug}/
+    template:
+      - post
+    filter: 'type:post'
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/

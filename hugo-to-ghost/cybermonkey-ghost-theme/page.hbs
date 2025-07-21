@@ -1,0 +1,19 @@
+{{!< default}}
+
+<article class="page-full {{post_class}}">
+    {{#unless @page.show_title_and_feature_image}}
+    <header class="page-header">
+        <h1 class="page-title">{{title}}</h1>
+    </header>
+
+    {{#if feature_image}}
+    <figure class="page-image">
+        <img src="{{feature_image}}" alt="{{title}}" />
+    </figure>
+    {{/if}}
+    {{/unless}}
+
+    <section class="page-content">
+        {{content}}
+    </section>
+</article>
