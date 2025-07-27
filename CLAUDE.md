@@ -6,6 +6,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a Hugo-based static website for Code Monkey Cybersecurity, a cybersecurity company based in Fremantle, Western Australia. The site promotes their "Delphi Notify" XDR/SIEM security service and follows a transparency-focused approach with dual licensing (AGPL v3 and Do No Harm License).
 
+### Ghost CMS Integration
+The project includes a Ghost CMS deployment for managing blog content:
+- **Database**: SQLite3 (production-ready, simplified deployment)
+- **Port**: 8009 (exposed for Caddy reverse proxy)
+- **Mail**: Mailcow SMTP integration
+- **Deployment**: Nomad with persistent host volumes
+- **No Traefik**: Direct port exposure, TLS handled by Caddy
+
 ## Development Commands
 
 ### Local Development
@@ -36,6 +44,21 @@ docker-compose down
 
 # Manual installation (requires Hugo Extended 0.128.0+)
 # Download from https://github.com/gohugoio/hugo/releases/latest
+```
+
+### Ghost CMS Deployment
+```bash
+# Deploy Ghost with SQLite (production)
+./deploy-ghost-sqlite.sh
+
+# View logs
+nomad alloc logs -f <alloc-id> ghost
+
+# Backup Ghost data
+./nomad/backup-sqlite.sh
+
+# Restore from backup
+./nomad/restore-sqlite.sh <timestamp>
 ```
 
 ## Development Notes

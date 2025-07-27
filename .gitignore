@@ -54,6 +54,7 @@ Thumbs.db
 .env
 .env.local
 .env.*.local
+.env.mailcow
 config.json
 
 # Miscellaneous
