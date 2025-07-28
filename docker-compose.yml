@@ -8,15 +8,18 @@ services:
     environment:
       # Use production mode for proper URL handling
       NODE_ENV: production
-      # Use default database location
+      # Database configuration for SQLite
       database__client: sqlite3
+      database__connection__filename: /var/lib/ghost/content/data/ghost.db
+      database__useNullAsDefault: 'true'
+      database__debug: 'false'
       # Site configuration - update this to your production URL
-      url: ${GHOST_URL:-https://cybermonkey.net.au/blog}
+      url: ${GHOST_URL:-http://localhost:2368}
       # Logging
       logging__level: info
       logging__transports: '["stdout"]'
       # Admin URL configuration
-      admin__url: ${GHOST_ADMIN_URL:-https://cybermonkey.net.au/blog}
+      admin__url: ${GHOST_ADMIN_URL:-http://localhost:2368}
     volumes:
       # Single volume for all Ghost data
       - ghost-data:/var/lib/ghost/content

@@ -61,6 +61,40 @@ nomad alloc logs -f <alloc-id> ghost
 ./nomad/restore-sqlite.sh <timestamp>
 ```
 
+### Docker Troubleshooting
+```bash
+# Check container status and restart behavior
+docker ps -a
+
+# View container logs for debugging
+docker logs <container-name>
+
+# Follow container logs in real-time
+docker logs -f <container-name>
+
+# Restart specific service
+docker-compose restart <service-name>
+
+# Rebuild and restart all services
+docker-compose down && docker-compose up -d
+
+# Remove volumes and rebuild (WARNING: destroys data)
+docker-compose down -v && docker-compose up -d
+```
+
+### Database Configuration Best Practices
+**SQLite Configuration (Ghost CMS)**:
+- Always specify full database file path: `database__connection__filename`
+- Enable null handling: `database__useNullAsDefault: 'true'`
+- Disable debug logging in production: `database__debug: 'false'`
+- Use persistent volumes for data directory: `/var/lib/ghost/content`
+
+**Common Database Connection Issues**:
+- Verify database client matches actual database type
+- Check that database files/volumes are properly mounted
+- Ensure container has write permissions to data directory
+- Confirm database service dependencies are met
+
 ## Development Notes
 - Always use `hugo server --buildDrafts` for local development to see draft content
 - Use `hugo server` for development without draft posts
