@@ -1,0 +1,105 @@
+{{!< default}}
+
+<div class="error-template">
+    {{#is "error404"}}
+    <div class="error-404-custom">
+        <img src="{{asset "images/404.jpg"}}" alt="404 Error - Page Not Found" class="error-404-image">
+        <h1 class="error-404-title">Oops! Page Not Found</h1>
+        <p class="error-404-description">The page you're looking for seems to have wandered off into cyberspace.</p>
+        <a href="{{@site.url}}" class="error-link">Return to Homepage</a>
+    </div>
+    {{else}}
+    <h1 class="error-code">{{statusCode}}</h1>
+    <p class="error-description">{{message}}</p>
+    
+    {{#if errorDetails}}
+    <div class="error-details">
+        {{errorDetails}}
+    </div>
+    {{/if}}
+    
+    <a href="{{@site.url}}" class="error-link">Go to the homepage</a>
+    {{/is}}
+</div>
+
+<style>
+.error-template {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.error-code {
+    font-size: 6rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.error-description {
+    font-size: 1.5rem;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+}
+
+.error-link {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.error-link:hover {
+    background-color: var(--color-primary) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06);
+    text-decoration: none;
+    color: white !important;
+}
+
+/* Custom 404 Page Styles */
+.error-404-custom {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.error-404-image {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    margin: 0 auto 2rem;
+    display: block;
+    border-radius: var(--radius-lg, 8px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.error-404-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.error-404-description {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .error-404-title {
+        font-size: 2rem;
+    }
+    
+    .error-404-image {
+        max-height: 300px;
+    }
+}
+</style>

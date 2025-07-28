@@ -1,0 +1,95 @@
+name: Deploy Ghost Theme
+
+on:
+  push:
+    branches:
+      - main
+      - staging
+      - develop
+  workflow_dispatch:
+
+env:
+  THEME_NAME: cybermonkey-ghost-theme
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      artifact-name: ${{ steps.artifact.outputs.name }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build theme
+        run: |
+          chmod +x build.sh
+          ./build.sh
+
+      - name: Generate artifact name
+        id: artifact
+        run: |
+          echo "name=${THEME_NAME}-$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
+      - name: Upload theme artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.artifact.outputs.name }}
+          path: cybermonkey-ghost-theme.zip
+          retention-days: 30
+
+  deploy-staging:
+    if: github.ref == 'refs/heads/staging'
+    needs: build
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download theme artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.build.outputs.artifact-name }}
+
+      - name: Deploy to Nomad (Staging)
+        env:
+          NOMAD_ADDR: ${{ secrets.NOMAD_ADDR_STAGING }}
+          NOMAD_TOKEN: ${{ secrets.NOMAD_TOKEN_STAGING }}
+        run: |
+          # Install Nomad CLI
+          curl -L https://releases.hashicorp.com/nomad/1.7.2/nomad_1.7.2_linux_amd64.zip -o nomad.zip
+          unzip nomad.zip
+          chmod +x nomad
+          
+          # Deploy using Nomad job
+          ./nomad job run -var="theme_version=$(git rev-parse --short HEAD)" \
+                          -var="environment=staging" \
+                          -var="ghost_url=${{ secrets.GHOST_URL_STAGING }}" \
+                          nomad/ghost-theme-deploy.hcl
+
+  deploy-production:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download theme artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.build.outputs.artifact-name }}
+
+      - name: Deploy to Nomad (Production)
+        env:
+          NOMAD_ADDR: ${{ secrets.NOMAD_ADDR_PROD }}
+          NOMAD_TOKEN: ${{ secrets.NOMAD_TOKEN_PROD }}
+        run: |
+          # Install Nomad CLI
+          curl -L https://releases.hashicorp.com/nomad/1.7.2/nomad_1.7.2_linux_amd64.zip -o nomad.zip
+          unzip nomad.zip
+          chmod +x nomad
+          
+          # Deploy using Nomad job
+          ./nomad job run -var="theme_version=$(git rev-parse --short HEAD)" \
+                          -var="environment=production" \
+                          -var="ghost_url=${{ secrets.GHOST_URL_PROD }}" \
+                          nomad/ghost-theme-deploy.hcl

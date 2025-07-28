@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Base Meta --}}
+    <title>{{#is "home"}}Code Monkey Cybersecurity{{else}}{{meta_title}}{{/is}}</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Font Preloading for Performance --}}
+    <link rel="preload" href="{{asset "fonts/Noto_Sans/NotoSans-VariableFont_wdth,wght.ttf"}}" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="{{asset "fonts/Inter/Inter-VariableFont_opsz,wght.ttf"}}" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="{{asset "fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf"}}" as="font" type="font/ttf" crossorigin>
+
+    {{!-- Styles --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
+
+    {{!-- Favicon --}}
+    <link rel="icon" type="image/png" href="{{asset "images/favicon.png"}}">
+    <link rel="apple-touch-icon" href="{{asset "images/favicon.png"}}">
+
+    {{!-- This tag outputs SEO meta+structured data and other important settings --}}
+    {{ghost_head}}
+    
+    {{!-- Custom Theme Settings Styles --}}
+    <style>
+        :root {
+            {{#if @custom.accent_color}}
+            --ghost-accent-color: {{@custom.accent_color}} !important;
+            --color-primary: {{@custom.accent_color}};
+            --color-purple: {{@custom.accent_color}};
+            {{else}}
+            --ghost-accent-color: #0ca678 !important;
+            {{/if}}
+        }
+        
+        {{#match @custom.button_style "Square"}}
+        .btn, .btn-primary, .error-link, button, .nav-cta {
+            border-radius: 0 !important;
+        }
+        {{else match @custom.button_style "Pill"}}
+        .btn, .btn-primary, .error-link, button, .nav-cta {
+            border-radius: 9999px !important;
+        }
+        {{/match}}
+        
+        {{#match @custom.typography_preset "Classic - Georgia & Times"}}
+        body { font-family: Georgia, 'Times New Roman', serif !important; }
+        h1, h2, h3, h4, h5, h6 { font-family: Georgia, serif !important; }
+        {{else match @custom.typography_preset "Modern - System Fonts"}}
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; }
+        h1, h2, h3, h4, h5, h6 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; }
+        {{else match @custom.typography_preset "Mono - All Monospace"}}
+        body { font-family: 'Courier New', Courier, monospace !important; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Courier New', Courier, monospace !important; }
+        {{/match}}
+    </style>
+    
+    {{!-- Update meta description and ensure consistent branding --}}
+    {{#is "home"}}
+    <meta name="description" content="Cybersecurity. Now with Humans | Phishing awareness training, XDR, Backups and Recovery, open source DevSecOps tooling from Fremantle.">
+    <title>Code Monkey Cybersecurity</title>
+    {{/is}}
+</head>
+<body class="{{body_class}}{{#if @custom.use_custom_fonts}} use-custom-fonts{{/if}}">
+    
+    <div class="site-wrapper">
+        {{!-- Navigation Header (Hugo Style) --}}
+        <nav class="site-navigation" role="navigation" aria-label="Main navigation">
+            <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox" aria-label="Toggle mobile menu">
+            
+            <div class="nav-header">
+                <a href="{{@site.url}}" class="site-brand" aria-label="{{@site.title}} homepage">
+                    {{#if @site.logo}}
+                        <img src="{{@site.logo}}" alt="{{@site.title}} logo" class="brand-logo">
+                    {{else}}
+                        <img src="{{asset "images/favicon.png"}}" alt="{{@site.title}} logo" class="brand-logo">
+                    {{/if}}
+                    <span class="brand-text">
+                        <span class="brand-text-full">Code Monkey Cybersecurity</span>
+                        <span class="brand-text-short">Code Monkey</span>
+                    </span>
+                </a>
+                
+                <div class="mobile-controls">
+                    <div class="mobile-search-container">
+                        <form action="/search/" method="GET" class="mobile-search-form">
+                            <input type="search" name="q" class="mobile-search-input" placeholder="Search..." autocomplete="off" aria-label="Search">
+                            <button type="submit" class="mobile-search-submit" aria-label="Search">
+                                <span class="search-icon"></span>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <label for="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="nav-menu" role="menubar">
+                {{!-- CTA Section --}}
+                <div class="nav-cta-section">
+                    <a href="/sign-up/" class="nav-cta" role="menuitem" aria-label="Get started with our cybersecurity services">
+                        <span class="cta-text">Get Started</span>
+                        <span class="cta-icon">→</span>
+                    </a>
+                </div>
+                
+                <div class="nav-primary">
+                    {{!-- Use Ghost navigation --}}
+                    {{#foreach navigation}}
+                        <a href="{{url absolute="true"}}" class="nav-link{{#if current}} active{{/if}}" role="menuitem">{{label}}</a>
+                    {{/foreach}}
+                    
+                    {{!-- Fallback navigation if none configured --}}
+                    {{#unless navigation}}
+                        <a href="/services/" class="nav-link" role="menuitem">Services</a>
+                        <a href="/resources/" class="nav-link" role="menuitem">Resources</a>
+                        <a href="/about/" class="nav-link" role="menuitem">About</a>
+                        <a href="/blog/" class="nav-link" role="menuitem">Blog</a>
+                    {{/unless}}
+                </div>
+            </div>
+        </nav>
+
+        {{!-- Main Content Area --}}
+        <main class="site-main" role="main">
+            {{{body}}}
+        </main>
+
+        {{!-- Footer --}}
+        {{> "footer"}}
+    </div>
+
+    {{!-- Main Scripts --}}
+    <script src="{{asset "js/main.js"}}"></script>
+    
+    {{ghost_foot}}
+</body>
+</html>

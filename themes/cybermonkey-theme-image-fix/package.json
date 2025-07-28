@@ -1,0 +1,97 @@
+{
+  "name": "cybermonkey",
+  "description": "A clean, accessible theme for Code Monkey Cybersecurity",
+  "version": "1.15.0",
+  "demo": "https://cybermonkey.net.au",
+  "private": true,
+  "engines": {
+    "ghost": ">=5.0.0"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Code Monkey Cybersecurity",
+    "email": "admin@cybermonkey.net.au",
+    "url": "https://cybermonkey.net.au"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Business",
+      "Magazine"
+    ]
+  },
+  "keywords": [
+    "ghost-theme",
+    "ghost",
+    "theme",
+    "cybersecurity",
+    "clean",
+    "accessible"
+  ],
+  "config": {
+    "posts_per_page": 10,
+    "image_sizes": {},
+    "card_assets": true,
+    "custom": {
+      "typography_preset": {
+        "type": "select",
+        "options": [
+          "Default - Inter & Noto Sans",
+          "Classic - Georgia & Times",
+          "Modern - System Fonts",
+          "Mono - All Monospace"
+        ],
+        "default": "Default - Inter & Noto Sans",
+        "description": "Choose a typography preset or use Ghost's custom fonts"
+      },
+      "use_custom_fonts": {
+        "type": "boolean",
+        "default": false,
+        "description": "Use Ghost's custom font selector instead of theme presets"
+      },
+      "accent_color": {
+        "type": "color",
+        "default": "#a625a4",
+        "description": "Primary accent color used throughout the theme"
+      },
+      "button_style": {
+        "type": "select",
+        "options": [
+          "Rounded",
+          "Square",
+          "Pill"
+        ],
+        "default": "Rounded",
+        "description": "Style for buttons and form elements"
+      },
+      "show_reading_time": {
+        "type": "boolean",
+        "default": true,
+        "group": "post",
+        "description": "Display estimated reading time on posts"
+      },
+      "show_author_bio": {
+        "type": "boolean",
+        "default": true,
+        "group": "post",
+        "description": "Show author bio at the end of posts"
+      },
+      "footer_cta_text": {
+        "type": "text",
+        "default": "Stay informed with our security updates",
+        "description": "Call-to-action text in the footer signup section"
+      }
+    }
+  },
+  "scripts": {
+    "dev": "echo 'Watching for changes...' && watch -n 2 'echo Theme files updated'",
+    "build": "./build.sh",
+    "deploy:staging": "./deploy.sh staging",
+    "deploy:production": "./deploy.sh production",
+    "test": "gscan . --check-version",
+    "zip": "./build.sh"
+  },
+  "devDependencies": {
+    "gscan": "^4.49.7"
+  }
+}

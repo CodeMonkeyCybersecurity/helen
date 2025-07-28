@@ -1,0 +1,28 @@
+{{!< default}}
+
+<header class="author-header">
+    {{#if primary_author.cover_image}}
+    <div class="author-cover" style="background-image: url({{primary_author.cover_image}})"></div>
+    {{/if}}
+    
+    <div class="author-meta">
+        {{#if primary_author.profile_image}}
+        <img class="author-profile-image" src="{{primary_author.profile_image}}" alt="{{primary_author.name}}" />
+        {{/if}}
+        <h1 class="author-name">{{primary_author.name}}</h1>
+        {{#if primary_author.bio}}
+        <p class="author-bio">{{primary_author.bio}}</p>
+        {{/if}}
+        <div class="author-stats">
+            {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}
+        </div>
+    </div>
+</header>
+
+<div class="post-feed">
+    {{#foreach posts}}
+        {{> "post-card"}}
+    {{/foreach}}
+</div>
+
+{{pagination}}

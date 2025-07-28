@@ -1,0 +1,17 @@
+{{!< default}}
+
+<header class="tag-header">
+    <h1 class="tag-title">{{tag.name}}</h1>
+    {{#if tag.description}}
+        <p class="tag-description">{{tag.description}}</p>
+    {{/if}}
+    <p class="tag-meta">{{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</p>
+</header>
+
+<div class="post-feed">
+    {{#foreach posts}}
+        {{> "post-card"}}
+    {{/foreach}}
+</div>
+
+{{pagination}}

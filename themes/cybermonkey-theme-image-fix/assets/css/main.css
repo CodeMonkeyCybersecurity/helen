@@ -1,0 +1,1508 @@
+/* ==========================================================================
+   Code Monkey Cybersecurity Ghost Theme - Hugo Perfect Match
+   ========================================================================== */
+
+/* ==========================================================================
+   0. Font Declarations - Hugo Exact Fonts
+   ========================================================================== */
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('../fonts/Noto_Sans/NotoSans-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('../fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('../fonts/Atkinson_Hyperlegible/AtkinsonHyperlegible-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   0.1 Ghost CSS Reset - Minimal Overrides Only
+   ========================================================================== */
+
+/* Reset only the most problematic Ghost defaults */
+.gh-content a {
+  text-decoration: none;
+}
+
+.kg-bookmark-container {
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   1. CSS Variables - Exact Hugo Match (From Analysis)
+   ========================================================================== */
+
+/* Override Ghost's accent color to prevent button color changes */
+:root {
+  --ghost-accent-color: #a625a4 !important;
+}
+
+:root {
+  /* Ghost Font Variables for Custom Font Support */
+  --gh-font-heading: "Inter", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  --gh-font-body: "Noto Sans", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  
+  /* Hugo Color System - Verified Exact Values */
+  --color-primary: #0ca678;
+  --color-secondary: #51a14f;
+  --color-purple: #a625a4;
+  --color-blue: #4078f2;
+  --color-orange-logo: #d77350;
+  --color-gold: #b66b02;
+  --color-alert-red: #e45549;
+  
+  /* Hugo Neutral Colors */
+  --color-neutral-50: #fdfbf9;
+  --color-neutral-100: #f5f5f4;
+  --color-neutral-200: #e5e5e4;
+  --color-neutral-300: #d4d4d3;
+  --color-neutral-400: #a3a3a2;
+  --color-neutral-500: #737372;
+  --color-neutral-600: #525251;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+  
+  /* Hugo Background Colors */
+  --bg-website: #f0eee6;
+  --bg-primary: #fdfbf9;
+  --bg-secondary: #fdfbf9;
+  
+  /* Hugo Text Colors */
+  --text-primary: #141413;
+  --text-secondary: #737372;
+  --text-muted: #a3a3a2;
+  --text-inverse: #fff;
+  
+  /* Hugo Link Colors */
+  --link-primary: #0ca678;
+  --link-hover: #075f44;
+  
+  /* Hugo Typography */
+  --font-brand: 'Noto Sans', sans-serif;
+  --font-heading: 'Atkinson Hyperlegible', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'Noto Sans Mono', monospace;
+  
+  /* Hugo Font Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  
+  /* Hugo Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Hugo Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.75;
+  
+  /* Hugo Spacing System */
+  --spacing-1: 0.125rem;
+  --spacing-2: 0.25rem;
+  --spacing-3: 0.375rem;
+  --spacing-4: 0.5rem;
+  --spacing-6: 0.75rem;
+  --spacing-8: 1rem;
+  --spacing-12: 1.5rem;
+  --spacing-16: 2rem;
+  --spacing-20: 2.5rem;
+  --spacing-24: 3rem;
+  --spacing-32: 4rem;
+  
+  /* Hugo Border Radius */
+  --border-radius-sm: 4px;
+  --border-radius: 6px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-full: 50%;
+  
+  /* Hugo Shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  --shadow-xl: 0 20px 25px rgba(0,0,0,0.1);
+  --shadow-card: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-card-hover: 0 4px 6px rgba(0,0,0,0.1);
+  
+  /* Override Ghost accent */
+  --ghost-accent-color: #0ca678;
+}
+
+/* ==========================================================================
+   2. Base Reset & Typography - Hugo Match
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0eee6;  /* Hugo exact background */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--gh-font-body, Inter), sans-serif;  /* Support Ghost custom fonts */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #141413;  /* Hugo exact text color */
+  background-color: #f0eee6;  /* Hugo exact background */
+  text-align: center;
+}
+
+/* Hugo Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--gh-font-heading, Atkinson Hyperlegible), sans-serif;  /* Support Ghost custom fonts */
+  font-weight: 700;  /* Bold */
+  line-height: 1.25;
+  color: #393a42;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h1 { font-size: var(--font-size-2xl); }
+h2 { font-size: var(--font-size-xl); }
+h3 { font-size: var(--font-size-lg); }
+h4, h5, h6 { font-size: var(--font-size-base); }
+
+/* ==========================================================================
+   3. Hugo Universal Link System - CRITICAL
+   ========================================================================== */
+
+/* Basic Link Styling - No purple underlines */
+a {
+  color: var(--link-primary);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  /* Keep the same color on hover - no change */
+  color: inherit !important;
+}
+
+/* Override Ghost Portal button styles */
+[data-portal] a.btn-primary:hover,
+[data-portal] a.btn-secondary:hover,
+[data-portal] a.btn-outline:hover {
+  color: inherit !important;
+  background-color: inherit !important;
+}
+
+/* ==========================================================================
+   4. Layout - Hugo Match
+   ========================================================================== */
+
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+.site-main {
+  flex: 1;
+  width: 100%;
+  min-height: calc(100vh - 60px - 120px);
+  padding: var(--spacing-12) var(--spacing-8);
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .site-main {
+    padding: var(--spacing-24) var(--spacing-16);
+  }
+}
+
+.homepage {
+  overflow-x: hidden;
+  max-width: 100%;
+  text-align: center;
+}
+
+.homepage > section {
+  max-width: calc(100% - 2rem);
+  margin: 0 auto var(--spacing-24);
+}
+
+@media (min-width: 1024px) {
+  .homepage > section {
+    max-width: calc(100% - 4rem);
+  }
+}
+
+/* ==========================================================================
+   5. Navigation - Hugo Match
+   ========================================================================== */
+
+.site-navigation {
+  background: #fff;
+  border-bottom: 1px solid var(--color-neutral-200);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.mobile-menu-checkbox {
+  display: none;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-8);
+  gap: var(--spacing-4);
+}
+
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+  text-decoration: none;
+  color: var(--color-neutral-700);
+  font-weight: var(--font-weight-bold);
+  flex-shrink: 0;
+}
+
+.site-brand:hover {
+  /* No color change on hover */
+}
+
+.brand-logo {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  font-size: var(--font-size-base);
+  line-height: 1.2;
+  white-space: nowrap;
+  font-family: var(--font-brand);
+  font-weight: var(--font-weight-bold);
+}
+
+.brand-text-full {
+  display: inline;
+}
+
+.brand-text-short {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .brand-text-full {
+    display: none;
+  }
+  .brand-text-short {
+    display: inline;
+  }
+}
+
+.mobile-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.mobile-menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 32px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.mobile-menu-toggle .hamburger {
+  width: 100%;
+  height: 3px;
+  background: var(--color-neutral-700);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.nav-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  text-align: center;
+}
+
+.mobile-menu-checkbox:checked ~ .nav-menu {
+  max-height: calc(100vh - 80px);
+  padding: var(--spacing-12) var(--spacing-8);
+}
+
+.nav-cta-section,
+.nav-search-section,
+.nav-primary {
+  margin-bottom: var(--spacing-12);
+  text-align: center;
+}
+
+.nav-cta {
+  display: block;
+  padding: 0.75rem 1rem;
+  background: #0ca678;  /* Teal - Hugo exact */
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.nav-cta:hover {
+  background: var(--color-primary) !important;  /* Keep same green */
+  color: var(--text-inverse) !important;  /* Keep white text */
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06) !important;
+}
+
+.nav-link {
+  display: block;
+  padding: var(--spacing-6) var(--spacing-8);
+  color: var(--color-neutral-700);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--border-radius);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  text-align: center;
+}
+
+.nav-link.active {
+  background: var(--color-orange-logo);
+  color: var(--text-inverse);
+  font-weight: var(--font-weight-semibold);
+}
+
+.nav-link.active:hover {
+  text-decoration: none;
+}
+
+.mobile-search-container {
+  display: flex;
+  flex: 1;
+  max-width: 200px;
+  min-width: 120px;
+}
+
+.mobile-search-form {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.mobile-search-input {
+  width: 100%;
+  min-width: 0;
+  padding: var(--spacing-6);
+  padding-right: 2.5rem;
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-base);
+}
+
+.mobile-search-input:focus {
+  outline: 2px solid var(--color-orange-logo);
+  outline-offset: -1px;
+}
+
+.mobile-search-submit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 0 var(--spacing-6);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hide desktop search section completely */
+.nav-search-section {
+  display: none;
+}
+
+/* ==========================================================================
+   6. Hero Section - Hugo Match
+   ========================================================================== */
+
+.hero-section {
+  padding: var(--spacing-24) var(--spacing-8);
+  text-align: center;
+}
+
+.hero-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-8);
+  color: var(--text-primary);
+}
+
+.hero-description {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-16);
+  max-width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--spacing-8);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-image {
+  margin: var(--spacing-16) 0;
+}
+
+/* ==========================================================================
+   7. Button System - Hugo Match
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  padding: var(--spacing-6) var(--spacing-12);
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  line-height: 1;
+  position: relative;
+}
+
+.btn-primary {
+  background: #a625a4;  /* Purple - Hugo exact value */
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #a625a4 !important;  /* Keep same background */
+  color: #fff !important;  /* Keep same text color */
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06) !important;
+}
+
+.btn-secondary {
+  background: #f5f5f4;  /* Hugo exact value */
+  color: #141413;
+  border: 1px solid #d4d4d3;
+}
+
+.btn-secondary:hover {
+  background: #f5f5f4 !important;  /* Keep same background */
+  color: #141413 !important;  /* Keep same text color */
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06) !important;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #a625a4;  /* Purple */
+  border: 2px solid #a625a4;
+}
+
+.btn-outline:hover {
+  background: transparent !important;  /* Keep transparent */
+  color: #a625a4 !important;  /* Keep purple text */
+  border-color: #a625a4 !important;  /* Keep purple border */
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06) !important;
+}
+
+/* No overrides - purple underlines for ALL links including buttons */
+
+/* ==========================================================================
+   8. Feature Cards - Hugo Exact Match
+   ========================================================================== */
+
+.features-section {
+  padding: var(--spacing-24) var(--spacing-8);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-16);
+}
+
+.section-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-4);
+}
+
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-12);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-8);
+}
+
+@media (min-width: 768px) {
+  .features-grid {
+    gap: var(--spacing-16);
+  }
+}
+
+.feature-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.feature-card-link:hover {
+  text-decoration: none;
+}
+
+/* Hugo Feature Card System - EXACT MATCH FROM ANALYSIS */
+.feature-card {
+  background: #fff;
+  border: 3px solid #0ca678;  /* Default teal border */
+  border-radius: 12px;  /* var(--border-radius-lg) */
+  padding: 2rem;  /* var(--spacing-16) */
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: relative;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.feature-card h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-8);
+  margin-top: 0;
+}
+
+.feature-card p {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-12);
+  flex: 1;
+}
+
+.feature-link {
+  display: inline-block;
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.feature-link:hover {
+  /* No text decoration on hover */
+}
+
+/* Hugo Feature Card Colors - Exact Values from Analysis */
+.feature-card-gold {
+  border-color: #b66b02;  /* Gold */
+}
+
+.feature-card-gold .feature-link {
+  color: #b66b02;
+}
+
+.feature-card-gold .feature-link:hover {
+  /* No color change on hover */
+}
+
+.feature-card-purple {
+  border-color: #a625a4;  /* Purple */
+}
+
+.feature-card-purple .feature-link {
+  color: #a625a4;
+}
+
+.feature-card-purple .feature-link:hover {
+  /* No color change on hover */
+}
+
+.feature-card-orange {
+  border-color: #d77350;  /* Orange */
+}
+
+.feature-card-orange .feature-link {
+  color: #d77350;
+}
+
+.feature-card-orange .feature-link:hover {
+  /* No color change on hover */
+}
+
+/* Purple underlines apply to feature links too */
+
+/* ==========================================================================
+   9. Blog Section - Hugo Match
+   ========================================================================== */
+
+.blog-section {
+  margin: var(--spacing-32) 0;
+  padding: var(--spacing-24) 0;
+  background-color: var(--bg-website);
+}
+
+.section-description {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  margin-bottom: 0;
+}
+
+.blog-posts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-12);
+  overflow: visible;
+  max-height: none;
+}
+
+@media (min-width: 768px) {
+  .blog-posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-posts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.blog-post-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.blog-post-card-link:hover {
+  text-decoration: none;
+}
+
+.blog-post-card {
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-12);
+  background: #fff;
+  transition: all 0.2s ease;
+  overflow: visible;
+  height: 100%;
+  cursor: pointer;
+}
+
+.blog-post-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.post-header {
+  margin-bottom: var(--spacing-8);
+}
+
+.post-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-4);
+  margin-top: 0;
+}
+
+.post-title a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.post-title a:hover {
+  /* No color change on hover */
+}
+
+.post-date {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+.post-excerpt {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-8);
+}
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+}
+
+.read-more {
+  color: var(--color-purple);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+}
+
+.read-more:hover {
+  /* No text decoration on hover */
+}
+
+.post-tags {
+  display: flex;
+  gap: var(--spacing-2);
+  flex-wrap: wrap;
+}
+
+.post-tags .tag {
+  padding: var(--spacing-1) var(--spacing-3);
+  background: var(--color-neutral-100);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  border-radius: var(--border-radius-sm);
+  transition: all 0.2s ease;
+}
+
+.post-tags .tag:hover {
+  /* No background/color change on hover */
+}
+
+.section-footer {
+  display: flex;
+  gap: var(--spacing-8);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-12);
+}
+
+/* ==========================================================================
+   10. CTA Section - Hugo Match
+   ========================================================================== */
+
+.cta-section {
+  padding: var(--spacing-24) var(--spacing-8);
+  text-align: center;
+  margin: var(--spacing-24) 0;
+}
+
+.cta-section h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-8);
+  color: var(--text-primary);
+}
+
+.cta-section p {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-16);
+  color: var(--text-secondary);
+}
+
+.cta-actions {
+  display: flex;
+  gap: var(--spacing-8);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   11. Trust Indicators - Hugo Match
+   ========================================================================== */
+
+.trust-indicators {
+  padding: var(--spacing-24) var(--spacing-8);
+}
+
+.indicators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-12);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-8);
+}
+
+.indicator-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+.indicator-link:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.indicator-link:hover .indicator {
+  /* No background change on hover */
+}
+
+.indicator {
+  text-align: center;
+  padding: var(--spacing-12);
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.indicator h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-4);
+  margin-top: 0;
+}
+
+.indicator p {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* No longer needed - purple underlines removed */
+
+/* ==========================================================================
+   12. Footer - Hugo Match
+   ========================================================================== */
+
+.site-footer {
+  background: var(--bg-primary);
+  border-top: 1px solid var(--color-neutral-200);
+  padding: var(--spacing-24) 0 var(--spacing-16);
+  color: var(--color-neutral-700);
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-8);
+}
+
+@media (min-width: 1024px) {
+  .footer-content {
+    padding: 0 var(--spacing-16);
+  }
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-16);
+  margin-bottom: var(--spacing-16);
+}
+
+@media (min-width: 640px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer-section .footer-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-neutral-900);
+  margin-bottom: var(--spacing-8);
+}
+
+.footer-section .footer-heading {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-neutral-800);
+  margin-bottom: var(--spacing-8);
+}
+
+.footer-section .footer-description {
+  color: var(--color-neutral-600);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--spacing-12);
+}
+
+.footer-contact p {
+  margin-bottom: var(--spacing-4);
+  font-size: var(--font-size-sm);
+}
+
+.footer-contact p a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.footer-contact p a:hover {
+  /* No text decoration on hover */
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: var(--spacing-4);
+}
+
+.footer-links li a {
+  color: var(--color-neutral-600);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  transition: color 0.2s ease;
+}
+
+.footer-links li a:hover {
+  /* No color change on hover */
+}
+
+.footer-social {
+  display: flex;
+  gap: var(--spacing-8);
+  margin-bottom: var(--spacing-12);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--color-neutral-100);
+  border-radius: var(--border-radius-md);
+  color: var(--color-neutral-600);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-2px);
+}
+
+.social-icon .icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.social-icon.github:hover {
+  /* No background change on hover */
+}
+
+.social-icon.facebook:hover {
+  /* No background change on hover */
+}
+
+.social-icon.linkedin:hover {
+  /* No background change on hover */
+}
+
+.social-icon.instagram:hover {
+  /* No background change on hover */
+}
+
+.social-icon.email:hover {
+  /* No background change on hover */
+}
+
+.social-icon.bluesky:hover {
+  /* No background change on hover */
+}
+
+/* Social icons also get purple underlines */
+
+.footer-location p {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-600);
+  margin-bottom: var(--spacing-2);
+}
+
+.footer-location p:first-child {
+  margin-bottom: var(--spacing-4);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--color-neutral-200);
+  padding-top: var(--spacing-16);
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer-legal {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer-legal {
+    text-align: left;
+  }
+}
+
+.footer-legal p {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-600);
+  margin-bottom: var(--spacing-8);
+}
+
+@media (min-width: 768px) {
+  .footer-legal p {
+    margin-bottom: 0;
+  }
+}
+
+.footer-legal-links {
+  display: flex;
+  gap: var(--spacing-12);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .footer-legal-links {
+    justify-content: flex-start;
+  }
+}
+
+.footer-legal-links a {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+.footer-legal-links a:hover {
+  /* No color change on hover */
+}
+
+.footer-certifications {
+  text-align: center;
+  margin-top: var(--spacing-8);
+}
+
+@media (min-width: 768px) {
+  .footer-certifications {
+    text-align: right;
+    margin-top: 0;
+  }
+}
+
+.footer-certifications .footer-certification {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ==========================================================================
+   13. Responsive Adjustments
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .hero-section {
+    padding: var(--spacing-16) var(--spacing-8);
+  }
+  
+  .features-section,
+  .trust-indicators {
+    padding: var(--spacing-16) var(--spacing-8);
+  }
+  
+  .cta-section {
+    padding: var(--spacing-16) var(--spacing-8);
+  }
+}
+
+/* ==========================================================================
+   14. Content Images & Responsive Image Support
+   ========================================================================== */
+
+/* Post and Page Image Styling */
+.post-content img,
+.page-content img,
+.post-image img,
+.page-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: var(--spacing-16) auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+/* Feature Image Containers */
+.post-image,
+.page-image {
+  margin: var(--spacing-24) 0;
+  text-align: center;
+}
+
+.post-image figcaption,
+.page-image figcaption {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-top: var(--spacing-8);
+  text-align: center;
+}
+
+/* Content area images (inside article text) */
+.post-content figure,
+.page-content figure {
+  margin: var(--spacing-20) 0;
+  text-align: center;
+}
+
+.post-content figure img,
+.page-content figure img {
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.post-content figure figcaption,
+.page-content figure figcaption {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-top: var(--spacing-8);
+  text-align: center;
+}
+
+/* Responsive image srcset support */
+@media (max-width: 600px) {
+  .post-content img,
+  .page-content img,
+  .post-image img,
+  .page-image img {
+    margin: var(--spacing-12) auto;
+  }
+}
+
+/* ==========================================================================
+   15. Koenig Editor Support - Required by Ghost
+   ========================================================================== */
+
+/* Koenig Wide Images */
+.kg-width-wide {
+  position: relative;
+  width: 85vw;
+  min-width: 100%;
+  margin-left: calc(50% - 42.5vw);
+  margin-right: calc(50% - 42.5vw);
+  transform: translateX(calc(42.5vw - 50%));
+}
+
+/* Koenig Full Width Images */
+.kg-width-full {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+/* Koenig Image Cards */
+.kg-image-card,
+.kg-gallery-card {
+  margin: var(--spacing-16) 0;
+}
+
+.kg-image-card img,
+.kg-gallery-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.kg-image-card figcaption,
+.kg-gallery-card figcaption {
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin-top: var(--spacing-4);
+}
+
+/* Koenig Gallery */
+.kg-gallery-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.kg-gallery-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: var(--spacing-4);
+}
+
+.kg-gallery-image {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.kg-gallery-image img {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Koenig Bookmark Card */
+.kg-bookmark-card {
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  margin: var(--spacing-16) 0;
+}
+
+.kg-bookmark-container {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+}
+
+.kg-bookmark-content {
+  flex: 1;
+  padding: var(--spacing-12);
+}
+
+.kg-bookmark-title {
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-4);
+}
+
+.kg-bookmark-description {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-4);
+}
+
+.kg-bookmark-metadata {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.kg-bookmark-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: var(--spacing-2);
+}
+
+.kg-bookmark-author::after {
+  content: "•";
+  margin: 0 var(--spacing-2);
+}
+
+.kg-bookmark-thumbnail {
+  flex-shrink: 0;
+  width: 180px;
+}
+
+.kg-bookmark-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   16. Utilities & Overrides
+   ========================================================================== */
+
+/* Text alignment utilities */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Ensure no list styles in main content */
+main ul, main ol,
+.site-main ul, .site-main ol,
+.homepage ul, .homepage ol,
+section ul, section ol,
+article ul, article ol {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+main ul li, main ol li,
+.site-main ul li, .site-main ol li,
+.homepage ul li, .homepage ol li,
+section ul li, section ol li,
+article ul li, article ol li {
+  list-style: none;
+}
+
+main ul li::before, main ul li::marker,
+main ol li::before, main ol li::marker,
+.site-main ul li::before, .site-main ul li::marker,
+.site-main ol li::before, .site-main ol li::marker,
+.homepage ul li::before, .homepage ul li::marker,
+.homepage ol li::before, .homepage ol li::marker,
+section ul li::before, section ul li::marker,
+section ol li::before, section ol li::marker,
+article ul li::before, article ul li::marker,
+article ol li::before, article ol li::marker {
+  display: none;
+  content: none;
+}
+
+/* All links now have purple underlines - no exclusions */
+
+/* Active navigation states */
+.nav-cta.active {
+  background: var(--color-orange-logo);
+  color: var(--text-inverse);
+}
+
+.nav-cta.active:hover {
+  /* No background/color change on hover */
+}
+
+/* ==========================================================================
+   17. Ghost Override Fixes - CRITICAL - Must be at end for specificity
+   ========================================================================== */
+
+/* Force button hover states to prevent Ghost Portal color changes */
+.site-main .btn-primary:hover,
+.homepage .btn-primary:hover,
+a.btn-primary:hover {
+  background: #a625a4 !important;
+  color: #fff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06) !important;
+}
+
+.site-main .btn-secondary:hover,
+.homepage .btn-secondary:hover,
+a.btn-secondary:hover {
+  background: #f5f5f4 !important;
+  color: #141413 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06) !important;
+}
+
+.site-main .btn-outline:hover,
+.homepage .btn-outline:hover,
+a.btn-outline:hover {
+  background: transparent !important;
+  color: #a625a4 !important;
+  border-color: #a625a4 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06) !important;
+}
+
+/* Prevent ALL color changes on hover */
+a:hover,
+.btn:hover,
+.nav-link:hover,
+.site-brand:hover {
+  color: inherit !important;
+}
+
+/* Print styles */
+@media print {
+  .site-navigation,
+  .site-footer,
+  .nav-cta,
+  .btn {
+    display: none !important;
+  }
+  
+  .site-main {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+}

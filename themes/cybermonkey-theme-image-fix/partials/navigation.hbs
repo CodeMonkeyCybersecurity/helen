@@ -1,0 +1,24 @@
+<nav class="site-nav">
+    <ul class="nav-list">
+        {{#foreach navigation}}
+        <li class="nav-item {{#if current}}nav-current{{/if}}">
+            <a href="{{url absolute="true"}}" class="nav-link">{{label}}</a>
+        </li>
+        {{/foreach}}
+        {{!-- Add default navigation items if none exist --}}
+        {{#unless navigation}}
+        <li class="nav-item">
+            <a href="/services/" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item">
+            <a href="/resources/" class="nav-link">Resources</a>
+        </li>
+        <li class="nav-item">
+            <a href="/about/" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+            <a href="/blog/" class="nav-link">Blog</a>
+        </li>
+        {{/unless}}
+    </ul>
+</nav>
