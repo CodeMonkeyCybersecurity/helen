@@ -1,0 +1,35 @@
+{{/* Directus responsive image shortcode */}}
+{{/* Usage: {{< directus-image id="image-uuid" alt="Description" sizes="(max-width: 768px) 100vw, 50vw" >}} */}}
+
+{{ $id := .Get "id" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $class := .Get "class" | default "" }}
+{{ $sizes := .Get "sizes" | default "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" }}
+{{ $loading := .Get "loading" | default "lazy" }}
+
+{{ if $id }}
+<picture>
+  <source 
+    type="image/webp"
+    srcset="/assets/transform/{{ $id }}?width=400&format=webp 400w,
+            /assets/transform/{{ $id }}?width=800&format=webp 800w,
+            /assets/transform/{{ $id }}?width=1200&format=webp 1200w,
+            /assets/transform/{{ $id }}?width=1600&format=webp 1600w"
+    sizes="{{ $sizes }}">
+  <source 
+    type="image/jpeg"
+    srcset="/assets/transform/{{ $id }}?width=400&format=jpg 400w,
+            /assets/transform/{{ $id }}?width=800&format=jpg 800w,
+            /assets/transform/{{ $id }}?width=1200&format=jpg 1200w,
+            /assets/transform/{{ $id }}?width=1600&format=jpg 1600w"
+    sizes="{{ $sizes }}">
+  <img 
+    src="/assets/transform/{{ $id }}?width=800&format=jpg"
+    alt="{{ $alt }}"
+    class="{{ $class }}"
+    loading="{{ $loading }}"
+    decoding="async">
+</picture>
+{{ else }}
+<p class="error">Error: No image ID provided</p>
+{{ end }}

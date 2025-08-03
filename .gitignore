@@ -93,6 +93,14 @@ ghost-backup.db
 /ghost-data/
 docker-compose.override.yml
 
+# Directus - DO NOT COMMIT
+postgres_data/
+directus_uploads/
+helen_postgres_data/
+helen_directus_uploads/
+.env.*
+!.env.example
+
 # Hugo build artifacts
 .hugo_build.lock
 /resources/_gen/

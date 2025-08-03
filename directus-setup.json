@@ -1,0 +1,95 @@
+{
+  "collection": "blog_posts",
+  "meta": {
+    "collection": "blog_posts",
+    "icon": "article",
+    "note": "Blog posts managed through Directus",
+    "display_template": "{{title}}",
+    "hidden": false,
+    "singleton": false,
+    "archive_field": "status",
+    "archive_value": "archived",
+    "sort_field": "date_created"
+  },
+  "fields": [
+    {
+      "field": "id",
+      "type": "integer",
+      "meta": {
+        "hidden": true,
+        "interface": "input",
+        "readonly": true
+      },
+      "schema": {
+        "is_primary_key": true,
+        "has_auto_increment": true
+      }
+    },
+    {
+      "field": "title",
+      "type": "string",
+      "meta": {
+        "interface": "input",
+        "required": true,
+        "options": {
+          "placeholder": "Enter blog post title"
+        }
+      }
+    },
+    {
+      "field": "slug",
+      "type": "string",
+      "meta": {
+        "interface": "input",
+        "required": true,
+        "options": {
+          "placeholder": "url-friendly-slug"
+        }
+      }
+    },
+    {
+      "field": "content",
+      "type": "text",
+      "meta": {
+        "interface": "input-rich-text-md",
+        "options": {
+          "toolbar": ["bold", "italic", "link", "heading", "blockquote", "code", "bulletList", "orderedList"]
+        }
+      }
+    },
+    {
+      "field": "featured_image",
+      "type": "uuid",
+      "meta": {
+        "interface": "file-image",
+        "special": ["file"]
+      }
+    },
+    {
+      "field": "status",
+      "type": "string",
+      "meta": {
+        "interface": "select-dropdown",
+        "options": {
+          "choices": [
+            {"text": "Draft", "value": "draft"},
+            {"text": "Published", "value": "published"},
+            {"text": "Archived", "value": "archived"}
+          ]
+        }
+      },
+      "schema": {
+        "default_value": "draft"
+      }
+    },
+    {
+      "field": "date_created",
+      "type": "timestamp",
+      "meta": {
+        "interface": "datetime",
+        "special": ["date-created"],
+        "readonly": true
+      }
+    }
+  ]
+}

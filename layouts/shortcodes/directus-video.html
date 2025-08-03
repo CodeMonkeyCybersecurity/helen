@@ -1,0 +1,48 @@
+{{/* Directus video player shortcode */}}
+{{/* Usage: {{< directus-video id="video-uuid" poster="poster-uuid" >}} */}}
+
+{{ $id := .Get "id" }}
+{{ $poster := .Get "poster" }}
+{{ $autoplay := .Get "autoplay" | default false }}
+{{ $muted := .Get "muted" | default false }}
+{{ $controls := .Get "controls" | default true }}
+{{ $loop := .Get "loop" | default false }}
+{{ $class := .Get "class" | default "video-player" }}
+
+{{ if $id }}
+<div class="video-container {{ $class }}">
+  <video 
+    {{ if $controls }}controls{{ end }}
+    {{ if $autoplay }}autoplay{{ end }}
+    {{ if $muted }}muted{{ end }}
+    {{ if $loop }}loop{{ end }}
+    {{ if $poster }}poster="/assets/{{ $poster }}"{{ end }}
+    preload="metadata"
+    style="width: 100%; height: auto;">
+    <source src="/assets/{{ $id }}" type="video/mp4">
+    <p>Your browser doesn't support HTML5 video. <a href="/assets/{{ $id }}">Download the video</a>.</p>
+  </video>
+</div>
+{{ else if .Get "youtube" }}
+<div class="video-container {{ $class }}">
+  <iframe 
+    src="https://www.youtube.com/embed/{{ .Get "youtube" }}"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    style="width: 100%; aspect-ratio: 16/9;">
+  </iframe>
+</div>
+{{ else if .Get "vimeo" }}
+<div class="video-container {{ $class }}">
+  <iframe 
+    src="https://player.vimeo.com/video/{{ .Get "vimeo" }}"
+    frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture"
+    allowfullscreen
+    style="width: 100%; aspect-ratio: 16/9;">
+  </iframe>
+</div>
+{{ else }}
+<p class="error">Error: No video ID provided</p>
+{{ end }}

@@ -1,0 +1,195 @@
+{{/* Directus-powered contact form */}}
+<form id="directus-contact-form" class="contact-form">
+  <div class="form-group">
+    <label for="name">Name *</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="phone">Phone</label>
+    <input type="tel" id="phone" name="phone" placeholder="+61 4XX XXX XXX">
+  </div>
+  
+  <div class="form-group">
+    <label for="company">Company</label>
+    <input type="text" id="company" name="company">
+  </div>
+  
+  <div class="form-group">
+    <label for="service">Service Interest</label>
+    <select id="service" name="service_interest">
+      <option value="">Select a service...</option>
+      <option value="delphi-notify">Delphi Notify XDR/SIEM</option>
+      <option value="security-training">Security Awareness Training</option>
+      <option value="security-assessment">Security Assessment</option>
+      <option value="managed-security">Managed Security Services</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label for="message">How can we help? *</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+  </div>
+  
+  <div class="form-group">
+    <label class="checkbox-label">
+      <input type="checkbox" name="newsletter" value="yes">
+      Send me security tips and updates
+    </label>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Send Message</button>
+  
+  <div id="form-status" class="form-status"></div>
+</form>
+
+<style>
+.contact-form {
+  max-width: 600px;
+  margin: 2rem 0;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--body-text-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: var(--card-background-color);
+  color: var(--body-text-color);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px var(--accent-color-alpha);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+}
+
+.checkbox-label input {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--accent-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--accent-color-darker);
+  transform: translateY(-2px);
+}
+
+.form-status {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+  display: none;
+}
+
+.form-status.success {
+  display: block;
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.form-status.error {
+  display: block;
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+</style>
+
+<script>
+document.getElementById('directus-contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const formData = new FormData(e.target);
+  const data = Object.fromEntries(formData);
+  const statusDiv = document.getElementById('form-status');
+  const submitBtn = e.target.querySelector('button[type="submit"]');
+  
+  // Show loading state
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+  statusDiv.className = 'form-status';
+  statusDiv.style.display = 'none';
+  
+  try {
+    const response = await fetch('/api/custom/email-handler/contact-form', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        ...data,
+        submitted_at: new Date().toISOString(),
+        source_page: window.location.pathname
+      })
+    });
+    
+    const result = await response.json();
+    
+    if (result.success) {
+      statusDiv.className = 'form-status success';
+      statusDiv.innerHTML = `
+        <strong>Thank you!</strong> Your message has been sent successfully. 
+        We'll get back to you within 1 business day.
+      `;
+      e.target.reset();
+    } else {
+      throw new Error(result.error || 'Failed to send message');
+    }
+  } catch (error) {
+    statusDiv.className = 'form-status error';
+    statusDiv.innerHTML = `
+      <strong>Oops!</strong> There was an error sending your message. 
+      Please try again or email us directly at 
+      <a href="mailto:main@cybermonkey.net.au">main@cybermonkey.net.au</a>
+    `;
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send Message';
+    statusDiv.style.display = 'block';
+  }
+});
+</script>

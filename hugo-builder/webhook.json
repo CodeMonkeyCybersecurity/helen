@@ -1,0 +1,27 @@
+[
+  {
+    "id": "directus-webhook",
+    "execute-command": "/usr/local/bin/build.sh",
+    "command-working-directory": "/src",
+    "pass-arguments-to-command": [
+      {
+        "source": "payload",
+        "name": "collection"
+      },
+      {
+        "source": "payload",
+        "name": "event"
+      }
+    ],
+    "trigger-rule": {
+      "match": {
+        "type": "value",
+        "value": "directus-rebuild",
+        "parameter": {
+          "source": "header",
+          "name": "X-Webhook-Type"
+        }
+      }
+    }
+  }
+]

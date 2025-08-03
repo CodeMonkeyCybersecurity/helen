@@ -7,6 +7,14 @@ weight: 6
 
 # Contact Us
 
+## Get in Touch
+
+We'd love to hear from you! Fill out the form below and we'll get back to you within one business day.
+
+{{< directus-contact-form >}}
+
+## Direct Contact
+
 Email: [main@cybermonkey.net.au](mailto:main@cybermonkey.net.au)
 
 Location: Fremantle, WA

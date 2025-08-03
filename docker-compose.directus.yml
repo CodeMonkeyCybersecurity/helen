@@ -1,0 +1,107 @@
+services:
+  # Directus CMS
+  directus:
+    image: directus/directus:latest
+    container_name: directus-cms
+    restart: unless-stopped
+    ports:
+      - "8055:8055"
+    environment:
+      KEY: ${DIRECTUS_KEY:-your-random-key-here}
+      SECRET: ${DIRECTUS_SECRET:-your-random-secret-here}
+      DB_CLIENT: postgres
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_DATABASE: directus
+      DB_USER: directus
+      DB_PASSWORD: ${DB_PASSWORD:-directus}
+      # Admin user
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@cybermonkey.net.au}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-changeme}
+      # Public URL
+      PUBLIC_URL: ${DIRECTUS_PUBLIC_URL:-https://cms.cybermonkey.net.au}
+      # Email configuration for Mailcow
+      EMAIL_TRANSPORT: smtp
+      EMAIL_SMTP_HOST: ${MAILCOW_HOST:-mail.cybermonkey.net.au}
+      EMAIL_SMTP_PORT: 587
+      EMAIL_SMTP_USER: ${MAILCOW_USER:-noreply@cybermonkey.net.au}
+      EMAIL_SMTP_PASSWORD: ${MAILCOW_PASSWORD}
+      EMAIL_FROM: ${EMAIL_FROM:-Code Monkey Cybersecurity <noreply@cybermonkey.net.au>}
+      # Storage
+      STORAGE_LOCATIONS: local
+      STORAGE_LOCAL_DRIVER: local
+      STORAGE_LOCAL_ROOT: /directus/uploads
+    volumes:
+      - directus_uploads:/directus/uploads
+      - ./directus/extensions:/directus/extensions
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8055/server/ping"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+  # PostgreSQL for Directus
+  postgres:
+    image: postgres:15-alpine
+    container_name: directus-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: directus
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-directus}
+      POSTGRES_DB: directus
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U directus"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Hugo builder service (triggered by webhooks)
+  hugo-builder:
+    build:
+      context: .
+      dockerfile: Dockerfile.hugo-builder
+      platforms:
+        - linux/amd64
+        - linux/arm64
+    container_name: hugo-builder
+    restart: unless-stopped
+    volumes:
+      - ./:/src
+      - ./public:/public
+      - directus_uploads:/directus/uploads:ro
+    environment:
+      DIRECTUS_URL: http://directus:8055
+      DIRECTUS_TOKEN: ${DIRECTUS_TOKEN}
+      HUGO_ENV: production
+    depends_on:
+      - directus
+
+  # Nginx for serving everything
+  nginx:
+    image: nginx:alpine
+    container_name: nginx-proxy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx-directus.conf:/etc/nginx/nginx.conf:ro
+      - ./public:/var/www/html:ro
+      - directus_uploads:/var/www/uploads:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - directus
+      - hugo-builder
+
+volumes:
+  postgres_data:
+  directus_uploads:
+
+networks:
+  default:
+    name: cybermonkey-network

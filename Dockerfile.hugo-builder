@@ -1,0 +1,55 @@
+# Multi-architecture Hugo builder using Debian base for glibc compatibility
+FROM debian:bookworm-slim
+
+# Install runtime dependencies
+RUN apt-get update && apt-get install -y \
+    ca-certificates \
+    git \
+    curl \
+    jq \
+    bash \
+    wget \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Hugo Extended based on architecture
+ARG TARGETARCH
+RUN HUGO_VERSION=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | jq -r '.tag_name' | sed 's/v//') && \
+    if [ "$TARGETARCH" = "arm64" ]; then \
+        HUGO_ARCH="Linux-arm64"; \
+    else \
+        HUGO_ARCH="Linux-amd64"; \
+    fi && \
+    wget -O hugo.tar.gz "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_${HUGO_ARCH}.tar.gz" && \
+    tar xzf hugo.tar.gz && \
+    mv hugo /usr/local/bin/ && \
+    rm hugo.tar.gz LICENSE README.md && \
+    hugo version
+
+# Install webhook
+RUN WEBHOOK_VERSION="2.8.0" && \
+    if [ "$TARGETARCH" = "arm64" ]; then \
+        WEBHOOK_ARCH="linux-arm64"; \
+    else \
+        WEBHOOK_ARCH="linux-amd64"; \
+    fi && \
+    wget -O webhook.tar.gz "https://github.com/adnanh/webhook/releases/download/${WEBHOOK_VERSION}/webhook-${WEBHOOK_ARCH}.tar.gz" && \
+    tar xzf webhook.tar.gz && \
+    mv webhook-${WEBHOOK_ARCH}/webhook /usr/local/bin/webhook && \
+    rm -rf webhook.tar.gz webhook-${WEBHOOK_ARCH} && \
+    chmod +x /usr/local/bin/webhook
+
+# Create directories
+WORKDIR /src
+
+# Copy webhook configuration
+COPY hugo-builder/webhook.json /etc/webhook/
+
+# Copy build script
+COPY hugo-builder/build.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/build.sh
+
+# Expose webhook port
+EXPOSE 9000
+
+# Run webhook server
+CMD ["webhook", "-hooks", "/etc/webhook/webhook.json", "-verbose"]
