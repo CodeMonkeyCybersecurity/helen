@@ -1,104 +1,168 @@
 {{ define "main" }}
+{{/*
+  404 Page - Uses Cybermonkey Design System
+
+  Note: This page uses inline styles that mirror Aphrodite error-pages.css
+  because Hugo static sites can't easily import from submodules at build time.
+
+  Keep in sync with: aphrodite/_shared/components/error-pages/error-pages.css
+*/}}
 <style>
 .error-template {
     text-align: center;
     padding: 4rem 2rem;
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
 .error-code {
     font-size: 6rem;
     font-weight: 700;
-    color: var(--accent, #a625a4);
+    color: var(--cm-accent-teal, #0ca678);
     margin-bottom: 1rem;
     line-height: 1;
 }
 
 .error-description {
     font-size: 1.5rem;
-    color: var(--color-secondary, #6c757d);
+    color: var(--cm-text-secondary, #666666);
     margin-bottom: 2rem;
 }
 
 .error-link {
-    display: inline-block;
-    padding: 0.75rem 2rem;
-    background-color: var(--accent, #a625a4);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.9rem;
+    background-color: var(--cm-accent-teal, #0ca678);
     color: white;
-    border-radius: 0.375rem;
+    border-radius: 9999px;
     font-weight: 600;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
     text-decoration: none;
+    min-width: 150px;
 }
 
 .error-link:hover {
-    background-color: var(--accent, #a625a4) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06);
+    background-color: #0a8d66;
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
     text-decoration: none;
-    color: white !important;
+    color: white;
+}
+
+.error-link:focus-visible {
+    outline: 2px solid var(--cm-accent-teal, #0ca678);
+    outline-offset: 2px;
 }
 
 .error-content {
-    margin-top: 3rem;
+    margin-top: 2rem;
+    color: var(--cm-text-secondary, #666666);
+    line-height: 1.6;
+}
+
+.error-content p {
+    margin: 0.5rem 0;
 }
 
 .error-image {
     max-width: 100%;
     height: auto;
-    max-height: 400px;
+    max-height: 300px;
     object-fit: contain;
-    margin: 2rem auto;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 1.5rem auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .error-actions {
     margin-top: 2rem;
     display: flex;
-    gap: 1rem;
+    gap: 0.85rem;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .error-secondary-link {
-    display: inline-block;
-    padding: 0.75rem 2rem;
-    border: 2px solid var(--accent, #a625a4);
-    color: var(--accent, #a625a4);
-    border-radius: 0.375rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.9rem;
+    border: 1px solid var(--cm-border-color, #e5e5e5);
+    color: var(--cm-text-primary, #141413);
+    background: transparent;
+    border-radius: 9999px;
     font-weight: 600;
-    transition: all 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     text-decoration: none;
+    min-width: 150px;
 }
 
 .error-secondary-link:hover {
-    background-color: var(--accent, #a625a4);
-    color: white;
+    transform: translateY(-1px);
+    border-color: var(--cm-accent-teal, #0ca678);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
     text-decoration: none;
+    color: var(--cm-text-primary, #141413);
 }
 
-@media (max-width: 768px) {
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    .error-code {
+        color: #10b981;
+    }
+
+    .error-link {
+        background-color: #10b981;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .error-link:hover {
+        background-color: #0d9668;
+    }
+
+    .error-secondary-link {
+        color: var(--cm-text-primary, #f5f5f5);
+        border-color: var(--cm-border-color, #404040);
+    }
+
+    .error-secondary-link:hover {
+        border-color: #10b981;
+    }
+}
+
+@media (max-width: 520px) {
     .error-code {
         font-size: 4rem;
     }
-    
+
     .error-description {
         font-size: 1.25rem;
     }
-    
+
     .error-actions {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .error-link,
     .error-secondary-link {
         width: 100%;
-        max-width: 250px;
-        text-align: center;
+        max-width: 280px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .error-link,
+    .error-secondary-link {
+        transition: none;
+    }
+
+    .error-link:hover,
+    .error-secondary-link:hover {
+        transform: none;
     }
 }
 </style>
@@ -106,16 +170,16 @@
 <div class="error-template">
     <h1 class="error-code">404</h1>
     <p class="error-description">Page not found</p>
-    
+
     {{ if fileExists "static/images/404.jpg" }}
     <img src="/images/404.jpg" alt="404 - Page Not Found" class="error-image" />
     {{ end }}
-    
+
     <div class="error-content">
         <p>Sorry, we couldn't find the page you're looking for.</p>
         <p>The page may have been moved, deleted, or never existed.</p>
     </div>
-    
+
     <div class="error-actions">
         <a href="{{ .Site.Home.RelPermalink }}" class="error-link">Go to Homepage</a>
         <a href="/docs/" class="error-secondary-link">Browse Documentation</a>
